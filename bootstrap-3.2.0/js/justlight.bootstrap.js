@@ -1,0 +1,231 @@
+/*
+ *  Bootstrap javascript for theme JustLight
+ *  
+ *  webtrees: Web based Family History software
+ *  Copyright (C) 2014 webtrees development team.
+ *  Copyright (C) 2014 JustCarmen.
+ * 
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU General Public License
+ *  as published by the Free Software Foundation; either version 2
+ *  of the License, or (at your option) any later version.
+ * 
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ */
+
+// Manual popover trigger function
+function manualTrigger(obj, click, hover) {
+	
+	if (click === true) {
+		obj.on("click", function (event) { // click is neccessary for touchscreen devices.
+			event.preventDefault();
+			event.stopPropagation();
+			jQuery('.popover').not(obj).hide();
+			obj.popover("show");
+		});
+	}
+	
+	if(hover === true) {
+		obj.on("mouseenter", function () {
+			jQuery('.popover').not(obj).hide();
+			obj.popover("show");
+			obj.siblings(".popover").on("mouseleave", function () {
+				obj.popover('hide');
+			});
+		});
+		
+		obj.on("mouseleave", function () {
+			setTimeout(function () {
+				if (!jQuery(".popover:hover").length) {
+					obj.popover("hide");
+				}
+			}, 100);
+		});
+	}	
+}
+
+// Bootstrap active tab in navbar 
+var url_parts = location.href.split('/');
+var last_segment = url_parts[url_parts.length-1];
+jQuery('.nav-pills a[href="' + last_segment + '"]').parents('li').addClass('active');
+
+// Bootstrap vertical menu for smaller screens
+function getSmallMenu(){
+	if (jQuery(window).width() < 450) {
+		jQuery('.nav').removeClass('nav-pills');
+		jQuery('.nav').addClass('nav-stacked');
+	} else {
+		jQuery('.nav').addClass('nav-pills');
+		jQuery('.nav').removeClass('nav-stacked');
+	}
+}
+
+getSmallMenu();
+jQuery(window).resize(function() {
+	getSmallMenu();
+});
+
+// Bootstrap table layout
+jQuery("table").waitUntilExists(function() {
+	if(jQuery(this).hasClass("table-census-assistant")) {
+		jQuery(this).addClass("table table-condensed table-striped width100");
+		jQuery(this).find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
+	}
+	else {
+		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
+		table.addClass("table");
+	}
+});
+
+jQuery("#sb_content_family_nav").each(function() {
+	jQuery(this).find("table").addClass("table-striped");
+	jQuery(this).find("td").removeClass("person_box person_boxF person_boxNN center");
+});
+
+// Prepare webtrees popup lists for bootstrap popovers
+jQuery(".popup > ul > li").waitUntilExists(function() {
+	var text = jQuery.trim(jQuery(this).children().text());
+	if(!text.length) {
+		jQuery(this).remove();		
+	}
+	jQuery(this).find(">ul").parent().css("list-style-type", "none");
+});
+
+// Bootstrap popovers and/or tooltips
+jQuery("a.icon-pedigree").waitUntilExists(function(){
+	var title = jQuery(this).parents(".person_box_template")
+					.find(".chart_textbox .NAME").parents("a")
+					.clone().wrap('<p>').parent().html();
+	var content = jQuery(this).parents(".itr").find(".popup > ul");
+	content = content.removeClass().remove();
+	if(jQuery(this).parents("#index_small_blocks")) {
+		placement = 'left';
+	}
+	else {
+		placement = 'auto right';
+	}
+	jQuery(this).attr("data-toggle", "popover");
+	jQuery(this).popover({
+		title:		title,
+		content:	content,
+		html:		true,
+		trigger:	'manual',
+		placement:	placement,
+		container:	'body'
+	}).on(manualTrigger(jQuery(this), true, true));
+});
+
+jQuery("#medialist-page .lb-menu").each(function() {
+	jQuery(this).find(".lb-image_edit, .lb-image_view").each(function(){
+		var title = jQuery(this).text();
+		jQuery(this).text("");
+		jQuery(this).attr({
+			"data-toggle"		: "tooltip",
+			"data-placement"	: "top",
+			"title"				: title
+		});
+		jQuery(this).tooltip();
+	});
+	jQuery(this).find(".lb-image_link").each(function(){
+		var title = jQuery(this).text();
+		var content = jQuery(this).next("ul").html();
+		jQuery(this).text("").next("ul").remove();
+		jQuery(this).attr("data-toggle", "popover");
+		jQuery(this).popover({
+			title:			title,
+			content:		content,
+			html:			true,
+			trigger:		'manual',
+			placement:		'bottom',
+			container:		'#medialist-page'
+		}).on(manualTrigger(jQuery(this), false, true));
+	});
+	jQuery(this).css("display", "inline-block");
+});
+
+// Bootstrap popover for fanchart page
+if(WT_SCRIPT_NAME === "fanchart.php") {
+	
+	// turn the table into a list
+	jQuery("#fan_chart > div").each(function(){
+		var id = jQuery(this).attr("id").split(".")[0].substr(1);
+		jQuery(this).attr("id", id).find("a").wrap("<li>");
+		jQuery(this).find("td span.name1").wrap("<li class=\"siblings-text\">");	
+		jQuery(this).find("li.siblings-text").nextAll().addClass("siblings");	
+		jQuery(this).find("li").wrapAll("<ul class=\"chart-list\">");
+		jQuery(this).find("li.siblings").wrapAll("<ul class=\"siblings-list\">");
+		var list = jQuery(this).find(".siblings-list");
+		var text = jQuery(this).find(".siblings-text");
+		list.appendTo(text);
+		jQuery(this).find(".person_box").after(jQuery(this).find(".chart-list")).remove();
+	});
+
+	jQuery(".chart-list > li:not(:first-child)").each(function() {
+		// remove "<"-sign from list
+		jQuery(this).find("> a.name1").each(function(){		
+			var children = jQuery(this).children();
+			children.remove();
+			var text = jQuery.trim(jQuery(this).text());
+			if(text === "<"){
+				jQuery(this).closest("li").addClass("child");
+			}		
+			jQuery(this).text("").append(children);
+		});	
+	});
+
+	jQuery(".chart-list").each(function() {
+		jQuery(this).find(".child").wrapAll("<ul class=\"children\">");
+	});
+
+	jQuery("#fan_chart #fanmap area").each(function(){
+		var id = jQuery(this).attr("onclick").split("'")[1].split(".")[0];
+		jQuery(this).removeAttr("onclick onmouseout");
+		var obj = jQuery("#fan_chart > div[id="+id+"]");
+		var title = obj.find(".chart-list li:first").remove();
+		var content = obj.html();
+		jQuery(this).attr("data-toggle", "popover");
+		jQuery(this).attr("title", title.html());
+		jQuery(this).popover({
+			content:	content,
+			html:		true,
+			trigger:	'manual',
+			placement:	'auto right',
+			container:	'body'
+		}).on(manualTrigger(jQuery(this), true, false));  
+	});
+}
+
+// Childbox popover
+jQuery("#childarrow > a").waitUntilExists(function(){
+	var content = jQuery(this).parent().next("#childbox").addClass("nowrap");
+	jQuery(this).removeAttr("onclick").attr("data-toggle", "popover");
+	jQuery(this).popover({
+		content:	content,
+		html:		true,
+		trigger:	'manual',
+		placement:	'bottom',
+		container:	'body'
+	}).on(manualTrigger(jQuery(this), true, true));
+});
+
+// close popover when clicking outside (anywhere in the page);
+jQuery('body').on('click', function (e) {
+    if (jQuery(e.target).data('toggle') !== 'popover' && jQuery(e.target).parents('.popover.in').length === 0) { 
+        jQuery('[data-toggle="popover"]').popover('hide');
+    }
+});
+
+// add bootstrap buttons
+jQuery("#edit_interface-page .save, #edit_interface-page .cancel").addClass("btn btn-default btn-sm");
+jQuery("#find-page button").addClass("btn btn-default btn-xs");
+jQuery("input[type=submit], input[type=button]").addClass("btn btn-default btn-xs");
+jQuery("#personal_facts_content").waitUntilExists(function() {
+	jQuery("input[type=button]").addClass("btn btn-default btn-xs").css("visibility", "visible");
+});
