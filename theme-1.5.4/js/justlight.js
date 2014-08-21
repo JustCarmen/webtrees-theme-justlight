@@ -166,6 +166,22 @@ if(WT_SCRIPT_NAME === "individual.php") {
 	});
 }
 
+// Hide sidebar by default on smaller screens
+if (jQuery(window).width() < 767) {
+	jQuery.cookie("hide-sb", true);
+}
+
+jQuery(window).resize(function() {
+	if (jQuery(window).width() >= 767 && jQuery.cookie ("hide-sb") === "false") {
+		jQuery("#sidebar").show ();
+		jQuery("#separator").addClass("separator-visible");		
+	}
+	else {
+		jQuery("#sidebar").hide();
+		jQuery("#separator").addClass("separator-hidden");
+	}
+});
+
 // Styling of the family page
 if(WT_SCRIPT_NAME === "family.php") {
 	// consistent styling (like indi page)
