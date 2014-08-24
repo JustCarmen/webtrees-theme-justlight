@@ -172,17 +172,34 @@ if(WT_SCRIPT_NAME === "individual.php") {
 	});
 }
 
+// When in responsive state hide the indi_left part when sidebar is open.
+var responsiveSidebar = false;
+
 // Hide sidebar by default on smaller screens
 if ($responsive) {
 	jQuery.cookie("hide-sb", true);
+	responsiveSidebar = true;
 }
 
 jQuery(window).resize(function() {
+	jQuery("#indi_left").show();
+	if($responsive){
+		responsiveSidebar = true;
+	} else {
+		responsiveSidebar = false;
+	}
+	
 	if ($responsive || jQuery.cookie ("hide-sb") === "true") {
 		jQuery("#sidebar").hide ();
-	}
-	else {
+	} else {
 		jQuery("#sidebar").show();
+	}
+});
+
+// extend webtrees click function
+jQuery ("#main").on ("click", "#separator", function () {
+	if(responsiveSidebar) {
+		jQuery("#indi_left").toggle();
 	}
 });
 

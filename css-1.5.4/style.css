@@ -3718,6 +3718,10 @@ table.dataTable thead > tr > th {
 		padding: 5px 10px;
 	}
 	
+	#sidebar {
+		width: 100%;
+	}
+	
 	#footer {
 		margin-left: -20px;
 		margin-right: -20px;
