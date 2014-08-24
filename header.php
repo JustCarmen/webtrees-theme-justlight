@@ -130,4 +130,4 @@ $this
 		$style = WT_SCRIPT_NAME === 'individual.php' || WT_SCRIPT_NAME === 'family.php' || WT_SCRIPT_NAME === 'medialist.php' || WT_Filter::get('mod_action') === 'treeview' ? ' style="width: 100%"' : '';
 	}	
 	?>
-	<div id="content" class="container"<?php echo $style ?>>
+		<div id="responsive"></div><div id="content" class="container"<?php echo $style ?>>

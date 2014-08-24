@@ -3510,6 +3510,10 @@ dd .deletelink {
 }
 
 /* ==================================================== JUSTLIGHT EXTRA ==================================================== */
+/* responsive site - fake div to determine when the site is in responsive state */
+#responsive {
+	display: none;
+}
 
 /* Bootstrap header navigation */
 .navbar-header {
@@ -3701,6 +3705,10 @@ table.dataTable thead > tr > th {
 @media (max-width: 767px) {
 	body #wrap {
 		padding-top: 60px;
+	}
+	
+	#responsive {
+		display: block;
 	}
 	
 	.navbar-right .btn, .div_search .btn {

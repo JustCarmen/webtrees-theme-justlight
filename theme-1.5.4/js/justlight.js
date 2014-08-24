@@ -19,6 +19,12 @@
  */
 // use waitUntilExists plugin on pages with dynamic content - https://gist.github.com/md55/6565078
 
+// responsive page
+var $responsive = jQuery("#responsive").is(":visible");
+jQuery(window).resize(function() {
+	$responsive = jQuery("#responsive").is(":visible");
+});
+
 // Sticky footer - correction needed for pedigree page
 if(jQuery("#pedigree-page").length > 0) {
 	jQuery("#content").css("margin-bottom", "50px");
@@ -167,18 +173,16 @@ if(WT_SCRIPT_NAME === "individual.php") {
 }
 
 // Hide sidebar by default on smaller screens
-if (jQuery(window).width() < 767) {
+if ($responsive) {
 	jQuery.cookie("hide-sb", true);
 }
 
 jQuery(window).resize(function() {
-	if (jQuery(window).width() >= 767 && jQuery.cookie ("hide-sb") === "false") {
-		jQuery("#sidebar").show ();
-		jQuery("#separator").addClass("separator-visible");		
+	if ($responsive || jQuery.cookie ("hide-sb") === "true") {
+		jQuery("#sidebar").hide ();
 	}
 	else {
-		jQuery("#sidebar").hide();
-		jQuery("#separator").addClass("separator-hidden");
+		jQuery("#sidebar").show();
 	}
 });
 
