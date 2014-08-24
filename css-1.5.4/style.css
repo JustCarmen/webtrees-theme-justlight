@@ -343,6 +343,7 @@ div.fact_SHARED_NOTE {
 .submenu {
 	background-clip: padding-box;
     border-radius: 6px;
+	display: block;
     max-width: 276px;
     padding: 5px;
     text-align: left;
