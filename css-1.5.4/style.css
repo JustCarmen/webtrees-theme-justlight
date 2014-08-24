@@ -1871,6 +1871,28 @@ dd .deletelink {
 	font-size: 85%;
 }
 
+#tabs .tab-visible {
+	display: list-item;
+}
+
+#tabs .tab-hidden {
+	display: none;
+}
+
+#tabs .tab-prev,
+#tabs .tab-next {
+	display: none;
+	margin-top: 8px;
+}
+
+#tabs .tab-prev {
+	float: left;
+}
+
+#tabs .tab-next {
+	float: right;
+}
+
 /* Facts & Events tab */
 #personal_facts_content .fact_NOTE,
 #personal_facts_content .fact_SOUR,

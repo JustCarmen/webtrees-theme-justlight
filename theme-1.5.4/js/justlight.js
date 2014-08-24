@@ -182,6 +182,97 @@ jQuery(window).resize(function() {
 	}
 });
 
+// paging tabs on the indi page
+function tabsPaging() {
+	var maxWidth = jQuery("#tabs").width() - jQuery(".tab-prev").width() - jQuery(".tab-next").width() - 20;	
+	var tWidth = 0;
+	
+	jQuery(".tab-visible").each(function() {
+		tWidth = tWidth + jQuery(this).width() + 5;
+		if(tWidth > maxWidth) {
+			jQuery(this).removeClass("tab-visible").addClass("tab-hidden").hide();
+		}		
+	});
+	
+	if(tWidth + jQuery(".tab-hidden:first").width() < maxWidth) {
+		if(jQuery(".tab-first").is(":hidden")) {
+			jQuery(".tab-visible:first").prev(".tab-hidden").removeClass("tab-hidden").addClass("tab-visible").show();
+		} else {
+			jQuery(".tab-visible:last").next(".tab-hidden").removeClass("tab-hidden").addClass("tab-visible").show();
+		}
+	}
+	
+	toggleArrows();
+}
+
+function toggleTabs($tabToShow, $tabToHide){
+	$tabToShow.animate ({width: "show"}, {
+		duration: 300,
+		done: function () {
+			jQuery(this).removeClass("tab-hidden").addClass("tab-visible");
+			if(jQuery(this).hasClass("tab-first")) {
+				jQuery(".tab-prev").hide();
+			}	
+			if(jQuery(this).hasClass("tab-last")) {
+				jQuery(".tab-next").hide();
+			}	
+		}
+	});
+	
+	$tabToHide.animate ({width: "hide"}, {
+		duration: 300,
+		done: function () {
+			jQuery(this).removeClass("tab-visible").addClass("tab-hidden");
+			if(jQuery(this).hasClass("tab-first")) {
+				jQuery(".tab-prev").show();
+			}
+			if(jQuery(this).hasClass("tab-last")) {
+				jQuery(".tab-next").show();
+			}
+		}
+	});
+}
+
+function toggleArrows () {
+	if(jQuery(".tab-first").is(":hidden")) {
+		jQuery(".tab-prev").show();
+	} else {
+		jQuery(".tab-prev").hide();
+	}
+	
+	if(jQuery(".tab-last").is(":hidden")) {
+		jQuery(".tab-next").show();
+	} else {
+		jQuery(".tab-next").hide();
+	}
+}
+
+jQuery("#tabs").on("click", ".tab-next", function() {
+	$tabToShow = jQuery(".tab-visible:last").next(".tab-hidden");
+	$tabToHide = jQuery(".tab-visible:first");
+	toggleTabs($tabToShow, $tabToHide);
+});
+
+jQuery("#tabs").on("click", ".tab-prev", function() {
+	$tabToShow = jQuery(".tab-visible:first").prev(".tab-hidden");
+	$tabToHide = jQuery(".tab-visible:last");
+	toggleTabs($tabToShow, $tabToHide);	
+});
+
+jQuery(".ui-tabs-nav").waitUntilExists(function(){
+	jQuery("li[role=tab]").addClass("tab-visible");
+	jQuery("li[role=tab]").first().addClass("tab-first");
+	jQuery("li[role=tab]").last().addClass("tab-last");
+	
+	jQuery(".tab-first").before('<li class="tab-prev"><i class="icon-larrow"></i></li>');
+	jQuery(".tab-last").after('<li class="tab-next"><i class="icon-rarrow"></i></li>');
+	tabsPaging();
+});
+
+jQuery(window).resize(function() {
+	tabsPaging();
+});
+
 // Styling of the family page
 if(WT_SCRIPT_NAME === "family.php") {
 	// consistent styling (like indi page)
