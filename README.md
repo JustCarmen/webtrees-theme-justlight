@@ -6,7 +6,7 @@ This theme requires [webtrees 1.5.4 (under development)](https://github.com/fish
 
 This theme is still under development. It will be released after the next release of webtrees (1.5.4).
 
-Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have it's own option module. However with a fewer options to set. Most options relate to the menu. You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
+Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have [it's own option module](https://github.com/JustCarmen/justlight_theme_options). However with a fewer options to set. Most options relate to the menu. You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
 
 Installation and upgrading
 --------------------------
