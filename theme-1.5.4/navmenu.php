@@ -58,7 +58,7 @@ class JL_NavMenu {
 	
 	public static function getGedcomSubMenu() {
 		$menu = '';
-		$ALLOW_CHANGE_GEDCOM=WT_Site::preference('ALLOW_CHANGE_GEDCOM') && count(WT_Tree::getAll())>1;
+		$ALLOW_CHANGE_GEDCOM=WT_Site::getPreference('ALLOW_CHANGE_GEDCOM') && count(WT_Tree::getAll())>1;
 		foreach (WT_Tree::getAll() as $tree) {
 			if ($tree->tree_id==WT_GED_ID || $ALLOW_CHANGE_GEDCOM) {
 				$submenu = new WT_Menu(
