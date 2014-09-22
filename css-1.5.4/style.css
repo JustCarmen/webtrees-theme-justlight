@@ -231,17 +231,13 @@ div.fact_SHARED_NOTE {
 	font-weight: bold;
 }
 
-.name1:hover {
+a.name1:hover {
 	font-weight: bold;
 	text-decoration: underline;
 }
 
 .nameZoom {
 	font-weight: bold;
-}
-
-.detailsZoom {
-	text-decoration: none;
 }
 
 .details_label {
@@ -751,14 +747,6 @@ img.block {
 	vertical-align: top;
 }
 
-.compact_view {
-	cursor: url(images/zoomin.png), n-resize;
-}
-
-.compact_view p {
-	margin: 0;
-}
-
 .listlog {
 	line-height: 20pt;
 }
@@ -1059,8 +1047,7 @@ dt {
 	margin-top: 10px;
 }
 
-.user_favorites_block .person_box,
-.gedcom_favorites_block .person_box {
+.blockcontent [class*='box-style2'] {
 	margin: 5px 0;
 }
 
@@ -1077,47 +1064,54 @@ dt {
 	content: ": ";
 }
 
-.charts_block .person_box,
-.charts_block .person_boxF,
-.charts_block .person_boxNN,
 .gedcom_favorites_block,
 .user_favorites_block,
-#ancestry_chart .person_box,
-#ancestry_chart .person_boxF,
-#ancestry_chart .person_boxNN,
-#descendancy_chart .person_box,
-#descendancy_chart .person_boxF,
-#descendancy_chart .person_boxNN,
-#family-table .person_box,
-#family-table .person_boxF,
-#family-table .person_boxNN,
-#familybook_chart .person_box,
-#familybook_chart .person_boxF,
-#familybook_chart .person_boxNN,
-#hourglass_chart .person_box,
-#hourglass_chart .person_boxF,
-#hourglass_chart .person_boxNN,
-#pedigree_chart .person_box,
-#pedigree_chart .person_boxF,
-#pedigree_chart .person_boxNN,
-#relatives_content .person_box,
-#relatives_content .person_boxF,
-#relatives_content .person_boxNN,
-#relationship_chart .person_box,
-#relationship_chart .person_boxF,
-#relationship_chart .person_boxNN {
+.person_box_template {
 	overflow: visible !important;
 }
 
-.person_box_template.style1 {
-	height: auto !important;
-	min-height: 80px;
-	margin: 0 0 5px;
-	overflow: hidden;
+/* Box styles are
+	0 compact view
+	1 normal view - small box
+	2 normal view - large box
+*/
+.box-style0 {
+	cursor: url(images/zoomin.png), n-resize;
 }
 
-.person_box_template.style0 {
-	padding: 2px;
+.box-style0-expanded {
+	cursor: url(images/zoomout.png), n-resize;
+}
+
+.box-style0-expanded,
+.box-style1-expanded {
+	width: 300px!important;
+	z-index: 100;
+}
+
+.person_box_template {
+	height: auto;
+}
+
+.person_box_template .namedef i {
+	margin-left: 3px;
+}
+
+[dir=rtl] .person_box_template .namedef i {
+	margin-right: 3px;
+}
+
+.person_box_template .icons {
+	float: right;
+}
+
+[dir=rtl] .person_box_template .icons {
+	float: left;
+}
+
+.person_box_template .inout {
+	clear: both;
+	display: none;
 }
 
 .person_box_template .noprint {
@@ -1127,16 +1121,11 @@ dt {
 }
 
 .person_box_template .chart_textbox {
-	height: auto;
 	overflow: hidden;
 }
 
 .person_box_template .name1 {
 	font-size: 95%;
-}
-
-.person_box_template .details div {
-	display: block;
 }
 
 .person_box_template .details1 {
@@ -4191,10 +4180,12 @@ a[class^=" icon-"]:focus,
 
 .icon-zoomin:before {
   content: "\f00e";
+  cursor: pointer;
 }
 
 .icon-zoomout:before {
   content: "\f010";
+  cursor: pointer;
 }
 
 .lb-image_edit:before {

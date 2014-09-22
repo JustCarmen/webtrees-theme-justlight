@@ -156,69 +156,38 @@ jQuery(document).ajaxComplete(function() {
 });
 
 // personboxes
-function jl_expandbox(boxid, bstyle) {
-	var getBox = function () {
-		var result = jQuery.Deferred();
-
-		expandbox(boxid, bstyle);
-		jQuery('div[id="inout-'+boxid+'"]').each(function(){
-			if (jQuery(this).html().indexOf("LOADING")>0) {
-				jQuery(this).hide();
-			}
-		});
-
-		setTimeout(function () {
-			result.resolve();
-		}, 500);
-
-		return result;
-	},
-	modifyBox = function () {
-		jQuery('div[id="inout-'+boxid+'"]').each(function(){
-			var obj = jQuery(this);
-			obj.find(".field").contents().filter(function(){
-				return (this.nodeType === 3);
-			}).remove();
-			obj.find(".field span").filter(function(){
-				return jQuery(this).text().trim().length === 0;
-			}).remove();
-			obj.find("div[class^=fact_]").each(function(){
-				var div = jQuery(this);
-				div.find(".field").each(function(){
-					if(jQuery.trim(jQuery(this).text()) === '') {
-						div.remove();
-					}
-				});
+function personbox_default() {
+		var obj = jQuery(".person_box_template .inout2");
+		modifybox(obj);
+	}
+	
+	function modifybox(obj) {
+		obj.find(".field").contents().filter(function(){
+			return (this.nodeType === 3);
+		}).remove();
+		obj.find(".field span").filter(function(){
+			return jQuery(this).text().trim().length === 0;
+		}).remove();
+		obj.find("div[class^=fact_]").each(function(){
+			var div = jQuery(this);
+			div.find(".field").each(function(){
+				if(jQuery.trim(jQuery(this).text()) === '') {
+					div.remove();
+				}
 			});
-			obj.show();
 		});
-	};
-
-	jQuery('div[id="inout-'+boxid+'"]').each(function(){
-		if (jQuery(this).html().indexOf("LOADING")>0) {
-			getBox().done(modifyBox);
-		} else {
-			getBox();
-		}
+		
+	}
+	
+	personbox_default();
+	
+	jQuery(document).ajaxComplete(function() {
+		setTimeout(function () {
+			personbox_default();
+		}, 500);		
+		var obj = jQuery(".person_box_zoom");
+		modifybox(obj);
 	});
-}
-
-//Remove labels with empty fields from the personboxes.
-jQuery('div[class^=fact_]').each(function(){
-	obj = jQuery(this);
-	obj.find('span.field').each(function(){
-		if(jQuery.trim(jQuery(this).text()) === '') {
-			obj.remove();
-		}
-	});
-});
-
-// replace the default function with our own to customize the zoomed personbox view
-jQuery('[onclick^="expandbox"]').each(function(){
-	jQuery(this).attr('onclick',function(index,attr){
-		return attr.replace('expandbox', 'jl_expandbox');
-	});
-});
 
 /* page specific functions */
 
