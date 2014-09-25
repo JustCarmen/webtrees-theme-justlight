@@ -439,9 +439,6 @@ class JL_NavMenu {
 	/**
 	 * get the reports menu
 	 *
-	 * @param string $pid
-	 * @param string $famid
-	 *
 	 * @return WT_Menu the menu item
 	 */
 	public static function getReportsMenu(){
