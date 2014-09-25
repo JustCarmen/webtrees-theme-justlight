@@ -2406,7 +2406,6 @@ dd .deletelink {
 /* ========= Sidebar ============== */
 #main {
 	margin-top: 20px;
-	overflow: hidden;
 	display: table;
 	table-layout: fixed;
 	width: 100%;
@@ -2430,20 +2429,21 @@ dd .deletelink {
 }
 
 #separator {
-	display:          table-cell;
-	width:            2.5em;
-	position:         relative;
+	display: table-cell;
+	width: 2.5em;
+	position: relative;
 	background-color: transparent;
+	overflow: hidden;
 }
 
 #separator:after {
-	position:                absolute;
-	top:                     0;
-	right:                   0;
-	left:                    auto;
-	width:                   10px;
-	height:                  99999px;
-	content:                 "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: auto;
+	width: 10px;
+	height: 99999px;
+	content: "";
 }
 
 [dir=rtl] #separator:after {
