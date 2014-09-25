@@ -152,51 +152,21 @@ jQuery("#medialist-page .lb-menu").each(function() {
 
 // Bootstrap popover for fanchart page
 if(WT_SCRIPT_NAME === "fanchart.php") {
-	
-	// turn the table into a list
-	jQuery("#fan_chart > div").each(function(){
-		var id = jQuery(this).attr("id").split(".")[0].substr(1);
-		jQuery(this).attr("id", id).find("a").wrap("<li>");
-		jQuery(this).find("td span.name1").wrap("<li class=\"siblings-text\">");	
-		jQuery(this).find("li.siblings-text").nextAll().addClass("siblings");	
-		jQuery(this).find("li").wrapAll("<ul class=\"chart-list\">");
-		jQuery(this).find("li.siblings").wrapAll("<ul class=\"siblings-list\">");
-		var list = jQuery(this).find(".siblings-list");
-		var text = jQuery(this).find(".siblings-text");
-		list.appendTo(text);
-		jQuery(this).find(".person_box").after(jQuery(this).find(".chart-list")).remove();
-	});
-
-	jQuery(".chart-list > li:not(:first-child)").each(function() {
-		// remove "<"-sign from list
-		jQuery(this).find("> a.name1").each(function(){		
-			var children = jQuery(this).children();
-			children.remove();
-			var text = jQuery.trim(jQuery(this).text());
-			if(text === "<"){
-				jQuery(this).closest("li").addClass("child");
-			}		
-			jQuery(this).text("").append(children);
-		});	
-	});
-
-	jQuery(".chart-list").each(function() {
-		jQuery(this).find(".child").wrapAll("<ul class=\"children\">");
-	});
 
 	jQuery("#fan_chart #fanmap area").each(function(){
-		var id = jQuery(this).attr("onclick").split("'")[1].split(".")[0];
-		jQuery(this).removeAttr("onclick onmouseout");
-		var obj = jQuery("#fan_chart > div[id="+id+"]");
-		var title = obj.find(".chart-list li:first").remove();
+		var id = jQuery(this).attr("href").split("#");
+		var obj = jQuery("#fan_chart > div[id="+id[1]+"]");
+		obj.find(".person_box").addClass("fan-chart-list");
+		var title = obj.find(".name1:first").remove();
 		var content = obj.html();
-		jQuery(this).attr("data-toggle", "popover");
-		jQuery(this).attr("title", title.html());
+		jQuery(this)
+				.attr("data-toggle", "popover")
+				.attr("title", title.clone().wrap('<p>').parent().html())
+				.removeAttr("href");
 		jQuery(this).popover({
 			content:	content,
 			html:		true,
 			trigger:	'manual',
-			placement:	'auto right',
 			container:	'body'
 		}).on(manualTrigger(jQuery(this), true, false));  
 	});

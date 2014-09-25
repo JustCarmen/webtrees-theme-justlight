@@ -614,7 +614,7 @@ img.block {
 #pedigree_chart #childbox {
 	padding: 5px;
 	position: absolute;
-	visibility: hidden;
+	display: none;
 	white-space: nowrap;
 }
 
@@ -716,6 +716,26 @@ img.block {
 #familybook_chart,
 #hourglass_chart {
 	margin: 20px;
+}
+
+.fan_chart_menu {
+	position: absolute;
+	display:  none;
+	z-index:  100;
+}
+
+#fan_chart ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+#fan_chart ul.children li:before {
+	content: "< ";
+	font-weight: bold;
+}
+
+#fan_chart_img {
+	text-align: center;
 }
 
 #timeline_chart {
@@ -3636,9 +3656,19 @@ dd .deletelink {
 }
 
 /* Fan chart page popovers */
-.chart-list .children .name1,
-.chart-list .siblings .name1 {
+.fan-chart-list.person_box {
+	background: none;
+}
+
+.fan-chart-list .name1 {
+	display: block;
+	padding-top: 5px;
+}
+
+.fan-chart-list .children .name1,
+.fan-chart-list .siblings .name1 {
 	font-weight: normal;
+	padding: 0;
 }
 
 /* Solve conflicts with Bootstrap */
