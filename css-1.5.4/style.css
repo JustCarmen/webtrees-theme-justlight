@@ -1733,11 +1733,6 @@ dd .deletelink {
 	float: right;
 }
 
-[dir=rtl] #indi_header {
-	float: right;
-	padding: 0 0 0 10px;
-}
-
 [dir=rtl] #indi_header h3 {
 	padding: 0 30px 0 10px;
 	text-align: right;
