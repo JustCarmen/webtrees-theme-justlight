@@ -461,7 +461,10 @@ img.block {
 
 #index_main_blocks .table,
 #index_small_blocks .table,
-#index_full_blocks .table {
+#index_full_blocks .table,
+#index_main_blocks .table-responsive,
+#index_small_blocks .table-responsive,
+#index_full_blocks .table-responsive {
 	border: none;
 }
 
@@ -1520,9 +1523,7 @@ table.faq tr.odd td {
 
 div.faq_title {
 	margin: 1em 0 0 1em;
-	padding: .25em;
 	font-weight: bold;
-	width: 98%;
 }
 
 div.faq_body {
@@ -3663,6 +3664,11 @@ dd .deletelink {
 .fan-chart-list .siblings .name1 {
 	font-weight: normal;
 	padding: 0;
+}
+
+// Bootstrap Firefox fix. See: http://getbootstrap.com/css/#tables
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 
 /* Solve conflicts with Bootstrap */
