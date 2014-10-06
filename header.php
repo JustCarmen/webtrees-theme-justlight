@@ -100,7 +100,7 @@ $this
 						<div class="navbar-right">
 							<?php
 							echo JL_TopMenu::getFavoritesMenu();
-							if (WT_GED_ID && !$SEARCH_SPIDER && WT_Site::getPreference('ALLOW_USER_THEMES') && get_gedcom_setting(WT_GED_ID, 'ALLOW_THEME_DROPDOWN')) {
+							if (WT_GED_ID && !$SEARCH_SPIDER && WT_Site::getPreference('ALLOW_USER_THEMES') && $WT_TREE->getPreference('ALLOW_THEME_DROPDOWN')) {
 								echo JL_TopMenu::getTopMenu(WT_I18N::translate('Theme'), "themes");
 							}
 							echo JL_TopMenu::getTopMenu(WT_I18N::translate('Language'), "languages");								
