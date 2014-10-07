@@ -88,11 +88,11 @@ class JL_NavMenu {
 		global $PEDIGREE_FULL_DETAILS, $PEDIGREE_LAYOUT;
 
 		$showFull = ($PEDIGREE_FULL_DETAILS) ? 1 : 0;
-		$showLayout = ($PEDIGREE_LAYOUT) ? 1 : 0;		
+		$showLayout = ($PEDIGREE_LAYOUT) ? 1 : 0;
 		
 		$menu = '';
 		//-- editaccount submenu
-		if (Auth::user()->getSetting('editaccount')) {
+		if (Auth::user()->getPreference('editaccount')) {
 			$submenu = new WT_Menu(WT_I18N::translate('My account'), 'edituser.php', 'menu-myaccount');
 			$menu.=$submenu->getMenuAsList();
 		}
