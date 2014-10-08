@@ -3924,9 +3924,9 @@ a[class^=" icon-"]:focus,
 	content:"\f040";
 }
 
-.deleteicon:before,
-.icon-remove:before {
+.deleteicon:before {
 	content:"\f00d";
+	cursor: pointer;
 }
 
 .icon-admin:before {
@@ -4112,6 +4112,10 @@ a[class^=" icon-"]:focus,
 
 .icon-reminder:before {
   content: "\f0f3";
+}
+
+.icon-remove:before {
+	content:"\f00d";
 }
 
 .icon-rings:before {
