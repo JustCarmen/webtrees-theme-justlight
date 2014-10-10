@@ -552,27 +552,27 @@ class JL_NavMenu {
 
 				$menu .= '
 					<li id="menu-chart" class="dropdown-submenu">
-						<a href="pedigree.php?rootid='.$indi_xref.'&amp;ged='.WT_GEDURL.'">'.WT_I18N::translate('Charts').'</a>
-						<ul class="dropdown-menu">'.self::getChartsSubMenu().'</ul>
+						<a class="dropdown-submenu-toggle" href="#">'.WT_I18N::translate('Charts').'<span class="right-caret"></span></a>
+						<ul class="dropdown-menu sub-menu">'.self::getChartsSubMenu().'</ul>
 					</li>
 					<li id="menu-list" class="dropdown-submenu">
-						<a href="indilist.php?ged='.WT_GEDURL.'">'.WT_I18N::translate('Lists').'</a>
-						<ul class="dropdown-menu">'.self::getListsSubMenu().'</ul>
+						<a class="dropdown-submenu-toggle" href="#">'.WT_I18N::translate('Lists').'<span class="right-caret"></span></a>
+						<ul class="dropdown-menu sub-menu">'.self::getListsSubMenu().'</ul>
 					</li>';
 
 				$active_reports=WT_Module::getActiveReports();
 				if (getThemeOption('compact_menu_reports') == 1 && $active_reports) {
 					$menu .= '
 						<li id="menu-report" class="dropdown-submenu">
-							<a href="reportengine.php?ged='.WT_GEDURL.'">'.WT_I18N::translate('Reports').'</a>
-							<ul class="dropdown-menu">'.self::getReportsSubMenu().'</ul>
+							<a class="dropdown-submenu-toggle" href="#">'.WT_I18N::translate('Reports').'<span class="right-caret"></span></a>
+							<ul class="dropdown-menu sub-menu">'.self::getReportsSubMenu().'</ul>
 						</li>';
 				};
 
 				$menu .= '
 					<li id="menu-calendar" class="dropdown-submenu">
-						<a href="calendar.php?ged='.WT_GEDURL.'">'.WT_I18N::translate('Calendar').'</a>
-						<ul class="dropdown-menu">'.self::getCalendarSubMenu().'</ul>
+						<a class="dropdown-submenu-toggle" href="#">'.WT_I18N::translate('Calendar').'<span class="right-caret"></span></a>
+						<ul class="dropdown-menu sub-menu">'.self::getCalendarSubMenu().'</ul>
 					</li>';							
 		$menu .= '
 				</ul>
