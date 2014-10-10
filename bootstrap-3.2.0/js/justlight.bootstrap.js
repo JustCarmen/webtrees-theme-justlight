@@ -20,37 +20,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-// Manual popover trigger function
-function manualTrigger(obj, click, hover) {
-	
-	if (click === true) {
-		obj.on("click", function (event) { // click is neccessary for touchscreen devices.
-			event.preventDefault();
-			event.stopPropagation();
-			jQuery('.popover').not(obj).hide();
-			obj.popover("show");
-		});
-	}
-	
-	if(hover === true) {
-		obj.on("mouseenter", function () {
-			jQuery('.popover').not(obj).hide();
-			obj.popover("show");
-			obj.siblings(".popover").on("mouseleave", function () {
-				obj.popover('hide');
-			});
-		});
-		
-		obj.on("mouseleave", function () {
-			setTimeout(function () {
-				if (!jQuery(".popover:hover").length) {
-					obj.popover("hide");
-				}
-			}, 100);
-		});
-	}	
-}
-
 // Bootstrap multilevel menu
 jQuery(".dropdown-menu > li > a.dropdown-submenu-toggle").on("click",function(e){
 	e.preventDefault();
@@ -103,6 +72,37 @@ jQuery("#sb_content_family_nav").each(function() {
 	jQuery(this).find("table").addClass("table-striped");
 	jQuery(this).find("td").removeClass("person_box person_boxF person_boxNN center");
 });
+
+// Manual popover trigger function
+function manualTrigger(obj, click, hover) {
+	
+	if (click === true) {
+		obj.on("click", function (event) { // click is neccessary for touchscreen devices.
+			event.preventDefault();
+			event.stopPropagation();
+			jQuery('.popover').not(obj).hide();
+			obj.popover("show");
+		});
+	}
+	
+	if(hover === true) {
+		obj.on("mouseenter", function () {
+			jQuery('.popover').not(obj).hide();
+			obj.popover("show");
+			obj.siblings(".popover").on("mouseleave", function () {
+				obj.popover('hide');
+			});
+		});
+		
+		obj.on("mouseleave", function () {
+			setTimeout(function () {
+				if (!jQuery(".popover:hover").length) {
+					obj.popover("hide");
+				}
+			}, 100);
+		});
+	}	
+}
 
 // Prepare webtrees popup lists for bootstrap popovers
 jQuery(".popup > ul > li").waitUntilExists(function() {
