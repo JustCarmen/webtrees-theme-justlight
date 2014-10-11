@@ -1562,6 +1562,8 @@ div.faq_body {
 	position: absolute;
 	right: 20px;
 	bottom: 10px;
+	text-align:right;
+	z-index: 1;
 }
 
 /* Find special characters */
