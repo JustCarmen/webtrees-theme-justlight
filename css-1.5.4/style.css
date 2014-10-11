@@ -330,6 +330,7 @@ a.name1:hover {
 	left: 20px;
 	bottom: 10px;
 	width: 30%;
+	z-index: 1;
 }
 
 .hit-counter {
