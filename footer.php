@@ -36,7 +36,7 @@ if (!defined('WT_WEBTREES')) {
 		<div class="top">			
 			<?php echo contact_links() ?>
 			<div class="logo">
-				<a href="<?php echo WT_WEBTREES_URL ?>" target="_blank" class="icon-webtrees" title="<?php echo WT_WEBTREES, ' ', WT_VERSION_TEXT ?>"></a>				
+				<a href="<?php echo WT_WEBTREES_URL ?>" target="_blank" class="icon-webtrees" title="<?php echo WT_WEBTREES, ' ', WT_VERSION ?>"></a>
 			</div>
 		</div><!-- /.footer top -->
 		<div class="container bottom">
