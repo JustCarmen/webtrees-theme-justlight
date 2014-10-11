@@ -2319,6 +2319,14 @@ dd .deletelink {
 	width: 90%;
 }
 
+#statistics_chart td.facts_value {
+	text-align: left;
+}
+
+#statistics_chart td.statistics-page {
+	text-align: center;
+}
+
 #source-edit,
 #note-edit,
 #repo-edit,
