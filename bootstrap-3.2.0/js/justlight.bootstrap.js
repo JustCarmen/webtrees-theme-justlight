@@ -82,6 +82,7 @@ function manualTrigger(obj, click, hover) {
 			event.stopPropagation();
 			jQuery('.popover').not(obj).hide();
 			obj.popover("show");
+			jQuery('.popover-content').addClass(obj.data("class"))
 		});
 	}
 	
@@ -89,6 +90,7 @@ function manualTrigger(obj, click, hover) {
 		obj.on("mouseenter", function () {
 			jQuery('.popover').not(obj).hide();
 			obj.popover("show");
+			jQuery('.popover-content').addClass(obj.data("class"))
 			obj.siblings(".popover").on("mouseleave", function () {
 				obj.popover('hide');
 			});
@@ -188,14 +190,9 @@ if(WT_SCRIPT_NAME === "fanchart.php") {
 }
 
 // Childbox popover
-jQuery("#childarrow a").waitUntilExists(function(){	
-	if(jQuery("#hourglass_chart").length > 0) {
-		content = jQuery(this).parent().find("#childbox").remove();
-	}
-	else {
-		content = jQuery(this).parent().next("#childbox").remove();
-	}
-	jQuery(this).attr("data-toggle", "popover");
+jQuery("#childarrow a").waitUntilExists(function(){
+	content = jQuery(this).parent().find("#childbox").remove();
+	jQuery(this).attr({"data-toggle": "popover", "data-class": "childbox"});
 	jQuery(this).popover({
 		content:	content.html(),
 		html:		true,
