@@ -758,6 +758,10 @@ img.block {
 	text-align: center;
 }
 
+#fanmap area {
+	cursor: pointer;
+}
+
 #timeline_chart {
 	position: relative;
 	top: 0;
