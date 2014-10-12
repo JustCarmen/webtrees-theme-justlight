@@ -84,9 +84,9 @@ $this
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>justlight.css">	
 </head>
 <body id="body">
-	<?php if ($view!='simple') { 
-	getJLScriptVars(); ?>
 	<div id="wrap">
+		<?php if ($view!='simple'): ?>
+		<?php getJLScriptVars(); ?>
 		<div class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
@@ -130,21 +130,19 @@ $this
 				</div><!-- /.container-fluid -->
 			</div><!-- /.navbar-inner -->
 		</div><!-- /.navbar -->
-		<?php
-		if (exists_pending_change()) { ?>
-		<a class="pending-changes-message" href="#" onclick="window.open('edit_changes.php', '_blank', chan_window_specs); return false;">
-			<p class="alert alert-warning"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
-		</a>
-	<?php	}
-	 }
-	echo $javascript;
-	echo WT_FlashMessages::getHtmlMessages();	
-	if(WT_Filter::get('action') === 'addnewnote_assisted') {
-		$style = 'style="width: 100%"';
-		$this->addInlineJavascript('jQuery("#edit_interface-page").addClass("census-assistant")');
-	}
-	else {
-		$style = WT_SCRIPT_NAME === 'individual.php' || WT_SCRIPT_NAME === 'family.php' || WT_SCRIPT_NAME === 'medialist.php' || WT_Filter::get('mod_action') === 'treeview' ? ' style="width: 100%"' : '';
-	}	
-	?>
+			<?php if (exists_pending_change()): ?>
+				<a class="pending-changes-message" href="#" onclick="window.open('edit_changes.php', '_blank', chan_window_specs); return false;">
+					<p class="alert alert-warning"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
+				</a>
+			<?php endif; ?>
+		<?php endif; // simple view
+		echo $javascript;
+		echo WT_FlashMessages::getHtmlMessages();	
+		if(WT_Filter::get('action') === 'addnewnote_assisted') {
+			$style = 'style="width: 100%"';
+			$this->addInlineJavascript('jQuery("#edit_interface-page").addClass("census-assistant")');
+		} else {
+			$style = WT_SCRIPT_NAME === 'individual.php' || WT_SCRIPT_NAME === 'family.php' || WT_SCRIPT_NAME === 'medialist.php' || WT_Filter::get('mod_action') === 'treeview' ? ' style="width: 100%"' : '';
+		}	
+		?>
 		<div id="responsive"></div><div id="content" class="container"<?php echo $style ?>>
