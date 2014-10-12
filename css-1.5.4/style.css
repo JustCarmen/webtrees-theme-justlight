@@ -629,12 +629,12 @@ img.block {
 	white-space: nowrap;
 }
 
-#pedigree_chart .popover-content #childbox .name1 {
+/*-- pedigree chart rtl specific stylesheets --*/
+.popover-content a[href^="pedigree"] .name1 {
 	font-size: 90%;
-	font-weight: normal;
+	white-space:pre;
 }
 
-/*-- pedigree chart rtl specific stylesheets --*/
 [dir=rtl] #pedigree_chart {
 	left: auto;
 	right: -20px;
