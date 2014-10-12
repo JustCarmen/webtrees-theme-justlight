@@ -43,18 +43,29 @@ $this
 			script.src="'.JL_BOOTSTRAP_URL.'js/dataTables.bootstrap.js";
 			document.body.appendChild(script);
 		}
-	');
-	if(WT_SCRIPT_NAME === 'individual.php' || WT_Filter::get('mod_action') === 'treeview') {
-		$this->addInlineJavascript('
-			// load treeview stylesheet
+		// load treeview stylesheet
+		function tvCss() {
 			var head = document.getElementsByTagName("head")[0];
 			var css = document.createElement("link");
 			css.setAttribute("rel", "stylesheet");
 			css.setAttribute("type", "text/css");
 			css.setAttribute("href", "'.WT_CSS_URL.'treeview.css");
 			head.appendChild(css);
+		}
+	');
+	
+	if(WT_SCRIPT_NAME === 'index.php') {
+		$this->addInlineJavascript('
+			jQuery(".charts_block #tree_out").waitUntilExists(function() {
+				tvCss();
+				jQuery(this).find("#tree-title").css("visibility", "hidden");
+			});
 		', WT_CONTROLLER_BASE::JS_PRIORITY_LOW);
 	}
+	
+	if(WT_SCRIPT_NAME === 'individual.php' || WT_Filter::get('mod_action') === 'treeview') {
+		$this->addInlineJavascript('tvCss();', WT_CONTROLLER_BASE::JS_PRIORITY_LOW);
+	}	
 ?>
 <!DOCTYPE html>
 <html <?php echo WT_I18N::html_markup(); ?>>
