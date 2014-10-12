@@ -30,6 +30,12 @@
 	border: 1px solid #ccc;
 }
 
+.tv_in {
+	background-color: #f5f5f5;
+	border: 1px solid #428bca;
+	padding: 20px;
+}
+
 .tvM {
 	background-color: #D7EAF9 !important;
 }
