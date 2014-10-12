@@ -1,5 +1,5 @@
 /*
- *  Bootstrap javascript for theme JustLight
+ *  Bootstrap javascript for the JustLight theme
  *  
  *  webtrees: Web based Family History software
  *  Copyright (C) 2014 webtrees development team.

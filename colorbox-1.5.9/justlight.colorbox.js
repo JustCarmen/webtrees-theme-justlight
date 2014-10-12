@@ -1,4 +1,6 @@
 /*
+ *  Colorbox javascript for the JustLight theme
+ *  
  *  webtrees: Web based Family History software
  *  Copyright (C) 2014 webtrees development team.
  *  Copyright (C) 2014 JustCarmen.

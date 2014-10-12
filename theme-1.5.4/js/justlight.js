@@ -1,4 +1,6 @@
 /*
+ * Javascript for the JustLight theme
+ *  
  * webtrees: Web based Family History software
  * Copyright (C) 2014 webtrees development team.
  * Copyright (C) 2014 JustCarmen.
@@ -16,8 +18,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ *
+ * use waitUntilExists plugin on pages with dynamic content - https://gist.github.com/md55/6565078
  */
-// use waitUntilExists plugin on pages with dynamic content - https://gist.github.com/md55/6565078
 
 /* General functions (fired on every page */
 
