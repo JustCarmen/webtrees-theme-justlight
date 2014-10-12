@@ -283,6 +283,11 @@
 	color: #aaa;
 }
 
+/* familybook_chart horizontal lines */
+#familybook_chart hr {
+	border: 1px solid #ccc;
+}
+
 /* submenu */
 .submenu {
     background-color: #fff;
