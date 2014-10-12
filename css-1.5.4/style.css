@@ -448,12 +448,14 @@ img.block {
 
 #index_main_blocks {
 	width: 75%;
+	max-width: 877.5px; /* 75% x 1170 */
 	display: table-cell;
 	padding: 10px;
 }
 
 #index_small_blocks {
 	width: 25%;
+	max-width: 292.5px; /* 25% x 1170 */
 	display: table-cell;
 	font-size: 80%;	
 	padding: 0 10px;
@@ -3780,7 +3782,7 @@ table.dataTable thead > tr > th {
 		padding: 1px 5px;
 	}
 	
-	#home-page #index_small_blocks {
+	#index_small_blocks {
 		display: none;
 	}
 	
