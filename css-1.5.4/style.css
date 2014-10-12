@@ -390,6 +390,8 @@ a.name1:hover {
 }
 
 #my-page h1 {
+	font-weight: bold;
+	letter-spacing: 1.5px;
 	padding-bottom:10px;
 }
 
@@ -416,6 +418,7 @@ a.name1:hover {
 }
 
 .blockheader {
+	font-size: 140%;
 	font-weight: bold;
 }
 
