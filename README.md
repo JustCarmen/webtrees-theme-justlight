@@ -2,11 +2,24 @@ JustLight Theme for webtrees
 ============================
 
 A light clean theme using the Bootstrap framework.
-This theme requires [webtrees 1.5.4 (under development)](https://github.com/fisharebest/webtrees).
+The development version of this theme requires [webtrees 1.6.1](https://github.com/fisharebest/webtrees).
 
-This theme is still under development. It will be released after the next release of webtrees (1.5.4).
+Download the first stable release for webtrees 1.6.0 here: https://github.com/JustCarmen/justlight/releases/tag/1.6.0
 
-Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have [it's own option module](https://github.com/JustCarmen/justlight_theme_options). However with a fewer options to set. Most options relate to the menu. You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
+Description
+-----------
+This is a new modern theme in clean white and blue. The layout is adjusted as much as possible for use on touch devices like tablets and mobile phones.
+
+A few things to mention:
+* The menu is responsive. This means it will collapse on smaller screens and have only clickable items. You might be used to hover over a menu item to get it’s submenu but on touch devices the hover functionality doesn’t exist.
+
+* The homepage and mypage are responsive as long as you keep some things in mind. Using the statistics block for instance means the page cannot shrink on smaller devices.
+
+* At the individual page the sidebar will collapse automatically when viewing from smaller screens.
+
+And much more...
+
+Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have [it's own option module](https://github.com/JustCarmen/justlight_theme_options). You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
 
 Installation and upgrading
 --------------------------
