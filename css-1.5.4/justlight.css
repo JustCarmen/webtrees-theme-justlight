@@ -270,9 +270,17 @@
 	color: #999;
 }
 
-/* childboxes */
+/* pedigree chart childbox */
 #pedigree_chart #childbox {
 	border: 1px solid #b2c7d7;
+}
+
+/* compact chart - non clickable arrows */
+#compact_chart i.icon-darrow:before,
+#compact_chart i.icon-larrow:before,
+#compact_chart i.icon-rarrow:before,
+#compact_chart i.icon-uarrow:before {	
+	color: #aaa;
 }
 
 /* submenu */

@@ -729,6 +729,15 @@ img.block {
 	margin: 20px;
 }
 
+/* arrows without a link on the compact chart */
+#compact_chart i.icon-darrow:before,
+#compact_chart i.icon-larrow:before,
+#compact_chart i.icon-rarrow:before,
+#compact_chart i.icon-uarrow:before {	
+	cursor: default;	
+}
+
+/* fan chart */
 .fan_chart_menu {
 	position: absolute;
 	display:  none;
