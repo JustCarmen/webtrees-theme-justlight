@@ -45,12 +45,7 @@ if (!defined('WT_WEBTREES')) {
 		if (WT_DEBUG || $WT_TREE->getPreference('SHOW_STATS')) {
 			echo execution_stats();
 		}
-		if (exists_pending_change()) {
 		?>
-			<a class="footer-link-pending" href="#" onclick="window.open('edit_changes.php', '_blank', chan_window_specs); return false;">
-				<p class="error center"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
-			</a>
-		<?php } ?>
 		</div><!-- /.footer bottom -->
 	</div><!-- /.footer -->
 <?php }

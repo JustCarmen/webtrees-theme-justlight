@@ -118,10 +118,16 @@ $this
 					</div><!--/.nav-collapse -->
 				</div><!-- /.container-fluid -->
 			</div><!-- /.navbar-inner -->
-		</div><!-- /.navbar -->		
-	<?php }
+		</div><!-- /.navbar -->
+		<?php
+		if (exists_pending_change()) { ?>
+		<a class="pending-changes-message" href="#" onclick="window.open('edit_changes.php', '_blank', chan_window_specs); return false;">
+			<p class="alert alert-warning"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
+		</a>
+	<?php	}
+	 }
 	echo $javascript;
-	echo WT_FlashMessages::getHtmlMessages();
+	echo WT_FlashMessages::getHtmlMessages();	
 	if(WT_Filter::get('action') === 'addnewnote_assisted') {
 		$style = 'style="width: 100%"';
 		$this->addInlineJavascript('jQuery("#edit_interface-page").addClass("census-assistant")');
