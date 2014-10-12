@@ -188,11 +188,13 @@ if(WT_SCRIPT_NAME === "fanchart.php") {
 }
 
 // Childbox popover
-jQuery("#childarrow a").waitUntilExists(function(){
-	var content = jQuery(this).parent().next("#childbox");
-//	content.find("a").wrap("<li>");
-//	content.children().wrapAll("<ul>");
-//	content.find("br").remove();
+jQuery("#childarrow a").waitUntilExists(function(){	
+	if(jQuery("#hourglass_chart").length > 0) {
+		content = jQuery(this).parent().find("#childbox").remove();
+	}
+	else {
+		content = jQuery(this).parent().next("#childbox").remove();
+	}
 	jQuery(this).attr("data-toggle", "popover");
 	jQuery(this).popover({
 		content:	content.html(),
