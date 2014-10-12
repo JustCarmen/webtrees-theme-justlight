@@ -630,10 +630,6 @@ img.block {
 }
 
 /*-- pedigree chart rtl specific stylesheets --*/
-.popover-content a[href^="pedigree"] .name1 {
-	font-size: 90%;
-	white-space:pre;
-}
 
 [dir=rtl] #pedigree_chart {
 	left: auto;
@@ -3656,9 +3652,22 @@ dd .deletelink {
 }
 
 /* Popovers */
+.popover-content {
+	font-size: 95%;
+	white-space: pre;
+}
+
 .popover-content ul {
 	font-size: 95%;
 	margin: 0 5px;
+}
+
+.popover-content .person_box {
+	background: #fff;
+}
+
+.popover-content .table {
+	border: none;
 }
 
 #index_small_blocks .popover-content ul {
