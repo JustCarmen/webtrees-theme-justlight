@@ -20,6 +20,12 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+// Bootstrap fixed navbar. Keep the content in relation to the navbar always in position.
+jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
+jQuery(window).resize(function(){
+	jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
+});
+
 // Bootstrap multilevel menu
 jQuery(".dropdown-menu > li > a.dropdown-submenu-toggle").on("click",function(e){
 	e.preventDefault();

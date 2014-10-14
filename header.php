@@ -87,7 +87,7 @@ $this
 	<div id="wrap">
 		<?php if ($view!='simple'): ?>
 		<?php getJLScriptVars(); ?>
-		<div class="navbar navbar-default navbar-fixed-top">
+		<div id="nav-container" class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
