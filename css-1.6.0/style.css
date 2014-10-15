@@ -482,6 +482,12 @@ img.block {
 #index_small_blocks .block:not(:last-child) {
 	border-bottom: 1px solid #428bca;
 }
+
+#index_full_blocks .list_table {
+	margin-left: initial;
+	margin-right: initial;
+}
+
 [dir=rtl] #index_main_blocks {
 	float: right;
 }
