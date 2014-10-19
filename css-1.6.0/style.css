@@ -1916,6 +1916,10 @@ dd .deletelink {
 	vertical-align: middle;
 }
 
+.media-display {
+	margin-top: 5px;
+}
+
 .media-display-title {
 	font-style: italic;
 	padding-top: 5px;
