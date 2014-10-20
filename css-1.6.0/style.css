@@ -398,7 +398,7 @@ a.name1:hover {
 /*-- index.php specific style sheets -- */
 .small_inner_block {
 	max-height: 350px;
-	overflow-x:hidden;
+	overflow-x:auto;
 	overflow-y:auto;
 	text-decoration: none;
 }
