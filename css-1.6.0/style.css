@@ -1756,10 +1756,6 @@ span.link_text {
 	white-space: pre-wrap;
 }
 
-.markdown th {
-	font-weight: bold;
-}
-
 .markdown td,
 .markdown th {
 	padding: 3px;

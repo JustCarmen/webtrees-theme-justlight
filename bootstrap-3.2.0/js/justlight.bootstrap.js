@@ -74,6 +74,15 @@ jQuery("table").waitUntilExists(function() {
 	}
 });
 
+jQuery(".markdown").waitUntilExists(function(){
+	jQuery(this).find("table").each(function(){
+		jQuery(this).addClass("table table-condensed table-striped width100");
+		var colspan = jQuery(this).find("th").length;
+		jQuery(this).find("tbody").prepend("<tr><td colspan=\"" + colspan + "\">");
+	});
+	
+});
+
 jQuery("#sb_content_family_nav").each(function() {
 	jQuery(this).find("table").addClass("table-striped");
 	jQuery(this).find("td").removeClass("person_box person_boxF person_boxNN center");
