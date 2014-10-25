@@ -29,12 +29,20 @@ html {
 	overflow-y: scroll;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.charts_block,
+[id$="_chart"] {
+    box-sizing: content-box;
+}
+
 #wrap {
     height: auto !important;
     margin: 0 auto -120px;
     min-height: 100%;
 	padding-top: 120px;
-	overflow:hidden;
 	position: relative;
 }
 
