@@ -320,13 +320,13 @@ class JL_NavMenu {
 			'menu-list',
 			'lists'
 		);
-	}	
-
+	}
+	
 	public static function getListsSubMenu() {
 		global $SEARCH_SPIDER, $controller;
 
 		// Do not show empty lists
-		$row=WT_DB::prepare(
+		$row = WT_DB::prepare(
 			"SELECT SQL_CACHE".
 			" EXISTS(SELECT 1 FROM `##sources` WHERE s_file=?                  ) AS sour,".
 			" EXISTS(SELECT 1 FROM `##other`   WHERE o_file=? AND o_type='REPO') AS repo,".
@@ -335,78 +335,39 @@ class JL_NavMenu {
 		)->execute(array(WT_GED_ID, WT_GED_ID, WT_GED_ID, WT_GED_ID))->fetchOneRow();
 
 		// Build a list of submenu items and then sort it in localized name order
-		$menulist=array('indilist.php'  =>WT_I18N::translate('Individuals'));
+		$surname_url = '&surname=' . rawurlencode($controller->getSignificantSurname()) . '&amp;ged=' . WT_GEDURL;
+
+		$menulist = array(
+			new WT_Menu(WT_I18N::translate('Individuals'), 'indilist.php?ged=' . WT_GEDURL . $surname_url, 'menu-list-indi'),
+		);
+
 		if (!$SEARCH_SPIDER) {
-			$menulist['famlist.php'  ]=WT_I18N::translate('Families');
-			$menulist['branches.php' ]=WT_I18N::translate('Branches');
-			$menulist['placelist.php']=WT_I18N::translate('Place hierarchy');
-			// Build a list of submenu items and then sort it in localized name order
+			$menulist[] = new WT_Menu(WT_I18N::translate('Families'), 'famlist.php?ged=' . WT_GEDURL . $surname_url, 'menu-list-fam');
+			$menulist[] = new WT_Menu(WT_I18N::translate('Branches'), 'branches.php?ged=' . WT_GEDURL . $surname_url, 'menu-branches');
+			$menulist[] = new WT_Menu(WT_I18N::translate('Place hierarchy'), 'placelist.php?ged=' . WT_GEDURL, 'menu-list-plac');
 			if ($row->obje) {
-				$menulist['medialist.php']=WT_I18N::translate('Media objects');
+				$menulist[] = new WT_Menu(WT_I18N::translate('Media objects'), 'medialist.php?ged=' . WT_GEDURL, 'menu-list-obje');
 			}
 			if ($row->repo) {
-				$menulist['repolist.php']=WT_I18N::translate('Repositories');
+				$menulist[] = new WT_Menu(WT_I18N::translate('Repositories'), 'repolist.php?ged=' . WT_GEDURL, 'menu-list-repo');
 			}
 			if ($row->sour) {
-				$menulist['sourcelist.php']=WT_I18N::translate('Sources');
+				$menulist[] = new WT_Menu(WT_I18N::translate('Sources'), 'sourcelist.php?ged=' . WT_GEDURL, 'menu-list-sour');
 			}
 			if ($row->note) {
-				$menulist['notelist.php']=WT_I18N::translate('Shared notes');
+				$menulist[] = new WT_Menu(WT_I18N::translate('Shared notes'), 'medialist.php?ged=' . WT_GEDURL, 'menu-list-note');
 			}
 		}
-		asort($menulist);
-
-		$surname_url='?surname='.rawurlencode($controller->getSignificantSurname()).'&amp;ged='.WT_GEDURL;
-		$menu='';
-		foreach ($menulist as $page=>$name) {
-			switch ($page) {
-			case 'indilist.php':
-				$submenu = new WT_Menu($name, $page.$surname_url, 'menu-list-indi');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'famlist.php':
-				$submenu = new WT_Menu($name, $page.$surname_url, 'menu-list-fam');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'branches.php':
-				$submenu = new WT_Menu($name, $page.$surname_url, 'menu-branches');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'sourcelist.php':
-				$submenu = new WT_Menu($name, $page.'?ged='.WT_GEDURL, 'menu-list-sour');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'notelist.php':
-				$submenu = new WT_Menu($name, $page.'?ged='.WT_GEDURL, 'menu-list-note');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'repolist.php':
-				$submenu = new WT_Menu($name, $page.'?ged='.WT_GEDURL, 'menu-list-repo');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'placelist.php':
-				$submenu = new WT_Menu($name, $page.'?ged='.WT_GEDURL, 'menu-list-plac');
-				$menu.=$submenu->getMenuAsList();
-				break;
-
-			case 'medialist.php':
-				if (!getThemeOption('media_menu')) {
-					$submenu = new WT_Menu($name, $page.'?ged='.WT_GEDURL, 'menu-list-obje');
-					$menu.=$submenu->getMenuAsList();
-				}
-				break;
-			}
+		uasort($menulist, function($x, $y) { return WT_I18N::strcasecmp($x->label, $y->label); });
+		
+		$menu = '';
+		foreach ($menulist as $submenu) {
+			$menu .= $submenu->getMenuAsList();
 		}
 
 		return $menu;
 	}
-	
+
 	public static function getCalendarMenu(){
 		global $SEARCH_SPIDER;
 
