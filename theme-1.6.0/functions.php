@@ -45,6 +45,7 @@ function getJLScriptVars() {
 			// JustLight Theme variables
 			var WT_SERVER_NAME = "'.WT_SERVER_NAME.'";
 			var WT_SCRIPT_PATH = "'.WT_SCRIPT_PATH.'";
+			var WT_TREE_TITLE = "'.strip_tags(WT_TREE_TITLE).'";
 			var JL_COLORBOX_URL = "'. JL_COLORBOX_URL .'";
 			var useWatermark  = '.$useWatermark.';
 			var useGviewer = '.$useGviewer.';

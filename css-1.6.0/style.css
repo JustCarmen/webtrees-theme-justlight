@@ -4316,3 +4316,31 @@ a[class^=" icon-"]:focus,
 .lb-image_view:before {
 	content:"\f03e";	
 }
+
+/* Watermarked pdf's - Optional */
+.pdf-menu {
+	background-color: #EBEBEB;
+	height: 37px;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+}
+
+.pdf-body {
+	background-color: #FFF;
+	opacity: .2;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	z-index: 998;
+	overflow: hidden;
+}
+
+.pdf-watermark {
+	text-align: center;
+}
+
+.pdf-watermark span.text-right {
+	color: #000;
+	font-size: 48px;
+}
