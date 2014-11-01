@@ -327,10 +327,10 @@ class JL_NavMenu {
 
 		// Do not show empty lists
 		$row = WT_DB::prepare(
-			"SELECT SQL_CACHE".
-			" EXISTS(SELECT 1 FROM `##sources` WHERE s_file=?                  ) AS sour,".
-			" EXISTS(SELECT 1 FROM `##other`   WHERE o_file=? AND o_type='REPO') AS repo,".
-			" EXISTS(SELECT 1 FROM `##other`   WHERE o_file=? AND o_type='NOTE') AS note,".
+			"SELECT SQL_CACHE" .
+			" EXISTS(SELECT 1 FROM `##sources` WHERE s_file=?                  ) AS sour," .
+			" EXISTS(SELECT 1 FROM `##other`   WHERE o_file=? AND o_type='REPO') AS repo," .
+			" EXISTS(SELECT 1 FROM `##other`   WHERE o_file=? AND o_type='NOTE') AS note," .
 			" EXISTS(SELECT 1 FROM `##media`   WHERE m_file=?                  ) AS obje"
 		)->execute(array(WT_GED_ID, WT_GED_ID, WT_GED_ID, WT_GED_ID))->fetchOneRow();
 
@@ -358,7 +358,7 @@ class JL_NavMenu {
 				$menulist[] = new WT_Menu(WT_I18N::translate('Shared notes'), 'notelist.php?ged=' . WT_GEDURL, 'menu-list-note');
 			}
 		}
-		uasort($menulist, function($x, $y) { return WT_I18N::strcasecmp($x->label, $y->label); });
+		uasort($menulist, function(WT_Menu $x, WT_Menu $y) { return WT_I18N::strcasecmp($x->label, $y->label); });
 		
 		$menu = '';
 		foreach ($menulist as $submenu) {
