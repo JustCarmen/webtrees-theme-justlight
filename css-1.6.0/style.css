@@ -3327,6 +3327,10 @@ dd .deletelink {
 	margin: 0;
 }
 
+#edit_interface-page.census-assistant select {
+	margin: 0;
+}
+
 .census-assistant textarea#NOTE {
 	width: 100%;
 }
