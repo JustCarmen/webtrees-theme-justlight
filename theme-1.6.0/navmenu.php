@@ -355,7 +355,7 @@ class JL_NavMenu {
 				$menulist[] = new WT_Menu(WT_I18N::translate('Sources'), 'sourcelist.php?ged=' . WT_GEDURL, 'menu-list-sour');
 			}
 			if ($row->note) {
-				$menulist[] = new WT_Menu(WT_I18N::translate('Shared notes'), 'medialist.php?ged=' . WT_GEDURL, 'menu-list-note');
+				$menulist[] = new WT_Menu(WT_I18N::translate('Shared notes'), 'notelist.php?ged=' . WT_GEDURL, 'menu-list-note');
 			}
 		}
 		uasort($menulist, function($x, $y) { return WT_I18N::strcasecmp($x->label, $y->label); });
