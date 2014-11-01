@@ -714,6 +714,15 @@ img.block {
 	list-style-type: circle;
 }
 
+#descendancy_chart a.details1 {
+	display: inline-flex;
+	margin: 5px 0;
+}
+
+#descendancy_chart td.details1 {
+	padding: 5px 10px;
+}
+
 /*-- descendancy chart rtl specific stylesheets --*/
 [dir=rtl] #descendancy_chart ul {
 	background-position: right top;
@@ -744,6 +753,15 @@ img.block {
 
 #ancestry_chart li table {
 	margin: 5px 0;
+}
+
+#ancestry_chart li > span.details1 {
+	display: block;
+	margin: 8px 0;
+}
+
+#ancestry_chart a.details1 {
+	display: inline-flex;
 }
 
 /*-- ancestry chart rtl specific stylesheets --*/
