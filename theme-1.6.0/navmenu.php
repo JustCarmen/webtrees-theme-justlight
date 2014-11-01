@@ -345,7 +345,7 @@ class JL_NavMenu {
 			$menulist[] = new WT_Menu(WT_I18N::translate('Families'), 'famlist.php?ged=' . WT_GEDURL . $surname_url, 'menu-list-fam');
 			$menulist[] = new WT_Menu(WT_I18N::translate('Branches'), 'branches.php?ged=' . WT_GEDURL . $surname_url, 'menu-branches');
 			$menulist[] = new WT_Menu(WT_I18N::translate('Place hierarchy'), 'placelist.php?ged=' . WT_GEDURL, 'menu-list-plac');
-			if ($row->obje) {
+			if ($row->obje && !getThemeOption('media_menu')) {
 				$menulist[] = new WT_Menu(WT_I18N::translate('Media objects'), 'medialist.php?ged=' . WT_GEDURL, 'menu-list-obje');
 			}
 			if ($row->repo) {
