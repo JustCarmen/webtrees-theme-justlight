@@ -1947,6 +1947,11 @@ dd .deletelink {
 	padding-top: 5px;
 }
 
+.media-display-title .fact_NOTE,
+.media-display-title .fact_SHARED_NOTE {
+	font-style: normal;
+}
+
 .media-separator {
 	display: none;
 }
