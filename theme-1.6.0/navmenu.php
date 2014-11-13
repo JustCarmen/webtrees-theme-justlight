@@ -262,7 +262,7 @@ class JL_NavMenu {
 					}
 					
 					if (array_key_exists('user_favorites', WT_Module::getActiveModules())) {
-						$numberOfFavorites = count(user_favorites_WT_Module::getFavorites(WT_USER_ID));
+						$numberOfFavorites = count(user_favorites_WT_Module::getFavorites(Auth::id()));
 						if ($numberOfFavorites === 0) {
 							$menu .= '	<li id="menu-chart-relationship">
 											<a href="relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL.'">'.
@@ -285,7 +285,7 @@ class JL_NavMenu {
 												</a>
 											</li>
 											<li class="divider"></li>';
-								foreach (user_favorites_WT_Module::getFavorites(WT_USER_ID) as $favorite) {
+								foreach (user_favorites_WT_Module::getFavorites(Auth::id()) as $favorite) {
 									if ($favorite['type']=='INDI' && $favorite['gedcom_id']==WT_GED_ID) {
 										$person=WT_Individual::getInstance($favorite['gid']);
 										if ($person instanceof WT_Individual) {

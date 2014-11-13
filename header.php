@@ -21,6 +21,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
+use WT\Auth;
+
 if (!defined('WT_WEBTREES')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
@@ -115,7 +117,7 @@ $this
 								echo JL_TopMenu::getTopMenu(WT_I18N::translate('Theme'), "themes");
 							}
 							echo JL_TopMenu::getTopMenu(WT_I18N::translate('Language'), "languages");								
-							if (WT_USER_ID) {
+							if (Auth::check()) {
 								echo JL_TopMenu::getTopMenu(WT_I18N::translate('My account'), 'login');							
 							} else { ?>
 								<a href="login.php" class="btn btn-default">Login</a>

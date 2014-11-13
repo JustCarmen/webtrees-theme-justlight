@@ -21,6 +21,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
+use WT\Auth;
+
 class JL_TopMenu {
 	public static function getTopMenu($label, $topmenu){
 		return '<div class="btn-group">
@@ -66,17 +68,17 @@ class JL_TopMenu {
 	public static function getFavoritesMenu(){
 		global $REQUIRE_AUTHENTICATION, $controller, $SEARCH_SPIDER;
 
-		$show_user_favs=WT_USER_ID               && array_key_exists('user_favorites',   WT_Module::getActiveModules());
+		$show_user_favs=Auth::check()            && array_key_exists('user_favorites',   WT_Module::getActiveModules());
 		$show_gedc_favs=!$REQUIRE_AUTHENTICATION && array_key_exists('gedcom_favorites', WT_Module::getActiveModules());
 
 		if ($show_user_favs && !$SEARCH_SPIDER) {
 			if ($show_gedc_favs && !$SEARCH_SPIDER) {
 				$favorites=array_merge(
 					gedcom_favorites_WT_Module::getFavorites(WT_GED_ID),
-					user_favorites_WT_Module::getFavorites(WT_USER_ID)
+					user_favorites_WT_Module::getFavorites(Auth::id())
 				);
 			} else {
-				$favorites=user_favorites_WT_Module::getFavorites(WT_USER_ID);
+				$favorites=user_favorites_WT_Module::getFavorites(Auth::id());
 			}
 		} else {
 			if ($show_gedc_favs && !$SEARCH_SPIDER) {
