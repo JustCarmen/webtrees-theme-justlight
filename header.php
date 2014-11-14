@@ -100,8 +100,8 @@ $this
 					<div class="navbar-header">
 					  <h1><a href="index.php" class="navbar-brand"><?php echo WT_TREE_TITLE; ?></a></h1>
 					</div>
-
-					<div class="navbar-collapse collapse">
+					
+					<div class="navbar-collapse collapse navbar-top">
 						<div class="div_search">
 							<form action="search.php" method="post">
 								<input type="hidden" name="action" value="general" />
@@ -123,6 +123,9 @@ $this
 								<a href="login.php" class="btn btn-default">Login</a>
 							<?php } ?>	   
 						</div><!--/.navbar-right -->
+					</div><!--/.nav-collapse -->
+
+					<div class="navbar-collapse collapse">						
 						<div class="navbar-text">
 							<ul class="nav nav-pills" role="tablist">							
 								<?php echo getJLNavMenu(); ?>

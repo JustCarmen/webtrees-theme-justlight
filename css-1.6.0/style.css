@@ -3621,6 +3621,7 @@ dd .deletelink {
 /* Bootstrap header navigation */
 .navbar-header {
 	padding-left: 10px;
+	width: 50%;
 }
 
 .navbar-header h1 {
@@ -3629,13 +3630,25 @@ dd .deletelink {
 
 .navbar-brand {
 	font-size: 32px;
+	line-height: 1.1em;
+	height: auto;
 	padding: 15px 0;
+}
+
+.navbar-top {
+	border-top: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	width: 100%;
 }
 
 .div_search {
 	float:right;
 	margin-top:7px;
 	margin-left:3%;
+	margin-right: 15px;
 }
 
 .div_search .btn {
@@ -3832,6 +3845,18 @@ table.dataTable thead > tr > th {
 }
 
 /* JustLight responsive */
+@media (max-width: 1200px) {
+	.div_search {
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.navbar-brand {
+		font-size: 24px;
+	}	
+}
+
 @media (max-width: 767px) {
 	body #wrap {
 		padding-top: 60px;
@@ -3841,7 +3866,16 @@ table.dataTable thead > tr > th {
 		display: block;
 	}
 	
-	.navbar-right .btn, .div_search .btn {
+	.navbar-header {
+		margin-top: 50px;
+		width: 100%
+	}
+	
+	.navbar-brand {
+		font-size: 18px;
+	}
+	
+	.navbar-right .btn {
 		border-radius: 3px;
 		font-size: 12px;
 		line-height: 1.5;
@@ -3870,21 +3904,11 @@ table.dataTable thead > tr > th {
 		font-size: 13px;		
 	}
 	
-	.navbar-header .navbar-brand {
+	.navbar-brand {
 		font-size: initial;
 	}
 	
-	.navbar-right {
-		clear: both;
-		padding-top: 10px;
-	}
-	
-	.navbar-collapse .div_search {
-		float: left;
-		margin-left: 0;
-	}
-	
-	.navbar-right .btn, .div_search .btn {
+	.navbar-right .btn {
 		font-size: 12px;
 		line-height: 1.5;
 		padding: 1px 5px;
