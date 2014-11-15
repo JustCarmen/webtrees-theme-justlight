@@ -2,9 +2,7 @@ JustLight Theme for webtrees
 ============================
 
 A light clean theme using the Bootstrap framework.
-The development version of this theme requires [webtrees 1.6.1](https://github.com/fisharebest/webtrees).
-
-Download the first stable release for webtrees 1.6.0 here: https://github.com/JustCarmen/justlight/releases/tag/1.6.0
+This theme requires [webtrees 1.6.1](https://github.com/fisharebest/webtrees). Download the latest stable release [here](https://github.com/JustCarmen/justlight/releases/tag/1.6.1.1).
 
 Description
 -----------
