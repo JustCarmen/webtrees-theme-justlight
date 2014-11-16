@@ -40,7 +40,7 @@ if (!defined('WT_WEBTREES')) {
 		</div><!-- /.footer top -->
 		<div class="container bottom">
 		<?php 
-		if (WT_DEBUG || $WT_TREE->getPreference('SHOW_STATS')) {
+		if ($WT_TREE && $WT_TREE->getPreference('SHOW_STATS')) {
 			echo execution_stats();
 		}
 		?>
