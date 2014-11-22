@@ -122,7 +122,7 @@ h4 {
 }
 
 th {
-	font-weight: 100;
+	font-weight: 700;
 }
 
 ul {
@@ -1782,6 +1782,10 @@ span.link_text {
 	white-space: pre-wrap;
 }
 
+.markdown .table {
+	margin-bottom: 20px;
+}
+
 .markdown td,
 .markdown th {
 	padding: 3px;
@@ -2385,6 +2389,11 @@ dd .deletelink {
 	border-right: none;
 }
 
+#media-tabs .table-census-assistant,
+#media-tabs .markdown .table {
+	font-size: 85%;
+}
+
 #media-tabs .place + br {
 	display: none;
 }
@@ -2488,6 +2497,11 @@ dd .deletelink {
 
 #medialist-page table.width100 > tbody > tr {
 	border-bottom: 1px solid #eee;
+}
+
+#medialist-page .table-census-assistant,
+#medialist-page .markdown .table {
+	font-size: 85%;
 }
 
 /* ========= Sidebar ============== */
@@ -3799,12 +3813,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	vertical-align: top;
 }
 
-.table th.ui-state-default {
-	background: none;
-	border:none;
-	font-weight: bold;
-}
-
 .table {
 	width: auto;
 }
@@ -3820,6 +3828,12 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
 	border-top: none;
+}
+
+.table th.ui-state-default {
+	background: none;
+	border:none;
+	font-weight: bold;
 }
 
 table.dataTable thead .sorting {

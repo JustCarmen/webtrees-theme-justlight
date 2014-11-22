@@ -193,12 +193,13 @@
 #notes_content .facts_table tbody > tr:first-child,
 #lightbox_content .rela,
 #stories .news_title,
-.table-census-assistant tbody > tr:first-child td {
+.table-census-assistant tbody > tr:first-child td,
+.markdown .table tbody > tr:first-child td {
 	text-shadow: 0 1px 0 #fff;
 	background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
-	background-image:      -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+	background-image: -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
-	background-image:         linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
+	background-image: linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	background-repeat: repeat-x;
