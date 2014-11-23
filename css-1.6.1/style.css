@@ -283,7 +283,6 @@ a.name1:hover {
 }
 
 .indent {
-	font-size: 90%;
 	padding-left: 7px;
 }
 
@@ -327,7 +326,7 @@ a.name1:hover {
 }
 
 .source_citations .indent {
-	padding: 0;
+	padding-left: 4px;
 }
 
 .note-details {
