@@ -3432,6 +3432,10 @@ dd .deletelink {
 	text-decoration: none;
 }
 
+#editplaces .facts_table {
+	margin-bottom: 80px;
+}
+
 #save-cancel {
     background: url("../jquery-ui-1.10.4/images/ui-bg_glass_50_99c2ff_1x400.png");
     bottom: 0;
