@@ -140,9 +140,10 @@ $this
 					<p class="alert alert-warning"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
 				</a>
 			<?php endif; ?>
-		<?php endif; // simple view
+		<?php endif; // simple view		
 		echo $javascript;
-		echo WT_FlashMessages::getHtmlMessages();	
+		echo WT_FlashMessages::getHtmlMessages();
+		getJLMediaList();
 		if(WT_Filter::get('action') === 'addnewnote_assisted') {
 			$style = 'style="width: 100%"';
 			$this->addInlineJavascript('jQuery("#edit_interface-page").addClass("census-assistant")');
