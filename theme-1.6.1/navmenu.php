@@ -251,7 +251,7 @@ class JL_NavMenu {
 				$submenu = new WT_Menu($menuName, 'lifespan.php?pids%5B%5D='.$indi_xref.'&amp;addFamily=1&amp;ged='.WT_GEDURL, 'menu-chart-lifespan');
 				$menu.=$submenu->getMenuAsList();
 				break;
-
+			
 			case 'relationship':
 				if ($indi_xref) {
 					// Pages focused on a specific person - from the person, to me
@@ -260,55 +260,22 @@ class JL_NavMenu {
 					if ($pid1==$pid2) {
 						$pid2='';
 					}
-					
-					if (array_key_exists('user_favorites', WT_Module::getActiveModules())) {
-						$numberOfFavorites = count(user_favorites_WT_Module::getFavorites(Auth::id()));
-						if ($numberOfFavorites === 0) {
-							$menu .= '	<li id="menu-chart-relationship">
-											<a href="relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL.'">'.
-												$menuName.'
-											</a>
-										</li>';
-							
-						} else {
-							$menu .= '<li id="menu-chart-relationship" class="dropdown-submenu">
-										<a class="dropdown-submenu-toggle" href="#">'.
-											$menuName.'<span class="right-caret"></span>
-										</a>';
-
-
-								// Add a submenu showing relationship from this person to each of our favorites
-								$menu .= '<ul class="dropdown-menu sub-menu">
-											<li id="menu-chart-relationship">
-												<a href="relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL.'">'.
-													$menuName.'
-												</a>
-											</li>
-											<li class="divider"></li>';
-								foreach (user_favorites_WT_Module::getFavorites(Auth::id()) as $favorite) {
-									if ($favorite['type']=='INDI' && $favorite['gedcom_id']==WT_GED_ID) {
-										$person=WT_Individual::getInstance($favorite['gid']);
-										if ($person instanceof WT_Individual) {
-											$menu .= '<li id="menu-chart-relationship-'.$person->getXref().'-'.$pid2.'">
-														<a href="relationship.php?pid1='.$person->getXref().'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL.'">'.$person->getFullName().'</a>
-													</li>';									
-										}
-									}
-								}
-								$menu .= '</ul></li>';
-							}
-						}
-					} else {
-						// Regular pages - from me, to somebody
-						$pid1=WT_USER_GEDCOM_ID ? WT_USER_GEDCOM_ID : WT_USER_ROOT_ID;
-						$pid2='';
-						$submenu = new WT_Menu(
-							WT_I18N::translate('Relationships'),
-							'relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL,
-							'menu-chart-relationship'
-						);
-						$menu .= $submenu->getMenuAsList();
-					}				
+					$submenu = new WT_Menu(
+						WT_I18N::translate('Relationships'),
+						'relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL,
+						'menu-chart-relationship'
+					);
+				} else {
+					// Regular pages - from me, to somebody
+					$pid1=WT_USER_GEDCOM_ID ? WT_USER_GEDCOM_ID : WT_USER_ROOT_ID;
+					$pid2='';
+					$submenu = new WT_Menu(
+						WT_I18N::translate('Relationships'),
+						'relationship.php?pid1='.$pid1.'&amp;pid2='.$pid2.'&amp;ged='.WT_GEDURL,
+						'menu-chart-relationship'
+					);
+				}
+				$menu .= $submenu->getMenuAsList();
 				break;
 
 			case 'statistics':

@@ -26,20 +26,6 @@ jQuery(window).resize(function(){
 	jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
 });
 
-// Bootstrap multilevel menu
-jQuery(".dropdown-menu > li > a.dropdown-submenu-toggle").on("click",function(e){
-	e.preventDefault();
-	var current=jQuery(this).next();
-	var grandparent=jQuery(this).parent().parent();
-	grandparent.find(".sub-menu:visible").not(current).hide();
-	current.toggle();
-	e.stopPropagation();
-});
-jQuery(".dropdown-menu > li > a:not(.dropdown-submenu-toggle)").on("click",function(){
-	var root=jQuery(this).closest('.dropdown');
-	root.find('.sub-menu:visible').hide();
-});
-
 // Bootstrap active tab in navbar 
 var url_parts = location.href.split('/');
 var last_segment = url_parts[url_parts.length-1];
