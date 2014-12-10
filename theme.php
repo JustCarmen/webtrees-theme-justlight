@@ -34,7 +34,7 @@ define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.1/');
 
 // theme specific folders and files.
 define('JL_BOOTSTRAP_URL',	WT_THEME_URL . 'bootstrap-3.2.0/');
-define('JL_COLORBOX_URL',	WT_THEME_URL . 'colorbox-1.5.9/');
+define('JL_COLORBOX_URL',	WT_THEME_URL . 'colorbox-1.5.14/');
 define('JL_THEME_URL',		WT_THEME_URL . 'theme-1.6.1/');
 define('JL_JQUERY_UI_CSS',	WT_THEME_URL . 'jquery-ui-1.10.4/jquery-ui-1.10.4.custom.css');
 
