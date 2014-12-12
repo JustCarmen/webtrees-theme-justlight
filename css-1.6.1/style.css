@@ -2076,10 +2076,6 @@ dd .deletelink {
 	padding: 0;
 }
 
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-	padding: 0;
-}
-
 .ui-tabs .ui-tabs-nav li {
 	bottom: 0;
 	margin: 0 0.15em 0 0.1em;
@@ -3437,7 +3433,7 @@ dd .deletelink {
 }
 
 #save-cancel {
-    background: url("../jquery-ui-1.10.4/images/ui-bg_glass_50_99c2ff_1x400.png");
+    background: url("../jquery-ui-1.11.2/images/ui-bg_glass_50_99c2ff_1x400.png");
     bottom: 0;
     left: 0;
     position: fixed;
