@@ -50,9 +50,10 @@ function getJLScriptVars() {
 
 // Menus
 function getJLNavMenu() {
-	global $controller;
+	global $controller, $SEARCH_SPIDER;
+	
 	$menus = getThemeOption('menu');
-	if($menus) {
+	if($menus && WT_GED_ID && !$SEARCH_SPIDER) {
 		$jl_controller = new justlight_theme_options_WT_Module;
 		$menus = $jl_controller->checkModule($menus);
 		$list = null;

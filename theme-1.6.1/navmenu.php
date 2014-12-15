@@ -481,12 +481,8 @@ class JL_NavMenu {
 	
 	// Theme options
 	public static function getCompactMenu() {
-		global $controller, $SEARCH_SPIDER;
+		global $controller;
 
-		if ($SEARCH_SPIDER || !WT_GED_ID) {
-			return self::getListsMenu() . self::getCalendarMenu();
-		}
-		
 		$indi_xref=$controller->getSignificantIndividual()->getXref();
 		$menu = '
 			<li id="menu-view-nav" class="dropdown">
@@ -526,12 +522,8 @@ class JL_NavMenu {
 	}
 	
 	public static function getMediaMenu($folders) {
-		global $SEARCH_SPIDER, $MEDIA_DIRECTORY;
+		global $MEDIA_DIRECTORY;
 
-		if ($SEARCH_SPIDER) {
-			return null;
-		}
-		
 		$mainfolder = getThemeOption('media_link') == $MEDIA_DIRECTORY ? '' : '&amp;folder='.rawurlencode(getThemeOption('media_link'));
 		$subfolders = getThemeOption('subfolders') ? '&amp;subdirs=on' : '';
 		
