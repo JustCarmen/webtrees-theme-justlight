@@ -26,11 +26,11 @@ if (!defined('WT_WEBTREES')) {
 	exit;
 }
 ?>
-</div><!-- /.content -->
+</main><!-- /.content -->
 <?php if ($view!='simple') { ?>
 	<div id="push"></div>
 	</div><!-- /.wrap -->
-	<div id="footer">
+	<footer id="footer">
 		<div class="top">			
 			<?php echo contact_links() ?>
 			<div class="logo">
@@ -45,5 +45,5 @@ if (!defined('WT_WEBTREES')) {
 		}
 		?>
 		</div><!-- /.footer bottom -->
-	</div><!-- /.footer -->
+	</footer><!-- /.footer -->
 <?php }

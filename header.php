@@ -68,6 +68,7 @@ $this
 	<div id="wrap">
 		<?php if ($view!='simple'): ?>
 		<?php getJLScriptVars(); ?>
+		<header>
 		<div id="nav-container" class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
@@ -119,10 +120,12 @@ $this
 					<p class="alert alert-warning"><?php echo WT_I18N::translate('There are pending changes for you to moderate.') ?></p>
 				</a>
 			<?php endif; ?>
-		<?php endif; // simple view		
-		echo $javascript;
-		echo WT_FlashMessages::getHtmlMessages();
-		getJLMediaList();
+		</header>
+		<?php endif; ?>
+		<?php echo WT_FlashMessages::getHtmlMessages(); ?>
+		<?php echo getJLMediaList(); ?>
+		
+		<?php
 		if(WT_Filter::get('action') === 'addnewnote_assisted') {
 			$style = 'style="width: 100%"';
 			$this->addInlineJavascript('jQuery("#edit_interface-page").addClass("census-assistant")');
@@ -130,4 +133,4 @@ $this
 			$style = WT_SCRIPT_NAME === 'individual.php' || WT_SCRIPT_NAME === 'family.php' || WT_SCRIPT_NAME === 'medialist.php' || WT_Filter::get('mod_action') === 'treeview' ? ' style="width: 98%"' : '';
 		}	
 		?>
-		<div id="responsive"></div><div id="content" class="container"<?php echo $style ?>>
+		<div id="responsive"></div><main id="content" class="container"<?php echo $style ?>>
