@@ -62,7 +62,10 @@ $this
 	<link href="<?php echo JL_BOOTSTRAP_URL; ?>css/dataTables.bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>justlight.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>treeview.css">	
+	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>treeview.css">
+	<!--[if IE 8]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<![endif]-->
 </head>
 <body id="body">
 	<div id="wrap">
