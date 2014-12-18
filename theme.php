@@ -27,7 +27,7 @@ if (!defined('WT_WEBTREES')) {
 }
 
 // Theme name - this needs double quotes, as file is scanned/parsed by script
-$theme_name = "JustLight"; // need double quotes, as file is scanned/parsed by script
+$theme_name = "JustLight"; /* I18N: Name of a theme. */ WT_I18N::translate('JustLight');
 
 // A version number in the path prevents browser-cache problems during upgrade
 define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.1/');
