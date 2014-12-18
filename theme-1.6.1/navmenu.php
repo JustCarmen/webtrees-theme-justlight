@@ -342,7 +342,7 @@ class JL_NavMenu {
 				$menulist[] = new WT_Menu(WT_I18N::translate('Shared notes'), 'notelist.php?ged=' . WT_GEDURL, 'menu-list-note');
 			}
 		}
-		uasort($menulist, function(WT_Menu $x, WT_Menu $y) { return WT_I18N::strcasecmp($x->label, $y->label); });
+		uasort($menulist, function(WT_Menu $x, WT_Menu $y) { return WT_I18N::strcasecmp($x->getLabel(), $y->getLabel()); });
 		
 		$menu = '';
 		foreach ($menulist as $submenu) {
@@ -454,23 +454,23 @@ class JL_NavMenu {
 		foreach (WT_Module::getActiveMenus() as $module) {
 			$menu=$module->getMenu();
 			if ($menu) {
-				if(count($menu->submenus) > 0) {
+				if(count($menu->getSubmenus()) > 0) {
 					$navmenu = '
-						<li id="'.$menu->id.'-nav" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">'.$menu->label.'<span class="caret"></span></a>
+						<li id="' . $menu->getId() . '-nav" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li id="'.$menu->id.'"><a href="'.$menu->link.'">'.$menu->label.'</a></li>
+							<li id="' . $menu->getId() . '"><a href="' . $menu->getLink() . '">' . $menu->getLabel() . '</a></li>
 							<li class="divider"></li>';
-							foreach($menu->submenus as $submenu) {
-								$onclick = $submenu->onclick ? 'onclick="'.$submenu->onclick.'"' : "";
-								$navmenu.= '<li id="'.$submenu->id.'"><a href="'.$submenu->link.'" '.$onclick.'>'.$submenu->label.'</a></li>';
+							foreach($menu->getSubmenus() as $submenu) {
+								$onclick = $submenu->getOnclick ? 'onclick="' . $submenu->getOnclick() . '"' : "";
+								$navmenu.= '<li id="' . $submenu->getId() . '"><a href="' . $submenu->getLink() . '" '.$onclick.'>' . $submenu->getLabel() . '</a></li>';
 							}
 					$navmenu.= '
 						</ul>
 					</li>';
 				}
 				else {
-					$navmenu = '<li id="'.$menu->id.'"><a href="'.$menu->link.'">'.$menu->label.'</a></li>';			
+					$navmenu = '<li id="' . $menu->getId() . '"><a href="' . $menu->getLink() . '">' . $menu->getLabel() . '</a></li>';			
 				}
 				$menus[] = $navmenu;
 			}
@@ -549,23 +549,23 @@ class JL_NavMenu {
 		$modulemenu = new $module;
 		$menu = $modulemenu->getMenu();
 		if ($menu) {
-			if(count($menu->submenus) > 0) {
+			if(count($menu->getSubmenus()) > 0) {
 				$navmenu = '
-					<li id="'.$menu->id.'-nav" class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">'.$menu->label.'<span class="caret"></span></a>
+					<li id="' . $menu->getId() . '-nav" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li id="'.$menu->id.'"><a href="'.$menu->link.'">'.$menu->label.'</a></li>
+						<li id="' . $menu->getId() . '"><a href="' . $menu->getLink() . '">' . $menu->getLabel() . '</a></li>
 						<li class="divider"></li>';
-						foreach($menu->submenus as $submenu) {
-							$onclick = $submenu->onclick ? 'onclick="'.$submenu->onclick.'"' : "";
-							$navmenu.= '<li id="'.$submenu->id.'"><a href="'.$submenu->link.'" '.$onclick.'>'.$submenu->label.'</a></li>';
+						foreach($menu->getSubmenus() as $submenu) {
+							$onclick = $submenu->getOnclick() ? 'onclick="' . $submenu->getOnclick() . '"' : "";
+							$navmenu.= '<li id="' . $submenu->getId() . '"><a href="' . $submenu->getLink() . '" '.$onclick.'>' . $submenu->getLabel() . '</a></li>';
 						}
 				$navmenu.= '
 					</ul>
 				</li>';
 			}
 			else {
-				$navmenu = '<li id="'.$menu->id.'"><a href="'.$menu->link.'">'.$menu->label.'</a></li>';			
+				$navmenu = '<li id="' . $menu->getId() . '"><a href="' . $menu->getLink() . '">' . $menu->getLabel() . '</a></li>';			
 			}
 			return $navmenu;
 		}
