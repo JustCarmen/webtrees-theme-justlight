@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  * JustLight template for drawing the main blocks on the portal pages
  * 
  * This template expects that the following variables will be set
@@ -31,7 +31,6 @@ if (!defined('WT_WEBTREES')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
 }
-
 ?>
 <div id="<?php echo $id; ?>" class="block" >
 	<div class="blockheader">

@@ -32,14 +32,13 @@ if (!WT_Filter::checkCsrf()) {
 }
 
 $action = WT_Filter::get('action');
-switch($action) {
+switch ($action) {
 	case 'imagetype':
 		$xrefs = WT_Filter::postArray('xrefs');
 
 		$data = array();
-		foreach($xrefs as $xref) {
-			$row=
-				WT_DB::prepare("SELECT m_type as imagetype FROM `##media` WHERE m_id=?")
+		foreach ($xrefs as $xref) {
+			$row = WT_DB::prepare("SELECT m_type as imagetype FROM `##media` WHERE m_id=?")
 				->execute(array($xref))
 				->fetchOneRow(PDO::FETCH_ASSOC);
 
@@ -47,7 +46,7 @@ switch($action) {
 		};
 
 		header("Content-Type: application/json; charset=UTF-8");
-		echo json_encode((object)$data);
+		echo json_encode((object) $data);
 		break;
 	default:
 		header('HTTP/1.0 404 Not Found');

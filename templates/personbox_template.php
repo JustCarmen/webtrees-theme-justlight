@@ -1,4 +1,5 @@
 <?php
+
 /*
  * JustLight template for drawing person boxes
  *
@@ -31,21 +32,21 @@ if (!defined('WT_WEBTREES')) {
 }
 
 echo
-'<div data-pid="'. $pid . '" ',$outBoxAdd,'>
+'<div data-pid="' . $pid . '" ', $outBoxAdd, '>
 	<div class="noprint icons">', $icons, '</div>',
-	'<div class="chart_textbox" style="max-height:', $bheight,'px;">',
-		$thumbnail,
-		'<a href="individual.php?pid=', $pid, '&amp;ged=', rawurlencode($GEDCOM), '">
-			<span class="namedef name',$style,'">',
-				$name,
-				$genderImage,'
-				<span class="details',$style,'">' . $LDSord . '</span>
+ '<div class="chart_textbox" style="max-height:', $bheight, 'px;">',
+ $thumbnail,
+ '<a href="individual.php?pid=', $pid, '&amp;ged=', rawurlencode($GEDCOM), '">
+			<span class="namedef name', $style, '">',
+ $name,
+ $genderImage, '
+				<span class="details', $style, '">' . $LDSord . '</span>
 			</span>
 		</a>
-		<div class="namedef name',$style,'">',$addname,'</div>
-		<div class="inout2 details',$style,'">',
-			$BirthDeath,
-		'</div>
+		<div class="namedef name', $style, '">', $addname, '</div>
+		<div class="inout2 details', $style, '">',
+ $BirthDeath,
+ '</div>
 	</div>
 	<div class="inout person_box_zoom"></div>
 </div>';

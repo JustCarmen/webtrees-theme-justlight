@@ -3804,7 +3804,7 @@ dd .deletelink {
 
 // Bootstrap Firefox fix. See: http://getbootstrap.com/css/#tables
 @-moz-document url-prefix() {
-  fieldset { display: table-cell; }
+	fieldset { display: table-cell; }
 }
 
 /* Solve conflicts with Bootstrap */
@@ -3874,38 +3874,38 @@ table.dataTable thead > tr > th {
 	body #wrap {
 		padding-top: 60px;
 	}
-	
+
 	#responsive {
 		display: block;
 	}
-	
+
 	.navbar-header {
 		margin-top: 50px;
 		width: 100%
 	}
-	
+
 	.navbar-brand {
 		font-size: 18px;
 	}
-	
+
 	.navbar-right .btn {
 		border-radius: 3px;
 		font-size: 12px;
 		line-height: 1.5;
 		padding: 5px 10px;
 	}
-	
+
 	#sidebar {
 		width: 100%;
 	}
-	
+
 	#footer {
 		margin-left: -20px;
 		margin-right: -20px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	
+
 	.contact_links {
 		width: 60%;
 	}
@@ -3916,21 +3916,21 @@ table.dataTable thead > tr > th {
 	.dropdown-menu {
 		font-size: 13px;		
 	}
-	
+
 	.navbar-brand {
 		font-size: initial;
 	}
-	
+
 	.navbar-right .btn {
 		font-size: 12px;
 		line-height: 1.5;
 		padding: 1px 5px;
 	}
-	
+
 	#index_small_blocks {
 		display: none;
 	}
-	
+
 	.contact_links {
 		font-size:80%;
 	}
@@ -4114,11 +4114,11 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-button_note:before {
-  content: "\f0f6";
+	content: "\f0f6";
 }
 
 .icon-button_media:before {
-  content: "\f030";
+	content: "\f030";
 }
 
 .icon-button_place:before {
@@ -4130,7 +4130,7 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-button_repository:before {
-  content: "\f19c";
+	content: "\f19c";
 }
 
 .icon-cfamily:before {
@@ -4233,8 +4233,8 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-pedigree:before {
-  content: "\e200";
-  font-family: "Glyphicons Halflings";
+	content: "\e200";
+	font-family: "Glyphicons Halflings";
 }
 
 .gedcom_block_block .icon-pedigree:before,
@@ -4258,7 +4258,7 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-reminder:before {
-  content: "\f0f3";
+	content: "\f0f3";
 }
 
 .icon-remove:before {
@@ -4356,17 +4356,17 @@ a[class^=" icon-"]:focus,
 .icon-wiki:before {
 	content: "\e60a";
 	font-family: "icomoon";
-	
+
 }
 
 .icon-zoomin:before {
-  content: "\f00e";
-  cursor: pointer;
+	content: "\f00e";
+	cursor: pointer;
 }
 
 .icon-zoomout:before {
-  content: "\f010";
-  cursor: pointer;
+	content: "\f010";
+	cursor: pointer;
 }
 
 .lb-image_edit:before {

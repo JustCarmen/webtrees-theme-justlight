@@ -1,6 +1,6 @@
 <?php
 /*
- *	Footer for the JustLight theme
+ * 	Footer for the JustLight theme
  *  
  *  webtrees: Web based Family History software
  *  Copyright (C) 2014 webtrees development team.
@@ -19,7 +19,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
-*/
+ */
 
 if (!defined('WT_WEBTREES')) {
 	header('HTTP/1.0 403 Forbidden');
@@ -27,7 +27,7 @@ if (!defined('WT_WEBTREES')) {
 }
 ?>
 </main><!-- /.content -->
-<?php if ($view!='simple') { ?>
+<?php if ($view != 'simple') { ?>
 	<div id="push"></div>
 	</div><!-- /.wrap -->
 	<footer id="footer">
@@ -39,11 +39,12 @@ if (!defined('WT_WEBTREES')) {
 			</div>
 		</div><!-- /.footer top -->
 		<div class="container bottom">
-		<?php 
-		if ($WT_TREE && $WT_TREE->getPreference('SHOW_STATS')) {
-			echo execution_stats();
-		}
-		?>
+			<?php
+			if ($WT_TREE && $WT_TREE->getPreference('SHOW_STATS')) {
+				echo execution_stats();
+			}
+			?>
 		</div><!-- /.footer bottom -->
 	</footer><!-- /.footer -->
-<?php }
+	<?php
+}

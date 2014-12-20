@@ -34,7 +34,7 @@
 		background:none;
 		color: #428bca;
 	}
-	
+
 	.nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 		background:#eee;
 		color: #428bca;
@@ -341,7 +341,7 @@
 }
 
 div.error {
-	 border: 1px solid #cd0a0a;
+	border: 1px solid #cd0a0a;
 }
 
 /* Colorbox */
