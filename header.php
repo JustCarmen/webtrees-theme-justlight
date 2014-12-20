@@ -69,7 +69,7 @@ $this
 </head>
 <body id="body">
 	<div id="wrap">
-		<?php if ($view!='simple'): ?>
+		<?php if ($view != 'simple'): ?>
 		<?php getJLScriptVars(); ?>
 		<header>
 		<div id="nav-container" class="navbar navbar-default navbar-fixed-top">
