@@ -1,21 +1,21 @@
 ﻿<?php
 /*
  * 	Header for the JustLight theme
- *  
+ *
  *  webtrees: Web based Family History software
  *  Copyright (C) 2014 webtrees development team.
  *  Copyright (C) 2014 JustCarmen.
- * 
+ *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License
  *  as published by the Free Software Foundation; either version 2
  *  of the License, or (at your option) any later version.
- * 
+ *
  *  This program is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
- * 
+ *
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
@@ -50,11 +50,12 @@ $this
 <!DOCTYPE html>
 <html <?php echo WT_I18N::html_markup(); ?>>
 	<head>
-		<meta charset="UTF-8"> 
-		<title><?php echo WT_Filter::escapeHtml($title); ?></title> 
-		<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?> 
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png">	
+		<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?>
+		<title><?php echo WT_Filter::escapeHtml($title); ?></title>
+		<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png">
 		<link rel="stylesheet" type="text/css" href="<?php echo JL_JQUERY_UI_CSS; ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo JL_COLORBOX_URL; ?>colorbox.css">
 		<link href="<?php echo JL_BOOTSTRAP_URL; ?>css/bootstrap.min.css" rel="stylesheet">
@@ -105,13 +106,13 @@ $this
 										} else {
 											?>
 											<a href="login.php" class="btn btn-default">Login</a>
-										<?php } ?>	   
+										<?php } ?>
 									</div><!--/.navbar-right -->
 								</div><!--/.nav-collapse -->
 
-								<div class="navbar-collapse collapse">						
+								<div class="navbar-collapse collapse">
 									<div class="navbar-text">
-										<ul class="nav nav-pills" role="tablist">							
+										<ul class="nav nav-pills" role="tablist">
 											<?php echo getJLNavMenu(); ?>
 										</ul>
 									</div><!-- /.navbar-text -->
