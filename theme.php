@@ -31,12 +31,12 @@ if (!defined('WT_WEBTREES')) {
 $theme_name = "JustLight"; /* I18N: Name of a theme. */ WT_I18N::translate('JustLight');
 
 // A version number in the path prevents browser-cache problems during upgrade
-define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.1/');
+define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.2/');
 
 // theme specific folders and files.
 define('JL_BOOTSTRAP_URL', WT_THEME_URL . 'bootstrap-3.2.0/');
 define('JL_COLORBOX_URL', WT_THEME_URL . 'colorbox-1.5.14/');
-define('JL_THEME_URL', WT_THEME_URL . 'theme-1.6.1/');
+define('JL_THEME_URL', WT_THEME_URL . 'theme-1.6.2/');
 define('JL_JQUERY_UI_CSS', WT_THEME_URL . 'jquery-ui-1.11.2/jquery-ui.min.css');
 
 // theme specific functions and classes
