@@ -30,7 +30,7 @@ if (!defined('WT_WEBTREES')) {
 <?php if ($view != 'simple') { ?>
 	<div id="push"></div>
 	</div><!-- /.wrap -->
-	<footer id="footer">
+	<footer>
 		<div class="top">			
 			<?php echo contact_links() ?>
 			<div class="logo">

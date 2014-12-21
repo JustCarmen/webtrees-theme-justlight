@@ -3731,19 +3731,19 @@ dd .deletelink {
 	height: 120px;
 }
 
-#footer {
+footer {
 	clear: both;
     font-size: 85%;
 	height: 120px;
 }
 
-#footer .top {
+footer .top {
 	height: 80px;
 	padding: 10px 20px;
 	position: relative;
 }
 
-#footer .bottom {
+footer .bottom {
 	clear: both;
 	height: 40px;
 }
@@ -3899,7 +3899,7 @@ table.dataTable thead > tr > th {
 		width: 100%;
 	}
 
-	#footer {
+	footer {
 		margin-left: -20px;
 		margin-right: -20px;
 		padding-left: 20px;
@@ -3939,7 +3939,7 @@ table.dataTable thead > tr > th {
 // print pages
 @media print {
 	#backprint,
-	#header,
+	header,
 	#topMenu,
 	#separator {
 		display: none;
@@ -3958,8 +3958,8 @@ table.dataTable thead > tr > th {
 		right: -80px;
 	}
 
-	#header,
-	#footer,
+	header,
+	footer,
 	.noprint {
 		display: none !important;
 	}
