@@ -193,7 +193,7 @@ if (jQuery("#pedigree-page").length > 0) {
 
 // Move link to change blocks to the footer area.
 if (WT_SCRIPT_NAME === "index.php") {
-	jQuery("#link_change_blocks").appendTo(jQuery("#footer .top"));
+	jQuery("#link_change_blocks").appendTo(jQuery("footer .top"));
 
 	// journal-box correction - remove br's from content. Adjust layout to the news-box layout.
 	jQuery(".user_blog_block > br, .journal_box > br").remove();
