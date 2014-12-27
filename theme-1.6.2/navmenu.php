@@ -434,8 +434,7 @@ class JL_NavMenu {
 							<li id="' . $menu->getId() . '"><a href="' . $menu->getLink() . '">' . $menu->getLabel() . '</a></li>
 							<li class="divider"></li>';
 					foreach ($menu->getSubmenus() as $submenu) {
-						$onclick = $submenu->getOnclick() ? 'onclick="' . $submenu->getOnclick() . '"' : "";
-						$navmenu.= '<li id="' . $submenu->getId() . '"><a href="' . $submenu->getLink() . '" ' . $onclick . '>' . $submenu->getLabel() . '</a></li>';
+						$navmenu.= '<li id="' . $submenu->getId() . '"><a href="' . $submenu->getLink() . '">' . $submenu->getLabel() . '</a></li>';
 					}
 					$navmenu.= '
 						</ul>
