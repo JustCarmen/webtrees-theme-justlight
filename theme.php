@@ -36,13 +36,14 @@ define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.2/');
 // theme specific folders and files.
 define('JL_BOOTSTRAP_URL', WT_THEME_URL . 'bootstrap-3.2.0/');
 define('JL_COLORBOX_URL', WT_THEME_URL . 'colorbox-1.5.14/');
+define('JL_THEME_DIR', WT_ROOT . WT_THEME_DIR . 'theme-1.6.2/');
 define('JL_THEME_URL', WT_THEME_URL . 'theme-1.6.2/');
 define('JL_JQUERY_UI_CSS', WT_THEME_URL . 'jquery-ui-1.11.2/jquery-ui.min.css');
 
 // theme specific functions and classes
-require_once(JL_THEME_URL . 'functions.php');
-require_once(JL_THEME_URL . 'navmenu.php');
-require_once(JL_THEME_URL . 'topmenu.php');
+require_once(JL_THEME_DIR . 'functions.php');
+require_once(JL_THEME_DIR . 'navmenu.php');
+require_once(JL_THEME_DIR . 'topmenu.php');
 
 // default variables
 $headerfile	 = WT_THEME_DIR . 'header.php';
