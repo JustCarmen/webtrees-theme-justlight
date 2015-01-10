@@ -46,6 +46,10 @@ html {
 	position: relative;
 }
 
+main {
+	display: block;
+}
+
 #content {
 	margin-bottom: 40px;
 }
