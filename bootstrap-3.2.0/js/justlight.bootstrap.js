@@ -66,6 +66,10 @@ jQuery("table").waitUntilExists(function() {
 	if (jQuery(this).hasClass("table-census-assistant")) {
 		jQuery(this).addClass("table table-condensed table-striped width100");
 		jQuery(this).find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
+	} else if (jQuery(this).is("#mycart")) {
+		jQuery(this).addClass("table table-striped");
+	} else if (jQuery(this).parents().hasClass("user_messages_block")) {
+		jQuery(this).addClass("table table-striped")
 	} else {
 		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
 		table.addClass("table");
