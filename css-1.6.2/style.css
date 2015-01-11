@@ -33,6 +33,7 @@ html {
     box-sizing: inherit;
 }
 
+#family-table,
 .charts_block,
 [id$="_chart"] {
     box-sizing: content-box;
