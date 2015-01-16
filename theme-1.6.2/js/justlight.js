@@ -32,9 +32,8 @@ jQuery(window).resize(function() {
 
 // Modal dialog boxes
 function jl_modalDialog(url, title) {
-	var $dialog = jQuery('<div id="config-dialog" style="max-height:550px; overflow-y:auto"><div title="' + title + '"><div></div>').load(url, function() {
-		jQuery(this).dialog("option", "position", ['center', 'center']);
-	}).dialog({
+	var $dialog = jQuery('<div id="config-dialog" style="max-height:550px; overflow-y:auto"><div title="' + title + '"><div></div>')
+	.load(url).dialog({
 		title: title,
 		width: 'auto',
 		maxWidth: '90%',
@@ -84,17 +83,21 @@ function jl_modalHelp(content, title) {
 	return false;
 }
 
-jQuery(document).on("dialogopen", ".ui-dialog", function(event, ui) {
+jQuery(document).on("dialogopen", ".ui-dialog", function() {
 	fluidDialog();
 });
 
 // remove window resize namespace
-jQuery(document).on("dialogclose", ".ui-dialog", function(event, ui) {
+jQuery(document).on("dialogclose", ".ui-dialog", function() {
 	jQuery(window).off("resize.responsive");
 });
 
 jQuery(window).resize(function() {
-	jQuery(".ui-dialog-content").dialog("option", "position", ['center', 'center']);
+	jQuery(".ui-dialog-content").dialog("option", "position", {
+		my: "center",
+		at: "center",
+		of: window
+	});
 });
 
 function fluidDialog() {
@@ -110,7 +113,11 @@ function fluidDialog() {
 			// fix maxWidth bug
 			$this.css("max-width", maxWidth);
 			//reposition dialog
-			dialog.dialog("option", "position", ['center', 'center']);
+			dialog.dialog("option", "position", {
+				my: "center",
+				at: "center",
+				of: window
+			});
 		}
 
 		if (fluid) {
@@ -124,7 +131,11 @@ function fluidDialog() {
 
 				}
 				//reposition dialog
-				dialog.dialog("option", "position", ['center', 'center']);
+				dialog.dialog("option", "position", {
+					my: "center",
+					at: "center",
+					of: window
+				});
 			});
 		}
 	});
