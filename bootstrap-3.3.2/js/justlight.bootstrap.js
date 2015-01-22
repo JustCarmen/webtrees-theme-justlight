@@ -2,8 +2,7 @@
  *  Bootstrap javascript for the JustLight theme
  *  
  *  webtrees: Web based Family History software
- *  Copyright (C) 2014 webtrees development team.
- *  Copyright (C) 2014 JustCarmen.
+ *  Copyright (C) 2015 JustCarmen.
  * 
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License
@@ -134,7 +133,7 @@ jQuery(".popup > ul > li").waitUntilExists(function() {
 });
 
 // Bootstrap popovers and/or tooltips
-jQuery("a.icon-pedigree").waitUntilExists(function() {
+jQuery(".icon-pedigree").waitUntilExists(function() {
 	var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").clone().wrap('<p>').parent().html();
 	var content = jQuery(this).parents(".itr").find(".popup > ul");
 	content = content.removeClass().remove();

@@ -1,14 +1,9 @@
-<?php
-
 /*
- * JustLight template for drawing person boxes
+ * JustLight stylesheet for the Interactive Tree Module (modules_v3/tree)
  *
- * This template expects that the following variables will be set
- * $pid, $boxID, $icons, $GEDCOM, $style, $name, $outBoxAdd, $addname
- * 
  * webtrees: Web based Family History software
- * Copyright (C) 2014 webtrees development team.
- * Copyright (C) 2014 JustCarmen.
+ * Copyright (C) 2015 webtrees development team.
+ * Copyright (C) 2015 JustCarmen.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -25,21 +20,43 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-if (!defined('WT_WEBTREES')) {
-	header('HTTP/1.0 403 Forbidden');
-	exit;
+#content .tv_out {
+	background-color: #fff;
+	border: none;
+	width:100%;
 }
 
-echo
-'<div data-pid="' . $pid . '"', $outBoxAdd, '>
-	<div class="compact_view">',
- $thumbnail,
- '<a href="individual.php?pid=', $pid, '&amp;ged=', rawurlencode($GEDCOM), '" title="', strip_tags($name . $addname), '">
-			<span class="namedef name', $style, '">', $shortname, '</span>
-		</a>
-	</div>
-	<div class="inout2 details', $style, '">',
- $person->getLifeSpan(), '
-	</div>
-	<div class="inout"></div>
-</div>';
+#content .charts_block #tree-title {
+	display: none;
+}
+
+#content #tabs .tv_out {
+	border: 1px solid #ccc;
+}
+
+#content .tv_in {
+	padding: 20px;
+}
+
+#content .tvM {
+	background-color: #D7EAF9 !important;
+}
+
+#content .tvF {
+    background-color: #FFF0F5 !important;
+}
+
+#content .tv_in table.tv_tree, 
+#content .tv_in table.tv_tree tbody, 
+#content .tv_in table.tv_tree tr, 
+#content .tv_in table.tv_tree td {
+	font-size: 12px;
+}
+
+#content #tv_tree div.tv_box {
+	width: 220px;
+}
+
+#content .tv_treelink.icon-button_indi:before {
+	content: "\f007";
+}

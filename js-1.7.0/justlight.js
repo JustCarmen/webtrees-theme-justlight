@@ -2,8 +2,7 @@
  * Javascript for the JustLight theme
  *  
  * webtrees: Web based Family History software
- * Copyright (C) 2014 webtrees development team.
- * Copyright (C) 2014 JustCarmen.
+ * Copyright (C) 2015 JustCarmen.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -155,7 +154,6 @@ function jl_dialogBox() {
 	});
 }
 
-
 jl_dialogBox();
 jQuery(document).ajaxComplete(function() {
 	jl_dialogBox();
@@ -163,7 +161,7 @@ jQuery(document).ajaxComplete(function() {
 
 // personboxes
 function personbox_default() {
-	var obj = jQuery(".person_box_template .inout2");
+	var obj = jQuery(".person_box_template .inout, .person_box_template .inout2");
 	modifybox(obj);
 }
 
@@ -182,7 +180,6 @@ function modifybox(obj) {
 			}
 		});
 	});
-
 }
 
 personbox_default();
@@ -190,21 +187,14 @@ personbox_default();
 jQuery(document).ajaxComplete(function() {
 	setTimeout(function() {
 		personbox_default();
-	}, 500);
-	var obj = jQuery(".person_box_zoom");
-	modifybox(obj);
+	}, 10);
 });
 
 /* page specific functions */
 
-// Sticky footer - correction needed for pedigree page
-if (jQuery("#pedigree-page").length > 0) {
-	jQuery("#content").css("margin-bottom", "50px");
-}
-
 // Move link to change blocks to the footer area.
 if (WT_SCRIPT_NAME === "index.php") {
-	jQuery("#link_change_blocks").appendTo(jQuery("footer .top"));
+	jQuery("#link_change_blocks").appendTo(jQuery("footer"));
 
 	// journal-box correction - remove br's from content. Adjust layout to the news-box layout.
 	jQuery(".user_blog_block > br, .journal_box > br").remove();

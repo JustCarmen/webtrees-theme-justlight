@@ -2,8 +2,8 @@
  * Color stylesheet for the JustLight theme
  *
  * webtrees: Web based Family History software
- * Copyright (C) 2014 webtrees development team.
- * Copyright (C) 2014 JustCarmen.
+ * Copyright (C) 2015 webtrees development team.
+ * Copyright (C) 2015 JustCarmen.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -43,11 +43,8 @@
 
 /* footer */
 footer {
+	background-color: #e5e5e5;
 	color: #999999;
-}
-
-footer .top {
-    background-color: #e5e5e5;
 }
 
 /* titles */
@@ -92,6 +89,16 @@ footer .top {
 .person_boxNN {
 	background: #f5f5f5;
 }
+
+/* Familylinks in popover */
+#family-links > a {
+	color: #000;
+}
+
+#family-links > a:hover {
+	color: #337ab7;
+}
+
 
 /* jQuery.datatable list styles */
 .table {
