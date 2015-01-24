@@ -241,9 +241,6 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function hookHeaderExtraContent() {
 		try {
 			$html = '';
-			if ($this->themeOption('css')) {
-				$html .= '<link rel="stylesheet" type="text/css" href="' . $this->themeOption('css') . '">';
-			}
 			if (WT_SCRIPT_NAME == 'individual.php' || WT_Filter::get('mod_action') === 'treeview') {
 				$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
 			}
