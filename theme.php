@@ -109,11 +109,6 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	}	
 
 	/** {@inheritdoc} */
-	public function favicon() {
-		return '<link rel="icon" href="' . $this->assetUrl() . 'favicon.png" type="image/png">';
-	}
-
-	/** {@inheritdoc} */
 	public function footerContainer() {
 		try {
 			return
