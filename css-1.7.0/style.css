@@ -782,8 +782,31 @@ ul.clist {
 	margin: 0 auto;
 }
 
+/* ======== medialist.php ==== */
+#medialist-page form .table {
+	max-width: 75%;
+}
+
+#medialist-page form + div > p {
+	text-align: center;
+}
+
+#medialist-page div .list_table {
+	border: none;
+	width: 100%;
+}
+
+#medialist-page div .list_table > tbody > tr {
+	border-bottom: 1px solid #eee;
+}
+
+#medialist-page .media-col,
 #medialist-page .list_table_controls {
 	width: 100%;
+}
+
+#medialist-page .media-col2 {
+	width: 50%;
 }
 
 #medialist-page .popover {
@@ -795,7 +818,14 @@ ul.clist {
 	text-align: center;
 }
 
-/* ======== medialist.php ==== */
+.list_table_controls td:first-child {
+	text-align: left;
+}
+
+.list_table_controls td:last-child {
+	text-align: right;
+}
+
 .lightbox-menu {
 	float: right;
 }
@@ -855,21 +885,13 @@ ul.clist {
 	font-size: 90%;
 }
 
-#medialist-page .list_value_wrap > a {
+#medialist-page .media-col > a {
 	display: inline-block;
 	font-size: 90%;
 }
 
 #medialist-page td.list_value_wrap > a:first-of-type {
 	margin-top: 10px;
-}
-
-#medialist-page table.width100 {
-	border: none;
-}
-
-#medialist-page table.width100 > tbody > tr {
-	border-bottom: 1px solid #eee;
 }
 
 #medialist-page .table-census-assistant,
