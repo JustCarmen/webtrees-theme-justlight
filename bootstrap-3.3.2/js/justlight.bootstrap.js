@@ -258,3 +258,8 @@ jQuery("#login-form, #register-form, #verify-form").each(function() {
 jQuery("#login-text, #verify-form h4").after("<hr>");
 jQuery("#login-box .form-group .btn").parent().before("<hr>");
 jQuery("#verify-form .form-group:last").before("<hr>");
+
+// For those who have activated the facebook module
+jQuery("#facebook-login-box").waitUntilExists(function(){	
+	jQuery("#facebook-login-button").addClass("btn btn-default");
+});

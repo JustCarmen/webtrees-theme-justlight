@@ -951,6 +951,14 @@ ul.clist {
 	text-align: center;
 }
 
+/* For those who have activated the facebook module */
+#facebook-login-box {
+	display: block !important;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+}
+
 [dir=rtl] #login-form label,
 [dir=rtl] #new_passwd_form label,
 [dir=rtl] #verify-form label {
