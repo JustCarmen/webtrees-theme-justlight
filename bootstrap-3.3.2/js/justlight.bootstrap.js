@@ -25,6 +25,22 @@ jQuery(window).resize(function() {
 	jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
 });
 
+// Use a flexible header on small screens. The header takes to much space on small screens
+function flexibleHeader() {
+	if (jQuery("#responsive").is(":visible")) {
+		jQuery('#nav-container').removeClass('navbar-fixed-top');
+		jQuery('#nav-container').addClass('navbar-top');
+	} else {
+		jQuery('#nav-container').addClass('navbar-fixed-top');
+		jQuery('#nav-container').removeClass('navbar-top');
+	}
+}
+
+flexibleHeader();
+jQuery(window).resize(function() {
+	flexibleHeader();
+});
+
 // Bootstrap multilevel menu
 jQuery(".dropdown-menu > li > a.dropdown-submenu-toggle").on("click", function(e) {
 	e.preventDefault();
