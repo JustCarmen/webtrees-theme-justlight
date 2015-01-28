@@ -226,7 +226,35 @@ jQuery('body').on('click', function(e) {
 // add bootstrap buttons
 jQuery("#edit_interface-page .save, #edit_interface-page .cancel").addClass("btn btn-default btn-sm");
 jQuery("#find-page button").addClass("btn btn-default btn-xs");
-jQuery("input[type=submit], input[type=button]").addClass("btn btn-default btn-xs");
+jQuery("input[type=submit], input[type=button]").addClass("btn btn-primary");
 jQuery("#personal_facts_content").waitUntilExists(function() {
 	jQuery("input[type=button]").addClass("btn btn-default btn-xs").css("visibility", "visible");
 });
+
+// Login, Register, Verify form in bootstrap layout
+jQuery("#login-form, #register-form, #verify-form").each(function() {
+	jQuery(this).addClass("form-horizontal");
+	jQuery("div", this).each(function() {
+		jQuery(this).addClass("form-group");
+	});
+	jQuery("input, textarea", "#register-form").not(":hidden, :submit").each(function() {
+		jQuery(this).parent("label").addClass("control-label col-sm-3").after(jQuery(this));
+		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
+	});
+	jQuery("input, textarea", "#login-form").not(":hidden, :submit").each(function() {
+		jQuery(this).parent("label").addClass("control-label col-sm-3 col-sm-offset-1").after(jQuery(this));
+	});
+	jQuery("input, textarea", "#login-form, #verify-form").not(":hidden, :submit").each(function() {
+		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-3">');
+	});
+	jQuery("#verify-form label").each(function() {
+		jQuery(this).addClass("control-label col-sm-3 col-sm-offset-1");
+	});
+	jQuery(".form-group").each(function() {
+		jQuery(this).children("div").append(jQuery("p", this));
+		jQuery(this).has("a, input[type=submit]").css("text-align", "center");
+	});
+});
+jQuery("#login-text, #verify-form h4").after("<hr>");
+jQuery("#login-box .form-group .btn").parent().before("<hr>");
+jQuery("#verify-form .form-group:last").before("<hr>");

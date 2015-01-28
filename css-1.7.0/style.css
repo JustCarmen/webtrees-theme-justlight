@@ -900,6 +900,12 @@ ul.clist {
 }
 
 /* ===== login.php === */
+#login-page,
+#login-register-page {
+	width: 75%;
+	margin: 0 auto;
+}
+
 #login-register-page .warning {
 	margin: 20px auto;
 	text-align: center;
@@ -910,102 +916,43 @@ ul.clist {
 	text-align: center;
 }
 
+#login-page .confirm,
 #login-register-page .confirm {
 	margin: 20px auto;
-	text-align: justify;
-	width: 500px;
 }
 
-#login-register-page .confirm p {
+#login-register-page .confirm p:first-child {
 	font-weight: bold;
-}
-
-#login-register-page .confirm p + p {
-	font-weight: normal;
 }
 
 #login-text,
 #register-text,
 #user-verify {
 	margin: 20px auto;
-	width: 610px;
-	text-align: justify;
 }
 
-#login-box,
-#register-box,
-#login-page .confirm {
-	text-align: center;
-}
-
-#login-form,
-#new_passwd_form,
-#register-form,
 #verify-form {
-	display: inline-block;
-	margin: 10px auto 0 auto;
-	padding: 5px;
+	margin-top: 80px;
 }
 
-#login-form div,
-#login-form div a,
-#new_passwd_form div,
-#register-form div,
-#verify-form div {
-	margin: auto;
-	padding: 5px;
-	text-align: center;
-}
-
-#login-form label,
-#new_passwd_form label,
-#verify-form label {
-	display: block;
-	text-align: right;
-}
-
-#login-form label input,
-#new_passwd_form label input,
-#verify-form input {
-	width: 140px;
-	margin: 0 10px;
-}
-
+#register-form h4,
 #new_passwd_form h4,
-#register-form h4 {
-	font-weight: normal;
+#verify-form h4 {
 	text-align: center;
 }
-
-#register-form div,
-#verify-form div {
-	text-align: right;
+	
+#login-register-page h2 {
+	text-align: left;
 }
 
-#register-form label input,
-#register-form label select,
-#register-form textarea {
-	width: 280px;
-	margin: 0 10px;
-}
-
-#register-form label select {
-	margin: 0 10px;
-	width: 230px;
-}
-
-#register-form textarea {
-	vertical-align: top;
-	width: 280px;
-}
-
-#register-form div#registration-submit {
+#login-form input[type=submit],
+#verify-form input[type=submit],
+#registration-submit {
 	text-align: center;
 }
 
 [dir=rtl] #login-form label,
 [dir=rtl] #new_passwd_form label,
-[dir=rtl] #register-form label,
 [dir=rtl] #verify-form label {
 	text-align: left;
 }
@@ -4261,6 +4208,11 @@ a[class^=" icon-"]:focus,
 	}
 
 	#sidebar {
+		width: 100%;
+	}
+	
+	#login-page,
+	#login-register-page {
 		width: 100%;
 	}
 
