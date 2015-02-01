@@ -132,6 +132,20 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			parent::footerContent();
 		}
 	}
+	
+	/** {@inheritdoc} */
+	public function formatPendingChangesLink() {
+		try {
+			if ($this->pendingChangesExist()) {
+				return $this->htmlAlert($this->pendingChangesLink(), 'info', true);
+			}
+			else {
+				return '';
+			}
+		} catch (Exception $ex) {
+			parent::formatPendingChangesLink();
+		}
+	}
 
 	/** {@inheritdoc} */
 	public function formQuickSearchFields() {
@@ -412,18 +426,6 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			return $parameters[$parameter_name];
 		} else {
 			return parent::parameter($parameter_name);
-		}
-	}
-
-	/** {@inheritdoc} */
-	public function pendingChangesLink() {
-		try {
-			return
-				'<a href="#" onclick="window.open(\'edit_changes.php\', \'_blank\', chan_window_specs); return false;">' .
-				'<p class="alert alert-warning">' . $this->pendingChangesLinkText() . '</p>';
-			'</a>';
-		} catch (Exception $ex) {
-			return parent::pendingChangesLink();
 		}
 	}
 
