@@ -493,8 +493,6 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	// This theme uses variables from php files in the javascript files
 	private function scriptVars() {
 		return '<script>' .
-			'var WT_SERVER_NAME = "' . WT_SERVER_NAME . '";' .
-			'var WT_SCRIPT_PATH = "' . WT_SCRIPT_PATH . '";' .
 			'var WT_TREE_TITLE = "' . $this->tree->tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
 			'</script>';
