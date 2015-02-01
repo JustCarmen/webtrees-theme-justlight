@@ -383,7 +383,9 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function menuMyPages() {
 		try {
 			$menu = parent::menuMyPages();
-			$menu->addSubmenu($this->menuLogout());
+			if (Auth::id()) {				
+				$menu->addSubmenu($this->menuLogout());
+			}
 			return $menu;
 		} catch (Exception $ex) {
 			return parent::menuMyPages();
