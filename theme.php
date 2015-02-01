@@ -1,4 +1,5 @@
 <?php
+
 // JustLight theme
 //
 // webtrees: Web based Family History software
@@ -37,7 +38,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 
 	/** @var string the location of the colorbox files */
 	private $colorbox_url;
-	
+
 	/** {@inheritdoc} */
 	public function assetUrl() {
 		return 'themes/justlight/css-1.7.0/';
@@ -87,26 +88,26 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			return parent::bodyHeaderPopupWindow();
 		}
 	}
-	
+
 	private function compactMenuContainer($menu) {
 		$html = '<li id="' . $menu->getId() . '" class="dropdown">';
 		$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
 		$html .= '<ul class="dropdown-menu" role="menu">';
 		foreach ($menu->getSubmenus() as $submenu) {
-			$html .= '<li id="' . $submenu->getId() .'" class="dropdown-submenu">';
+			$html .= '<li id="' . $submenu->getId() . '" class="dropdown-submenu">';
 			$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
-			
+
 			$html .= '<ul class="dropdown-menu sub-menu">';
-			foreach ($submenu->getSubmenus() as $subsubmenu) {				
+			foreach ($submenu->getSubmenus() as $subsubmenu) {
 				$html .= '<li id="' . $subsubmenu->getId() . '">';
 				$html .= '<a href="' . $subsubmenu->getLink() . '"' . $subsubmenu->getOnclick() . '>' . $subsubmenu->getLabel() . '</a>';
-				$html .= '</li>';				
+				$html .= '</li>';
 			}
 			$html .= '</ul></li>';
 		}
 		$html .= '</ul></li>';
 		return $html;
-	}	
+	}
 
 	/** {@inheritdoc} */
 	public function footerContainer() {
@@ -120,20 +121,18 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			parent::footerContainer();
 		}
 	}
-	
+
 	/** {@inheritdoc} */
 	public function footerContent() {
 		try {
 			return
-			$this->formatContactLinks() .
-			'<div class="credits">' . $this->logoPoweredBy() . '</div>';
+				$this->formatContactLinks() .
+				'<div class="credits">' . $this->logoPoweredBy() . '</div>';
 		} catch (Exception $ex) {
 			parent::footerContent();
 		}
-		
-		
 	}
-	
+
 	/** {@inheritdoc} */
 	public function formQuickSearchFields() {
 		try {
@@ -244,31 +243,30 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			return parent::hookHeaderExtraContent();
 		}
 	}
-	
+
 	/** {@inheritdoc} */
 	public function individualBoxMenuFamilyLinks(WT_Individual $individual) {
 		try {
-			foreach ($individual->getSpouseFamilies() as $family) {		
-			$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . WT_I18N::translate('Family with spouse') . '</a>';
-			$menus[] = '<ul>';
-			$spouse = $family->getSpouse($individual);
-			if ($spouse && $spouse->canShowName()) {
-				$menus[] = new WT_Menu($spouse->getFullName(), $spouse->getHtmlUrl());
-			}
-			foreach ($family->getChildren() as $child) {
-				if ($child->canShowName()) {
-					$menus[] = new WT_Menu($child->getFullName(), $child->getHtmlUrl());
+			foreach ($individual->getSpouseFamilies() as $family) {
+				$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . WT_I18N::translate('Family with spouse') . '</a>';
+				$menus[] = '<ul>';
+				$spouse = $family->getSpouse($individual);
+				if ($spouse && $spouse->canShowName()) {
+					$menus[] = new WT_Menu($spouse->getFullName(), $spouse->getHtmlUrl());
 				}
+				foreach ($family->getChildren() as $child) {
+					if ($child->canShowName()) {
+						$menus[] = new WT_Menu($child->getFullName(), $child->getHtmlUrl());
+					}
+				}
+				$menus[] = '</ul></li>';
 			}
-			$menus[] = '</ul></li>';
-		}
 
-		return $menus;
-			
+			return $menus;
 		} catch (Exception $ex) {
 			parent::individualBoxMenuFamilyLinks($individual);
 		}
-		$menus = array();		
+		$menus = array();
 	}
 
 	/** {@inheritdoc} */
@@ -282,6 +280,23 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		}
 	}
 
+	private function mainContentStyle() {
+		$page = array(
+			'individual.php',
+			'family.php',
+			'medialist.php',
+			WT_Filter::get('mod_action') === 'treeview',
+		);
+
+		if (in_array(WT_SCRIPT_NAME, $page)) {
+			return 'style="width: 98%"';
+		}
+
+		if (WT_SCRIPT_NAME === 'pedigree.php') {
+			return 'style="margin-bottom: 50px"';
+		}
+	}
+
 	private function menuCompact(WT_Individual $individual) {
 		$menu = new WT_Menu(WT_I18N::translate('View'), '#', 'menu-view');
 
@@ -291,7 +306,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			$menu->addSubmenu($this->menuReports());
 		}
 		$menu->addSubmenu($this->menuCalendar());
-		
+
 		foreach ($menu->getSubmenus() as $submenu) {
 			$id = explode("-", $submenu->getId());
 			$new_id = implode("-", array($id[0], 'view', $id[1]));
@@ -351,36 +366,13 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		return $menu;
 	}
 
-	/** (@inheritdoc) */
-	public function menuMyAccount() {
+	public function menuMyPages() {
 		try {
-			if (Auth::check()) {
-				$menu = new WT_Menu(WT_I18N::translate('My account'), '');
-				$menu->addSubmenu(new WT_Menu(WT_I18N::translate('My account'), 'edituser.php'));
-				$menu->addSubmenu($this->menuLogout());
-				return $menu;
-			} else {
-				return null;
-			}
+			$menu = parent::menuMyPages();
+			$menu->addSubmenu($this->menuLogout());
+			return $menu;
 		} catch (Exception $ex) {
-			return parent::menuMyAccount();
-		}
-	}
-	
-	private function mainContentStyle() {
-		$page = array(
-			'individual.php',
-			'family.php',
-			'medialist.php',
-			WT_Filter::get('mod_action') === 'treeview',
-		);
-
-		if (in_array(WT_SCRIPT_NAME, $page)) {
-			return 'style="width: 98%"';
-		}
-		
-		if (WT_SCRIPT_NAME === 'pedigree.php') {
-			return 'style="margin-bottom: 50px"';
+			return parent::menuMyPages();
 		}
 	}
 
@@ -398,22 +390,22 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			$this->tree->setPreference('EXPAND_NOTES_DEFAULT', 0);
 		}
 	}
-	
+
 	/** {@inheritdoc} */
 	public function parameter($parameter_name) {
 		$parameters = array(
-			'chart-background-f'             => 'fff0f5',
-			'chart-background-m'             => 'd7eaf9',
-			'chart-background-u'             => 'f9f9f9',
-			'chart-box-x'                    => 280,
-			'chart-box-y'                    => 90,
-			'chart-descendancy-box-x'        => 280,
-			'chart-descendancy-box-y'        => 90,
-			'chart-font-color'               => '333333',
-			'chart-font-size'                => 9,
+			'chart-background-f'			 => 'fff0f5',
+			'chart-background-m'			 => 'd7eaf9',
+			'chart-background-u'			 => 'f9f9f9',
+			'chart-box-x'					 => 280,
+			'chart-box-y'					 => 90,
+			'chart-descendancy-box-x'		 => 280,
+			'chart-descendancy-box-y'		 => 90,
+			'chart-font-color'				 => '333333',
+			'chart-font-size'				 => 9,
 			'distribution-chart-high-values' => '9ca3d4',
-			'distribution-chart-low-values'  => 'e5e6ef',
-			'line-width'                     => 2,
+			'distribution-chart-low-values'	 => 'e5e6ef',
+			'line-width'					 => 2,
 		);
 
 		if (array_key_exists($parameter_name, $parameters)) {
@@ -439,11 +431,11 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function primaryMenu() {
 		try {
 			global $controller;
-			
+
 			$menus = $this->themeOption('menu');
 			if ($this->tree && $menus) {
 				$individual = $controller->getSignificantIndividual();
-				
+
 				$modules = WT_Module::getActiveMenus();
 				foreach ($menus as $menu) {
 					$label = $menu['label'];
@@ -476,11 +468,11 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function primaryMenuContainer(array $menus) {
 		$html = '';
 		foreach ($menus as $menu) {
-			if($menu->getId() === 'menu-view') {
-				$html .= $this->compactMenuContainer($menu);			
+			if ($menu->getId() === 'menu-view') {
+				$html .= $this->compactMenuContainer($menu);
 			} else {
-				$html .= $menu->bootstrap();	
-			}			
+				$html .= $menu->bootstrap();
+			}
 		}
 
 		return
@@ -505,7 +497,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 				$this->menuFavorites(),
 				$this->menuLanguages(),
 				$this->menuThemes(),
-				$this->menuMyAccount(),
+				$this->menuMyPages(),
 			));
 		} catch (Exception $ex) {
 			return parent::secondaryMenu();
