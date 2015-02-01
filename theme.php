@@ -89,24 +89,37 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		}
 	}
 
-	private function compactMenuContainer($menu) {
-		$html = '<li id="' . $menu->getId() . '" class="dropdown">';
-		$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
-		$html .= '<ul class="dropdown-menu" role="menu">';
-		foreach ($menu->getSubmenus() as $submenu) {
-			$html .= '<li id="' . $submenu->getId() . '" class="dropdown-submenu">';
-			$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
+	private function formatCompactMenu($menu) {
+		if($menu->getSubmenus()) {
+			$html = '<li id="' . $menu->getId() . '" class="dropdown">';
+			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
+			$html .= '<ul class="dropdown-menu" role="menu">';
+			foreach ($menu->getSubmenus() as $submenu) {
+				if($submenu->getSubmenus()) {
+					$html .= '<li id="' . $submenu->getId() . '" class="dropdown-submenu">';
+					$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
 
-			$html .= '<ul class="dropdown-menu sub-menu">';
-			foreach ($submenu->getSubmenus() as $subsubmenu) {
-				$html .= '<li id="' . $subsubmenu->getId() . '">';
-				$html .= '<a href="' . $subsubmenu->getLink() . '"' . $subsubmenu->getOnclick() . '>' . $subsubmenu->getLabel() . '</a>';
-				$html .= '</li>';
+					$html .= '<ul class="dropdown-menu sub-menu">';
+					foreach ($submenu->getSubmenus() as $subsubmenu) {
+						$html .= $this->formatCompactMenuItem($subsubmenu);
+					}
+					$html .= '</ul></li>';
+				} else {
+					$html .= $this->formatCompactMenuItem($submenu);
+				}
 			}
 			$html .= '</ul></li>';
+		} else {
+			$html .= $this->formatCompactMenuItem($menu);
 		}
-		$html .= '</ul></li>';
 		return $html;
+	}
+	
+	private function formatCompactMenuItem($menu) {
+		return
+			'<li id="' . $menu->getId() . '">' .
+			'<a href="' . $menu->getLink() . '"' . $menu->getOnclick() . '>' . $menu->getLabel() . '</a>' .
+			'</li>';
 	}
 
 	/** {@inheritdoc} */
@@ -473,7 +486,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		$html = '';
 		foreach ($menus as $menu) {
 			if ($menu->getId() === 'menu-view') {
-				$html .= $this->compactMenuContainer($menu);
+				$html .= $this->formatCompactMenu($menu);
 			} else {
 				$html .= $menu->bootstrap();
 			}
