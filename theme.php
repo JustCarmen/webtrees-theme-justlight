@@ -163,7 +163,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		try {
 			return
 				'<div class="navbar-header">' .
-				'<h1><a href="index.php" class="navbar-brand">' . $this->tree->tree_title_html . '</a></h1>' .
+				'<h1><a href="index.php" class="navbar-brand">' . $this->tree->titleHtml() . '</a></h1>' .
 				'</div>';
 		} catch (Exception $ex) {
 			return parent::formatTreeTitle();
@@ -493,7 +493,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	// This theme uses variables from php files in the javascript files
 	private function scriptVars() {
 		return '<script>' .
-			'var WT_TREE_TITLE = "' . $this->tree->tree_title . '";' .
+			'var WT_TREE_TITLE = "' . $this->tree->name() . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
 			'</script>';
 	}
