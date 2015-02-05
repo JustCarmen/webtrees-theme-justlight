@@ -1,28 +1,24 @@
 <?php
+namespace Webtrees;
 
-// JustLight theme
-//
-// webtrees: Web based Family History software
-// Copyright (C) 2015 webtrees development team.
-// Copyright (C) 2015 JustCarmen
-//
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+/** 
+ * JustLight Theme
+ * 
+ * webtrees: online genealogy
+ * Copyright (C) 2015 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 
-use WT\Auth;
-
-class JustLightTheme extends WT\Theme\BaseTheme {
+class JustLightTheme extends BaseTheme {
 
 	/** @var string the location of this theme */
 	private $theme_dir;
@@ -62,7 +58,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 				$this->headerContent() .
 				$this->primaryMenuContainer($this->primaryMenu()) .
 				'</div></div></div>' .
-				$this->flashMessagesContainer(WT_FlashMessages::getMessages()) .
+				$this->flashMessagesContainer(FlashMessages::getMessages()) .
 				$this->formatPendingChangesLink() .
 				'</header>' .
 				'<div id="responsive"></div>' .
@@ -74,7 +70,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 
 	public function bodyHeaderPopupWindow() {
 		try {
-			if (WT_Filter::get('action') === 'addnewnote_assisted') {
+			if (Filter::get('action') === 'addnewnote_assisted') {
 				$class = 'class="census-assistant"';
 			} else {
 				$class = '';
@@ -83,7 +79,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			return
 				'<body class="container container-popup">' .
 				'<main id="content"' . $class . '" role="main">' .
-				$this->flashMessagesContainer(WT_FlashMessages::getMessages());
+				$this->flashMessagesContainer(FlashMessages::getMessages());
 		} catch (Exception $ex) {
 			return parent::bodyHeaderPopupWindow();
 		}
@@ -164,7 +160,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function formQuickSearchFields() {
 		try {
 			return
-				'<input type="search" name="query" id="searc-basic" placeholder="' . WT_I18N::translate('Search') . '" dir="auto" />' .
+				'<input type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
 				'<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>';
 		} catch (Exception $ex) {
 			return parent::formQuickSearchFields();
@@ -262,7 +258,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	public function hookHeaderExtraContent() {
 		try {
 			$html = '';
-			if (WT_SCRIPT_NAME == 'individual.php' || WT_Filter::get('mod_action') === 'treeview') {
+			if (WT_SCRIPT_NAME == 'individual.php' || Filter::get('mod_action') === 'treeview') {
 				$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
 			}
 			return $html;
@@ -272,28 +268,28 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 	}
 
 	/** {@inheritdoc} */
-	public function individualBoxMenuFamilyLinks(WT_Individual $individual) {
+	public function individualBoxMenuFamilyLinks(Individual $individual) {
 		try {
+			$menus = array();
 			foreach ($individual->getSpouseFamilies() as $family) {
-				$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . WT_I18N::translate('Family with spouse') . '</a>';
+				$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
 				$menus[] = '<ul>';
 				$spouse = $family->getSpouse($individual);
 				if ($spouse && $spouse->canShowName()) {
-					$menus[] = new WT_Menu($spouse->getFullName(), $spouse->getHtmlUrl());
+					$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl());
 				}
 				foreach ($family->getChildren() as $child) {
 					if ($child->canShowName()) {
-						$menus[] = new WT_Menu($child->getFullName(), $child->getHtmlUrl());
+						$menus[] = new Menu($child->getFullName(), $child->getHtmlUrl());
 					}
 				}
 				$menus[] = '</ul></li>';
 			}
-
+			
 			return $menus;
 		} catch (Exception $ex) {
 			parent::individualBoxMenuFamilyLinks($individual);
-		}
-		$menus = array();
+		}		
 	}
 
 	/** {@inheritdoc} */
@@ -312,7 +308,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			'individual.php',
 			'family.php',
 			'medialist.php',
-			WT_Filter::get('mod_action') === 'treeview',
+			Filter::get('mod_action') === 'treeview',
 		);
 
 		if (in_array(WT_SCRIPT_NAME, $page)) {
@@ -324,8 +320,8 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		}
 	}
 
-	private function menuCompact(WT_Individual $individual) {
-		$menu = new WT_Menu(WT_I18N::translate('View'), '#', 'menu-view');
+	private function menuCompact(Individual $individual) {
+		$menu = new Menu(I18N::translate('View'), '#', 'menu-view');
 
 		$menu->addSubmenu($this->menuChart($individual));
 		$menu->addSubmenu($this->menuLists());
@@ -347,7 +343,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		try {
 			$menu = parent::menuLists();
 			if ($this->themeOption('media_menu')) {
-				$submenus = array_filter($menu->getSubmenus(), function (WT_Menu $menu) {
+				$submenus = array_filter($menu->getSubmenus(), function (Menu $menu) {
 					return $menu->getId() !== 'menu-list-obje';
 				});
 				$menu->setSubmenus($submenus);
@@ -366,7 +362,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 				return
 					'<div class="btn-group">' .
 					'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(get_query_url()) . '" class="btn btn-default">' .
-					WT_I18N::translate('Login') .
+					I18N::translate('Login') .
 					'</a></div>';
 			}
 		} catch (Exception $ex) {
@@ -380,12 +376,12 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 		$mainfolder = $this->themeOption('media_link') == $MEDIA_DIRECTORY ? '' : '&amp;folder=' . rawurlencode($this->themeOption('media_link'));
 		$subfolders = $this->themeOption('subfolders') ? '&amp;subdirs=on' : '';
 
-		$menu = new WT_Menu(/* I18N: Main media menu */ WT_I18N::translate('Media'), 'medialist.php?action=filter&amp;search=no' . $mainfolder . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media');
+		$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?action=filter&amp;search=no' . $mainfolder . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media');
 
 		$folders = $this->themeOption('mediafolders'); $i = 0;
 		foreach ($folders as $key => $folder) {
 			if ($key !== $MEDIA_DIRECTORY) {
-				$submenu = new WT_Menu(ucfirst($folder), 'medialist.php?action=filter&amp;search=no&amp;folder=' . rawurlencode($key) . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media-' . $i);
+				$submenu = new Menu(ucfirst($folder), 'medialist.php?action=filter&amp;search=no&amp;folder=' . rawurlencode($key) . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media-' . $i);
 				$menu->addSubmenu($submenu);
 			}
 			$i++;
@@ -453,7 +449,7 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 			if ($this->tree && $menus) {
 				$individual = $controller->getSignificantIndividual();
 
-				$modules = WT_Module::getActiveMenus();
+				$modules = Module::getActiveMenus();
 				foreach ($menus as $menu) {
 					$label = $menu['label'];
 					$sort = $menu['sort'];
@@ -565,12 +561,12 @@ class JustLightTheme extends WT\Theme\BaseTheme {
 
 	/** {@inheritdoc} */
 	public function themeName() {
-		return /* I18N: Name of a theme. */ WT_I18N::translate('JustLight');
+		return /* I18N: Name of a theme. */ I18N::translate('JustLight');
 	}
 
 	// This theme comes with an optional module to set a few theme options
 	private function themeOption($setting) {
-		if (array_key_exists('justlight_theme_options', WT_Module::getActiveModules())) {
+		if (array_key_exists('justlight_theme_options', Module::getActiveModules())) {
 			$module = new justlight_theme_options_WT_Module;
 			return $module->options($setting);
 		}
