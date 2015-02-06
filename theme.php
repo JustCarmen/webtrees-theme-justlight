@@ -371,7 +371,7 @@ class JustLightTheme extends BaseTheme {
 	}
 
 	private function menuMedia() {
-		global $MEDIA_DIRECTORY;
+		$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
 
 		$mainfolder = $this->themeOption('media_link') == $MEDIA_DIRECTORY ? '' : '&amp;folder=' . rawurlencode($this->themeOption('media_link'));
 		$subfolders = $this->themeOption('subfolders') ? '&amp;subdirs=on' : '';
