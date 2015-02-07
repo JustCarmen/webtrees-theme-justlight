@@ -146,7 +146,7 @@ class JustLightTheme extends BaseTheme {
 	public function formatPendingChangesLink() {
 		try {
 			if ($this->pendingChangesExist()) {
-				return $this->htmlAlert($this->pendingChangesLink(), 'info', true);
+				return $this->htmlAlert($this->pendingChangesLink(), 'warning', true);
 			}
 			else {
 				return '';
