@@ -1,9 +1,9 @@
 <?php
 namespace Fisharebest\Webtrees;
 
-/** 
+/**
  * JustLight Theme
- * 
+ *
  * webtrees: online genealogy
  * Copyright (C) 2015 webtrees development team
  * This program is free software: you can redistribute it and/or modify
@@ -110,7 +110,7 @@ class JustLightTheme extends BaseTheme {
 		}
 		return $html;
 	}
-	
+
 	private function formatCompactMenuItem($menu) {
 		return
 			'<li id="' . $menu->getId() . '">' .
@@ -141,7 +141,7 @@ class JustLightTheme extends BaseTheme {
 			parent::footerContent();
 		}
 	}
-	
+
 	/** {@inheritdoc} */
 	public function formatPendingChangesLink() {
 		try {
@@ -240,7 +240,7 @@ class JustLightTheme extends BaseTheme {
 					script.type	= "text/javascript";
 					script.src	= "' . WT_DATATABLES_BOOTSTRAP_JS_URL . '";
 					document.body.appendChild(script);
-					
+
 					var newSheet = document.createElement("link");
 					newSheet.setAttribute("href","' . WT_DATATABLES_BOOTSTRAP_CSS_URL . '");
 					newSheet.setAttribute("type","text/css");
@@ -285,11 +285,11 @@ class JustLightTheme extends BaseTheme {
 				}
 				$menus[] = '</ul></li>';
 			}
-			
+
 			return $menus;
 		} catch (Exception $ex) {
 			parent::individualBoxMenuFamilyLinks($individual);
-		}		
+		}
 	}
 
 	/** {@inheritdoc} */
@@ -373,18 +373,21 @@ class JustLightTheme extends BaseTheme {
 	private function menuMedia() {
 		$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
 
-		$mainfolder = $this->themeOption('media_link') == $MEDIA_DIRECTORY ? '' : '&amp;folder=' . rawurlencode($this->themeOption('media_link'));
-		$subfolders = $this->themeOption('subfolders') ? '&amp;subdirs=on' : '';
+		$folders = $this->themeOption('mediafolders');
+		$show_subfolders = $this->themeOption('show_subfolders') ? '&amp;subdirs=on' : '';
 
-		$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?action=filter&amp;search=no' . $mainfolder . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media');
+		if (count($folders) > 1) {
+			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), '', 'menu-media');
 
-		$folders = $this->themeOption('mediafolders'); $i = 0;
-		foreach ($folders as $key => $folder) {
-			if ($key !== $MEDIA_DIRECTORY) {
-				$submenu = new Menu(ucfirst($folder), 'medialist.php?action=filter&amp;search=no&amp;folder=' . rawurlencode($key) . '&amp;sortby=title&amp;' . $subfolders . '&amp;max=20&amp;columns=2', 'menu-media-' . $i);
-				$menu->addSubmenu($submenu);
+			$i = 1;
+			foreach ($folders as $key => $folder) {
+				if ($key !== $MEDIA_DIRECTORY) {
+					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2', 'menu-media-' . $i++);
+					$menu->addSubmenu($submenu);
+				}
 			}
-			$i++;
+		} else { // fallback if we don't have any subfolders added to the list
+			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?' . $this->tree_url, 'menu-media');
 		}
 		return $menu;
 	}
@@ -392,7 +395,7 @@ class JustLightTheme extends BaseTheme {
 	public function menuMyPages() {
 		try {
 			$menu = parent::menuMyPages();
-			if (Auth::id()) {				
+			if (Auth::id()) {
 				$menu->addSubmenu($this->menuLogout());
 			}
 			return $menu;
