@@ -185,7 +185,9 @@ class JustLightTheme extends BaseTheme {
 		try {
 			return
 				'<div class="navbar-header">' .
-				'<h1><a href="index.php" class="navbar-brand">' . $this->tree->getTitleHtml() . '</a></h1>' .
+				'<h1>' .
+				'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+				'</h1>' .
 				'</div>';
 		} catch (Exception $ex) {
 			return parent::formatTreeTitle();
@@ -204,6 +206,11 @@ class JustLightTheme extends BaseTheme {
 		} catch (Exception $ex) {
 			return parent::headerContent();
 		}
+	}
+
+	// Theme setting for the tree title
+	private function headerTitleStyle() {
+		return 'font-size:' . $this->themeOption('titlesize') . 'px;';
 	}
 
 	/** {@inheritdoc} */
