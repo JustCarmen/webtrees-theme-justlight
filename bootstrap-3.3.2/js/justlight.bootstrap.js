@@ -15,9 +15,9 @@
  */
 
 // Bootstrap fixed navbar. Keep the content in relation to the navbar always in position.
-jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
+jQuery("header").css('height', jQuery('#nav-container').outerHeight());
 jQuery(window).resize(function() {
-	jQuery("#wrap").css('padding-top', jQuery('#nav-container').outerHeight() + 10);
+	jQuery("header").css('height', jQuery('#nav-container').outerHeight());
 });
 
 // Use a flexible header on small screens. The header takes to much space on small screens

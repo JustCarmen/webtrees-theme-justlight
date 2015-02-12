@@ -33,7 +33,6 @@ html {
     height: auto !important;
     margin: 0 auto -120px;
     min-height: 100%;
-	padding-top: 120px;
 	position: relative;
 }
 
@@ -3618,6 +3617,10 @@ table.dataTable thead > tr > th {
 
 /* ====== Theme Header ========= */
 /* Bootstrap header navigation */
+header {
+	margin-bottom: 10px;
+}
+
 .navbar-header {
 	padding-left: 10px;
 	width: 50%;
@@ -3722,6 +3725,7 @@ footer {
 	clear: both;
     font-size: 85%;
 	height: 80px;
+	margin-bottom: 20px;
 	padding: 10px 20px;
 	position: relative;
 }
@@ -4185,10 +4189,6 @@ a[class^=" icon-"]:focus,
 }
 
 @media (max-width: 767px) {
-	body #wrap {
-		padding-top: 60px;
-	}
-
 	#responsive {
 		display: block;
 	}
