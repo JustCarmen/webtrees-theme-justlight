@@ -2597,8 +2597,7 @@ table.dataTable thead > tr > th {
 }
 
 /* ============== search.php ======================= */
-#search-page h2,
-#search_submit {
+#search-page h2 {
 	margin: 20px;
 	text-align: center;
 }
@@ -3408,15 +3407,6 @@ table.dataTable thead > tr > th {
 [dir=rtl] #pedigree_chart {
 	left: auto;
 	right: -20px;
-}
-
-/*-- Relationship ---- */
-#relationship-page h3 {
-	margin: 20px 0 0 20px;
-}
-
-#relationship_chart {
-	margin: 0 20px 0;
 }
 
 /*-- timeline  --*/
