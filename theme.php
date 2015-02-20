@@ -363,7 +363,7 @@ class JustLightTheme extends BaseTheme {
 
 	public function menuLogin() {
 		try {
-			if (Auth::check() || $this->isSearchEngine()) {
+			if (Auth::check() || Auth::isSearchEngine()) {
 				return null;
 			} else {
 				return
