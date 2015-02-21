@@ -81,7 +81,7 @@ jQuery("table").waitUntilExists(function() {
 	} else if (jQuery(this).parents().hasClass("user_messages_block")) {
 		jQuery(this).addClass("table table-striped")
 	} else {
-		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
+		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
 		table.addClass("table");
 		jQuery(this).parents(".gedcom_stats_block > table").addClass("table-striped");
 	}

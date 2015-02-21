@@ -284,10 +284,12 @@ div.fact_SHARED_NOTE {
 	width: 100%;
 }
 
+.name0,
 .name1 {
 	font-weight: bold;
 }
 
+a.name0:hover,
 a.name1:hover {
 	font-weight: bold;
 	text-decoration: underline;
@@ -732,10 +734,12 @@ ul.clist {
 	overflow: hidden;
 }
 
+.person_box_template .name0,
 .person_box_template .name1 {
 	font-size: 95%;
 }
 
+.person_box_template .details0,
 .person_box_template .details1 {
 	font-size: 85%;
 }
@@ -1058,10 +1062,6 @@ ul.clist {
 	color: #000;
 	content: "\2022";
 	margin-right: 5px;
-}
-
-.popover-content a:hover {
-	text-decoration: none;
 }
 
 .popover-content .table {
@@ -3176,12 +3176,27 @@ table.dataTable thead > tr > th {
 }
 
 /* ====== Charts Styles ======== */
+#people label {
+	display:block;
+}
+
 #compact_chart,
 #fan_chart,
 #ancestry_chart,
 #familybook_chart,
 #hourglass_chart {
 	margin: 20px;
+}
+
+#compact_chart td {
+	padding: 3px;
+}
+
+#ancestry_booklet .person_box_template,
+#descendancy_booklet .person_box_template,
+#familybook_chart .person_box_template,
+#hourglass_chart .person_box_template {
+	margin: 3px 0;
 }
 
 /* arrows without a link on the compact chart */
@@ -3266,8 +3281,13 @@ table.dataTable thead > tr > th {
 	vertical-align: middle;
 }
 
-[ID^="vline"] {
-	width: 3px;
+img[src*="hline"] {
+	height: 2px;
+}
+
+[ID^="vline"],
+img[src*="vline"] {
+	width: 2px;
 }
 
 #familybook_chart h3 {
@@ -3304,13 +3324,15 @@ table.dataTable thead > tr > th {
 }
 
 /*-- Hourglass ---- */
-#hourglass_chart img.line4 {
-	vertical-align: middle;
+#hourglass_chart td {
+	background-repeat: repeat-y !important;
+	background-position: right 0 !important;
+	margin: 0;
+	padding: 0;
 }
 
-#hourglass_chart table,
-.charts_block table {
-	border-collapse: collapse;
+#hourglass_chart img.line4 {
+	vertical-align: middle;
 }
 
 #hourglass_chart td,
@@ -3372,7 +3394,7 @@ table.dataTable thead > tr > th {
 
 /*-- Pedigree ---- */
 #pedigree-page table.list_table {
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	width: 500px;
 }
 
@@ -3383,7 +3405,6 @@ table.dataTable thead > tr > th {
 
 #pedigree_chart {
 	position: relative;
-	top: -200px;
 	left: 10px;
 }
 
@@ -3393,7 +3414,6 @@ table.dataTable thead > tr > th {
 
 #pedigree_canvas {
 	position: absolute;
-	top: 200px;
 	z-index: -1000;
 }
 
