@@ -434,8 +434,6 @@ class JustLightTheme extends BaseTheme {
 			'chart-background-u'			 => 'f9f9f9',
 			'chart-box-x'					 => 280,
 			'chart-box-y'					 => 90,
-			'chart-descendancy-box-x'		 => 280,
-			'chart-descendancy-box-y'		 => 90,
 			'chart-font-color'				 => '333333',
 			'chart-font-size'				 => 9,
 			'distribution-chart-high-values' => '9ca3d4',
