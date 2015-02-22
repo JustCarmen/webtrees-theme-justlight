@@ -1520,16 +1520,68 @@ ul.clist {
 }
 
 /* === Statistics block === */
-.gedcom_stats_block table td {
-	vertical-align: top;
+.gedcom_stats_block .facts_label {
+	width: auto;
 }
 
-.gedcom_stats_block table td td {
-	vertical-align: middle;
+.gedcom_stats_block .clearfloat {
+	margin: 16px 0;
 }
 
-.gedcom_stats_block td .stats_value {
-	text-align: center;
+.stat-table1 {
+	display: inline-block;
+	margin: 16px 0;
+}
+
+.stat-table1 .stat-row,
+.stat-table1 .stat-cell {
+	display: inline;
+}
+
+.stat-table1 .stat-row:not(:last-child):after {
+	content: " • ";
+}
+
+.stat-table1 .stat-cell {
+	padding: 0 3px 0 0;
+}
+
+[dir=rtl] .stat-table1 .stat-cell {
+	padding: 0 0 0 3px;
+}
+
+.stat-table1 .facts_label:after {
+	content: ":";
+}
+
+.stat-table2 {
+	display: table;
+}
+
+.stat-table2 .stat-row {
+	display: table-row;
+}
+
+.stat-table2 .stat-cell {
+	display: table-cell;
+	padding: 3px;
+}
+
+.stat-table2 .stat-cell.left {
+	width: 60%;
+}
+
+.stat-table2 .stats_value {
+	padding: 3px 15px;
+	text-align: right;
+}
+
+[dir=rtl] .stat-table2 .stats_value {
+	text-align: left;
+}
+
+.stat-table2 .date {
+	white-space: nowrap;
 }
 
 /* ==== Theme select block === */

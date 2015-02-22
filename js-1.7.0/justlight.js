@@ -194,6 +194,15 @@ if (WT_SCRIPT_NAME === "index.php") {
 	// journal-box correction - remove br's from content. Adjust layout to the news-box layout.
 	jQuery(".user_blog_block > br, .journal_box > br").remove();
 	jQuery(".journal_box > a[onclick*=editnews]").before('<hr>');
+	
+	// statistics block correction - replace br tag to show all data in one line
+	jQuery(".gedcom_stats_block").waitUntilExists(function(){
+		jQuery(".stat-table1 .stats_value br", this).replaceWith(" - ");
+		jQuery(".stat-table2 .list_item", this).each(function(){
+			jQuery("br:first", this).replaceWith(": ");
+			jQuery("br", this).replaceWith(" • ");
+		});
+	});
 }
 
 // Styling of the individual page
