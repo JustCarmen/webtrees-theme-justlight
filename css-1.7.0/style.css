@@ -1565,6 +1565,7 @@ ul.clist {
 .stat-table2 .stat-cell {
 	display: table-cell;
 	padding: 3px;
+	white-space: pre-wrap; 
 }
 
 .stat-table2 .stat-cell.left {
