@@ -399,6 +399,16 @@ class JustLightTheme extends BaseTheme {
 		return $menu;
 	}
 
+	private function menuModule($module_name) {
+		$modules = Module::getActiveMenus($this->tree);
+		if (array_key_exists($module_name, $modules)) {
+			return $modules[$module_name]->getMenu();
+		}
+		else {
+			return null;
+		}
+	}
+
 	public function menuMyPages() {
 		try {
 			$menu = parent::menuMyPages();
@@ -456,21 +466,17 @@ class JustLightTheme extends BaseTheme {
 			$menus = $this->themeOption('menu');
 			if ($this->tree && $menus) {
 				$individual = $controller->getSignificantIndividual();
-
-				$modules = Module::getActiveMenus();
 				foreach ($menus as $menu) {
 					$label = $menu['label'];
 					$sort = $menu['sort'];
 					$function = $menu['function'];
 					if ($sort > 0) {
-						if ($function == 'menuCompact') {
+						if ($function === 'menuCompact') {
 							$menubar[] = $this->menuCompact($individual);
-						} elseif ($function == 'menuMedia') {
-							$menubar[] = $this->menuMedia();
-						} elseif ($function == 'menuChart') {
+						} elseif ($function === 'menuChart') {
 							$menubar[] = $this->menuChart($individual);
-						} elseif ($function == 'menuModules') {
-							$menubar[] = $modules[$label]->getMenu();
+						} elseif ($function === 'menuModule') {
+							$menubar[] = $this->menuModule($label);
 						} else {
 							$menubar[] = $this->{$function}();
 						}
@@ -574,8 +580,8 @@ class JustLightTheme extends BaseTheme {
 
 	// This theme comes with an optional module to set a few theme options
 	private function themeOption($setting) {
-		if (array_key_exists('justlight_theme_options', Module::getActiveModules())) {
-			$module = new justlight_theme_options_WT_Module;
+		if (Module::getModuleByName('justlight_theme_options')) {
+			$module = new JustLightThemeOptionsModule;
 			return $module->options($setting);
 		}
 	}
