@@ -332,9 +332,12 @@ class JustLightTheme extends BaseTheme {
 
 		$menu->addSubmenu($this->menuChart($individual));
 		$menu->addSubmenu($this->menuLists());
-		if ($this->themeOption('compact_menu_reports')) {
+
+		/** $menuReports could return null */
+		if ($this->themeOption('compact_menu_reports') && $this->menuReports()) {
 			$menu->addSubmenu($this->menuReports());
 		}
+
 		$menu->addSubmenu($this->menuCalendar());
 
 		foreach ($menu->getSubmenus() as $submenu) {
@@ -473,6 +476,8 @@ class JustLightTheme extends BaseTheme {
 					if ($sort > 0) {
 						if ($function === 'menuCompact') {
 							$menubar[] = $this->menuCompact($individual);
+						} elseif ($function === 'menuMedia') {
+							$menubar[] = $this->menuMedia();
 						} elseif ($function === 'menuChart') {
 							$menubar[] = $this->menuChart($individual);
 						} elseif ($function === 'menuModule') {
