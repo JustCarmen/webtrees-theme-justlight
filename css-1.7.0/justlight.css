@@ -14,6 +14,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* general */
+.label {
+	color: #333;
+}
+
 /* bootstrap navbar */
 .navbar-fixed-top {
 	border-top: 5px solid #377BB5;
@@ -21,6 +26,12 @@
 
 .navbar-default .navbar-brand {
 	color: #428bca;
+}
+
+/* bootstrap submenu */
+.dropdown-submenu>a:after {
+    border-color: transparent;
+    border-left-color: #ccc;
 }
 
 @media (max-width: 767px) {
@@ -46,9 +57,13 @@ footer {
 	border-bottom: 1px solid #eee;
 }
 
-/* sidebar */
+/* sidebar (index) */
 #index_small_blocks {
 	border-left: 1px solid #eee;
+}
+
+#index_small_blocks .block:not(:last-child) {
+	border-bottom: 1px solid #428bca;
 }
 
 /* Favorites block */
@@ -93,6 +108,15 @@ footer {
 	background: #f5f5f5;
 }
 
+/* Popovers */
+.popover-content .person_box {
+	background: #fff;
+}
+
+.popover-content.childbox a.name1:before {
+	color: #000;
+}
+
 /* Familylinks in popover */
 #family-links > a {
 	color: #000;
@@ -101,7 +125,6 @@ footer {
 #family-links > a:hover {
 	color: #337ab7;
 }
-
 
 /* jQuery.datatable list styles */
 .table {
@@ -125,6 +148,10 @@ footer {
 #story_table_wrapper .ui-widget-header {
 	background: #f8f8f8;
 	border: 1px solid #b2c7d7;
+}
+
+#medialist-page div .list_table > tbody > tr {
+	border-bottom: 1px solid #eee;
 }
 
 #statistics_chart .ui-tabs-nav {
@@ -235,6 +262,20 @@ footer {
 	border-top: 1px solid #ccc;
 }
 
+#separator {
+	background-color: transparent;
+}
+
+.separator-hidden:after,
+[dir=rtl] .separator-visible:after {
+	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -26px 100px;
+}
+
+.separator-visible:after,
+[dir=rtl] .separator-hidden:after {
+	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -1px 100px;
+}
+
 /* family page */
 #family-page .facts_table {
 	border: 1px solid #ccc;
@@ -252,7 +293,36 @@ footer {
 	background-color: #f9f9f9;
 }
 
-/* icon colors (other then #333)*/
+/* icon colors */
+[class^="icon-"],
+[class*=" icon-"],
+.copyicon,
+.deleteicon,
+.editicon,
+.help.icon-wiki,
+.lb-image_edit,
+.lb-image_link,
+.lb-image_view,
+a[class^="icon-"]:hover,
+a[class^="icon-"]:focus,
+a[class^=" icon-"]:hover,
+a[class^=" icon-"]:focus,
+.copyicon:focus,
+.copyicon:hover,
+.deleteicon:focus,
+.deleteicon:hover,
+.editicon:focus,
+.editicon:hover,
+.help.icon-wiki,
+.lb-image_edit:focus,
+.lb-image_edit:hover,
+.lb-image_link:focus,
+.lb-image_link:hover,
+.lb-image_view:focus,
+.lb-image_view:hover {
+	color: #333;
+}
+
 .icon-button_place:before,
 .icon-help:before,
 .icon-wiki:before {
@@ -335,6 +405,10 @@ footer {
 }
 
 /* census assistant module */
+.census-assistant {
+	background: #f9f9f9;
+}
+
 .census-assistant #navenclose {
 	background: #fff;
 	border: 1px solid #ddd;

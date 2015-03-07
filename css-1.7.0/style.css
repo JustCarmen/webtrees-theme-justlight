@@ -309,7 +309,6 @@ a.name1:hover {
 
 /* solve conflicts with bootstrap label */
 .label {
-	color: #333;
 	font-size: 100%;
 	line-height: 1.42857;
 	padding: 0;
@@ -793,10 +792,6 @@ ul.clist {
 	width: 100%;
 }
 
-#medialist-page div .list_table > tbody > tr {
-	border-bottom: 1px solid #eee;
-}
-
 #medialist-page .media-col,
 #medialist-page .list_table_controls {
 	width: 100%;
@@ -1049,17 +1044,12 @@ ul.clist {
 	margin: 0 5px;
 }
 
-.popover-content .person_box {
-	background: #fff;
-}
-
 .popover-content.childbox a.name1 {
 	display: block;
 	margin-left: 5px;
 }
 
 .popover-content.childbox a.name1:before {
-	color: #000;
 	content: "\2022";
 	margin-right: 5px;
 }
@@ -1409,10 +1399,6 @@ ul.clist {
 #index_small_blocks .table-responsive,
 #index_full_blocks .table-responsive {
 	border: none;
-}
-
-#index_small_blocks .block:not(:last-child) {
-	border-bottom: 1px solid #428bca;
 }
 
 #index_full_blocks .list_table {
@@ -2357,7 +2343,6 @@ table.dataTable thead > tr > th {
 	display: table-cell;
 	width: 2.5em;
 	position: relative;
-	background-color: transparent;
 	overflow: hidden;
 }
 
@@ -2374,16 +2359,6 @@ table.dataTable thead > tr > th {
 [dir=rtl] #separator:after {
 	right: auto;
 	left:  0;
-}
-
-.separator-hidden:after,
-[dir=rtl] .separator-visible:after {
-	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -26px 100px;
-}
-
-.separator-visible:after,
-[dir=rtl] .separator-hidden:after {
-	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -1px 100px;
 }
 
 /* Sidebar content items */
@@ -3058,7 +3033,6 @@ table.dataTable thead > tr > th {
 
 /* ===== Census assistant module ===== */
 .census-assistant {
-	background: #f9f9f9;
 	margin: 0;
 	padding: 0;
 }
@@ -3771,10 +3745,8 @@ header {
     float: right;
     width: 0;
     height: 0;
-    border-color: transparent;
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
     margin-top: 5px;
     margin-right: -10px;
 }
@@ -3897,7 +3869,6 @@ footer {
 .lb-image_edit,
 .lb-image_link,
 .lb-image_view {
-	color: #333;
 	position: relative;
 	top: 1px;
 	display: inline-block;
@@ -3929,7 +3900,6 @@ a[class^=" icon-"]:focus,
 .lb-image_link:hover,
 .lb-image_view:focus,
 .lb-image_view:hover {
-	color: #333;
 	text-decoration: none;
 }
 
