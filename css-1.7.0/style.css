@@ -2163,6 +2163,10 @@ blockquote {
 	padding: 2px 6px;
 }
 
+.dataTables_wrapper {
+	margin-bottom: 10px;
+}
+
 .dataTables_paginate {
 	float: left !important; // conflict with dataTable.bootstrap.css
 	margin: 5px;
@@ -2690,6 +2694,12 @@ table.dataTable thead > tr > th {
 
 [dir=rtl] #search-page-table .value {
 	margin: 0 170px 0 0;
+}
+
+/* =========== search_advanced.php =================== */
+#search-page form > input[type="submit"] {
+	display: block;
+	margin: 10px auto;
 }
 
 /* ============== edituser.php ======================= */
