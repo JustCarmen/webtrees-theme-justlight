@@ -3697,6 +3697,11 @@ header {
 	width: 100%;
 }
 
+/* correct bootstrap default */
+.navbar-collapse.in {
+	overflow-y: visible;
+}
+
 .div_search {
 	float:right;
 	margin-top:7px;
