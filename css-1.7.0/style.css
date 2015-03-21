@@ -3669,6 +3669,7 @@ img[src*="vline"] {
 /* ====== Theme Header ========= */
 /* Bootstrap header navigation */
 header {
+	height: 126px;
 	margin-bottom: 10px;
 }
 
@@ -4243,6 +4244,10 @@ a[class^=" icon-"]:focus,
 @media (max-width: 767px) {
 	#responsive {
 		display: block;
+	}
+	
+	.header {
+		height: 116px;
 	}
 
 	.navbar-header {

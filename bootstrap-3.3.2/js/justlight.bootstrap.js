@@ -14,12 +14,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Bootstrap fixed navbar. Keep the content in relation to the navbar always in position.
-jQuery("header").css('height', jQuery('#nav-container').outerHeight());
-jQuery(window).resize(function() {
-	jQuery("header").css('height', jQuery('#nav-container').outerHeight());
-});
-
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
 	if (jQuery("#responsive").is(":visible")) {
