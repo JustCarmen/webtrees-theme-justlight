@@ -1949,6 +1949,11 @@ blockquote {
 	visibility: hidden;
 }
 
+/* Relatives tab */
+#relatives_content table:not(.facts_table) {
+	margin-top: 15px;
+}
+
 /* Media tab */
 #media_content .fact_FORM,
 #media_content .fact___IMAGE_SIZE__,

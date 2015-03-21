@@ -135,23 +135,14 @@ function fluidDialog() {
 	});
 }
 
-function jl_dialogBox() {
-	jQuery('[onclick^="modalDialog"], [onclick^="return modalDialog"]').each(function() {
-		jQuery(this).attr('onclick', function(index, attr) {
-			return attr.replace('modalDialog', 'jl_modalDialog');
-		});
+jQuery('[onclick*="modalDialog"], [onclick^="helpDialog"]').waitUntilExists(function() {
+	jQuery(this).attr('onclick', function(index, attr) {
+		return attr.replace('modalDialog', 'jl_modalDialog');
 	});
-
-	jQuery('[onclick^="helpDialog"]').each(function() {
-		jQuery(this).attr('onclick', function(index, attr) {
-			return attr.replace('helpDialog', 'jl_helpDialog');
-		});
+	
+	jQuery(this).attr('onclick', function(index, attr) {
+		return attr.replace('helpDialog', 'jl_helpDialog');
 	});
-}
-
-jl_dialogBox();
-jQuery(document).ajaxComplete(function() {
-	jl_dialogBox();
 });
 
 // personboxes
@@ -178,7 +169,6 @@ function modifybox(obj) {
 }
 
 personbox_default();
-
 jQuery(document).ajaxComplete(function() {
 	setTimeout(function() {
 		personbox_default();
@@ -209,11 +199,6 @@ if (WT_SCRIPT_NAME === "index.php") {
 if (WT_SCRIPT_NAME === "individual.php") {
 	// Remove personboxNN class from header layout
 	jQuery("#indi_header H3").removeClass("person_boxNN");
-
-	// relatives tab
-	jQuery("#relatives_content").waitUntilExists(function() {
-		jQuery(this).find(".subheaders").parents("table").css("margin-top", "15px");
-	});
 
 	// When in responsive state hide the indi_left part when sidebar is open.
 	var responsiveSidebar = false;
@@ -353,7 +338,7 @@ if (WT_SCRIPT_NAME === "family.php") {
 }
 
 
-// media list - don't list filenames
+// mediatab on sources and notes list - don't list filenames
 if (jQuery(".media-list").length > 0) {
 	jQuery(".list_item.name2").each(function() {
 		jQuery(this).next("br").remove();
