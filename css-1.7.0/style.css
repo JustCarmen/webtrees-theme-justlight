@@ -160,6 +160,7 @@ textarea {
 }
 
 #content {
+	display: none;
 	margin-bottom: 40px;
 }
 

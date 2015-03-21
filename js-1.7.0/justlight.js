@@ -379,3 +379,8 @@ if (WT_SCRIPT_NAME === "edit_interface.php") {
 		jQuery(this).find(".ltrnav").removeClass().addClass("submenu flyout").find(".name2").removeAttr("style");
 	});
 }
+
+// wait until all content is loaded before showing the page.
+jQuery(window).load(function(){
+	jQuery("#content").show();
+});
