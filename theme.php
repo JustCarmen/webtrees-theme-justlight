@@ -425,17 +425,21 @@ class JustLightTheme extends BaseTheme {
 	}
 
 	private function pageMedialist() {
-		if (!$this->tree->getPreference('EXPAND_NOTES_DEFAULT')) {
-			$this->tree->setPreference('EXPAND_NOTES_DEFAULT', $this->tree->getPreference('EXPAND_NOTES'));
-		}
-
+		
 		if (WT_SCRIPT_NAME === 'medialist.php') {
 			if ($this->tree->getPreference('EXPAND_NOTES')) {
+				$this->tree->setPreference('EXPAND_NOTES_DEFAULT', $this->tree->getPreference('EXPAND_NOTES'));
+				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES_DEFAULT%' ORDER BY log_time DESC LIMIT 1")->execute();
 				$this->tree->setPreference('EXPAND_NOTES', 0);
+				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
 			}
 		} else {
-			$this->tree->setPreference('EXPAND_NOTES', $this->tree->getPreference('EXPAND_NOTES_DEFAULT'));
-			$this->tree->setPreference('EXPAND_NOTES_DEFAULT', 0);
+			if ($this->tree->getPreference('EXPAND_NOTES_DEFAULT')) {
+				$this->tree->setPreference('EXPAND_NOTES', $this->tree->getPreference('EXPAND_NOTES_DEFAULT'));
+				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+				$this->tree->setPreference('EXPAND_NOTES_DEFAULT', null);
+				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+			}
 		}
 	}
 
