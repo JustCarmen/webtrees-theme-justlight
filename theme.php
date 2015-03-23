@@ -183,12 +183,16 @@ class JustLightTheme extends BaseTheme {
 	/** {@inheritdoc} */
 	public function formatTreeTitle() {
 		try {
-			return
-				'<div class="navbar-header">' .
-				'<h1>' .
-				'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
-				'</h1>' .
-				'</div>';
+			if ($this->tree) {
+				return
+					'<div class="navbar-header">' .
+					'<h1>' .
+					'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+					'</h1>' .
+					'</div>';
+			} else {
+				return '';
+			}
 		} catch (Exception $ex) {
 			return parent::formatTreeTitle();
 		}
@@ -406,8 +410,7 @@ class JustLightTheme extends BaseTheme {
 		$modules = Module::getActiveMenus($this->tree);
 		if (array_key_exists($module_name, $modules)) {
 			return $modules[$module_name]->getMenu();
-		}
-		else {
+		} else {
 			return null;
 		}
 	}
@@ -425,20 +428,21 @@ class JustLightTheme extends BaseTheme {
 	}
 
 	private function pageMedialist() {
-		
-		if (WT_SCRIPT_NAME === 'medialist.php') {
-			if ($this->tree->getPreference('EXPAND_NOTES')) {
-				$this->tree->setPreference('EXPAND_NOTES_DEFAULT', $this->tree->getPreference('EXPAND_NOTES'));
-				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES_DEFAULT%' ORDER BY log_time DESC LIMIT 1")->execute();
-				$this->tree->setPreference('EXPAND_NOTES', 0);
-				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
-			}
-		} else {
-			if ($this->tree->getPreference('EXPAND_NOTES_DEFAULT')) {
-				$this->tree->setPreference('EXPAND_NOTES', $this->tree->getPreference('EXPAND_NOTES_DEFAULT'));
-				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
-				$this->tree->setPreference('EXPAND_NOTES_DEFAULT', null);
-				Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+		if ($this->tree) {		
+			if (WT_SCRIPT_NAME === 'medialist.php') {
+				if ($this->tree->getPreference('EXPAND_NOTES')) {
+					$this->tree->setPreference('EXPAND_NOTES_DEFAULT', $this->tree->getPreference('EXPAND_NOTES'));
+					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES_DEFAULT%' ORDER BY log_time DESC LIMIT 1")->execute();
+					$this->tree->setPreference('EXPAND_NOTES', 0);
+					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+				}
+			} else {
+				if ($this->tree->getPreference('EXPAND_NOTES_DEFAULT')) {
+					$this->tree->setPreference('EXPAND_NOTES', $this->tree->getPreference('EXPAND_NOTES_DEFAULT'));
+					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+					$this->tree->setPreference('EXPAND_NOTES_DEFAULT', null);
+					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
+				}
 			}
 		}
 	}
@@ -520,8 +524,14 @@ class JustLightTheme extends BaseTheme {
 
 	// This theme uses variables from php files in the javascript files
 	private function scriptVars() {
+		if ($this->tree) {
+			$tree_title = $this->tree->getName();
+		} else {
+			$tree_title = '';
+		}
+		
 		return '<script>' .
-			'var WT_TREE_TITLE = "' . $this->tree->getName() . '";' .
+			'var WT_TREE_TITLE = "' . $tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
 			'</script>';
 	}
