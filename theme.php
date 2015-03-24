@@ -87,12 +87,12 @@ class JustLightTheme extends BaseTheme {
 
 	private function formatCompactMenu($menu) {
 		if($menu->getSubmenus()) {
-			$html = '<li id="' . $menu->getId() . '" class="dropdown">';
+			$html = '<li class="' . $menu->getClass() . ' dropdown">';
 			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
 			$html .= '<ul class="dropdown-menu" role="menu">';
 			foreach ($menu->getSubmenus() as $submenu) {
 				if($submenu->getSubmenus()) {
-					$html .= '<li id="' . $submenu->getId() . '" class="dropdown-submenu">';
+					$html .= '<li class="' . $submenu->getClass() . ' dropdown-submenu">';
 					$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
 
 					$html .= '<ul class="dropdown-menu sub-menu">';
@@ -113,7 +113,7 @@ class JustLightTheme extends BaseTheme {
 
 	private function formatCompactMenuItem($menu) {
 		return
-			'<li id="' . $menu->getId() . '">' .
+			'<li class="' . $menu->getClass() . '">' .
 			'<a href="' . $menu->getLink() . '"' . $menu->getOnclick() . '>' . $menu->getLabel() . '</a>' .
 			'</li>';
 	}
@@ -345,9 +345,9 @@ class JustLightTheme extends BaseTheme {
 		$menu->addSubmenu($this->menuCalendar());
 
 		foreach ($menu->getSubmenus() as $submenu) {
-			$id = explode("-", $submenu->getId());
-			$new_id = implode("-", array($id[0], 'view', $id[1]));
-			$submenu->setId($new_id);
+			$class = explode("-", $submenu->getClass());
+			$new_class = implode("-", array($class[0], 'view', $class[1]));
+			$submenu->setClass($new_class);
 		}
 
 		return $menu;
@@ -358,7 +358,7 @@ class JustLightTheme extends BaseTheme {
 			$menu = parent::menuLists();
 			if ($this->themeOption('media_menu')) {
 				$submenus = array_filter($menu->getSubmenus(), function (Menu $menu) {
-					return $menu->getId() !== 'menu-list-obje';
+					return $menu->getClass() !== 'menu-list-obje';
 				});
 				$menu->setSubmenus($submenus);
 			}
@@ -393,10 +393,9 @@ class JustLightTheme extends BaseTheme {
 		if (count($folders) > 1) {
 			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), '', 'menu-media');
 
-			$i = 1;
 			foreach ($folders as $key => $folder) {
 				if ($key !== $MEDIA_DIRECTORY) {
-					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2', 'menu-media-' . $i++);
+					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2', 'menu-mediafolder');
 					$menu->addSubmenu($submenu);
 				}
 			}
@@ -508,7 +507,7 @@ class JustLightTheme extends BaseTheme {
 	public function primaryMenuContainer(array $menus) {
 		$html = '';
 		foreach ($menus as $menu) {
-			if ($menu->getId() === 'menu-view') {
+			if ($menu->getClass() === 'menu-view') {
 				$html .= $this->formatCompactMenu($menu);
 			} else {
 				$html .= $menu->bootstrap();
