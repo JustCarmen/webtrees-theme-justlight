@@ -170,8 +170,14 @@ class JustLightTheme extends BaseTheme {
 	/** {@inheritdoc} */
 	public function formatSecondaryMenu() {
 		try {
+			if (I18N::direction() === 'rtl') {
+				$class = 'navbar-left';
+			} else {
+				$class = 'navbar-right';
+			}
+			
 			return
-				'<div class="navbar-right">' .
+				'<div class="' . $class . '">' .
 				$this->secondaryMenuContainer($this->secondaryMenu()) .
 				$this->menuLogin() .
 				'</div>';

@@ -3696,11 +3696,20 @@ header {
 	margin-top:-7px;
 }
 
-.navbar-right .btn, .div_search .btn {
+[dir=rtl] .div_search {
+	float: left;
+	margin-left: 15px;
+	margin-right: 3%;
+}
+
+.navbar-right .btn,
+.navbar-left .btn
+.div_search .btn {
 	border-radius:0;
 }
 
-.navbar-right .btn-group {
+.navbar-right .btn-group,
+.navbar-left .btn-group {
 	margin:0 3px;
 }
 .navbar-text {
