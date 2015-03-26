@@ -300,9 +300,9 @@ footer {
 .deleteicon,
 .editicon,
 .help.icon-wiki,
-.lb-image_edit,
-.lb-image_link,
-.lb-image_view,
+.lb-image_edit a,
+.lb-image_link a,
+.lb-image_view a,
 a[class^="icon-"]:hover,
 a[class^="icon-"]:focus,
 a[class^=" icon-"]:hover,
@@ -314,12 +314,12 @@ a[class^=" icon-"]:focus,
 .editicon:focus,
 .editicon:hover,
 .help.icon-wiki,
-.lb-image_edit:focus,
-.lb-image_edit:hover,
-.lb-image_link:focus,
-.lb-image_link:hover,
-.lb-image_view:focus,
-.lb-image_view:hover {
+.lb-image_edit a:focus,
+.lb-image_edit a:hover,
+.lb-image_link a:focus,
+.lb-image_link a:hover,
+.lb-image_view a:focus,
+.lb-image_view a:hover {
 	color: #333;
 }
 

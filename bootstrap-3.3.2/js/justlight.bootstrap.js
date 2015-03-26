@@ -159,7 +159,7 @@ jQuery(".icon-pedigree").waitUntilExists(function() {
 });
 
 jQuery("#medialist-page .lb-menu").each(function() {
-	jQuery(this).find(".lb-image_edit, .lb-image_view").each(function() {
+	jQuery(this).find(".lb-image_edit a, .lb-image_view a").each(function() {
 		var title = jQuery(this).text();
 		jQuery(this).text("");
 		jQuery(this).attr({
@@ -169,7 +169,7 @@ jQuery("#medialist-page .lb-menu").each(function() {
 		});
 		jQuery(this).tooltip();
 	});
-	jQuery(this).find(".lb-image_link").each(function() {
+	jQuery(this).find(".lb-image_link a").each(function() {
 		var title = jQuery(this).text();
 		var content = jQuery(this).next("ul").html();
 		jQuery(this).text("").next("ul").remove();

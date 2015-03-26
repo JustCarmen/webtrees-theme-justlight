@@ -826,38 +826,11 @@ ul.clist {
 	display: none;
 	list-style-type: none;
 	margin: 0;
+	padding: 0 2px;
 }
 
-.lb-menu ul {
-	display: block;
-}
-
-.lb-menu > li {
-	font-weight: normal;
+[dir=rtl] .lightbox-menu {
 	float: left;
-	margin-right: 2px;
-	top: 0;
-}
-
-.lb-menu li:first-child {
-	padding-left: 0;
-}
-
-.lb-menu > li ul {
-	display: none;
-}
-
-.lb-menu > li:hover ul {
-	display: block;
-	top: 36px;
-}
-
-.lb-menu li li a {
-	padding: 1px 10px 1px 5px;
-}
-
-[dir=rtl] .lb-menu > li {
-	float: right;
 }
 
 #medialist-page .fact_FILE,
@@ -3877,9 +3850,9 @@ footer {
 .deleteicon,
 .editicon,
 .help.icon-wiki,
-.lb-image_edit,
-.lb-image_link,
-.lb-image_view {
+.lb-image_edit a,
+.lb-image_link a,
+.lb-image_view a {
 	position: relative;
 	top: 1px;
 	display: inline-block;
@@ -3905,12 +3878,12 @@ a[class^=" icon-"]:focus,
 .editicon:focus,
 .editicon:hover,
 .help.icon-wiki,
-.lb-image_edit:focus,
-.lb-image_edit:hover,
-.lb-image_link:focus,
-.lb-image_link:hover,
-.lb-image_view:focus,
-.lb-image_view:hover {
+.lb-image_edit a:focus,
+.lb-image_edit a:hover,
+.lb-image_link a:focus,
+.lb-image_link a:hover,
+.lb-image_view a:focus,
+.lb-image_view a:hover {
 	text-decoration: none;
 }
 
@@ -4221,15 +4194,15 @@ a[class^=" icon-"]:focus,
 	cursor: pointer;
 }
 
-.lb-image_edit:before {
+.lb-image_edit a:before {
 	content:"\f040";
 }
 
-.lb-image_link:before {
+.lb-image_link a:before {
 	content:"\f0c1";
 }
 
-.lb-image_view:before {
+.lb-image_view a:before {
 	content:"\f03e";	
 }
 
