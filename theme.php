@@ -223,7 +223,7 @@ class JustLightTheme extends BaseTheme {
 			// Put a version number in the URL, to prevent browsers from caching old versions.
 			$this->theme_dir = 'themes/justlight/';
 			$this->js_url = 'themes/justlight/js-1.7.0/';
-			$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.2/';
+			$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.4/';
 			$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.2/';
 			$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
 			// Always collapse notes on the medialist page
