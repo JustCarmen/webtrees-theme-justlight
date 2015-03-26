@@ -576,7 +576,7 @@ class JustLightTheme extends BaseTheme {
 
 	/** {@inheritdoc} */
 	public function stylesheets() {
-		return array(
+		$stylesheets = array(
 			WT_BOOTSTRAP_CSS_URL,
 			$this->jquery_ui_url . 'jquery-ui.min.css',
 			$this->colorbox_url . 'colorbox.css',
@@ -584,6 +584,12 @@ class JustLightTheme extends BaseTheme {
 			$this->assetUrl() . 'style.css',
 			$this->assetUrl() . 'justlight.css',
 		);
+		
+		if (I18N::direction() === 'rtl') {
+			$stylesheets[] = WT_BOOTSTRAP_RTL_CSS_URL;
+		}
+		
+		return $stylesheets;
 	}
 
 	/** {@inheritdoc} */
