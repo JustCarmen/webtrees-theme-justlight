@@ -79,6 +79,7 @@ jQuery("table").waitUntilExists(function() {
 		table.addClass("table");
 		jQuery(this).parents(".gedcom_stats_block > table").addClass("table-striped");
 	}
+	jQuery(this).show();
 });
 
 jQuery(".markdown").waitUntilExists(function() {
