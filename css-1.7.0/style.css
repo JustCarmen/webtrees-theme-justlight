@@ -2675,7 +2675,6 @@ table.dataTable thead > tr > th {
 	float: left;
 	padding: 5px;
 	width: 50%;
-	white-space: nowrap;
 }
 
 #edituser-table .value {
