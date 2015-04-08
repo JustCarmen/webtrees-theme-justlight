@@ -265,6 +265,40 @@ jQuery("#login-text, #verify-form h4").after("<hr>");
 jQuery("#login-box .form-group .btn").parent().before("<hr>");
 jQuery("#verify-form .form-group:last").before("<hr>");
 
+// Edit user form in bootstrap layout
+jQuery("#edituser-page form").addClass("form-horizontal");
+jQuery("#edituser-table").each(function() {
+	
+	jQuery(".label", this).each(function() {
+		jQuery(this).addClass("form-group").removeClass('label');
+		jQuery(this).append(jQuery(this).next(".value").html());
+		jQuery(this).next(".value").remove();
+		jQuery("label", this).addClass("control-label col-sm-3");
+		jQuery("input, select", this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
+		
+		if(jQuery("span", this).length > 0) {
+			jQuery(this).addClass("form-group-static");
+		}
+	});
+	
+	jQuery(".form-group").each(function() {
+		jQuery(this).children("div").append(jQuery("p, .icon-button_indi", this));		
+	});
+	
+	jQuery("#form_rootid").parent().find("input, .icon-button_indi").wrapAll('<div class="input-group">');
+	jQuery(".icon-button_indi").addClass("input-group-addon");
+	
+	jQuery(".form-group-static").each(function() {
+		var label = jQuery(this).clone().children().remove().end().text();		
+		jQuery(">span", this).addClass("form-control-static");
+		jQuery(this).children().wrapAll('<div class="col-sm-6 static">');
+		var content = jQuery(".static", this)
+		jQuery(this).html('<label class="control-label col-sm-3">' + label + "</div>").append(content);
+	});
+	
+	jQuery("input[name=form_visible_online]").removeAttr("class").wrap('<div class="checkbox"><label>');
+});
+
 // For those who have activated the facebook module
 jQuery("#facebook-login-box").waitUntilExists(function(){	
 	jQuery("#facebook-login-button").addClass("btn btn-default");

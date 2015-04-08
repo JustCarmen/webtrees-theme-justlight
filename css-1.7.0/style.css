@@ -25,10 +25,6 @@ html {
 	overflow-y: scroll;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 #wrap {
     height: auto !important;
     margin: 0 auto -120px;
@@ -2239,12 +2235,6 @@ blockquote {
 	fieldset { display: table-cell; }
 }
 
-#family-table,
-.charts_block,
-[id$="_chart"] {
-    box-sizing: content-box;
-}
-
 /* Solve conflicts with Bootstrap */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	vertical-align: top;
@@ -2666,36 +2656,11 @@ table.dataTable thead > tr > th {
 	text-align: center;
 }
 
-#edituser-table {
-	margin: 20px auto 0;
-	width: 800px;
-}
-
-#edituser-table .label {
-	float: left;
-	padding: 5px;
-	width: 50%;
-}
-
-#edituser-table .value {
-	margin: 0 0 0 50%;
-	padding: 5px;
-}
-
-#edituser-table .label span {
-	margin: 0 10px;
-}
-
-#edituser-table select {
-	margin: 0;
-}
-
-[dir=rtl] #edituser-table .label {
-	float: right;
-}
-
-[dir=rtl] #edituser-table .value {
-	margin: 0 260px 0 0;
+#edituser-page .icon-button_indi {
+	display: table-cell;
+	padding: 6px 12px;
+	top: 0;
+	vertical-align: middle;
 }
 
 /* ===== Edit interface pop-ups ===== */
