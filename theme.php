@@ -232,8 +232,6 @@ class JustLightTheme extends BaseTheme {
 			$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.4/';
 			$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.2/';
 			$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
-			// Always collapse notes on the medialist page
-			$this->pageMedialist();
 		} catch (Exception $ex) {
 			return parent::hookAfterInit();
 		}
@@ -429,26 +427,6 @@ class JustLightTheme extends BaseTheme {
 			return $menu;
 		} catch (Exception $ex) {
 			return parent::menuMyPages();
-		}
-	}
-
-	private function pageMedialist() {
-		if ($this->tree) {		
-			if (WT_SCRIPT_NAME === 'medialist.php') {
-				if ($this->tree->getPreference('EXPAND_NOTES')) {
-					$this->tree->setPreference('EXPAND_NOTES_DEFAULT', $this->tree->getPreference('EXPAND_NOTES'));
-					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES_DEFAULT%' ORDER BY log_time DESC LIMIT 1")->execute();
-					$this->tree->setPreference('EXPAND_NOTES', 0);
-					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
-				}
-			} else {
-				if ($this->tree->getPreference('EXPAND_NOTES_DEFAULT')) {
-					$this->tree->setPreference('EXPAND_NOTES', $this->tree->getPreference('EXPAND_NOTES_DEFAULT'));
-					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
-					$this->tree->setPreference('EXPAND_NOTES_DEFAULT', null);
-					Database::prepare("DELETE FROM `##log` WHERE log_message LIKE '%EXPAND_NOTES%' ORDER BY log_time DESC LIMIT 1")->execute();
-				}
-			}
 		}
 	}
 

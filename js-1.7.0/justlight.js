@@ -242,6 +242,25 @@ if (WT_SCRIPT_NAME === "family.php") {
 	jQuery('.right-table > table tr:eq(1)').addClass("parents-table");
 }
 
+// Collapse notes by default on the medialist page
+if (WT_SCRIPT_NAME === "medialist.php") {
+	jQuery(".fact_NOTE, .fact_SHARED_NOTE").each(function() {
+		if (jQuery(".icon-plus", this).length === 0) {
+			if (jQuery(this).hasClass("fact_SHARED_NOTE")) {
+				jQuery(this).removeClass().addClass("fact_NOTE");
+			}
+			jQuery(".field", this).uniqueId().removeAttr("dir").removeClass("field").addClass("note-details").hide();
+			var uniqueId = jQuery(".note-details", this).attr("id");
+			var title = jQuery(".note-details", this).text().split("\n")[0];
+			if (title.length > 100) {
+				title = title.substr(0, 100) + "…";
+			}
+			jQuery(".label", this)
+				.prepend('<a onclick="expand_layer(\'' + uniqueId + '\'); return false;" href="#"><i class="icon-plus" id="' + uniqueId + '_img"></i></a> ')
+				.after('<span id="' + uniqueId + '-alt"> ' + title + '</span>');
+		}
+	});
+}
 
 // mediatab on sources and notes list - don't list filenames
 if (jQuery(".media-list").length > 0) {
