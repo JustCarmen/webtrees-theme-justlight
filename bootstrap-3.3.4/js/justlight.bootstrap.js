@@ -139,7 +139,7 @@ jQuery(".popup > ul > li").waitUntilExists(function() {
 });
 
 // Bootstrap popovers and/or tooltips
-jQuery(".icon-pedigree").waitUntilExists(function() {
+jQuery(".itr .icon-pedigree").waitUntilExists(function() {
 	var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").clone().wrap('<p>').parent().html();
 	var content = jQuery(this).parents(".itr").find(".popup > ul");
 	content = content.removeClass().remove();
