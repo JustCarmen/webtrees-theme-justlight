@@ -560,20 +560,18 @@ class JustLightTheme extends BaseTheme {
 
 	/** {@inheritdoc} */
 	public function stylesheets() {
-		$stylesheets = array(
-			WT_BOOTSTRAP_CSS_URL,
-			$this->jquery_ui_url . 'jquery-ui.min.css',
-			$this->colorbox_url . 'colorbox.css',
-			$this->bootstrap_url . 'css/bootstrap-theme.min.css',
-			$this->assetUrl() . 'style.css',
-			$this->assetUrl() . 'justlight.css',
-		);
-		
-		if (I18N::direction() === 'rtl') {
-			$stylesheets[] = WT_BOOTSTRAP_RTL_CSS_URL;
+		try {
+			$stylesheets = array(
+				$this->jquery_ui_url . 'jquery-ui.min.css',
+				$this->colorbox_url . 'colorbox.css',
+				$this->bootstrap_url . 'css/bootstrap-theme.min.css',
+				$this->assetUrl() . 'style.css',
+				$this->assetUrl() . 'justlight.css'
+			);
+			return array_merge(parent::stylesheets(), $stylesheets);
+		} catch (Exception $ex) {
+			return parent::stylesheets();
 		}
-		
-		return $stylesheets;
 	}
 
 	/** {@inheritdoc} */
