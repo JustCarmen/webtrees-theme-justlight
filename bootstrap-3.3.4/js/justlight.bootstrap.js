@@ -96,6 +96,11 @@ jQuery("#sb_content_family_nav").each(function() {
 	jQuery(this).find("td").removeClass("person_box person_boxF person_boxNN center");
 });
 
+// table correction. This particular table has no reference point.
+if (WT_SCRIPT_NAME === 'relationship.php') {
+	jQuery("table").not("form table").removeClass("table");
+}
+
 // Manual popover trigger function
 function manualTrigger(obj, click, hover) {
 
