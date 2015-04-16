@@ -3957,6 +3957,7 @@ a[class^=" icon-"]:focus,
 .icon-indis:before {
 	content: "\f007";
 	font-size: 28px;
+	vertical-align: bottom;
 }
 
 .icon-larrow:before {
@@ -4017,6 +4018,7 @@ a[class^=" icon-"]:focus,
 .icon-mypage:before {
 	content: "\f0e4";
 	font-size: 28px;
+	vertical-align: bottom;
 }
 
 .icon-pedigree:before {
@@ -4028,6 +4030,7 @@ a[class^=" icon-"]:focus,
 .gedcom_block_block .icon-pedigree:before,
 .user_welcome_block .icon-pedigree:before {
 	font-size: 28px;
+	vertical-align: bottom;
 }
 
 .icon-plus:before {
@@ -4131,6 +4134,7 @@ a[class^=" icon-"]:focus,
 .icon-user_add:before {
 	content: "\f234";
 	font-size: 28px;
+	vertical-align: bottom;
 }
 
 .icon-warning:before {
