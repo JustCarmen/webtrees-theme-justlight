@@ -3939,6 +3939,12 @@ a[class^=" icon-"]:focus,
 	cursor: pointer;
 }
 
+.icon-edit_indi:before {
+	content: "\e600";
+	font-family: "icomoon";
+	font-size: 24px;
+}
+
 .icon-email:before {
 	content: "\f003";
 }
