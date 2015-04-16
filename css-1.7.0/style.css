@@ -4081,14 +4081,12 @@ a[class^=" icon-"]:focus,
 
 .icon-sex_f_9x9:before,
 .icon-sex_f_15x15:before {
-	content:"\e605";
-	font-family: "icomoon";
+	content:"\f221";
 }
 
 .icon-sex_m_9x9:before,
 .icon-sex_m_15x15:before {
-	content:"\e606";
-	font-family: "icomoon";	
+	content:"\f222";
 }
 
 .icon-sex_u_9x9:before,
@@ -4149,8 +4147,7 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-user_add:before {
-	content: "\e600";
-	font-family: "icomoon";
+	content: "\f234";
 	font-size: 28px;
 	vertical-align: bottom;
 }
