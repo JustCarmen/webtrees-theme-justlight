@@ -3942,7 +3942,6 @@ a[class^=" icon-"]:focus,
 .icon-edit_indi:before {
 	content: "\e600";
 	font-family: "icomoon";
-	font-size: 24px;
 }
 
 .icon-email:before {
