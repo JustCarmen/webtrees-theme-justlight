@@ -1418,15 +1418,14 @@ ul.clist {
 
 .user_welcome_block table,
 .gedcom_block_block table {
-	margin: auto;
+	margin: 15px auto 0;
 }
 
 .user_welcome_block td,
 .gedcom_block_block td {
 	width: 33%;
 	text-align: center;
-	vertical-align: bottom;
-	padding-top: 10px;
+	vertical-align: top;
 }
 
 /* Random picture block */
@@ -3974,7 +3973,6 @@ a[class^=" icon-"]:focus,
 .icon-indis:before {
 	content: "\f007";
 	font-size: 28px;
-	vertical-align: bottom;
 }
 
 .icon-larrow:before {
@@ -4149,7 +4147,6 @@ a[class^=" icon-"]:focus,
 .icon-user_add:before {
 	content: "\f234";
 	font-size: 28px;
-	vertical-align: bottom;
 }
 
 .icon-warning:before {
