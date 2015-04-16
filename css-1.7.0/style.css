@@ -3898,6 +3898,10 @@ a[class^=" icon-"]:focus,
 	font-family: "icomoon";
 }
 
+.icon-button_find:before {
+	content: "\f002";
+}
+
 .icon-button_head:before {	
 	content: "\e602";
 	font-family: "icomoon";
