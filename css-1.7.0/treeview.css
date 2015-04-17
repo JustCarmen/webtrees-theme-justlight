@@ -20,6 +20,10 @@
 	width:100%;
 }
 
+#content .tv_out table {
+	display: table;
+}
+
 #content .charts_block #tree-title {
 	display: none;
 }
