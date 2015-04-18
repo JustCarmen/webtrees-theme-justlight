@@ -44,7 +44,7 @@ jQuery(".dropdown-menu > li > a:not(.dropdown-submenu-toggle)").on("click", func
 	root.find('.sub-menu:visible').hide();
 });
 
-// Bootstrap active tab in navbar 
+// Bootstrap active tab in navbar
 var url_parts = location.href.split('/');
 var last_segment = url_parts[url_parts.length - 1];
 jQuery('.nav-pills a[href="' + last_segment + '"]').parents('li').addClass('active');
@@ -239,7 +239,7 @@ jQuery("#edit_interface-page .save, #edit_interface-page .cancel").addClass("btn
 jQuery("#find-page button").addClass("btn btn-default btn-xs");
 jQuery("input[type=submit], input[type=button]").addClass("btn btn-primary");
 jQuery("#personal_facts_content").waitUntilExists(function() {
-	jQuery("input[type=button]").addClass("btn btn-default btn-xs").css("visibility", "visible");
+	jQuery("input[type=button]").addClass("btn btn-primary btn-sm").css("visibility", "visible");
 });
 
 // Login, Register, Verify form in bootstrap layout
@@ -273,38 +273,77 @@ jQuery("#verify-form .form-group:last").before("<hr>");
 // Edit user form in bootstrap layout
 jQuery("#edituser-page form").addClass("form-horizontal");
 jQuery("#edituser-table").each(function() {
-	
 	jQuery(".label", this).each(function() {
 		jQuery(this).addClass("form-group").removeClass('label');
 		jQuery(this).append(jQuery(this).next(".value").html());
 		jQuery(this).next(".value").remove();
 		jQuery("label", this).addClass("control-label col-sm-3");
 		jQuery("input, select", this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
-		
+
 		if(jQuery("span", this).length > 0) {
 			jQuery(this).addClass("form-group-static");
 		}
 	});
-	
+
 	jQuery(".form-group").each(function() {
-		jQuery(this).children("div").append(jQuery("p, .icon-button_indi", this));		
+		jQuery(this).children("div").append(jQuery("p, .icon-button_indi", this));
 	});
-	
+
 	jQuery("#form_rootid").parent().find("input, .icon-button_indi").wrapAll('<div class="input-group">');
 	jQuery(".icon-button_indi").addClass("input-group-addon");
-	
+
 	jQuery(".form-group-static").each(function() {
-		var label = jQuery(this).clone().children().remove().end().text();		
+		var label = jQuery(this).clone().children().remove().end().text();
 		jQuery(">span", this).addClass("form-control-static");
 		jQuery(this).children().wrapAll('<div class="col-sm-6 static">');
 		var content = jQuery(".static", this)
 		jQuery(this).html('<label class="control-label col-sm-3">' + label + "</div>").append(content);
 	});
-	
+
 	jQuery("input[name=form_visible_online]").removeAttr("class").wrap('<div class="checkbox"><label>');
 });
 
+// Selectboxes on the indi page, source page etc.
+jQuery("form[name=newfactform]").waitUntilExists(function(){
+	jQuery(this).addClass("form-inline");
+	jQuery("select", this).addClass("form-control input-sm");
+});
+
+// Popup forms
+jQuery(".container-popup").waitUntilExists(function() {
+	jQuery("form", this).addClass("form-horizontal");
+	jQuery("input[type=text], #NAME[type=hidden], textarea, select", this).addClass("form-control input-sm");
+	jQuery("input[type=checkbox]", this).wrap("<label>");
+	jQuery("label", this).each(function(){
+		var text = jQuery(this)[0].nextSibling.nodeValue;
+		this.parentNode.removeChild(jQuery(this)[0].nextSibling);
+		jQuery(this).append(text).wrap('<div class="checkbox">');
+	});
+	jQuery("div[id*=_PLAC]", this).contents().unwrap();
+	jQuery(".optionbox, .facts_value", this).not("tr[id^=SOUR] .optionbox").each(function(){
+		if(jQuery(this).children('[class^="icon-"]').not(".icon-help").length) {
+			jQuery('[class^="icon-"]', this).addClass("input-group-addon");
+			jQuery(this)
+				.children()
+				.not("div[id$=_description], a[onclick*=addnewnote_assisted], p")
+				.wrapAll('<div class="input-group">');
+		};
+	});
+	jQuery("tr[id^=SOUR] .optionbox", this).each(function(){
+		jQuery(".icon-button_source, .icon-button_addsource, .icon-button_keyboard", this).addClass("input-group-addon");
+		jQuery(this).children(".SOUR, .TITL, .icon-button_source, .icon-button_addsource, .icon-button_keyboard").wrapAll('<div class="input-group">');
+		jQuery(".checkbox", this).wrapAll('<div class="sour-checkboxes">');
+	});
+	jQuery(".optionbox, .facts_value", this).find("br").not(".text-muted br").remove();
+	if (jQuery("form .btn", "#find-page").parent("p").length === 0) {
+		jQuery("form .btn", "#find-page").wrap("<p>");
+	}
+	jQuery(".find-media-media", this).each(function(){
+		jQuery(this).children().not(".find-media-thumb").wrapAll('<div class="find-media-desc">');
+	});
+});
+
 // For those who have activated the facebook module
-jQuery("#facebook-login-box").waitUntilExists(function(){	
+jQuery("#facebook-login-box").waitUntilExists(function(){
 	jQuery("#facebook-login-button").addClass("btn btn-default");
 });

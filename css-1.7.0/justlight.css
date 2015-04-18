@@ -393,10 +393,7 @@ a[class^=" icon-"]:focus,
 }
 
 /* popup forms. */
-#edit_interface-page .facts_table,
-#addmedia-page .facts_table,
-.medialink .table,
-#media-links .table {
+.container-popup table {
 	background: #f9f9f9;
 }
 

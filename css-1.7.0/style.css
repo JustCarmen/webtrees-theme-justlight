@@ -147,14 +147,6 @@ img.block {
 	vertical-align: middle;
 }
 
-input,
-textarea {
-	padding-left: 3px;
-	padding-right: 3px;
-	font-family: inherit;
-	max-width: 100%;
-}
-
 #content {
 	margin-bottom: 40px;
 }
@@ -2275,13 +2267,16 @@ td .table {
 	text-align: left !important;
 }
 
-input[type="radio"], input[type="checkbox"] {
-	margin: 0 3px;
-	vertical-align: middle;
-}
-
 table.dataTable thead > tr > th {
 	padding-left: 8px;
+}
+
+.form-horizontal .checkbox {
+	padding: 0;
+}
+
+.form-inline .btn {
+	margin: 0 5px;
 }
 
 /* ======= Sidebar setup ===== */
@@ -2510,89 +2505,47 @@ table.dataTable thead > tr > th {
 }
 
 /* ============== find.php ======================= */
-#find-page h3,
-#find-page h4 {
-	margin: 10px;
-	text-align: center;
-}
-
 #find-header {
-	margin: 10px auto;
-	padding: 5px 20px;
-	width: 50%;
+	margin-top: 10px;
 }
 
-#find-header p {
-	margin: 5px;
-	text-align: center;
+#find-header p:not(.text-muted) {
+	margin: 20px 0;
+	text-align: right;
 }
 
-#find-header span {
-	font-weight: bold;
-}
-
-#find-output,
-#find-output-special {
-	margin: 20px 5px;
-	padding: 10px;
-}
-
+#find-header span,
 #find-output p {
 	font-weight: bold;
-	margin: 0;
-	padding-top: 10px;
-	text-align: center;
 }
 
-#find-media {
-	padding: 5px;
-	text-align: center;
+.find-media-media {
+	background: #f9f9f9;
+	border: 1px solid #b2c7d7;
+	display: table;
+	margin: 10px 0;
+	padding: 10px;
+	width: 100%;
+	
 }
 
-#find-media span {
-	font-weight: bold;
-	margin: auto;
-	padding: 5px;
+.find-media-thumb {
+	display: table-cell;
+	width: 1%;
 }
 
-#find-output .find-media-dirs {
-	padding: 3px;
+.find-media-desc {
+	display: table-cell;
+	padding-left: 10px;
+	vertical-align: top;
 }
 
-#find-output .find-media-media {
-	overflow: hidden;
-	margin: 1px;
-	padding: 2px;
+[dir=rtl] .find-media-desc {
+	padding-right: 10px;
 }
 
-#find-output .find-media-thumb {
-	clear: left;
-	float: left;
-}
-
-#find-output .find-media-details {
-	float: left;
-}
-
-#find-output .find-media-details p {
-	padding: 0 5px 2px 5px;
-	font-weight: normal;
-	text-align: left;
-}
-
-#find-output .find-media-details div span {
-	font-weight: normal;
-	padding: 0 5px 2px 5px;
-}
-
-#find-output p.find-media-title {
-	font-weight: bold;
-}
-
-#find-output .find-media-details ul {
-	padding: 0;
-	margin: 0 20px 10px 20px;
-	list-style-type: none;
+.find-media-media ul {
+	display: inline-block;
 }
 
 #find-facts-header .list_label {
@@ -2662,171 +2615,14 @@ table.dataTable thead > tr > th {
 	vertical-align: middle;
 }
 
-/* ===== Edit interface pop-ups ===== */
-#edit_interface-page h4 {
-	margin: 5px;
+/* ===== Popup forms - general styles ===== */
+.container-popup form {
+	padding-bottom: 20px;
 }
 
-#edit_interface-page .table {
-	margin: 10px 0;
+.container-popup table {
+	margin: 5px 0;
 	width: 100%;
-}
-
-#edit_interface-page .descriptionbox.wrap {
-	white-space: nowrap;
-}
-
-#edit_interface-page #LATI,
-#edit_interface-page #LONG,
-#edit_interface-page #SPFX,
-#edit_interface-page #NSFX,
-#edit_interface-page #NPFX {
-	line-height: 18px;
-	margin: 0 5px;
-	width: 88px;
-}
-
-#edit_interface-page #GIVN,
-#edit_interface-page #SURN,
-#edit_interface-page #_MARNM {
-	line-height: 18px;
-	margin: 0 5px;
-	width: 180px;
-}
-
-#edit_interface-page input[type="text"],
-#edit_interface-page #NAME_display {
-	line-height: 18px;
-	margin: 0 5px;
-	vertical-align: top;
-	width: 240px;
-}
-
-#edit_interface-page select {
-	line-height: 18px;
-	margin: 0 5px;
-	vertical-align: top;
-}
-
-#edit_interface-page input[type="text"][id*="PAGE"],
-#edit_interface-page input[type="text"][id*="_UID"] {
-	width: 350px;
-}
-
-#edit_interface-page input[type="text"][id*="SOUR"],
-#edit_interface-page input[type="text"][id*="REPO"],
-#edit_interface-page input[type="text"][id*="OBJE"],
-#edit_interface-page input[type="text"][id*="FAMC"],
-#edit_interface-page input[type="text"][id*="ASSO"],
-#edit_interface-page input[type="text"][id^="AGE"],
-#edit_interface-page input[type="text"][id*="SHARED_NOTE"] {
-	width: 250px;
-}
-
-#edit_interface-page input[type="text"][id$="DATE"] {
-	width: 160px;
-}
-
-#edit_interface-page input[type="text"][id^="TIME"] {
-	width: 100px;
-}
-
-#edit_interface-page input[type="text"][id*="OBJE_FILE"] {
-	width: 200px;
-}
-
-#edit_interface-page input[type="text"][id*="SOUR_TITL"] {
-	width: 250px;
-}
-
-#edit_interface-page input[id*="TEXT"] {
-	height: 140px;
-	width: 440px;
-}
-
-#edit_interface-page textarea {
-	margin: 0 5px;
-	width: 95%;
-}
-
-#edit_interface-page textarea[id*="NOTE"] {
-	height: 240px;
-}
-
-#edit_interface-page textarea[id*="TEXT"],
-#edit_interface-page textarea[id*="PUBL"] {
-	height: 140px;
-}
-
-#edit_interface-page textarea[id^="newgedrec"] {
-	line-height: 18px;
-}
-
-#edit_interface-page textarea#gedcom {
-	height: 364px;
-	margin:0;
-	width: 100%;
-}
-
-#edit_interface-page textarea[id*="ADDR"],
-#edit_interface-page input[id*="ADDR"] {
-	height: 80px;
-}
-
-#edit_interface-page #changefam {
-	padding: 5px;
-}
-
-#edit_interface-page #changefam table {
-	margin: 10px auto;
-	min-width: 400px;
-	max-width: 650px;
-}
-
-#edit_interface-page #changefam span {
-	margin: 0;
-}
-
-#edit_interface-page #changefam td {
-	padding: 5px;
-	white-space: normal;
-}
-
-#edit_interface-page #changefam td.child {
-	text-align: center;
-}
-
-#edit_interface-page #raw-gedcom-list textarea {
-	margin: 0;
-	min-height:100px;
-	overflow: hidden;
-}
-
-#edit_interface-page #raw-gedcom-list {
-	padding: 0;
-}
-
-#edit_interface-page a[onclick^="return addnewnote_assisted"] {
-	margin: 0 5px;
-}
-
-#edit_interface-page div[id^="caldiv"] .table {
-	margin: 0;
-}
-
-#edit_interface-page div[id^="caldiv"] .table td {
-	padding: 3px;
-}
-
-#editplaces .facts_table {
-	margin-bottom: 80px;
-}
-
-#edit_interface-page,
-#addmedia-page,
-.medialink {
-	margin-top: 15px;
-	margin-bottom: 50px;
 }
 
 #save-cancel {
@@ -2835,6 +2631,7 @@ table.dataTable thead > tr > th {
     left: 0;
     position: fixed;
     width: 100%;
+	z-index: 2;
 }
 
 #save-cancel input {
@@ -2859,48 +2656,24 @@ table.dataTable thead > tr > th {
 	float: left;
 }
 
-/* ===== Addmedia pop-ups ===== */
-#addmedia-page input[type="text"] {
-	line-height: 18px;
-	margin: 0 5px;
-	width: 350px;
+/* ===== Edit interface pop-ups ===== */
+#edit_interface-page #NAME_display {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: table-cell;
+	font-size: 12px;
+	line-height: 1.5em;
+	height: 30px;
+	padding: 5px 10px;
 }
 
-#addmedia-page .optionbox select {
-	margin: 0 5px;
+#edit_interface-page .sour-checkboxes {
+	margin-top: -10px;
+	margin-left: 2px;
 }
 
-#addmedia-page .optionbox p.sub {
-	margin: 0 5px;
-}
-
-#addmedia-page input[type="text"][id*="PAGE"],
-#addmedia-page input[type="text"][id*="_UID"] {
-	width: 350px;
-}
-
-#addmedia-page input[type="text"][id*="SOUR"],
-#addmedia-page input[type="text"][id*="REPO"],
-#addmedia-page input[type="text"][id*="OBJE"],
-#addmedia-page input[type="text"][id*="FAMC"],
-#addmedia-page input[type="text"][id*="ASSO"],
-#addmedia-page input[type="text"][id^="AGE"],
-#addmedia-page input[type="text"][id*="SHARED_NOTE"] {
-	width: 70px;
-}
-
-#addmedia-page input[id*="TEXT"] {
-	height: 140px;
-	width: 440px;
-}
-
-#addmedia-page textarea {
-	margin: 0 5px;
-	width: 440px;
-}
-
-#addmedia-page textarea[id*="NOTE"] {
-	height: 240px;
+[dir=rtl] #edit_interface-page .sour-checkboxes {
+	margin-right: 2px;
 }
 
 /* ===== Medialink pop-ups ===== */
@@ -3006,8 +2779,11 @@ table.dataTable thead > tr > th {
 	margin-left: 20px;
 }
 
-.census-assistant .cens_sour_scs,
 .census-assistant .cens_sour_2 {
+	margin-top: 0.6em;
+}
+
+.census-assistant .cens_sour_year {
 	width: auto;
 }
 
@@ -3839,6 +3615,14 @@ a[class^=" icon-"]:focus,
 .lb-image_view a:focus,
 .lb-image_view a:hover {
 	text-decoration: none;
+}
+
+[class^="icon-"].input-group-addon, 
+[class*=" icon-"].input-group-addon {
+	display: table-cell;
+	padding: 3px 8px;
+	top: 0;
+	vertical-align: middle;	
 }
 
 .copyicon:before {
