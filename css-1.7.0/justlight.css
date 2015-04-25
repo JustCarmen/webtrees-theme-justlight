@@ -19,6 +19,10 @@
 	color: #333;
 }
 
+blockquote {
+	background: #fff;
+}
+
 /* bootstrap navbar */
 .navbar-fixed-top {
 	border-top: 5px solid #377BB5;
