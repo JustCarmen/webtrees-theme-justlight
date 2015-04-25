@@ -214,7 +214,8 @@ footer {
 .ui-widget-content .blockquote a,
 .ui-widget-content .story_body a,
 .ui-widget-content .fact_NOTE a,
-.ui-widget-content .fact_SHARED_NOTE a {
+.ui-widget-content .fact_SHARED_NOTE a,
+.ui-widget-content .markdown a {
 	color: #428bca;
 }
 .ui-tabs-panel .facts_table {
