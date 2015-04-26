@@ -176,6 +176,43 @@ jQuery(document).ajaxComplete(function () {
 	}, 10);
 });
 
+/**
+ * This theme uses a fixed header. 
+ * This code prevents a target from disappearing behind the header if activated by an anchor.
+ * Check any href for an anchor. If exists, and in document, scroll to it.
+ * If href argument omitted, assumes context (this) is HTML Element,
+ * which will be the case when invoked by jQuery after an event
+ * 
+ * @param href string
+ */
+
+function scroll_if_anchor(href) {
+	href = typeof (href) === "string" ? href : jQuery(this).attr("href");
+
+	// If href missing, ignore
+	if (!href) return;
+	
+	// get the height of the header including borders, padding and margin.
+	var fromTop = jQuery("header").outerHeight(true) + 20;
+	var $target = jQuery(href);
+
+	if ($target.length) {
+		jQuery('html, body').animate({
+			scrollTop: $target.offset().top - fromTop
+		});
+		if (history && "pushState" in history) {
+			history.pushState({}, document.title, window.location.pathname + window.location.search + href);
+			return false;
+		}
+	}
+}
+
+// When our page loads, check to see if it contains an anchor
+scroll_if_anchor(window.location.hash);
+
+// Intercept all anchor clicks
+jQuery("body").on("click", "a[href^='#']", scroll_if_anchor);
+
 /* page specific functions */
 
 // Move link to change blocks to the footer area.
