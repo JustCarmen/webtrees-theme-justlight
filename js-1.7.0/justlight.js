@@ -191,7 +191,7 @@ function scroll_if_anchor(href) {
 
 	// If href missing, ignore
 	if (!href) return;
-	
+
 	// get the height of the header including borders, padding and margin.
 	var fromTop = jQuery("header").outerHeight(true) + 20;
 	var $target = jQuery(href);
