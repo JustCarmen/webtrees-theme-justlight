@@ -1,6 +1,4 @@
-/* global WT_SCRIPT_NAME */
-
-/**
+/*
  * webtrees: online genealogy
  * Copyright (C) 2015 webtrees development team
  * Copyright (C) 2015 JustCarmen
@@ -15,6 +13,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
+/* global WT_SCRIPT_NAME */
 
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {

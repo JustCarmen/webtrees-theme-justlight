@@ -1,6 +1,4 @@
-/* global WT_SCRIPT_NAME */
-
-/**
+/*
  * webtrees: online genealogy
  * Copyright (C) 2015 webtrees development team
  * Copyright (C) 2015 JustCarmen
@@ -19,6 +17,8 @@
  */
 
 /* General functions (fired on every page */
+
+/* global WT_SCRIPT_NAME */
 
 // responsive page
 var $responsive = jQuery("#responsive").is(":visible");
