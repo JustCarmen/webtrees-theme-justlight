@@ -1,3 +1,5 @@
+/* global WT_SCRIPT_NAME */
+
 /**
  * webtrees: online genealogy
  * Copyright (C) 2015 webtrees development team
