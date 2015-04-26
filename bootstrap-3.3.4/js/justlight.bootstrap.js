@@ -73,7 +73,7 @@ jQuery("table").waitUntilExists(function () {
 	} else if (jQuery(this).is("#mycart")) {
 		jQuery(this).addClass("table table-striped");
 	} else if (jQuery(this).parents().hasClass("user_messages_block")) {
-		jQuery(this).addClass("table table-striped")
+		jQuery(this).addClass("table table-striped");
 	} else {
 		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
 		table.addClass("table");
@@ -110,7 +110,7 @@ function manualTrigger(obj, click, hover) {
 			event.stopPropagation();
 			jQuery('.popover').not(obj).hide();
 			obj.popover("show");
-			jQuery('.popover-content').addClass(obj.data("class"))
+			jQuery('.popover-content').addClass(obj.data("class"));
 		});
 	}
 
@@ -118,7 +118,7 @@ function manualTrigger(obj, click, hover) {
 		obj.on("mouseenter", function () {
 			jQuery('.popover').not(obj).hide();
 			obj.popover("show");
-			jQuery('.popover-content').addClass(obj.data("class"))
+			jQuery('.popover-content').addClass(obj.data("class"));
 			obj.siblings(".popover").on("mouseleave", function () {
 				obj.popover('hide');
 			});
@@ -296,7 +296,7 @@ jQuery("#edituser-table").each(function () {
 		var label = jQuery(this).clone().children().remove().end().text();
 		jQuery(">span", this).addClass("form-control-static");
 		jQuery(this).children().wrapAll('<div class="col-sm-6 static">');
-		var content = jQuery(".static", this)
+		var content = jQuery(".static", this);
 		jQuery(this).html('<label class="control-label col-sm-3">' + label + "</div>").append(content);
 	});
 
