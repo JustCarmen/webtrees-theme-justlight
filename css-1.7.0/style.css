@@ -3391,7 +3391,7 @@ img[src*="vline"] {
 /* Bootstrap header navigation */
 header {
 	height: 126px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .navbar-header {
