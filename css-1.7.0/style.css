@@ -897,7 +897,7 @@ ul.clist {
 #verify-form h4 {
 	text-align: center;
 }
-	
+
 #login-register-page h2 {
 	text-align: left;
 }
@@ -2526,7 +2526,7 @@ table.dataTable thead > tr > th {
 	margin: 10px 0;
 	padding: 10px;
 	width: 100%;
-	
+
 }
 
 .find-media-thumb {
@@ -3969,7 +3969,7 @@ a[class^=" icon-"]:focus,
 	#responsive {
 		display: block;
 	}
-	
+
 	.header {
 		height: 116px;
 	}
@@ -3993,7 +3993,7 @@ a[class^=" icon-"]:focus,
 	#sidebar {
 		width: 100%;
 	}
-	
+
 	#login-page,
 	#login-register-page {
 		width: 100%;
