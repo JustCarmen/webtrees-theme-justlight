@@ -20,14 +20,13 @@
 
 // responsive page
 var $responsive = jQuery("#responsive").is(":visible");
-jQuery(window).resize(function() {
+jQuery(window).resize(function () {
 	$responsive = jQuery("#responsive").is(":visible");
 });
 
 // Modal dialog boxes
 function jl_modalDialog(url, title) {
-	var $dialog = jQuery('<div id="config-dialog" style="max-height:550px; overflow-y:auto"><div title="' + title + '"><div></div>')
-	.load(url).dialog({
+	var $dialog = jQuery('<div id="config-dialog" style="max-height:550px; overflow-y:auto"><div title="' + title + '"><div></div>').load(url).dialog({
 		title: title,
 		width: 'auto',
 		maxWidth: 700,
@@ -37,22 +36,22 @@ function jl_modalDialog(url, title) {
 		modal: true,
 		resizable: false,
 		autoOpen: false,
-		open: function() {
-			jQuery('.ui-widget-overlay').on('click', function() {
+		open: function () {
+			jQuery('.ui-widget-overlay').on('click', function () {
 				$dialog.dialog('close');
 			});
 		}
 	});
 
 	// open the dialog box after some time. This is neccessary for the dialogbox to load in center position without page flickering.
-	setTimeout(function() {
+	setTimeout(function () {
 		$dialog.dialog('open');
 	}, 500);
 	return false;
 }
 
 function jl_helpDialog(topic, module) {
-	jQuery.getJSON('help_text.php?help=' + topic + '&mod=' + module, function(json) {
+	jQuery.getJSON('help_text.php?help=' + topic + '&mod=' + module, function (json) {
 		jl_modalHelp(json.content, json.title);
 	});
 }
@@ -66,8 +65,8 @@ function jl_modalHelp(content, title) {
 		modal: true,
 		fluid: true,
 		resizable: false,
-		open: function() {
-			jQuery('.ui-widget-overlay').on('click', function() {
+		open: function () {
+			jQuery('.ui-widget-overlay').on('click', function () {
 				$dialog.dialog('close');
 			});
 		}
@@ -77,16 +76,16 @@ function jl_modalHelp(content, title) {
 	return false;
 }
 
-jQuery(document).on("dialogopen", ".ui-dialog", function() {
+jQuery(document).on("dialogopen", ".ui-dialog", function () {
 	fluidDialog();
 });
 
 // remove window resize namespace
-jQuery(document).on("dialogclose", ".ui-dialog", function() {
+jQuery(document).on("dialogclose", ".ui-dialog", function () {
 	jQuery(window).off("resize.responsive");
 });
 
-jQuery(window).resize(function() {
+jQuery(window).resize(function () {
 	jQuery(".ui-dialog-content").dialog("option", "position", {
 		my: "center",
 		at: "center",
@@ -96,7 +95,7 @@ jQuery(window).resize(function() {
 
 function fluidDialog() {
 	var $visible = jQuery(".ui-dialog:visible");
-	$visible.each(function() {
+	$visible.each(function () {
 		var $this = jQuery(this);
 		var dialog = $this.find(".ui-dialog-content");
 		var maxWidth = dialog.dialog("option", "maxWidth");
@@ -116,7 +115,7 @@ function fluidDialog() {
 
 		if (fluid) {
 			// namespace window resize
-			jQuery(window).on("resize.responsive", function() {
+			jQuery(window).on("resize.responsive", function () {
 				var wWidth = jQuery(window).width();
 				// check window width against dialog width
 				if (wWidth < maxWidth + 50) {
@@ -135,12 +134,12 @@ function fluidDialog() {
 	});
 }
 
-jQuery('[onclick*="modalDialog"], [onclick^="helpDialog"]').waitUntilExists(function() {
-	jQuery(this).attr('onclick', function(index, attr) {
+jQuery('[onclick*="modalDialog"], [onclick^="helpDialog"]').waitUntilExists(function () {
+	jQuery(this).attr('onclick', function (index, attr) {
 		return attr.replace('modalDialog', 'jl_modalDialog');
 	});
-	
-	jQuery(this).attr('onclick', function(index, attr) {
+
+	jQuery(this).attr('onclick', function (index, attr) {
 		return attr.replace('helpDialog', 'jl_helpDialog');
 	});
 });
@@ -152,15 +151,15 @@ function personbox_default() {
 }
 
 function modifybox(obj) {
-	obj.find(".field").contents().filter(function() {
+	obj.find(".field").contents().filter(function () {
 		return (this.nodeType === 3);
 	}).remove();
-	obj.find(".field span").filter(function() {
+	obj.find(".field span").filter(function () {
 		return jQuery(this).text().trim().length === 0;
 	}).remove();
-	obj.find("div[class^=fact_]").each(function() {
+	obj.find("div[class^=fact_]").each(function () {
 		var div = jQuery(this);
-		div.find(".field").each(function() {
+		div.find(".field").each(function () {
 			if (jQuery.trim(jQuery(this).text()) === '') {
 				div.remove();
 			}
@@ -169,8 +168,8 @@ function modifybox(obj) {
 }
 
 personbox_default();
-jQuery(document).ajaxComplete(function() {
-	setTimeout(function() {
+jQuery(document).ajaxComplete(function () {
+	setTimeout(function () {
 		personbox_default();
 	}, 10);
 });
@@ -184,11 +183,11 @@ if (WT_SCRIPT_NAME === "index.php") {
 	// journal-box correction - remove br's from content. Adjust layout to the news-box layout.
 	jQuery(".user_blog_block > br, .journal_box > br").remove();
 	jQuery(".journal_box > a[onclick*=editnews]").before('<hr>');
-	
+
 	// statistics block correction - replace br tag to show all data in one line
-	jQuery(".gedcom_stats_block").waitUntilExists(function(){
+	jQuery(".gedcom_stats_block").waitUntilExists(function () {
 		jQuery(".stat-table1 .stats_value br", this).replaceWith(" - ");
-		jQuery(".stat-table2 .list_item", this).each(function(){
+		jQuery(".stat-table2 .list_item", this).each(function () {
 			jQuery("br:first", this).replaceWith(": ");
 			jQuery("br", this).replaceWith(" • ");
 		});
@@ -209,7 +208,7 @@ if (WT_SCRIPT_NAME === "individual.php") {
 		responsiveSidebar = true;
 	}
 
-	jQuery(window).resize(function() {
+	jQuery(window).resize(function () {
 		jQuery("#indi_left").show();
 		if ($responsive) {
 			responsiveSidebar = true;
@@ -225,7 +224,7 @@ if (WT_SCRIPT_NAME === "individual.php") {
 	});
 
 	// extend webtrees click function
-	jQuery("#main").on("click", "#separator", function() {
+	jQuery("#main").on("click", "#separator", function () {
 		if (responsiveSidebar) {
 			jQuery("#indi_left").toggle();
 		}
@@ -244,7 +243,7 @@ if (WT_SCRIPT_NAME === "family.php") {
 
 // Collapse notes by default on the medialist page
 if (WT_SCRIPT_NAME === "medialist.php") {
-	jQuery(".fact_NOTE, .fact_SHARED_NOTE").each(function() {
+	jQuery(".fact_NOTE, .fact_SHARED_NOTE").each(function () {
 		if (jQuery(".icon-plus", this).length === 0) {
 			if (jQuery(this).hasClass("fact_SHARED_NOTE")) {
 				jQuery(this).removeClass().addClass("fact_NOTE");
@@ -255,16 +254,14 @@ if (WT_SCRIPT_NAME === "medialist.php") {
 			if (title.length > 100) {
 				title = title.substr(0, 100) + "…";
 			}
-			jQuery(".label", this)
-				.prepend('<a onclick="expand_layer(\'' + uniqueId + '\'); return false;" href="#"><i class="icon-plus" id="' + uniqueId + '_img"></i></a> ')
-				.after('<span id="' + uniqueId + '-alt"> ' + title + '</span>');
+			jQuery(".label", this).prepend('<a onclick="expand_layer(\'' + uniqueId + '\'); return false;" href="#"><i class="icon-plus" id="' + uniqueId + '_img"></i></a> ').after('<span id="' + uniqueId + '-alt"> ' + title + '</span>');
 		}
 	});
 }
 
 // mediatab on sources and notes list - don't list filenames
 if (jQuery(".media-list").length > 0) {
-	jQuery(".list_item.name2").each(function() {
+	jQuery(".list_item.name2").each(function () {
 		jQuery(this).next("br").remove();
 		jQuery(this).next("a").remove();
 	});
@@ -273,18 +270,18 @@ if (jQuery(".media-list").length > 0) {
 if (WT_SCRIPT_NAME === "edit_interface.php") {
 	// census assistant module
 	// replace delete button with our own
-	jQuery(".census-assistant button").waitUntilExists(function() {
+	jQuery(".census-assistant button").waitUntilExists(function () {
 		jQuery(this).parent("td").html("<i class=\"deleteicon\">");
 	});
 
-	jQuery(".deleteicon").waitUntilExists(function() {
-		jQuery(this).on("click", function() {
+	jQuery(".deleteicon").waitUntilExists(function () {
+		jQuery(this).on("click", function () {
 			jQuery(this).parents("tr").remove();
 		});
 	});
 
 	// use same style for submenu flyout as in the individual sidebar
-	jQuery(".census-assistant").waitUntilExists(function() {
+	jQuery(".census-assistant").waitUntilExists(function () {
 		jQuery(this).find(".ltrnav").removeClass().addClass("submenu flyout").find(".name2").removeAttr("style");
 	});
 }
