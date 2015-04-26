@@ -86,12 +86,12 @@ class JustLightTheme extends BaseTheme {
 	}
 
 	private function formatCompactMenu($menu) {
-		if($menu->getSubmenus()) {
+		if ($menu->getSubmenus()) {
 			$html = '<li class="' . $menu->getClass() . ' dropdown">';
 			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
 			$html .= '<ul class="dropdown-menu" role="menu">';
 			foreach ($menu->getSubmenus() as $submenu) {
-				if($submenu->getSubmenus()) {
+				if ($submenu->getSubmenus()) {
 					$html .= '<li class="' . $submenu->getClass() . ' dropdown-submenu">';
 					$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
 
@@ -147,8 +147,7 @@ class JustLightTheme extends BaseTheme {
 		try {
 			if ($this->pendingChangesExist()) {
 				return $this->htmlAlert($this->pendingChangesLink(), 'warning', true);
-			}
-			else {
+			} else {
 				return '';
 			}
 		} catch (Exception $ex) {
@@ -175,7 +174,7 @@ class JustLightTheme extends BaseTheme {
 			} else {
 				$class = 'navbar-right';
 			}
-			
+
 			return
 				'<div class="' . $class . '">' .
 				$this->secondaryMenuContainer($this->secondaryMenu()) .
@@ -512,7 +511,7 @@ class JustLightTheme extends BaseTheme {
 		} else {
 			$tree_title = '';
 		}
-		
+
 		return '<script>' .
 			'var WT_TREE_TITLE = "' . $tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
