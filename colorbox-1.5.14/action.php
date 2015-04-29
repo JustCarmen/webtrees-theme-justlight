@@ -17,8 +17,6 @@ namespace Fisharebest\Webtrees;
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-use Zend_Session;
-
 define('WT_SCRIPT_NAME', 'action.php');
 chdir('../../../'); // change the directory to the root of webtrees to load the required files from session.php.
 require './includes/session.php';
@@ -26,7 +24,6 @@ require './includes/session.php';
 header('Content-type: text/html; charset=UTF-8');
 
 if (!Filter::checkCsrf()) {
-	Zend_Session::writeClose();
 	header('HTTP/1.0 406 Not Acceptable');
 	exit;
 }
