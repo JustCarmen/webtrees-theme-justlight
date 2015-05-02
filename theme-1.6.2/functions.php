@@ -95,17 +95,19 @@ function getJLNavMenu() {
 
 function getJLMediaList() {
 	global $WT_TREE;
-
-	if (!$WT_TREE->getPreference('EXPAND_NOTES_DEFAULT')) {
-		$WT_TREE->setPreference('EXPAND_NOTES_DEFAULT', $WT_TREE->getPreference('EXPAND_NOTES'));
-	}
-
-	if (WT_SCRIPT_NAME === 'medialist.php') {
-		if ($WT_TREE->getPreference('EXPAND_NOTES')) {
-			$WT_TREE->setPreference('EXPAND_NOTES', 0);
+	
+	if ($WT_TREE) {
+		if (!$WT_TREE->getPreference('EXPAND_NOTES_DEFAULT')) {
+			$WT_TREE->setPreference('EXPAND_NOTES_DEFAULT', $WT_TREE->getPreference('EXPAND_NOTES'));
 		}
-	} else {
-		$WT_TREE->setPreference('EXPAND_NOTES', $WT_TREE->getPreference('EXPAND_NOTES_DEFAULT'));
-		$WT_TREE->setPreference('EXPAND_NOTES_DEFAULT', 0);
+
+		if (WT_SCRIPT_NAME === 'medialist.php') {
+			if ($WT_TREE->getPreference('EXPAND_NOTES')) {
+				$WT_TREE->setPreference('EXPAND_NOTES', 0);
+			}
+		} else {
+			$WT_TREE->setPreference('EXPAND_NOTES', $WT_TREE->getPreference('EXPAND_NOTES_DEFAULT'));
+			$WT_TREE->setPreference('EXPAND_NOTES_DEFAULT', 0);
+		}
 	}
 }
