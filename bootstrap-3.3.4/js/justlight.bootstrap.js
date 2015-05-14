@@ -255,22 +255,39 @@ jQuery("#login-form, #register-form, #verify-form").each(function () {
 		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
 	});
 	jQuery("input, textarea", "#login-form").not(":hidden, :submit").each(function () {
-		jQuery(this).parent("label").addClass("control-label col-sm-3 col-sm-offset-1").after(jQuery(this));
+		jQuery(this).parent("label").addClass("control-label col-sm-4").after(jQuery(this));
 	});
 	jQuery("input, textarea", "#login-form, #verify-form").not(":hidden, :submit").each(function () {
-		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-3">');
+		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-4">');
 	});
 	jQuery("#verify-form label").each(function () {
-		jQuery(this).addClass("control-label col-sm-3 col-sm-offset-1");
+		jQuery(this).addClass("control-label col-sm-4");
 	});
 	jQuery(".form-group").each(function () {
 		jQuery(this).children("div").append(jQuery("p", this));
 		jQuery(this).has("a, input[type=submit]").css("text-align", "center");
 	});
 });
-jQuery("#login-text, #verify-form h4").after("<hr>");
+jQuery("#login-text").each(function() {
+	jQuery("center", this).replaceWith("<h2>" + jQuery("center b", this).text() + "</h2><hr>");
+	jQuery("br:eq(0), br:eq(1)", this).remove();
+});
+jQuery("#verify-form h4").after("<hr>");
 jQuery("#login-box .form-group .btn").parent().before("<hr>");
 jQuery("#verify-form .form-group:last").before("<hr>");
+
+// New password form
+jQuery("#new_passwd_form").each(function() {
+	jQuery(this).addClass("form-horizontal");
+	jQuery("div", this).each(function () {
+		jQuery(this).addClass("form-group");
+		jQuery("label", this).addClass("control-label col-sm-4").after(jQuery("#new_passwd_username"));
+	});
+	jQuery("#new_passwd_username", this).addClass("form-control input-sm").wrap('<div class="col-sm-4">');
+	jQuery(".form-group:last, h4", this).before("<hr>");
+	jQuery("h4", this).after("<hr>");
+	jQuery(".form-group", this).has("a, input[type=submit]").css("text-align", "center");
+});
 
 // Edit user form in bootstrap layout
 jQuery("#edituser-page form").addClass("form-horizontal");
