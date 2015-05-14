@@ -92,8 +92,9 @@ a:hover{
 	outline: none;
 }
 
-#flash-messages {
+.flash-messages {
 	clear: both;
+	text-align: center;
 }
 
 #pending-changes-message {

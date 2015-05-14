@@ -58,10 +58,10 @@ class JustLightTheme extends BaseTheme {
 				$this->headerContent() .
 				$this->primaryMenuContainer($this->primaryMenu()) .
 				'</div></div></div>' .
-				$this->flashMessagesContainer(FlashMessages::getMessages()) .
 				$this->formatPendingChangesLink() .
 				'</header>' .
 				'<div id="responsive"></div>' .
+				$this->flashMessagesContainer(FlashMessages::getMessages()) .
 				'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
 		} catch (Exception $ex) {
 			parent::bodyHeader();
