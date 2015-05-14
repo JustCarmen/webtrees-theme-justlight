@@ -241,6 +241,7 @@ if (WT_SCRIPT_NAME === "individual.php") {
 	// Hide sidebar by default on smaller screens
 	if ($responsive) {
 		jQuery.cookie("hide-sb", true);
+		jQuery("#sidebar").hide();
 		responsiveSidebar = true;
 	}
 
