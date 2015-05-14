@@ -215,10 +215,7 @@ jQuery("body").on("click", "a[href^='#']", scroll_if_anchor);
 
 /* page specific functions */
 
-// Move link to change blocks to the footer area.
 if (WT_SCRIPT_NAME === "index.php") {
-	jQuery("#link_change_blocks").appendTo(jQuery("footer"));
-
 	// journal-box correction - remove br's from content. Adjust layout to the news-box layout.
 	jQuery(".user_blog_block > br, .journal_box > br").remove();
 	jQuery(".journal_box > a[onclick*=editnews]").before('<hr>');

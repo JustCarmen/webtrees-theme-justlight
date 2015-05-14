@@ -3536,24 +3536,6 @@ footer {
 	z-index: 1;
 }
 
-#link_change_blocks {
-	position: absolute;
-	bottom: 10px;
-    left: 0;
-	right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-#link_change_blocks > span {
-	display: block;
-}
-
-#link_change_blocks span span {
-	padding: 0 3px;
-}
-
 /* ====== JustLight Theme Icons ====== */
 @font-face {
 	font-family: "icomoon";
