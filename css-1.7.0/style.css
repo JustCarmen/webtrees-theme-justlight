@@ -310,6 +310,7 @@ a.name1:hover {
 
 .error {
 	padding: 5px;
+	text-align: center;
 }
 
 .largeError {
