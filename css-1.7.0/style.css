@@ -899,16 +899,6 @@ ul.clist {
 	text-align: center;
 }
 
-#login-register-page h2 {
-	text-align: left;
-}
-
-#login-form input[type=submit],
-#verify-form input[type=submit],
-#registration-submit {
-	text-align: center;
-}
-
 /* For those who have activated the facebook module */
 #facebook-login-box {
 	display: block !important;
