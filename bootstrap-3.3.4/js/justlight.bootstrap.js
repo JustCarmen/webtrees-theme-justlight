@@ -69,19 +69,21 @@ jQuery(window).resize(function () {
 
 // Bootstrap table layout
 jQuery("table").waitUntilExists(function () {
-	if (jQuery(this).hasClass("table-census-assistant")) {
-		jQuery(this).addClass("table table-condensed table-striped width100");
-		jQuery(this).find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
-	} else if (jQuery(this).is("#mycart")) {
-		jQuery(this).addClass("table table-striped");
-	} else if (jQuery(this).parents().hasClass("user_messages_block")) {
-		jQuery(this).addClass("table table-striped");
+	var t = jQuery(this);
+	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table")) {
+		return;
+	} else if (t.hasClass("table-census-assistant")) {
+		t.addClass("table table-condensed table-striped width100");
+		t.find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
+	} else if (t.is("#mycart")) {
+		t.addClass("table table-striped");
+	} else if (t.parents().hasClass("user_messages_block")) {
+		t.addClass("table table-striped");
 	} else {
-		var table = jQuery(this).not("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
-		table.addClass("table");
-		jQuery(this).parents(".gedcom_stats_block > table").addClass("table-striped");
+		t.addClass("table");
+		t.parents(".gedcom_stats_block > table").addClass("table-striped");
 	}
-	jQuery(this).show();
+	return t;
 });
 
 jQuery(".markdown").waitUntilExists(function () {

@@ -211,10 +211,6 @@ legend {
 	text-align: center;
 }
 
-table {
-	display: none; /* see justlight.bootstrap.js */
-}
-
 table.center {
 	margin-left: auto;
 	margin-right: auto;
