@@ -251,15 +251,8 @@ footer {
 	background-color: #f9f9f9;
 }
 
-#personal_facts_content .facts_table tbody > tr:first-child,
-#relatives_content .facts_table tbody > tr:first-child,
-#sources_tab_content .facts_table tbody > tr:first-child,
-#notes_content .facts_table tbody > tr:first-child,
-#lightbox_content .rela,
-#stories .news_title {
-	background-color: #fff;
-}
-
+#accordion .table-census-assistant tbody > tr:first-child td,
+#accordion .markdown .table tbody > tr:first-child td,
 .table-census-assistant tbody > tr:first-child td,
 .markdown .table tbody > tr:first-child td {
 	text-shadow: 0 1px 0 #fff;
