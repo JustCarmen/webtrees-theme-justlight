@@ -2634,22 +2634,13 @@ table.dataTable thead > tr > th {
 	z-index: 2;
 }
 
-#save-cancel input {
-	padding: 2px 8px;
-}
-
 #save-cancel .save {
-	float: left;
 	margin: 5px;
 }
 
 #save-cancel .cancel {
 	float: right;
 	margin: 5px;
-}
-
-[dir=rtl] #save-cancel .save {
-	float: right;
 }
 
 [dir=rtl] #save-cancel .cancel {

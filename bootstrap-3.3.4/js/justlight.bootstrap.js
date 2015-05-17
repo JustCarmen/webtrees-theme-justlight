@@ -258,8 +258,6 @@ jQuery('body').on('click', function (e) {
 });
 
 // add bootstrap buttons
-jQuery("#edit_interface-page .save, #edit_interface-page .cancel").addClass("btn btn-default btn-sm");
-jQuery("#find-page button").addClass("btn btn-default btn-xs");
 jQuery("input[type=submit], input[type=button]").addClass("btn btn-primary");
 jQuery("#personal_facts_content").waitUntilExists(function () {
 	jQuery("input[type=button]").addClass("btn btn-primary btn-sm").css("visibility", "visible");
