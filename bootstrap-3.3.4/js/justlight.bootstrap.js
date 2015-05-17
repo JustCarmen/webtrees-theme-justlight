@@ -33,18 +33,43 @@ jQuery(window).resize(function () {
 });
 
 // Bootstrap multilevel menu
-jQuery(".dropdown-menu > li > a.dropdown-submenu-toggle").on("click", function (e) {
+jQuery(".dropdown").on("click", ".dropdown-toggle", function () {
+	jQuery(".sub-menu:visible").hide();
+});
+
+jQuery(".dropdown").on("click", ".dropdown-submenu-toggle", function (e) {
 	e.preventDefault();
-	var current = jQuery(this).next();
-	var grandparent = jQuery(this).parent().parent();
-	grandparent.find(".sub-menu:visible").not(current).hide();
-	current.toggle();
+	getSubMenu(jQuery(this));
 	e.stopPropagation();
 });
-jQuery(".dropdown-menu > li > a:not(.dropdown-submenu-toggle)").on("click", function () {
-	var root = jQuery(this).closest('.dropdown');
-	root.find('.sub-menu:visible').hide();
+
+jQuery(".btn-group").on("click", ".dropdown-toggle", function () {
+	jQuery(".sub-menu:visible").hide();
+	scrollMenu(jQuery(this).next());
 });
+
+function getSubMenu($menu) {
+	var current = $menu.next();
+	var grandparent = $menu.parent().parent();
+	jQuery(".dropdown-menu:visible").not(grandparent).not(current).hide();
+	current.toggle();
+	if (current.is(":visible")) {
+		scrollMenu(current);
+	}
+}
+
+// Add scrollbar for long dropdown-menus
+function scrollMenu($menu) {
+	var offset = $menu.offset();
+	var maxHeight = 0.90 * (jQuery(window).height() - offset.top + jQuery(window).scrollTop());
+	if ($menu.height() > maxHeight) {
+		$menu.css({
+			"height": "auto",
+			"max-height": maxHeight,
+			"overflow-x": "hidden"
+		});
+	}
+}
 
 // Bootstrap active tab in navbar
 var url_parts = location.href.split('/');
