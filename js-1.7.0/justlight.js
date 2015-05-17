@@ -27,31 +27,6 @@ jQuery(window).resize(function () {
 });
 
 // Modal dialog boxes
-function jl_modalDialog(url, title) {
-	var $dialog = jQuery('<div id="config-dialog" style="max-height:550px; overflow-y:auto"><div title="' + title + '"><div></div>').load(url).dialog({
-		title: title,
-		width: 'auto',
-		maxWidth: 700,
-		height: 'auto',
-		maxHeight: 500,
-		fluid: true,
-		modal: true,
-		resizable: false,
-		autoOpen: false,
-		open: function () {
-			jQuery('.ui-widget-overlay').on('click', function () {
-				$dialog.dialog('close');
-			});
-		}
-	});
-
-	// open the dialog box after some time. This is neccessary for the dialogbox to load in center position without page flickering.
-	setTimeout(function () {
-		$dialog.dialog('open');
-	}, 500);
-	return false;
-}
-
 function jl_helpDialog(topic, module) {
 	jQuery.getJSON('help_text.php?help=' + topic + '&mod=' + module, function (json) {
 		jl_modalHelp(json.content, json.title);
@@ -136,11 +111,7 @@ function fluidDialog() {
 	});
 }
 
-jQuery('[onclick*="modalDialog"], [onclick^="helpDialog"]').waitUntilExists(function () {
-	jQuery(this).attr('onclick', function (index, attr) {
-		return attr.replace('modalDialog', 'jl_modalDialog');
-	});
-
+jQuery('[onclick^="helpDialog"]').waitUntilExists(function () {
 	jQuery(this).attr('onclick', function (index, attr) {
 		return attr.replace('helpDialog', 'jl_helpDialog');
 	});
