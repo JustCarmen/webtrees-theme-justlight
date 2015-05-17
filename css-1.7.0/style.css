@@ -886,6 +886,10 @@ ul.clist {
 	margin: 20px auto;
 }
 
+#register-text .error {
+	text-align: left;
+}
+
 #verify-form {
 	margin-top: 80px;
 }
