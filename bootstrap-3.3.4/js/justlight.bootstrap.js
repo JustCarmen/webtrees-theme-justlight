@@ -97,6 +97,8 @@ jQuery("table").waitUntilExists(function () {
 	var t = jQuery(this);
 	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table")) {
 		return;
+	} else if (WT_SCRIPT_NAME === 'relationship.php') {
+		t.parents("form").find("table").addClass("table");
 	} else if (t.hasClass("table-census-assistant")) {
 		t.addClass("table table-condensed table-striped width100");
 		t.find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
@@ -104,6 +106,9 @@ jQuery("table").waitUntilExists(function () {
 		t.addClass("table table-striped");
 	} else if (t.parents().hasClass("user_messages_block")) {
 		t.addClass("table table-striped");
+	} else if (t.parents().is("#sb_content_family_nav")) {
+		t.addClass("table-striped");
+		jQuery("td", t).removeClass("person_box person_boxF person_boxNN center");
 	} else {
 		t.addClass("table");
 		t.parents(".gedcom_stats_block > table").addClass("table-striped");
@@ -117,18 +122,7 @@ jQuery(".markdown").waitUntilExists(function () {
 		var colspan = jQuery(this).find("th").length;
 		jQuery(this).find("tbody").prepend("<tr><td colspan=\"" + colspan + "\">");
 	});
-
 });
-
-jQuery("#sb_content_family_nav").each(function () {
-	jQuery(this).find("table").addClass("table-striped");
-	jQuery(this).find("td").removeClass("person_box person_boxF person_boxNN center");
-});
-
-// table correction. This particular table has no reference point.
-if (WT_SCRIPT_NAME === 'relationship.php') {
-	jQuery("table").not("form table").removeClass("table");
-}
 
 // Manual popover trigger function
 function manualTrigger(obj, click, hover) {
