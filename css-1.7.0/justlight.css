@@ -164,7 +164,7 @@ footer {
 
 .table-census-assistant,
 .markdown table,
-.ui-tabs-panel .facts_table .optionbox .table-census-assistant {
+#accordion .facts_table .optionbox .table-census-assistant {
 	background: #fff;
 }
 
@@ -211,27 +211,43 @@ footer {
 }
 
 /* Individual page */
-.ui-widget-content .blockquote a,
-.ui-widget-content .story_body a,
-.ui-widget-content .fact_NOTE a,
-.ui-widget-content .fact_SHARED_NOTE a,
-.ui-widget-content .markdown a {
-	color: #428bca;
-}
-.ui-tabs-panel .facts_table {
-	border: 1px solid #ccc;
+.panel-primary {
+	border-color: #ccc;
 }
 
-.ui-tabs-panel .facts_table .descriptionbox,
-.ui-tabs-panel .facts_table .facts_label {
+.panel-default > .panel-heading {
+	background: #f5f5f5;
+}
+
+.panel-default > .panel-heading a:after {
+    color: gray;
+}
+
+.panel-primary > .panel-heading a,
+.panel-primary > .panel-heading a:after {
+    color: #fff;
+}
+
+.panel a {
+	color: #362b36;
+}
+
+.panel .blockquote a,
+.panel .story_body a,
+.panel .fact_NOTE a,
+.panel .fact_SHARED_NOTE a,
+.panel .markdown a {
+	color: #428bca;
+}
+
+#accordion .facts_table .descriptionbox,
+#accordion .facts_table .facts_label {
 	background-color: #E5E5E5;
 }
 
-.ui-tabs-panel .facts_table .optionbox,
-.ui-tabs-panel .facts_table .person_box,
-.ui-tabs-panel .facts_table .person_boxF,
-.ui-tabs-panel .facts_table .personboxNN,
-.ui-tabs-panel .facts_table .facts_value {
+#accordion .facts_table .optionbox,
+#accordion .facts_table .facts_value,
+#relatives_content .facts_table .facts_label {
 	background-color: #f9f9f9;
 }
 
@@ -240,7 +256,10 @@ footer {
 #sources_tab_content .facts_table tbody > tr:first-child,
 #notes_content .facts_table tbody > tr:first-child,
 #lightbox_content .rela,
-#stories .news_title,
+#stories .news_title {
+	background-color: #fff;
+}
+
 .table-census-assistant tbody > tr:first-child td,
 .markdown .table tbody > tr:first-child td {
 	text-shadow: 0 1px 0 #fff;
@@ -264,7 +283,7 @@ footer {
 	border: 1px solid #ccc;
 }
 
-.ui-tabs-panel .facts_table tr:not([class="old"]):not([class="new"]),
+#accordion .facts_table tr:not([class="old"]):not([class="new"]),
 #stories .news_title {
 	border-bottom: 1px solid #ccc;
 }

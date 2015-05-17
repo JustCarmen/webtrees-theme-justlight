@@ -266,6 +266,79 @@ if (WT_SCRIPT_NAME === "individual.php") {
 			jQuery("#indi_left").toggle();
 		}
 	});
+
+	// responsive tabs
+	updateUI();
+}
+
+function updateUI() {
+	tabsToAccordions();
+
+	jQuery('.panel').on('shown.bs.collapse', function () {
+		openPanel(jQuery(this));
+	});
+
+	jQuery('.panel').on('hidden.bs.collapse', function () {
+		jQuery(this).addClass("panel-default").removeClass("panel-primary");
+		jQuery(".panel-stop").after(jQuery(this)).removeClass("panel-stop");
+	});
+}
+
+// changes tabs to accordion (jQuery UI tabs to Bootstrap accordion)
+// inspired by http://www.markadrake.com/blog/2013/09/06/responsive-design-turning-tabs-into-accordions-and-back-again/
+function tabsToAccordions() {
+	jQuery("#tabs").each(function () {
+		var e = jQuery('<div id="accordion" class="panel-group">');
+		var t = new Array;
+		jQuery(this).find(">ul>li").each(function (index) {
+			jQuery("a", this).attr({
+				"data-toggle": "collapse",
+				"data-parent": "#accordion",
+				"data-target": "#collapse" + index,
+				"data-source": jQuery("a", this).attr("href"),
+				"href": "#"
+			}).removeAttr("id class");
+			t.push('<div class="panel-heading"><h4 class="panel-title">' + jQuery(this).html() + '</h4></div>');
+		});
+		var n = new Array;
+		jQuery(this).find(">div").each(function (index) {
+			if (index == jQuery.cookie("indi-tab")) {
+				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
+			} else {
+				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
+			}
+		});
+		for (var r = 0; r < t.length; r++) {
+			if (r == jQuery.cookie("indi-tab")) {
+				e.append('<div class="panel panel-primary">' + t[r] + n[r] + '</div>');
+			} else {
+				e.append('<div class="panel panel-default">' + t[r] + n[r] + '</div>');
+			}
+		}
+
+		if (document.cookie.indexOf("indi-tab") < 0) {
+			openPanel(jQuery("#collapse0", e).addClass("in").parent());
+		} else {
+			openPanel(jQuery(".in", e).parent());
+		}
+
+		jQuery(this).before(e);
+		jQuery(this).remove();
+	});
+}
+
+function openPanel(panel) {
+	var source = jQuery(".panel-heading a", panel).data("source");
+	var target = jQuery(".panel-body", panel);
+	if (target.html().length === 0 || target.find(".loading-image").length) {
+		target.load(source);
+	}
+
+	jQuery.cookie("indi-tab", jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
+	panel.addClass("panel-primary").removeClass("panel-default");
+	panel.prev(".panel").addClass("panel-stop");
+	panel.parent().prepend(panel);
+	window.scrollTo(0, 0);
 }
 
 // Styling of the family page

@@ -325,7 +325,7 @@ a.name1:hover {
 	padding-left: 7px;
 }
 
-#tabs .indent {
+#accordion .indent {
 	font-size: 100%;
 }
 
@@ -1838,30 +1838,42 @@ blockquote {
 
 /* ======== Indi tabs ======== */
 /* General */
-.ui-tabs-panel .facts_table {
+#accordion .facts_table {
 	font-size: 85%;
 }
 
-#tabs .tab-visible {
-	display: list-item;
+h4.panel-title {
+	font-weight: normal;
 }
 
-#tabs .tab-hidden {
-	display: none;
+.panel-primary h4.panel-title {
+    font-weight: bold;
 }
 
-#tabs .tab-prev,
-#tabs .tab-next {
-	display: none;
-	margin-top: 8px;
+.panel-primary .panel-heading a {
+	text-decoration: none;
 }
 
-#tabs .tab-prev {
+.panel-primary .panel-heading a:hover {
+	text-decoration: underline;
+}
+
+.panel-heading a:after {
+    font-family: 'FontAwesome';
+    content:"\f078";
+    float: right; 
+}
+
+[dir=rtl] .panel-heading a:after {
 	float: left;
 }
 
-#tabs .tab-next {
-	float: right;
+.panel-heading a.collapsed:after {
+	content:"\f054";
+}
+
+.panel-body {
+	padding: 0;
 }
 
 /* Facts & Events tab */
@@ -2283,7 +2295,7 @@ table.dataTable thead > tr > th {
 	display: table-cell;
 }
 
-#tabs {
+#accordion {
 	width: 100%;
 	overflow: visible;
 	padding: 0;

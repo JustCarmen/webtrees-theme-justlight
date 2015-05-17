@@ -28,7 +28,7 @@
 	display: none;
 }
 
-#content #tabs .tv_out {
+#content #accordion .tv_out {
 	border: 1px solid #ccc;
 }
 

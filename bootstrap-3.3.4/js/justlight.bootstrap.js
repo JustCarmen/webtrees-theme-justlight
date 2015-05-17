@@ -77,7 +77,7 @@ jQuery("table").waitUntilExists(function () {
 	} else if (jQuery(this).parents().hasClass("user_messages_block")) {
 		jQuery(this).addClass("table table-striped");
 	} else {
-		var table = jQuery(this).not("#tabs table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
+		var table = jQuery(this).not("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table");
 		table.addClass("table");
 		jQuery(this).parents(".gedcom_stats_block > table").addClass("table-striped");
 	}
@@ -268,7 +268,7 @@ jQuery("#login-form, #register-form, #verify-form").each(function () {
 		jQuery(this).has("a, input[type=submit]").css("text-align", "center");
 	});
 });
-jQuery("#login-text").each(function() {
+jQuery("#login-text").each(function () {
 	jQuery("center", this).replaceWith("<h2>" + jQuery("center b", this).text() + "</h2><hr>");
 	jQuery("br:eq(0), br:eq(1)", this).remove();
 });
@@ -277,7 +277,7 @@ jQuery("#login-box .form-group .btn").parent().before("<hr>");
 jQuery("#verify-form .form-group:last").before("<hr>");
 
 // New password form
-jQuery("#new_passwd_form").each(function() {
+jQuery("#new_passwd_form").each(function () {
 	jQuery(this).addClass("form-horizontal");
 	jQuery("div", this).each(function () {
 		jQuery(this).addClass("form-group");
