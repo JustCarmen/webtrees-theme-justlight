@@ -154,12 +154,33 @@ class JustLightTheme extends BaseTheme {
 			parent::formatPendingChangesLink();
 		}
 	}
+	
+	/** {@inheritdoc} */
+	public function formQuickSearch() {
+		try {
+			if ($this->tree) {
+				return
+					'<form action="search.php" class="header-search form-inline" role="search">' .
+					'<input type="hidden" name="action" value="header">' .
+					'<input type="hidden" name="ged" value="' . $this->tree->getNameHtml() . '">' .
+					$this->formQuickSearchFields() .
+					'</form>';
+			} else {
+				return '';
+			}
+		} catch (Exception $ex) {
+			return parent::formQuickSearch();
+		}
+	}
 
 	/** {@inheritdoc} */
 	public function formQuickSearchFields() {
 		try {
 			return
-				'<input type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
+				'<div class="form-group">' .
+				'<label class="sr-only" for="searc-basic">' . I18N::translate('Search') . '</label>' .
+				'<input class="form-control" type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
+				'</div>' .
 				'<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>';
 		} catch (Exception $ex) {
 			return parent::formQuickSearchFields();
