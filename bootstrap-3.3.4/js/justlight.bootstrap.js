@@ -98,7 +98,7 @@ jQuery("table").waitUntilExists(function () {
 	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, #branches-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table")) {
 		return;
 	} else if (WT_SCRIPT_NAME === 'relationship.php') {
-		t.parents("form").find("table").addClass("table");
+		t.parents().is("form").addClass("table");
 	} else if (t.hasClass("table-census-assistant")) {
 		t.addClass("table table-condensed table-striped width100");
 		t.find("tbody tr:first td:first").attr("colspan", jQuery(this).find("th").length);
