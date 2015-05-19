@@ -210,6 +210,25 @@ footer {
 	color: #fff;
 }
 
+/* Tab Panels */
+.ui-tabs-panel .facts_table {
+	border: 1px solid #ccc;
+}
+
+.ui-tabs-panel .facts_table tr:not([class="old"]):not([class="new"]) {
+	border-bottom: 1px solid #ccc;
+}
+
+.ui-tabs-panel .facts_table .descriptionbox,
+.ui-tabs-panel .facts_table .facts_label {
+	background-color: #E5E5E5;
+}
+
+.ui-tabs-panel .facts_table .optionbox,
+.ui-tabs-panel .facts_table .facts_value {
+	background-color: #f9f9f9;
+}
+
 /* Individual page */
 .panel-primary {
 	border-color: #ccc;
