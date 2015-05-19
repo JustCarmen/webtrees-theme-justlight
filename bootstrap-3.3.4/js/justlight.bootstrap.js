@@ -168,7 +168,7 @@ jQuery(".popup > ul > li").waitUntilExists(function () {
 
 // Bootstrap popovers and/or tooltips
 jQuery(".itr .icon-pedigree").waitUntilExists(function () {
-	var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").clone().wrap('<p>').parent().html();
+	var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").outerHtml();
 	var content = jQuery(this).parents(".itr").find(".popup > ul");
 	content = content.removeClass().remove();
 	if (jQuery(this).parents("#index_small_blocks")) {
@@ -224,7 +224,7 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 		obj.find(".person_box").addClass("fan-chart-list");
 		var title = obj.find(".name1:first").remove();
 		var content = obj.html();
-		jQuery(this).attr("data-toggle", "popover").attr("title", title.clone().wrap('<p>').parent().html()).removeAttr("href");
+		jQuery(this).attr("data-toggle", "popover").attr("title", title.outerHtml()).removeAttr("href");
 		jQuery(this).popover({
 			content: content,
 			html: true,

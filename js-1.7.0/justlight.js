@@ -20,6 +20,11 @@
 
 /* global WT_SCRIPT_NAME */
 
+// general function
+jQuery.fn.outerHtml = function() {
+    return jQuery(this).clone().wrap('<p>').parent().html();
+};
+
 // responsive page
 var $responsive = jQuery("#responsive").is(":visible");
 jQuery(window).resize(function () {
