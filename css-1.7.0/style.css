@@ -762,7 +762,11 @@ ul.clist {
 	float: right;
 }
 
-#branches-page table,
+#branches-page table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #medialist-page .list_table,
 #medialist-page .list_table_controls {
 	margin: 0 auto;
