@@ -3791,6 +3791,10 @@ a[class^=" icon-"]:focus,
 	cursor: pointer;
 }
 
+.icon-place:before {
+	content:"\f0ac";
+}
+
 .gedcom_block_block .icon-pedigree:before,
 .user_welcome_block .icon-pedigree:before {
 	font-size: 28px;

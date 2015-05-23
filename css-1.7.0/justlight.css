@@ -365,6 +365,7 @@ a[class^=" icon-"]:focus,
 	color: #333;
 }
 
+.icon-place:before,
 .icon-button_place:before,
 .icon-help:before,
 .icon-wiki:before {
