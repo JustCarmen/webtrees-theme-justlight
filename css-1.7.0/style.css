@@ -462,13 +462,47 @@ a.name1:hover {
 	bottom: 20px;
 }
 
+.table .person0,
+.table .person1,
+.table .person2,
+.table .person3,
+.table .person4,
+.table .person5 {
+	font-size: 85%;
+}
+
 .person0,
 .person1,
 .person2,
 .person3,
 .person4,
 .person5 {
-	vertical-align: top;
+	border: 1px outset #b2c7d7;
+	padding: 5px;
+}
+
+.person0 {
+	background-color: #d9edf7;
+}
+
+.person1 {
+	background-color: #fcf8e3;
+}
+
+.person2 {
+	background-color: #dff0d8;
+}
+
+.person3 {
+	background-color: #f2dede;
+}
+
+.person4 {
+	background-color: #f9f9f9;
+}
+
+.person5 {
+	background-color: #ffdcbf;
 }
 
 .listlog {
