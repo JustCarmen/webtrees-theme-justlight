@@ -534,6 +534,7 @@ class JustLightTheme extends BaseTheme {
 		}
 
 		return '<script>' .
+			'var WT_BASE_URL = "'. WT_BASE_URL . '";' .
 			'var WT_TREE_TITLE = "' . $tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
 			'</script>';

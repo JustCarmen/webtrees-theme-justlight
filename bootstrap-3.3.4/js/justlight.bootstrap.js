@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* global WT_SCRIPT_NAME */
+/* global WT_SCRIPT_NAME, WT_BASE_URL */
 
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
@@ -72,9 +72,8 @@ function scrollMenu($menu) {
 }
 
 // Bootstrap active tab in navbar
-var url_parts = location.href.split('/');
-var last_segment = url_parts[url_parts.length - 1];
-jQuery('.nav-pills a[href="' + last_segment + '"]').parents('li').addClass('active');
+var url = location.href.split(WT_BASE_URL);
+jQuery('.nav-pills, .navbar-right').find('a[href="' + url[1] + '"]').parents('li').addClass('active');
 
 // Bootstrap vertical menu for smaller screens
 function getSmallMenu() {
