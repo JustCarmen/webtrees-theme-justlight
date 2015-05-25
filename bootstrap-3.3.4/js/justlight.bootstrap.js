@@ -16,6 +16,65 @@
 
 /* global WT_SCRIPT_NAME, WT_BASE_URL */
 
+// general function
+jQuery.fn.outerHtml = function () {
+	return jQuery(this).clone().wrap('<p>').parent().html();
+};
+
+// form controls
+jQuery.fn.formControls = function (options) {
+	var defaults = {
+		layout: 'horizontal',
+		control: 'form',
+		cbInline: false,
+		rbInline: false,
+		button: ''
+	};
+	var opt = jQuery.extend(defaults, options);
+
+	this.each(function () {
+		// for inline checkboxes placed outside forms
+		if (opt.control === 'checkbox') {
+			var text = jQuery(this).next("label").text();
+			jQuery(this).next("label").remove();
+			jQuery(this).wrap('<label class="checkbox-inline">').after(text);
+		} else {
+			form = jQuery(this);
+			form.addClass("form-" + opt.layout);
+			form.find("input[type=text], input[type=password], input[type=email], select, textarea").addClass("form-control");
+			form.find("label").addClass("control-label");
+			form.find("input[type=checkbox]").each(function () {
+				if (opt.cbInline) {
+					jQuery(this).formControls({
+						control: "checkbox"
+					});
+				} else {
+					jQuery(this).wrap('<div class="checkbox"><label>');
+				}
+			});
+			form.find("input[type=radio]").each(function () {
+				if (opt.rbInline) {
+					jQuery(this).wrap('<label class="radio-inline">');
+				} else {
+					jQuery(this).wrap('<div class="radio"><label>');
+				}
+			});
+			form.find("input[type=submit], input[type=button]").addClass("btn btn-primary").parent().addClass(opt.button);
+			form.find("[class^=icon-]").each(function () {
+				if (jQuery(this).prev().is("input")) {
+					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).parent().find("input[type=text]")).append(jQuery(this)));
+				} else if (jQuery(this).prev().is(".input-group")) {
+					jQuery(this).addClass("input-group-addon").prev(".input-group").append(jQuery(this));
+				} else if (jQuery(this).siblings("textarea").length) {
+					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).siblings("textarea")).append(jQuery(this)));
+				} else {
+					return;
+				}
+			});
+		}
+	});
+};
+
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
 	if (jQuery("#responsive").is(":visible")) {
@@ -94,7 +153,7 @@ jQuery(window).resize(function () {
 // Bootstrap table layout
 jQuery("table").waitUntilExists(function () {
 	var t = jQuery(this);
-	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table")) {
+	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table, #reportengine-page table")) {
 		return;
 	} else if (WT_SCRIPT_NAME === 'relationship.php' && t.parents().is("form")) {
 		t.addClass("table");
@@ -256,126 +315,156 @@ jQuery('body').on('click', function (e) {
 	}
 });
 
-// add bootstrap buttons
-jQuery("input[type=submit], input[type=button]").addClass("btn btn-primary");
-jQuery("#personal_facts_content").waitUntilExists(function () {
-	jQuery("input[type=button]").addClass("btn btn-primary btn-sm").css("visibility", "visible");
+// Login and new password form
+jQuery("#login-form, #new_passwd_form").addClass("center").formControls();
+jQuery("#login-page").each(function () {
+	jQuery("#login-text center").replaceWith('<h2>' + jQuery("#login-text center").text() + '</h2>');
+	jQuery(this).find("label").each(function () {
+		jQuery(this).addClass("col-sm-4").after(jQuery('<div class="col-sm-4">').append(jQuery("input", this))).parent().addClass("form-group");
+	});
+	jQuery("#login-form .btn").parent().before("<hr>");
+	jQuery("#new_passwd_form h4").before("<hr>");
 });
 
-// Login, Register, Verify form in bootstrap layout
-jQuery("#login-form, #register-form, #verify-form").each(function () {
-	jQuery(this).addClass("form-horizontal");
-	jQuery("div", this).each(function () {
-		jQuery(this).addClass("form-group");
-	});
-	jQuery("input, textarea", "#register-form").not(":hidden, :submit").each(function () {
-		jQuery(this).parent("label").addClass("control-label col-sm-3").after(jQuery(this));
-		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
-	});
-	jQuery("input, textarea", "#login-form").not(":hidden, :submit").each(function () {
-		jQuery(this).parent("label").addClass("control-label col-sm-4").after(jQuery(this));
-	});
-	jQuery("input, textarea", "#login-form, #verify-form").not(":hidden, :submit").each(function () {
-		jQuery(this).addClass("form-control input-sm").wrap('<div class="col-sm-4">');
-	});
-	jQuery("#verify-form label").each(function () {
-		jQuery(this).addClass("control-label col-sm-4");
-	});
-	jQuery(".form-group").each(function () {
-		jQuery(this).children("div").append(jQuery("p", this));
-		jQuery(this).has("a, input[type=submit]").css("text-align", "center");
-	});
+// register form
+jQuery("#register-form").formControls({
+	button: "center"
 });
-jQuery("#login-text").each(function () {
-	jQuery("center", this).replaceWith("<h2>" + jQuery("center b", this).text() + "</h2><hr>");
-	jQuery("br:eq(0), br:eq(1)", this).remove();
-});
-jQuery("#verify-form h4").after("<hr>");
-jQuery("#login-box .form-group .btn").parent().before("<hr>");
-jQuery("#verify-form .form-group:last").before("<hr>");
-
-// New password form
-jQuery("#new_passwd_form").each(function () {
-	jQuery(this).addClass("form-horizontal");
-	jQuery("div", this).each(function () {
-		jQuery(this).addClass("form-group");
-		jQuery("label", this).addClass("control-label col-sm-4").after(jQuery("#new_passwd_username"));
-	});
-	jQuery("#new_passwd_username", this).addClass("form-control input-sm").wrap('<div class="col-sm-4">');
-	jQuery(".form-group:last, h4", this).before("<hr>");
-	jQuery("h4", this).after("<hr>");
-	jQuery(".form-group", this).has("a, input[type=submit]").css("text-align", "center");
-});
-
-// Edit user form in bootstrap layout
-jQuery("#edituser-page form").addClass("form-horizontal");
-jQuery("#edituser-table").each(function () {
-	jQuery(".label", this).each(function () {
-		jQuery(this).addClass("form-group").removeClass('label');
-		jQuery(this).append(jQuery(this).next(".value").html());
-		jQuery(this).next(".value").remove();
-		jQuery("label", this).addClass("control-label col-sm-3");
-		jQuery("input, select", this).addClass("form-control input-sm").wrap('<div class="col-sm-6">');
-
-		if (jQuery("span", this).length > 0) {
-			jQuery(this).addClass("form-group-static");
+jQuery("#register-form").each(function () {
+	jQuery(this).find("label").each(function () {
+		if (jQuery(this).find("textarea").length) {
+			jQuery(this).addClass("col-sm-4").after(jQuery('<div class="col-sm-8">').append(jQuery("textarea", this))).parent().addClass("form-group").find("p").addClass("col-sm-8 col-sm-offset-4");
+		} else {
+			jQuery(this).addClass("col-sm-4").after(jQuery('<div class="col-sm-4">').append(jQuery("input", this))).parent().addClass("form-group").find("p").addClass("col-sm-8 col-sm-offset-4");
 		}
 	});
-
-	jQuery(".form-group").each(function () {
-		jQuery(this).children("div").append(jQuery("p, .icon-button_indi", this));
-	});
-
-	jQuery("#form_rootid").parent().find("input, .icon-button_indi").wrapAll('<div class="input-group">');
-	jQuery(".icon-button_indi").addClass("input-group-addon");
-
-	jQuery(".form-group-static").each(function () {
-		var label = jQuery(this).clone().children().remove().end().text();
-		jQuery(">span", this).addClass("form-control-static");
-		jQuery(this).children().wrapAll('<div class="col-sm-6 static">');
-		var content = jQuery(".static", this);
-		jQuery(this).html('<label class="control-label col-sm-3">' + label + "</div>").append(content);
-	});
-
-	jQuery("input[name=form_visible_online]").removeAttr("class").wrap('<div class="checkbox"><label>');
 });
 
-// Selectboxes on the indi page, source page etc.
-jQuery("form[name=newfactform]").waitUntilExists(function () {
-	jQuery(this).addClass("form-inline");
-	jQuery("select", this).addClass("form-control input-sm");
+// verify form
+jQuery("#verify-form").formControls({
+	button: "center"
+});
+jQuery("#verify-form").each(function () {
+	jQuery(this).find("h4").replaceWith('<h2>' + jQuery("h4", this).text() + '</h2><hr>');
+	jQuery(this).find("label").each(function () {
+		jQuery(this).addClass("col-sm-4").next("input").wrap('<div class="col-sm-4">').end().parent().addClass("form-group");
+	});
+	jQuery(this).find(".btn").parent().before("<hr>");
 });
 
+// Edit user form
+jQuery("#edituser-page form").formControls();
+jQuery("#edituser-page form").each(function () {
+	jQuery(this).find(".label").each(function () {
+		if (jQuery(this).find("label").length === 0) {
+			var text = jQuery(this).text();
+			jQuery(this).text("").append('<label class="control-label">' + text);
+		}
+		jQuery(this).addClass("form-group").removeClass("label").append(jQuery(this).next(".value").addClass("col-sm-4").removeClass("value")).append(jQuery(this).find("p").addClass("col-sm-8 col-sm-offset-4")).find("label").addClass("col-sm-4");
+	});
+	jQuery(this).find(".input-group").each(function () {
+		jQuery(this).after(jQuery(this).find(">span").addClass("form-control-static")).find("br").remove();
+	});
+});
+
+// Chart pages forms
+jQuery("#ancestry-page, #branches-page, #compact-page, #descendancy-page, #familybook-page, #hourglass-page, #lifespan-page, #page-fan, #pedigree-page, #pedigreemap-page").find("form").formControls({
+	layout: "inline"
+});
+if (WT_SCRIPT_NAME === 'relationship.php') {
+	jQuery("form").formControls({
+		layout: "inline"
+	});
+}
+
+jQuery("#timeline_chart").prev("form").formControls({
+	layout: "inline",
+	cbInline: true
+});
+jQuery("#timeline_chart").prev("form").find("table").each(function () {
+	var t = jQuery('<table class="timeline-chart table"><tbody>');
+	var tr1 = new Array();
+	var tr2 = new Array();
+	var tr3 = new Array();
+	jQuery(this).find("[class^=person]").each(function () {
+		tr1.push('<td class="' + jQuery(this).attr("class") + '">' + jQuery(this).find("input[type=hidden]").outerHtml() + jQuery(this).find("i").outerHtml() + jQuery(this).find("a:first").find("br").remove().end().outerHtml() + '</td>');
+		tr2.push('<td class="' + jQuery(this).attr("class") + '">' + jQuery(this).find("a .details1").parent().outerHtml() + '</td>');
+		if (jQuery(this).find(">.details1").length) {
+			tr3.push('<td class="' + jQuery(this).attr("class") + '"><span>' + jQuery(this).find(">.details1").text() + '</span>' + jQuery(this).find(".checkbox-inline").addClass("pull-right").outerHtml() + '</td>');
+		} else {
+			tr3.push('<td class="' + jQuery(this).attr("class") + '"></td>');
+		}
+	});
+	jQuery(this).find(".list_value:first").each(function () {
+		tr1.push('<td class="list_value temp-1"></td>');
+		tr2.push('<td colspan="2"><span style="font-size:85%">' + jQuery(this).text() + '</span></td>');
+		tr3.push('<td class="temp-2"></td>');
+	});
+	jQuery(this).find(".list_value:last").each(function () {
+		tr1.push('<td class="list_value text-right">' + jQuery(this).find(".icon-zoomin").outerHtml() + jQuery(this).find(".icon-zoomout").outerHtml() + '</td>');
+		tr3.push('<td class="text-right temp-3"></td>');
+	});
+	t.append("<tr>" + tr1 + "</tr><tr>" + tr2 + "</tr><tr>" + tr3 + "</tr>");
+	// append objects to the newly created table to preserve events.
+	t.find(".temp-1").append(jQuery(this).find(".input-group").find("input").addClass("input-sm").end()).removeClass("temp-1");
+	t.find(".temp-2").append(jQuery(this).find(".list_value:first .btn").addClass("btn-xs")).removeClass('temp-2');
+	t.find(".temp-3").append(jQuery(this).find(".list_value:last .btn").addClass("btn-xs")).removeClass('temp-3');
+	jQuery(this).after(t).remove();
+});
+
+jQuery("#familybook-page").find("form th").each(function () {
+	jQuery(this).replaceWith("<td>" + jQuery(this).text());
+});
+jQuery("#hourglass-page .topbottombar ").attr("rowspan", 2);
+
+// New fact forms and Clipboard forms
+jQuery("form[name=newfactform], form[name=newFromClipboard]").formControls({
+	layout: "inline"
+});
+
+// Reports
+jQuery("#reportengine-page form").formControls({
+	rbInline: true
+});
+jQuery("#reportengine-page form table").each(function () {
+	var t = new Array();
+	var text = jQuery(this).find("tr:eq(1) .optionbox").text().split("\n");
+	t.push('<h2>' + jQuery(this).find("tr:eq(1) .descriptionbox").text() + ' - ' + text[0] + '<p><small>' + text[1] + '</small></p></h2><hr>');
+	t.push('<h4 class="center">' + jQuery(this).find("td:first").text() + '</h4>');
+
+	var e = new Array();
+	jQuery(this).find("tr").not("tr:first, tr:eq(1), tr:last, tr:eq(-2)").each(function () {
+		e.push('<div class="form-group">' + jQuery(this).find("input[type=hidden]").outerHtml() + '<label class="control-label col-sm-4">' + jQuery(this).find(".descriptionbox").text() + '</label><div class="col-sm-4">' + jQuery(this).find(".optionbox").html() + '</div></div>');
+	});
+
+	var f = jQuery('<div class="form-group text-center">');
+	jQuery(this).find("tr:eq(-2) .report-type > div").each(function () {
+		f.append(jQuery(this).find(".radio-inline").addClass("text-left").append(jQuery(this).find("i")).outerHtml());
+	});
+	e.push(f);
+
+	jQuery(this).find("tr:last input").each(function () {
+		e.push('<div class="text-center">' + jQuery(this).outerHtml() + '</div>');
+	});
+
+	jQuery(this).parent("form").before(t);
+	jQuery(this).before(e);
+	jQuery(this).remove();
+});
 // Popup forms
-jQuery(".container-popup").waitUntilExists(function () {
-	jQuery("form", this).addClass("form-horizontal");
-	jQuery("input[type=text], #NAME[type=hidden], textarea, select", this).addClass("form-control input-sm");
-	jQuery("input[type=checkbox]", this).wrap("<label>");
-	jQuery("label", this).each(function () {
+jQuery(".container-popup form").each(function () {
+	jQuery("div[id*=_PLAC]", this).contents().unwrap();
+	jQuery(this).formControls();
+	jQuery(".checkbox").each(function () {
 		var text = jQuery(this)[0].nextSibling.nodeValue;
 		this.parentNode.removeChild(jQuery(this)[0].nextSibling);
-		jQuery(this).append(text).wrap('<div class="checkbox">');
-	});
-	jQuery("div[id*=_PLAC]", this).contents().unwrap();
-	jQuery(".optionbox, .facts_value", this).not("tr[id^=SOUR] .optionbox").each(function () {
-		if (jQuery(this).children('[class^="icon-"]').not(".icon-help").length) {
-			jQuery('[class^="icon-"]', this).addClass("input-group-addon");
-			jQuery(this).children().not("div[id$=_description], a[onclick*=addnewnote_assisted], p").wrapAll('<div class="input-group">');
-		};
-	});
-	jQuery("tr[id^=SOUR] .optionbox", this).each(function () {
-		jQuery(".icon-button_source, .icon-button_addsource, .icon-button_keyboard", this).addClass("input-group-addon");
-		jQuery(this).children(".SOUR, .TITL, .icon-button_source, .icon-button_addsource, .icon-button_keyboard").wrapAll('<div class="input-group">');
-		jQuery(".checkbox", this).wrapAll('<div class="sour-checkboxes">');
+		jQuery(this).find("label").append(text);
 	});
 	jQuery(".optionbox, .facts_value", this).find("br").not(".text-muted br").remove();
-	if (jQuery("form .btn", "#find-page").parent("p").length === 0) {
-		jQuery("form .btn", "#find-page").wrap("<p>");
-	}
-	jQuery(".find-media-media", this).each(function () {
-		jQuery(this).children().not(".find-media-thumb").wrapAll('<div class="find-media-desc">');
-	});
 });
+
+// Style buttons outside forms
+jQuery("button").not(".btn-primary").addClass("btn btn-xs btn-default");
 
 // For those who have activated the facebook module
 jQuery("#facebook-login-box").waitUntilExists(function () {

@@ -477,7 +477,6 @@ a.name1:hover {
 .person3,
 .person4,
 .person5 {
-	border: 1px outset #b2c7d7;
 	padding: 5px;
 }
 
@@ -801,6 +800,14 @@ ul.clist {
 	margin-right: auto;
 }
 
+#branches-page form p {
+	margin: 10px 0 0;
+}
+
+#branches-page form p + p {
+	margin: 0;
+}
+
 #medialist-page .list_table,
 #medialist-page .list_table_controls {
 	margin: 0 auto;
@@ -919,22 +926,20 @@ ul.clist {
 }
 
 #login-text,
-#register-text,
-#user-verify {
+#register-text {
 	margin: 20px auto;
+}
+
+#passwd_click {
+	line-height: 2.5em;
 }
 
 #register-text .error {
 	text-align: left;
 }
 
-#verify-form {
-	margin-top: 80px;
-}
-
 #register-form h4,
-#new_passwd_form h4,
-#verify-form h4 {
+#new_passwd_form h4 {
 	text-align: center;
 }
 
@@ -944,12 +949,6 @@ ul.clist {
 	margin-bottom: 30px;
 	text-align: center;
 	padding: 0;
-}
-
-[dir=rtl] #login-form label,
-[dir=rtl] #new_passwd_form label,
-[dir=rtl] #verify-form label {
-	text-align: left;
 }
 
 /* --- reportengine.php --- */
@@ -1950,13 +1949,13 @@ h4.panel-title {
 	display: none;
 }
 
-#personal_facts_content input[type=button] {
-	visibility: hidden;
-}
-
 /* Relatives tab */
 #relatives_content table:not(.facts_table) {
 	margin-top: 15px;
+}
+
+#relatives_content .icon-cfamily {
+	padding: 0 7px;
 }
 
 /* Media tab */
@@ -2272,11 +2271,6 @@ h4.panel-title {
 	fieldset { display: table-cell; }
 }
 
-/* Solve conflicts with Bootstrap */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-	vertical-align: top;
-}
-
 .table {
 	width: auto;
 }
@@ -2317,12 +2311,26 @@ table.dataTable thead > tr > th {
 	padding-left: 8px;
 }
 
-.form-horizontal .checkbox {
-	padding: 0;
+.form-inline label {
+	font-weight: normal;
 }
 
-.form-inline .btn {
-	margin: 0 5px;
+.form-inline select {
+	margin-right: 5px;
+}
+
+[dir=rtl] .form-inline select {
+	margin-right: 5px;
+}
+
+.checkbox-inline input[type="checkbox"],
+.radio-inline input[type="radio"] {
+	margin: 2px 0 2px -20px;
+}
+
+[dir=rtl] .checkbox-inline input[type="checkbox"],
+[dir=rtl] .radio-inline input[type="radio"] {
+	margin: 2px -20px 2px 0;
 }
 
 /* ======= Sidebar setup ===== */
@@ -3137,14 +3145,6 @@ img[src*="vline"] {
 }
 
 /*-- Lifespan ---- */
-#lifespan-page .person0 {
-	padding: 5px;
-}
-
-#lifespan-page .person0 div{
-	text-align: center;
-}
-
 #lifespan_chart .div-controls {
 	opacity: 0.67;
 	position: relative;
@@ -3188,11 +3188,6 @@ img[src*="vline"] {
 }
 
 /*-- Pedigree ---- */
-#pedigree-page table.list_table {
-	margin: 0 auto 20px;
-	width: 500px;
-}
-
 .pedigree_chart_table {
 	padding: 0;
 	width: 100%;
@@ -3228,6 +3223,11 @@ img[src*="vline"] {
 #timeline_chart {
 	position: relative;
 	top: 0;
+}
+
+.timeline-chart.table {
+	border-collapse: separate;
+	padding: 8px;
 }
 
 /* ====== Common Icons ========= */

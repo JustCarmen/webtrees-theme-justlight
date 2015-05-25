@@ -20,11 +20,6 @@
 
 /* global WT_SCRIPT_NAME */
 
-// general function
-jQuery.fn.outerHtml = function() {
-    return jQuery(this).clone().wrap('<p>').parent().html();
-};
-
 // responsive page
 var $responsive = jQuery("#responsive").is(":visible");
 jQuery(window).resize(function () {
@@ -307,7 +302,10 @@ function openPanel(panel) {
 	var source = jQuery(".panel-heading a", panel).data("source");
 	var target = jQuery(".panel-body", panel);
 	if (target.html().length === 0 || target.find(".loading-image").length) {
-		target.load(source);
+		target.load(source, function(){
+			jQuery(this).find("form").formControls({layout: "inline", cbInline: true});
+			jQuery(this).find("input[type=checkbox]").not("form input[type=checkbox]").formControls({control: "checkbox"});
+		});
 	}
 
 	jQuery.cookie("indi-tab", jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
