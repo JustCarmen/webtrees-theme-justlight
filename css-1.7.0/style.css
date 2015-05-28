@@ -1675,18 +1675,18 @@ span.link_text {
 }
 
 #indi_header .name_one {
-	font-size: 1.5em;
+	font-size: 140%;
+	line-height: 1.4em;
 }
 
 #indi_header h3 .header_age {
-	padding: 7px 0 5px 5px;
-	float: right;
 	font-size: 66%;
 	font-weight: normal;
+	vertical-align: top;
 }
 
-#indi_header h3 a {
-	display: inline;
+#indi_header h3 .header_age:before {
+	content: " ";
 }
 
 #indi_header a.warning {
@@ -1716,12 +1716,6 @@ span.link_text {
 
 .indi_name_details {
 	border-radius: 0;
-}
-
-.indi_name_details dl {
-	height: 10px;
-	margin-top: 0;
-	margin-bottom: 15px /* solve conflict with bootstrap dl */
 }
 
 .indi_name_details dt:after {
@@ -1755,15 +1749,12 @@ span.link_text {
 }
 
 #sex {
-	float: right;
-}
-
-[dir=rtl] #sex {
-	float: left;
+	font-size: 90%;
+	top: -2px;
 }
 
 #dates {
-	float: right;
+	white-space: nowrap;
 }
 
 dd .editlink,
@@ -1794,11 +1785,6 @@ blockquote {
 	text-align: right;
 }
 
-[dir=rtl] #indi_header h3 .header_age {
-	padding: 5px 5px 5px 0;
-	float: left;
-}
-
 [dir=rtl] #indi_mainimage {
 	float: right;
 }
@@ -1816,10 +1802,6 @@ blockquote {
 	clear: right;
 }
 
-[dir=rtl] #dates {
-	float: left;
-}
-
 [dir=rtl] dd .editlink,
 [dir=rtl] dd .deletelink {
 	float: left;
@@ -1827,50 +1809,6 @@ blockquote {
 
 .hit-counter {
 	font-weight: bold;
-}
-
-/* ======= General sprite ==== */
-.male_gender,
-.female_gender,
-.unknown_gender {
-	display: block;
-	background: url(images/indi_sprite.png) no-repeat;
-}
-
-.female_gender {
-	background-position: -45px -32px;
-	width: 24px;
-	height: 30px;
-}
-
-.male_gender {
-	background-position: -79px -32px;
-	width: 24px;
-	height: 30px;
-}
-
-.unknown_gender {
-	background-position: -107px -32px;
-	width: 24px;
-	height: 30px;
-}
-
-.ui-state-active .female_gender {
-	background-position: -45px 3px;
-	width: 24px;
-	height: 30px;
-}
-
-.ui-state-active .male_gender {
-	background-position: -79px 3px;
-	width: 24px;
-	height: 30px;
-}
-
-.ui-state-active .unknown_gender {
-	background-position: -107px 3px;
-	width: 24px;
-	height: 30px;
 }
 
 /* ======== Indi tabs ======== */
@@ -3601,7 +3539,10 @@ footer {
 .help.icon-wiki,
 .lb-image_edit a,
 .lb-image_link a,
-.lb-image_view a {
+.lb-image_view a, 
+.male_gender,
+.female_gender,
+.unknown_gender {
 	position: relative;
 	top: 1px;
 	display: inline-block;
@@ -3871,19 +3812,21 @@ a[class^=" icon-"]:focus,
 }
 
 .icon-sex_f_9x9:before,
-.icon-sex_f_15x15:before {
+.icon-sex_f_15x15:before,
+.female_gender:before {
 	content:"\f221";
 }
 
 .icon-sex_m_9x9:before,
-.icon-sex_m_15x15:before {
+.icon-sex_m_15x15:before,
+.male_gender:before {
 	content:"\f222";
 }
 
 .icon-sex_u_9x9:before,
-.icon-sex_u_15x15:before {
+.icon-sex_u_15x15:before,
+.unknown_gender:before {
 	content:"\f10c";
-	font-family: "FontAwesome";	
 }
 
 .icon-sex_f_9x9:before {
@@ -3897,6 +3840,12 @@ a[class^=" icon-"]:focus,
 
 .icon-sex_m_15x15:before {
 	font-size: 90%;
+}
+
+.male_gender:before,
+.female_gender:before,
+.unknown_gender:before {
+	font-weight:bold;
 }
 
 .icon-silhouette-F:before {	
@@ -4011,6 +3960,15 @@ a[class^=" icon-"]:focus,
 		font-size: 12px;
 		line-height: 1.5;
 		padding: 5px 10px;
+	}
+	
+	#indi_header .name_one {
+		font-size: 120%;
+		line-height: 1.2em;
+	}
+	
+	#indi_header h3 .header_age {	
+		font-size: 80%;
 	}
 
 	#sidebar {

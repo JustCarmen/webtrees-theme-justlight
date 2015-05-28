@@ -203,8 +203,8 @@ if (WT_SCRIPT_NAME === "index.php") {
 
 // Styling of the individual page
 if (WT_SCRIPT_NAME === "individual.php") {
-	// Remove personboxNN class from header layout
-	jQuery("#indi_header H3").removeClass("person_boxNN");
+	// restyle the header area -> responsive
+	updateHeader();
 
 	// When in responsive state hide the indi_left part when sidebar is open.
 	var responsiveSidebar = false;
@@ -240,6 +240,25 @@ if (WT_SCRIPT_NAME === "individual.php") {
 
 	// responsive tabs
 	updateUI();
+}
+
+function updateHeader() {
+	// keep the jQuery-ui layout here
+	jQuery("#header_accordion1").each(function(){
+		jQuery(this).find(".name_one").each(function(){
+			var l = jQuery('<div class="pull-left">');
+			l.append(jQuery(this).find(".ui-icon").outerHtml());
+			l.append(jQuery(this).find(".NAME").outerHtml());
+			var r = jQuery('<div class="pull-right">');
+			r.append(jQuery(this).find("#dates").outerHtml());			
+			r.find("#dates").prepend(jQuery(this).find("#sex").outerHtml());
+			r.append(jQuery(this).find(".header_age").outerHtml());
+			jQuery(this).html("").append(l).append(r);
+			
+		})
+	})
+	
+	
 }
 
 function updateUI() {
