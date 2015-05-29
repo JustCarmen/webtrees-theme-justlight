@@ -417,6 +417,11 @@ jQuery("#familybook-page").find("form th").each(function () {
 });
 jQuery("#hourglass-page .topbottombar ").attr("rowspan", 2);
 
+// Medialist page
+jQuery("#medialist-page form").formControls();
+var text = jQuery("#medialist-page form td:first").text();
+jQuery("#medialist-page form td:first").text("").append('<label for="folder">' + text);
+
 // New fact forms and Clipboard forms
 jQuery("form[name=newfactform], form[name=newFromClipboard]").formControls({
 	layout: "inline"
