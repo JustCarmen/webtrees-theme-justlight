@@ -427,6 +427,9 @@ jQuery("form[name=newfactform], form[name=newFromClipboard]").formControls({
 	layout: "inline"
 });
 
+// Search forms
+jQuery("form[name=searchform]").formControls({layout: "inline"});
+
 // Reports
 jQuery("#reportengine-page form").formControls({
 	rbInline: true
