@@ -459,12 +459,16 @@ class JustLightTheme extends BaseTheme {
 			'chart-box-x'					 => 280,
 			'chart-box-y'					 => 90,
 			'chart-font-color'				 => '333333',
-			'chart-font-size'				 => 9,
 			'distribution-chart-high-values' => '9ca3d4',
 			'distribution-chart-low-values'	 => 'e5e6ef',
 			'line-width'					 => 2,
 		);
-
+		
+		if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
+			$parameters['compact-chart-box-x'] = 105;
+			$parameters['compact-chart-box-y'] = 140;
+		}
+		
 		if (array_key_exists($parameter_name, $parameters)) {
 			return $parameters[$parameter_name];
 		} else {

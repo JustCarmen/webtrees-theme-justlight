@@ -395,16 +395,16 @@ a[class^=" icon-"]:focus,
 	color: #999;
 }
 
-/* pedigree chart childbox */
-#pedigree_chart #childbox {
-	border: 1px solid #b2c7d7;
+/* pedigree chart */
+#pedigree_canvas {
+	color: #428BCA;
 }
 
-/* compact chart - non clickable arrows */
-#compact_chart i.icon-darrow:before,
-#compact_chart i.icon-larrow:before,
-#compact_chart i.icon-rarrow:before,
-#compact_chart i.icon-uarrow:before {	
+/* Non clickable arrows */
+i.icon-darrow:before,
+i.icon-larrow:before,
+i.icon-rarrow:before,
+i.icon-uarrow:before {	
 	color: #aaa;
 }
 

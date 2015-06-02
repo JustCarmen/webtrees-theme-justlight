@@ -723,6 +723,7 @@ ul.clist {
 
 .person_box_template {
 	height: auto;
+	white-space: normal;
 }
 
 .person_box_template .namedef i {
@@ -758,25 +759,26 @@ ul.clist {
 
 .person_box_template .name0,
 .person_box_template .name1 {
-	font-size: 95%;
+	font-size: 85%;
 }
 
 .person_box_template .details0,
 .person_box_template .details1 {
-	font-size: 85%;
+	font-size: 80%;
 }
 
 .person_box_template .label {
 	padding: 0;
 }
-
-.person_box_template img,
 .person_box_template a.gallery {
 	float: left;
+	margin: 0 3px 0 0;
+}
+
+.person_box_template img {	
 	height: 50px;
 	width: auto;
 	max-width: 80px;
-	margin: 0 3px 0 0;
 }
 
 [dir=rtl] .person_box_template img,
@@ -1029,7 +1031,7 @@ ul.clist {
 
 /* Bootstrap popovers */
 .popover-content {
-	font-size: 95%;
+	font-size: 85%;
 	white-space: pre;
 }
 
@@ -1041,6 +1043,10 @@ ul.clist {
 .popover-content.childbox a.name1 {
 	display: block;
 	margin-left: 5px;
+}
+
+.popover-content a:hover {
+	text-decoration: none;
 }
 
 .popover-content.childbox a.name1:before {
@@ -2940,14 +2946,6 @@ table.dataTable thead > tr > th {
 	margin: 3px 0;
 }
 
-/* arrows without a link on the compact chart */
-#compact_chart i.icon-darrow:before,
-#compact_chart i.icon-larrow:before,
-#compact_chart i.icon-rarrow:before,
-#compact_chart i.icon-uarrow:before {	
-	cursor: default;	
-}
-
 /* styles for vertical lines in ancestry and descendancy charts */
 .chart_common li {
 	list-style: none;
@@ -3126,35 +3124,64 @@ img[src*="vline"] {
 }
 
 /*-- Pedigree ---- */
-.pedigree_chart_table {
-	padding: 0;
-	width: 100%;
-}
-
 #pedigree_chart {
 	position: relative;
-	left: 10px;
-}
-
-.pedigree_form {
-	width: 45px;
+	margin: 20px auto;
 }
 
 #pedigree_canvas {
-	position: absolute;
 	z-index: -1000;
 }
 
-#pedigree_chart #childarrow,
-#pedigree_chart #uparrow,
-#pedigree_chart .shadow,
-.ancestorarrow {
+#pedigree-page .shadow {
 	position: absolute;
+	white-space: nowrap;
 }
 
-[dir=rtl] #pedigree_chart {
-	left: auto;
-	right: -20px;
+#pedigree-page .layout0 .shadow > div,
+#pedigree-page .layout1 .shadow > div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#pedigree-page .spacer {
+	background-image: url(images/spacer.png);
+	height: 20px;
+	width: 1px;
+}
+
+#childarrow,
+.ancestorarrow {
+	text-align: center;
+}
+
+#pedigree-page #childarrow {
+	position: relative;
+}
+
+#pedigree_chart.layout2 .person_box_template .compact_view a.gallery,
+#pedigree_chart.layout3 .person_box_template .compact_view a.gallery,
+#pedigree_chart.layout2 .person_box_template .compact_view i[class^="icon-silhouette"],
+#pedigree_chart.layout3 .person_box_template .compact_view i[class^="icon-silhouette"] {
+	display: block;
+	float: none;
+	text-align: center;
+}
+
+#pedigree_chart.layout2 .person_box_template .compact_view img,
+#pedigree_chart.layout3 .person_box_template .compact_view img {
+	float: none;	
+}
+
+#pedigree_chart.layout2 .person_box_template .compact_view .name0,
+#pedigree_chart.layout3 .person_box_template .compact_view .name0 {
+	display: block;
+	text-align: center;
+}
+
+#pedigree_chart.layout2 .person_box_template .compact_view .details0,
+#pedigree_chart.layout3 .person_box_template .compact_view .details0 {
+	text-align: center;
 }
 
 /*-- timeline  --*/
@@ -3561,6 +3588,7 @@ a[class^="icon-"]:hover,
 a[class^="icon-"]:focus,
 a[class^=" icon-"]:hover,
 a[class^=" icon-"]:focus,
+#childarrow a,
 .copyicon:focus,
 .copyicon:hover,
 .deleteicon:focus,
@@ -3680,7 +3708,6 @@ a[class^=" icon-"]:focus,
 
 .icon-darrow:before {
 	content: "\f063";
-	cursor: pointer;
 }
 
 .icon-edit_indi:before {
@@ -3705,12 +3732,10 @@ a[class^=" icon-"]:focus,
 
 .icon-larrow:before {
 	content: "\f060";
-	cursor: pointer;
 }
 
 .icon-ldarrow:before {
 	content:"\f04a";
-	cursor: pointer;
 }
 
 .icon-lsdnarrow:before {
@@ -3787,12 +3812,10 @@ a[class^=" icon-"]:focus,
 
 .icon-rarrow:before {
 	content: "\f061";
-	cursor: pointer;
 }
 
 .icon-rdarrow:before {
 	content:"\f04e";
-	cursor: pointer;
 }
 
 .icon-reminder:before {
@@ -3883,7 +3906,6 @@ a[class^=" icon-"]:focus,
 
 .icon-uarrow:before {
 	content: "\f062";
-	cursor: pointer;
 }
 
 .icon-user_add:before {
