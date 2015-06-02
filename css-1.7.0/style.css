@@ -4019,6 +4019,18 @@ a[class^=" icon-"]:focus,
 	.dropdown-menu {
 		font-size: 13px;		
 	}
+	
+	h2 {
+		font-size: 140%;
+	}
+	
+	h3 {
+		font-size: 130%;
+	}
+	
+	h4 {
+		font-size: 120%;
+	}
 
 	.navbar-brand {
 		font-size: initial;
