@@ -2593,12 +2593,6 @@ table.dataTable thead > tr > th {
 	margin: 0 170px 0 0;
 }
 
-/* =========== search_advanced.php =================== */
-#search-page form > input[type="submit"] {
-	display: block;
-	margin: 10px auto;
-}
-
 /* ============== edituser.php ======================= */
 #edituser-page h2,
 #edituser_submit {
