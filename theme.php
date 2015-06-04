@@ -423,7 +423,7 @@ class JustLightTheme extends BaseTheme {
 
 			foreach ($folders as $key => $folder) {
 				if ($key !== $MEDIA_DIRECTORY) {
-					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2', 'menu-mediafolder');
+					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-mediafolder');
 					$menu->addSubmenu($submenu);
 				}
 			}
