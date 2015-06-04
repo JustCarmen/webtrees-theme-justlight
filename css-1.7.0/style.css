@@ -745,6 +745,12 @@ ul.clist {
 .person_box_template .inout {
 	clear: both;
 	display: none;
+	font-size: 90%;
+	padding: 7px;
+}
+
+.person_box_template .name0.nameZoom {
+	font-size: 100%;
 }
 
 .person_box_template .noprint {
