@@ -830,6 +830,10 @@ ul.clist {
 	text-align: center;
 }
 
+#medialist-page .list_table {
+	display: none;
+}
+
 #medialist-page div .list_table {
 	border: none;
 	width: 100%;

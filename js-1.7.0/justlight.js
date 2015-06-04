@@ -360,6 +360,7 @@ if (WT_SCRIPT_NAME === "medialist.php") {
 			jQuery(".label", this).prepend('<a onclick="expand_layer(\'' + uniqueId + '\'); return false;" href="#"><i class="icon-plus" id="' + uniqueId + '_img"></i></a> ').after('<span id="' + uniqueId + '-alt"> ' + title + '</span>');
 		}
 	});
+	jQuery("#medialist-page .list_table").show();
 }
 
 // mediatab on sources and notes list - don't list filenames
