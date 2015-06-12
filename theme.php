@@ -270,8 +270,8 @@ class JustLightTheme extends BaseTheme {
 				'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
 				'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
 				'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
-				'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .
 				'<script src="' . $this->js_url . 'justlight.js"></script>' .
+				'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .				
 				'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
 				'<script>
 				if(jQuery(".dataTable").length){

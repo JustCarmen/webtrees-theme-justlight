@@ -20,6 +20,80 @@
 
 /* global WT_SCRIPT_NAME */
 
+// general functions
+jQuery.fn.outerHtml = function () {
+	return jQuery(this).clone().wrap('<p>').parent().html();
+};
+
+// form controls
+jQuery.fn.formControls = function (options) {
+	var defaults = {
+		layout: 'horizontal',
+		control: 'form',
+		cbInline: false,
+		rbInline: false,
+		button: ''
+	};
+	var opt = jQuery.extend(defaults, options);
+
+	this.each(function () {
+		// for inline checkboxes placed outside forms
+		if (opt.control === 'checkbox') {
+			var text = jQuery(this).next("label").text();
+			jQuery(this).next("label").remove();
+			jQuery(this).wrap('<label class="checkbox-inline">').after(text);
+		} else {
+			form = jQuery(this);
+			form.addClass("form-" + opt.layout);
+			form.find("input[type=text], input[type=password], input[type=email], select, textarea").addClass("form-control");
+			form.find("label").not("input[type=radio]").parent("label").addClass("control-label");
+			form.find("input[type=checkbox]").each(function () {
+				if (opt.cbInline) {
+					jQuery(this).formControls({
+						control: "checkbox"
+					});
+				} else {
+					jQuery(this).wrap('<div class="checkbox"><label>');
+				}
+			});
+			form.find("input[type=radio]").each(function () {
+				if (opt.rbInline) {
+					jQuery(this).wrap('<label class="radio-inline">');
+				} else {
+					jQuery(this).wrap('<div class="radio"><label>');
+				}
+			});
+			form.find("button, input[type=submit], input[type=button]").addClass("btn btn-primary").parent().addClass(opt.button);
+			form.find("[class^=icon-]").each(function () {
+				if (jQuery(this).prev().is("input")) {
+					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).parent().find("input[type=text]")).append(jQuery(this)));
+				} else if (jQuery(this).prev().is(".input-group")) {
+					jQuery(this).addClass("input-group-addon").prev(".input-group").append(jQuery(this));
+				} else if (jQuery(this).siblings("textarea").length) {
+					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).siblings("textarea")).append(jQuery(this)));
+				} else {
+					return;
+				}
+			});
+		}
+	});
+};
+
+function qstring(key, url) {
+	'use strict';
+	var KeysValues, KeyValue, i;
+	if (url === null || url === undefined) {
+		url = window.location.href;
+	}
+	KeysValues = url.split(/[\?&]+/);
+	for (i = 0; i < KeysValues.length; i++) {
+		KeyValue = KeysValues[i].split("=");
+		if (KeyValue[0] === key) {
+			return KeyValue[1];
+		}
+	}
+}
+
 // responsive page
 var $responsive = jQuery("#responsive").is(":visible");
 jQuery(window).resize(function () {

@@ -15,21 +15,6 @@
  */
 
 
-function qstring(key, url) {
-	'use strict';
-	var KeysValues, KeyValue, i;
-	if (url === null || url === undefined) {
-		url = window.location.href;
-	}
-	KeysValues = url.split(/[\?&]+/);
-	for (i = 0; i < KeysValues.length; i++) {
-		KeyValue = KeysValues[i].split("=");
-		if (KeyValue[0] === key) {
-			return KeyValue[1];
-		}
-	}
-}
-
 function get_imagetype() {
 	var xrefs = [];
 	jQuery('a[type^=image].gallery').each(function() {
