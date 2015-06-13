@@ -22,6 +22,7 @@ use Fisharebest\Webtrees\Theme\AbstractTheme;
 use Fisharebest\Webtrees\Theme\ThemeInterface;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Menu;
+use Fisharebest\Webtrees\Functions\Functions;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
@@ -404,7 +405,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			} else {
 				return
 					'<div class="btn-group">' .
-					'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(get_query_url()) . '" class="btn btn-default">' .
+					'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(Functions::getQueryUrl()) . '" class="btn btn-default">' .
 					I18N::translate('Login') .
 					'</a></div>';
 			}
