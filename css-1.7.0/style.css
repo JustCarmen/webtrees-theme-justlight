@@ -803,9 +803,15 @@ ul.clist {
 	float: right;
 }
 
+/* ======== branches.php ==== */
 #branches-page table {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#branches-page .descriptionbox {
+	font-weight: bold;
+	padding-top: 15px;
 }
 
 #branches-page form p {
@@ -816,12 +822,12 @@ ul.clist {
 	margin: 0;
 }
 
+/* ======== medialist.php ==== */
 #medialist-page .list_table,
 #medialist-page .list_table_controls {
 	margin: 0 auto;
 }
 
-/* ======== medialist.php ==== */
 #medialist-page form .table {
 	max-width: 75%;
 }
