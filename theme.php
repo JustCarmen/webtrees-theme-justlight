@@ -1,5 +1,4 @@
 <?php
-namespace Fisharebest\Webtrees;
 
 /**
  * JustLight Theme
@@ -17,12 +16,13 @@ namespace Fisharebest\Webtrees;
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+namespace Fisharebest\Webtrees;
 
-use Fisharebest\Webtrees\Theme\AbstractTheme;
-use Fisharebest\Webtrees\Theme\ThemeInterface;
+use Fisharebest\Webtrees\Functions\Functions;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Menu;
-use Fisharebest\Webtrees\Functions\Functions;
+use Fisharebest\Webtrees\Theme\AbstractTheme;
+use Fisharebest\Webtrees\Theme\ThemeInterface;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
@@ -160,7 +160,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			parent::formatPendingChangesLink();
 		}
 	}
-	
+
 	/** {@inheritdoc} */
 	public function formQuickSearch() {
 		try {
@@ -273,7 +273,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
 				'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
 				'<script src="' . $this->js_url . 'justlight.js"></script>' .
-				'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .				
+				'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .
 				'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
 				'<script>
 				if(jQuery(".dataTable").length){
@@ -469,12 +469,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'distribution-chart-low-values'	 => 'e5e6ef',
 			'line-width'					 => 2,
 		);
-		
+
 		if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
 			$parameters['compact-chart-box-x'] = 105;
 			$parameters['compact-chart-box-y'] = 140;
 		}
-		
+
 		if (array_key_exists($parameter_name, $parameters)) {
 			return $parameters[$parameter_name];
 		} else {
@@ -544,7 +544,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 
 		return '<script>' .
-			'var WT_BASE_URL = "'. WT_BASE_URL . '";' .
+			'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
 			'var WT_TREE_TITLE = "' . $tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
 			'</script>';
