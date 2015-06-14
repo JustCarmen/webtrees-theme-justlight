@@ -318,21 +318,21 @@ if (WT_SCRIPT_NAME === "individual.php") {
 
 function updateHeader() {
 	// keep the jQuery-ui layout here
-	jQuery("#header_accordion1").each(function(){
-		jQuery(this).find(".name_one").each(function(){
+	jQuery("#header_accordion1").each(function () {
+		jQuery(this).find(".name_one").each(function () {
 			var l = jQuery('<div class="pull-left">');
 			l.append(jQuery(this).find(".ui-icon").outerHtml());
 			l.append(jQuery(this).find(".NAME").outerHtml());
 			var r = jQuery('<div class="pull-right">');
-			r.append(jQuery(this).find("#dates").outerHtml());			
+			r.append(jQuery(this).find("#dates").outerHtml());
 			r.find("#dates").prepend(jQuery(this).find("#sex").outerHtml());
 			r.append(jQuery(this).find(".header_age").outerHtml());
 			jQuery(this).html("").append(l).append(r);
-			
+
 		})
 	})
-	
-	
+
+
 }
 
 function updateUI() {
@@ -395,9 +395,14 @@ function openPanel(panel) {
 	var source = jQuery(".panel-heading a", panel).data("source");
 	var target = jQuery(".panel-body", panel);
 	if (target.html().length === 0 || target.find(".loading-image").length) {
-		target.load(source, function(){
-			jQuery(this).find("form").formControls({layout: "inline", cbInline: true});
-			jQuery(this).find("input[type=checkbox]").not("form input[type=checkbox]").formControls({control: "checkbox"});
+		target.load(source, function () {
+			jQuery(this).find("form").formControls({
+				layout: "inline",
+				cbInline: true
+			});
+			jQuery(this).find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
+				control: "checkbox"
+			});
 		});
 	}
 

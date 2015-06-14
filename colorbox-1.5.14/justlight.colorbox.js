@@ -17,7 +17,7 @@
 
 function get_imagetype() {
 	var xrefs = [];
-	jQuery('a[type^=image].gallery').each(function() {
+	jQuery('a[type^=image].gallery').each(function () {
 		var xref = qstring('mid', jQuery(this).attr('href'));
 		jQuery(this).attr('id', xref);
 		xrefs.push(xref);
@@ -31,8 +31,8 @@ function get_imagetype() {
 			'csrf': WT_CSRF_TOKEN,
 			'xrefs': xrefs
 		},
-		success: function(data) {
-			jQuery.each(data, function(index, value) {
+		success: function (data) {
+			jQuery.each(data, function (index, value) {
 				jQuery('a[id=' + index + ']').attr('data-obje-type', value);
 			});
 		}
@@ -81,7 +81,7 @@ function resizeImg() {
 }
 
 // add colorbox function to all images on the page when first clicking on an image.
-jQuery("body").one('click', 'a.gallery', function() {
+jQuery("body").one('click', 'a.gallery', function () {
 	get_imagetype();
 
 	// General (both images and pdf)
@@ -97,23 +97,23 @@ jQuery("body").one('click', 'a.gallery', function() {
 	// Image settings
 	jQuery("a[type^=image].gallery").colorbox({
 		photo: true,
-		scalePhotos: function() {
+		scalePhotos: function () {
 			if (jQuery(this).data('obje-type') === 'photo') {
 				return true;
 			}
 		},
 		maxWidth: "90%",
 		maxHeight: "90%",
-		title: function() {
+		title: function () {
 			var img_title = jQuery(this).data("title");
 			return "<div class=\"title\">" + img_title + "</div>";
 		},
-		onComplete: function() {
+		onComplete: function () {
 			if (jQuery(this).data('obje-type') !== 'photo') {
 				resizeImg();
 			}
 			jQuery(".cboxPhoto").wheelzoom();
-			jQuery(".cboxPhoto img").on("click", function(e) {
+			jQuery(".cboxPhoto img").on("click", function (e) {
 				e.preventDefault();
 			});
 			longTitles();
@@ -125,17 +125,17 @@ jQuery("body").one('click', 'a.gallery', function() {
 		width: "75%",
 		height: "90%",
 		iframe: true,
-		title: function() {
+		title: function () {
 			var pdf_title = jQuery(this).data("title");
 			return '<div class="title">' + pdf_title + '</div>';
 		},
-		onComplete: function() {
+		onComplete: function () {
 			longTitles();
 		}
 	});
 
 	// Do not open the gallery when clicking on the mainimage on the individual page
-	jQuery('a.gallery').each(function() {
+	jQuery('a.gallery').each(function () {
 		if (jQuery(this).parents("#indi_mainimage").length > 0) {
 			jQuery(this).colorbox({
 				rel: "nofollow"
