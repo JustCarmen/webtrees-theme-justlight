@@ -15,13 +15,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-namespace Fisharebest\Webtrees;
+namespace JustCarmen\WebtreesAddOns\Theme;
 
+use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Filter;
+use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\Functions\Functions;
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Menu;
+use Fisharebest\Webtrees\Module;
 use Fisharebest\Webtrees\Theme\AbstractTheme;
 use Fisharebest\Webtrees\Theme\ThemeInterface;
+use JustCarmen\WebtreesAddOns\Module\JustLightThemeOptionsModule;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
@@ -68,7 +74,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<div id="responsive"></div>' .
 				$this->flashMessagesContainer(FlashMessages::getMessages()) .
 				'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			parent::bodyHeader();
 		}
 	}
@@ -85,7 +91,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<body class="container container-popup">' .
 				'<main id="content"' . $class . '" role="main">' .
 				$this->flashMessagesContainer(FlashMessages::getMessages());
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::bodyHeaderPopupWindow();
 		}
 	}
@@ -131,7 +137,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<div id="push"></div>' .
 				'</div>' .
 				'<footer>' . $this->footerContent() . '</footer>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			parent::footerContainer();
 		}
 	}
@@ -142,7 +148,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			return
 				$this->formatContactLinks() .
 				'<div class="credits">' . $this->logoPoweredBy() . '</div>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			parent::footerContent();
 		}
 	}
@@ -155,7 +161,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			} else {
 				return '';
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			parent::formatPendingChangesLink();
 		}
 	}
@@ -173,7 +179,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			} else {
 				return '';
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::formQuickSearch();
 		}
 	}
@@ -187,7 +193,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<input class="form-control" type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
 				'</div>' .
 				'<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::formQuickSearchFields();
 		}
 	}
@@ -206,7 +212,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$this->secondaryMenuContainer($this->secondaryMenu()) .
 				$this->menuLogin() .
 				'</div>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::formatSecondaryMenu();
 		}
 	}
@@ -224,7 +230,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			} else {
 				return '';
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::formatTreeTitle();
 		}
 	}
@@ -238,7 +244,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
 				$this->formatSecondaryMenu() .
 				'</div>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::headerContent();
 		}
 	}
@@ -257,7 +263,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.4/';
 			$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
 			$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::hookAfterInit();
 		}
 	}
@@ -289,7 +295,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					document.getElementsByTagName("head")[0].appendChild(newSheet);
 				}
 				</script>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::hookFooterExtraJavascript();
 		}
 	}
@@ -302,7 +308,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
 			}
 			return $html;
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::hookHeaderExtraContent();
 		}
 	}
@@ -327,7 +333,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			}
 
 			return $menus;
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			parent::individualBoxMenuFamilyLinks($individual);
 		}
 	}
@@ -338,7 +344,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			return
 				parent::logoPoweredBy() .
 				'<a class="link" href="http://www.justcarmen.nl" target="_blank">Design: justcarmen.nl</a>';
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::logoPoweredBy();
 		}
 	}
@@ -391,7 +397,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				});
 				$menu->setSubmenus($submenus);
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::menuLists();
 		}
 		return $menu;
@@ -408,7 +414,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					I18N::translate('Login') .
 					'</a></div>';
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::menuLogin();
 		}
 	}
@@ -450,7 +456,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$menu->addSubmenu($this->menuLogout());
 			}
 			return $menu;
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::menuMyPages();
 		}
 	}
@@ -511,7 +517,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			} else {
 				return parent::primaryMenu();
 			}
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::primaryMenu();
 		}
 	}
@@ -558,7 +564,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$this->menuThemes(),
 				$this->menuMyPages(),
 			));
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::secondaryMenu();
 		}
 	}
@@ -583,7 +589,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$html .= '</div>';
 			}
 			return $html;
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::secondaryMenuContainer($menus);
 		}
 	}
@@ -599,7 +605,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$this->assetUrl() . 'justlight.css'
 			);
 			return array_merge(parent::stylesheets(), $stylesheets);
-		} catch (Exception $ex) {
+		} catch (\Exception $ex) {
 			return parent::stylesheets();
 		}
 	}
