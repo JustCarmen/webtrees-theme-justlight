@@ -1839,14 +1839,6 @@ blockquote {
 	font-size: 85%;
 }
 
-h4.panel-title {
-	font-weight: normal;
-}
-
-.panel-primary h4.panel-title {
-    font-weight: bold;
-}
-
 .panel-primary .panel-heading a {
 	text-decoration: none;
 }
