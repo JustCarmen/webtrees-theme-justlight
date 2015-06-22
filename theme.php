@@ -122,9 +122,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	private function formatCompactMenuItem($menu) {
+		$attrs = '';
+		foreach ($menu->getAttrs() as $key => $value) {
+			$attrs .= ' ' . $key . '="' . Filter::escapeHtml($value) . '"';
+		}
 		return
 			'<li class="' . $menu->getClass() . '">' .
-			'<a href="' . $menu->getLink() . '"' . $menu->getOnclick() . '>' . $menu->getLabel() . '</a>' .
+			'<a href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a>' .
 			'</li>';
 	}
 
@@ -365,11 +369,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
-	private function menuCompact(Individual $individual) {
+	private function menuCompact(Individual $individual, $surname) {
 		$menu = new Menu(I18N::translate('View'), '#', 'menu-view');
 
 		$menu->addSubmenu($this->menuChart($individual));
-		$menu->addSubmenu($this->menuLists());
+		$menu->addSubmenu($this->menuLists($surname));
 
 		/** $menuReports could return null */
 		if ($this->themeOption('compact_menu_reports') && $this->menuReports()) {
@@ -387,9 +391,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $menu;
 	}
 
-	public function menuLists() {
+	public function menuLists($surname) {
 		try {
-			$menu = parent::menuLists();
+			$menu = parent::menuLists($surname);
 			if ($this->themeOption('media_menu')) {
 				$submenus = array_filter($menu->getSubmenus(), function (Menu $menu) {
 					return $menu->getClass() !== 'menu-list-obje';
@@ -408,7 +412,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				return null;
 			} else {
 				return
-					'<div class="btn-group">' .
+					'<div class="menu-login btn-group">' .
 					'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(Functions::getQueryUrl()) . '" class="btn btn-default">' .
 					I18N::translate('Login') .
 					'</a></div>';
@@ -494,13 +498,14 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$menus = $this->themeOption('menu');
 			if ($this->tree && $menus) {
 				$individual = $controller->getSignificantIndividual();
+				$surname = $controller->getSignificantSurname();
 				foreach ($menus as $menu) {
 					$label = $menu['label'];
 					$sort = $menu['sort'];
 					$function = $menu['function'];
 					if ($sort > 0) {
 						if ($function === 'menuCompact') {
-							$menubar[] = $this->menuCompact($individual);
+							$menubar[] = $this->menuCompact($individual, $surname);
 						} elseif ($function === 'menuMedia') {
 							$menubar[] = $this->menuMedia();
 						} elseif ($function === 'menuChart') {
@@ -573,7 +578,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		try {
 			$html = '';
 			foreach ($menus as $menu) {
-				$html .= '<div class="btn-group">';
+				$html .= '<div class="' . $menu->getClass() . ' btn-group">';
 				$html .= '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">';
 				$html .= $menu->getLabel();
 				$html .= '<span class="caret"></span>';
