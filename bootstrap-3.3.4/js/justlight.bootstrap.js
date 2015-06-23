@@ -240,14 +240,16 @@ if (WT_SCRIPT_NAME === "lifespan.php") {
 	
 	jQuery("#lifespan-people .itr").each(function () {
 		jQuery(this).attr("data-toggle", "popover");
-		var content = jQuery(this).find(".popup").html();
+		var title = jQuery(this).find(".popup div:first").html();
+		var content = jQuery(this).find(".popup div").not(":first").outerHtml();
 		jQuery(this).find(".popup").remove();
 		jQuery(this).popover({
+			title: title,
 			content: content,
 			html: true,
 			trigger: 'manual',
 			placement: 'bottom',
-			container: '#lifespan-page'
+			viewport: '#lifespan-chart'
 		}).on(manualTrigger(jQuery(this), true, true));
 	});
 }

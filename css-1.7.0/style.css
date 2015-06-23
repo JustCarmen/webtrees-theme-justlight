@@ -3058,7 +3058,12 @@ img[src*="vline"] {
 	text-align: left;
 }
 
+#lifespan-page .popover-title {
+	font-weight: 900;
+}
+
 #lifespan-page .popover-content {
+	font-size: 85%;
 	white-space: normal;
 }
 
@@ -3097,21 +3102,6 @@ img[src*="vline"] {
 	cursor: pointer;
 	display: inline;
 	white-space: nowrap;
-}
-
-#lifespan-people .popup div:first-of-type {
-	font-weight: 900;
-}
-
-#lifespan-people .popup {
-	left:        0;
-	right:       auto;
-	white-space: nowrap;
-}
-
-[dir=rtl] #lifespan-people .popup {
-	left:  auto;
-	right: 0;
 }
 
 /*-- Pedigree ---- */
