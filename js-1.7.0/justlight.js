@@ -63,7 +63,7 @@ jQuery.fn.formControls = function (options) {
 					jQuery(this).wrap('<div class="radio"><label>');
 				}
 			});
-			form.find("button, input[type=submit], input[type=button]").addClass("btn btn-primary").parent().addClass(opt.button);
+			form.find("button, input[type=submit], input[type=button], input[type=reset]").addClass("btn btn-primary").parent().addClass(opt.button);
 			form.find("[class^=icon-]").each(function () {
 				if (jQuery(this).prev().is("input")) {
 					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).parent().find("input[type=text]")).append(jQuery(this)));

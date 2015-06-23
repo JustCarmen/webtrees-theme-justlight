@@ -235,6 +235,23 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 	});
 }
 
+// Bootstrap popover for lifespan chart
+if (WT_SCRIPT_NAME === "lifespan.php") {
+	
+	jQuery("#lifespan-people .itr").each(function () {
+		jQuery(this).attr("data-toggle", "popover");
+		var content = jQuery(this).find(".popup").html();
+		jQuery(this).find(".popup").remove();
+		jQuery(this).popover({
+			content: content,
+			html: true,
+			trigger: 'manual',
+			placement: 'bottom',
+			container: '#lifespan-page'
+		}).on(manualTrigger(jQuery(this), true, true));
+	});
+}
+
 // Childbox popover
 jQuery("#childarrow a").waitUntilExists(function () {
 	content = jQuery(this).parent().find("#childbox").remove();
