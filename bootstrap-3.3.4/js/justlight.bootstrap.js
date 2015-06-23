@@ -221,7 +221,7 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 
 	jQuery("#fan_chart #fanmap area").each(function () {
 		var id = jQuery(this).attr("href").split("#");
-		var obj = jQuery("#fan_chart > div[id=" + id[1] + "]");
+		var obj = jQuery(".fan_chart_menu[id=" + id[1] + "]");
 		obj.find(".person_box").addClass("fan-chart-list");
 		var title = obj.find(".name1:first").remove();
 		var content = obj.html();
@@ -231,7 +231,7 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 			html: true,
 			trigger: 'manual',
 			container: 'body'
-		}).on(manualTrigger(jQuery(this), true, false));
+		}).on(manualTrigger(jQuery(this), true, true));
 	});
 }
 
