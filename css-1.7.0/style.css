@@ -1014,6 +1014,10 @@ ul.clist {
 }
 
 /* Bootstrap popovers */
+.popover-title {
+	font-weight: 900;
+}
+
 .popover-content {
 	white-space: pre;
 }
@@ -3056,10 +3060,6 @@ img[src*="vline"] {
 
 [dir=rtl] #lifespan-page table tr:last-child th {
 	text-align: left;
-}
-
-#lifespan-page .popover-title {
-	font-weight: 900;
 }
 
 #lifespan-page .popover-content {
