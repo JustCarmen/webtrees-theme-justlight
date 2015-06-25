@@ -2597,7 +2597,7 @@ table.dataTable thead > tr > th {
 }
 
 #save-cancel {
-    background: url("../jquery-ui-1.11.2/images/ui-bg_glass_50_99c2ff_1x400.png");
+    background: url("../jquery-ui-1.11.4/images/ui-bg_glass_50_99c2ff_1x400.png");
     bottom: 0;
     left: 0;
     position: fixed;

@@ -460,7 +460,7 @@ i.icon-uarrow:before {
 
 /* errors - use same template as ui-state-error */
 .error {
-	background: url("../jquery-ui-1.11.2/images/ui-bg_glass_95_fef1ec_1x400.png");   
+	background: url("../jquery-ui-1.11.4/images/ui-bg_glass_95_fef1ec_1x400.png");   
     color: #cd0a0a;
 }
 
