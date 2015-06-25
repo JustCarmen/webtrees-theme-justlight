@@ -45,7 +45,7 @@ jQuery.fn.formControls = function (options) {
 		} else {
 			form = jQuery(this);
 			form.addClass("form-" + opt.layout);
-			form.find("input[type=text], input[type=password], input[type=email], select, textarea").addClass("form-control");
+			form.find("input[id=NAME], input[type=text], input[type=password], input[type=email], select, textarea").addClass("form-control");
 			form.find("label").not("input[type=radio]").parent("label").addClass("control-label");
 			form.find("input[type=checkbox]").each(function () {
 				if (opt.cbInline) {
@@ -63,9 +63,14 @@ jQuery.fn.formControls = function (options) {
 					jQuery(this).wrap('<div class="radio"><label>');
 				}
 			});
+			form.find("span[id=NAME_display]").each(function(){
+				jQuery(this).replaceWith('<input id="NAME_display" type="text" class="form-control" value="' + jQuery(this).text() + '" dir="auto" disabled>')
+			});
 			form.find("button, input[type=submit], input[type=button], input[type=reset]").addClass("btn btn-primary").parent().addClass(opt.button);
 			form.find("[class^=icon-]").each(function () {
-				if (jQuery(this).prev().is("input")) {
+				if (jQuery(this).prev().is("input[id=NAME_display]")) {
+					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).siblings("input[id=NAME_display], input[type=hidden]")).append(jQuery(this)));
+				} else if (jQuery(this).prev().is("input")) {
 					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).parent().find("input[type=text]")).append(jQuery(this)));
 				} else if (jQuery(this).prev().is(".input-group")) {
 					jQuery(this).addClass("input-group-addon").prev(".input-group").append(jQuery(this));
@@ -222,12 +227,12 @@ jQuery(document).ajaxComplete(function () {
 });
 
 /**
- * This theme uses a fixed header. 
+ * This theme uses a fixed header.
  * This code prevents a target from disappearing behind the header if activated by an anchor.
  * Check any href for an anchor. If exists, and in document, scroll to it.
  * If href argument omitted, assumes context (this) is HTML Element,
  * which will be the case when invoked by jQuery after an event
- * 
+ *
  * @param href string
  */
 

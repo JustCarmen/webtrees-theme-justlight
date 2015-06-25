@@ -2620,13 +2620,7 @@ table.dataTable thead > tr > th {
 
 /* ===== Edit interface pop-ups ===== */
 #edit_interface-page #NAME_display {
-	border: 1px solid #ccc;
 	border-radius: 3px;
-	display: table-cell;
-	font-size: 12px;
-	line-height: 1.5em;
-	height: 30px;
-	padding: 5px 10px;
 }
 
 #edit_interface-page .sour-checkboxes {
