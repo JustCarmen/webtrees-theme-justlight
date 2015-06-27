@@ -3062,21 +3062,20 @@ img[src*="vline"] {
 }
 
 #lifespan-chart {
-	padding:    0 10px 10px;
-	margin:     0 auto;
+	padding: 0 10px 10px;
+	margin: 0 auto;
 	min-height: 500px;
 }
 
 #lifespan-scale {
-	background:  transparent url(images/lifespan-chunk.png) repeat-x left bottom;
-	height:      55px;
-	display:     inline-block;
-	white-space: nowrap;
+	background: transparent url(images/lifespan-chunk.png) repeat-x left bottom;
+	display: inline-block;
+	padding: 37px;
 }
 
 #lifespan-scale .date {
 	display: inline-block;
-	width:   70px;
+	width: 70px;
 }
 
 [dir=rtl] #lifespan-scale .date {
