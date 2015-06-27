@@ -261,7 +261,9 @@ function scroll_if_anchor(href) {
 scroll_if_anchor(window.location.hash);
 
 // Intercept all anchor clicks
-jQuery("body").on("click", "a[href^='#']", scroll_if_anchor);
+jQuery("body").on("click", "a[href^='#']", function(){
+	scroll_if_anchor(jQuery(this).attr("href"));
+});
 
 /* page specific functions */
 
@@ -415,7 +417,6 @@ function openPanel(panel) {
 	panel.addClass("panel-primary").removeClass("panel-default");
 	panel.prev(".panel").addClass("panel-stop");
 	panel.parent().prepend(panel);
-	window.scrollTo(0, 0);
 }
 
 // Styling of the family page
