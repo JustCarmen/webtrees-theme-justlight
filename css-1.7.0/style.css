@@ -1016,6 +1016,7 @@ ul.clist {
 /* Bootstrap popovers */
 .popover-title {
 	font-weight: 900;
+	line-height: 1.5em;
 }
 
 .popover-content {
