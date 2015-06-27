@@ -1811,12 +1811,12 @@ blockquote {
 	font-size: 85%;
 }
 
-.panel-primary .panel-heading a {
+.panel-heading a {
 	text-decoration: none;
 }
 
-.panel-primary .panel-heading a:hover {
-	text-decoration: underline;
+.panel-heading a {
+	display: block;
 }
 
 .panel-heading a:after {
@@ -1831,6 +1831,10 @@ blockquote {
 
 .panel-heading a.collapsed:after {
 	content:"\f054";
+}
+
+.panel-title {
+	padding: 0;
 }
 
 .panel-body {
