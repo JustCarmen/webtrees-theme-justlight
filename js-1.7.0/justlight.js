@@ -386,15 +386,14 @@ function tabsToAccordions() {
 			}
 		}
 
+		jQuery(this).before(e).remove();
+		accordionControls();
+
 		if (document.cookie.indexOf("indi-tab") < 0) {
 			openPanel(jQuery("#collapse0", e).addClass("in").parent());
 		} else {
 			openPanel(jQuery(".in", e).parent());
 		}
-
-		jQuery(this).before(e);
-		jQuery(this).remove();
-		accordionControls();
 	});
 }
 
