@@ -351,7 +351,8 @@ function updateUI() {
 
 	jQuery('.panel').on('hidden.bs.collapse', function () {
 		jQuery(this).addClass("panel-default").removeClass("panel-primary");
-		jQuery(".panel-stop").after(jQuery(this)).removeClass("panel-stop");
+		jQuery(".panel-prev").after(jQuery(this)).removeClass("panel-prev");
+		jQuery(".panel-next").removeClass("panel-next");
 	});
 }
 
@@ -395,6 +396,31 @@ function tabsToAccordions() {
 
 		jQuery(this).before(e);
 		jQuery(this).remove();
+		accordionControls();
+	});
+}
+
+function accordionControls(){
+	jQuery("#accordion").before('<div id="controls row"><div id="prev" class="pull-left"><i class="fa fa-hand-o-left"></i> <a href="#">' + TEXT_PREV + '</a></div><div id="next" class="pull-right"><a href="#">' + TEXT_NEXT + '</a> <i href="#" class="fa fa-hand-o-right"></i></div></div><div class="clearfix"></div>');
+
+	jQuery("#main").on("click", "#prev", function(e){
+		e.preventDefault();
+		jQuery(".in").collapse("hide");
+		if (jQuery(".panel-prev").length) {
+			jQuery(".panel-prev .panel-collapse").collapse("show");
+		} else {
+			jQuery(".panel:last .panel-collapse").collapse("show");
+		}
+	});
+
+	jQuery("#main").on("click", "#next", function(e){
+		e.preventDefault();
+		jQuery(".in").collapse("hide");
+		if (jQuery(".panel-next").length) {
+			jQuery(".panel-next .panel-collapse").collapse("show");
+		} else {
+			jQuery(".panel:eq(1) .panel-collapse").collapse("show");
+		}
 	});
 }
 
@@ -415,7 +441,8 @@ function openPanel(panel) {
 
 	jQuery.cookie("indi-tab", jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
 	panel.addClass("panel-primary").removeClass("panel-default");
-	panel.prev(".panel").addClass("panel-stop");
+	panel.prev(".panel").addClass("panel-prev");
+	panel.next(".panel").addClass("panel-next");
 	panel.parent().prepend(panel);
 }
 

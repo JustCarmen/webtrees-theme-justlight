@@ -556,6 +556,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
 			'var WT_TREE_TITLE = "' . $tree_title . '";' .
 			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
+			'var TEXT_PREV = "' . I18N::translate('previous') . '";' .
+			'var TEXT_NEXT = "' . I18N::translate('next') . '";' .
 			'</script>';
 	}
 
