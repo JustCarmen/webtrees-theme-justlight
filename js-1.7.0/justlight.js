@@ -406,7 +406,9 @@ function accordionControls(){
 	jQuery("#main").on("click", "#prev", function(e){
 		e.preventDefault();
 		jQuery(".in").collapse("hide");
-		if (jQuery(".panel-prev").length) {
+		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
+			jQuery(".panel:first .panel-collapse").collapse("show");
+		} else if (jQuery(".panel-prev").length) {
 			jQuery(".panel-prev .panel-collapse").collapse("show");
 		} else {
 			jQuery(".panel:last .panel-collapse").collapse("show");
@@ -416,7 +418,9 @@ function accordionControls(){
 	jQuery("#main").on("click", "#next", function(e){
 		e.preventDefault();
 		jQuery(".in").collapse("hide");
-		if (jQuery(".panel-next").length) {
+		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
+			jQuery(".panel:first .panel-collapse").collapse("show");
+		} else if (jQuery(".panel-next").length) {
 			jQuery(".panel-next .panel-collapse").collapse("show");
 		} else {
 			jQuery(".panel:eq(1) .panel-collapse").collapse("show");
