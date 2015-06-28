@@ -18,7 +18,7 @@
 
 /* General functions (fired on every page */
 
-/* global WT_SCRIPT_NAME */
+/* global WT_SCRIPT_NAME, TEXT_PREV, TEXT_NEXT */
 
 // general functions
 jQuery.fn.outerHtml = function () {
