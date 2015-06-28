@@ -63,7 +63,7 @@ jQuery.fn.formControls = function (options) {
 					jQuery(this).wrap('<div class="radio"><label>');
 				}
 			});
-			form.find("span[id=NAME_display]").each(function(){
+			form.find("span[id=NAME_display]").each(function () {
 				jQuery(this).replaceWith('<input id="NAME_display" type="text" class="form-control" value="' + jQuery(this).text() + '" dir="auto" disabled>')
 			});
 			form.find("button, input[type=submit], input[type=button], input[type=reset]").addClass("btn btn-primary").parent().addClass(opt.button);
@@ -261,7 +261,7 @@ function scroll_if_anchor(href) {
 scroll_if_anchor(window.location.hash);
 
 // Intercept all anchor clicks
-jQuery("body").on("click", "a[href^='#']", function(){
+jQuery("body").on("click", "a[href^='#']", function () {
 	scroll_if_anchor(jQuery(this).attr("href"));
 });
 
@@ -338,8 +338,6 @@ function updateHeader() {
 
 		})
 	})
-
-
 }
 
 function updateUI() {
@@ -400,10 +398,10 @@ function tabsToAccordions() {
 	});
 }
 
-function accordionControls(){
+function accordionControls() {
 	jQuery("#accordion").before('<div id="controls row"><div id="prev" class="pull-left"><i class="fa fa-hand-o-left"></i> <a href="#">' + TEXT_PREV + '</a></div><div id="next" class="pull-right"><a href="#">' + TEXT_NEXT + '</a> <i href="#" class="fa fa-hand-o-right"></i></div></div><div class="clearfix"></div>');
 
-	jQuery("#main").on("click", "#prev", function(e){
+	jQuery("#main").on("click", "#prev", function (e) {
 		e.preventDefault();
 		jQuery(".in").collapse("hide");
 		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
@@ -415,7 +413,7 @@ function accordionControls(){
 		}
 	});
 
-	jQuery("#main").on("click", "#next", function(e){
+	jQuery("#main").on("click", "#next", function (e) {
 		e.preventDefault();
 		jQuery(".in").collapse("hide");
 		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
