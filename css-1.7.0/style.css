@@ -262,7 +262,8 @@ div.fact_SHARED_NOTE {
 }
 
 .quickfacts a {
-	padding: 0 3px;
+	padding: 5px 3px;
+	float: left;
 }
 
 .tabs_table {
@@ -1875,6 +1876,10 @@ blockquote {
 
 .media-separator {
 	display: none;
+}
+
+.form-inline .quickfacts-form-group {
+	display: block;
 }
 
 /* Relatives tab */

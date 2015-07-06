@@ -430,13 +430,7 @@ function openPanel(panel) {
 	var target = jQuery(".panel-body", panel);
 	if (target.html().length === 0 || target.find(".loading-image").length) {
 		target.load(source, function () {
-			jQuery(this).find("form").formControls({
-				layout: "inline",
-				cbInline: true
-			});
-			jQuery(this).find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
-				control: "checkbox"
-			});
+			styleForms(target);
 		});
 	}
 
@@ -445,6 +439,23 @@ function openPanel(panel) {
 	panel.prev(".panel").addClass("panel-prev");
 	panel.next(".panel").addClass("panel-next");
 	panel.parent().prepend(panel);
+}
+
+// Styling the forms
+function styleForms(obj) {
+	obj.find("form").formControls({
+		layout: "inline",
+		cbInline: true
+	});
+	obj.find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
+		control: "checkbox"
+	});
+	obj.find("[name=newfactform]").each(function(){
+		jQuery(this).children().not(".quickfacts").wrapAll('<div class="form-group">');
+		jQuery(this).find(".quickfacts").wrap('<div class="form-group quickfacts-form-group">');
+		jQuery(this).find("select").addClass("input-sm");
+		jQuery(this).find(".btn").addClass("btn-sm");
+	});
 }
 
 // Styling of the family page
