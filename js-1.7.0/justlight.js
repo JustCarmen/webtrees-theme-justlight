@@ -400,28 +400,11 @@ function tabsToAccordions() {
 function accordionControls() {
 	jQuery("#accordion").before('<div id="controls row"><div id="prev" class="pull-left"><i class="fa fa-hand-o-left"></i> <a href="#">' + TEXT_PREV + '</a></div><div id="next" class="pull-right"><a href="#">' + TEXT_NEXT + '</a> <i href="#" class="fa fa-hand-o-right"></i></div></div><div class="clearfix"></div>');
 
-	jQuery("#main").on("click", "#prev", function (e) {
+	jQuery("#main").on("click", "#prev, #next", function (e) {
 		e.preventDefault();
+		var panel = jQuery(".panel-" + jQuery(this).attr("id"));
 		jQuery(".in").collapse("hide");
-		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
-			jQuery(".panel:first .panel-collapse").collapse("show");
-		} else if (jQuery(".panel-prev").length) {
-			jQuery(".panel-prev .panel-collapse").collapse("show");
-		} else {
-			jQuery(".panel:last .panel-collapse").collapse("show");
-		}
-	});
-
-	jQuery("#main").on("click", "#next", function (e) {
-		e.preventDefault();
-		jQuery(".in").collapse("hide");
-		if (!jQuery(".panel-prev").length && !jQuery(".panel-next").length) {
-			jQuery(".panel:first .panel-collapse").collapse("show");
-		} else if (jQuery(".panel-next").length) {
-			jQuery(".panel-next .panel-collapse").collapse("show");
-		} else {
-			jQuery(".panel:eq(1) .panel-collapse").collapse("show");
-		}
+		panel.find(".panel-collapse").collapse("show");
 	});
 }
 
@@ -436,8 +419,17 @@ function openPanel(panel) {
 
 	jQuery.cookie("indi-tab", jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
 	panel.addClass("panel-primary").removeClass("panel-default");
-	panel.prev(".panel").addClass("panel-prev");
-	panel.next(".panel").addClass("panel-next");
+	if(panel.prev(".panel").length) {
+		panel.prev(".panel").addClass("panel-prev");
+	} else {
+		jQuery(".panel:last").addClass("panel-prev");
+	}
+	
+	if (panel.next(".panel").length) {
+		panel.next(".panel").addClass("panel-next");
+	} else {
+		jQuery(".panel:first").addClass("panel-next");
+	}	
 	panel.parent().prepend(panel);
 }
 
