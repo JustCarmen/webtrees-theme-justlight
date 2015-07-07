@@ -1482,10 +1482,6 @@ ul.clist {
 	margin: 0 5px 1px 5px;
 }
 
-.add_fav_ref label:after {
-	content: ": ";
-}
-
 /* === Who is online block === */
 .logged_in_list {
 	margin: 5px 0 0 0;
@@ -1522,10 +1518,6 @@ ul.clist {
 
 [dir=rtl] .stat-table1 .stat-cell {
 	padding: 0 0 0 3px;
-}
-
-.stat-table1 .facts_label:after {
-	content: ":";
 }
 
 .stat-table2 {
@@ -1711,10 +1703,6 @@ span.link_text {
 
 .indi_name_details {
 	border-radius: 0;
-}
-
-.indi_name_details dt:after {
-	content: ":";
 }
 
 .indi_name_details .name1 {
