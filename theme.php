@@ -588,6 +588,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				if ($menu->getsubmenus()) {
 					$html .= '<ul class="dropdown-menu">';
 					foreach ($menu->getsubmenus() as $submenu) {
+						if($submenu->getClass() === 'menu-logout') {
+							$html .= '<li role="separator" class="divider"></li>';					
+						}
 						$html .= $submenu->getMenuAsList();
 					}
 					$html .= '</ul>';
