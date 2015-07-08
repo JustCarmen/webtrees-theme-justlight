@@ -349,8 +349,6 @@ function updateUI() {
 
 	jQuery('.panel').on('hidden.bs.collapse', function () {
 		jQuery(this).addClass("panel-default").removeClass("panel-primary");
-		jQuery(".panel-prev").after(jQuery(this)).removeClass("panel-prev");
-		jQuery(".panel-next").removeClass("panel-next");
 	});
 }
 
@@ -372,14 +370,14 @@ function tabsToAccordions() {
 		});
 		var n = new Array;
 		jQuery(this).find(">div").each(function (index) {
-			if (index == jQuery.cookie("indi-tab")) {
+			if (index === parseInt(jQuery.cookie("indi-tab"))) {
 				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
 			} else {
 				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
 			}
 		});
 		for (var r = 0; r < t.length; r++) {
-			if (r == jQuery.cookie("indi-tab")) {
+			if (r === parseInt(jQuery.cookie("indi-tab"))) {
 				e.append('<div class="panel panel-primary">' + t[r] + n[r] + '</div>');
 			} else {
 				e.append('<div class="panel panel-default">' + t[r] + n[r] + '</div>');
@@ -398,39 +396,57 @@ function tabsToAccordions() {
 }
 
 function accordionControls() {
-	jQuery("#accordion").before('<div id="controls row"><div id="prev" class="pull-left"><i class="fa fa-hand-o-left"></i> <a href="#">' + TEXT_PREV + '</a></div><div id="next" class="pull-right"><a href="#">' + TEXT_NEXT + '</a> <i href="#" class="fa fa-hand-o-right"></i></div></div><div class="clearfix"></div>');
+	jQuery("#accordion").before('<div id="controls row"><div id="prev" class="pull-left"><i class="fa fa-hand-o-left"></i> <a href="#"></a></div><div id="next" class="pull-right"><a href="#"></a> <i href="#" class="fa fa-hand-o-right"></i></div></div><div class="clearfix"></div>');
 
 	jQuery("#main").on("click", "#prev, #next", function (e) {
 		e.preventDefault();
 		var panel = jQuery(".panel-" + jQuery(this).attr("id"));
-		jQuery(".in").collapse("hide");
 		panel.find(".panel-collapse").collapse("show");
+		jQuery(".in").collapse("hide");
 	});
 }
 
 function openPanel(panel) {
 	var source = jQuery(".panel-heading a", panel).data("source");
 	var target = jQuery(".panel-body", panel);
+	var active = parseInt(jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
+	var count = jQuery(".panel").length;
+
 	if (target.html().length === 0 || target.find(".loading-image").length) {
 		target.load(source, function () {
 			styleForms(target);
 		});
 	}
 
-	jQuery.cookie("indi-tab", jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
-	panel.addClass("panel-primary").removeClass("panel-default");
-	if(panel.prev(".panel").length) {
-		panel.prev(".panel").addClass("panel-prev");
-	} else {
-		jQuery(".panel:last").addClass("panel-prev");
+	/* Remove old references */
+	if (!jQuery(".panel:first").find("#collapse0").length) {
+		jQuery(".panel-prev").after(jQuery(".panel:first"));
 	}
-	
-	if (panel.next(".panel").length) {
-		panel.next(".panel").addClass("panel-next");
+
+	jQuery(".panel-prev").removeClass("panel-prev");
+	jQuery(".panel-next").removeClass("panel-next");
+
+	/* Add new references */
+	var panel_prev = jQuery("#collapse" + (active - 1)).parent();
+	var panel_next = jQuery("#collapse" + (active + 1)).parent();
+
+	jQuery.cookie("indi-tab", active);
+	panel.addClass("panel-primary").removeClass("panel-default").parent().prepend(panel);
+
+	if (panel_prev.length) {
+		panel_prev.addClass("panel-prev");
 	} else {
-		jQuery(".panel:first").addClass("panel-next");
-	}	
-	panel.parent().prepend(panel);
+		panel_prev = jQuery("#collapse" + (count - 1)).parent().addClass("panel-prev");
+	}
+
+	if (panel_next.length) {
+		panel_next.addClass("panel-next");
+	} else {
+		panel_next = jQuery("#collapse0").parent().addClass("panel-next");
+	}
+
+	jQuery("#prev a").text(jQuery(".panel-title", panel_prev).text());
+	jQuery("#next a").text(jQuery(".panel-title", panel_next).text());
 }
 
 // Styling the forms
@@ -442,7 +458,7 @@ function styleForms(obj) {
 	obj.find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
 		control: "checkbox"
 	});
-	obj.find("[name=newfactform]").each(function(){
+	obj.find("[name=newfactform]").each(function () {
 		jQuery(this).children().not(".quickfacts").wrapAll('<div class="form-group">');
 		jQuery(this).find(".quickfacts").wrap('<div class="form-group quickfacts-form-group">');
 		jQuery(this).find("select").addClass("input-sm");
