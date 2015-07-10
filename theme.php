@@ -60,11 +60,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
 				'<div class="navbar-inner">' .
 				'<div class="container-fluid">' .
-				'<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">' .
-				'<span class="icon-bar"></span>' .
-				'<span class="icon-bar"></span>' .
-				'<span class="icon-bar"></span>' .
-				'</button>' .
+				$this->formatNavbarToggle() .
 				$this->headerContent() .
 				$this->primaryMenuContainer($this->primaryMenu()) .
 				'</div></div></div>' .
@@ -156,6 +152,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	private function formatNavbarToggle() {
+		return
+			'<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">' .
+			'<span class="icon-bar"></span>' .
+			'<span class="icon-bar"></span>' .
+			'<span class="icon-bar"></span>' .
+			'</button>';
+	}
+
 	/** {@inheritdoc} */
 	public function formatPendingChangesLink() {
 		try {
@@ -225,11 +230,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		try {
 			if ($this->tree) {
 				return
-					'<div class="navbar-header">' .
 					'<h1>' .
 					'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
-					'</h1>' .
-					'</div>';
+					'</h1>';
 			} else {
 				return '';
 			}
@@ -242,7 +245,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function headerContent() {
 		try {
 			return
+				'<div class="navbar-header">' .
 				$this->formatTreeTitle() .
+				'</div>' .
 				'<div class="navbar-collapse collapse navbar-top">' .
 				'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
 				$this->formatSecondaryMenu() .
@@ -588,8 +593,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				if ($menu->getsubmenus()) {
 					$html .= '<ul class="dropdown-menu">';
 					foreach ($menu->getsubmenus() as $submenu) {
-						if($submenu->getClass() === 'menu-logout') {
-							$html .= '<li role="separator" class="divider"></li>';					
+						if ($submenu->getClass() === 'menu-logout') {
+							$html .= '<li role="separator" class="divider"></li>';
 						}
 						$html .= $submenu->getMenuAsList();
 					}
