@@ -310,7 +310,7 @@ footer {
 
 .separator-hidden:after,
 [dir=rtl] .separator-visible:after {
-	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -26px 100px;
+	background: #e5e5e5 url(images/indi_sprite.png) no-repeat -22px 100px;
 }
 
 .separator-visible:after,

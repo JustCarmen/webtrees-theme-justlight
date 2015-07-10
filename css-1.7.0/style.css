@@ -2281,6 +2281,7 @@ table.dataTable thead > tr > th {
 }
 
 #separator {
+	cursor: pointer;
 	display: table-cell;
 	width: 2.5em;
 	position: relative;
@@ -2292,7 +2293,7 @@ table.dataTable thead > tr > th {
 	top: 0;
 	right: 0;
 	left: auto;
-	width: 10px;
+	width: 13px;
 	height: 99999px;
 	content: "";
 }
