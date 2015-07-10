@@ -3363,7 +3363,7 @@ header {
 }
 
 .navbar-header {
-	padding-left: 10px;
+	padding-left: 15px;
 	width: 50%;
 }
 
@@ -3388,6 +3388,10 @@ header {
 }
 
 /* correct bootstrap default */
+.navbar {
+	z-index: 999;
+}
+
 .navbar-collapse.in {
 	overflow-y: visible;
 }
@@ -3422,6 +3426,10 @@ header {
 .navbar-text {
 	margin-top: 0;
 	width: 100%;
+}
+
+.navbar-toggle {
+	margin-right: 0;
 }
 
 .btn .caret {
@@ -3899,12 +3907,6 @@ a[class^=" icon-"]:focus,
 	}
 }
 
-@media (max-width: 992px) {
-	.navbar-brand {
-		font-size: 24px;
-	}	
-}
-
 @media (max-width: 767px) {
 	#responsive {
 		display: block;
@@ -3917,10 +3919,6 @@ a[class^=" icon-"]:focus,
 	.navbar-header {
 		margin-top: 50px;
 		width: 100%
-	}
-
-	.navbar-brand {
-		font-size: 18px;
 	}
 
 	.navbar-right .btn {
@@ -3978,10 +3976,14 @@ a[class^=" icon-"]:focus,
 		font-size: 120%;
 	}
 
-	.navbar-brand {
-		font-size: initial;
+	.navbar-right {
+		width: 80%;
 	}
-
+	
+	.navbar-right .btn-group {
+		padding-bottom: 5px;
+	}
+	
 	.navbar-right .btn {
 		font-size: 12px;
 		line-height: 1.5;
