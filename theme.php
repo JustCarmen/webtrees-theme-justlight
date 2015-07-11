@@ -639,7 +639,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	// This theme comes with an optional module to set a few theme options
 	private function themeOption($setting) {
 		if (Module::getModuleByName('justlight_theme_options')) {
-			$module = new JustLightThemeOptionsModule;
+			$module = new JustLightThemeOptionsClass;
 			return $module->options($setting);
 		}
 	}
