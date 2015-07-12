@@ -247,9 +247,16 @@ function scroll_if_anchor(href) {
 	var $target = jQuery(href);
 
 	if ($target.length) {
-		jQuery('html, body').animate({
-			scrollTop: $target.offset().top - fromTop
-		});
+		if ($target.parents("#accordion")) {
+			jQuery('html, body').animate({
+				scrollTop: 0
+			});
+		} else {
+			jQuery('html, body').animate({
+				scrollTop: $target.offset().top - fromTop
+			});
+		}
+
 		if (history && "pushState" in history) {
 			history.pushState({}, document.title, window.location.pathname + window.location.search + href);
 			return false;
@@ -370,10 +377,15 @@ function tabsToAccordions() {
 		});
 		var n = new Array;
 		jQuery(this).find(">div").each(function (index) {
-			if (index === parseInt(jQuery.cookie("indi-tab"))) {
-				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
+			if (jQuery(this).attr("id") === 'stories') {
+				var html = '<div id="stories">' + jQuery(this).html() + '</div>';
 			} else {
-				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + jQuery(this).html() + '</div></div>');
+				var html = jQuery(this).html();
+			}
+			if (index === parseInt(jQuery.cookie("indi-tab"))) {
+				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + html + '</div></div>');
+			} else {
+				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + html + '</div></div>');
 			}
 		});
 		for (var r = 0; r < t.length; r++) {
@@ -387,7 +399,9 @@ function tabsToAccordions() {
 		jQuery(this).before(e).remove();
 		accordionControls();
 
-		if (document.cookie.indexOf("indi-tab") < 0) {
+		if (window.location.hash) {
+			openPanel(jQuery(window.location.hash).parents(".panel-collapse").addClass("in").parent());
+		} else if (document.cookie.indexOf("indi-tab") < 0) {
 			openPanel(jQuery("#collapse0", e).addClass("in").parent());
 		} else {
 			openPanel(jQuery(".in", e).parent());
