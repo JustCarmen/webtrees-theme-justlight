@@ -52,43 +52,35 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function bodyHeader() {
-		try {
-			return
-				'<body>' .
-				'<div id="wrap">' .
-				'<header>' .
-				'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
-				'<div class="navbar-inner">' .
-				'<div class="container-fluid">' .
-				$this->formatNavbarToggle() .
-				$this->headerContent() .
-				$this->primaryMenuContainer($this->primaryMenu()) .
-				'</div></div></div>' .
-				$this->formatPendingChangesLink() .
-				'</header>' .
-				'<div id="responsive"></div>' .
-				$this->flashMessagesContainer(FlashMessages::getMessages()) .
-				'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
-		} catch (\Exception $ex) {
-			parent::bodyHeader();
-		}
+		return
+			'<body>' .
+			'<div id="wrap">' .
+			'<header>' .
+			'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
+			'<div class="navbar-inner">' .
+			'<div class="container-fluid">' .
+			$this->formatNavbarToggle() .
+			$this->headerContent() .
+			$this->primaryMenuContainer($this->primaryMenu()) .
+			'</div></div></div>' .
+			$this->formatPendingChangesLink() .
+			'</header>' .
+			'<div id="responsive"></div>' .
+			$this->flashMessagesContainer(FlashMessages::getMessages()) .
+			'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
 	}
 
 	public function bodyHeaderPopupWindow() {
-		try {
-			if (Filter::get('action') === 'addnewnote_assisted') {
-				$class = 'class="census-assistant"';
-			} else {
-				$class = '';
-			}
-
-			return
-				'<body class="container container-popup">' .
-				'<main id="content"' . $class . '" role="main">' .
-				$this->flashMessagesContainer(FlashMessages::getMessages());
-		} catch (\Exception $ex) {
-			return parent::bodyHeaderPopupWindow();
+		if (Filter::get('action') === 'addnewnote_assisted') {
+			$class = 'class="census-assistant"';
+		} else {
+			$class = '';
 		}
+
+		return
+			'<body class="container container-popup">' .
+			'<main id="content"' . $class . '" role="main">' .
+			$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 
 	private function formatCompactMenu($menu) {
@@ -130,26 +122,18 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function footerContainer() {
-		try {
-			return
-				'</main>' .
-				'<div id="push"></div>' .
-				'</div>' .
-				'<footer>' . $this->footerContent() . '</footer>';
-		} catch (\Exception $ex) {
-			parent::footerContainer();
-		}
+		return
+			'</main>' .
+			'<div id="push"></div>' .
+			'</div>' .
+			'<footer>' . $this->footerContent() . '</footer>';
 	}
 
 	/** {@inheritdoc} */
 	public function footerContent() {
-		try {
-			return
-				$this->formatContactLinks() .
-				'<div class="credits">' . $this->logoPoweredBy() . '</div>';
-		} catch (\Exception $ex) {
-			parent::footerContent();
-		}
+		return
+			$this->formatContactLinks() .
+			'<div class="credits">' . $this->logoPoweredBy() . '</div>';
 	}
 
 	private function formatNavbarToggle() {
@@ -163,98 +147,74 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function formatPendingChangesLink() {
-		try {
-			if ($this->pendingChangesExist()) {
-				return $this->htmlAlert($this->pendingChangesLink(), 'warning', true);
-			} else {
-				return '';
-			}
-		} catch (\Exception $ex) {
-			parent::formatPendingChangesLink();
+		if ($this->pendingChangesExist()) {
+			return $this->htmlAlert($this->pendingChangesLink(), 'warning', true);
+		} else {
+			return '';
 		}
 	}
 
 	/** {@inheritdoc} */
 	public function formQuickSearch() {
-		try {
-			if ($this->tree) {
-				return
-					'<form action="search.php" class="header-search form-inline" role="search">' .
-					'<input type="hidden" name="action" value="header">' .
-					'<input type="hidden" name="ged" value="' . $this->tree->getNameHtml() . '">' .
-					$this->formQuickSearchFields() .
-					'</form>';
-			} else {
-				return '';
-			}
-		} catch (\Exception $ex) {
-			return parent::formQuickSearch();
+		if ($this->tree) {
+			return
+				'<form action="search.php" class="header-search form-inline" role="search">' .
+				'<input type="hidden" name="action" value="header">' .
+				'<input type="hidden" name="ged" value="' . $this->tree->getNameHtml() . '">' .
+				$this->formQuickSearchFields() .
+				'</form>';
+		} else {
+			return '';
 		}
 	}
 
 	/** {@inheritdoc} */
 	public function formQuickSearchFields() {
-		try {
-			return
-				'<div class="form-group">' .
-				'<label class="sr-only" for="searc-basic">' . I18N::translate('Search') . '</label>' .
-				'<input class="form-control" type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
-				'</div>' .
-				'<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>';
-		} catch (\Exception $ex) {
-			return parent::formQuickSearchFields();
-		}
+		return
+			'<div class="form-group">' .
+			'<label class="sr-only" for="searc-basic">' . I18N::translate('Search') . '</label>' .
+			'<input class="form-control" type="search" name="query" id="searc-basic" placeholder="' . I18N::translate('Search') . '" dir="auto" />' .
+			'</div>' .
+			'<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>';
 	}
 
 	/** {@inheritdoc} */
 	public function formatSecondaryMenu() {
-		try {
-			if (I18N::direction() === 'rtl') {
-				$class = 'navbar-left';
-			} else {
-				$class = 'navbar-right';
-			}
-
-			return
-				'<div class="' . $class . '">' .
-				$this->secondaryMenuContainer($this->secondaryMenu()) .
-				$this->menuLogin() .
-				'</div>';
-		} catch (\Exception $ex) {
-			return parent::formatSecondaryMenu();
+		if (I18N::direction() === 'rtl') {
+			$class = 'navbar-left';
+		} else {
+			$class = 'navbar-right';
 		}
+
+		return
+			'<div class="' . $class . '">' .
+			$this->secondaryMenuContainer($this->secondaryMenu()) .
+			$this->menuLogin() .
+			'</div>';
 	}
 
 	/** {@inheritdoc} */
 	public function formatTreeTitle() {
-		try {
-			if ($this->tree) {
-				return
-					'<h1>' .
-					'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
-					'</h1>';
-			} else {
-				return '';
-			}
-		} catch (\Exception $ex) {
-			return parent::formatTreeTitle();
+		if ($this->tree) {
+			return
+				'<h1>' .
+				'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+				'</h1>';
+		} else {
+			return '';
 		}
 	}
 
 	/** {@inheritdoc} */
 	public function headerContent() {
-		try {
-			return
-				'<div class="navbar-header">' .
-				$this->formatTreeTitle() .
-				'</div>' .
-				'<div class="navbar-collapse collapse navbar-top">' .
-				'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
-				$this->formatSecondaryMenu() .
-				'</div>';
-		} catch (\Exception $ex) {
-			return parent::headerContent();
-		}
+		return
+			'<div class="navbar-header">' .
+			$this->formatTreeTitle() .
+			'</div>' .
+			'<div class="navbar-collapse collapse navbar-top">' .
+			'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
+			$this->formatSecondaryMenu() .
+			'</div>';
 	}
 
 	// Theme setting for the tree title
@@ -264,31 +224,26 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function hookAfterInit() {
-		try {
-			// Put a version number in the URL, to prevent browsers from caching old versions.
-			$this->theme_dir = 'themes/justlight/';
-			$this->js_url = 'themes/justlight/js-1.7.0/';
-			$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.4/';
-			$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
-			$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
-		} catch (\Exception $ex) {
-			return parent::hookAfterInit();
-		}
+		// Put a version number in the URL, to prevent browsers from caching old versions.
+		$this->theme_dir = 'themes/justlight/';
+		$this->js_url = 'themes/justlight/js-1.7.0/';
+		$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.4/';
+		$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
+		$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
 	}
 
 	/** {@inheritdoc} */
 	public function hookFooterExtraJavascript() {
-		try {
-			return
-				$this->scriptVars() .
-				'<script src="' . WT_BOOTSTRAP_JS_URL . '"></script>' .
-				'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
-				'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
-				'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
-				'<script src="' . $this->js_url . 'justlight.js"></script>' .
-				'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .
-				'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
-				'<script>
+		return
+			$this->scriptVars() .
+			'<script src="' . WT_BOOTSTRAP_JS_URL . '"></script>' .
+			'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
+			'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
+			'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
+			'<script src="' . $this->js_url . 'justlight.js"></script>' .
+			'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .
+			'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
+			'<script>
 				if(jQuery(".dataTable").length){
 					var script	= document.createElement("script");
 					script.type	= "text/javascript";
@@ -303,58 +258,43 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					document.getElementsByTagName("head")[0].appendChild(newSheet);
 				}
 				</script>';
-		} catch (\Exception $ex) {
-			return parent::hookFooterExtraJavascript();
-		}
 	}
 
 	/** {@inheritdoc} */
 	public function hookHeaderExtraContent() {
-		try {
-			$html = '';
-			if (WT_SCRIPT_NAME == 'individual.php' || Filter::get('mod_action') === 'treeview') {
-				$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
-			}
-			return $html;
-		} catch (\Exception $ex) {
-			return parent::hookHeaderExtraContent();
+		$html = '';
+		if (WT_SCRIPT_NAME == 'individual.php' || Filter::get('mod_action') === 'treeview') {
+			$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
 		}
+		return $html;
 	}
 
 	/** {@inheritdoc} */
 	public function individualBoxMenuFamilyLinks(Individual $individual) {
-		try {
-			$menus = array();
-			foreach ($individual->getSpouseFamilies() as $family) {
-				$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
-				$menus[] = '<ul>';
-				$spouse = $family->getSpouse($individual);
-				if ($spouse && $spouse->canShowName()) {
-					$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl());
-				}
-				foreach ($family->getChildren() as $child) {
-					if ($child->canShowName()) {
-						$menus[] = new Menu($child->getFullName(), $child->getHtmlUrl());
-					}
-				}
-				$menus[] = '</ul></li>';
+		$menus = array();
+		foreach ($individual->getSpouseFamilies() as $family) {
+			$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
+			$menus[] = '<ul>';
+			$spouse = $family->getSpouse($individual);
+			if ($spouse && $spouse->canShowName()) {
+				$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl());
 			}
-
-			return $menus;
-		} catch (\Exception $ex) {
-			parent::individualBoxMenuFamilyLinks($individual);
+			foreach ($family->getChildren() as $child) {
+				if ($child->canShowName()) {
+					$menus[] = new Menu($child->getFullName(), $child->getHtmlUrl());
+				}
+			}
+			$menus[] = '</ul></li>';
 		}
+
+		return $menus;
 	}
 
 	/** {@inheritdoc} */
 	public function logoPoweredBy() {
-		try {
-			return
-				parent::logoPoweredBy() .
-				'<a class="link" href="http://www.justcarmen.nl" target="_blank">Design: justcarmen.nl</a>';
-		} catch (\Exception $ex) {
-			return parent::logoPoweredBy();
-		}
+		return
+			parent::logoPoweredBy() .
+			'<a class="link" href="http://www.justcarmen.nl" target="_blank">Design: justcarmen.nl</a>';
 	}
 
 	private function mainContentStyle() {
@@ -397,33 +337,25 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	public function menuLists($surname) {
-		try {
-			$menu = parent::menuLists($surname);
-			if ($this->themeOption('media_menu')) {
-				$submenus = array_filter($menu->getSubmenus(), function (Menu $menu) {
-					return $menu->getClass() !== 'menu-list-obje';
-				});
-				$menu->setSubmenus($submenus);
-			}
-		} catch (\Exception $ex) {
-			return parent::menuLists();
+		$menu = parent::menuLists($surname);
+		if ($this->themeOption('media_menu')) {
+			$submenus = array_filter($menu->getSubmenus(), function (Menu $menu) {
+				return $menu->getClass() !== 'menu-list-obje';
+			});
+			$menu->setSubmenus($submenus);
 		}
 		return $menu;
 	}
 
 	public function menuLogin() {
-		try {
-			if (Auth::check() || Auth::isSearchEngine()) {
-				return null;
-			} else {
-				return
-					'<div class="menu-login btn-group">' .
-					'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(Functions::getQueryUrl()) . '" class="btn btn-default">' .
-					I18N::translate('Login') .
-					'</a></div>';
-			}
-		} catch (\Exception $ex) {
-			return parent::menuLogin();
+		if (Auth::check() || Auth::isSearchEngine()) {
+			return null;
+		} else {
+			return
+				'<div class="menu-login btn-group">' .
+				'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(Functions::getQueryUrl()) . '" class="btn btn-default">' .
+				I18N::translate('Login') .
+				'</a></div>';
 		}
 	}
 
@@ -458,15 +390,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	public function menuMyPages() {
-		try {
-			$menu = parent::menuMyPages();
-			if (Auth::id()) {
-				$menu->addSubmenu($this->menuLogout());
-			}
-			return $menu;
-		} catch (\Exception $ex) {
-			return parent::menuMyPages();
+		$menu = parent::menuMyPages();
+		if (Auth::id()) {
+			$menu->addSubmenu($this->menuLogout());
 		}
+		return $menu;
 	}
 
 	/** {@inheritdoc} */
@@ -497,38 +425,34 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function primaryMenu() {
-		try {
-			global $controller;
+		global $controller;
 
-			$menus = $this->themeOption('menu');
-			if ($this->tree && $menus) {
-				$individual = $controller->getSignificantIndividual();
-				$surname = $controller->getSignificantSurname();
-				foreach ($menus as $menu) {
-					$label = $menu['label'];
-					$sort = $menu['sort'];
-					$function = $menu['function'];
-					if ($sort > 0) {
-						if ($function === 'menuCompact') {
-							$menubar[] = $this->menuCompact($individual, $surname);
-						} elseif ($function === 'menuMedia') {
-							$menubar[] = $this->menuMedia();
-						} elseif ($function === 'menuChart') {
-							$menubar[] = $this->menuChart($individual);
-						} elseif ($function === 'menuLists') {
-							$menubar[] = $this->menuLists($surname);
-						} elseif ($function === 'menuModule') {
-							$menubar[] = $this->menuModule($label);
-						} else {
-							$menubar[] = $this->{$function}();
-						}
+		$menus = $this->themeOption('menu');
+		if ($this->tree && $menus) {
+			$individual = $controller->getSignificantIndividual();
+			$surname = $controller->getSignificantSurname();
+			foreach ($menus as $menu) {
+				$label = $menu['label'];
+				$sort = $menu['sort'];
+				$function = $menu['function'];
+				if ($sort > 0) {
+					if ($function === 'menuCompact') {
+						$menubar[] = $this->menuCompact($individual, $surname);
+					} elseif ($function === 'menuMedia') {
+						$menubar[] = $this->menuMedia();
+					} elseif ($function === 'menuChart') {
+						$menubar[] = $this->menuChart($individual);
+					} elseif ($function === 'menuLists') {
+						$menubar[] = $this->menuLists($surname);
+					} elseif ($function === 'menuModule') {
+						$menubar[] = $this->menuModule($label);
+					} else {
+						$menubar[] = $this->{$function}();
 					}
 				}
-				return array_filter($menubar);
-			} else {
-				return parent::primaryMenu();
 			}
-		} catch (\Exception $ex) {
+			return array_filter($menubar);
+		} else {
 			return parent::primaryMenu();
 		}
 	}
@@ -570,60 +494,48 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** (@inheritdoc) */
 	public function secondaryMenu() {
-		try {
-			return array_filter(array(
-				$this->menuFavorites(),
-				$this->menuLanguages(),
-				$this->menuThemes(),
-				$this->menuMyPages(),
-			));
-		} catch (\Exception $ex) {
-			return parent::secondaryMenu();
-		}
+		return array_filter(array(
+			$this->menuFavorites(),
+			$this->menuLanguages(),
+			$this->menuThemes(),
+			$this->menuMyPages(),
+		));
 	}
 
 	/** (@inheritdoc) */
 	public function secondaryMenuContainer(array $menus) {
-		try {
-			$html = '';
-			foreach ($menus as $menu) {
-				$html .= '<div class="' . $menu->getClass() . ' btn-group">';
-				$html .= '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">';
-				$html .= $menu->getLabel();
-				$html .= '<span class="caret"></span>';
-				$html .= '</button>';
-				if ($menu->getsubmenus()) {
-					$html .= '<ul class="dropdown-menu">';
-					foreach ($menu->getsubmenus() as $submenu) {
-						if ($submenu->getClass() === 'menu-logout') {
-							$html .= '<li role="separator" class="divider"></li>';
-						}
-						$html .= $submenu->getMenuAsList();
+		$html = '';
+		foreach ($menus as $menu) {
+			$html .= '<div class="' . $menu->getClass() . ' btn-group">';
+			$html .= '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">';
+			$html .= $menu->getLabel();
+			$html .= '<span class="caret"></span>';
+			$html .= '</button>';
+			if ($menu->getsubmenus()) {
+				$html .= '<ul class="dropdown-menu">';
+				foreach ($menu->getsubmenus() as $submenu) {
+					if ($submenu->getClass() === 'menu-logout') {
+						$html .= '<li role="separator" class="divider"></li>';
 					}
-					$html .= '</ul>';
+					$html .= $submenu->getMenuAsList();
 				}
-				$html .= '</div>';
+				$html .= '</ul>';
 			}
-			return $html;
-		} catch (\Exception $ex) {
-			return parent::secondaryMenuContainer($menus);
+			$html .= '</div>';
 		}
+		return $html;
 	}
 
 	/** {@inheritdoc} */
 	public function stylesheets() {
-		try {
-			$stylesheets = array(
-				$this->jquery_ui_url . 'jquery-ui.min.css',
-				$this->colorbox_url . 'colorbox.css',
-				$this->bootstrap_url . 'css/bootstrap-theme.min.css',
-				$this->assetUrl() . 'style.css',
-				$this->assetUrl() . 'justlight.css'
-			);
-			return array_merge(parent::stylesheets(), $stylesheets);
-		} catch (\Exception $ex) {
-			return parent::stylesheets();
-		}
+		$stylesheets = array(
+			$this->jquery_ui_url . 'jquery-ui.min.css',
+			$this->colorbox_url . 'colorbox.css',
+			$this->bootstrap_url . 'css/bootstrap-theme.min.css',
+			$this->assetUrl() . 'style.css',
+			$this->assetUrl() . 'justlight.css'
+		);
+		return array_merge(parent::stylesheets(), $stylesheets);
 	}
 
 	/** {@inheritdoc} */
