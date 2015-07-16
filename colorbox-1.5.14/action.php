@@ -14,7 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-namespace Fisharebest\Webtrees;
+namespace JustCarmen\WebtreesAddOns\JustLight;
+
+use Fisharebest\Webtrees\Database;
+use Fisharebest\Webtrees\Filter;
 
 define('WT_SCRIPT_NAME', 'action.php');
 chdir('../../../'); // change the directory to the root of webtrees to load the required files from session.php.
@@ -36,9 +39,8 @@ switch ($action) {
 		foreach ($xrefs as $xref) {
 			$row = Database::prepare("SELECT m_type as imagetype FROM `##media` WHERE m_id=?")
 				->execute(array($xref))
-				->fetchOneRow(PDO::FETCH_ASSOC);
-
-			$data[$xref] = $row['imagetype'];
+				->fetchOneRow();
+			$data[$xref] = $row->imagetype;
 		};
 
 		header("Content-Type: application/json; charset=UTF-8");
