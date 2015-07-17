@@ -435,6 +435,9 @@ jQuery(".container-popup form").each(function () {
 	jQuery(".optionbox, .facts_value", this).find("br").not(".text-muted br").remove();
 });
 
+// Logout form - button style only
+jQuery("form[name=logoutform] input").addClass("btn btn-xs btn-primary");
+
 // Style buttons outside forms
 jQuery("button").not(".btn-primary").addClass("btn btn-xs btn-default");
 
