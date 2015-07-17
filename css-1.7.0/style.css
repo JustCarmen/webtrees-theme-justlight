@@ -672,6 +672,10 @@ ul.clist {
 	overflow: visible !important;
 }
 
+#change_blocks td {
+	vertical-align: middle;
+}
+
 /* Box styles are
 	0 compact view
 	1 normal view - small box
@@ -3593,6 +3597,10 @@ a[class^=" icon-"]:focus,
 	padding: 3px 8px;
 	top: 0;
 	vertical-align: middle;	
+}
+
+a[class$="arrow"] {
+	cursor: pointer;
 }
 
 .copyicon:before {

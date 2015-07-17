@@ -435,6 +435,24 @@ jQuery(".container-popup form").each(function () {
 	jQuery(".optionbox, .facts_value", this).find("br").not(".text-muted br").remove();
 });
 
+// Change blocks form
+jQuery("form[name=config_setup").each(function () {
+	jQuery(this).formControls({
+		layout: 'inline',
+		cbInline: true
+	});
+	jQuery(this).find(".checkbox-inline").each(function () {
+		jQuery(this).append(jQuery(this).parents("td").text());
+		jQuery(this).parents("td").contents().filter(function () {
+			return this.nodeType === 3;
+		}).remove();
+	});
+	jQuery(this).prev("h1").each(function () {
+		jQuery(this).replaceWith("<h2>" + jQuery(this).text());
+	});
+	jQuery("#change_blocks").addClass("center").removeAttr("border").find("tr:first").addClass("bg-info").end().find(".topbottombar:first").addClass("text-left").removeClass("topbottombar").end().find(".topbottombar:last").addClass("text-right").removeClass("topbottombar").parent().addClass("bg-info");
+});
+
 // Logout form - button style only
 jQuery("form[name=logoutform] input").addClass("btn btn-xs btn-primary");
 
