@@ -133,6 +133,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function footerContent() {
 		return
 			$this->formatContactLinks() .
+			$this->formatPageViews($this->page_views) .
 			'<div class="credits">' . $this->logoPoweredBy() . '</div>';
 	}
 
