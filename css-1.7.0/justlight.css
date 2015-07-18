@@ -122,11 +122,11 @@ footer {
 }
 
 /* Familylinks in popover */
-#family-links > a {
+.family-links > a {
 	color: #000;
 }
 
-#family-links > a:hover {
+.family-links > a:hover {
 	color: #337ab7;
 }
 

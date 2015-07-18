@@ -1056,16 +1056,16 @@ ul.clist {
 }
 
 /* Familylinks in popover */
-#family-links {
+.family-links {
 	list-style-type: none;
 	margin: 5px 0 0 -20px;
 }
 
-#family-links > a {
+.family-links > a {
 	font-weight: bold;
 }
 
-#family-links li {
+.family-links li {
 	list-style-type: disc;
 }
 

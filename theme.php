@@ -274,7 +274,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function individualBoxMenuFamilyLinks(Individual $individual) {
 		$menus = array();
 		foreach ($individual->getSpouseFamilies() as $family) {
-			$menus[] = '<li id="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
+			$menus[] = '<li class="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
 			$menus[] = '<ul>';
 			$spouse = $family->getSpouse($individual);
 			if ($spouse && $spouse->canShowName()) {
