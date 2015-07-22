@@ -83,7 +83,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 
-	private function formatCompactMenu($menu) {
+	protected function formatCompactMenu($menu) {
 		if ($menu->getSubmenus()) {
 			$html = '<li class="' . $menu->getClass() . ' dropdown">';
 			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
@@ -109,7 +109,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $html;
 	}
 
-	private function formatCompactMenuItem($menu) {
+	protected function formatCompactMenuItem($menu) {
 		$attrs = '';
 		foreach ($menu->getAttrs() as $key => $value) {
 			$attrs .= ' ' . $key . '="' . Filter::escapeHtml($value) . '"';
@@ -137,7 +137,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<div class="credits">' . $this->logoPoweredBy() . '</div>';
 	}
 
-	private function formatNavbarToggle() {
+	protected function formatNavbarToggle() {
 		return
 			'<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">' .
 			'<span class="icon-bar"></span>' .
@@ -219,7 +219,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	// Theme setting for the tree title
-	private function headerTitleStyle() {
+	protected function headerTitleStyle() {
 		return 'font-size:' . $this->themeOption('titlesize') . 'px;';
 	}
 
@@ -298,7 +298,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<a class="link" href="http://www.justcarmen.nl" target="_blank">Design: justcarmen.nl</a>';
 	}
 
-	private function mainContentStyle() {
+	protected function mainContentStyle() {
 		$page = array(
 			'individual.php',
 			'family.php',
@@ -315,7 +315,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
-	private function menuCompact(Individual $individual, $surname) {
+	protected function menuCompact(Individual $individual, $surname) {
 		$menu = new Menu(I18N::translate('View'), '#', 'menu-view');
 
 		$menu->addSubmenu($this->menuChart($individual));
@@ -360,7 +360,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
-	private function menuMedia() {
+	protected function menuMedia() {
 		$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
 
 		$folders = $this->themeOption('mediafolders');
@@ -381,7 +381,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $menu;
 	}
 
-	private function menuModule($module_name) {
+	protected function menuModule($module_name) {
 		$modules = Module::getActiveMenus($this->tree);
 		if (array_key_exists($module_name, $modules)) {
 			return $modules[$module_name]->getMenu();
@@ -477,7 +477,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	// This theme uses variables from php files in the javascript files
-	private function scriptVars() {
+	protected function scriptVars() {
 		if ($this->tree) {
 			$tree_title = $this->tree->getName();
 		} else {
@@ -550,7 +550,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	// This theme comes with an optional module to set a few theme options
-	private function themeOption($setting) {
+	protected function themeOption($setting) {
 		if (Module::getModuleByName('justlight_theme_options')) {
 			$module = new JustLightThemeOptionsClass;
 			return $module->options($setting);
