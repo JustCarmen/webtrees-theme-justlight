@@ -460,20 +460,22 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function primaryMenuContainer(array $menus) {
-		$html = '';
-		foreach ($menus as $menu) {
-			if ($menu->getClass() === 'menu-view') {
-				$html .= $this->formatCompactMenu($menu);
-			} else {
-				$html .= $menu->bootstrap();
-			}
-		}
-
 		return
 			'<div class="navbar-collapse collapse">' .
 			'<nav class="navbar-text">' .
-			'<ul class="nav nav-pills" role="tablist">' . $html . '</ul>' .
+			'<ul class="nav nav-pills" role="tablist">' . $this->primaryMenuContent($menus) . '</ul>' .
 			'</nav></div>';
+	}
+	
+	/** {@inheritdoc} */
+	public function primaryMenuContent(array $menus) {
+		return implode('', array_map(function (Menu $menu) { 
+			if ($menu->getClass() === 'menu-view') {
+				return $this->formatCompactMenu($menu);
+			} else {
+				return $menu->bootstrap();
+			}				
+		}, $menus));
 	}
 
 	// This theme uses variables from php files in the javascript files
