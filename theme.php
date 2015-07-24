@@ -63,9 +63,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->headerContent() .
 			$this->primaryMenuContainer($this->primaryMenu()) .
 			'</div></div></div>' .
-			$this->formatPendingChangesLink() .
 			'</header>' .
 			'<div id="responsive"></div>' .
+			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
 			'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
 	}
@@ -466,16 +466,16 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<ul class="nav nav-pills" role="tablist">' . $this->primaryMenuContent($menus) . '</ul>' .
 			'</nav></div>';
 	}
-	
+
 	/** {@inheritdoc} */
 	public function primaryMenuContent(array $menus) {
-		return implode('', array_map(function (Menu $menu) { 
-			if ($menu->getClass() === 'menu-view') {
-				return $this->formatCompactMenu($menu);
-			} else {
-				return $menu->bootstrap();
-			}				
-		}, $menus));
+		return implode('', array_map(function (Menu $menu) {
+				if ($menu->getClass() === 'menu-view') {
+					return $this->formatCompactMenu($menu);
+				} else {
+					return $menu->bootstrap();
+				}
+			}, $menus));
 	}
 
 	// This theme uses variables from php files in the javascript files
