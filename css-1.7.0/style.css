@@ -3683,6 +3683,12 @@ a[class$="arrow"] {
 	font-size: 28px;
 }
 
+.icon-sfamily:before { /* only used in interactive tree button */
+	content: "\e604";
+	font-family: "icomoon";
+	font-size: 12px;
+}
+
 .icon-children:before {
 	content: "\e607";
 	font-family: "icomoon";
