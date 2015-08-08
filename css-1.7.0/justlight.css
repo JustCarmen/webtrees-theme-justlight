@@ -24,7 +24,7 @@ blockquote {
 }
 
 /* bootstrap navbar */
-.navbar-fixed-top {
+.navbar-default {
 	border-top: 5px solid #377BB5;
 }
 
