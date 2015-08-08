@@ -14,7 +14,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 function get_imagetype() {
 	var xrefs = [];
 	jQuery('a[type^=image].gallery').each(function () {
