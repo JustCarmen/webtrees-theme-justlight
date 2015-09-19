@@ -423,6 +423,18 @@ jQuery("#reportengine-page form table").each(function () {
 	jQuery(this).before(e);
 	jQuery(this).remove();
 });
+
+
+// Statistics form
+jQuery("#own-stats-form").waitUntilExists(function(){
+	jQuery(this).formControls();
+	jQuery(this).find(".radio").each(function () {
+		var label = jQuery(this).next("label");
+		jQuery(this).find("label").append(label.text());
+		label.remove();
+	});
+});
+
 // Popup forms
 jQuery(".container-popup form").each(function () {
 	jQuery("div[id*=_PLAC]", this).contents().unwrap();
