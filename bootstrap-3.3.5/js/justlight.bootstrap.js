@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* global WT_SCRIPT_NAME, WT_BASE_URL */
+/* global WT_SCRIPT_NAME, WT_BASE_URL, textDirection */
 
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
@@ -451,6 +451,43 @@ jQuery("form[name=config_setup").each(function () {
 		jQuery(this).replaceWith("<h2>" + jQuery(this).text());
 	});
 	jQuery("#change_blocks").addClass("center").removeAttr("border").find("tr:first").addClass("bg-info").end().find(".topbottombar:first").addClass("text-left").removeClass("topbottombar").end().find(".topbottombar:last").addClass("text-right").removeClass("topbottombar").parent().addClass("bg-info");
+});
+
+// Googlemap forms (control panel)
+jQuery("form#editplaces").each(function () {
+	var titlediv = jQuery(this).parent().find("b:first");
+	titlediv.next("br").remove().end().next("br").remove();
+	titlediv.replaceWith("<h4>" + titlediv.text());
+	jQuery(this).prev("table").hide();
+	jQuery(this).find("[for=new_pl_name]").css("font-size", "85%");
+	jQuery(this).find(".radio").each(function () {
+		var label = jQuery(this).next("label");
+		jQuery(this).find("label").append(label.text());
+		label.remove();
+	});
+	jQuery(this).find("#NEW_PLACE_LONG, #NEW_PLACE_LATI").each(function () {
+		var pull = "pull-left";
+		if (textDirection === 'rtl') {
+			pull = "pull-right";
+		}
+		jQuery(this).parent("td").children().wrapAll('<div class="row">').end().find("input").wrap('<div class="' + pull + ' col-md-1">').end().find("select").addClass("width30");
+	});
+	jQuery(this).find("#NEW_ZOOM_FACTOR").css("width", "auto");
+});
+
+jQuery("form#flags").each(function () {
+	jQuery(this).find(".radio").each(function () {
+		var flag = jQuery(this).next("img");
+		jQuery(this).find("label").append(flag);
+		if (textDirection === 'rtl') {
+			flag.css("padding-left", "7px");
+		} else {
+			flag.css("padding-right", "7px");
+		}
+		var text = jQuery(this)[0].nextSibling.nodeValue;
+		this.parentNode.removeChild(jQuery(this)[0].nextSibling);
+		jQuery(this).find("label").append(jQuery.trim(text));
+	});
 });
 
 // Logout form - button style only

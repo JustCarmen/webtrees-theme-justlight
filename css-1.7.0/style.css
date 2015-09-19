@@ -2599,6 +2599,10 @@ table.dataTable thead > tr > th {
 	width: 100%;
 }
 
+.container-popup .optionbox {
+	white-space: normal;
+}
+
 #save-cancel {
     background: url("../jquery-ui-1.11.4/images/ui-bg_glass_50_99c2ff_1x400.png");
     bottom: 0;
@@ -3170,6 +3174,11 @@ img[src*="vline"] {
 .timeline-chart.table {
 	border-collapse: separate;
 	padding: 8px;
+}
+
+// Google maps form (control panel)
+label[for="new_pl_name"] {
+	font-size: 85%;
 }
 
 /* ====== Common Icons ========= */
