@@ -84,6 +84,25 @@ jQuery.fn.formControls = function (options) {
 	});
 };
 
+// layout for quickforms
+jQuery.fn.quickForm = function() {
+	this.each(function(){
+		jQuery(this).formControls({
+			layout: "inline",
+			cbInline: true
+		});
+		jQuery(this).find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
+			control: "checkbox"
+		});
+		jQuery(this).each(function () {
+			jQuery(this).children().not(".quickfacts").wrapAll('<div class="form-group">');
+			jQuery(this).find(".quickfacts").wrap('<div class="form-group quickfacts-form-group">');
+			jQuery(this).find("select").addClass("input-sm");
+			jQuery(this).find(".btn").addClass("btn-sm");
+		});
+	});	
+};
+
 function qstring(key, url) {
 	'use strict';
 	var KeysValues, KeyValue, i;
@@ -428,7 +447,7 @@ function openPanel(panel) {
 
 	if (target.html().length === 0 || target.find(".loading-image").length) {
 		target.load(source, function () {
-			styleForms(target);
+			target.find("form[name=newfactform], form[name=newFromClipboard]").quickForm();
 		});
 	}
 
@@ -461,23 +480,6 @@ function openPanel(panel) {
 
 	jQuery("#prev a").text(jQuery(".panel-title", panel_prev).text());
 	jQuery("#next a").text(jQuery(".panel-title", panel_next).text());
-}
-
-// Styling the forms
-function styleForms(obj) {
-	obj.find("form").formControls({
-		layout: "inline",
-		cbInline: true
-	});
-	obj.find("input[type=checkbox]").not("form input[type=checkbox]").formControls({
-		control: "checkbox"
-	});
-	obj.find("[name=newfactform]").each(function () {
-		jQuery(this).children().not(".quickfacts").wrapAll('<div class="form-group">');
-		jQuery(this).find(".quickfacts").wrap('<div class="form-group quickfacts-form-group">');
-		jQuery(this).find("select").addClass("input-sm");
-		jQuery(this).find(".btn").addClass("btn-sm");
-	});
 }
 
 // Styling of the family page

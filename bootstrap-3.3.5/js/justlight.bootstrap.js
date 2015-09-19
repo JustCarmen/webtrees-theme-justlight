@@ -385,9 +385,7 @@ var text = jQuery("#medialist-page form td:first").text();
 jQuery("#medialist-page form td:first").text("").append('<label for="folder">' + text);
 
 // New fact forms and Clipboard forms
-jQuery("form[name=newfactform], form[name=newFromClipboard]").formControls({
-	layout: "inline"
-});
+jQuery("form[name=newfactform], form[name=newFromClipboard]").quickForm();
 
 // Search forms
 jQuery("form[name=searchform]").formControls({

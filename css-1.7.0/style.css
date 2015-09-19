@@ -266,6 +266,15 @@ div.fact_SHARED_NOTE {
 	float: left;
 }
 
+.quickfacts a:hover {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+.quickfacts a:not(:last-child):after {
+	content: " | "
+}
+
 .tabs_table {
 	width: 100%;
 }
