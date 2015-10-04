@@ -270,7 +270,7 @@ footer {
 	background-color: #f9f9f9;
 }
 
-#accordion .table-census-assistant tbody > tr:first-child td,
+#accordion table.table-census-assistant tbody > tr:first-child td,
 #accordion .markdown .table tbody > tr:first-child td,
 .table-census-assistant tbody > tr:first-child td,
 .markdown .table tbody > tr:first-child td {
