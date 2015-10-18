@@ -307,7 +307,7 @@ a.name1:hover {
 	font-size: 100%;
 	line-height: 1.42857;
 	padding: 0;
-	text-align: left;
+	text-align: right;
 }
 
 .error {
@@ -914,6 +914,12 @@ ul.clist {
 #login-register-page .back {
 	font-weight: bold;
 	text-align: center;
+}
+
+#login-form label,
+#new_passwd_form label,
+#verify-form label {
+	text-align: right;
 }
 
 #login-page .confirm,
