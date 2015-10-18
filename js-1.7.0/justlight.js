@@ -541,3 +541,39 @@ if (WT_SCRIPT_NAME === "edit_interface.php") {
 		jQuery(this).find(".ltrnav").removeClass().addClass("submenu flyout").find(".name2").removeAttr("style");
 	});
 }
+
+// Search pages - toggle form and search results
+var searchForm = jQuery('#search-page form');
+var btnText = jQuery('#search-page h2').text();
+
+if (WT_SCRIPT_NAME === 'search.php') {
+	var searchResult = jQuery('#search-result-tabs');
+	if (searchResult.length > 0) {
+		searchForm.hide();	
+		searchResult.each(function () {
+			searchFormBtn = jQuery(this).find('ul li:first').clone(true).removeClass("ui-tabs-active ui-state-active");
+			jQuery("a", searchFormBtn).text(btnText).attr("href", "#search");
+			jQuery(this).find('ul').append(searchFormBtn);
+		});	
+
+		searchFormBtn.on("click", function () {
+			searchResult.fadeOut('slow');
+			searchForm.fadeIn('slow');
+		});
+	}
+}
+
+if (WT_SCRIPT_NAME === 'search_advanced.php') {
+	searchResult = jQuery('#search-page .indi-list');
+	if (searchResult.length > 0) {
+		searchForm.hide();
+		searchResultTabs = jQuery('<div id="search-result-tabs"><ul><li id="search-btn"><a href="#search">' + btnText + '</a></li></ul></div>').tabs();
+		jQuery("ul", searchResultTabs).removeClass("ui-widget-header");
+		searchResult.find('.dataTables_wrapper').prepend(searchResultTabs.css("visibility", "visible"));		 
+
+		jQuery('#search-btn').removeClass("ui-tabs-active ui-state-active").on("click", function () {
+			searchResult.fadeOut('slow');
+			searchForm.fadeIn('slow');
+		});
+	}
+}
