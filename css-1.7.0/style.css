@@ -2590,6 +2590,21 @@ table.dataTable thead > tr > th {
 	margin: 0 170px 0 0;
 }
 
+/* =========== advanched-search.php ================== */
+#field_table {
+	border: none;
+	font-size: 95%;
+}
+
+#field_table .list_label {
+	text-align: right;
+}
+
+#field_table .facts_label03 {
+	font-size: 120%;
+	width: auto;
+}
+
 /* ============== edituser.php ======================= */
 #edituser-page h2,
 #edituser_submit {

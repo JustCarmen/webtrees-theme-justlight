@@ -168,6 +168,28 @@ footer {
 	background: #fff;
 }
 
+/* Advanced search page table */
+#field_table .list_label {
+	background-color: #e5e5e5;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+#field_table .list_value {
+	background-color: #f9f9f9;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+#field_table .facts_label03 {
+	border-top: 1px solid #ccc;
+}
+
+#field_table tr:last-child td {
+	border-bottom: 1px solid #ccc;
+}
+
 /* jQuery headers */
 .ui-state-active,
 .ui-widget-content .ui-state-active,

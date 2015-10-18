@@ -388,8 +388,31 @@ jQuery("#medialist-page form td:first").text("").append('<label for="folder">' +
 jQuery("form[name=newfactform], form[name=newFromClipboard]").quickForm();
 
 // Search forms
-jQuery("form[name=searchform]").formControls({
-	layout: "inline"
+jQuery("form[name=searchform]").each(function(){
+	jQuery(this).formControls({
+		layout: "inline"
+	});
+
+	// Advanced search form
+	jQuery(this).find("#field_table").each(function() {
+		// we use small input field for this form
+		jQuery(this).find("input, select").addClass("input-sm");
+
+		// add a bottom border at the last row. We need to stick this one at the current last table row.
+		jQuery(this).find("tr:last td").css("border-top", "1px solid #ccc");
+
+		// advanced search form - add more fields function - fields in bootstrap layout
+		// add return false to onclick attribute to prevent page jumping
+		jQuery(this).find("a[onclick]").on("click", function(){
+			jQuery("input, select").addClass("form-control input-sm");
+			return false;
+		});
+		jQuery(this).find(".list_label select").waitUntilExists(function(){
+			jQuery(this).on("change", function(){
+				jQuery("input, select").addClass("form-control input-sm");
+			});
+		});
+	});
 });
 
 // Reports
