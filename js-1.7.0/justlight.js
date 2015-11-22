@@ -318,7 +318,7 @@ if (WT_SCRIPT_NAME === "individual.php") {
 
 	// Hide sidebar by default on smaller screens
 	if ($responsive) {
-		jQuery.cookie("hide-sb", true);
+		sessionStorage.setItem("hide-sb", true);
 		jQuery("#sidebar").hide();
 		responsiveSidebar = true;
 	}
@@ -331,7 +331,7 @@ if (WT_SCRIPT_NAME === "individual.php") {
 			responsiveSidebar = false;
 		}
 
-		if ($responsive || jQuery.cookie("hide-sb") === "true") {
+		if ($responsive || sessionStorage.getItem("hide-sb") === "true") {
 			jQuery("#sidebar").hide();
 		} else {
 			jQuery("#sidebar").show();
@@ -401,14 +401,14 @@ function tabsToAccordions() {
 			} else {
 				var html = jQuery(this).html();
 			}
-			if (index === parseInt(jQuery.cookie("indi-tab"))) {
+			if (index === parseInt(sessionStorage.getItem("indi-tab"))) {
 				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + html + '</div></div>');
 			} else {
 				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + html + '</div></div>');
 			}
 		});
 		for (var r = 0; r < t.length; r++) {
-			if (r === parseInt(jQuery.cookie("indi-tab"))) {
+			if (r === parseInt(sessionStorage.getItem("indi-tab"))) {
 				e.append('<div class="panel panel-primary">' + t[r] + n[r] + '</div>');
 			} else {
 				e.append('<div class="panel panel-default">' + t[r] + n[r] + '</div>');
@@ -419,8 +419,9 @@ function tabsToAccordions() {
 		accordionControls();
 
 		if (window.location.hash) {
+			jQuery(".in").collapse("hide").parent().addClass("panel-default").removeClass("panel-primary");
 			openPanel(jQuery(window.location.hash).parents(".panel-collapse").addClass("in").parent());
-		} else if (document.cookie.indexOf("indi-tab") < 0) {
+		} else if (sessionStorage.getItem("indi-tab") === null) {
 			openPanel(jQuery("#collapse0", e).addClass("in").parent());
 		} else {
 			openPanel(jQuery(".in", e).parent());
@@ -467,7 +468,7 @@ function openPanel(panel) {
 	var panel_prev = jQuery("#collapse" + (active - 1)).parent();
 	var panel_next = jQuery("#collapse" + (active + 1)).parent();
 
-	jQuery.cookie("indi-tab", active);
+	sessionStorage.setItem("indi-tab", active);
 	panel.addClass("panel-primary").removeClass("panel-default").parent().prepend(panel);
 
 	if (panel_prev.length) {
