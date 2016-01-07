@@ -498,10 +498,10 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** (@inheritdoc) */
 	public function secondaryMenu() {
 		return array_filter(array(
-			$this->menuFavorites(),
-			$this->menuLanguages(),
-			$this->menuThemes(),
 			$this->menuMyPages(),
+			$this->menuFavorites(),
+			$this->menuThemes(),
+			$this->menuLanguages()			
 		));
 	}
 
