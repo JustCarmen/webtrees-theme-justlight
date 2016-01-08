@@ -996,7 +996,7 @@ ul.clist {
 }
 
 .popup {
-	visibility:hidden; // we use the bootstrap popovers
+	visibility:hidden; /* We use the bootstrap popovers */
 }
 
 .popup ul {
@@ -1410,8 +1410,8 @@ ul.clist {
 }
 
 #index_full_blocks .list_table {
-	margin-left: initial;
-	margin-right: initial;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 [dir=rtl] #index_main_blocks {
@@ -2108,7 +2108,7 @@ blockquote {
 }
 
 .dataTables_paginate {
-	float: left !important; // conflict with dataTable.bootstrap.css
+	float: left !important; /*conflict with dataTable.bootstrap.css*/
 	margin: 5px;
 }
 
@@ -2168,7 +2168,7 @@ blockquote {
 }
 
 .DataTables_sort_wrapper span {
-	display: none; // we use the dataTables.bootstrap sort icons
+	display: none; /*we use the dataTables.bootstrap sort icons*/
 }
 
 [dir=rtl] .css_right {
@@ -3196,7 +3196,7 @@ img[src*="vline"] {
 	padding: 8px;
 }
 
-// Google maps form (control panel)
+/*-- Google maps form (control panel) --*/
 label[for="new_pl_name"] {
 	font-size: 85%;
 }
