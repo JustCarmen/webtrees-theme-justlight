@@ -118,10 +118,10 @@ function qstring(key, url) {
 	}
 }
 
-// responsive page
-var $responsive = jQuery("#responsive").is(":visible");
+// responsive page - bootstrap responsive starts from 767px. We need to hide the sidebar from 800px.
+var $responsive = jQuery("#responsive").is(":visible") || $(window).width() < 801;
 jQuery(window).resize(function () {
-	$responsive = jQuery("#responsive").is(":visible");
+	$responsive = jQuery("#responsive").is(":visible") || $(window).width() < 801;
 });
 
 // Modal dialog boxes
