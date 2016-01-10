@@ -524,25 +524,6 @@ if (jQuery(".media-list").length > 0) {
 	});
 }
 
-if (WT_SCRIPT_NAME === "edit_interface.php") {
-	// census assistant module
-	// replace delete button with our own
-	jQuery(".census-assistant button").waitUntilExists(function () {
-		jQuery(this).parent("td").html("<i class=\"deleteicon\">");
-	});
-
-	jQuery(".deleteicon").waitUntilExists(function () {
-		jQuery(this).on("click", function () {
-			jQuery(this).parents("tr").remove();
-		});
-	});
-
-	// use same style for submenu flyout as in the individual sidebar
-	jQuery(".census-assistant").waitUntilExists(function () {
-		jQuery(this).find(".ltrnav").removeClass().addClass("submenu flyout").find(".name2").removeAttr("style");
-	});
-}
-
 // Search pages - toggle form and search results
 var searchForm = jQuery('#search-page form');
 var btnText = jQuery('#search-page h2').text();

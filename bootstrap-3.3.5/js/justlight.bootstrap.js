@@ -523,6 +523,9 @@ jQuery("form#flags").each(function () {
 	});
 });
 
+// Census assistant form
+jQuery(".census-assistant form #personid").wrap("<div class=\"personid-input col-sm-4\">");
+
 // Logout form - button style only
 jQuery("form[name=logoutform] input").addClass("btn btn-xs btn-primary");
 

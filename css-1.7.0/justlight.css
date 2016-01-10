@@ -467,17 +467,20 @@ i.icon-uarrow:before {
 }
 
 /* census assistant module */
-.census-assistant {
-	background: #f9f9f9;
+.census-assistant-search .table {
+	background: none;
+	border: none;
 }
 
-.census-assistant #navenclose {
-	background: #fff;
-	border: 1px solid #ddd;
+.census-assistant-search .optionbox,
+.census-assistant-search .facts_value {
+	background: #f9f9f9 ;
+	border: 1px solid #b2c7d7;
 }
 
-.census-assistant .cens_data {
-	border-top: 1px solid #ccc;
+.census-assistant .table-census-inputs th,
+.census-assistant .table-census-inputs td {
+	border: 1px solid #b2c7d7;
 }
 
 /* errors - use same template as ui-state-error */
