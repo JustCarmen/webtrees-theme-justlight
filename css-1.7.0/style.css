@@ -747,7 +747,7 @@ ul.clist {
 
 .person_box_template .name0,
 .person_box_template .name1 {
-	font-size: 85%;
+	font-size: 95%;
 }
 
 .person_box_template .details0,
@@ -1898,6 +1898,10 @@ blockquote {
 	padding: 0 7px;
 }
 
+#relatives_content .person_box_template a .name1 {
+	font-size: 100%;
+}
+
 /* Media tab */
 #media_content .fact_FORM,
 #media_content .fact___IMAGE_SIZE__,
@@ -2802,6 +2806,10 @@ table.dataTable thead > tr > th {
 	padding: 3px;
 }
 
+#compact_chart .person_box_template .name1 {
+	font-size: 85%;
+}
+
 #ancestry_booklet .person_box_template,
 #descendancy_booklet .person_box_template,
 #familybook_chart .person_box_template,
@@ -3046,6 +3054,7 @@ img[src*="vline"] {
 #pedigree_chart.layout2 .person_box_template .compact_view .name0,
 #pedigree_chart.layout3 .person_box_template .compact_view .name0 {
 	display: block;
+	font-size: 85%;
 	text-align: center;
 }
 
