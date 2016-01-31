@@ -83,7 +83,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 
-	protected function formatCompactMenu($menu) {
+	public function formatCompactMenu($menu) {
 		if ($menu->getSubmenus()) {
 			$html = '<li class="' . $menu->getClass() . ' dropdown">';
 			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
@@ -469,13 +469,14 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function primaryMenuContent(array $menus) {
-		return implode('', array_map(function (Menu $menu) {
-				if ($menu->getClass() === 'menu-view') {
-					return $this->formatCompactMenu($menu);
-				} else {
-					return $menu->bootstrap();
-				}
-			}, $menus));
+		$_this = $this;
+		return implode('', array_map(function (Menu $menu) use ($_this) {
+			if ($menu->getClass() === 'menu-view') {
+				return $_this->formatCompactMenu($menu);
+			} else {
+				return $menu->bootstrap();
+			}
+		}, $menus));
 	}
 
 	// This theme uses variables from php files in the javascript files
