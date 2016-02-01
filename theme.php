@@ -25,6 +25,7 @@ use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Menu;
 use Fisharebest\Webtrees\Module;
+use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Theme\AbstractTheme;
 use Fisharebest\Webtrees\Theme\ThemeInterface;
 
@@ -66,10 +67,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'</header>' .
 			'<div id="responsive"></div>' .
 			$this->formatPendingChangesLink() .
+			$this->cookieWarning() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
 			'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
 	}
-
+	
+	/** {@inheritdoc} */
 	public function bodyHeaderPopupWindow() {
 		if (Filter::get('action') === 'addnewnote_assisted') {
 			$class = 'class="census-assistant"';
@@ -81,6 +84,23 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<body class="container container-popup">' .
 			'<main id="content"' . $class . '" role="main">' .
 			$this->flashMessagesContainer(FlashMessages::getMessages());
+	}
+	
+	/** {@inheritdoc} */
+	public function cookieWarning() {
+		if (
+			empty($_SERVER['HTTP_DNT']) &&
+			empty($_COOKIE['cookie']) &&
+			(Site::getPreference('GOOGLE_ANALYTICS_ID') || Site::getPreference('PIWIK_SITE_ID') || Site::getPreference('STATCOUNTER_PROJECT_ID'))) {
+			return
+			FlashMessages::addMessage(
+				'<div class="cookie-warning">' .
+				I18N::translate('Cookies') . ' - ' .
+				I18N::translate('This website uses cookies to learn about visitor behaviour.') .
+				'</div>');
+		} else {
+			return '';
+		}
 	}
 
 	public function formatCompactMenu($menu) {

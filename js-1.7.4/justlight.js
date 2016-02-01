@@ -559,3 +559,6 @@ if (WT_SCRIPT_NAME === 'search_advanced.php') {
 		});
 	}
 }
+
+// Cookie warning
+jQuery('.cookie-warning').parent().find('.close').attr('onclick', 'document.cookie="cookie=1";');
