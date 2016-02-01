@@ -29,6 +29,7 @@ use Fisharebest\Webtrees\Module;
 use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Theme\AbstractTheme;
 use Fisharebest\Webtrees\Theme\ThemeInterface;
+use JustCarmen\WebtreesAddOns\FancyImagebar\FancyImagebarClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
@@ -67,6 +68,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'</div></div></div>' .
 			'</header>' .
 			'<div id="responsive"></div>' .
+			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->cookieWarning() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
@@ -128,6 +130,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$html .= $this->formatCompactMenuItem($menu);
 		}
 		return $html;
+	}
+
+	public function fancyImagebar() {
+		if (Module::getModuleByName('fancy_imagebar')) {
+			$fib = new FancyImagebarClass;
+			if (method_exists($fib, 'loadFancyImagebar') && $fib->loadFancyImagebar()) {
+				return $fib->getFancyImagebar();
+			}
+		}
 	}
 
 	protected function formatCompactMenuItem($menu) {
@@ -523,7 +534,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->menuMyPages(),
 			$this->menuFavorites(),
 			$this->menuThemes(),
-			$this->menuLanguages()			
+			$this->menuLanguages()
 		));
 	}
 

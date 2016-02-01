@@ -949,14 +949,6 @@ ul.clist {
 	text-align: center;
 }
 
-/* For those who have activated the facebook module */
-#facebook-login-box {
-	display: block !important;
-	margin-bottom: 30px;
-	text-align: center;
-	padding: 0;
-}
-
 /* --- reportengine.php --- */
 #reportengine-page table {
 	margin: 20px auto;
@@ -2787,6 +2779,21 @@ table.dataTable thead > tr > th {
 /* ====== Clippings module ======== */
 #mycart tbody th:nth-child(2) {
 	text-align: center;
+}
+
+/* ===== Custom modules === */
+/* Facebook module */
+#facebook-login-box {
+	display: block !important;
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 0;
+}
+
+/* Fancy Imagebar module */
+#fancy-imagebar {
+	clear: both;
+	overflow: hidden;
 }
 
 /* ====== Charts Styles ======== */

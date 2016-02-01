@@ -483,6 +483,12 @@ i.icon-uarrow:before {
 	border: 1px solid #b2c7d7;
 }
 
+/* Fancy Imagebar module */
+#fancy-imagebar img {
+	border-top: 5px solid #428bca;
+	border-bottom: 5px solid #428bca;
+}
+
 /* errors - use same template as ui-state-error */
 .error {
 	background: url("../jquery-ui-1.11.4/images/ui-bg_glass_95_fef1ec_1x400.png");   
