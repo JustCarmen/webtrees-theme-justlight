@@ -1264,8 +1264,7 @@ ul.clist {
 }
 
 #media-tabs table {
-	border-left: none;
-	border-right: none;
+	background: #f9f9f9;
 }
 
 #media-tabs .table-census-assistant,
@@ -2006,10 +2005,6 @@ blockquote {
 	background: none;
 	border: none;
 	padding: 0;
-}
-
-.ui-tabs-panel .facts_table {
-	font-size: 85%;
 }
 
 .ui-tabs .ui-tabs-nav li {
