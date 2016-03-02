@@ -266,11 +266,7 @@ function scroll_if_anchor(href) {
 	var $target = jQuery(href);
 
 	if ($target.length) {
-		if ($target.parents("#accordion").length) {
-			jQuery('html, body').animate({
-				scrollTop: 0
-			});
-		} else {
+		if (!$target.parents("#accordion").length) {
 			jQuery('html, body').animate({
 				scrollTop: $target.offset().top - fromTop
 			});
