@@ -388,7 +388,7 @@ function tabsToAccordions() {
 			jQuery("a", this).attr({
 				"data-toggle": "collapse",
 				"data-parent": "#accordion",
-				"data-target": "#collapse" + index,
+				"data-target": "#" + index,
 				"data-source": jQuery("a", this).attr("href"),
 				"href": "#"
 			}).removeAttr("id class");
@@ -402,9 +402,9 @@ function tabsToAccordions() {
 				var html = jQuery(this).html();
 			}
 			if (index === parseInt(sessionStorage.getItem("indi-tab"))) {
-				n.push('<div id="collapse' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + html + '</div></div>');
+				n.push('<div id="' + index + '" class="panel-collapse collapse in"><div class="panel-body">' + html + '</div></div>');
 			} else {
-				n.push('<div id="collapse' + index + '" class="panel-collapse collapse"><div class="panel-body">' + html + '</div></div>');
+				n.push('<div id="' + index + '" class="panel-collapse collapse"><div class="panel-body">' + html + '</div></div>');
 			}
 		});
 		for (var r = 0; r < t.length; r++) {
@@ -420,9 +420,15 @@ function tabsToAccordions() {
 
 		if (window.location.hash) {
 			jQuery(".in").collapse("hide").parent().addClass("panel-default").removeClass("panel-primary");
-			openPanel(jQuery(window.location.hash).parents(".panel-collapse").addClass("in").parent());
-		} else if (sessionStorage.getItem("indi-tab") === null) {
-			openPanel(jQuery("#collapse0", e).addClass("in").parent());
+			if (window.location.hash === "#stories") {
+				openPanel(jQuery(window.location.hash).parents(".panel-collapse").addClass("in").parent());
+			} else if (jQuery(window.location.hash).length) {
+				openPanel(jQuery(window.location.hash).addClass("in").parent());
+			} else {
+				openPanel(jQuery("#0", e).addClass("in").parent());
+			}
+		} else if (sessionStorage.getItem("indi-tab") === null) { 
+			openPanel(jQuery("#0", e).addClass("in").parent());
 		} else {
 			openPanel(jQuery(".in", e).parent());
 		}
@@ -443,7 +449,7 @@ function accordionControls() {
 function openPanel(panel) {
 	var source = jQuery(".panel-heading a", panel).data("source");
 	var target = jQuery(".panel-body", panel);
-	var active = parseInt(jQuery(".panel-heading a", panel).data("target").replace("#collapse", ""));
+	var active = parseInt(jQuery(".panel-heading a", panel).data("target").replace("#", ""));
 	var count = jQuery(".panel").length;
 
 	if (target.html().length === 0 || target.find(".loading-image").length) {
@@ -457,7 +463,7 @@ function openPanel(panel) {
 	}
 
 	/* Remove old references */
-	if (!jQuery(".panel:first").find("#collapse0").length) {
+	if (!jQuery(".panel:first").find("#0").length) {
 		jQuery(".panel-prev").after(jQuery(".panel:first"));
 	}
 
@@ -465,8 +471,8 @@ function openPanel(panel) {
 	jQuery(".panel-next").removeClass("panel-next");
 
 	/* Add new references */
-	var panel_prev = jQuery("#collapse" + (active - 1)).parent();
-	var panel_next = jQuery("#collapse" + (active + 1)).parent();
+	var panel_prev = jQuery("#" + (active - 1)).parent();
+	var panel_next = jQuery("#" + (active + 1)).parent();
 
 	sessionStorage.setItem("indi-tab", active);
 	panel.addClass("panel-primary").removeClass("panel-default").parent().prepend(panel);
@@ -474,13 +480,13 @@ function openPanel(panel) {
 	if (panel_prev.length) {
 		panel_prev.addClass("panel-prev");
 	} else {
-		panel_prev = jQuery("#collapse" + (count - 1)).parent().addClass("panel-prev");
+		panel_prev = jQuery("#" + (count - 1)).parent().addClass("panel-prev");
 	}
 
 	if (panel_next.length) {
 		panel_next.addClass("panel-next");
 	} else {
-		panel_next = jQuery("#collapse0").parent().addClass("panel-next");
+		panel_next = jQuery("#0").parent().addClass("panel-next");
 	}
 
 	jQuery("#prev a").text(jQuery(".panel-title", panel_prev).text());
