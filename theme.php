@@ -72,7 +72,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->formatPendingChangesLink() .
 			$this->cookieWarning() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" role="main" class="container"' . $this->mainContentStyle() . '>';
+			'<main id="content" class="container"' . $this->mainContentStyle() . '>';
 	}
 	
 	/** {@inheritdoc} */
@@ -85,7 +85,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		return
 			'<body class="container container-popup">' .
-			'<main id="content"' . $class . '" role="main">' .
+			'<main id="content"' . $class . '">' .
 			$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 	
