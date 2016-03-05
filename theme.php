@@ -70,7 +70,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
-			$this->cookieWarning() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
 			'<main id="content" class="container"' . $this->mainContentStyle() . '>';
 	}
@@ -95,12 +94,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			empty($_SERVER['HTTP_DNT']) &&
 			empty($_COOKIE['cookie']) &&
 			(Site::getPreference('GOOGLE_ANALYTICS_ID') || Site::getPreference('PIWIK_SITE_ID') || Site::getPreference('STATCOUNTER_PROJECT_ID'))) {
-			return
-			FlashMessages::addMessage(
+			$cookie_warning = 
 				'<div class="cookie-warning">' .
 				I18N::translate('Cookies') . ' - ' .
 				I18N::translate('This website uses cookies to learn about visitor behaviour.') .
-				'</div>');
+				'</div>';
+			return $this->htmlAlert($cookie_warning, 'info', true);
 		} else {
 			return '';
 		}
@@ -158,7 +157,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'</main>' .
 			'<div id="push"></div>' .
 			'</div>' .
-			'<footer>' . $this->footerContent() . '</footer>';
+			'<footer>' . $this->footerContent() . '</footer>' .
+			'<div class="flash-messages">' . $this->cookieWarning() . '</div>';
 	}
 
 	/** {@inheritdoc} */
