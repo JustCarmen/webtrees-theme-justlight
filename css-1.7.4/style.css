@@ -1942,6 +1942,10 @@ blockquote {
 }
 
 /* ======== Family page ======== */
+#family-table {
+	width: 95%
+}
+
 #family-page .person_box_template.style1 {
 	margin-bottom: 10px;
 }
