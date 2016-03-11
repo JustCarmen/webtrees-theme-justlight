@@ -368,6 +368,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		return $menu;
 	}
+	
+	public function menuFavorites() {
+		$menu = parent::menuFavorites();
+		if (count($menu->getSubmenus())) {
+			return $menu;
+		} else {
+			return null;
+		}
+	}
 
 	public function menuLists($surname) {
 		$menu = parent::menuLists($surname);
