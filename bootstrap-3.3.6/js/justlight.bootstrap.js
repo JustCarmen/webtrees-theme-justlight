@@ -61,13 +61,15 @@ function getSubMenu($menu) {
 // Add scrollbar for long dropdown-menus
 function scrollMenu($menu) {
 	var offset = $menu.offset();
-	var maxHeight = 0.90 * (jQuery(window).height() - offset.top + jQuery(window).scrollTop());
-	if ($menu.height() > maxHeight) {
-		$menu.css({
-			"height": "auto",
-			"max-height": maxHeight,
-			"overflow-x": "hidden"
-		});
+	if (typeof offset !== 'undefined') {
+		var maxHeight = 0.90 * (jQuery(window).height() - offset.top + jQuery(window).scrollTop());
+		if ($menu.height() > maxHeight) {
+			$menu.css({
+				"height": "auto",
+				"max-height": maxHeight,
+				"overflow-x": "hidden"
+			});
+		}
 	}
 }
 
