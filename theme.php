@@ -73,7 +73,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
 			'<main id="content" class="container"' . $this->mainContentStyle() . '>';
 	}
-	
+
 	/** {@inheritdoc} */
 	public function bodyHeaderPopupWindow() {
 		if (Filter::get('action') === 'addnewnote_assisted') {
@@ -87,15 +87,14 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<main id="content"' . $class . '">' .
 			$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
-	
+
 	/** {@inheritdoc} */
 	public function cookieWarning() {
 		if (
 			empty($_SERVER['HTTP_DNT']) &&
 			empty($_COOKIE['cookie']) &&
 			(Site::getPreference('GOOGLE_ANALYTICS_ID') || Site::getPreference('PIWIK_SITE_ID') || Site::getPreference('STATCOUNTER_PROJECT_ID'))) {
-			$cookie_warning = 
-				'<div class="cookie-warning">' .
+			$cookie_warning = '<div class="cookie-warning">' .
 				I18N::translate('Cookies') . ' - ' .
 				I18N::translate('This website uses cookies to learn about visitor behaviour.') .
 				'</div>';
@@ -258,11 +257,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function hookAfterInit() {
 		// Put a version number in the URL, to prevent browsers from caching old versions.
-		$this->theme_dir = 'themes/justlight/';
-		$this->js_url = 'themes/justlight/js-1.7.4/';
+		$this->theme_dir	 = 'themes/justlight/';
+		$this->js_url		 = 'themes/justlight/js-1.7.4/';
 		$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.6/';
 		$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
-		$this->colorbox_url = $this->theme_dir . 'colorbox-1.5.14/';
+		$this->colorbox_url	 = $this->theme_dir . 'colorbox-1.5.14/';
 	}
 
 	/** {@inheritdoc} */
@@ -308,7 +307,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		foreach ($individual->getSpouseFamilies() as $family) {
 			$menus[] = '<li class="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
 			$menus[] = '<ul>';
-			$spouse = $family->getSpouse($individual);
+			$spouse	 = $family->getSpouse($individual);
 			if ($spouse && $spouse->canShowName()) {
 				$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl());
 			}
@@ -361,14 +360,14 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		$menu->addSubmenu($this->menuCalendar());
 
 		foreach ($menu->getSubmenus() as $submenu) {
-			$class = explode("-", $submenu->getClass());
-			$new_class = implode("-", array($class[0], 'view', $class[1]));
+			$class		 = explode("-", $submenu->getClass());
+			$new_class	 = implode("-", array($class[0], 'view', $class[1]));
 			$submenu->setClass($new_class);
 		}
 
 		return $menu;
 	}
-	
+
 	public function menuFavorites() {
 		$menu = parent::menuFavorites();
 		if (count($menu->getSubmenus())) {
@@ -404,7 +403,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	protected function menuMedia() {
 		$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
 
-		$folders = $this->themeOption('mediafolders');
+		$folders		 = $this->themeOption('mediafolders');
 		$show_subfolders = $this->themeOption('show_subfolders') ? '&amp;subdirs=on' : '';
 
 		if (count($folders) > 1) {
@@ -454,8 +453,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		);
 
 		if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
-			$parameters['compact-chart-box-x'] = 105;
-			$parameters['compact-chart-box-y'] = 140;
+			$parameters['compact-chart-box-x']	 = 105;
+			$parameters['compact-chart-box-y']	 = 140;
 		}
 
 		if (array_key_exists($parameter_name, $parameters)) {
@@ -471,12 +470,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		$menus = $this->themeOption('menu');
 		if ($this->tree && $menus) {
-			$individual = $controller->getSignificantIndividual();
-			$surname = $controller->getSignificantSurname();
+			$individual	 = $controller->getSignificantIndividual();
+			$surname	 = $controller->getSignificantSurname();
 			foreach ($menus as $menu) {
-				$label = $menu['label'];
-				$sort = $menu['sort'];
-				$function = $menu['function'];
+				$label		 = $menu['label'];
+				$sort		 = $menu['sort'];
+				$function	 = $menu['function'];
 				if ($sort > 0) {
 					if ($function === 'menuCompact') {
 						$menubar[] = $this->menuCompact($individual, $surname);
@@ -512,12 +511,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function primaryMenuContent(array $menus) {
 		$_this = $this;
 		return implode('', array_map(function (Menu $menu) use ($_this) {
-			if ($menu->getClass() === 'menu-view') {
-				return $_this->formatCompactMenu($menu);
-			} else {
-				return $menu->bootstrap();
-			}
-		}, $menus));
+				if ($menu->getClass() === 'menu-view') {
+					return $_this->formatCompactMenu($menu);
+				} else {
+					return $menu->bootstrap();
+				}
+			}, $menus));
 	}
 
 	// This theme uses variables from php files in the javascript files

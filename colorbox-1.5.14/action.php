@@ -37,7 +37,7 @@ switch ($action) {
 
 		$data = array();
 		foreach ($xrefs as $xref) {
-			$row = Database::prepare("SELECT m_type as imagetype FROM `##media` WHERE m_id=?")
+			$row		 = Database::prepare("SELECT m_type as imagetype FROM `##media` WHERE m_id=?")
 				->execute(array($xref))
 				->fetchOneRow();
 			$data[$xref] = $row->imagetype;
