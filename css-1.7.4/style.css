@@ -359,11 +359,11 @@ a.name1:hover {
 
 .source_citations {
 	display: none;
-	padding-left: 15px;
+	padding-left: 19px;
 }
 
 .source_citations .indent {
-	padding-left: 4px;
+	padding-left: 0;
 }
 
 .note-details {
