@@ -370,7 +370,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	public function menuFavorites() {
 		$menu = parent::menuFavorites();
-		if (count($menu->getSubmenus())) {
+		if ($menu && count($menu->getSubmenus())) {
 			return $menu;
 		} else {
 			return null;
