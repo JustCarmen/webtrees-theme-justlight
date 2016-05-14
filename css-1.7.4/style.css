@@ -3947,6 +3947,7 @@ a[class$="arrow"] {
 	form,
 	#sidebar,
 	#separator,
+	.editfacts,
 	.noprint {
 		display: none;
 	}
