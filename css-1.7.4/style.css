@@ -2206,6 +2206,13 @@ blockquote {
 	fieldset { display: table-cell; }
 }
 
+/* Don't print urls. See: http://drupal.stackexchange.com/questions/59900/how-to-get-rid-of-added-urls-when-printing-a-bootstrap-themed-page */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+}
+
 .table {
 	width: auto;
 }
