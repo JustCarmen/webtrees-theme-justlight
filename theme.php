@@ -395,7 +395,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			return
 				'<div class="menu-login btn-group">' .
 				'<a href="' . WT_LOGIN_URL . '?url=' . rawurlencode(Functions::getQueryUrl()) . '" class="btn btn-default">' .
-				I18N::translate('Login') .
+				I18N::translate('Sign in') .
 				'</a></div>';
 		}
 	}
