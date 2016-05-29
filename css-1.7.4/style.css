@@ -1929,6 +1929,26 @@ blockquote {
 }
 
 /* Google maps tab */
+#googlemap_content table {
+	border-collapse: separate;
+}
+
+#map_pane {
+	margin: 5px;
+}
+
+#map_pane + table {
+	padding: 0 5px;
+}
+
+#map_content {
+	margin-right: 5px;
+}
+
+[dir=rtl] #map_content {
+	margin-left: 5px;
+}
+
 #map_content .facts_table {
 	font-size: 100%;
 }
