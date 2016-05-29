@@ -1880,6 +1880,11 @@ blockquote {
 	display: block;
 }
 
+#checkbox_rela_facts {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 /* Relatives tab */
 #relatives_content table:not(.facts_table) {
 	margin-top: 15px;

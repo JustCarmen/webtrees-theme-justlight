@@ -450,6 +450,7 @@ function openPanel(panel) {
 
 	if (target.html().length === 0 || target.find(".loading-image").length) {
 		target.load(source, function () {
+			target.find("#checkbox_rela_facts").parent("form").formControls({layout: 'inline', cbInline: true});
 			target.find("form[name=newfactform], form[name=newFromClipboard]").quickForm();
 			target.find(".table-census-assistant").each(function() {
 				jQuery(this).addClass("table table-condensed table-striped width100");
