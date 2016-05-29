@@ -1434,6 +1434,18 @@ ul.clist {
 	font-weight: bold;
 }
 
+/* configure block form */
+form[action^="?block_id"] .radio-inline,
+form[action^="?block_id"] .checkbox,
+form[action^="?block_id"] .checkbox-inline {
+	padding-top: 0;
+}
+
+form[action^="?block_id"] .radio-inline input,
+form[action^="?block_id"] .checkbox-inline input {
+	position: relative;
+}
+
 /* end Block styles */
 
 #main_select,

@@ -488,6 +488,24 @@ jQuery("form[name=config_setup").each(function () {
 	jQuery("#change_blocks").addClass("center").removeAttr("border").find("tr:first").addClass("bg-info").end().find(".topbottombar:first").addClass("text-left").removeClass("topbottombar").end().find(".topbottombar:last").addClass("text-right").removeClass("topbottombar").parent().addClass("bg-info");
 });
 
+// configure block form
+jQuery('form[action^="?block_id"]').each(function () {
+	jQuery(this).formControls({
+		cbInline: true,
+		rbInline: true
+	});
+	jQuery(this).find(".radio-inline").each(function(){
+		jQuery(this).parents(".optionbox").append(jQuery(this).parent("label").html());
+		jQuery(this).parent("label").remove();		
+	});
+	jQuery(this).find(".checkbox-inline").each(function(){
+		jQuery(this).parents(".checkbox").append(jQuery(this).parent("label").html());
+		jQuery(this).parent("label").remove();		
+	});
+	jQuery(this).find("table").css("margin", "auto");
+	jQuery(this).find(".topbottombar").addClass("text-right").removeClass("topbottombar");
+});
+
 // Googlemap forms (control panel)
 jQuery("form#editplaces").each(function () {
 	var titlediv = jQuery(this).parent().find("b:first");
