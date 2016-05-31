@@ -416,7 +416,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				}
 			}
 		} else { // fallback if we don't have any subfolders added to the list
-			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?' . $this->tree_url, 'menu-media');
+			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;sortby=title&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media');
 		}
 		return $menu;
 	}
