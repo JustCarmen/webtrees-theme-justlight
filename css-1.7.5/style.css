@@ -1032,7 +1032,7 @@ ul.clist {
 }
 
 .popover-content {
-	white-space: pre;
+	white-space: pre-wrap;
 }
 
 .popover-content ul {
