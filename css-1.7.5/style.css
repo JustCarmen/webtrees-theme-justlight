@@ -3449,7 +3449,6 @@ footer {
     font-size: 85%;
 	height: 80px;
 	margin-bottom: 20px;
-	padding: 10px 20px;
 	position: relative;
 }
 
@@ -3923,13 +3922,6 @@ a[class$="arrow"] {
 	#login-page,
 	#login-register-page {
 		width: 100%;
-	}
-
-	footer {
-		margin-left: -20px;
-		margin-right: -20px;
-		padding-left: 20px;
-		padding-right: 20px;
 	}
 
 	.contact-links {
