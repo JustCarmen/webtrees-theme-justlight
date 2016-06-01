@@ -506,6 +506,9 @@ jQuery('form[action^="?block_id"]').each(function () {
 	jQuery(this).find(".topbottombar").addClass("text-right").removeClass("topbottombar");
 });
 
+// Messageform (block)
+jQuery("#messageform").formControls({'layout' : 'inline'});
+
 // Googlemap forms (control panel)
 jQuery("form#editplaces").each(function () {
 	var titlediv = jQuery(this).parent().find("b:first");

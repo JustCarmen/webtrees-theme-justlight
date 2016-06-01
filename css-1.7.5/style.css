@@ -1446,6 +1446,19 @@ form[action^="?block_id"] .checkbox-inline input {
 	position: relative;
 }
 
+/* messageform (block) */
+#messageform {
+	margin-top: 10px;
+}
+
+label[for="touser"] {
+	margin-right: 5px;
+}
+
+[dir=rtl] label[for="touser"] {
+	margin-left: 5px;
+}
+
 /* end Block styles */
 
 #main_select,
