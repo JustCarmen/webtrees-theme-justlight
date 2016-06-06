@@ -1415,8 +1415,7 @@ ul.clist {
 
 .small_inner_block {
 	max-height: 350px;
-	overflow-x:auto;
-	overflow-y:auto;
+	overflow: auto;
 	text-decoration: none;
 }
 
@@ -1427,6 +1426,7 @@ ul.clist {
 .block {
 	padding: 15px 0;
 	vertical-align: top;
+	overflow: auto;
 }
 
 .blockheader {
@@ -1459,14 +1459,13 @@ label[for="touser"] {
 	margin-left: 5px;
 }
 
-/* end Block styles */
-
 #main_select,
 #available_select,
 #right_select {
 	min-width: 150px;
 }
 
+/* ==== User welcome block ==== */
 .user_welcome_block table,
 .gedcom_block_block table {
 	margin: 15px auto 0;
@@ -1600,6 +1599,8 @@ label[for="touser"] {
 	padding: 10px;
 	visibility: visible;
 }
+
+/* end Block styles */
 
 /* ==== FAQ table styles ===== */
 table.faq {
