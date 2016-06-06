@@ -295,7 +295,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function hookHeaderExtraContent() {
 		$html = '';
-		if (WT_SCRIPT_NAME == 'individual.php' || Filter::get('mod_action') === 'treeview') {
+		if (WT_SCRIPT_NAME === 'index.php' || WT_SCRIPT_NAME === 'individual.php' || Filter::get('mod_action') === 'treeview') {
 			$html .= '<link rel="stylesheet" type="text/css" href="' . $this->assetUrl() . 'treeview.css">';
 		}
 		return $html;
