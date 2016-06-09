@@ -367,6 +367,7 @@ a.name1:hover {
 }
 
 .note-details {
+	font-style: normal;
 	padding-left: 15px;
 }
 
