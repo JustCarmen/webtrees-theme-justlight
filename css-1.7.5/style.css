@@ -1867,14 +1867,6 @@ blockquote {
 }
 
 /* Facts & Events tab */
-#personal_facts_content .fact_NOTE,
-#personal_facts_content .fact_SOUR,
-#family-table .fact_NOTE,
-#family-table .fact_SOUR {
-	margin: 5px 3px 5px 0;
-	clear: both;
-}
-
 .facts_table .field em {
 	margin-top: 0;
 	padding-left: 5px;
