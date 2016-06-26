@@ -1358,11 +1358,6 @@ ul.clist {
 	padding: 0;
 }
 
-#place-hierarchy h2,
-#place-hierarchy h4 {
-	text-align: center;
-}
-
 [dir=rtl] .source-list th:last-child,
 [dir=rtl] .note-list th:last-child,
 [dir=rtl] .repo-list th:last-child {
@@ -1952,27 +1947,31 @@ blockquote {
 }
 
 /* Google maps tab */
-#googlemap_content table {
-	border-collapse: separate;
+#googlemap-content {
+	font-size: 100%;
 }
 
-#map_pane {
-	margin: 5px;
+#googlemap_content .gm-wrapper {
+	border: none;
+	margin: 0;
 }
 
-#map_pane + table {
-	padding: 0 5px;
+#googlemap_content .gm-map {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
 }
 
-#map_content {
-	margin-right: 5px;
+[dir=rtl] #googlemap-content .gm-map {
+	border-left: 1px solid #ccc;
 }
 
-[dir=rtl] #map_content {
-	margin-left: 5px;
+#googlemap_content .gm-options {
+	margin: 2px 0;
+	text-align: left;
 }
 
-#map_content .facts_table {
+#googlemap_content .facts_table {
 	font-size: 100%;
 }
 
@@ -2582,6 +2581,56 @@ table.dataTable thead > tr > th {
 	text-align: inherit;
 }
 
+/* ============= placelist.php ===================== */
+#place-hierarchy {
+	text-align: center;
+}
+
+#place-hierarchy table {
+	display:inline-table;
+	vertical-align: top;
+}
+
+table#place_hierarchy {
+	margin-top: 25px;
+}
+
+#place-hierarchy .list_table {
+	text-align: left;
+}
+
+#place_map {
+	margin-right: 20px;
+	margin-top: 25px;
+	width: auto !important;  /* remove fixed width for responsive layout */	
+}
+
+#place-hierarchy .gm-options {
+	font-size: 85%;
+	margin: 2px 0 10px;
+	text-align: left;
+}
+
+#place-hierarchy .gm-streetview-parameters {
+	background: none;
+	border: none;
+	margin-left: 0;
+}
+
+[dir=rtl] #place-hierarchy .gm-streetview-parameters {
+	margin-right: 0;
+}
+
+#place-hierarchy .gm-streetview-parameters form {
+	color: initial;
+	font-size: 75%;
+}
+
+#places-tabs {
+	margin-top: 25px;
+	text-align: left;
+}
+
 /* ============== search.php ======================= */
 #search-page h2 {
 	margin: 20px;
@@ -2828,6 +2877,11 @@ table.dataTable thead > tr > th {
 /* ====== Clippings module ======== */
 #mycart tbody th:nth-child(2) {
 	text-align: center;
+}
+
+/* ====== Google maps module ====== */
+#pedigreemap-page .gm-ancestor {
+	font-size: 85%;
 }
 
 /* ===== Custom modules === */
