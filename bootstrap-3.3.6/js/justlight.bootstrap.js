@@ -28,22 +28,22 @@ function flexibleHeader() {
 }
 
 flexibleHeader();
-jQuery(window).resize(function () {
+jQuery(window).resize(function() {
 	flexibleHeader();
 });
 
 // Bootstrap multilevel menu
-jQuery(".dropdown").on("click", ".dropdown-toggle", function () {
+jQuery(".dropdown").on("click", ".dropdown-toggle", function() {
 	jQuery(".sub-menu:visible").hide();
 });
 
-jQuery(".dropdown").on("click", ".dropdown-submenu-toggle", function (e) {
+jQuery(".dropdown").on("click", ".dropdown-submenu-toggle", function(e) {
 	e.preventDefault();
 	getSubMenu(jQuery(this));
 	e.stopPropagation();
 });
 
-jQuery(".btn-group").on("click", ".dropdown-toggle", function () {
+jQuery(".btn-group").on("click", ".dropdown-toggle", function() {
 	jQuery(".sub-menu:visible").hide();
 	scrollMenu(jQuery(this).next());
 });
@@ -89,12 +89,12 @@ function getSmallMenu() {
 }
 
 getSmallMenu();
-jQuery(window).resize(function () {
+jQuery(window).resize(function() {
 	getSmallMenu();
 });
 
 // Bootstrap table layout
-jQuery("table").waitUntilExists(function () {
+jQuery("table").waitUntilExists(function() {
 	var t = jQuery(this);
 	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table, #reportengine-page table")) {
 		return;
@@ -119,8 +119,8 @@ jQuery("table").waitUntilExists(function () {
 	return t;
 });
 
-jQuery(".markdown").waitUntilExists(function () {
-	jQuery(this).find("table").each(function () {
+jQuery(".markdown").waitUntilExists(function() {
+	jQuery(this).find("table").each(function() {
 		jQuery(this).addClass("table table-condensed table-striped width100");
 		var colspan = jQuery(this).find("th").length;
 		jQuery(this).find("tbody").prepend("<tr><td colspan=\"" + colspan + "\">");
@@ -131,7 +131,7 @@ jQuery(".markdown").waitUntilExists(function () {
 function manualTrigger(obj, click, hover) {
 
 	if (click === true) {
-		obj.on("click", function (event) { // click is neccessary for touchscreen devices.
+		obj.on("click", function(event) { // click is neccessary for touchscreen devices.
 			event.preventDefault();
 			event.stopPropagation();
 			jQuery('.popover').not(obj).hide();
@@ -141,17 +141,17 @@ function manualTrigger(obj, click, hover) {
 	}
 
 	if (hover === true) {
-		obj.on("mouseenter", function () {
+		obj.on("mouseenter", function() {
 			jQuery('.popover').not(obj).hide();
 			obj.popover("show");
 			jQuery('.popover-content').addClass(obj.data("class"));
-			obj.siblings(".popover").on("mouseleave", function () {
+			obj.siblings(".popover").on("mouseleave", function() {
 				obj.popover('hide');
 			});
 		});
 
-		obj.on("mouseleave", function () {
-			setTimeout(function () {
+		obj.on("mouseleave", function() {
+			setTimeout(function() {
 				if (!jQuery(".popover:hover").length) {
 					obj.popover("hide");
 				}
@@ -161,7 +161,7 @@ function manualTrigger(obj, click, hover) {
 }
 
 // Prepare webtrees popup lists for bootstrap popovers
-jQuery(".popup > ul > li").waitUntilExists(function () {
+jQuery(".popup > ul > li").waitUntilExists(function() {
 	var text = jQuery.trim(jQuery(this).children().text());
 	if (!text.length) {
 		jQuery(this).remove();
@@ -170,7 +170,7 @@ jQuery(".popup > ul > li").waitUntilExists(function () {
 });
 
 // Bootstrap popovers and/or tooltips
-jQuery(".itr .icon-pedigree").waitUntilExists(function () {
+jQuery(".itr .icon-pedigree").waitUntilExists(function() {
 	var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").outerHtml();
 	var content = jQuery(this).parents(".itr").find(".popup > ul");
 	content = content.removeClass().remove();
@@ -190,8 +190,8 @@ jQuery(".itr .icon-pedigree").waitUntilExists(function () {
 	}).on(manualTrigger(jQuery(this), true, true));
 });
 
-jQuery("#medialist-page .lb-menu").each(function () {
-	jQuery(this).find(".lb-image_edit a, .lb-image_view a").each(function () {
+jQuery("#medialist-page .lb-menu").each(function() {
+	jQuery(this).find(".lb-image_edit a, .lb-image_view a").each(function() {
 		var title = jQuery(this).text();
 		jQuery(this).text("");
 		jQuery(this).attr({
@@ -201,7 +201,7 @@ jQuery("#medialist-page .lb-menu").each(function () {
 		});
 		jQuery(this).tooltip();
 	});
-	jQuery(this).find(".lb-image_link a").each(function () {
+	jQuery(this).find(".lb-image_link a").each(function() {
 		var title = jQuery(this).text();
 		var content = jQuery(this).next("ul").html();
 		jQuery(this).text("").next("ul").remove();
@@ -221,7 +221,7 @@ jQuery("#medialist-page .lb-menu").each(function () {
 // Bootstrap popover for fanchart page
 if (WT_SCRIPT_NAME === "fanchart.php") {
 
-	jQuery("#fan_chart #fanmap area").each(function () {
+	jQuery("#fan_chart #fanmap area").each(function() {
 		var id = jQuery(this).attr("href").split("#");
 		var obj = jQuery(".fan_chart_menu[id=" + id[1] + "]");
 		obj.find(".person_box").addClass("fan-chart-list");
@@ -240,7 +240,7 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 // Bootstrap popover for lifespan chart
 if (WT_SCRIPT_NAME === "lifespan.php") {
 
-	jQuery("#lifespan-people .itr").each(function () {
+	jQuery("#lifespan-people .itr").each(function() {
 		jQuery(this).attr("data-toggle", "popover");
 		var title = jQuery(this).find(".popup div:first").html();
 		var content = jQuery(this).find(".popup div").not(":first").outerHtml();
@@ -257,7 +257,7 @@ if (WT_SCRIPT_NAME === "lifespan.php") {
 }
 
 // Childbox popover
-jQuery("#childarrow a").waitUntilExists(function () {
+jQuery("#childarrow a").waitUntilExists(function() {
 	content = jQuery(this).parent().find("#childbox").remove();
 	jQuery(this).attr({
 		"data-toggle": "popover",
@@ -273,7 +273,7 @@ jQuery("#childarrow a").waitUntilExists(function () {
 });
 
 // close popover when clicking outside (anywhere in the page);
-jQuery('body').on('click', function (e) {
+jQuery('body').on('click', function(e) {
 	if (jQuery(e.target).data('toggle') !== 'popover' && jQuery(e.target).parents('.popover.in').length === 0) {
 		jQuery('[data-toggle="popover"]').popover('hide');
 	}
@@ -281,9 +281,9 @@ jQuery('body').on('click', function (e) {
 
 // Login and new password form
 jQuery("#login-form, #new_passwd_form").addClass("center").formControls();
-jQuery("#login-page").each(function () {
+jQuery("#login-page").each(function() {
 	jQuery("#login-text center").replaceWith('<h2>' + jQuery("#login-text center").text() + '</h2>');
-	jQuery(this).find("label").each(function () {
+	jQuery(this).find("label").each(function() {
 		jQuery(this).addClass("col-sm-4").after(jQuery('<div class="col-sm-4">').append(jQuery("input", this))).parent().addClass("form-group");
 	});
 	jQuery("#login-form .btn").parent().before("<hr>");
@@ -294,8 +294,8 @@ jQuery("#login-page").each(function () {
 jQuery("#register-form").formControls({
 	button: "center"
 });
-jQuery("#register-form").each(function () {
-	jQuery(this).find("label").each(function () {
+jQuery("#register-form").each(function() {
+	jQuery(this).find("label").each(function() {
 		if (jQuery(this).find("textarea").length) {
 			jQuery(this).addClass("col-sm-4").after(jQuery('<div class="col-sm-8">').append(jQuery("textarea", this))).parent().addClass("form-group").find("p").addClass("col-sm-8 col-sm-offset-4");
 		} else {
@@ -308,9 +308,9 @@ jQuery("#register-form").each(function () {
 jQuery("#verify-form").formControls({
 	button: "center"
 });
-jQuery("#verify-form").each(function () {
+jQuery("#verify-form").each(function() {
 	jQuery(this).find("h4").replaceWith('<h2>' + jQuery("h4", this).text() + '</h2><hr>');
-	jQuery(this).find("label").each(function () {
+	jQuery(this).find("label").each(function() {
 		jQuery(this).addClass("col-sm-4").next("input").wrap('<div class="col-sm-4">').end().parent().addClass("form-group");
 	});
 	jQuery(this).find(".btn").parent().before("<hr>");
@@ -318,15 +318,15 @@ jQuery("#verify-form").each(function () {
 
 // Edit user form
 jQuery("#edituser-page form").formControls();
-jQuery("#edituser-page form").each(function () {
-	jQuery(this).find(".label").each(function () {
+jQuery("#edituser-page form").each(function() {
+	jQuery(this).find(".label").each(function() {
 		if (jQuery(this).find("label").length === 0) {
 			var text = jQuery(this).text();
 			jQuery(this).text("").append('<label class="control-label">' + text);
 		}
 		jQuery(this).addClass("form-group").removeClass("label").append(jQuery(this).next(".value").addClass("col-sm-4").removeClass("value")).append(jQuery(this).find("p").addClass("col-sm-8 col-sm-offset-4")).find("label").addClass("col-sm-4");
 	});
-	jQuery(this).find(".input-group").each(function () {
+	jQuery(this).find(".input-group").each(function() {
 		jQuery(this).after(jQuery(this).find(">span").addClass("form-control-static")).find("br").remove();
 	});
 });
@@ -345,12 +345,12 @@ jQuery("#timeline_chart").prev("form").formControls({
 	layout: "inline",
 	cbInline: true
 });
-jQuery("#timeline_chart").prev("form").find("table").each(function () {
+jQuery("#timeline_chart").prev("form").find("table").each(function() {
 	var t = jQuery('<table class="timeline-chart table"><tbody>');
 	var tr1 = new Array();
 	var tr2 = new Array();
 	var tr3 = new Array();
-	jQuery(this).find("[class^=person]").each(function () {
+	jQuery(this).find("[class^=person]").each(function() {
 		tr1.push('<td class="' + jQuery(this).attr("class") + '">' + jQuery(this).find("input[type=hidden]").outerHtml() + jQuery(this).find("i").outerHtml() + jQuery(this).find("a:first").find("br").remove().end().outerHtml() + '</td>');
 		tr2.push('<td class="' + jQuery(this).attr("class") + '">' + jQuery(this).find("a .details1").parent().outerHtml() + '</td>');
 		if (jQuery(this).find(">.details1").length) {
@@ -359,12 +359,12 @@ jQuery("#timeline_chart").prev("form").find("table").each(function () {
 			tr3.push('<td class="' + jQuery(this).attr("class") + '"></td>');
 		}
 	});
-	jQuery(this).find(".list_value:first").each(function () {
+	jQuery(this).find(".list_value:first").each(function() {
 		tr1.push('<td class="list_value temp-1"></td>');
 		tr2.push('<td colspan="2"><span style="font-size:85%">' + jQuery(this).text() + '</span></td>');
 		tr3.push('<td class="temp-2"></td>');
 	});
-	jQuery(this).find(".list_value:last").each(function () {
+	jQuery(this).find(".list_value:last").each(function() {
 		tr1.push('<td class="list_value text-right">' + jQuery(this).find(".icon-zoomin").outerHtml() + jQuery(this).find(".icon-zoomout").outerHtml() + '</td>');
 		tr3.push('<td class="text-right temp-3"></td>');
 	});
@@ -376,7 +376,7 @@ jQuery("#timeline_chart").prev("form").find("table").each(function () {
 	jQuery(this).after(t).remove();
 });
 
-jQuery("#familybook-page").find("form th").each(function () {
+jQuery("#familybook-page").find("form th").each(function() {
 	jQuery(this).replaceWith("<td>" + jQuery(this).text());
 });
 jQuery("#hourglass-page .topbottombar ").attr("rowspan", 2);
@@ -390,7 +390,7 @@ jQuery("#medialist-page form td:first").text("").append('<label for="folder">' +
 jQuery("form[name=newfactform], form[name=newFromClipboard]").quickForm();
 
 // Search forms
-jQuery("form[name=searchform]").each(function(){
+jQuery("form[name=searchform]").each(function() {
 	jQuery(this).formControls({
 		layout: "inline"
 	});
@@ -405,12 +405,12 @@ jQuery("form[name=searchform]").each(function(){
 
 		// advanced search form - add more fields function - fields in bootstrap layout
 		// add return false to onclick attribute to prevent page jumping
-		jQuery(this).find("a[onclick]").on("click", function(){
+		jQuery(this).find("a[onclick]").on("click", function() {
 			jQuery("input, select").addClass("form-control input-sm");
 			return false;
 		});
-		jQuery(this).find(".list_label select").waitUntilExists(function(){
-			jQuery(this).on("change", function(){
+		jQuery(this).find(".list_label select").waitUntilExists(function() {
+			jQuery(this).on("change", function() {
 				jQuery("input, select").addClass("form-control input-sm");
 			});
 		});
@@ -421,24 +421,24 @@ jQuery("form[name=searchform]").each(function(){
 jQuery("#reportengine-page form").formControls({
 	rbInline: true
 });
-jQuery("#reportengine-page form table").each(function () {
+jQuery("#reportengine-page form table").each(function() {
 	var t = new Array();
 	var text = jQuery(this).find("tr:eq(1) .optionbox").text().split("\n");
 	t.push('<h2>' + jQuery(this).find("tr:eq(1) .descriptionbox").text() + ' - ' + text[0] + '<p><small>' + text[1] + '</small></p></h2><hr>');
 	t.push('<h4 class="center">' + jQuery(this).find("td:first").text() + '</h4>');
 
 	var e = new Array();
-	jQuery(this).find("tr").not("tr:first, tr:eq(1), tr:last, tr:eq(-2)").each(function () {
+	jQuery(this).find("tr").not("tr:first, tr:eq(1), tr:last, tr:eq(-2)").each(function() {
 		e.push('<div class="form-group">' + jQuery(this).find("input[type=hidden]").outerHtml() + '<label class="control-label col-sm-4">' + jQuery(this).find(".descriptionbox").text() + '</label><div class="col-sm-4">' + jQuery(this).find(".optionbox").html() + '</div></div>');
 	});
 
 	var f = jQuery('<div class="form-group text-center">');
-	jQuery(this).find("tr:eq(-2) .report-type > div").each(function () {
+	jQuery(this).find("tr:eq(-2) .report-type > div").each(function() {
 		f.append(jQuery(this).find(".radio-inline").addClass("text-left").append(jQuery(this).find("i")).outerHtml());
 	});
 	e.push(f);
 
-	jQuery(this).find("tr:last input").each(function () {
+	jQuery(this).find("tr:last input").each(function() {
 		e.push('<div class="text-center">' + jQuery(this).outerHtml() + '</div>');
 	});
 
@@ -449,9 +449,9 @@ jQuery("#reportengine-page form table").each(function () {
 
 
 // Statistics form
-jQuery("#own-stats-form").waitUntilExists(function(){
+jQuery("#own-stats-form").waitUntilExists(function() {
 	jQuery(this).formControls();
-	jQuery(this).find(".radio").each(function () {
+	jQuery(this).find(".radio").each(function() {
 		var label = jQuery(this).next("label");
 		jQuery(this).find("label").append(label.text());
 		label.remove();
@@ -459,10 +459,10 @@ jQuery("#own-stats-form").waitUntilExists(function(){
 });
 
 // Popup forms
-jQuery(".container-popup form").each(function () {
+jQuery(".container-popup form").each(function() {
 	jQuery("div[id*=_PLAC]", this).contents().unwrap();
 	jQuery(this).formControls();
-	jQuery(".checkbox").each(function () {
+	jQuery(".checkbox").each(function() {
 		var text = jQuery(this)[0].nextSibling.nodeValue;
 		this.parentNode.removeChild(jQuery(this)[0].nextSibling);
 		jQuery(this).find("label").append(text);
@@ -471,34 +471,34 @@ jQuery(".container-popup form").each(function () {
 });
 
 // Change blocks form
-jQuery("form[name=config_setup").each(function () {
+jQuery("form[name=config_setup").each(function() {
 	jQuery(this).formControls({
 		layout: 'inline',
 		cbInline: true
 	});
-	jQuery(this).find(".checkbox-inline").each(function () {
+	jQuery(this).find(".checkbox-inline").each(function() {
 		jQuery(this).append(jQuery(this).parents("td").text());
-		jQuery(this).parents("td").contents().filter(function () {
+		jQuery(this).parents("td").contents().filter(function() {
 			return this.nodeType === 3;
 		}).remove();
 	});
-	jQuery(this).prev("h1").each(function () {
+	jQuery(this).prev("h1").each(function() {
 		jQuery(this).replaceWith("<h2>" + jQuery(this).text());
 	});
 	jQuery("#change_blocks").addClass("center").removeAttr("border").find("tr:first").addClass("bg-info").end().find(".topbottombar:first").addClass("text-left").removeClass("topbottombar").end().find(".topbottombar:last").addClass("text-right").removeClass("topbottombar").parent().addClass("bg-info");
 });
 
 // configure block form
-jQuery('form[action^="?block_id"]').each(function () {
+jQuery('form[action^="?block_id"]').each(function() {
 	jQuery(this).formControls({
 		cbInline: true,
 		rbInline: true
 	});
-	jQuery(this).find(".radio-inline").each(function(){
+	jQuery(this).find(".radio-inline").each(function() {
 		jQuery(this).parents(".optionbox").append(jQuery(this).parent("label").html());
 		jQuery(this).parent("label").remove();
 	});
-	jQuery(this).find(".checkbox-inline").each(function(){
+	jQuery(this).find(".checkbox-inline").each(function() {
 		jQuery(this).parents(".checkbox").append(jQuery(this).parent("label").html());
 		jQuery(this).parent("label").remove();
 	});
@@ -507,7 +507,7 @@ jQuery('form[action^="?block_id"]').each(function () {
 });
 
 // Messageform (block)
-jQuery("#messageform").formControls({'layout' : 'inline'});
+jQuery("#messageform").formControls({'layout': 'inline'});
 
 // Add favorites form (block)
 jQuery("form[name=addfavform]").each(function() {
@@ -536,18 +536,18 @@ jQuery("form[name=addfavform]").each(function() {
 });
 
 // Googlemap forms (control panel)
-jQuery("form#editplaces").each(function () {
+jQuery("form#editplaces").each(function() {
 	var titlediv = jQuery(this).parent().find("b:first");
 	titlediv.next("br").remove().end().next("br").remove();
 	titlediv.replaceWith("<h4>" + titlediv.text());
 	jQuery(this).prev("table").hide();
 	jQuery(this).find("[for=new_pl_name]").css("font-size", "85%");
-	jQuery(this).find(".radio").each(function () {
+	jQuery(this).find(".radio").each(function() {
 		var label = jQuery(this).next("label");
 		jQuery(this).find("label").append(label.text());
 		label.remove();
 	});
-	jQuery(this).find("#NEW_PLACE_LONG, #NEW_PLACE_LATI").each(function () {
+	jQuery(this).find("#NEW_PLACE_LONG, #NEW_PLACE_LATI").each(function() {
 		var pull = "pull-left";
 		if (textDirection === 'rtl') {
 			pull = "pull-right";
@@ -557,8 +557,8 @@ jQuery("form#editplaces").each(function () {
 	jQuery(this).find("#NEW_ZOOM_FACTOR").css("width", "auto");
 });
 
-jQuery("form#flags").each(function () {
-	jQuery(this).find(".radio").each(function () {
+jQuery("form#flags").each(function() {
+	jQuery(this).find(".radio").each(function() {
 		var flag = jQuery(this).next("img");
 		jQuery(this).find("label").append(flag);
 		if (textDirection === 'rtl') {
@@ -582,6 +582,6 @@ jQuery("form[name=logoutform] input").addClass("btn btn-xs btn-primary");
 jQuery("button").not(".btn-primary").addClass("btn btn-xs btn-default");
 
 // For those who have activated the facebook module
-jQuery("#facebook-login-box").waitUntilExists(function () {
+jQuery("#facebook-login-box").waitUntilExists(function() {
 	jQuery("#facebook-login-button").addClass("btn btn-default");
 });
