@@ -408,10 +408,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		if (count($folders) > 1) {
 			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), '', 'menu-media');
-
+			
+			$submenu = new Menu(I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-all');
+			//$submenu .= '<li class="divider" role="separator"></li>';
+			$menu->addSubmenu($submenu);
 			foreach ($folders as $key => $folder) {
 				if ($key !== $MEDIA_DIRECTORY) {
-					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-mediafolder');
+					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-' . preg_replace('/[^A-Za-z0-9\. -]/', '', str_replace(" ", "-", $folder)));
 					$menu->addSubmenu($submenu);
 				}
 			}
