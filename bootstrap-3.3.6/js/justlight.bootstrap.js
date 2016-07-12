@@ -239,7 +239,7 @@ if (WT_SCRIPT_NAME === "fanchart.php") {
 
 // Bootstrap popover for lifespan chart
 if (WT_SCRIPT_NAME === "lifespan.php") {
-	
+
 	jQuery("#lifespan-people .itr").each(function () {
 		jQuery(this).attr("data-toggle", "popover");
 		var title = jQuery(this).find(".popup div:first").html();
@@ -496,11 +496,11 @@ jQuery('form[action^="?block_id"]').each(function () {
 	});
 	jQuery(this).find(".radio-inline").each(function(){
 		jQuery(this).parents(".optionbox").append(jQuery(this).parent("label").html());
-		jQuery(this).parent("label").remove();		
+		jQuery(this).parent("label").remove();
 	});
 	jQuery(this).find(".checkbox-inline").each(function(){
 		jQuery(this).parents(".checkbox").append(jQuery(this).parent("label").html());
-		jQuery(this).parent("label").remove();		
+		jQuery(this).parent("label").remove();
 	});
 	jQuery(this).find("table").css("margin", "auto");
 	jQuery(this).find(".topbottombar").addClass("text-right").removeClass("topbottombar");
@@ -508,6 +508,32 @@ jQuery('form[action^="?block_id"]').each(function () {
 
 // Messageform (block)
 jQuery("#messageform").formControls({'layout' : 'inline'});
+
+// Add favorites form (block)
+jQuery("form[name=addfavform]").each(function() {
+	var form = jQuery(this);
+	form.formControls({rbInline: true});
+	if (form.parents("#index_main_blocks").length) {
+		jQuery(form).find(".add_fav_ref").each(function() {
+			jQuery(this).find("a[class^=icon-button]").each(function() {
+				form.find(".input-group").append(jQuery(this).addClass("input-group-addon")).end();
+			});
+			var label = jQuery(this).find(".radio-inline").next("label").remove();
+			jQuery(this).find("input").attr("placeholder", label.text());
+			jQuery(this).find(".radio-inline").css("display", "block").append(jQuery(this).find(".input-group"));
+		});
+		form.find(".add_fav_url .form-control").css("margin-bottom", "6px");
+	} else {
+		form.find(".add_fav_ref").each(function() {
+			jQuery(this).find(".input-group").find("a").removeClass("input-group-addon").end().contents().unwrap();
+			jQuery(this).find("label").prependTo(jQuery(this));
+			jQuery(this).find(".radio-inline").append(jQuery(this).find(".radio-inline").next("label"));
+		});
+		form.find(".form-control").css("margin-bottom", "6px");
+		form.find("a[class^=icon-button]").addClass("btn");
+	}
+	jQuery(this).find(".add_fav_url .radio-inline").css("display", "block").append(form.find("#url, #favtitle"));
+});
 
 // Googlemap forms (control panel)
 jQuery("form#editplaces").each(function () {
