@@ -3404,15 +3404,6 @@ header {
 	padding: 15px 0;
 }
 
-.navbar-top {
-	border-top: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0;
-	width: 100%;
-}
-
 /* correct bootstrap default */
 .navbar {
 	z-index: 999;
@@ -3426,7 +3417,6 @@ header {
 	float:right;
 	margin-top:3px;
 	margin-left:3%;
-	margin-right: 15px;
 }
 
 .div_search .btn {

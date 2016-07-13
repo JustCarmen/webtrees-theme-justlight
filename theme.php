@@ -230,7 +230,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		if ($this->tree) {
 			return
 				'<h1>' .
-				'<a href="index.php" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+				'<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
 				'</h1>';
 		} else {
 			return '';
@@ -243,7 +243,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<div class="navbar-header">' .
 			$this->formatTreeTitle() .
 			'</div>' .
-			'<div class="navbar-collapse collapse navbar-top">' .
+			'<div class="navbar-collapse collapse">' .
 			'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
 			$this->formatSecondaryMenu() .
 			'</div>';
