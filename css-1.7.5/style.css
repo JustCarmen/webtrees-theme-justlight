@@ -1733,7 +1733,7 @@ span.link_text {
 #indi_mainimage img {
 	display: block;
 	margin: auto;
-	padding: 0 0 0 5px;
+	padding: 0;
 }
 
 .indi_name_details {
@@ -3414,13 +3414,14 @@ header {
 }
 
 .div_search {
-	float:right;
-	margin-top:3px;
-	margin-left:3%;
+	float: right;
+    margin-top: 0;
+    margin-left: 3%;
+    margin-right: 15px;
 }
 
 .div_search .btn {
-	margin-top:-7px;
+	margin-top:0;
 }
 
 [dir=rtl] .div_search {
