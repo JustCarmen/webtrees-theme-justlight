@@ -401,31 +401,41 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	protected function menuMedia() {
-		$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
-
-		$folders		 = $this->themeOption('mediafolders');
-		$show_subfolders = $this->themeOption('show_subfolders') ? '&amp;subdirs=on' : '';
-
-		if (count($folders) > 1) {
-			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), '', 'menu-media');
-			
-			$submenu = new Menu(I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-all');
-			$menu->addSubmenu($submenu);
-			
-			// divider
-			$divider = new Menu('', '#', 'menu-media-divider divider');
-			$menu->addSubmenu($divider);
-			
-			foreach ($folders as $key => $folder) {
-				if ($key !== $MEDIA_DIRECTORY) {
-					$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-' . preg_replace('/[^A-Za-z0-9\. -]/', '', str_replace(" ", "-", $folder)));
-					$menu->addSubmenu($submenu);
-				}
-			}
-		} else { // fallback if we don't have any subfolders added to the list
-			$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;sortby=title&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media');
+		$resns = $this->tree->getFactPrivacy();
+		if (isset($resns['OBJE'])) {
+			$resn = $resns['OBJE'];
+		} else {
+			$resn = Auth::PRIV_PRIVATE;
 		}
-		return $menu;
+		
+		if ($resn >= Auth::accessLevel($this->tree)) {
+		
+			$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
+
+			$folders		 = $this->themeOption('mediafolders');
+			$show_subfolders = $this->themeOption('show_subfolders') ? '&amp;subdirs=on' : '';
+
+			if (count($folders) > 1) {
+				$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), '', 'menu-media');
+
+				$submenu = new Menu(I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-all');
+				$menu->addSubmenu($submenu);
+
+				// divider
+				$divider = new Menu('', '#', 'menu-media-divider divider');
+				$menu->addSubmenu($divider);
+
+				foreach ($folders as $key => $folder) {
+					if ($key !== $MEDIA_DIRECTORY) {
+						$submenu = new Menu(ucfirst($folder), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=' . Filter::escapeUrl($key) . '&amp;sortby=title' . $show_subfolders . '&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media-' . preg_replace('/[^A-Za-z0-9\. -]/', '', str_replace(" ", "-", $folder)));
+						$menu->addSubmenu($submenu);
+					}
+				}
+			} else { // fallback if we don't have any subfolders added to the list
+				$menu = new Menu(/* I18N: Main media menu */ I18N::translate('Media'), 'medialist.php?' . $this->tree_url . '&amp;sortby=title&amp;max=20&amp;columns=2&amp;action=submit', 'menu-media');
+			}
+			return $menu;
+		}
 	}
 
 	protected function menuModule($module_name) {
