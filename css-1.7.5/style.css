@@ -3491,6 +3491,12 @@ header {
     border-radius: 6px 0 6px 6px;
 }
 
+/* divider in media menu */
+.menu-media-divider a {
+	cursor:none;
+}
+
+
 /* ====== End Theme Header ===== */
 
 /* ====== Theme Footer ========= */
