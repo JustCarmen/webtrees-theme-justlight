@@ -499,10 +499,10 @@ jQuery('form[action^="?block_id"]').each(function() {
 		jQuery(this).parent("label").remove();
 	});
 	jQuery(this).find(".checkbox-inline").each(function() {
-		jQuery(this).parents(".checkbox").append(jQuery(this).parent("label").html());
-		jQuery(this).parent("label").remove();
+		jQuery(this).parent("label").parent("td").addClass("checkbox");
+		jQuery(this).parents(".checkbox").html(jQuery(this).parent("label").html());
 	});
-	jQuery(this).find("table").css("margin", "auto");
+	jQuery(this).find(".facts_table").css("margin", "auto");
 	jQuery(this).find(".topbottombar").addClass("text-right").removeClass("topbottombar");
 });
 

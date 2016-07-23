@@ -1445,6 +1445,20 @@ form[action^="?block_id"] .checkbox-inline input {
 	position: relative;
 }
 
+form[action^="?block_id"] td.checkbox {
+	display: table-cell;
+	padding: 0 8px 8px 0;
+}
+
+[dir=rtl] form[action^="?block_id"] td.checkbox {
+	display: table-cell;
+	padding: 0 0 8px 8px;
+}
+
+form[action^="?block_id"] label {
+	font-weight: 400;
+}
+
 /* messageform (block) */
 #messageform {
 	margin-top: 10px;
