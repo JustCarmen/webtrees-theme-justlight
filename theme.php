@@ -305,18 +305,16 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function individualBoxMenuFamilyLinks(Individual $individual) {
 		$menus = array();
 		foreach ($individual->getSpouseFamilies() as $family) {
-			$menus[] = '<li class="family-links"><a href="' . $family->getHtmlUrl() . '">' . I18N::translate('Family with spouse') . '</a>';
-			$menus[] = '<ul>';
+			$menus[] = new Menu(I18N::translate('Family with spouse'), $family->getHtmlUrl(), 'link-family');
 			$spouse	 = $family->getSpouse($individual);
 			if ($spouse && $spouse->canShowName()) {
-				$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl());
+				$menus[] = new Menu($spouse->getFullName(), $spouse->getHtmlUrl(), 'link-spouse');
 			}
 			foreach ($family->getChildren() as $child) {
 				if ($child->canShowName()) {
-					$menus[] = new Menu($child->getFullName(), $child->getHtmlUrl());
+					$menus[] = new Menu($child->getFullName(), $child->getHtmlUrl(), 'link-child');
 				}
 			}
-			$menus[] = '</ul></li>';
 		}
 
 		return $menus;
