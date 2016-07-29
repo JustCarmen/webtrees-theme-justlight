@@ -1063,18 +1063,19 @@ ul.clist {
 	font-size: 100%;	
 }
 
-/* Familylinks in popover */
-.family-links {
+/* Familylink in popover */
+.link-family {
+	font-weight: 600;
 	list-style-type: none;
 	margin: 5px 0 0 -20px;
 }
 
-.family-links > a {
-	font-weight: bold;
+[dir=rtl] .link-family {
+	margin: 5px -20px 0 0;
 }
 
-.family-links li {
-	list-style-type: disc;
+.link-child {
+	list-style-type: circle;
 }
 
 /* Fan chart popovers */
