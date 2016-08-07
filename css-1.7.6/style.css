@@ -33,17 +33,24 @@ html {
 	position: relative;
 }
 
-main {
-	display: block;
+/* responsive site - fake div to determine when the site is in responsive state */
+#responsive {
+	display: none;
+}
+
+/* bootstrap container table layout */
+main { 
+	border-collapse:separate;
+	border-spacing:0;
+	margin-bottom: 40px;
 }
 
 .container-popup {
 	width: 95%;
 }
 
-/* responsive site - fake div to determine when the site is in responsive state */
-#responsive {
-	display: none;
+#home-page {
+	display: table-row;
 }
 
 /* ====== Round Corners ======== */
@@ -147,10 +154,6 @@ ul {
 img.block {
 	height: 20px;
 	vertical-align: middle;
-}
-
-#content {
-	margin-bottom: 40px;
 }
 
 .topbottombar {
@@ -1372,6 +1375,7 @@ ul.clist {
 	max-width: 877.5px; /* 75% x 1170 */
 	display: table-cell;
 	padding: 10px;
+	vertical-align: top;
 }
 
 #index_small_blocks {
@@ -1379,7 +1383,8 @@ ul.clist {
 	max-width: 292.5px; /* 25% x 1170 */
 	display: table-cell;
 	font-size: 80%;	
-	padding: 0 10px;
+	padding: 10px;
+	vertical-align: top;
 }
 
 #index_full_blocks {
