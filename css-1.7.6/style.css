@@ -16,18 +16,19 @@
 
 /* ======== Globals ========== */
 
-/* Add a permanent scrollbar, to prevent "flickering" when hover effects lengthen page */
+
 html, body {
-	height: 100%;
+	height: 100%; /* for a sticky footer */
 }
 
+/* Add a permanent scrollbar, to prevent "flickering" when hover effects lengthen page */
 html {
 	overflow-y: scroll;
 }
 
 #wrap {
     height: auto !important;
-    margin: 0 auto -120px;
+    margin: 0 auto -100px; /* height of the footer (margins included) */
     min-height: 100%;
 	position: relative;
 }
@@ -3517,15 +3518,18 @@ header {
 
 /* ====== Theme Footer ========= */
 #push {
-	height: 120px;
+	height: 100px; /* height of the footer (margins included) */
 }
 
 footer {
 	clear: both;
+	display: table;
     font-size: 85%;
 	height: 80px;
 	margin-bottom: 20px;
-	position: relative;
+	padding: 10px 0;
+	position: relative; /* to prevent wrapper display on top of footer */
+	width: 100%;
 }
 
 .container-popup #push,
@@ -3533,12 +3537,25 @@ footer {
 	display: none;
 }
 
+.contact-links,
+.credits,
+.page-views {
+	display: table-cell;
+	padding: 0 20px;
+	vertical-align: bottom;
+	width: 33%;
+}
+
 .credits {
-	position: absolute;
-	right: 20px;
-	bottom: 10px;
 	text-align:right;
-	z-index: 1;
+}
+
+.page-views {
+	text-align: center;
+}
+
+.contact-links span {
+	white-space: nowrap;
 }
 
 .powered-by-webtrees {
@@ -3547,21 +3564,6 @@ footer {
 
 .powered-by-webtrees:after {
 	content: url(images/powered-by-webtrees.png);
-}
-
-.contact-links {
-	position: absolute;
-	left: 20px;
-	bottom: 10px;
-	width: 30%;
-	z-index: 1;
-}
-
-.page-views {
-	bottom: 10px;
-	position: absolute;
-	text-align: center;
-	width: 100%;	
 }
 
 /* ====== JustLight Theme Icons ====== */

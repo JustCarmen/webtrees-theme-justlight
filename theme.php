@@ -165,7 +165,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return
 			$this->formatContactLinks() .
 			$this->formatPageViews($this->page_views) .
-			'<div class="credits">' . $this->logoPoweredBy() . '</div>';
+			$this->formatCredits();
+	}
+	
+	protected function formatCredits() {
+		return
+			'<div class="credits">' . 
+				$this->logoPoweredBy() .
+				'<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>' .
+			'</div>';
 	}
 
 	protected function formatNavbarToggle() {
@@ -318,13 +326,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 
 		return $menus;
-	}
-
-	/** {@inheritdoc} */
-	public function logoPoweredBy() {
-		return
-			parent::logoPoweredBy() .
-			'<a class="link" href="http://www.justcarmen.nl" target="_blank">Design: justcarmen.nl</a>';
 	}
 
 	protected function mainContentStyle() {
