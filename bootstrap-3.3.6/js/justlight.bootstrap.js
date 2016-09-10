@@ -450,7 +450,9 @@ jQuery("#reportengine-page form table").each(function() {
 
 // Statistics form
 jQuery("#own-stats-form").waitUntilExists(function() {
-	jQuery(this).formControls();
+	jQuery(this).formControls({
+		layout: 'inline'
+	});
 	jQuery(this).find(".radio").each(function() {
 		var label = jQuery(this).next("label");
 		jQuery(this).find("label").append(label.text());
