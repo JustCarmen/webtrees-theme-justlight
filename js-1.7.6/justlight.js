@@ -343,6 +343,15 @@ if (WT_SCRIPT_NAME === "individual.php") {
 
 	// responsive tabs
 	updateUI();
+	
+	// solve a layout issue
+	jQuery('.optionbox').waitUntilExists(function(){
+		jQuery(this).find(":first").each(function() {
+			if (jQuery(this).hasClass("place") && jQuery(this).text().length === 0) {
+				jQuery(this).next("br").remove();
+			}
+		});
+	});
 }
 
 function updateHeader() {

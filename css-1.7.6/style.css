@@ -528,11 +528,13 @@ a.name1:hover {
 }
 
 .descriptionbox {
+	line-height: 1.8;
 	padding: 8px;
 	vertical-align: top;
 }
 
 .optionbox {
+	line-height: 1.8;
 	vertical-align: top;
 	white-space: nowrap;
 	padding: 8px;
@@ -540,11 +542,6 @@ a.name1:hover {
 
 .vmiddle {
 	vertical-align: middle;
-}
-
-.rela,
-.histo {
-	opacity: 0.7;
 }
 
 .width10 {
@@ -1668,7 +1665,7 @@ div.faq_body {
 /* General use */
 .editfacts {
 	clear: both;
-	padding-top: 5px;
+	padding: 5px 0;
 }
 
 /* a container for the following three links */
@@ -1921,6 +1918,10 @@ blockquote {
 #checkbox_rela_facts {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.fact_TEXT .markdown {
+	display: table-cell;
 }
 
 /* Relatives tab */
@@ -2424,7 +2425,7 @@ table.dataTable thead > tr > th {
 .famnav_title {
 	font-weight: bold;
 	display: block;
-	padding: 5px 0;
+	padding: 5px 8px;
 }
 
 .flyout {
