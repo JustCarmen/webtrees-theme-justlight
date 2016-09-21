@@ -3729,13 +3729,13 @@ a[class$="arrow"] {
 }
 
 .icon-children:before {
-	content: "\e607";
+	content: "\e605";
 	font-family: "icomoon";
 	font-size: 24px;
 }
 
 .icon-childless:before {
-	content: "\e608";
+	content: "\e606";
 	font-family: "icomoon";
 	font-size: 48px;
 	vertical-align: middle;
@@ -3911,7 +3911,7 @@ a[class$="arrow"] {
 }
 
 .icon-target:before {
-	content: "\e609";
+	content: "\e607";
 	cursor: pointer;
 	font-family: "icomoon";
 	font-size: 110%;
@@ -3934,7 +3934,7 @@ a[class$="arrow"] {
 }
 
 .icon-wiki:before {
-	content: "\e60a";
+	content: "\e608";
 	font-family: "icomoon";
 
 }
