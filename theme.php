@@ -281,7 +281,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
 			'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
 			'<script src="' . $this->js_url . 'justlight.js"></script>' .
-			'<script src="' . $this->bootstrap_url . 'js/justlight.bootstrap.js"></script>' .
+			'<script src="' . $this->bootstrap_url . 'justlight.bootstrap.js"></script>' .
 			'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
 			'<script>
 				if(jQuery(".dataTable").length){
@@ -591,7 +591,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		$stylesheets = array(
 			$this->jquery_ui_url . 'jquery-ui.min.css',
 			$this->colorbox_url . 'colorbox.css',
-			$this->bootstrap_url . 'css/bootstrap-theme.min.css',
+			$this->bootstrap_url . 'bootstrap-theme.min.css',
 			$this->assetUrl() . 'style.css',
 			$this->assetUrl() . 'justlight.css'
 		);
