@@ -168,6 +168,11 @@ footer {
 	background: #fff;
 }
 
+/* Bootstrap datetimepicker conflict */
+.bootstrap-datetimepicker-widget .table > tbody > tr > td.active {
+	background-color: #337ab7;
+}
+
 /* Advanced search page table */
 #field_table .list_label {
 	background-color: #e5e5e5;
