@@ -134,7 +134,6 @@ dt {
 }
 
 h2 {
-	font-weight: bold;
 	text-align: center;
 }
 
@@ -2557,6 +2556,11 @@ table.dataTable thead > tr > th {
 }
 
 /* ============== find.php ======================= */
+#find-page h2 {
+	font-size: 18px;
+	text-align: left;
+}
+
 #find-header {
 	margin-top: 10px;
 }
@@ -2763,6 +2767,11 @@ table#place_hierarchy {
 }
 
 /* ===== Edit interface pop-ups ===== */
+#edit_interface-page h2 {
+	font-size: 18px;
+	text-align: left;
+}
+
 #edit_interface-page #NAME_display {
 	border-radius: 3px;
 }
