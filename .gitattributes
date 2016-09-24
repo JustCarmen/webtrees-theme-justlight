@@ -1,0 +1,4 @@
+#exclude files from export
+
+README.md export-ignore
+.gitattributes export-ignore
