@@ -418,33 +418,41 @@ jQuery("form[name=searchform]").each(function() {
 });
 
 // Reports
-jQuery("#reportengine-page form").formControls({
-	rbInline: true
-});
-jQuery("#reportengine-page form table").each(function() {
-	var t = new Array();
-	var text = jQuery(this).find("tr:eq(1) .optionbox").text().split("\n");
-	t.push('<h2>' + jQuery(this).find("tr:eq(1) .descriptionbox").text() + ' - ' + text[0] + '<p><small>' + text[1] + '</small></p></h2><hr>');
-	t.push('<h4 class="center">' + jQuery(this).find("td:first").text() + '</h4>');
-
-	var e = new Array();
-	jQuery(this).find("tr").not("tr:first, tr:eq(1), tr:last, tr:eq(-2)").each(function() {
-		e.push('<div class="form-group">' + jQuery(this).find("input[type=hidden]").outerHtml() + '<label class="control-label col-sm-4">' + jQuery(this).find(".descriptionbox").text() + '</label><div class="col-sm-4">' + jQuery(this).find(".optionbox").html() + '</div></div>');
+jQuery("#reportengine-page").each(function(){
+	/* bootstrap form layout */
+	jQuery("form", this).formControls({
+		rbInline: true
 	});
-
-	var f = jQuery('<div class="form-group text-center">');
-	jQuery(this).find("tr:eq(-2) .report-type > div").each(function() {
-		f.append(jQuery(this).find(".radio-inline").addClass("text-left").append(jQuery(this).find("i")).outerHtml());
+	
+	/* report title area */
+	var title = jQuery("h2", this).text();
+	var text1 = jQuery(this).find("tr:first .descriptionbox").text();
+	var text2 = jQuery(this).find("tr:first .optionbox").text();
+	jQuery("h2", this).html(text1 + ' - ' + title + '<p><small>' + text2 + '</small></p>').after("<hr>");
+	jQuery("tr:first", this).remove();
+	
+	/* table */
+	jQuery("table", this).each(function() {	
+		var e = new Array();
+		jQuery(this).find("tr").not("tr:last, tr:nth-last-child(1)").each(function() {
+			e.push('<div class="form-group">' + jQuery(this).find("input[type=hidden]").outerHtml() + '<label class="control-label col-sm-4">' + jQuery(this).find(".descriptionbox").text() + '</label><div class="col-sm-4">' + jQuery(this).find(".optionbox").html() + '</div></div>');
+		});
+		
+		var f = new Array();
+		jQuery(".report-type > div", this).each(function(){
+			var radiobtn = "<p>" + jQuery("input[type=radio]", this).outerHtml() + "</p>";
+			var label = jQuery("label:first", this).append(radiobtn).outerHtml();
+			f.push('<div>' + label + '</div>');
+		});
+		e.push('<div class="form-group report-type">' + f + '</div>');
+		
+		jQuery(this).find("tr:last input").each(function() {
+			e.push('<div class="form-group text-center">' + jQuery(this).outerHtml() + '</div>');
+		});
+		
+		// add the array to the Dom and remove the original table.
+		jQuery(this).before(e).remove();
 	});
-	e.push(f);
-
-	jQuery(this).find("tr:last input").each(function() {
-		e.push('<div class="text-center">' + jQuery(this).outerHtml() + '</div>');
-	});
-
-	jQuery(this).parent("form").before(t);
-	jQuery(this).before(e);
-	jQuery(this).remove();
 });
 
 
