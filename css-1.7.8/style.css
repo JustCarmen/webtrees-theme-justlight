@@ -1435,10 +1435,6 @@ ul.clist {
 	font-weight: bold;
 }
 
-.charts_block {
-	width: 0; /* this prevents the chart breaking out of its container */
-}
-
 /* configure block form */
 form[action^="?block_id"] .radio-inline,
 form[action^="?block_id"] .checkbox,
