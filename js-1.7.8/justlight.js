@@ -78,8 +78,6 @@ jQuery.fn.formControls = function (options) {
 					jQuery(this).addClass("input-group-addon").parent().prepend(jQuery('<div class="input-group">').append(jQuery(this).siblings("textarea")).append(jQuery(this)));
 				} else {
 					return;
-				} if (jQuery(this).is(".icon-button_calendar")) {					
-					jQuery(this).removeAttr("onclick").parent("div").addClass("date");
 				}
 			});
 		}

@@ -150,10 +150,6 @@ ul {
 	padding-right: 15px;
 }
 
-ul.list-unstyled { /* bootstrap style */
-	padding: 0;
-}
-
 img.block {
 	height: 20px;
 	vertical-align: middle;
@@ -605,19 +601,13 @@ a.name1:hover {
 
 /* ---Pending edits--- */
 .new {
-	border: solid blue 2px;
+	border: solid blue 2px !important;
 	overflow: hidden;
 }
 
 .old {
-	border: solid red 2px;
+	border: solid red 2px !important;
 	overflow: hidden;
-}
-
-/* solve conflict with bootstrap datepicker class old/new */
-.bootstrap-datetimepicker-widget .old, 
-.bootstrap-datetimepicker-widget .new {
-	border: none;
 }
 
 .tag_cloud a {
@@ -961,6 +951,10 @@ ul.clist {
 }
 
 /* --- reportengine.php --- */
+#reportengine-page table {
+	margin: 20px auto;
+}
+
 #reportengine-page .report-type {
 	overflow: hidden;
 	margin: auto;
@@ -2294,10 +2288,6 @@ blockquote {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
 	border-top: none;
-}
-
-.bootstrap-datetimepicker-widget .table > thead > tr > th {
-	border: none;
 }
 
 .table th.ui-state-default {

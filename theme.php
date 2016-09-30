@@ -279,8 +279,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<script src="' . WT_BOOTSTRAP_JS_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
-			'<script src="' . WT_MOMENT_JS_URL . '"></script>' .
-			'<script src="' . WT_BOOTSTRAP_DATETIMEPICKER_JS_URL . '"></script>' .
 			'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
 			'<script src="' . $this->js_url . 'justlight.js"></script>' .
 			'<script src="' . $this->bootstrap_url . 'justlight.bootstrap.js"></script>' .
@@ -299,15 +297,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					newSheet.setAttribute("media","all");
 					document.getElementsByTagName("head")[0].appendChild(newSheet);
 				}
-				jQuery("form .input-group.date").datetimepicker({
-					format: "DD-MM-YYYY",
-					locale: "' . WT_LOCALE . '",
-					widgetPositioning: {
-						horizontal: "auto",
-						vertical: "bottom"
-					}
-				});
-			</script>';
+				</script>';
 	}
 
 	/** {@inheritdoc} */
@@ -602,7 +592,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->jquery_ui_url . 'jquery-ui.min.css',
 			$this->colorbox_url . 'colorbox.css',
 			$this->bootstrap_url . 'bootstrap-theme.min.css',
-			WT_BOOTSTRAP_DATETIMEPICKER_CSS_URL,
 			$this->assetUrl() . 'style.css',
 			$this->assetUrl() . 'justlight.css'
 		);
