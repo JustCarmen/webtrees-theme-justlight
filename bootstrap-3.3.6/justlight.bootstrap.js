@@ -96,7 +96,7 @@ jQuery(window).resize(function() {
 // Bootstrap table layout
 jQuery("table").waitUntilExists(function() {
 	var t = jQuery(this);
-	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table, #reportengine-page table")) {
+	if (t.is("#accordion table, table.tv_tree, [id*=chart] table, [id*=booklet] table, #place-hierarchy > table, #place-hierarchy > table table, #family-page table, .gedcom_block_block table, .user_welcome_block table, .cens_search table, .cens_data table")) {
 		return;
 	} else if (WT_SCRIPT_NAME === 'relationship.php') {
 		if (t.parents().is("form")) {

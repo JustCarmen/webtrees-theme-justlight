@@ -462,10 +462,6 @@ i.icon-uarrow:before {
 	background: #f9f9f9;
 }
 
-#edit_interface-page div[id^="caldiv"] .table td {
-	border: 1px solid #b2c7d7;
-}
-
 /* census assistant module */
 .census-assistant-search .table {
 	background: none;

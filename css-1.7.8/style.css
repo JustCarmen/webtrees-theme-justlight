@@ -951,10 +951,6 @@ ul.clist {
 }
 
 /* --- reportengine.php --- */
-#reportengine-page table {
-	margin: 20px auto;
-}
-
 #reportengine-page .report-type {
 	overflow: hidden;
 	margin: auto;
@@ -3215,6 +3211,110 @@ img[src*="vline"] {
 /*-- Google maps form (control panel) --*/
 label[for="new_pl_name"] {
 	font-size: 85%;
+}
+
+/*-- Calendar layout --*/
+.calendar {
+	display: block;
+	position: relative;
+	width: auto;
+	z-index: 1000;
+}
+
+.calendar:before,
+.calendar:after {
+	content: '';
+    display: inline-block;
+    position: absolute
+}
+
+.calendar:before {
+	border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-bottom-color: rgba(0,0,0,0.2);
+    top: -7px;
+    left: 7px
+}
+
+.calendar:after {
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    top: -6px;
+    left: 8px
+}
+
+.calendar.dropdown-menu {
+	margin: 2px 0;
+    padding: 4px;
+    width: 19em;
+	top: initial; /* bootstrap dropdown-menu correction */
+	left: initial;
+}
+
+.calendar .table {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.calendar td {
+	border-radius: 4px;
+	text-align: center;
+}
+
+.calendar input,
+.calendar select {
+	width: auto;
+}
+
+.calendar a {
+	color: #000;
+	text-decoration: none;
+}
+
+.calendar td.dow {
+	font-weight: 700;
+}
+
+.calendar td.day {
+	height: 20px;
+    line-height: 20px;
+    width: 20px;
+}
+
+.calendar td.day:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+.calendar td.old-new a {
+	color: #aaa;
+}
+
+.calendar td.today,
+.calendar td.today:hover {
+	background-color: #337ab7;
+	position: relative;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+
+.calendar td.today a,
+.calendar td.today a:hover {
+	color: #fff;
+}
+
+.calendar td.today:before {
+	content: '';
+    display: inline-block;
+    border: solid transparent;
+    border-width: 0 0 7px 7px;
+    border-bottom-color: #fff;
+    border-top-color: rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 4px;
+    right: 4px
 }
 
 /* ====== Common Icons ========= */

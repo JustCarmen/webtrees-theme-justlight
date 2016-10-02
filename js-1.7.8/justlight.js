@@ -574,3 +574,30 @@ if (WT_SCRIPT_NAME === 'search_advanced.php') {
 
 // Cookie warning
 jQuery('.cookie-warning').parent().find('.close').attr('onclick', 'document.cookie="cookie=1";');
+
+// Calendar layout
+jQuery("[onclick^=cal_toggleDate]").each(function(){
+	// we need to find the name of the calendar div. 
+	// It's name is equal to the first parameter in the onclick function.
+	var str = jQuery(this).attr("onclick");
+	var caldiv = str.split(/[ \(,\),\',\;]+/);
+	jQuery('#' + caldiv[1]).addClass("calendar dropdown-menu");
+	
+	jQuery(".calendar table").waitUntilExists(function(){
+		jQuery(this).addClass('table')
+		jQuery(".calendar > table")
+			.removeAttr("border")
+			.removeAttr("width")
+			.addClass("table-condensed")
+			.find("input, select").addClass("form-control input-sm");		
+		jQuery(".calendar > table table")
+			.removeAttr("width").addClass("width100")
+			.find("tr:first td").addClass("dow").removeClass("descriptionbox").end()
+			.find("td.optionbox").addClass("day").removeClass("optionbox").end()
+			.find("td[style]").addClass("day old-new").removeAttr("style").end()
+			.find('td.descriptionbox').addClass("day today").removeClass("descriptionbox");
+			
+	});
+	
+	
+});
