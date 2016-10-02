@@ -3248,7 +3248,6 @@ label[for="new_pl_name"] {
 .calendar.dropdown-menu {
 	margin: 2px 0;
     padding: 4px;
-    width: 19em;
 	top: initial; /* bootstrap dropdown-menu correction */
 	left: initial;
 }
@@ -3260,6 +3259,7 @@ label[for="new_pl_name"] {
 }
 
 .calendar td {
+	background: #fff;
 	border-radius: 4px;
 	text-align: center;
 }
