@@ -2621,7 +2621,6 @@ table#place_hierarchy {
 #place_map {
 	margin-right: 20px;
 	margin-top: 25px;
-	width: auto !important;  /* remove fixed width for responsive layout */	
 }
 
 #place-hierarchy .gm-options {
