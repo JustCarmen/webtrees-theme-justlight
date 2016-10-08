@@ -481,7 +481,7 @@ jQuery(".container-popup form").each(function() {
 });
 
 // Change blocks form
-jQuery("form[name=config_setup").each(function() {
+jQuery("form[name=config_setup]").each(function() {
 	jQuery(this).formControls({
 		layout: 'inline',
 		cbInline: true
