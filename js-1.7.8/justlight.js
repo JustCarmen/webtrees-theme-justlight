@@ -528,14 +528,6 @@ if (WT_SCRIPT_NAME === "medialist.php") {
 	jQuery("#medialist-page .list_table").show();
 }
 
-// mediatab on sources and notes list - don't list filenames
-if (jQuery(".media-list").length > 0) {
-	jQuery(".list_item.name2").each(function () {
-		jQuery(this).next("br").remove();
-		jQuery(this).next("a").remove();
-	});
-}
-
 // Search pages - toggle form and search results
 var searchForm = jQuery('#search-page form');
 var btnText = jQuery('#search-page h2').text();

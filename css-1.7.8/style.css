@@ -1303,6 +1303,10 @@ ul.clist {
 	margin: 3px auto;
 }
 
+.media-list .list_item.name2 + br + a {
+	font-size: 80%;
+}
+
 .filtersH,
 .filtersF {
 	margin: 4px;
@@ -1987,14 +1991,6 @@ blockquote {
 
 #googlemap_content .facts_table {
 	font-size: 100%;
-}
-
-/* Multiple tabs */
-#family-table a[href^="mediaviewer"] span,
-#media_content a[href^="mediaviewer"] span,
-#source-details a[href^="mediaviewer"] span {
-    display: block;
-    padding: 5px 0;
 }
 
 /* ======== Family page ======== */
