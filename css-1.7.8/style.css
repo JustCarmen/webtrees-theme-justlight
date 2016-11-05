@@ -2406,6 +2406,10 @@ table.dataTable thead > tr > th {
 	width: 75px;
 }
 
+.nav_content .nam {
+	padding: 5px 0;
+}
+
 .famnav_title {
 	font-weight: bold;
 	display: block;
