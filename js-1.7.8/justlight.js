@@ -352,6 +352,14 @@ if (WT_SCRIPT_NAME === "individual.php") {
 			}
 		});
 	});
+	
+	// empty lifespan in sidebar
+	jQuery("a.famnav_link").next("div.font9").each(function () {
+		var text = jQuery.trim(jQuery(this).text());
+		if (text === "–") {
+			jQuery(this).remove();
+		}
+	});
 }
 
 function updateHeader() {
