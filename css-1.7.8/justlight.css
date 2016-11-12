@@ -198,9 +198,9 @@ footer {
 .header_accordion1 .name_one.person_boxF,
 .header_accordion1 .name_one.person_boxNN {
 	background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
-	background-image:      -o-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
+	background-image: -o-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#2d6ca2));
-	background-image:         linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
+	background-image: linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	background-repeat: repeat-x;
