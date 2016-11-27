@@ -1740,6 +1740,10 @@ span.link_text {
 	content: ":";
 }
 
+#indi_sour {
+	margin-top: 10px;
+}
+
 #indi_mainimage {
 	float: left;
 }
