@@ -1736,6 +1736,10 @@ span.link_text {
 	padding: 5px;
 }
 
+#header_accordion1 .indi_name_details dt:after {
+	content: ":";
+}
+
 #indi_mainimage {
 	float: left;
 }
