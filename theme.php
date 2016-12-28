@@ -525,7 +525,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function primaryMenuContent(array $menus) {
-		$_this = $this;
+		$_this = $this; // workaround for php 5.3
 		return implode('', array_map(function (Menu $menu) use ($_this) {
 				if ($menu->getClass() === 'menu-view') {
 					return $_this->formatCompactMenu($menu);
