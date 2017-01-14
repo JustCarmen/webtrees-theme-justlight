@@ -18,6 +18,8 @@
 
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
+	var headerHeight = jQuery("#nav-container").height() + 5;
+	jQuery("header").css("height", headerHeight);
 	if (jQuery("#responsive").is(":visible")) {
 		jQuery('#nav-container').removeClass('navbar-fixed-top');
 		jQuery('#nav-container').addClass('navbar-top');
