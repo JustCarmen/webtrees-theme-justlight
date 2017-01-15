@@ -167,12 +167,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->formatPageViews($this->page_views) .
 			$this->formatCredits();
 	}
-	
+
 	protected function formatCredits() {
 		return
-			'<div class="credits">' . 
-				$this->logoPoweredBy() .
-				'<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>' .
+			'<div class="credits">' .
+			$this->logoPoweredBy() .
+			'<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>' .
 			'</div>';
 	}
 
@@ -230,6 +230,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<div class="' . $class . '">' .
 			$this->secondaryMenuContainer($this->secondaryMenu()) .
 			$this->menuLogin() .
+			'<div class="search btn-group">' . $this->formQuickSearch() . '</div>' .	
 			'</div>';
 	}
 
@@ -238,7 +239,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		if ($this->tree) {
 			return
 				'<h1>' .
-				'<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="navbar-brand" style="' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+				'<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="navbar-brand"' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
 				'</h1>';
 		} else {
 			return '';
@@ -249,17 +250,17 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function headerContent() {
 		return
 			'<div class="navbar-header">' .
+			$this->logoHeader() .
 			$this->formatTreeTitle() .
 			'</div>' .
 			'<div class="navbar-collapse collapse">' .
-			'<div class="div_search">' . $this->formQuickSearch() . '</div>' .
 			$this->formatSecondaryMenu() .
 			'</div>';
 	}
 
 	// Theme setting for the tree title
 	protected function headerTitleStyle() {
-		return 'font-size:' . $this->themeOption('titlesize') . 'px;';
+		return ' style = "font-size:' . $this->themeOption('titlesize') . 'px"';
 	}
 
 	/** {@inheritdoc} */
@@ -326,6 +327,40 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 
 		return $menus;
+	}
+
+	private function logo($data) {
+		if (!$this->themeOption('logo')) {
+			return;
+		}
+		
+		$filename = WT_DATA_DIR . $this->themeOption('logo');
+		if (file_exists($filename)) {
+			try {
+				$logo	 = file_get_contents($filename);
+				$imgsize = getimagesize($filename);
+
+				switch ($data) {
+					case 'image':
+						return 'data:' . $imgsize['mime'] . ';base64,' . base64_encode($logo);
+					case 'height':
+						return min($imgsize[1], '80');
+					default:
+						break;
+				}
+			} catch (Exception $ex) {
+				//image loading failed;
+			}
+		}
+	}
+
+	/** {@inheritdoc} */
+	protected function logoHeader() {
+		return '<div class="header-logo" ' . $this->logoHeaderStyle() . '></div>';
+	}
+
+	private function logoHeaderStyle() {
+		return 'style="background-image:url(' . $this->logo('image') . '); height: ' . $this->logo('height') . 'px"';
 	}
 
 	protected function mainContentStyle() {
@@ -406,9 +441,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		} else {
 			$resn = Auth::PRIV_PRIVATE;
 		}
-		
+
 		if ($resn >= Auth::accessLevel($this->tree)) {
-		
+
 			$MEDIA_DIRECTORY = $this->tree->getPreference('MEDIA_DIRECTORY');
 
 			$folders		 = $this->themeOption('mediafolders');

@@ -3518,8 +3518,19 @@ header {
 	margin-bottom: 20px;
 }
 
+.header-logo {
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+	margin-top: 20px;
+}
+
+[dir=rtl] .header-logo {
+	margin-right: 20px;
+}
+
 .navbar-header {
-	padding-left: 15px;
+	padding-left: 30px;
 	width: 50%;
 }
 
@@ -3543,26 +3554,16 @@ header {
 	overflow-y: visible;
 }
 
-.div_search {
-	float: right;
-    margin-top: 0;
-    margin-left: 3%;
+.navbar-right {
     margin-right: 15px;
 }
 
-.div_search .btn {
-	margin-top:0;
-}
-
-[dir=rtl] .div_search {
-	float: left;
+.navbar-left {
 	margin-left: 15px;
-	margin-right: 3%;
 }
 
 .navbar-right .btn,
-.navbar-left .btn
-.div_search .btn {
+.navbar-left .btn {
 	border-radius:0;
 }
 
@@ -4072,7 +4073,7 @@ a[class$="arrow"] {
 
 /* JustLight responsive */
 @media (max-width: 1200px) {
-	.div_search {
+	.search {
 		display: none;
 	}
 }
@@ -4087,7 +4088,6 @@ a[class$="arrow"] {
 	}
 
 	.navbar-header {
-		margin-top: 50px;
 		width: 100%
 	}
 
