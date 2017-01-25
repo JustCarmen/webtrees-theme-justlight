@@ -260,7 +260,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	// Theme setting for the tree title
 	protected function headerTitleStyle() {
-		echo $this->themeOption('titlesize');
 		if ($this->themeOption('titlesize') === '0') {
 			$padding = ' padding: 0';
 		} else {
