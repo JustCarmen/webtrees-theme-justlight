@@ -239,7 +239,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		if ($this->tree) {
 			return
 				'<h1>' .
-				'<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="navbar-brand"' . $this->headerTitleStyle() . '">' . $this->tree->getTitleHtml() . '</a>' .
+				'<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="navbar-brand"' . $this->headerTitleStyle() . '>' . $this->tree->getTitleHtml() . '</a>' .
 				'</h1>';
 		} else {
 			return '';
@@ -260,7 +260,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	// Theme setting for the tree title
 	protected function headerTitleStyle() {
-		return ' style = "font-size:' . $this->themeOption('titlesize') . 'px"';
+		echo $this->themeOption('titlesize');
+		if ($this->themeOption('titlesize') === '0') {
+			$padding = ' padding: 0';
+		} else {
+			$padding = '';
+		}
+		return ' style = "font-size:' . $this->themeOption('titlesize') . 'px;' . $padding . '"';
 	}
 
 	/** {@inheritdoc} */
@@ -356,7 +362,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	protected function logoHeader() {
-		return '<div class="header-logo" ' . $this->logoHeaderStyle() . '></div>';
+		return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="header-logo" ' . $this->logoHeaderStyle() . '></a>';
 	}
 
 	private function logoHeaderStyle() {

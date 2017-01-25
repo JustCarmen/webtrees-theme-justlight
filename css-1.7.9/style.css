@@ -3522,6 +3522,7 @@ header {
 	background-size: contain;
     background-repeat: no-repeat;
     background-position: left top;
+	display: block;
 	margin-top: 20px;
 }
 
