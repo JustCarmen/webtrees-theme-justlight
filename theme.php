@@ -335,10 +335,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	private function logo($data) {
-		if (!$this->themeOption('logo')) {
-			return;
-		}
-		
 		$filename = WT_DATA_DIR . $this->themeOption('logo');
 		if (file_exists($filename)) {
 			try {
@@ -361,7 +357,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	protected function logoHeader() {
-		return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="header-logo" ' . $this->logoHeaderStyle() . '></a>';
+		if ($this->themeOption('logo')) {
+			return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="header-logo" ' . $this->logoHeaderStyle() . '></a>';		
+		}
 	}
 
 	private function logoHeaderStyle() {
