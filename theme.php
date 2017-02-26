@@ -274,7 +274,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function hookFooterExtraJavascript() {
 		return
-			$this->scriptVars() .
+			$this->PhpToJavascript($this->hookJavascriptVariables()) .
 			'<script src="' . WT_BOOTSTRAP_JS_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
@@ -297,6 +297,24 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					document.getElementsByTagName("head")[0].appendChild(newSheet);
 				}
 				</script>';
+	}
+
+	/**
+	 * This theme uses variables from php in javascript.
+	 * Output an array of variables
+	 * Key	 = Javascript variable name
+	 * Value = Php value
+	 *
+	 * @return array
+	 *
+	 */
+	protected function hookJavascriptVariables() {
+		$variables = [
+			'THEME_COLORBOX_URL' => self::THEME_COLORBOX_URL,
+			'WT_BASE_URL'		 => WT_BASE_URL
+		];
+
+		return $variables;
 	}
 
 	/** {@inheritdoc} */
@@ -511,6 +529,21 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	/**
+	 * Output Javascript variables from Php values
+	 *
+	 * @param array $variables
+	 * @return javascript
+	 */
+	protected function phpToJavascript(array $variables) {
+		$javascript = '';
+		foreach ($variables as $js_variable => $php_variable) {
+			$javascript .= 'var ' . $js_variable . ' = "' . $php_variable . '"; ';
+		}
+
+		return '<script>' . $javascript . '</script>';
+	}
+
 	/** {@inheritdoc} */
 	public function primaryMenu() {
 		global $controller;
@@ -564,15 +597,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 					return $menu->bootstrap();
 				}
 			}, $menus));
-	}
-
-	// This theme uses variables from php files in the javascript files
-	protected function scriptVars() {
-		return
-			'<script>' .
-				'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
-				'var THEME_COLORBOX_URL = "' . self::THEME_COLORBOX_URL . '";' .
-			'</script>';
 	}
 
 	/** (@inheritdoc) */
