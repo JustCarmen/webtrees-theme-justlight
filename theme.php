@@ -568,18 +568,10 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	// This theme uses variables from php files in the javascript files
 	protected function scriptVars() {
-		if ($this->tree) {
-			$tree_title = $this->tree->getName();
-		} else {
-			$tree_title = '';
-		}
-
-		return '<script>' .
-			'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
-			'var WT_TREE_TITLE = "' . $tree_title . '";' .
-			'var JL_COLORBOX_URL = "' . self::THEME_COLORBOX_URL . '";' .
-			'var TEXT_PREV = "' . I18N::translate('previous') . '";' .
-			'var TEXT_NEXT = "' . I18N::translate('next') . '";' .
+		return
+			'<script>' .
+				'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
+				'var THEME_COLORBOX_URL = "' . self::THEME_COLORBOX_URL . '";' .
 			'</script>';
 	}
 

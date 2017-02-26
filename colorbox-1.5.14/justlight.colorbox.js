@@ -14,6 +14,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* global THEME_COLORBOX_URL */
+
 function get_imagetype() {
 	var xrefs = [];
 	jQuery('a[type^=image].gallery').each(function () {
@@ -22,7 +24,7 @@ function get_imagetype() {
 		xrefs.push(xref);
 	});
 	jQuery.ajax({
-		url: JL_COLORBOX_URL + 'action.php?action=imagetype',
+		url: THEME_COLORBOX_URL + 'action.php?action=imagetype',
 		type: 'POST',
 		dataType: 'json',
 		async: false,
