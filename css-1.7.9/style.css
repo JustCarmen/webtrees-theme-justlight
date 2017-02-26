@@ -26,7 +26,7 @@ html {
 	overflow-y: scroll;
 }
 
-#wrap {
+#page {
     height: auto !important;
     margin: 0 auto -100px; /* height of the footer (margins included) */
     min-height: 100%;
@@ -39,7 +39,7 @@ html {
 }
 
 /* bootstrap container table layout */
-main { 
+main {
 	border-collapse:separate;
 	border-spacing:0;
 	margin-bottom: 40px;
@@ -96,7 +96,7 @@ a:hover {
 a, a:visited,
 a:focus,
 a:active,
-a:hover{ 
+a:hover{
 	outline: none;
 }
 
@@ -764,7 +764,7 @@ ul.clist {
 	margin: 0 3px 0 0;
 }
 
-.person_box_template img {	
+.person_box_template img {
 	height: 50px;
 	width: auto;
 	max-width: 80px;
@@ -1056,7 +1056,7 @@ ul.clist {
 }
 
 #index_small_blocks .popover-content ul {
-	font-size: 100%;	
+	font-size: 100%;
 }
 
 /* Familylink in popover */
@@ -1375,7 +1375,7 @@ ul.clist {
 	width: 25%;
 	max-width: 292.5px; /* 25% x 1170 */
 	display: table-cell;
-	font-size: 80%;	
+	font-size: 80%;
 	padding: 10px;
 	vertical-align: top;
 }
@@ -1574,7 +1574,7 @@ label[for="touser"] {
 .stat-table2 .stat-cell {
 	display: table-cell;
 	padding: 3px;
-	white-space: pre-wrap; 
+	white-space: pre-wrap;
 }
 
 .stat-table2 .stat-cell.left {
@@ -1864,7 +1864,7 @@ blockquote {
 .panel-heading a:after {
     font-family: 'FontAwesome';
     content:"\f078";
-    float: right; 
+    float: right;
 }
 
 [dir=rtl] .panel-heading a:after {
@@ -2814,7 +2814,7 @@ table#place_hierarchy {
 }
 
 #flyoutFam td,
-#flyoutPar td, 
+#flyoutPar td,
 #flyoutStep td {
 	font-size: inherit !important;
 }
@@ -2834,9 +2834,9 @@ table#place_hierarchy {
 
 .cboxSlideshow_on #cboxSlideshow {
     position:absolute;
-    bottom:0; left:54px; 
+    bottom:0; left:54px;
     background:url(images/slideshow_controls.png) no-repeat 0 0;
-    width:25px; height:25px; 
+    width:25px; height:25px;
     text-indent:-9999px;
 }
 
@@ -2845,11 +2845,11 @@ table#place_hierarchy {
 }
 
 .cboxSlideshow_off #cboxSlideshow {
-    position:absolute; 
-    bottom:0; left:54px; 
-    background:url(images/slideshow_controls.png) no-repeat -25px 0; 
-    width:25px; 
-    height:25px; 
+    position:absolute;
+    bottom:0; left:54px;
+    background:url(images/slideshow_controls.png) no-repeat -25px 0;
+    width:25px;
+    height:25px;
     text-indent:-9999px;
 }
 
@@ -3189,7 +3189,7 @@ img[src*="vline"] {
 
 #pedigree_chart.layout2 .person_box_template .compact_view img,
 #pedigree_chart.layout3 .person_box_template .compact_view img {
-	float: none;	
+	float: none;
 }
 
 #pedigree_chart.layout2 .person_box_template .compact_view .name0,
@@ -3702,7 +3702,7 @@ footer {
 .help.icon-wiki,
 .lb-image_edit a,
 .lb-image_link a,
-.lb-image_view a, 
+.lb-image_view a,
 .male_gender,
 .female_gender,
 .unknown_gender {
@@ -3741,12 +3741,12 @@ a[class^=" icon-"]:focus,
 	text-decoration: none;
 }
 
-[class^="icon-"].input-group-addon, 
+[class^="icon-"].input-group-addon,
 [class*=" icon-"].input-group-addon {
 	display: table-cell;
 	padding: 3px 8px;
 	top: 0;
-	vertical-align: middle;	
+	vertical-align: middle;
 }
 
 a[class$="arrow"] {
@@ -3778,7 +3778,7 @@ a[class$="arrow"] {
 	content:"\f0fe";
 }
 
-.icon-button_calendar:before {	
+.icon-button_calendar:before {
 	content:"\f073";
 }
 
@@ -3791,7 +3791,7 @@ a[class$="arrow"] {
 	content: "\f002";
 }
 
-.icon-button_head:before {	
+.icon-button_head:before {
 	content: "\e602";
 	font-family: "icomoon";
 	font-size: 24px;
@@ -3997,7 +3997,7 @@ a[class$="arrow"] {
 	font-weight:bold;
 }
 
-.icon-silhouette-F:before {	
+.icon-silhouette-F:before {
 	content: "\e601";
 	font-family: "icomoon";
 	font-size: 48px;
@@ -4069,7 +4069,7 @@ a[class$="arrow"] {
 }
 
 .lb-image_view a:before {
-	content:"\f03e";	
+	content:"\f03e";
 }
 
 /* JustLight responsive */
@@ -4098,13 +4098,13 @@ a[class$="arrow"] {
 		line-height: 1.5;
 		padding: 5px 10px;
 	}
-	
+
 	#indi_header .name_one {
 		font-size: 120%;
 		line-height: 1.2em;
 	}
-	
-	#indi_header h3 .header_age {	
+
+	#indi_header h3 .header_age {
 		font-size: 80%;
 	}
 
@@ -4125,17 +4125,17 @@ a[class$="arrow"] {
 @media (max-width: 450px) {
 	body,
 	.dropdown-menu {
-		font-size: 13px;		
+		font-size: 13px;
 	}
-	
+
 	h2 {
 		font-size: 140%;
 	}
-	
+
 	h3 {
 		font-size: 130%;
 	}
-	
+
 	h4 {
 		font-size: 120%;
 	}
@@ -4143,17 +4143,17 @@ a[class$="arrow"] {
 	.navbar-right {
 		width: 80%;
 	}
-	
+
 	.navbar-right .btn-group {
 		padding-bottom: 5px;
 	}
-	
+
 	.navbar-right .btn {
 		font-size: 12px;
 		line-height: 1.5;
 		padding: 1px 5px;
 	}
-	
+
 	.block[id^="charts"] {
 		display: none;
 	}

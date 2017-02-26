@@ -55,7 +55,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function bodyHeader() {
 		return
 			'<body>' .
-			'<div id="wrap">' .
+			'<div id="page" class="page-container">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
