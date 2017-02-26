@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-namespace JustCarmen\WebtreesAddOns\JustLight;
+namespace JustCarmen\WebtreesThemes\JustLight;
 
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Filter;
@@ -30,6 +30,7 @@ use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\Theme\AbstractTheme;
 use Fisharebest\Webtrees\Theme\ThemeInterface;
 use JustCarmen\WebtreesAddOns\FancyImagebar\FancyImagebarClass;
+use JustCarmen\WebtreesAddOns\JustLight\JustLightThemeOptionsClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
