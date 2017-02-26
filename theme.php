@@ -34,24 +34,17 @@ use JustCarmen\WebtreesAddOns\JustLight\JustLightThemeOptionsClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
-	/** @var string the location of this theme */
-	private $theme_dir;
-
-	/** @var string the location of the custom javascript files */
-	private $js_url;
-
-	/** @var string the location of the bootstrap theme files */
-	protected $bootstrap_url;
-
-	/** @var string the location of the jquery-ui files */
-	private $jquery_ui_url;
-
-	/** @var string the location of the colorbox files */
-	private $colorbox_url;
+	const THEME_VERSION			 = '1.7.9';
+	const THEME_DIR				 = WT_THEMES_DIR . 'justlight/';
+	const THEME_CSS_URL			 = self::THEME_DIR . 'css-' . self::THEME_VERSION . '/';
+	const THEME_JS_URL			 = self::THEME_DIR . 'js-' . self::THEME_VERSION . '/';
+	const THEME_BOOTSTRAP_URL	 = self::THEME_DIR . 'bootstrap-3.3.7/';
+	const THEME_JQUERY_UI_URL	 = self::THEME_DIR . 'jquery-ui-1.11.4/';
+	const THEME_COLORBOX_URL	 = self::THEME_DIR . 'colorbox-1.5.14/';
 
 	/** {@inheritdoc} */
 	public function assetUrl() {
-		return 'themes/justlight/css-1.7.9/';
+		return self::THEME_CSS_URL;
 	}
 
 	/** {@inheritdoc} */
@@ -279,26 +272,16 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	/** {@inheritdoc} */
-	public function hookAfterInit() {
-		// Put a version number in the URL, to prevent browsers from caching old versions.
-		$this->theme_dir	 = 'themes/justlight/';
-		$this->js_url		 = 'themes/justlight/js-1.7.9/';
-		$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.7/';
-		$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
-		$this->colorbox_url	 = $this->theme_dir . 'colorbox-1.5.14/';
-	}
-
-	/** {@inheritdoc} */
 	public function hookFooterExtraJavascript() {
 		return
 			$this->scriptVars() .
 			'<script src="' . WT_BOOTSTRAP_JS_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
 			'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
-			'<script src="' . $this->js_url . 'jquery.waituntilexists.min.js"></script>' .
-			'<script src="' . $this->js_url . 'justlight.js"></script>' .
-			'<script src="' . $this->bootstrap_url . 'justlight.bootstrap.js"></script>' .
-			'<script src="' . $this->colorbox_url . 'justlight.colorbox.js"></script>' .
+			'<script src="' . self::THEME_JS_URL . 'jquery.waituntilexists.min.js"></script>' .
+			'<script src="' . self::THEME_JS_URL . 'justlight.js"></script>' .
+			'<script src="' . self::THEME_BOOTSTRAP_URL . 'justlight.bootstrap.js"></script>' .
+			'<script src="' . self::THEME_COLORBOX_URL . 'justlight.colorbox.js"></script>' .
 			'<script>
 				if(jQuery(".dataTable").length){
 					var script	= document.createElement("script");
@@ -594,7 +577,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return '<script>' .
 			'var WT_BASE_URL = "' . WT_BASE_URL . '";' .
 			'var WT_TREE_TITLE = "' . $tree_title . '";' .
-			'var JL_COLORBOX_URL = "' . $this->colorbox_url . '";' .
+			'var JL_COLORBOX_URL = "' . self::THEME_COLORBOX_URL . '";' .
 			'var TEXT_PREV = "' . I18N::translate('previous') . '";' .
 			'var TEXT_NEXT = "' . I18N::translate('next') . '";' .
 			'</script>';
@@ -637,9 +620,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function stylesheets() {
 		$stylesheets = array(
-			$this->jquery_ui_url . 'jquery-ui.min.css',
-			$this->colorbox_url . 'colorbox.css',
-			$this->bootstrap_url . 'bootstrap-theme.min.css',
+			self::THEME_JQUERY_UI_URL . 'jquery-ui.min.css',
+			self::THEME_COLORBOX_URL . 'colorbox.css',
+			self::THEME_BOOTSTRAP_URL . 'bootstrap-theme.min.css',
 			$this->assetUrl() . 'style.css',
 			$this->assetUrl() . 'justlight.css'
 		);
