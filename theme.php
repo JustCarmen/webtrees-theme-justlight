@@ -55,13 +55,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function bodyHeader() {
 		return
 			'<body>' .
-			'<div id="page" class="page-container">' .
+			'<div id="page" class="page-container container">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" class="container"' . $this->mainContentStyle() . '>';
+			'<main id="content" class="container' . $this->getMainContentClass() . '"' . $this->mainContentStyle() . '>';
 	}
 
 	/** {@inheritdoc} */
@@ -248,6 +248,25 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		} else {
 			return 'container';
 		}
+	}
+
+	protected function getMainContentClass() {
+		$class = ' jc-content-' . $this->getPage();
+
+		$module = Filter::get('mod');
+		if ($module) {
+			$class = $class . '-' . $module;
+		}
+
+		$ctype = Filter::get('ctype');
+		if ($ctype) {
+			$class = $class . ' ' . $class . '-' . $ctype;
+		}
+		return $class;
+	}
+
+	protected function getPage() {
+		return basename(WT_SCRIPT_NAME, ".php");
 	}
 
 	/**
