@@ -236,12 +236,22 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	/**
+	 * Add a fixed header to this theme
+	 *
+	 * @return string
+	 */
 	protected function getFixedHeaderClass() {
 		if ($this->themeFixedHeader) {
 			return 'navbar-fixed-top';
 		}
 	}
 
+	/**
+	 * Add class to the header container
+	 *
+	 * @return string
+	 */
 	protected function getHeaderContainerClass() {
 		if ($this->themeFluidHeaderContainer) {
 			return 'container-fluid';
@@ -250,6 +260,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	/**
+	 * Add page identifier to the main content class
+	 *
+	 * @return string
+	 */
 	protected function getMainContentClass() {
 		$class = ' jc-content-' . $this->getPage();
 
@@ -265,6 +280,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $class;
 	}
 
+	/**
+	 * Get the current page
+	 *
+	 * @return type
+	 */
 	protected function getPage() {
 		return basename(WT_SCRIPT_NAME, ".php");
 	}
