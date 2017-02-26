@@ -107,13 +107,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	public function formatCompactMenu($menu) {
 		if ($menu->getSubmenus()) {
-			$html = '<li class="' . $menu->getClass() . ' dropdown">';
-			$html .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
-			$html .= '<ul class="dropdown-menu" role="menu">';
+			$html	 = '<li class="' . $menu->getClass() . ' dropdown">';
+			$html	 .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
+			$html	 .= '<ul class="dropdown-menu" role="menu">';
 			foreach ($menu->getSubmenus() as $submenu) {
 				if ($submenu->getSubmenus()) {
-					$html .= '<li class="' . $submenu->getClass() . ' dropdown-submenu">';
-					$html .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
+					$html	 .= '<li class="' . $submenu->getClass() . ' dropdown-submenu">';
+					$html	 .= '<a class="dropdown-submenu-toggle" href="#">' . $submenu->getLabel() . '<span class="right-caret"></span></a>';
 
 					$html .= '<ul class="dropdown-menu sub-menu">';
 					foreach ($submenu->getSubmenus() as $subsubmenu) {
@@ -231,7 +231,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<div class="' . $class . '">' .
 			$this->secondaryMenuContainer($this->secondaryMenu()) .
 			$this->menuLogin() .
-			'<div class="search btn-group">' . $this->formQuickSearch() . '</div>' .	
+			'<div class="search btn-group">' . $this->formQuickSearch() . '</div>' .
 			'</div>';
 	}
 
@@ -359,7 +359,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	protected function logoHeader() {
 		if ($this->themeOption('logo')) {
-			return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="header-logo" ' . $this->logoHeaderStyle() . '></a>';		
+			return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '" class="header-logo" ' . $this->logoHeaderStyle() . '></a>';
 		}
 	}
 
@@ -605,11 +605,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function secondaryMenuContainer(array $menus) {
 		$html = '';
 		foreach ($menus as $menu) {
-			$html .= '<div class="' . $menu->getClass() . ' btn-group">';
-			$html .= '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">';
-			$html .= $menu->getLabel();
-			$html .= '<span class="caret"></span>';
-			$html .= '</button>';
+			$html	 .= '<div class="' . $menu->getClass() . ' btn-group">';
+			$html	 .= '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">';
+			$html	 .= $menu->getLabel();
+			$html	 .= '<span class="caret"></span>';
+			$html	 .= '</button>';
 			if ($menu->getsubmenus()) {
 				$html .= '<ul class="dropdown-menu">';
 				foreach ($menu->getsubmenus() as $submenu) {
