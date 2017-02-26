@@ -41,7 +41,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	private $js_url;
 
 	/** @var string the location of the bootstrap theme files */
-	private $bootstrap_url;
+	protected $bootstrap_url;
 
 	/** @var string the location of the jquery-ui files */
 	private $jquery_ui_url;
@@ -274,7 +274,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		// Put a version number in the URL, to prevent browsers from caching old versions.
 		$this->theme_dir	 = 'themes/justlight/';
 		$this->js_url		 = 'themes/justlight/js-1.7.9/';
-		$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.6/';
+		$this->bootstrap_url = $this->theme_dir . 'bootstrap-3.3.7/';
 		$this->jquery_ui_url = $this->theme_dir . 'jquery-ui-1.11.4/';
 		$this->colorbox_url	 = $this->theme_dir . 'colorbox-1.5.14/';
 	}
