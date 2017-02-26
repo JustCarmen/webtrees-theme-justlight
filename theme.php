@@ -59,15 +59,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return
 			'<body>' .
 			'<div id="wrap">' .
-			'<header>' .
-			'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
-			'<div class="navbar-inner">' .
-			'<div class="container-fluid">' .
-			$this->formatNavbarToggle() .
-			$this->headerContent() .
-			$this->primaryMenuContainer($this->primaryMenu()) .
-			'</div></div></div>' .
-			'</header>' .
+			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
@@ -245,6 +237,23 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		} else {
 			return '';
 		}
+	}
+
+	/**
+	 * Container for the header elements
+	 *
+	 * @return type
+	 */
+	protected function headerContainer() {
+		return '<header>' .
+			'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
+			'<div class="navbar-inner">' .
+			'<div class="container-fluid">' .
+			$this->formatNavbarToggle() .
+			$this->headerContent() .
+			$this->primaryMenuContainer($this->primaryMenu()) .
+			'</div></div></div>' .
+			'</header>';
 	}
 
 	/** {@inheritdoc} */
