@@ -34,13 +34,17 @@ use JustCarmen\WebtreesAddOns\JustLight\JustLightThemeOptionsClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
-	const THEME_VERSION			 = '1.7.9';
-	const THEME_DIR				 = WT_THEMES_DIR . 'justlight/';
-	const THEME_CSS_URL			 = self::THEME_DIR . 'css-' . self::THEME_VERSION . '/';
-	const THEME_JS_URL			 = self::THEME_DIR . 'js-' . self::THEME_VERSION . '/';
+	const THEME_VERSION		 = '1.7.9';
+	const THEME_DIR			 = WT_THEMES_DIR . 'justlight/';
+	const THEME_CSS_URL		 = self::THEME_DIR . 'css-' . self::THEME_VERSION . '/';
+	const THEME_JS_URL		 = self::THEME_DIR . 'js-' . self::THEME_VERSION . '/';
 	const THEME_BOOTSTRAP_URL	 = self::THEME_DIR . 'bootstrap-3.3.7/';
 	const THEME_JQUERY_UI_URL	 = self::THEME_DIR . 'jquery-ui-1.11.4/';
 	const THEME_COLORBOX_URL	 = self::THEME_DIR . 'colorbox-1.5.14/';
+
+	// Theme properties
+	protected $themeFixedHeader			 = true;
+	protected $themeFluidHeaderContainer = true;
 
 	/** {@inheritdoc} */
 	public function assetUrl() {
@@ -232,6 +236,20 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	protected function getFixedHeaderClass() {
+		if ($this->themeFixedHeader) {
+			return 'navbar-fixed-top';
+		}
+	}
+
+	protected function getHeaderContainerClass() {
+		if ($this->themeFluidHeaderContainer) {
+			return 'container-fluid';
+		} else {
+			return 'container';
+		}
+	}
+
 	/**
 	 * Container for the header elements
 	 *
@@ -239,9 +257,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	 */
 	protected function headerContainer() {
 		return '<header>' .
-			'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
+			'<div id="nav-container" class="navbar navbar-default ' . $this->getFixedHeaderClass() . '">' .
 			'<div class="navbar-inner">' .
-			'<div class="container-fluid">' .
+			'<div class="' . $this->getHeaderContainerClass() . '">' .
 			$this->formatNavbarToggle() .
 			$this->headerContent() .
 			$this->primaryMenuContainer($this->primaryMenu()) .
@@ -311,6 +329,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	protected function hookJavascriptVariables() {
 		$variables = [
 			'THEME_COLORBOX_URL' => self::THEME_COLORBOX_URL,
+			'THEME_FIXED_HEADER' => $this->themeFixedHeader,
 			'WT_BASE_URL'		 => WT_BASE_URL
 		];
 

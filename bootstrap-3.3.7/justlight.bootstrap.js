@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* global WT_SCRIPT_NAME, WT_BASE_URL, textDirection */
+/* global WT_SCRIPT_NAME, WT_BASE_URL, textDirection, THEME_FIXED_HEADER */
 
 // Use a flexible header on small screens. The header takes to much space on small screens
 function flexibleHeader() {
@@ -29,10 +29,13 @@ function flexibleHeader() {
 	}
 }
 
-flexibleHeader();
-jQuery(window).resize(function() {
+// This is a theme specific function. Not every derived theme is using a fixed header.
+if (THEME_FIXED_HEADER) {
 	flexibleHeader();
-});
+	jQuery(window).resize(function() {
+		flexibleHeader();
+	});
+}
 
 // Bootstrap multilevel menu
 jQuery(".dropdown").on("click", ".dropdown-toggle", function() {
