@@ -54,14 +54,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function bodyHeader() {
 		return
-			'<body>' .
-			'<div id="page" class="jc-page-container' . $this->getPageContainerClass() . '">' .
+			'<body class="wt-global' . $this->getPageGlobalClass() . '">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" class="container' . $this->getMainContentClass() . '">';
+			'<main id="content" class="wt-main-container container' . $this->getMainContentClass() . '">';
 	}
 
 	/** {@inheritdoc} */
@@ -107,8 +106,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function footerContainer() {
 		return
 			'</main>' .
-			'<div id="push"></div>' .
-			'</div>' .
 			'<footer>' . $this->footerContent() . '</footer>' .
 			'<div class="flash-messages">' . $this->formatCookieWarning() . '</div>';
 	}
@@ -243,19 +240,22 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	/**
-	 * Add a fixed header to this theme
+	 * Add a fixed navbar to this theme
 	 *
 	 * @return string
 	 */
-	protected function getFixedHeaderClass() {
+	protected function getFixedNavbarClass() {
 		if ($this->themeFixedHeader) {
 			return ' navbar-fixed-top';
 		}
 	}
 
 	/**
-	 * Add class to the header container
-	 *
+	 * Add fluid header class
+	 * 
+	 * This makes the header width equal to the viewport width
+	 * The default class = "container" (non-fluid)
+	 * 
 	 * @return string
 	 */
 	protected function getHeaderContainerClass() {
@@ -276,26 +276,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	/**
-	 * Add page identifier to the main content class
-	 *
-	 * @return string
-	 */
-	protected function getPageContainerClass() {
-		$class = ' jc-page-container-' . $this->getPage();
-
-		$module = Filter::get('mod');
-		if ($module) {
-			$class = $class . '-' . $module;
-		}
-
-		$ctype = Filter::get('ctype');
-		if ($ctype) {
-			$class = $class . ' ' . $class . '-' . $ctype;
-		}
-		return $class;
-	}
-
-	/**
 	 * Get the current page
 	 *
 	 * @return type
@@ -305,19 +285,38 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	/**
+	 * Add page identifier to the main content class
+	 *
+	 * @return string
+	 */
+	protected function getPageGlobalClass() {
+		$class = ' jc-global-' . $this->getPage();
+
+		$module = Filter::get('mod');
+		if ($module) {
+			$class = $class . '-' . $module;
+		}
+
+		$ctype = Filter::get('ctype');
+		if ($ctype) {
+			$class = $class . $class . '-' . $ctype;
+		}
+		return $class;
+	}
+
+	/**
 	 * Container for the header elements
 	 *
 	 * @return type
 	 */
 	protected function headerContainer() {
-		return '<header>' .
-			'<div id="nav-container" class="navbar navbar-default' . $this->getFixedHeaderClass() . '">' .
+		return '<header class="jc-header-container ' . $this->getHeaderContainerClass() . '">' .
+			'<div id="nav-container" class="navbar navbar-default' . $this->getFixedNavbarClass() . '">' .
 			'<div class="navbar-inner">' .
-			'<div class="' . $this->getHeaderContainerClass() . '">' .
 			$this->formatNavbarToggle() .
 			$this->headerContent() .
 			$this->primaryMenuContainer($this->primaryMenu()) .
-			'</div></div></div>' .
+			'</div></div>' .
 			'</header>';
 	}
 

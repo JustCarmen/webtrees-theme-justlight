@@ -16,32 +16,30 @@
 
 /* ======== Globals ========== */
 
-
-html, body {
-	height: 100%; /* for a sticky footer */
-}
-
-/* Add a permanent scrollbar, to prevent "flickering" when hover effects lengthen page */
-html {
+/* classes met prefix wt can be removed in wt-2.0 when using the _common stylesheet */
+.wt-global {
+	/* Prevent redraws when dynamic content requires a scrollbar. */
 	overflow-y: scroll;
+	/* Keep the page as tall as the window, so the footer can remain at the bottom. */
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
-#page {
-    height: auto !important;
-    margin: 0 auto -100px; /* height of the footer (margins included) */
-    min-height: 100%;
-	position: relative;
+.wt-main-container {
+	/* Grow to fill content, to allow footer to stay at bottom of page. */
+	flex: 1;
 }
 
 /* custom page layout */
-.jc-page-container-individual #content,
-.jc-page-container-family #content,
-.jc-page-container-medialist #content,
-.jc-page-container-module-tree #content {
+.jc-global-individual .wt-main-container,
+.jc-global-family .wt-main-container,
+.jc-global-medialist .wt-main-container,
+.jc-global-module-tree .wt-main-container {
 	width: 98%;
 }
 
-.jc-page-container-pedigree #content {
+.jc-global-pedigree .wt-main-container {
 	margin-bottom: 50px;
 }
 
@@ -50,19 +48,8 @@ html {
 	display: none;
 }
 
-/* bootstrap container table layout */
-main {
-	border-collapse:separate;
-	border-spacing:0;
-	margin-bottom: 40px;
-}
-
 .container-popup {
 	width: 95%;
-}
-
-#home-page {
-	display: table-row;
 }
 
 /* ====== Round Corners ======== */
@@ -3645,10 +3632,6 @@ header {
 /* ====== End Theme Header ===== */
 
 /* ====== Theme Footer ========= */
-#push {
-	height: 100px; /* height of the footer (margins included) */
-}
-
 footer {
 	clear: both;
 	display: table;
@@ -3660,7 +3643,6 @@ footer {
 	width: 100%;
 }
 
-.container-popup #push,
 .container-popup footer {
 	display: none;
 }
