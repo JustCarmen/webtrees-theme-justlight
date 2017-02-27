@@ -55,7 +55,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function bodyHeader() {
 		return
 			'<body>' .
-			'<div id="page" class="jc-page-container ' . $this->getPageContainerClass() . '">' .
+			'<div id="page" class="jc-page-container' . $this->getPageContainerClass() . '">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
@@ -243,7 +243,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	 */
 	protected function getFixedHeaderClass() {
 		if ($this->themeFixedHeader) {
-			return 'navbar-fixed-top';
+			return ' navbar-fixed-top';
 		}
 	}
 
@@ -296,7 +296,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	 */
 	protected function headerContainer() {
 		return '<header>' .
-			'<div id="nav-container" class="navbar navbar-default ' . $this->getFixedHeaderClass() . '">' .
+			'<div id="nav-container" class="navbar navbar-default' . $this->getFixedHeaderClass() . '">' .
 			'<div class="navbar-inner">' .
 			'<div class="' . $this->getHeaderContainerClass() . '">' .
 			$this->formatNavbarToggle() .
