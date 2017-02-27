@@ -88,9 +88,42 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				I18N::translate('Cookies') . ' - ' .
 				I18N::translate('This website uses cookies to learn about visitor behaviour.') .
 				'</div>';
-			return $this->htmlAlert($cookie_warning, 'info', true);
+			return $cookie_warning;
 		} else {
 			return '';
+		}
+	}
+
+	public function fancyImagebar() {
+		if (Module::getModuleByName('fancy_imagebar')) {
+			$fib = new FancyImagebarClass;
+			if (method_exists($fib, 'loadFancyImagebar') && $fib->loadFancyImagebar()) {
+				return $fib->getFancyImagebar();
+			}
+		}
+	}
+
+	/** {@inheritdoc} */
+	public function footerContainer() {
+		return
+			'</main>' .
+			'<div id="push"></div>' .
+			'</div>' .
+			'<footer>' . $this->footerContent() . '</footer>' .
+			'<div class="flash-messages">' . $this->formatCookieWarning() . '</div>';
+	}
+
+	/** {@inheritdoc} */
+	public function footerContent() {
+		return
+			$this->formatContactLinks() .
+			$this->formatPageViews($this->page_views) .
+			$this->formatCredits();
+	}
+
+	protected function formatCookieWarning() {
+		if ($this->cookieWarning()) {
+			return $this->htmlAlert($this->cookieWarning(), 'info', true);
 		}
 	}
 
@@ -120,15 +153,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $html;
 	}
 
-	public function fancyImagebar() {
-		if (Module::getModuleByName('fancy_imagebar')) {
-			$fib = new FancyImagebarClass;
-			if (method_exists($fib, 'loadFancyImagebar') && $fib->loadFancyImagebar()) {
-				return $fib->getFancyImagebar();
-			}
-		}
-	}
-
 	protected function formatCompactMenuItem($menu) {
 		$attrs = '';
 		foreach ($menu->getAttrs() as $key => $value) {
@@ -138,24 +162,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<li class="' . $menu->getClass() . '">' .
 			'<a href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a>' .
 			'</li>';
-	}
-
-	/** {@inheritdoc} */
-	public function footerContainer() {
-		return
-			'</main>' .
-			'<div id="push"></div>' .
-			'</div>' .
-			'<footer>' . $this->footerContent() . '</footer>' .
-			'<div class="flash-messages">' . $this->cookieWarning() . '</div>';
-	}
-
-	/** {@inheritdoc} */
-	public function footerContent() {
-		return
-			$this->formatContactLinks() .
-			$this->formatPageViews($this->page_views) .
-			$this->formatCredits();
 	}
 
 	protected function formatCredits() {
@@ -262,7 +268,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/**
 	 * Allow child themes to set extra classes in the main content div
-	 * 
+	 *
 	 * @return string
 	 */
 	protected function getMainContentClass() {
