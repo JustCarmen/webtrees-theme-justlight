@@ -61,7 +61,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" class="container">';
+			'<main id="content" class="container' . $this->getMainContentClass() . '">';
 	}
 
 	/** {@inheritdoc} */
@@ -258,6 +258,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		} else {
 			return 'container';
 		}
+	}
+
+	/**
+	 * Allow child themes to set extra classes in the main content div
+	 * 
+	 * @return string
+	 */
+	protected function getMainContentClass() {
+		return '';
 	}
 
 	/**
