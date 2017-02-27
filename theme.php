@@ -55,13 +55,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function bodyHeader() {
 		return
 			'<body>' .
-			'<div id="page" class="jc-page-container container ' . $this->getPageContainerClass() . '">' .
+			'<div id="page" class="jc-page-container ' . $this->getPageContainerClass() . '">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" class="container"' . $this->mainContentStyle() . '>';
+			'<main id="content" class="container">';
 	}
 
 	/** {@inheritdoc} */
@@ -433,23 +433,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	private function logoHeaderStyle() {
 		return 'style="background-image:url(' . $this->logo('image') . '); height: ' . $this->logo('height') . 'px"';
-	}
-
-	protected function mainContentStyle() {
-		$page = array(
-			'individual.php',
-			'family.php',
-			'medialist.php',
-			Filter::get('mod_action') === 'treeview',
-		);
-
-		if (in_array(WT_SCRIPT_NAME, $page)) {
-			return 'style="width: 98%"';
-		}
-
-		if (WT_SCRIPT_NAME === 'pedigree.php') {
-			return 'style="margin-bottom: 50px"';
-		}
 	}
 
 	protected function menuCompact(Individual $individual, $surname) {

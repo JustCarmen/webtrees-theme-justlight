@@ -33,6 +33,18 @@ html {
 	position: relative;
 }
 
+/* custom page layout */
+.jc-page-container-individual #content,
+.jc-page-container-family #content,
+.jc-page-container-medialist #content,
+.jc-page-container-module-tree #content {
+	width: 98%;
+}
+
+.jc-page-container-pedigree #content {
+	margin-bottom: 50px;
+}
+
 /* responsive site - fake div to determine when the site is in responsive state */
 #responsive {
 	display: none;
