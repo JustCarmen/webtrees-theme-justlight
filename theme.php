@@ -34,10 +34,10 @@ use JustCarmen\WebtreesAddOns\JustLight\JustLightThemeOptionsClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
-	const THEME_VERSION		 = '1.7.9';
+	const THEME_VERSION		 = '1.8.0-dev';
 	const THEME_DIR			 = WT_THEMES_DIR . 'justlight/';
-	const THEME_CSS_URL		 = self::THEME_DIR . 'css-' . self::THEME_VERSION . '/';
-	const THEME_JS_URL		 = self::THEME_DIR . 'js-' . self::THEME_VERSION . '/';
+	const THEME_CSS_URL		 = self::THEME_DIR . 'css/';
+	const THEME_JS_URL		 = self::THEME_DIR . 'js/';
 	const THEME_BOOTSTRAP_URL	 = self::THEME_DIR . 'bootstrap-3.3.7/';
 	const THEME_JQUERY_UI_URL	 = self::THEME_DIR . 'jquery-ui-1.11.4/';
 	const THEME_COLORBOX_URL	 = self::THEME_DIR . 'colorbox-1.5.14/';
@@ -54,7 +54,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function bodyHeader() {
 		return
-			'<body class="wt-global' . $this->getPageGlobalClass() . '">' .
+			'<body class="wt-global' . $this->getPageGlobalClass() . ' ' . $this->themeId() . '">' .
 			$this->headerContainer() .
 			'<div id="responsive"></div>' .
 			$this->fancyImagebar() .
@@ -294,12 +294,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		$module = Filter::get('mod');
 		if ($module) {
-			$class = $class . '-' . $module;
+			$class .= '-' . $module;
 		}
 
 		$ctype = Filter::get('ctype');
 		if ($ctype) {
-			$class = $class . $class . '-' . $ctype;
+			$class .= $class . '-' . $ctype;
 		}
 		return $class;
 	}
@@ -323,12 +323,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function headerContent() {
 		return
+			'<div class="navbar-collapse collapse">' .
+			$this->formatSecondaryMenu() .
+			'</div>' .
 			'<div class="navbar-header">' .
 			$this->logoHeader() .
 			$this->formatTreeTitle() .
-			'</div>' .
-			'<div class="navbar-collapse collapse">' .
-			$this->formatSecondaryMenu() .
 			'</div>';
 	}
 
@@ -694,8 +694,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			self::THEME_JQUERY_UI_URL . 'jquery-ui.min.css',
 			self::THEME_COLORBOX_URL . 'colorbox.css',
 			self::THEME_BOOTSTRAP_URL . 'bootstrap-theme.min.css',
-			$this->assetUrl() . 'style.css',
-			$this->assetUrl() . 'justlight.css'
+			$this->assetUrl() . 'style.css?v' . self::THEME_VERSION,
+			$this->assetUrl() . 'justlight.css?v' . self::THEME_VERSION
 		);
 		return array_merge(parent::stylesheets(), $stylesheets);
 	}
