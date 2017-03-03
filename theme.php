@@ -310,25 +310,26 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	 * @return type
 	 */
 	protected function headerContainer() {
-		return '<header class="jc-header-container ' . $this->getHeaderContainerClass() . '">' .
+		return '<header class="jc-header-container">' .
 			'<div id="nav-container" class="navbar navbar-default' . $this->getFixedNavbarClass() . '">' .
 			'<div class="navbar-inner">' .
+			'<div class="' . $this->getHeaderContainerClass() . '">' .
 			$this->formatNavbarToggle() .
 			$this->headerContent() .
 			$this->primaryMenuContainer($this->primaryMenu()) .
-			'</div></div>' .
+			'</div></div></div>' .
 			'</header>';
 	}
 
 	/** {@inheritdoc} */
 	public function headerContent() {
-		return
-			'<div class="navbar-collapse collapse">' .
-			$this->formatSecondaryMenu() .
-			'</div>' .
+		return			
 			'<div class="navbar-header">' .
 			$this->logoHeader() .
 			$this->formatTreeTitle() .
+			'</div>' .
+			'<div class="navbar-collapse collapse">' .
+			$this->formatSecondaryMenu() .
 			'</div>';
 	}
 
