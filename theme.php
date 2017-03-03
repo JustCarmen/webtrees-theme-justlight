@@ -335,12 +335,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	// Theme setting for the tree title
 	protected function headerTitleStyle() {
-		if ($this->themeOption('titlesize') === '0') {
-			$padding = ' padding: 0';
-		} else {
-			$padding = '';
+		// We can't detect a theme option with value 0, so check if the module is active to return the styling.
+		// With this option the user can choose not to use a title by setting the value to 0.
+		// When the module is not installed or active we should use the default 32px font-size which is set in the css.
+		if (Module::getModuleByName('justlight_theme_options')) {
+			return ' style="font-size:' . $this->themeOption('titlesize') . 'px"';
 		}
-		return ' style = "font-size:' . $this->themeOption('titlesize') . 'px;' . $padding . '"';
 	}
 
 	/** {@inheritdoc} */
