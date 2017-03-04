@@ -42,9 +42,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	const THEME_JQUERY_UI_URL	 = self::THEME_DIR . 'jquery-ui-1.11.4/';
 	const THEME_COLORBOX_URL	 = self::THEME_DIR . 'colorbox-1.5.14/';
 
-	// Theme properties
-	protected $themeFixedHeader			 = true;
-	protected $themeFluidHeaderContainer = true;
+	// Theme property
+	protected $themeFixedHeader	 = true; // used for flexible header function in javascript.
 
 	/** {@inheritdoc} */
 	public function assetUrl() {
@@ -60,7 +59,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->fancyImagebar() .
 			$this->formatPendingChangesLink() .
 			$this->flashMessagesContainer(FlashMessages::getMessages()) .
-			'<main id="content" class="wt-main-container container' . $this->getMainContentClass() . '">';
+			'<main id="content" class="wt-main-container container">';
 	}
 
 	/** {@inheritdoc} */
@@ -240,42 +239,6 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	/**
-	 * Add a fixed navbar to this theme
-	 *
-	 * @return string
-	 */
-	protected function getFixedNavbarClass() {
-		if ($this->themeFixedHeader) {
-			return ' navbar-fixed-top';
-		}
-	}
-
-	/**
-	 * Add fluid header class
-	 * 
-	 * This makes the header width equal to the viewport width
-	 * The default class = "container" (non-fluid)
-	 * 
-	 * @return string
-	 */
-	protected function getHeaderContainerClass() {
-		if ($this->themeFluidHeaderContainer) {
-			return 'container-fluid';
-		} else {
-			return 'container';
-		}
-	}
-
-	/**
-	 * Allow child themes to set extra classes in the main content div
-	 *
-	 * @return string
-	 */
-	protected function getMainContentClass() {
-		return '';
-	}
-
-	/**
 	 * Get the current page
 	 *
 	 * @return type
@@ -311,9 +274,9 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	 */
 	protected function headerContainer() {
 		return '<header class="jc-header-container">' .
-			'<div id="nav-container" class="navbar navbar-default' . $this->getFixedNavbarClass() . '">' .
+			'<div id="nav-container" class="navbar navbar-default navbar-fixed-top">' .
 			'<div class="navbar-inner">' .
-			'<div class="' . $this->getHeaderContainerClass() . '">' .
+			'<div class="container-fluid">' .
 			$this->formatNavbarToggle() .
 			$this->headerContent() .
 			$this->primaryMenuContainer($this->primaryMenu()) .
