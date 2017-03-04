@@ -284,7 +284,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function headerContent() {
 		return			
-			'<div class="navbar-header">' .
+			'<div class="navbar-header navbar-left">' .
 			$this->logoHeader() .
 			$this->formatTreeTitle() .
 			'</div>' .
