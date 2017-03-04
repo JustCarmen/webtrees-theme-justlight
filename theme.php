@@ -190,11 +190,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function formQuickSearch() {
 		if ($this->tree) {
 			return
+				'<div class="search btn-group">' .
 				'<form action="search.php" class="header-search form-inline" role="search">' .
 				'<input type="hidden" name="action" value="header">' .
 				'<input type="hidden" name="ged" value="' . $this->tree->getNameHtml() . '">' .
 				$this->formQuickSearchFields() .
-				'</form>';
+				'</form>' .
+				'</div>';
 		} else {
 			return '';
 		}
@@ -213,11 +215,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function formatSecondaryMenu() {
 		return
+			'<div class="navbar-collapse collapse">' .
 			'<div class="navbar-right">' .
 			$this->secondaryMenuContainer($this->secondaryMenu()) .
 			$this->menuLogin() .
-			'<div class="search btn-group">' . $this->formQuickSearch() . '</div>' .
-			'</div>';
+			$this->formQuickSearch() .
+			'</div></div>';
 	}
 
 	/** {@inheritdoc} */
@@ -285,9 +288,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->logoHeader() .
 			$this->formatTreeTitle() .
 			'</div>' .
-			'<div class="navbar-collapse collapse">' .
-			$this->formatSecondaryMenu() .
-			'</div>';
+			$this->formatSecondaryMenu();
 	}
 
 	// Theme setting for the tree title

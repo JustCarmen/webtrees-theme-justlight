@@ -4068,7 +4068,7 @@ a[class$="arrow"] {
 
 /* JustLight responsive */
 @media (max-width: 1200px) {
-	.search {
+	.search .form-group {
 		display: none;
 	}
 }
