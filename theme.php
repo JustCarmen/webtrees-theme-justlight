@@ -212,14 +212,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function formatSecondaryMenu() {
-		if (I18N::direction() === 'rtl') {
-			$class = 'navbar-left';
-		} else {
-			$class = 'navbar-right';
-		}
-
 		return
-			'<div class="' . $class . '">' .
+			'<div class="navbar-right">' .
 			$this->secondaryMenuContainer($this->secondaryMenu()) .
 			$this->menuLogin() .
 			'<div class="search btn-group">' . $this->formQuickSearch() . '</div>' .
