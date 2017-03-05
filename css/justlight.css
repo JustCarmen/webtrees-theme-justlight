@@ -57,7 +57,7 @@ footer {
 }
 
 /* titles */
-#my-page h1 {
+#my-page h2 {
 	border-bottom: 1px solid #eee;
 }
 
@@ -223,7 +223,7 @@ footer {
 .indi_name_details {
 	border-left: 1px solid #b2c7d7;
 	border-right: 1px solid #b2c7d7;
-	border-bottom: 1px solid #b2c7d7;	
+	border-bottom: 1px solid #b2c7d7;
 }
 
 .ui-state-active a,
@@ -396,7 +396,7 @@ a[class^=" icon-"]:focus,
 
 .deleteicon:before,
 .icon-remove:before,
-.icon-rings:before, 
+.icon-rings:before,
 .icon-target:before {
 	color: #B80000;
 }
@@ -426,7 +426,7 @@ a[class^=" icon-"]:focus,
 i.icon-darrow:before,
 i.icon-larrow:before,
 i.icon-rarrow:before,
-i.icon-uarrow:before {	
+i.icon-uarrow:before {
 	color: #aaa;
 }
 
@@ -487,7 +487,7 @@ i.icon-uarrow:before {
 
 /* errors - use same template as ui-state-error */
 .error {
-	background: url("../jquery-ui-1.11.4/images/ui-bg_glass_95_fef1ec_1x400.png");   
+	background: url("../jquery-ui-1.11.4/images/ui-bg_glass_95_fef1ec_1x400.png");
     color: #cd0a0a;
 }
 
