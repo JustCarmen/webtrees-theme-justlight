@@ -450,6 +450,15 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return $menu;
 	}
 
+	/**
+	 * {@inheritdoc}
+	 *
+	 * Part of list menu
+	 */
+	protected function menuListsMedia() {
+		return new Menu(I18N::translate('Media objects'), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=&amp;sortby=title&amp;subdirs=on&amp;max=20&amp;columns=2&amp;action=submit', 'menu-list-obje', ['rel' => 'nofollow']);
+	}
+
 	public function menuLogin() {
 		if (Auth::check() || Auth::isSearchEngine()) {
 			return null;
