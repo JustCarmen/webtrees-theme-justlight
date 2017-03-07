@@ -2019,11 +2019,12 @@ blockquote {
 }
 
 #family-page .right-table td.subheaders:first-child {
+	text-indent: 0;
 	width: 280px;
 }
 
-#family-page .right-table td.subheaders {
-	text-indent: 0;
+#family-page .right-table td.subheaders:last-child {
+	padding: 0 2px;
 }
 
 #family-page .parents-table table {
