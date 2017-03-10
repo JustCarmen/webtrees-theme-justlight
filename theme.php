@@ -117,6 +117,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			$this->formatCredits();
 	}
 
+	/** {@inheritdoc} */
+	protected function formatContactLinks() {
+		return 	'<div class="jc-footer-content col-md-4">' . parent::formatContactLinks() . '</div>';
+	}
+
 	protected function formatCookieWarning() {
 		if ($this->cookieWarning()) {
 			return $this->htmlAlert($this->cookieWarning(), 'info', true);
@@ -162,10 +167,14 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	protected function formatCredits() {
 		return
-			'<div class="credits">' .
-			$this->logoPoweredBy() .
-			'<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>' .
-			'</div>';
+			'<div class="jc-footer-content col-md-4 text-right">' .
+			'<div class="credits">' . $this->logoPoweredBy() .
+			$this->formatCreditsLink();
+			'</div></div>';
+	}
+
+	protected function formatCreditsLink() {
+		return '<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>';
 	}
 
 	protected function formatNavbarToggle() {
@@ -175,6 +184,11 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<span class="icon-bar"></span>' .
 			'<span class="icon-bar"></span>' .
 			'</button>';
+	}
+
+	/** {@inheritdoc} */
+	protected function formatPageViews($count) {
+		return '<div class="jc-footer-content col-md-4 center">' . parent::formatPageViews($count) . '</div>';
 	}
 
 	/** {@inheritdoc} */

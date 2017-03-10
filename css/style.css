@@ -3644,34 +3644,26 @@ header {
 /* ====== Theme Footer ========= */
 footer {
 	clear: both;
-	display: table;
+	display: flex;
+	flex-direction: row;
     font-size: 85%;
 	height: 80px;
 	margin-bottom: 20px;
 	padding: 10px 0;
-	position: relative; /* to prevent wrapper display on top of footer */
-	width: 100%;
 }
 
 .container-popup footer {
 	display: none;
 }
 
+.jc-footer-content {
+	margin-top: auto;
+}
+
 .contact-links,
 .credits,
 .page-views {
-	display: table-cell;
 	padding: 0 20px;
-	vertical-align: bottom;
-	width: 33%;
-}
-
-.credits {
-	text-align:right;
-}
-
-.page-views {
-	text-align: center;
 }
 
 .contact-links span {
