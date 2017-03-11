@@ -112,14 +112,16 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function footerContent() {
 		return
+			'<div class="jc-footer-content">' .
 			$this->formatContactLinks() .
 			$this->formatPageViews($this->page_views) .
-			$this->formatCredits();
+			$this->formatCredits() .
+			'</div>';
 	}
 
 	/** {@inheritdoc} */
 	protected function formatContactLinks() {
-		return 	'<div class="jc-footer-content col-md-4">' . parent::formatContactLinks() . '</div>';
+		return 	'<div class="jc-footer-item col-md-4">' . parent::formatContactLinks() . '</div>';
 	}
 
 	protected function formatCookieWarning() {
@@ -167,7 +169,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	protected function formatCredits() {
 		return
-			'<div class="jc-footer-content col-md-4 text-right">' .
+			'<div class="jc-footer-item col-md-4 text-right">' .
 			'<div class="credits">' . $this->logoPoweredBy() .
 			$this->formatCreditsLink();
 			'</div></div>';
@@ -188,7 +190,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	protected function formatPageViews($count) {
-		return '<div class="jc-footer-content col-md-4 center">' . parent::formatPageViews($count) . '</div>';
+		return '<div class="jc-footer-item col-md-4 center">' . parent::formatPageViews($count) . '</div>';
 	}
 
 	/** {@inheritdoc} */

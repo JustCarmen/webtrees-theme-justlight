@@ -22,13 +22,19 @@
 	overflow-y: scroll;
 	/* Keep the page as tall as the window, so the footer can remain at the bottom. */
 	display: flex;
+	height: 100%;
 	min-height: 100vh;
 	flex-direction: column;
+}
+
+.jc-header-container {
+	flex: none;
 }
 
 .wt-main-container {
 	/* Grow to fill content, to allow footer to stay at bottom of page. */
 	flex: 1;
+	height: 100%;
 }
 
 /* custom page layout */
@@ -3644,12 +3650,10 @@ header {
 /* ====== Theme Footer ========= */
 footer {
 	clear: both;
-	display: flex;
-	flex-direction: row;
+	flex: none;
     font-size: 85%;
-	height: 80px;
 	margin-bottom: 20px;
-	padding: 10px 0;
+	padding: 20px 0 10px;
 }
 
 .container-popup footer {
@@ -3657,6 +3661,10 @@ footer {
 }
 
 .jc-footer-content {
+	display: flex;
+}
+
+.jc-footer-item {
 	margin-top: auto;
 }
 
