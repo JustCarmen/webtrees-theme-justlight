@@ -62,6 +62,10 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<main id="content" class="wt-main-container container">';
 	}
 
+	protected function bodyHeaderEnd() {
+		return '</main>';
+	}
+
 	/** {@inheritdoc} */
 	public function bodyHeaderPopupWindow() {
 		if (Filter::get('action') === 'addnewnote_assisted') {
@@ -104,7 +108,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	/** {@inheritdoc} */
 	public function footerContainer() {
 		return
-			'</main>' .
+			$this->bodyHeaderEnd() .
 			'<footer>' . $this->footerContent() . '</footer>' .
 			'<div class="flash-messages">' . $this->formatCookieWarning() . '</div>';
 	}
