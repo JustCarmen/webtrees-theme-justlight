@@ -134,7 +134,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
-	public function formatCompactMenu($menu) {
+	public function formatMultilevelMenu($menu) {
 		if ($menu->getSubmenus()) {
 			$html	 = '<li class="' . $menu->getClass() . ' dropdown">';
 			$html	 .= '<a class="dropdown-toggle" data-toggle="dropdown" href="#">' . $menu->getLabel() . '<span class="caret"></span></a>';
@@ -146,21 +146,21 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 					$html .= '<ul class="dropdown-menu sub-menu">';
 					foreach ($submenu->getSubmenus() as $subsubmenu) {
-						$html .= $this->formatCompactMenuItem($subsubmenu);
+						$html .= $this->formatMultilevelMenuItem($subsubmenu);
 					}
 					$html .= '</ul></li>';
 				} else {
-					$html .= $this->formatCompactMenuItem($submenu);
+					$html .= $this->formatMultilevelMenuItem($submenu);
 				}
 			}
 			$html .= '</ul></li>';
 		} else {
-			$html .= $this->formatCompactMenuItem($menu);
+			$html .= $this->formatMultilevelMenuItem($menu);
 		}
 		return $html;
 	}
 
-	protected function formatCompactMenuItem($menu) {
+	protected function formatMultilevelMenuItem(Menu $menu) {
 		$attrs = '';
 		foreach ($menu->getAttrs() as $key => $value) {
 			$attrs .= ' ' . $key . '="' . Filter::escapeHtml($value) . '"';
@@ -634,8 +634,17 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	public function primaryMenuContent(array $menus) {
 		$_this = $this; // workaround for php 5.3
 		return implode('', array_map(function (Menu $menu) use ($_this) {
-				if ($menu->getClass() === 'menu-view') {
-					return $_this->formatCompactMenu($menu);
+				
+				$is_multilevel_menu = false;
+				foreach ($menu->getsubMenus() as $submenu) {
+					if ($submenu->getSubmenus()) {
+						$is_multilevel_menu = true;
+						break;
+					}
+				}
+
+				if ($is_multilevel_menu) {
+					return $_this->formatMultilevelMenu($menu);
 				} else {
 					return $menu->bootstrap();
 				}
