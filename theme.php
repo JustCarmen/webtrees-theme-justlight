@@ -175,7 +175,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		return
 			'<div class="jc-footer-item col-md-4 text-right">' .
 			'<div class="credits">' . $this->logoPoweredBy() .
-			$this->formatCreditsLink();
+			$this->formatCreditsLink() .
 			'</div></div>';
 	}
 
