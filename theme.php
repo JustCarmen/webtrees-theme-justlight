@@ -134,6 +134,18 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		}
 	}
 
+	protected function formatCredits() {
+		return
+			'<div class="jc-footer-item col-md-4 text-right">' .
+			'<div class="credits">' . $this->logoPoweredBy() .
+			$this->formatCreditsLink() .
+			'</div></div>';
+	}
+
+	protected function formatCreditsLink() {
+		return '<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>';
+	}
+
 	public function formatMultilevelMenu($menu) {
 		if ($menu->getSubmenus()) {
 			$html	 = '<li class="' . $menu->getClass() . ' dropdown">';
@@ -169,19 +181,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'<li class="' . $menu->getClass() . '">' .
 			'<a href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a>' .
 			'</li>';
-	}
-
-	protected function formatCredits() {
-		return
-			'<div class="jc-footer-item col-md-4 text-right">' .
-			'<div class="credits">' . $this->logoPoweredBy() .
-			$this->formatCreditsLink() .
-			'</div></div>';
-	}
-
-	protected function formatCreditsLink() {
-		return '<a href="http://www.justcarmen.nl">Design: justcarmen.nl</a>';
-	}
+	}	
 
 	protected function formatNavbarToggle() {
 		return
