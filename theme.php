@@ -379,7 +379,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function individualBoxMenuFamilyLinks(Individual $individual) {
-		$menus = array();
+		$menus = [];
 		foreach ($individual->getSpouseFamilies() as $family) {
 			$menus[] = new Menu(I18N::translate('Family with spouse'), $family->getHtmlUrl(), 'link-family');
 			$spouse	 = $family->getSpouse($individual);
@@ -443,7 +443,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 		foreach ($menu->getSubmenus() as $submenu) {
 			$class		 = explode("-", $submenu->getClass());
-			$new_class	 = implode("-", array($class[0], 'view', $class[1]));
+			$new_class	 = implode("-", [$class[0], 'view', $class[1]]);
 			$submenu->setClass($new_class);
 		}
 
@@ -548,7 +548,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function parameter($parameter_name) {
-		$parameters = array(
+		$parameters = [
 			'chart-background-f'			 => 'fff0f5',
 			'chart-background-m'			 => 'd7eaf9',
 			'chart-background-u'			 => 'f9f9f9',
@@ -558,7 +558,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			'distribution-chart-high-values' => '9ca3d4',
 			'distribution-chart-low-values'	 => 'e5e6ef',
 			'line-width'					 => 2,
-		);
+		];
 
 		if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
 			$parameters['compact-chart-box-x']	 = 105;
@@ -653,12 +653,12 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** (@inheritdoc) */
 	public function secondaryMenu() {
-		return array_filter(array(
+		return array_filter([
 			$this->menuMyPages(),
 			$this->menuFavorites(),
 			$this->menuThemes(),
 			$this->menuLanguages()
-		));
+		]);
 	}
 
 	/** (@inheritdoc) */
@@ -687,13 +687,13 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
 	/** {@inheritdoc} */
 	public function stylesheets() {
-		$stylesheets = array(
+		$stylesheets = [
 			self::THEME_JQUERY_UI_URL . 'jquery-ui.min.css',
 			self::THEME_COLORBOX_URL . 'colorbox.css',
 			self::THEME_BOOTSTRAP_URL . 'bootstrap-theme.min.css',
 			$this->assetUrl() . 'style.css?v' . self::THEME_VERSION,
 			$this->assetUrl() . 'justlight.css?v' . self::THEME_VERSION
-		);
+		];
 		return array_merge(parent::stylesheets(), $stylesheets);
 	}
 
