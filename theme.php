@@ -281,6 +281,10 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 		if ($ctype) {
 			$class .= $class . '-' . $ctype;
 		}
+
+		if (!$this->tree) {
+			$class .= ' no-tree';
+		}
 		return $class;
 	}
 
