@@ -480,7 +480,7 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 	}
 
 	public function menuLogin() {
-		if (Auth::check() || Auth::isSearchEngine()) {
+		if (Auth::check() || $this->getPage() === 'login') {
 			return null;
 		} else {
 			return
