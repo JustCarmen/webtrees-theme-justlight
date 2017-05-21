@@ -598,6 +598,17 @@ jQuery("[onclick^=cal_toggleDate]").each(function(){
 			.find('td.descriptionbox').addClass("day today").removeClass("descriptionbox");
 			
 	});
-	
-	
 });
+
+// Add a class to detect where to break long urls
+jQuery("a").waitUntilExists(function() {
+	var str = jQuery(this).text();
+	if (isURL(str)) {
+		jQuery(this).addClass("url");
+	}
+});
+
+function isURL(str) {
+	var pattern = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+	return pattern.test(str);
+}
