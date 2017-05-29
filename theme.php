@@ -604,18 +604,26 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 				$sort		 = $menu['sort'];
 				$function	 = $menu['function'];
 				if ($sort > 0) {
-					if ($function === 'menuCompact') {
-						$menubar[] = $this->menuCompact($individual, $surname);
-					} elseif ($function === 'menuMedia') {
-						$menubar[] = $this->menuMedia();
-					} elseif ($function === 'menuChart') {
-						$menubar[] = $this->menuChart($individual);
-					} elseif ($function === 'menuLists') {
-						$menubar[] = $this->menuLists($surname);
-					} elseif ($function === 'menuModule') {
-						$menubar[] = $this->menuModule($label);
-					} else {
-						$menubar[] = $this->{$function}();
+					switch ($function) {						
+						case 'menuCompact':
+							$menubar[] = $this->menuCompact($individual, $surname);
+							break;
+						case 'menuMedia':
+							$menubar[] = $this->menuMedia();
+							break;
+						case 'menuChart':
+							$menubar[] = $this->menuChart($individual);
+							break;
+						case 'menuLists':
+							$menubar[] = $this->menuLists($surname);
+							break;
+						case 'menuModule':
+							$menubar[] = $this->menuModule($label);
+							break;
+						default:
+							if (method_exists($this, $function)) {
+								$menubar[] = $this->{$function}();
+							}
 					}
 				}
 			}
