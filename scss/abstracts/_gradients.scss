@@ -1,0 +1,28 @@
+// Declaration of theme specific gradients
+// Needs latest Compass, add '@import "compass"' to your scss
+// Permalinks are used to edit these gradients:
+// Use the prefix 'jl-' here.
+
+// =======================================================================================
+// Gradient for table, card headers, buttons etc.
+// =======================================================================================
+@mixin jl-theme-gradient() {
+  // http://colorzilla.com/gradient-editor/#337ab7+0,2e6da4+100
+  @include background-image(linear-gradient(top,  $brand-primary 0, darken($brand-primary, 6.5%) 100%));
+  &,
+  & a {
+    color: $white;
+  } 
+}
+
+@mixin jl-button-gradient() {
+  @include jl-theme-gradient;
+  &:hover {
+    @include background-image(linear-gradient(top,  darken($brand-primary, 6.5%) 0, darken($brand-primary, 15%) 100%));
+  }
+}
+
+@mixin jl-header-gradient() {
+  // http://colorzilla.com/gradient-editor/#ffffff+0,f8f8f8+100
+  @include background-image(linear-gradient(top,  #ffffff 0,#f8f8f8 100%));
+}

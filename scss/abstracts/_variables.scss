@@ -1,0 +1,35 @@
+// Import these set of variables before Bootstrap variables to overwrite the !default variables
+// from the Bootstrap variable set.
+// To use bootstrap variables inside our own variables we need to redeclare them here or
+// import the bootstrap variable set before we use these variables, but after the overwrites are set
+// =============================================================================
+// Bootstrap variables
+// =============================================================================
+// The variables below are used in our own variable set (right column)
+// The values are not altered. These are the bootstrap default values.
+
+$white:         #fff !default;
+
+$red:           #b80000; // custom
+
+$gray-dark:     #292b2c !default;
+$gray-light:    #636c72 !default;
+$gray-lighter:  #eceeef !default;
+
+// =============================================================================
+// JustLight theme variables
+// =============================================================================
+
+// Colors
+$blue:          #428bca;
+$babyblue:      #d7eaf9;
+$babypink:      #fff0f5;
+
+$brand-primary: darken($blue, 6.5%); // #337ab7
+
+// Cards
+$card-cap-bg:                       $brand-primary;
+
+// Personboxes
+$personbox-male-bg:                 $babyblue;
+$personbox-female-bg:               $babypink;

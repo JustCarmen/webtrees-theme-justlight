@@ -1,0 +1,33 @@
+// Put specific code for the Homepage or My page here
+// Use jc-global-index to access both pages or use jc-global-index-gedcom for the homepage
+// and jc-global-index-user for the mypage
+
+.jc-global-index {
+  .wt-main-wrapper {
+    @extend .mt-0;
+  }
+  .wt-main-container {
+    @extend .p-0;
+  }
+
+  .wt-main-blocks {
+    @extend .col-sm-9;
+    @extend .py-3;
+  }
+  .wt-side-blocks {
+    @extend .col-sm-3;
+    @extend .py-3;
+    border-left: $border-width solid $gray-lighter;
+    .card {
+      border-bottom: $border-width solid $blue;
+      border-radius: 0;
+    }
+    .card-header {
+      font-size: $font-size-base * 1.25;
+    }
+    .card-block {
+      font-size: $font-size-sm * 0.8;
+    }
+  }
+}
+
