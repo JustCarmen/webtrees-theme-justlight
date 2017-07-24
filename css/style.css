@@ -3814,24 +3814,28 @@ a[class$="arrow"] {
 	cursor: pointer;
 }
 
-.icon-button_note:before {
-	content: "\f0f6";
+.icon-button_note:before,
+.icon-note:before {
+  content: "\f0f6";
 }
 
-.icon-button_media:before {
-	content: "\f030";
+.icon-button_media:before,
+.icon-media:before {
+  content: "\f030";
 }
 
 .icon-button_place:before {
 	content:"\f0ac";
 }
 
-.icon-button_source:before {
-	content:"\f02d";
+.icon-button_source:before,
+.icon-source:before {
+  content:"\f02d";
 }
 
-.icon-button_repository:before {
-	content: "\f19c";
+.icon-button_repository:before,
+.icon-repository:before {
+  content: "\f19c";
 }
 
 .icon-cfamily:before {
