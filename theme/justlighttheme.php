@@ -27,7 +27,7 @@ use JustCarmen\WebtreesThemes\JustFancy\Theme\JustFancyTheme;
 
 class JustLightTheme extends JustFancyTheme {
 
-  const THEME_VERSION = '1.8.0-dev';
+  const THEME_VERSION = '2.0.0';
   const THEME_NAME    = 'JustLight';
   const THEME_DIR     = 'justlight';
   const ASSET_DIR     = 'themes/' . self::THEME_DIR . '/css/';
