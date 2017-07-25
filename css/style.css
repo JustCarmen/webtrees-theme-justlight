@@ -8729,7 +8729,7 @@ dt {
   padding: 0.25rem 0.75rem;
 }
 
-.wt-header-search .input-group-btn {
+.wt-header-search .input-group-btn, .jc-change-root .input-group-btn {
   background-color: #337ab7;
 }
 
@@ -9376,6 +9376,10 @@ td.optionbox, td.facts_value {
   background-image: -moz-linear-gradient(top, #2c699e 0%, #23527c 100%);
   background-image: -webkit-linear-gradient(top, #2c699e 0%, #23527c 100%);
   background-image: linear-gradient(to bottom, #2c699e 0%, #23527c 100%);
+}
+
+.jc-secondary-navigation .btn-group {
+  margin: 0 .15rem;
 }
 
 .card-header#name-header-add, .jc-global-index .card-header,
