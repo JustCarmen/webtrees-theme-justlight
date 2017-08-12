@@ -21,9 +21,11 @@ namespace JustCarmen\WebtreesThemes\JustLight;
 use Composer\Autoload\ClassLoader;
 use JustCarmen\WebtreesThemes\JustLight\Theme\JustLightTheme;
 
-// register the namespace
+// load the theme classes
 $loader = new ClassLoader();
-$loader->addPsr4('JustCarmen\\WebtreesThemes\\', WT_ROOT . WT_THEMES_DIR);
+$loader->addPsr4('JustCarmen\\WebtreesThemes\\JustFancy\\Theme\\', WT_ROOT . WT_THEMES_DIR . 'justfancy/theme');
+$loader->addPsr4('JustCarmen\\WebtreesThemes\\JustLight\\Theme\\', __DIR__ . '/theme');
+
 $loader->register();
 
 return new JustLightTheme();
