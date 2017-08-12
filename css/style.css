@@ -9069,8 +9069,8 @@ a.fa {
   background-position: -50px -196px;
 }
 
-.fa-trash-o {
-  display: none;
+.wt-icon-delete:before {
+  content: "\f00d";
 }
 
 .card {
