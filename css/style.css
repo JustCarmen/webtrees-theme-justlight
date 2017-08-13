@@ -436,23 +436,23 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
-}
-
-h2, .h2 {
   font-size: 2rem;
 }
 
+h2, .h2 {
+  font-size: 1.6rem;
+}
+
 h3, .h3 {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 h6, .h6 {
@@ -6191,7 +6191,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 1rem 1rem !important;
 }
 
-.mt-3 {
+.mt-3, .jc-global-edit_interface:not(.modal-open) form {
   margin-top: 1rem !important;
 }
 
@@ -6298,7 +6298,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0 !important;
 }
 
-.px-0 {
+.px-0, .modal-open .jc-global-edit_interface:not(.modal-open) form .row {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
@@ -6350,7 +6350,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-right: 0.5rem !important;
 }
 
-.pb-2 {
+.pb-2, .jc-global-edit_interface:not(.modal-open) form h3 {
   padding-bottom: 0.5rem !important;
 }
 
@@ -6372,7 +6372,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding: 1rem 1rem !important;
 }
 
-.pt-3 {
+.pt-3, .jc-global-edit_interface:not(.modal-open) form h3 {
   padding-top: 1rem !important;
 }
 
@@ -6393,7 +6393,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 1rem !important;
 }
 
-.py-3, .jc-global-index .wt-main-blocks, .jc-global-index .wt-side-blocks {
+.py-3, .jc-global-index .wt-main-blocks, .jc-global-index .wt-side-blocks, .jc-global-edit_interface:not(.modal-open) form {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
@@ -6448,7 +6448,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 3rem !important;
 }
 
-.px-5 {
+.px-5, .jc-global-edit_interface:not(.modal-open) form {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
 }
@@ -8586,14 +8586,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
 
-h2,
-.h2,
-.wt-page-title {
-  font-size: 1.75rem;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -8654,7 +8646,6 @@ dt {
 
 .wt-site-title {
   order: 2;
-  font-size: 2rem;
   font-weight: 500;
   padding: 0;
   margin-right: auto;
@@ -8737,7 +8728,7 @@ dt {
   background: none !important;
   width: auto;
   height: auto;
-  color: #353839;
+  color: #292b2c;
   cursor: pointer;
   font-size: 1.25rem;
   font-style: normal;
@@ -8746,7 +8737,7 @@ dt {
   vertical-align: baseline;
 }
 .icon-darrow:hover, .icon-larrow:hover, .icon-ldarrow:hover, .icon-rarrow:hover, .icon-rdarrow:hover, .icon-uarrow:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-indis:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-edit_indi:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover {
-  color: #353839;
+  color: #101112;
   text-decoration: none;
 }
 
@@ -8760,16 +8751,31 @@ dt {
 
 .fa,
 a.fa {
-  color: #353839;
+  color: #292b2c;
   text-decoration: none;
 }
 .fa:hover,
 a.fa:hover {
-  color: #353839;
+  color: #101112;
 }
-.btn .fa, .btn
+.input-group-btn .fa, .input-group-addon .fa, .input-group-btn .fa, .btn-secondary .fa, .input-group-btn
+a.fa, .input-group-addon
+a.fa, .input-group-btn
+a.fa, .btn-secondary
 a.fa {
-  color: inherit;
+  color: #292b2c;
+}
+.input-group-btn .fa:hover, .input-group-addon .fa:hover, .input-group-btn .fa:hover, .btn-secondary .fa:hover, .input-group-btn
+a.fa:hover, .input-group-addon
+a.fa:hover, .input-group-btn
+a.fa:hover, .btn-secondary
+a.fa:hover {
+  color: #101112;
+}
+.btn-primary .fa, .btn-primary .fa:hover, .btn-primary
+a.fa, .btn-primary
+a.fa:hover {
+  color: #fff;
 }
 
 .fa-info-circle {
@@ -8866,7 +8872,7 @@ a.fa {
   font-size: 3rem;
 }
 .icon-silhouette-F:hover, #individual-tabs .icon-silhouette-F:hover, #sidebar .icon-silhouette-F:hover, .icon-silhouette-M:hover, #individual-tabs .icon-silhouette-M:hover, #sidebar .icon-silhouette-M:hover, .icon-silhouette-U:hover, #individual-tabs .icon-silhouette-U:hover, #sidebar .icon-silhouette-U:hover {
-  color: #353839;
+  color: #292b2c;
 }
 
 .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9 {
@@ -9295,8 +9301,9 @@ td.optionbox, td.facts_value {
   width: 100%;
 }
 
-.jc-global-index-user h2.text-center {
+.wt-page-title {
   text-align: left !important;
+  margin-bottom: 2rem;
 }
 
 .jc-global-individual #individual-tabs {
@@ -9358,6 +9365,14 @@ td.optionbox, td.facts_value {
   background-color: #e6e6e6;
 }
 
+.fa-plus {
+  color: #5cb85c;
+}
+
+.fa-map-marker {
+  color: #b80000;
+}
+
 .btn-primary {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzN2FiNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJjNjk5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -9406,7 +9421,7 @@ td.optionbox, td.facts_value {
   color: #fff;
 }
 .jc-global-index .card-header {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .jc-global-index .wt-side-blocks {
@@ -9421,6 +9436,14 @@ td.optionbox, td.facts_value {
 }
 .jc-global-index .wt-side-blocks .card-block {
   font-size: 0.7rem;
+}
+
+.jc-global-edit_interface:not(.modal-open) form {
+  background: #f7f7f9;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.jc-global-edit_interface:not(.modal-open) form h3 {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=style.css.map */
