@@ -9221,6 +9221,35 @@ td.optionbox, td.facts_value {
   outline: none;
 }
 
+.album-list {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.album-list-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  height: auto;
+  width: calc(100%/2);
+}
+@media (min-width: 576px) {
+  .album-list-item {
+    width: calc(100%/3);
+  }
+}
+@media (min-width: 768px) {
+  .album-list-item {
+    width: calc(100%/4);
+  }
+}
+.album-image {
+  height: 78px;
+}
+.album-title {
+  height: 100%;
+}
+
 .wt-header-wrapper {
   border-top: 5px solid #337ab7;
   border-bottom: 1px solid #eceeef;
