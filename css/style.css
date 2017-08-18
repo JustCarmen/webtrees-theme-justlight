@@ -9211,6 +9211,21 @@ td.optionbox, td.facts_value {
   border-collapse: separate;
 }
 
+[ID^="vline"], img[src*="vline"] {
+  width: 2px;
+}
+
+img[src*="hline"] {
+  height: 2px;
+}
+
+.linef1 {
+  margin-bottom: 2px;
+}
+
+#lifespan-scale {
+  background-image: url(charts/lifespan-chunk.png);
+}
 #lifespan-people .popup div:first-of-type {
   font-weight: 500;
 }
