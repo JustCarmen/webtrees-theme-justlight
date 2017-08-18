@@ -28,14 +28,19 @@ $babypink:      #fff0f5;
 $brand-primary: darken($blue, 6.5%); // #337ab7
 
 // Image icons used by this theme
-// optional parameters: prefix (wt), different icon on hover, width (16), height (16)
+// Type: arrows, webtrees or other (icons without the prefix wt)
+// optional parameters: width (default 16), height (default 16)
 $image-icons: (
-    bing-maps: (wt),
-    google-maps: (wt),
+  webtrees: (
+    bing-maps: (),
+    google-maps: ()
+  ),
+  other: (
     resn-confidential: (),
     resn-locked: (),
     resn-none: (),
     resn-privacy: ()
+  )
 );
 
 // Cards
