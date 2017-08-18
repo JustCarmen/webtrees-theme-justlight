@@ -1966,7 +1966,7 @@ pre code {
 .table-sm td,
 .facts_table td,
 .markdown table td {
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 
 .table-bordered, .facts_table,
@@ -6199,7 +6199,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 1rem !important;
 }
 
-.mb-3 {
+.mb-3, .dt-bootstrap4 .row {
   margin-bottom: 1rem !important;
 }
 
@@ -8315,6 +8315,23 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
+.jc-global-individual .tab-content, .jc-global-individual #sidebar, .jc-global-family .facts_table {
+  font-size: 0.875rem;
+}
+.jc-global-individual .tab-content a, .jc-global-individual #sidebar a, .jc-global-family .facts_table a {
+  color: #292b2c;
+}
+.jc-global-individual .tab-content a:hover, .jc-global-individual #sidebar a:hover, .jc-global-family .facts_table a:hover {
+  color: #040404;
+}
+.jc-global-individual .tab-content .quickfacts a, .jc-global-individual #sidebar .quickfacts a, .jc-global-family .facts_table .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual .tab-content .quickfacts a:hover, .jc-global-individual #sidebar .quickfacts a:hover, .jc-global-family .facts_table .quickfacts a:hover {
+  color: #23527c;
+}
+
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
@@ -9011,30 +9028,61 @@ td.optionbox, td.facts_value {
   color: #292b2c;
 }
 
-.table.dataTable thead th.sorting:before, .dataTable.facts_table thead th.sorting:before,
-.markdown table.dataTable thead th.sorting:before, .table.dataTable thead th.sorting_asc:before, .dataTable.facts_table thead th.sorting_asc:before,
-.markdown table.dataTable thead th.sorting_asc:before, .table.dataTable thead th.sorting_desc:before, .dataTable.facts_table thead th.sorting_desc:before,
-.markdown table.dataTable thead th.sorting_desc:before {
+.dt-bootstrap4 {
+  display: flex;
+  flex-direction: column;
+}
+.dt-bootstrap4 .row:nth-child(1) {
+  order: 1;
+}
+.dt-bootstrap4 .row:nth-child(2) {
+  order: 3;
+}
+.dt-bootstrap4 .row:nth-child(3) {
+  order: 2;
+}
+.dt-bootstrap4 .dataTables_length {
+  float: left;
+}
+[dir=rtl] .dt-bootstrap4 .dataTables_length {
+  float: right;
+}
+.dt-bootstrap4 .dataTables_paginate {
+  float: right;
+}
+[dir=rtl] .dt-bootstrap4 .dataTables_paginate {
+  float: left;
+}
+.dt-bootstrap4 .dataTables_length select,
+.dt-bootstrap4 .dataTables_filter input {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+.dt-bootstrap4 .dataTables_length select.form-control {
+  height: calc(2.25rem + 2px);
+}
+.dt-bootstrap4 .dataTable {
+  border: 1px solid #d0d5d8;
+}
+.dt-bootstrap4 .dataTable .btn {
+  line-height: initial;
+  padding: 0;
+}
+.dt-bootstrap4 .dataTable thead th.sorting:before, .dt-bootstrap4 .dataTable thead th.sorting_asc:before, .dt-bootstrap4 .dataTable thead th.sorting_desc:before {
   content: "";
 }
-.table.dataTable thead th.sorting:after, .dataTable.facts_table thead th.sorting:after,
-.markdown table.dataTable thead th.sorting:after, .table.dataTable thead th.sorting_asc:after, .dataTable.facts_table thead th.sorting_asc:after,
-.markdown table.dataTable thead th.sorting_asc:after, .table.dataTable thead th.sorting_desc:after, .dataTable.facts_table thead th.sorting_desc:after,
-.markdown table.dataTable thead th.sorting_desc:after {
+.dt-bootstrap4 .dataTable thead th.sorting:after, .dt-bootstrap4 .dataTable thead th.sorting_asc:after, .dt-bootstrap4 .dataTable thead th.sorting_desc:after {
   font-family: FontAwesome;
   display: inline-flex;
   bottom: initial;
 }
-.table.dataTable thead th.sorting:after, .dataTable.facts_table thead th.sorting:after,
-.markdown table.dataTable thead th.sorting:after {
+.dt-bootstrap4 .dataTable thead th.sorting:after {
   content: "\f0dc";
 }
-.table.dataTable thead th.sorting_asc:after, .dataTable.facts_table thead th.sorting_asc:after,
-.markdown table.dataTable thead th.sorting_asc:after {
+.dt-bootstrap4 .dataTable thead th.sorting_asc:after {
   content: "\f0de";
 }
-.table.dataTable thead th.sorting_desc:after, .dataTable.facts_table thead th.sorting_desc:after,
-.markdown table.dataTable thead th.sorting_desc:after {
+.dt-bootstrap4 .dataTable thead th.sorting_desc:after {
   content: "\f0dd";
 }
 
@@ -9145,7 +9193,7 @@ td.optionbox, td.facts_value {
   background-color: transparent;
 }
 .stat-table2 .stat-cell {
-  padding: 0.3rem;
+  padding: 0.5rem;
   vertical-align: text-top;
 }
 .stat-table2 .facts_label {
@@ -9163,23 +9211,6 @@ td.optionbox, td.facts_value {
 }
 .wt-block-content-gedcom-stats-block .clearfloat {
   width: 100%;
-}
-
-.jc-global-individual .tab-content, .jc-global-individual #sidebar, .jc-global-family .facts_table {
-  font-size: 0.875rem;
-}
-.jc-global-individual .tab-content a, .jc-global-individual #sidebar a, .jc-global-family .facts_table a {
-  color: #292b2c;
-}
-.jc-global-individual .tab-content a:hover, .jc-global-individual #sidebar a:hover, .jc-global-family .facts_table a:hover {
-  color: #040404;
-}
-.jc-global-individual .tab-content .quickfacts a, .jc-global-individual #sidebar .quickfacts a, .jc-global-family .facts_table .quickfacts a {
-  font-size: 0.75rem;
-  color: #337ab7;
-}
-.jc-global-individual .tab-content .quickfacts a:hover, .jc-global-individual #sidebar .quickfacts a:hover, .jc-global-family .facts_table .quickfacts a:hover {
-  color: #23527c;
 }
 
 .jc-global-index .wt-side-blocks .card-block {
