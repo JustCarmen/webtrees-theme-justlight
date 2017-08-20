@@ -81,9 +81,6 @@ jQuery.fn.outerHtml = function() {
   return jQuery(this).clone().wrap('<p>').parent().html();
 };
 
-// Use wt-page-title on all page titles (webtrees only adds a few)
-jQuery('h2:first').addClass('wt-page-title');
-
 // Tweak the datatables made by webtrees
 // target = column number - 1
 
