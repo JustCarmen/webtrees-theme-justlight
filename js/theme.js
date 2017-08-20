@@ -60,7 +60,9 @@
     return $this;
   };
 
-}(jQuery, window));function qstring(key, url) {
+}(jQuery, window));
+
+function qstring(key, url) {
   'use strict';
   var KeysValues, KeyValue, i;
   if (url === null || url === undefined) {
@@ -78,6 +80,9 @@
 jQuery.fn.outerHtml = function() {
   return jQuery(this).clone().wrap('<p>').parent().html();
 };
+
+// Use wt-page-title on all page titles (webtrees only adds a few)
+jQuery('h2:first').addClass('wt-page-title');
 
 // Tweak the datatables made by webtrees
 // target = column number - 1
@@ -313,5 +318,3 @@ jQuery('body').on('click', function(e) {
 var url = location.href.split(WT_BASE_URL);
 jQuery('.jc-primary-navigation').find('a[href="' + url[1] + '"]').addClass('active').parents('li').find('.nav-link').addClass('active');
 jQuery('.jc-secondary-navigation').find('a[href="' + url[1] + '"]').addClass('active').parents('.btn-group').find('button').addClass('active');
-
-
