@@ -83,14 +83,15 @@
   }
 
   .table, .facts_table,
-  .markdown table {
+  .markdown table, .faq {
     border-collapse: collapse !important;
   }
   .table td, .facts_table td,
-  .markdown table td,
+  .markdown table td, .faq td,
   .table th,
   .facts_table th,
-  .markdown table th {
+  .markdown table th,
+  .faq th {
     background-color: #fff !important;
   }
 
@@ -1926,38 +1927,42 @@ pre code {
   }
 }
 .table, .facts_table,
-.markdown table {
+.markdown table, .faq {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
 }
 .table th, .facts_table th,
-.markdown table th,
+.markdown table th, .faq th,
 .table td,
 .facts_table td,
-.markdown table td {
+.markdown table td,
+.faq td {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #d0d5d8;
 }
 .table thead th, .facts_table thead th,
-.markdown table thead th {
+.markdown table thead th, .faq thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #d0d5d8;
 }
 .table tbody + tbody, .facts_table tbody + tbody,
-.markdown table tbody + tbody {
+.markdown table tbody + tbody, .faq tbody + tbody {
   border-top: 2px solid #d0d5d8;
 }
 .table .table, .facts_table .table,
-.markdown table .table, .table .facts_table, .facts_table .facts_table,
-.markdown table .facts_table,
+.markdown table .table, .faq .table, .table .facts_table, .facts_table .facts_table,
+.markdown table .facts_table, .faq .facts_table,
 .table .markdown table,
 .markdown .table table,
 .facts_table .markdown table,
 .markdown .facts_table table,
-.markdown table table {
+.markdown table table,
+.faq .markdown table,
+.markdown .faq table, .table .faq, .facts_table .faq,
+.markdown table .faq, .faq .faq {
   background-color: #fff;
 }
 
@@ -1989,7 +1994,7 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #eceeef;
 }
 
 .table-hover tbody tr:hover {
@@ -6244,7 +6249,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   width: 90% !important;
 }
 
-.w-100, .width100 {
+.w-100, .width100, .faq, .faq_title {
   width: 100% !important;
 }
 
@@ -6329,7 +6334,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .m-0, .col-form-label,
-.col-form-legend {
+.col-form-legend, .faq_title {
   margin: 0 0 !important;
 }
 
@@ -6537,7 +6542,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0 !important;
 }
 
-.py-0 {
+.py-0, .faq_title {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -6562,7 +6567,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0.25rem !important;
 }
 
-.px-1, .btn-link, .input-group-btn .btn-secondary {
+.px-1, .btn-link, .input-group-btn .btn-secondary, .faq_body {
   padding-right: 0.25rem !important;
   padding-left: 0.25rem !important;
 }
@@ -9259,7 +9264,7 @@ a.fa:hover {
 }
 
 .table, .facts_table,
-.markdown table {
+.markdown table, .faq {
   border-spacing: 0;
 }
 
@@ -9271,7 +9276,7 @@ tr.odd {
   background-color: transparent;
 }
 tr.even {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #eceeef;
 }
 
 td.descriptionbox, td.facts_label {
@@ -9445,7 +9450,7 @@ td.optionbox, td.facts_value {
   border-bottom: none;
 }
 .stat-table2 .stat-row:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #eceeef;
 }
 .stat-table2 .stat-row:nth-child(even) {
   background-color: transparent;
@@ -9571,6 +9576,15 @@ img[src*="hline"] {
 }
 .album-title {
   height: 100%;
+}
+
+.faq,
+.faq .odd td {
+  background-color: transparent !important;
+}
+
+.faq_title {
+  background-color: transparent !important;
 }
 
 .wt-header-wrapper {
