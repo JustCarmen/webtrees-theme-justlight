@@ -9064,7 +9064,7 @@ td.optionbox, td.facts_value {
 .dt-bootstrap4 .dataTable {
   border: 1px solid #d0d5d8;
 }
-.dt-bootstrap4 .dataTable .btn {
+.dt-bootstrap4 .dataTable .btn-link, .dt-bootstrap4 .dataTable .input-group-btn .btn-secondary, .input-group-btn .dt-bootstrap4 .dataTable .btn-secondary {
   line-height: initial;
   padding: 0;
 }
