@@ -6101,7 +6101,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin: 0 0 !important;
 }
 
-.mt-0, .jc-global-index .wt-main-wrapper {
+.mt-0, .wt-page-title, .jc-global-index .wt-main-wrapper {
   margin-top: 0 !important;
 }
 
@@ -6117,7 +6117,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-left: 0 !important;
 }
 
-.mx-0 {
+.mx-0, .wt-page-title {
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
@@ -6259,7 +6259,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 3rem !important;
 }
 
-.mb-5 {
+.mb-5, .wt-page-title {
   margin-bottom: 3rem !important;
 }
 
@@ -8074,7 +8074,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-align: right !important;
 }
 
-.text-center, .jc-global-listpage .wt-page-options {
+.text-center, .wt-page-title, .jc-global-listpage .wt-page-options {
   text-align: center !important;
 }
 
@@ -9224,11 +9224,6 @@ td.optionbox, td.facts_value {
 .wt-block-user-welcome-block i {
   font-size: 2rem;
   width: 100%;
-}
-
-.wt-page-title {
-  text-align: left !important;
-  margin-bottom: 2rem;
 }
 
 .jc-global-individual #individual-tabs {
