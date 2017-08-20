@@ -79,6 +79,56 @@ jQuery.fn.outerHtml = function() {
   return jQuery(this).clone().wrap('<p>').parent().html();
 };
 
+// Tweak the datatables made by webtrees
+// target = column number - 1
+
+// Repository table
+var table = $('.table-repository').DataTable({
+   columnDefs: [
+    {width: "20%", targets: 1},
+    {width: "5%", targets: 3}
+  ],
+  autoWidth: false
+});
+
+// Don't show the last change column
+table.column(2).visible(false).columns.adjust().draw();
+
+// Source table
+var table = $('.table-source').DataTable({
+   columnDefs: [
+    {width: "15%", targets: 1},
+    {width: "7.5%", targets: [2, 3, 4, 5]},
+    {width: "5%", targets: 7},
+  ],
+  autoWidth: false
+});
+
+// Don't show the last change column
+table.column(6).visible(false).columns.adjust().draw();
+
+// Shared notes table
+var table = $('.table-note').DataTable({
+   columnDefs: [
+    {width: "15%", targets: 1},
+    {width: "7.5%", targets: [2, 3, 4]},
+    {width: "5%", targets: 6},
+  ],
+  autoWidth: false
+});
+
+// Don't show the last change column
+table.column(5).visible(false).columns.adjust().draw();
+
+// Surname table
+var table = $('.table-surname').DataTable({
+  columnDefs: [
+    {width: "50%", targets: '_all'}
+  ]
+});
+$('.table-surname').addClass('mx-auto');
+table.columns.adjust().draw();
+
 function get_imagetype() {
   var xrefs = [];
   jQuery('a[type^=image].gallery').each(function() {

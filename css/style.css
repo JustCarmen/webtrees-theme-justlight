@@ -6199,7 +6199,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 1rem !important;
 }
 
-.mb-3, .dt-bootstrap4 .row {
+.mb-3, .dt-bootstrap4 .row, .jc-global-listpage .wt-initials-list {
   margin-bottom: 1rem !important;
 }
 
@@ -8074,7 +8074,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .jc-global-listpage .wt-page-options {
   text-align: center !important;
 }
 
@@ -9263,6 +9263,10 @@ img[src*="hline"] {
 
 .jc-global-fanchart :focus {
   outline: none;
+}
+
+.jc-global-listpage .wt-initial.active {
+  color: #292b2c;
 }
 
 .album-list {
