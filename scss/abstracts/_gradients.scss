@@ -10,8 +10,9 @@
   // http://colorzilla.com/gradient-editor/#337ab7+0,2e6da4+100
   @include background-image(linear-gradient(top,  $brand-primary 0, darken($brand-primary, 6.5%) 100%));
   &,
-  & a {
-    color: $white;
+  & a,
+  & .fa {
+    color: $white !important;
   } 
 }
 
