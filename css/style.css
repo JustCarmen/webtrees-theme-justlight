@@ -2209,16 +2209,12 @@ select.form-control:focus::-ms-value, .jc-global-search select:focus::-ms-value,
 .jc-global-search_advanced .input-group-sm > select.form-control-static,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .form-control-static.input-group-btn,
-.input-group-sm > .input-group-btn > .form-control-static.btn,
-.input-group-sm > .input-group-btn > input.form-control-static[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-sm > .input-group-btn > input.form-control-static[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .jc-global-search .input-group-lg > input.form-control-static[type=text],
+.input-group-sm > .input-group-btn > .form-control-static.btn, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .jc-global-search .input-group-lg > input.form-control-static[type=text],
 .jc-global-search_advanced .input-group-lg > input.form-control-static[type=text], .jc-global-search .input-group-lg > select.form-control-static,
 .jc-global-search_advanced .input-group-lg > select.form-control-static,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .form-control-static.input-group-btn,
-.input-group-lg > .input-group-btn > .form-control-static.btn,
-.input-group-lg > .input-group-btn > input.form-control-static[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-lg > .input-group-btn > input.form-control-static[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-lg > .input-group-btn > .form-control-static.btn {
   padding-right: 0;
   padding-left: 0;
 }
@@ -2228,9 +2224,7 @@ select.form-control:focus::-ms-value, .jc-global-search select:focus::-ms-value,
 .jc-global-search_advanced .input-group-sm > select,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn,
-.input-group-sm > .input-group-btn > .btn,
-.input-group-sm > .input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-sm > .input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-sm > .input-group-btn > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2249,9 +2243,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .jc-global-search_advanced .input-group-lg > select,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn,
-.input-group-lg > .input-group-btn > .btn,
-.input-group-lg > .input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-lg > .input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-lg > .input-group-btn > .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2465,8 +2457,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
-.btn, input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2480,26 +2471,18 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out;
 }
-.btn:focus, input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn:hover, input[type="submit"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn:focus, .btn:hover {
   text-decoration: none;
 }
-.btn:focus, input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn.focus, input.focus[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input.focus[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(51, 122, 183, 0.25);
 }
-.btn.disabled, input.disabled[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input.disabled[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn:disabled, input[type="submit"]:disabled:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:disabled:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn.disabled, .btn:disabled {
   cursor: not-allowed;
   opacity: .65;
 }
-.btn:active, input[type="submit"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input[type="button"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn.active, input.active[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-input.active[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn:active, .btn.active {
   background-image: none;
 }
 
@@ -2508,33 +2491,24 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
-.btn-primary, input[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:not(.btn-primary):not(.btn-secondary) {
+.btn-primary {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
 }
-.btn-primary:hover, input[type="submit"]:hover:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:hover:not(.btn-primary):not(.btn-secondary) {
+.btn-primary:hover {
   color: #fff;
   background-color: #286090;
   border-color: #265a88;
 }
-.btn-primary:focus, input[type="submit"]:focus:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:focus:not(.btn-primary):not(.btn-secondary), .btn-primary.focus, input.focus[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input.focus[type="button"]:not(.btn-primary):not(.btn-secondary) {
+.btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 2px rgba(51, 122, 183, 0.5);
 }
-.btn-primary.disabled, input.disabled[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input.disabled[type="button"]:not(.btn-primary):not(.btn-secondary), .btn-primary:disabled, input[type="submit"]:disabled:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:disabled:not(.btn-primary):not(.btn-secondary) {
+.btn-primary.disabled, .btn-primary:disabled {
   background-color: #337ab7;
   border-color: #337ab7;
 }
-.btn-primary:active, input[type="submit"]:active:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:active:not(.btn-primary):not(.btn-secondary), .btn-primary.active, input.active[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input.active[type="button"]:not(.btn-primary):not(.btn-secondary), .show > .btn-primary.dropdown-toggle, .show > input.dropdown-toggle[type="submit"]:not(.btn-primary):not(.btn-secondary),
-.show > input.dropdown-toggle[type="button"]:not(.btn-primary):not(.btn-secondary) {
+.btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #286090;
   background-image: none;
@@ -2831,15 +2805,13 @@ input.active[type="button"]:not(.btn-primary):not(.btn-secondary), .show > .btn-
   text-decoration: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-lg > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-lg, .btn-group-lg > .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-sm > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3017,65 +2989,29 @@ tbody.collapse.show {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .btn-group > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn,
-.btn-group-vertical > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn,
+.btn-group-vertical > .btn {
   position: relative;
   flex: 0 1 auto;
   margin-bottom: 0;
 }
-.btn-group > .btn:hover, .btn-group > input[type="submit"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn:hover,
-.btn-group-vertical > input[type="submit"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
   z-index: 2;
 }
-.btn-group > .btn:focus, .btn-group > input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn-group > .btn:active, .btn-group > input[type="submit"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn-group > .btn.active, .btn-group > input.active[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input.active[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > input[type="submit"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn.active,
-.btn-group-vertical > input.active[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input.active[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn.active {
   z-index: 2;
 }
-.btn-group .btn + .btn, .btn-group input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn,
-.btn-group input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn, .btn-group .btn + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn-group input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group .btn + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
-.btn-group input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
-.btn-group input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group .btn-group + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group .btn-group + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
-.btn-group-vertical input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn,
-.btn-group-vertical input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn,
-.btn-group-vertical .btn + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical .btn + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .btn-group-vertical .btn + .btn-group,
-.btn-group-vertical input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
-.btn-group-vertical input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
 .btn-group-vertical .btn-group + .btn,
-.btn-group-vertical .btn-group + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical .btn-group + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .btn-group-vertical .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -3089,23 +3025,19 @@ tbody.collapse.show {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:not(:first-child):not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child, .btn-group > input[type="submit"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn:first-child {
   margin-left: 0;
 }
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:first-child:not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > input[type="submit"]:last-child:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > input[type="button"]:last-child:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -3115,20 +3047,17 @@ tbody.collapse.show {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -3138,24 +3067,20 @@ tbody.collapse.show {
   outline: 0;
 }
 
-.btn + .dropdown-toggle-split, input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split,
-input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
-.btn + .dropdown-toggle-split::after, input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split::after,
-input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split::after {
+.btn + .dropdown-toggle-split::after {
   margin-left: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split,
-.btn-group-sm > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split,
-.btn-group-lg > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
@@ -3166,72 +3091,49 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical .btn, .btn-group-vertical input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group-vertical .btn,
 .btn-group-vertical .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn,
-.btn-group-vertical > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn, .btn-group-vertical > .btn + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .btn-group-vertical > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .btn + .btn-group,
-.btn-group-vertical > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
-.btn-group-vertical > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
-.btn-group-vertical > .btn-group + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn-group + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:not(:first-child):not(:last-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > input[type="submit"]:first-child:not(:last-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:first-child:not(:last-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > input[type="submit"]:last-child:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > input[type="button"]:last-child:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="button"]:last-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="button"]:first-child:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="radio"],
-[data-toggle="buttons"] > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
-[data-toggle="buttons"] > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="checkbox"],
-[data-toggle="buttons"] > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="radio"],
-[data-toggle="buttons"] > .btn-group > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3323,10 +3225,6 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
-.input-group-sm > .input-group-btn > input.input-group-addon[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-sm > .input-group-btn > input[type="submit"].input-group-btn:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-sm > .input-group-btn > input.input-group-addon[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-sm > .input-group-btn > input[type="button"].input-group-btn:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-sm > .input-group-btn > .btn.input-group-btn, .form-control-sm.input-group-btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -3340,10 +3238,6 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
-.input-group-lg > .input-group-btn > input.input-group-addon[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-lg > .input-group-btn > input[type="submit"].input-group-btn:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-lg > .input-group-btn > input.input-group-addon[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-lg > .input-group-btn > input[type="button"].input-group-btn:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-lg > .input-group-btn > .btn.input-group-btn, .form-control-lg.input-group-btn {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -3363,18 +3257,10 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
-.input-group-btn:not(:last-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-btn:not(:last-child) > .btn-group > .btn,
-.input-group-btn:not(:last-child) > .btn-group > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > .btn-group > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:not(:last-child):not(.dropdown-toggle):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3391,18 +3277,10 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
-.input-group-btn:not(:first-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-btn:not(:first-child) > .btn-group > .btn,
-.input-group-btn:not(:first-child) > .btn-group > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > .btn-group > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child),
-.input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > input[type="button"]:not(:first-child):not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -3420,39 +3298,25 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
   font-size: 0;
   white-space: nowrap;
 }
-.input-group-btn > .btn, .input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-btn > .btn {
   position: relative;
 }
-.input-group-btn > .btn + .btn, .input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn,
-.input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + .btn, .input-group-btn > .btn + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > .btn + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) + input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-btn > .btn + .btn {
   margin-left: -1px;
 }
-.input-group-btn > .btn:focus, .input-group-btn > input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn > .btn:active, .input-group-btn > input[type="submit"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn > .btn:hover, .input-group-btn > input[type="submit"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn > input[type="button"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) {
+.input-group-btn > .btn:focus, .input-group-btn > .btn:active, .input-group-btn > .btn:hover {
   z-index: 3;
 }
-.input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:last-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group {
   margin-right: -1px;
 }
-.input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group {
   z-index: 2;
   margin-left: -1px;
 }
-.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > input[type="submit"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:focus:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > input[type="submit"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:active:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > input[type="submit"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn:not(:first-child) > input[type="button"]:hover:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
+.input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .btn:hover,
 .input-group-btn:not(:first-child) > .btn-group:focus,
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -4420,8 +4284,7 @@ input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary
   display: none;
 }
 
-.btn .badge, input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) .badge,
-input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary) .badge {
+.btn .badge {
   position: relative;
   top: -1px;
 }
@@ -6515,9 +6378,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .p-0, .col-form-label,
-.col-form-legend, .input-group-addon .btn, .input-group-btn .btn, .input-group-addon input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .input-group-btn input[type="submit"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-addon input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary),
-.input-group-btn input[type="button"]:not(.btn-primary):not(input[type="submit"]:not(.btn-primary):not(.btn-secondary)):not(.btn-secondary), .stat-table1 .stat-cell, .jc-global-index .card, .jc-global-index .card-header, .jc-global-index .card-block, .jc-global-index .wt-main-container {
+.col-form-legend, .input-group-addon .btn, .input-group-btn .btn, .stat-table1 .stat-cell, .jc-global-index .card, .jc-global-index .card-header, .jc-global-index .card-block, .jc-global-index .wt-main-container {
   padding: 0 0 !important;
 }
 
@@ -9042,16 +8903,8 @@ a.fa:hover, .btn-secondary
 a.fa:hover {
   color: #101112;
 }
-.btn-primary .fa, input[type="submit"]:not(.btn-primary):not(.btn-secondary) .fa,
-input[type="button"]:not(.btn-primary):not(.btn-secondary) .fa, .btn-primary .fa:hover, input[type="submit"]:not(.btn-primary):not(.btn-secondary) .fa:hover,
-input[type="button"]:not(.btn-primary):not(.btn-secondary) .fa:hover, .btn-primary
-a.fa, input[type="submit"]:not(.btn-primary):not(.btn-secondary)
-a.fa,
-input[type="button"]:not(.btn-primary):not(.btn-secondary)
+.btn-primary .fa, .btn-primary .fa:hover, .btn-primary
 a.fa, .btn-primary
-a.fa:hover, input[type="submit"]:not(.btn-primary):not(.btn-secondary)
-a.fa:hover,
-input[type="button"]:not(.btn-primary):not(.btn-secondary)
 a.fa:hover {
   color: #fff;
 }
@@ -9632,8 +9485,7 @@ img[src*="hline"] {
   color: #b80000;
 }
 
-.btn-primary, input[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:not(.btn-primary):not(.btn-secondary) {
+.btn-primary {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzN2FiNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJjNjk5ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #337ab7), color-stop(100%, #2c699e));
@@ -9641,13 +9493,10 @@ input[type="button"]:not(.btn-primary):not(.btn-secondary) {
   background-image: -webkit-linear-gradient(top, #337ab7 0%, #2c699e 100%);
   background-image: linear-gradient(to bottom, #337ab7 0%, #2c699e 100%);
 }
-.btn-primary, input[type="submit"]:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:not(.btn-primary):not(.btn-secondary), .btn-primary a, input[type="submit"]:not(.btn-primary):not(.btn-secondary) a,
-input[type="button"]:not(.btn-primary):not(.btn-secondary) a {
+.btn-primary, .btn-primary a {
   color: #fff;
 }
-.btn-primary:hover, input[type="submit"]:hover:not(.btn-primary):not(.btn-secondary),
-input[type="button"]:hover:not(.btn-primary):not(.btn-secondary) {
+.btn-primary:hover {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJjNjk5ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIzNTI3YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2c699e), color-stop(100%, #23527c));
