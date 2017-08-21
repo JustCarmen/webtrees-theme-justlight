@@ -8310,7 +8310,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   white-space: nowrap;
 }
 
-.text-left {
+.text-left, .jc-global-individual h2 {
   text-align: left !important;
 }
 

@@ -81,6 +81,11 @@ jQuery.fn.outerHtml = function() {
   return jQuery(this).clone().wrap('<p>').parent().html();
 };
 
+function strip_tags(str) {
+    str = str.toString();
+    return str.replace(/<\/?[^>]+>/gi, '').trim();
+}
+
 // Prevent jumping to the top of the page when clicking on a javascript link
 if ($('a[onclick]').attr('href') == '#') {
   $('a[onclick]').attr('href', 'javascript:void(0)');
