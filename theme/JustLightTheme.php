@@ -161,7 +161,7 @@ class JustLightTheme extends JustFancyTheme {
     $modules = ['tree'];
 
     if (in_array($this->getPage(), $pages) || (in_array(Filter::get('mod'), $modules))) {
-      return '-fluid'; // container-fluid
+      return '-fluid mx-5 px-0'; // container-fluid
     }
   }
 
