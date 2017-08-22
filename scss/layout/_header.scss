@@ -10,10 +10,11 @@
     color: $brand-primary;
     font-weight: 500;
   }
-  }
+}
 
-  .wt-header-search {
+.wt-header-search {
   align-self: flex-start;
+  @include jc-direction(padding, 0, '', right);
 }
 
 .jc-primary-navigation {
