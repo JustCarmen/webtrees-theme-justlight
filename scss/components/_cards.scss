@@ -14,11 +14,7 @@
 }
 
 .card-header {
-  @include jl-theme-gradient;
-
-  &#name-header-add, {
-    @extend %card-header-transparent;
-  }
+  @include jl-theme-gradient; 
 
   .jc-global-index & {
     @extend %card-header-transparent;
@@ -29,7 +25,9 @@
 }
 
 .card-block {
+  background: $gray-lightest;
   .jc-global-index & {
+    @extend %card-header-transparent;
     @extend .p-0;
   }
 }

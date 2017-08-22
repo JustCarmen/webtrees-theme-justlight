@@ -1,10 +1,31 @@
 // Put specific code for the Individual page here
 
 .jc-global-individual {
+
+  #individual-names {
+    .card-header {
+      @include jl-light-gradient;
+      &#name-header-0 {
+        @include jl-theme-gradient;
+      }
+      &#name-header-add {
+        background: $gray-lightest;
+      }
+    }
+  }
+
+  #sidebar {
+    .card-header {
+      &, a, .fa {
+        color: $white;
+      }
+    }
+  }
+
   // tab content of the main section
   .tab-content {
     .facts_table > tbody > tr:first-child > td[colspan="2"] {
-      @include jl-theme-gradient;
+      @include jl-light-gradient;
     }
   }
 }

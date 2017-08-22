@@ -9,9 +9,7 @@
 @mixin jl-theme-gradient() {
   // http://colorzilla.com/gradient-editor/#337ab7+0,2e6da4+100
   @include background-image(linear-gradient(top,  $brand-primary 0, darken($brand-primary, 6.5%) 100%));
-  &,
-  & a,
-  & .fa {
+  &, a, .fa {
     color: $white;
   } 
 }
@@ -31,7 +29,9 @@
 @mixin jl-light-gradient() {
   // http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D
   @include background-image(linear-gradient(top,  #eeeeee 0%, #cccccc 100%));
-  color: $body-color;  
+  &, a, .fa {
+    color: $body-color;
+  }
 }
 
 // optional hover state for jl-light-gradient
