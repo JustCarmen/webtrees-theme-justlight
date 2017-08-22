@@ -12,7 +12,7 @@
   &,
   & a,
   & .fa {
-    color: $white !important;
+    color: $white;
   } 
 }
 
@@ -25,5 +25,16 @@
 
 @mixin jl-header-gradient() {
   // http://colorzilla.com/gradient-editor/#ffffff+0,f8f8f8+100
-  @include background-image(linear-gradient(top,  #ffffff 0,#f8f8f8 100%));
+  @include background-image(linear-gradient(top,  $white 0, #f8f8f8 100%));
+}
+
+@mixin jl-light-gradient() {
+  // http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D
+  @include background-image(linear-gradient(top,  #eeeeee 0%, #cccccc 100%));
+  color: $body-color;  
+}
+
+// optional hover state for jl-light-gradient
+@mixin jl-light-gradient-hover() {
+  @include background-image(linear-gradient(top,  darken(#eeeeee, 6.5%) 0%, darken(#cccccc, 15%) 100%));
 }
