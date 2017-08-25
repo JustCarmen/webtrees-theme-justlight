@@ -1,0 +1,20 @@
+.theme-justlight {
+  .tv_out {
+    background-color: $white;
+    border: $border-width solid $table-border-color;
+  }
+
+  &.jc-global-module-tree {
+    .tv_out {
+      border: none;
+    }
+  }
+
+  .tvM {
+    background-color: $personbox-male-bg !important;
+  }
+
+  .tvF {
+    background-color: $personbox-female-bg !important;
+  }
+}
