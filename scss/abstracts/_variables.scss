@@ -15,6 +15,7 @@ $red:           #b80000; // custom
 $gray-dark:     #292b2c !default;
 $gray-light:    #636c72 !default;
 $gray-lighter:  #eceeef !default;
+$gray-lightest: #f7f7f9 !default;
 
 // =============================================================================
 // JustLight theme variables
@@ -45,6 +46,9 @@ $image-icons: (
 
 // Cards
 $card-cap-bg:                       $brand-primary;
+
+// Tables
+$table-bg-accent:                   $gray-lightest;
 
 // Personboxes
 $personbox-male-bg:                 $babyblue;

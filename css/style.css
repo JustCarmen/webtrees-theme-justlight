@@ -1994,7 +1994,7 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #eceeef;
+  background-color: #f7f7f9;
 }
 
 .table-hover tbody tr:hover {
@@ -8860,7 +8860,7 @@ a {
   background-color: #337ab7;
 }
 
-.icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
+.icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
   background: none;
   width: auto;
   height: auto;
@@ -8873,16 +8873,16 @@ a {
   vertical-align: baseline;
 }
 @media (min-width: 768px) {
-  .icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
+  .icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
     font-size: 1rem;
   }
 }
 @media (min-width: 992px) {
-  .icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
+  .icon-darrow, .icon-larrow, .icon-ldarrow, .icon-rarrow, .icon-rdarrow, .icon-uarrow, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
     font-size: 1.25rem;
   }
 }
-.icon-darrow:hover, .icon-larrow:hover, .icon-ldarrow:hover, .icon-rarrow:hover, .icon-rdarrow:hover, .icon-uarrow:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-indis:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-edit_indi:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover {
+.icon-darrow:hover, .icon-larrow:hover, .icon-ldarrow:hover, .icon-rarrow:hover, .icon-rdarrow:hover, .icon-uarrow:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-indis:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-edit_indi:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-sfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover {
   color: #101112;
   text-decoration: none;
 }
@@ -8891,7 +8891,7 @@ a {
   font-family: "fontawesome";
 }
 
-.icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
+.icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree {
   font-family: "icomoon";
 }
 
@@ -9070,6 +9070,10 @@ a.fa:hover {
   content: "\e604";
 }
 
+.icon-sfamily:before {
+  content: "\e604";
+}
+
 .icon-children:before {
   content: "\e605";
 }
@@ -9164,7 +9168,7 @@ tr.odd {
   background-color: transparent;
 }
 tr.even {
-  background-color: #eceeef;
+  background-color: #f7f7f9;
 }
 
 td.descriptionbox, td.facts_label {
@@ -9276,6 +9280,7 @@ td.optionbox, td.facts_value {
 }
 .person_box_template .chart_textbox, #lifespan-people .popup .chart_textbox {
   font-size: 0.875rem;
+  line-height: normal;
 }
 .person_box_template .name1, #lifespan-people .popup .name1 {
   font-weight: 500;
@@ -9338,7 +9343,7 @@ td.optionbox, td.facts_value {
   border-bottom: none;
 }
 .stat-table2 .stat-row:nth-child(odd) {
-  background-color: #eceeef;
+  background-color: #f7f7f9;
 }
 .stat-table2 .stat-row:nth-child(even) {
   background-color: transparent;
@@ -9346,6 +9351,9 @@ td.optionbox, td.facts_value {
 .stat-table2 .stat-cell {
   padding: 0.5rem;
   vertical-align: text-top;
+}
+.stat-table2 .stat-cell.facts_value br, .stat-table2 .stat-cell.facts_value br::after {
+  content: ' ';
 }
 .stat-table2 .facts_label {
   text-align: initial;
@@ -9460,11 +9468,9 @@ img[src*="hline"] {
 .album-list-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
   height: auto;
   width: calc(100%/2);
-}
-.album-list-item:not(:last-child) {
-  margin-bottom: 3rem;
 }
 @media (min-width: 576px) {
   .album-list-item {
@@ -9624,7 +9630,6 @@ img[src*="hline"] {
 .jc-global-index .card-block a {
   background: transparent;
   border: none;
-  color: #292b2c;
 }
 
 .jc-global-index .card {
@@ -9710,6 +9715,20 @@ img[src*="hline"] {
 }
 .jc-global-edit_interface:not(.modal-open) form h3 {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.theme-justlight .tv_out {
+  background-color: #fff;
+  border: 1px solid #d0d5d8;
+}
+.theme-justlight.jc-global-module-tree .tv_out {
+  border: none;
+}
+.theme-justlight .tvM {
+  background-color: #d7eaf9 !important;
+}
+.theme-justlight .tvF {
+  background-color: #fff0f5 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
