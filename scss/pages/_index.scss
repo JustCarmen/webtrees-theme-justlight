@@ -21,12 +21,29 @@
     .card {
       border-bottom: $border-width solid $blue;
       border-radius: 0;
+      @extend .m-0;
     }
     .card-header {
-      font-size: $font-size-base * 1.25;
+      @extend .p-2;
     }
     .card-block {
-      font-size: $font-size-sm * 0.8;
+      font-size: $font-size-xs;
+      @extend .p-2;
+
+      &:not(.wt-block-content-html-block) {
+        max-height: 350px;
+        overflow-y: auto;
+      }
+      
+    }
+  }
+
+  @at-root {
+    .wt-block-gedcom-block-block,
+    .wt-block-user-welcome-block {
+      .row {
+        @extend .mx-0;
+      }
     }
   }
 }

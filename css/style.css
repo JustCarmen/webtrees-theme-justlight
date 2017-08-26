@@ -6197,7 +6197,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .m-0, .col-form-label,
-.col-form-legend, .faq_title {
+.col-form-legend, .faq_title, .jc-global-index .wt-side-blocks .card {
   margin: 0 0 !important;
 }
 
@@ -6217,7 +6217,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-left: 0 !important;
 }
 
-.mx-0, h2 {
+.mx-0, h2, .wt-block-gedcom-block-block .row,
+.wt-block-user-welcome-block .row {
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
@@ -6269,7 +6270,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   margin-right: 0.5rem !important;
 }
 
-.mb-2, .jc-global-index .card-header {
+.mb-2 {
   margin-bottom: 0.5rem !important;
 }
 
@@ -6378,7 +6379,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .p-0, .col-form-label,
-.col-form-legend, .input-group-addon .btn, .input-group-btn .btn, .stat-table1 .stat-cell, .jc-global-index .card, .jc-global-index .card-header, .jc-global-index .card-block, .jc-global-index .wt-main-container {
+.col-form-legend, .input-group-addon .btn, .input-group-btn .btn, .stat-table1 .stat-cell, .jc-global-index .wt-main-container {
   padding: 0 0 !important;
 }
 
@@ -6403,7 +6404,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0 !important;
 }
 
-.py-0, .faq_title {
+.py-0, .faq_title, .jc-global-index .card-block {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -6439,7 +6440,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-bottom: 0.25rem !important;
 }
 
-.p-2 {
+.p-2, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-block {
   padding: 0.5rem 0.5rem !important;
 }
 
@@ -6464,7 +6465,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   padding-left: 0.5rem !important;
 }
 
-.py-2 {
+.py-2, .jc-global-index .card-header {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
@@ -9375,10 +9376,6 @@ td.optionbox, td.facts_value {
 .jc-global-index .wt-side-blocks .card-block {
   font-size: 0.875rem;
 }
-.wt-block-gedcom-block-block .row,
-.wt-block-user-welcome-block .row {
-  text-align: center;
-}
 .wt-block-gedcom-block-block i,
 .wt-block-user-welcome-block i {
   font-size: 2rem;
@@ -9629,18 +9626,6 @@ img[src*="hline"] {
   margin: 0 .15rem;
 }
 
-.jc-global-index .card-header, .jc-global-index .card-block,
-.jc-global-index .card-header a,
-.jc-global-index .card-block a {
-  background: transparent;
-  border: none;
-}
-.jc-global-index .card-header .fa, .jc-global-index .card-block .fa,
-.jc-global-index .card-header a .fa,
-.jc-global-index .card-block a .fa {
-  color: #292b2c;
-}
-
 .jc-global-index .card {
   border: none;
 }
@@ -9657,11 +9642,20 @@ img[src*="hline"] {
   color: #fff;
 }
 .jc-global-index .card-header {
+  background: transparent;
+  border: none;
   font-size: 1.25rem;
+}
+.jc-global-index .card-header, .jc-global-index .card-header a, .jc-global-index .card-header .fa {
+  color: #292b2c;
 }
 
 .card-block {
   background: #f7f7f9;
+}
+.jc-global-index .card-block {
+  background: transparent;
+  border: none;
 }
 
 .jc-global-index .wt-side-blocks {
@@ -9671,11 +9665,12 @@ img[src*="hline"] {
   border-bottom: 1px solid #428bca;
   border-radius: 0;
 }
-.jc-global-index .wt-side-blocks .card-header {
-  font-size: 1.25rem;
-}
 .jc-global-index .wt-side-blocks .card-block {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+}
+.jc-global-index .wt-side-blocks .card-block:not(.wt-block-content-html-block) {
+  max-height: 350px;
+  overflow-y: auto;
 }
 
 .jc-global-individual #individual-names .card-header {

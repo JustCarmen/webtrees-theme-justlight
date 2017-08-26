@@ -1,17 +1,7 @@
-%card-header-transparent {
-  &,
-  a {
-    background: transparent;
-    border: none;
-    .fa {
-      color: $body-color;
-    }
-  }
-}
+// Card layout
 .card {
   .jc-global-index & {
     border: none;
-    @extend .p-0;
   }
 }
 
@@ -19,17 +9,21 @@
   @include jl-theme-gradient; 
 
   .jc-global-index & {
-    @extend %card-header-transparent;
-    @extend .p-0;
-    @extend .mb-2;
-    font-size: $font-size-base * 1.25;
+    background: transparent;
+    border: none;
+    @extend .py-2;
+    font-size: $font-size-lg;
+    &, a, .fa {
+      color: $body-color;
+    }
   }
 }
 
 .card-block {
   background: $gray-lightest;
   .jc-global-index & {
-    @extend %card-header-transparent;
-    @extend .p-0;
+    background: transparent;
+    border: none;
+    @extend .py-0;
   }
 }
