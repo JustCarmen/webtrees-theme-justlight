@@ -29,12 +29,6 @@
     .card-block {
       font-size: $font-size-xs;
       @extend .p-2;
-
-      &:not(.wt-block-content-html-block) {
-        max-height: 350px;
-        overflow-y: auto;
-      }
-      
     }
   }
 
