@@ -3,6 +3,9 @@
   a {
     background: transparent;
     border: none;
+    .fa {
+      color: $body-color;
+    }
   }
 }
 .card {

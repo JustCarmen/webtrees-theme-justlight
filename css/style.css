@@ -9498,6 +9498,10 @@ img[src*="hline"] {
   background-color: transparent !important;
 }
 
+.gm-events * {
+  font-size: 0.875rem;
+}
+
 .wt-header-wrapper {
   border-top: 5px solid #337ab7;
   border-bottom: 1px solid #eceeef;
@@ -9630,6 +9634,11 @@ img[src*="hline"] {
 .jc-global-index .card-block a {
   background: transparent;
   border: none;
+}
+.jc-global-index .card-header .fa, .jc-global-index .card-block .fa,
+.jc-global-index .card-header a .fa,
+.jc-global-index .card-block a .fa {
+  color: #292b2c;
 }
 
 .jc-global-index .card {

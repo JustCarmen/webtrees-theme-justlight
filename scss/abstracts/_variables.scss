@@ -8,14 +8,18 @@
 // The variables below are used in our own variable set (right column)
 // The values are not altered. These are the bootstrap default values.
 
-$white:         #fff !default;
+// Colors
+$white:           #fff !default;
+$red:             #b80000; // custom
 
-$red:           #b80000; // custom
+// Grayscale
+$gray-dark:       #292b2c !default;
+$gray-light:      #636c72 !default;
+$gray-lighter:    #eceeef !default;
+$gray-lightest:   #f7f7f9 !default;
 
-$gray-dark:     #292b2c !default;
-$gray-light:    #636c72 !default;
-$gray-lighter:  #eceeef !default;
-$gray-lightest: #f7f7f9 !default;
+// Fonts
+$font-size-sm:    .875rem !default;
 
 // =============================================================================
 // JustLight theme variables
@@ -53,3 +57,6 @@ $table-bg-accent:                   $gray-lightest;
 // Personboxes
 $personbox-male-bg:                 $babyblue;
 $personbox-female-bg:               $babypink;
+
+// Modules
+$gm-events-font-size:               $font-size-sm;
