@@ -9381,6 +9381,10 @@ td.optionbox, td.facts_value {
   font-size: 2rem;
   width: 100%;
 }
+.jc-global-index .wt-block-content-charts-block {
+  display: flex;
+  flex-flow: row-reverse;
+}
 
 .jc-global-individual #name-header-0,
 .jc-global-individual #name-content-0 {
