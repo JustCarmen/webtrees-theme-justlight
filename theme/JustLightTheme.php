@@ -40,7 +40,7 @@ class JustLightTheme extends JustFancyTheme {
         '<body class="wt-global' . $this->getPageGlobalClass() . ' theme-' . self::THEME_DIR . '">' .
         '<header class="wt-header-wrapper px-5 mb-3">' .
         '<div class="wt-header-container">' .
-        '<div class="row wt-header-content">' .
+        '<div class="row wt-header-content mb-3">' .
         $this->headerContent() .
         '</div>' .
         '</div>' .
@@ -56,7 +56,7 @@ class JustLightTheme extends JustFancyTheme {
   public function formatTreeTitle() {
     if ($this->tree) {
       return
-          '<h1 class="col wt-site-title mt-3">' . $this->formatTreeTitleLink() . '</h1>';
+          '<h1 class="col wt-site-title">' . $this->formatTreeTitleLink() . '</h1>';
     } else {
       return '';
     }
@@ -66,11 +66,11 @@ class JustLightTheme extends JustFancyTheme {
   protected function headerContent() {
     return
         $this->accessibilityLinks() .
-        '<div class="d-flex col-12 col-lg-6 order-last order-lg-first">' .
+        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-3">' .
         $this->logoHeader() .
         $this->formatTreeTitle() .
         '</div>' .
-        '<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-first order-lg-last justify-content-sm-start justify-content-md-end align-items-start">' .
+        '<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">' .
         '<div class="wt-secondary-menu d-flex">' .
         $this->secondaryMenuContainer($this->secondaryMenu()) .
         '</div>' .
@@ -161,7 +161,7 @@ class JustLightTheme extends JustFancyTheme {
     $modules = ['tree'];
 
     if (in_array($this->getPage(), $pages) || (in_array(Filter::get('mod'), $modules))) {
-      return '-fluid mx-5 px-0'; // container-fluid
+      return '-fluid px-5'; // container-fluid
     }
   }
 
