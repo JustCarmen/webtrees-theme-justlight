@@ -1,13 +1,13 @@
 .wt-header-wrapper {
-  border-top: 5px solid $brand-primary;
-  border-bottom: $border-width solid $gray-lighter;
+  border-top: 5px solid theme-color(primary);
+  border-bottom: $border-width solid gray(200);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
   @include jl-header-gradient();
 }
 
 .wt-site-title {
   & a {
-    color: $brand-primary;
+    color: theme-color(primary);
     font-weight: 500;
   }
 }

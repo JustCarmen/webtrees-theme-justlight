@@ -20,7 +20,7 @@
 }
 
 .card-block {
-  background: $gray-lightest;
+  background: theme-color(light);
   .jc-global-index & {
     background: transparent;
     border: none;

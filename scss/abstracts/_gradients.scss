@@ -8,7 +8,7 @@
 // =======================================================================================
 @mixin jl-theme-gradient() {
   // http://colorzilla.com/gradient-editor/#337ab7+0,2e6da4+100
-  @include background-image(linear-gradient(top,  $brand-primary 0, darken($brand-primary, 6.5%) 100%));
+  @include background-image(linear-gradient(top,  theme-color(primary) 0, darken(theme-color(primary), 6.5%) 100%));
   &, a, .fa {
     color: $white;
   } 
@@ -17,7 +17,7 @@
 @mixin jl-button-gradient() {
   @include jl-theme-gradient;
   &:hover {
-    @include background-image(linear-gradient(top,  darken($brand-primary, 6.5%) 0, darken($brand-primary, 15%) 100%));
+    @include background-image(linear-gradient(top,  darken(theme-color(primary), 6.5%) 0, darken(theme-color(primary), 15%) 100%));
   }
 }
 

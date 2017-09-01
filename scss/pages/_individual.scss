@@ -9,7 +9,7 @@
         @include jl-theme-gradient;
       }
       &#name-header-add {
-        background: $gray-lightest;
+        background: theme-color(light);
       }
     }
   }

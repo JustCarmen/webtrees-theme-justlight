@@ -1,7 +1,7 @@
 // Edit interface page
 .jc-global-edit_interface:not(.modal-open) {
   form {
-    background: $gray-lightest;
+    background: theme-color(light);
     border: 1px solid $input-border-color;
     @extend .px-5;
     @extend .py-3;

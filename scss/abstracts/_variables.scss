@@ -1,36 +1,20 @@
 // Import these set of variables before Bootstrap variables to overwrite the !default variables
 // from the Bootstrap variable set.
-// To use bootstrap variables inside our own variables we need to redeclare them here or
-// import the bootstrap variable set before we use these variables, but after the overwrites are set
-// =============================================================================
-// Bootstrap variables
-// =============================================================================
-// The variables below are used in our own variable set (right column)
-// The values are not altered. These are the bootstrap default values.
-
-// Colors
-$white:           #fff !default;
-$red:             #b80000; // custom
-
-// Grayscale
-$gray-dark:       #292b2c !default;
-$gray-light:      #636c72 !default;
-$gray-lighter:    #eceeef !default;
-$gray-lightest:   #f7f7f9 !default;
-
-// Fonts
-$font-size-sm:    .875rem !default;
 
 // =============================================================================
 // JustLight theme variables
 // =============================================================================
 
 // Colors
-$blue:          #428bca;
+$blue:          #337ab7;
+$red:           #b80000;
 $babyblue:      #d7eaf9;
 $babypink:      #fff0f5;
 
-$brand-primary: darken($blue, 6.5%); // #337ab7
+// Color scheme
+$theme-colors: (
+  primary: $blue
+) !default;
 
 // Image icons used by this theme
 // Type: arrows, webtrees or other (icons without the prefix wt)
@@ -49,10 +33,10 @@ $image-icons: (
 );
 
 // Cards
-$card-cap-bg:                       $brand-primary;
+$card-cap-bg:                       $blue;
 
 // Tables
-$table-bg-accent:                   $gray-lightest;
+$table-bg-accent:                   $gray-100;
 
 // Personboxes
 $personbox-male-bg:                 $babyblue;

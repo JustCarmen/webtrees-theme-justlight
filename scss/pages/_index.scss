@@ -17,9 +17,9 @@
   .wt-side-blocks {
     @extend .col-sm-3;
     @extend .py-3;
-    border-left: $border-width solid $gray-lighter;
+    border-left: $border-width solid gray(200);
     .card {
-      border-bottom: $border-width solid $blue;
+      border-bottom: $border-width solid theme-colors(primary);
       border-radius: 0;
       @extend .m-0;
     }
