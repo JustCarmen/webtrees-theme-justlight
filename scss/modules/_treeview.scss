@@ -1,13 +1,6 @@
-.theme-justlight {
+.jc-global-module-tree {
   .tv_out {
-    background-color: $white;
     border: $border-width solid $table-border-color;
-  }
-
-  &.jc-global-module-tree {
-    .tv_out {
-      border: none;
-    }
   }
 
   .tvM {

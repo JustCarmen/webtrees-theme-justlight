@@ -14,7 +14,7 @@ $babypink:      #fff0f5;
 // Color scheme
 $theme-colors: (
   primary: $blue
-) !default;
+);
 
 // Image icons used by this theme
 // Type: arrows, webtrees or other (icons without the prefix wt)
@@ -33,14 +33,14 @@ $image-icons: (
 );
 
 // Cards
-$card-cap-bg:                       $blue;
+$card-cap-bg:                       $primary-color;
 
 // Tables
-$table-bg-accent:                   $gray-100;
+$table-accent-bg:                   $gray-100;
 
 // Personboxes
 $personbox-male-bg:                 $babyblue;
 $personbox-female-bg:               $babypink;
 
-// Modules
-$gm-events-font-size:               $font-size-sm;
+// Treeview
+$treeview-bg-color:                 $body-bg;
