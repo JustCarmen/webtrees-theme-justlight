@@ -271,7 +271,7 @@ class JustBaseTheme extends MinimalTheme {
 				'<a href="' . $individual->getHtmlUrl() . '">' . $content . '</a>' .
 				'<div class="namedef name1">' . $individual->getAddName() . '</div>';
 			$icons   =
-				'<div class="icons">' .
+				'<div class="icons order-2">' .
 				'<span class="iconz icon-zoomin" title="' . I18N::translate('Zoom in/out on this box.') . '"></span>' .
 				'<div class="itr"><i class="icon-pedigree"></i><div class="popup">' .
 				'<ul class="' . $personBoxClass . '">' . implode('', array_map(function(Menu $menu) { return $menu->bootstrap4(); }, $this->individualBoxMenu($individual))) . '</ul>' .
@@ -281,9 +281,9 @@ class JustBaseTheme extends MinimalTheme {
 		}
 
 		return
-			'<div data-pid="' . $individual->getXref() . '" class="person_box_template ' . $personBoxClass . ' box-style1" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+			'<div data-pid="' . $individual->getXref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 			$icons .
-			'<div class="chart_textbox d-flex" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
+			'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 			$thumbnail .
       '<div class="d-flex flex-column">' .
 			$content .
@@ -479,7 +479,7 @@ class JustBaseTheme extends MinimalTheme {
    */
   public function stylesheets() {
     return array_merge(
-        array_diff(parent::stylesheets(), [WT_BOOTSTRAP_CSS_URL]), [self::STYLESHEET]
+      array_diff(parent::stylesheets(), [WT_BOOTSTRAP_CSS_URL])
     );
   }
 
