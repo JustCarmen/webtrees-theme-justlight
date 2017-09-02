@@ -23,9 +23,8 @@ use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\Html;
 use Fisharebest\Webtrees\I18N;
-use JustCarmen\WebtreesThemes\JustFancy\Theme\JustFancyTheme;
 
-class JustLightTheme extends JustFancyTheme {
+class JustLightTheme extends JustBaseTheme {
 
   const THEME_VERSION = '2.0.0';
   const THEME_NAME    = 'JustLight';

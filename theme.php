@@ -23,9 +23,7 @@ use JustCarmen\WebtreesThemes\JustLight\Theme\JustLightTheme;
 
 // load the theme classes
 $loader = new ClassLoader();
-$loader->addPsr4('JustCarmen\\WebtreesThemes\\JustFancy\\Theme\\', WT_ROOT . WT_THEMES_DIR . 'justfancy/theme');
-$loader->addPsr4('JustCarmen\\WebtreesThemes\\JustLight\\Theme\\', __DIR__ . '/theme');
-
+$loader->addPsr4('JustCarmen\\WebtreesThemes\\JustLight\\', __DIR__ . '/app');
 $loader->register();
 
 return new JustLightTheme();
