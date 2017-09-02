@@ -8766,7 +8766,7 @@ a.fa:hover {
   font-family: "icomoon";
   font-style: normal;
   font-weight: 500;
-  src: url("../../../themes/justfancy/css/fonts/icomoon.ttf") format("truetype"), url("../../../themes/justfancy/css/fonts/icomoon.eot?") format("eot"), url("../../../themes/justfancy/css/fonts/icomoon.woff") format("woff");
+  src: url("../../../themes/_justbase/fonts/icomoon.ttf") format("truetype"), url("../../../themes/_justbase/fonts/icomoon.eot?") format("eot"), url("../../../themes/_justbase/fonts/icomoon.woff") format("woff");
 }
 .jc-global-individual .icon-silhouette-F, .jc-global-individual .icon-silhouette-M, .jc-global-individual .icon-silhouette-U {
   font-size: 6rem;
