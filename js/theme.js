@@ -1,3 +1,17 @@
+/*!
+ * webtrees: online genealogy
+ * Copyright (C) 2017 JustCarmen (http://www.justcarmen.nl)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 ;
 (function($, window) {
 
@@ -86,6 +100,8 @@ function strip_tags(str) {
     return str.replace(/<\/?[^>]+>/gi, '').trim();
 }
 
+/* Put here scripts to override webtrees behavior which doesn't fit in any of the other categories */
+
 // Prevent jumping to the top of the page when clicking on a javascript link
 if ($('a[onclick]').attr('href') == '#') {
   $('a[onclick]').attr('href', 'javascript:void(0)');
@@ -142,6 +158,8 @@ var table = $('.table-surname').DataTable({
 });
 $('.table-surname').addClass('mx-auto');
 table.columns.adjust().draw();
+
+/* global THEME_COLORBOX_URL */
 
 function get_imagetype() {
   var xrefs = [];
