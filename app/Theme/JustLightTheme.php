@@ -130,7 +130,7 @@ class JustLightTheme extends JustBaseTheme {
 
         $html .= '<div class="' . $menu->getClass() . ' btn-group">' .
             '<button class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
-            $menu->getLabel() .
+            '<span class="menu-label">' . $menu->getLabel() . '</span>' .
             '<i class="caret"></i>' .
             '</button>' .
             '<div class="dropdown-menu" role="menu">' .

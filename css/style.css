@@ -6531,7 +6531,7 @@ h2,
   padding: 0 !important;
 }
 
-.pt-0,
+.pt-0, .jc-secondary-navigation .menu-label,
 .py-0,
 .faq_title,
 .jc-global-index .card-block {
@@ -6575,7 +6575,7 @@ h2,
   padding-right: 0.25rem !important;
 }
 
-.pb-1,
+.pb-1, .jc-secondary-navigation .menu-label,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-block,
@@ -9352,6 +9352,12 @@ td.optionbox, td.facts_value {
 
 .jc-secondary-navigation .btn-group button {
   border-radius: 0;
+}
+.jc-secondary-navigation .menu-label {
+  display: inline-block;
+}
+.jc-secondary-navigation .dropdown-toggle:after {
+  vertical-align: middle;
 }
 
 .wt-footer-container {

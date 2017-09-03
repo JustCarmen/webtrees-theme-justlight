@@ -27,4 +27,12 @@
   .btn-group button {
     border-radius: 0;
   }
+  .menu-label {
+    display: inline-block;
+    @extend .pb-1;
+  }
+
+  .dropdown-toggle:after {
+    vertical-align: middle;
+  }
 }
