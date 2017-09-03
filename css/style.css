@@ -6410,7 +6410,7 @@ h2,
   margin: 0.25rem !important;
 }
 
-.mt-1,
+.mt-1, .wt-header-search,
 .my-1 {
   margin-top: 0.25rem !important;
 }
@@ -8567,6 +8567,13 @@ a {
   .wt-header-search {
     display: block;
   }
+}
+.wt-header-search .input-group-btn {
+  padding: 0.25rem 0.5rem;
+  border-color: #337ab7;
+}
+.wt-header-search .fa-search {
+  font-size: 1.25rem;
 }
 
 .jc-primary-navigation {

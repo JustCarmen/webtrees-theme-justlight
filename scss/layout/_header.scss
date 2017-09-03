@@ -15,6 +15,7 @@
 .wt-header-search {
   align-self: flex-start;
   @include jc-direction(padding, 0, '', right);
+  @extend .mt-1;
 }
 
 .jc-primary-navigation {
