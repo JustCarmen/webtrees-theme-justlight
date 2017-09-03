@@ -9358,6 +9358,10 @@ td.optionbox, td.facts_value {
   background-color: #e6e6e6;
 }
 
+.nav-pills .nav-link:not(.active):focus, .nav-pills .nav-link:not(.active):hover {
+  background-color: #e9ecef;
+}
+
 .nav-tabs .nav-item {
   margin-right: 0.15rem;
 }
