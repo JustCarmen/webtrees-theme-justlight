@@ -19,7 +19,7 @@
     @extend .py-3;
     border-left: $border-width solid gray(200);
     .card {
-      border-bottom: $border-width solid theme-colors(primary);
+      border-bottom: $border-width solid theme-color(primary);
       border-radius: 0;
       @extend .m-0;
     }
