@@ -6531,7 +6531,7 @@ h2,
   padding: 0 !important;
 }
 
-.pt-0, .jc-secondary-navigation .menu-label,
+.pt-0,
 .py-0,
 .faq_title,
 .jc-global-index .card-block {
@@ -9490,7 +9490,7 @@ td.optionbox, td.facts_value {
   border-left: 1px solid #e9ecef;
 }
 .jc-global-index .wt-side-blocks .card {
-  border-bottom: 1px solid theme-colors(primary);
+  border-bottom: 1px solid #337ab7;
   border-radius: 0;
 }
 .jc-global-index .wt-side-blocks .card-block {
