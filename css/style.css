@@ -490,7 +490,7 @@ hr {
 
 small,
 .small {
-  font-size: 85%;
+  font-size: 80%;
   font-weight: normal;
 }
 
@@ -9017,9 +9017,6 @@ td.optionbox, td.facts_value {
   margin-left: 0.25rem;
 }
 
-.person_box_template, #lifespan-people .popup {
-  font-size: 0.875rem;
-}
 .person_box {
   background-color: #d7eaf9;
   border-color: #cbd3da;
@@ -9042,11 +9039,16 @@ td.optionbox, td.facts_value {
   color: #337ab7;
 }
 .person_box_template .chart_textbox, #lifespan-people .popup .chart_textbox {
-  font-size: 0.875rem;
-  line-height: normal;
+  font-size: 0.75rem;
+  font-weight: 200;
+  line-height: 1.2;
 }
 .person_box_template .name1, #lifespan-people .popup .name1 {
+  font-size: 0.875rem;
   font-weight: 500;
+}
+.person_box_template .details0, #lifespan-people .popup .details0, .person_box_template .details1, #lifespan-people .popup .details1 {
+  font-size: 0.75rem;
 }
 
 .popover a:focus, .popover a:hover {
@@ -9167,6 +9169,10 @@ td.optionbox, td.facts_value {
 }
 #sb_family_nav_content .nav_content {
   border-collapse: separate;
+}
+
+#pedigree_canvas {
+  color: #000;
 }
 
 #lifespan-scale {

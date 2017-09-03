@@ -281,7 +281,7 @@ class JustBaseTheme extends MinimalTheme {
 		}
 
 		return
-			'<div data-pid="' . $individual->getXref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+			'<div data-pid="' . $individual->getXref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 			$icons .
 			'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 			$thumbnail .
