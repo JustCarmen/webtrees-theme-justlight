@@ -6291,7 +6291,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   width: 10% !important;
 }
 
-.w-20, .width20 {
+.w-20, .width20, .jc-global-individual .tab-content .facts_label {
   width: 20% !important;
 }
 
