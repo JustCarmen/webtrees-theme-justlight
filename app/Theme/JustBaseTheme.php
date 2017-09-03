@@ -403,6 +403,34 @@ class JustBaseTheme extends MinimalTheme {
     return '<script>' . $javascript . '</script>';
   }
 
+  /**
+   * Misecellaneous dimensions, fonts, styles, etc.
+   *
+   * @param string $parameter_name
+   *
+   * @return string|int|float
+   */
+  public function parameter($parameter_name) {
+    $parameters = [
+        'image-dline'  => static::ASSET_DIR . 'charts/dline.png',
+        'image-dline2' => static::ASSET_DIR . 'charts/dline2.png',
+        'image-hline'  => static::ASSET_DIR . 'charts/hline.png',
+        'image-spacer' => static::ASSET_DIR . 'charts/spacer.png',
+        'image-vline'  => static::ASSET_DIR . 'charts/vline.png'
+    ];
+
+    if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
+      $parameters['compact-chart-box-x'] = 90;
+      $parameters['compact-chart-box-y'] = 120;
+    }
+
+    if (array_key_exists($parameter_name, $parameters)) {
+      return $parameters[$parameter_name];
+    } else {
+      return parent::parameter($parameter_name);
+    }
+  }
+
   /** {@inheritdoc} */
   public function primaryMenu() {
     global $controller;
