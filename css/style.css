@@ -8897,6 +8897,14 @@ a.fa:hover {
   content: '';
 }
 
+.input-group-btn .btn,
+.input-group-addon .btn,
+.input-group-btn .btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
 .card {
   margin-bottom: .25rem;
 }
@@ -9159,18 +9167,6 @@ td.optionbox, td.facts_value {
 }
 #sb_family_nav_content .nav_content {
   border-collapse: separate;
-}
-
-[ID^="vline"], img[src*="vline"] {
-  width: 2px;
-}
-
-img[src*="hline"] {
-  height: 2px;
-}
-
-.linef1 {
-  margin-bottom: 2px;
 }
 
 #lifespan-scale {
