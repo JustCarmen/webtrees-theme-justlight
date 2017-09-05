@@ -65,7 +65,7 @@ class JustLightTheme extends JustBaseTheme {
   protected function headerContent() {
     return
         $this->accessibilityLinks() .
-        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-4">' .
+        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-2">' .
         $this->logoHeader() .
         $this->formatTreeTitle() .
         '</div>' .

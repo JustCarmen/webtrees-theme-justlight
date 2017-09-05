@@ -15,7 +15,16 @@
 .wt-header-search {
   align-self: flex-start;
   @include jc-direction(padding, 0, '', right);
-  @extend .mt-1;
+
+  .btn-primary {
+    @include jl-button-gradient;
+    padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
+  }
+
+  .fa-search {
+    font-size: $font-size-sm;
+    vertical-align: top;
+  }
 }
 
 .jc-primary-navigation {
@@ -25,8 +34,11 @@
 
 .jc-secondary-navigation {
   .btn-group button {
-    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0 .25rem;
   }
+  
   .menu-label {
     display: inline-block;
     @extend .pb-1;
