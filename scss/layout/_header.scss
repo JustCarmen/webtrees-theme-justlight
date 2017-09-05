@@ -6,9 +6,9 @@
 }
 
 .wt-site-title {
+  font-family: 'Open Sans', $font-family-base;
   & a {
     color: theme-color(primary);
-    font-weight: 500;
   }
 }
 

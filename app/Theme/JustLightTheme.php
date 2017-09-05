@@ -65,7 +65,7 @@ class JustLightTheme extends JustBaseTheme {
   protected function headerContent() {
     return
         $this->accessibilityLinks() .
-        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-3">' .
+        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-4">' .
         $this->logoHeader() .
         $this->formatTreeTitle() .
         '</div>' .
@@ -75,6 +75,10 @@ class JustLightTheme extends JustBaseTheme {
         '</div>' .
         $this->formQuickSearch() .
         '</div>';
+  }
+
+  public function hookHeaderExtraContent() {
+    return '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">';
   }
 
   public function menuMyPages() {
