@@ -1928,12 +1928,10 @@ select.form-control:focus::-ms-value, .jc-global-search select:focus::-ms-value,
 .jc-global-search_advanced .input-group-sm > input.form-control-plaintext[type=text], .jc-global-search .input-group-sm > select.form-control-plaintext,
 .jc-global-search_advanced .input-group-sm > select.form-control-plaintext,
 .input-group-sm > .form-control-plaintext.input-group-addon,
-.input-group-sm > .form-control-plaintext.input-group-btn,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .jc-global-search .input-group-lg > input.form-control-plaintext[type=text],
 .jc-global-search_advanced .input-group-lg > input.form-control-plaintext[type=text], .jc-global-search .input-group-lg > select.form-control-plaintext,
 .jc-global-search_advanced .input-group-lg > select.form-control-plaintext,
 .input-group-lg > .form-control-plaintext.input-group-addon,
-.input-group-lg > .form-control-plaintext.input-group-btn,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn {
   padding-right: 0;
   padding-left: 0;
@@ -1943,7 +1941,6 @@ select.form-control:focus::-ms-value, .jc-global-search select:focus::-ms-value,
 .jc-global-search_advanced .input-group-sm > input[type=text], .jc-global-search .input-group-sm > select,
 .jc-global-search_advanced .input-group-sm > select,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn,
 .input-group-sm > .input-group-btn > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -1954,7 +1951,6 @@ select.form-control:focus::-ms-value, .jc-global-search select:focus::-ms-value,
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .jc-global-search .input-group-sm > select:not([size]):not([multiple]),
 .jc-global-search_advanced .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
-.input-group-sm > select.input-group-btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px);
 }
@@ -1963,7 +1959,6 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .jc-global-search_advanced .input-group-lg > input[type=text], .jc-global-search .input-group-lg > select,
 .jc-global-search_advanced .input-group-lg > select,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn,
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -1974,7 +1969,6 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .jc-global-search .input-group-lg > select:not([size]):not([multiple]),
 .jc-global-search_advanced .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
-.input-group-lg > select.input-group-btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px);
 }
@@ -3063,7 +3057,7 @@ tbody.collapse.show {
   z-index: 3;
 }
 
-.input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child),
+.input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child),
 .input-group .jc-global-search input[type=text]:not(:first-child):not(:last-child),
@@ -3077,12 +3071,12 @@ tbody.collapse.show {
   border-radius: 0;
 }
 
-.input-group-addon, .input-group-btn,
+.input-group-addon,
 .input-group-btn {
   white-space: nowrap;
 }
 
-.input-group-addon, .input-group-btn {
+.input-group-addon {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
@@ -3095,35 +3089,26 @@ tbody.collapse.show {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
-.input-group-addon.form-control-sm, .jc-global-search .input-group-sm > input.input-group-btn[type=text],
-.jc-global-search_advanced .input-group-sm > input.input-group-btn[type=text], .jc-global-search .input-group-sm > select.input-group-btn,
-.jc-global-search_advanced .input-group-sm > select.input-group-btn, .jc-global-search .input-group-sm > input.input-group-addon[type=text],
+.input-group-addon.form-control-sm, .jc-global-search .input-group-sm > input.input-group-addon[type=text],
 .jc-global-search_advanced .input-group-sm > input.input-group-addon[type=text], .jc-global-search .input-group-sm > select.input-group-addon,
 .jc-global-search_advanced .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn,
-.input-group-sm > .input-group-btn > .input-group-addon.btn,
-.input-group-sm > .input-group-btn > .btn.input-group-btn, .form-control-sm.input-group-btn {
+.input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.input-group-addon.form-control-lg, .jc-global-search .input-group-lg > input.input-group-btn[type=text],
-.jc-global-search_advanced .input-group-lg > input.input-group-btn[type=text], .jc-global-search .input-group-lg > select.input-group-btn,
-.jc-global-search_advanced .input-group-lg > select.input-group-btn, .jc-global-search .input-group-lg > input.input-group-addon[type=text],
+.input-group-addon.form-control-lg, .jc-global-search .input-group-lg > input.input-group-addon[type=text],
 .jc-global-search_advanced .input-group-lg > input.input-group-addon[type=text], .jc-global-search .input-group-lg > select.input-group-addon,
 .jc-global-search_advanced .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn,
-.input-group-lg > .input-group-btn > .input-group-addon.btn,
-.input-group-lg > .input-group-btn > .btn.input-group-btn, .form-control-lg.input-group-btn {
+.input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
-.input-group-addon input[type="radio"], .input-group-btn input[type="radio"],
-.input-group-addon input[type="checkbox"],
-.input-group-btn input[type="checkbox"] {
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
   margin-top: 0;
 }
 
@@ -3133,7 +3118,6 @@ tbody.collapse.show {
 .input-group .jc-global-search_advanced select:not(:last-child),
 .jc-global-search_advanced .input-group select:not(:last-child),
 .input-group-addon:not(:last-child),
-.input-group-btn:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > .btn-group > .btn,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
@@ -3143,7 +3127,7 @@ tbody.collapse.show {
   border-bottom-right-radius: 0;
 }
 
-.input-group-addon:not(:last-child), .input-group-btn:not(:last-child) {
+.input-group-addon:not(:last-child) {
   border-right: 0;
 }
 
@@ -3153,7 +3137,6 @@ tbody.collapse.show {
 .input-group .jc-global-search_advanced select:not(:first-child),
 .jc-global-search_advanced .input-group select:not(:first-child),
 .input-group-addon:not(:first-child),
-.input-group-btn:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > .btn-group > .btn,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
@@ -3165,9 +3148,7 @@ tbody.collapse.show {
 
 .form-control + .input-group-addon:not(:first-child), .jc-global-search input[type=text] + .input-group-addon:not(:first-child),
 .jc-global-search_advanced input[type=text] + .input-group-addon:not(:first-child), .jc-global-search select + .input-group-addon:not(:first-child),
-.jc-global-search_advanced select + .input-group-addon:not(:first-child), .form-control + .input-group-btn:not(:first-child), .jc-global-search input[type=text] + .input-group-btn:not(:first-child),
-.jc-global-search_advanced input[type=text] + .input-group-btn:not(:first-child), .jc-global-search select + .input-group-btn:not(:first-child),
-.jc-global-search_advanced select + .input-group-btn:not(:first-child) {
+.jc-global-search_advanced select + .input-group-addon:not(:first-child) {
   border-left: 0;
 }
 
@@ -6421,7 +6402,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .m-0, .col-form-label,
-.col-form-legend, div[id^="caldivDATE"] table, .faq_title, .jc-global-index .wt-side-blocks .card {
+.col-form-legend, div[id^="caldiv"] table, .faq_title, .jc-global-index .wt-side-blocks .card {
   margin: 0 !important;
 }
 
@@ -6572,7 +6553,8 @@ h2,
 }
 
 .p-0, .col-form-label,
-.col-form-legend, .input-group-addon .btn, .input-group-btn .btn, .stat-table1 .stat-cell, .jc-global-index .wt-main-container {
+.col-form-legend, .btn-link, .input-group-addon .btn,
+.input-group-btn .btn, .stat-table1 .stat-cell, .jc-global-index .wt-main-container {
   padding: 0 !important;
 }
 
@@ -6602,7 +6584,7 @@ h2,
   padding-left: 0 !important;
 }
 
-.p-1, .btn-link, .jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
+.p-1, .jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
   padding: 0.25rem !important;
 }
 
@@ -6634,7 +6616,7 @@ h2,
   padding-left: 0.25rem !important;
 }
 
-.p-2, div[id^="caldivDATE"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-block {
+.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-block {
   padding: 0.5rem !important;
 }
 
@@ -8055,7 +8037,7 @@ h2,
   text-align: right !important;
 }
 
-.text-center, h2, div[id^="caldivDATE"] > table table td, .jc-global-listpage .wt-page-options {
+.text-center, h2, div[id^="caldiv"] > table table td, .jc-global-listpage .wt-page-options {
   text-align: center !important;
 }
 
@@ -8381,7 +8363,7 @@ a {
   height: calc(2.25rem + 2px);
   line-height: 2.25;
 }
-.input-group-addon + .select2-container--default .select2-selection--single, .input-group-btn + .select2-container--default .select2-selection--single {
+.input-group-addon + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -8409,7 +8391,8 @@ a {
   display: flex;
   align-items: stretch;
 }
-.input-group .input-group-addon, .input-group .input-group-btn {
+.input-group .input-group-addon,
+.input-group .input-group-btn {
   display: flex;
   align-items: center;
 }
@@ -8458,15 +8441,13 @@ a.fa {
 a.fa:hover {
   color: #0a0c0d;
 }
-.input-group-btn .fa, .input-group-addon .fa, .input-group-btn .fa, .btn-secondary .fa, .input-group-btn
-a.fa, .input-group-addon
+.input-group-addon .fa, .input-group-btn .fa, .btn-secondary .fa, .input-group-addon
 a.fa, .input-group-btn
 a.fa, .btn-secondary
 a.fa {
   color: #212529;
 }
-.input-group-btn .fa:hover, .input-group-addon .fa:hover, .input-group-btn .fa:hover, .btn-secondary .fa:hover, .input-group-btn
-a.fa:hover, .input-group-addon
+.input-group-addon .fa:hover, .input-group-btn .fa:hover, .btn-secondary .fa:hover, .input-group-addon
 a.fa:hover, .input-group-btn
 a.fa:hover, .btn-secondary
 a.fa:hover {
@@ -8558,8 +8539,12 @@ a.fa:hover {
   content: "\f010";
 }
 
-.wt-icon-delete:before {
+.fa-trash-o:before {
   content: "\f00d";
+}
+
+.fa-plus:before {
+  content: "\f0fe";
 }
 
 @font-face {
@@ -8696,15 +8681,15 @@ a.fa:hover {
   content: '';
 }
 
-.input-group-btn .btn,
 .input-group-addon .btn,
 .input-group-btn .btn {
   background: none;
   border: none;
   box-shadow: none;
 }
-
-.wt-header-search .input-group-btn, .jc-change-root .input-group-btn {
+.wt-header-search .input-group-addon, .jc-change-root .input-group-addon, .wt-header-search
+.input-group-btn, .jc-change-root
+.input-group-btn {
   background-color: #337ab7;
 }
 
@@ -8786,8 +8771,7 @@ td.optionbox, td.facts_value {
   border: 1px solid #cbd3da;
 }
 .dt-bootstrap4 .dataTable .btn-link {
-  line-height: initial;
-  padding: 0;
+  vertical-align: top;
 }
 .dt-bootstrap4 .dataTable thead th.sorting:before, .dt-bootstrap4 .dataTable thead th.sorting_asc:before, .dt-bootstrap4 .dataTable thead th.sorting_desc:before {
   content: "";
@@ -8940,45 +8924,45 @@ td.optionbox, td.facts_value {
   width: 100%;
 }
 
-div[id^="caldivDATE"] table td {
+div[id^="caldiv"] table td {
   background-color: #fff !important;
 }
-div[id^="caldivDATE"] > table {
+div[id^="caldiv"] > table {
   border: 1px solid #cbd3da;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
-div[id^="caldivDATE"] > table td {
+div[id^="caldiv"] > table td {
   border: none !important;
 }
-div[id^="caldivDATE"] > table table td {
+div[id^="caldiv"] > table table td {
   border-radius: .25rem;
 }
-div[id^="caldivDATE"] > table table td a {
+div[id^="caldiv"] > table table td a {
   color: #a1a8ae;
   text-decoration: none;
 }
-div[id^="caldivDATE"] > table table td.optionbox a, div[id^="caldivDATE"] > table table td.descriptionbox a {
+div[id^="caldiv"] > table table td.optionbox a, div[id^="caldiv"] > table table td.descriptionbox a {
   color: #212529;
 }
-div[id^="caldivDATE"] > table table td:hover {
+div[id^="caldiv"] > table table td:hover {
   background-color: #f8f9fa !important;
 }
-div[id^="caldivDATE"] > table table tr:first-child {
+div[id^="caldiv"] > table table tr:first-child {
   font-weight: 700;
 }
-div[id^="caldivDATE"] > table table tr:first-child td:hover {
+div[id^="caldiv"] > table table tr:first-child td:hover {
   background: none !important;
 }
-div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox {
   position: relative;
 }
-div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox, div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox:hover {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:hover {
   background-color: #337ab7 !important;
 }
-div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox a, div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox a:hover {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a:hover {
   color: #fff;
 }
-div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox:before {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   content: '';
   display: inline-block;
   border: solid transparent;
@@ -9546,11 +9530,16 @@ div[id^="caldivDATE"] > table table tr:not(:first-child) td.descriptionbox:befor
 }
 
 .fa-plus {
-  color: #28a745;
+  color: #28a745 !important;
 }
 
+.fa-trash-o,
 .fa-map-marker {
-  color: #b80000;
+  color: #b80000 !important;
+}
+
+.fa-info-circle {
+  color: #337ab7 !important;
 }
 
 .btn-primary {

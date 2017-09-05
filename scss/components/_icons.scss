@@ -1,8 +1,13 @@
 // icon colors
 .fa-plus {
-  color: color(green);
+   color: color(green) !important;
 }
 
+.fa-trash-o,
 .fa-map-marker {
-  color: color(red);
+  color: color(red) !important;
+}
+
+.fa-info-circle {
+  color: color(blue) !important;
 }
