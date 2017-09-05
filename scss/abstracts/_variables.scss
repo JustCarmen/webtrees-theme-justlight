@@ -5,11 +5,15 @@
 // JustLight theme variables
 // =============================================================================
 
+// Options
+$enable-shadows:            true !default;
+$enable-gradients:          true !default;
+
 // Colors
-$blue:          #337ab7;
-$red:           #b80000;
-$babyblue:      #d7eaf9;
-$babypink:      #fff0f5;
+$blue:                      #337ab7;
+$red:                       #b80000;
+$babyblue:                  #d7eaf9;
+$babypink:                  #fff0f5;
 
 // Color scheme
 $theme-colors: (
@@ -38,7 +42,7 @@ $image-icons: (
 );
 
 // Cards
-$card-cap-bg:                       $primary-color;
+$card-cap-bg:                       $blue; //primary color
 
 // Tables
 $table-accent-bg:                   $gray-100;
