@@ -15,10 +15,13 @@ $red:                       #b80000;
 $babyblue:                  #d7eaf9;
 $babypink:                  #fff0f5;
 
-// Color scheme
+// Theme colors
 $theme-colors: (
-  primary: $blue
+  primary: $blue,
+  secondary: $gray-200
 );
+
+$primary-color: map-get($theme-colors, primary);
 
 // overwrite font-awesome icons used by webtrees
 $webtrees-fa-icons: (
@@ -42,7 +45,7 @@ $image-icons: (
 );
 
 // Cards
-$card-cap-bg:                       $blue; //primary color
+$card-cap-bg:                       $primary-color;
 
 // Tables
 $table-accent-bg:                   $gray-100;
