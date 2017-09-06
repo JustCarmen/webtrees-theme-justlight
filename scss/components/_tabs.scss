@@ -3,13 +3,9 @@
     @include jc-direction(margin, .15rem, null, right);
   }
   .nav-link {
-    @include jl-light-gradient;
+    @include jl-button-gradient-light;
     font-size: $font-size-sm;
     font-weight: $headings-font-weight;
-
-    &:hover {
-      @include jl-light-gradient-hover;
-    }
 
     &.active {
       @include jl-button-gradient;

@@ -4,7 +4,7 @@
 
   #individual-names {
     .card-header {
-      @include jl-light-gradient;
+      @include jl-theme-gradient-light;
       &#name-header-0 {
         @include jl-theme-gradient;
       }
@@ -25,7 +25,7 @@
   // tab content of the main section
   .tab-content {
     .facts_table > tbody > tr:first-child > td[colspan="2"] {
-      @include jl-light-gradient;
+      @include jl-theme-gradient-light;
     }
   }
 }

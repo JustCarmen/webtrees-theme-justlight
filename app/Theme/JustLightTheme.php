@@ -105,7 +105,8 @@ class JustLightTheme extends JustBaseTheme {
         $this->menuMyPages(),
         $this->menuFavorites(),
         $this->menuThemes(),
-        $this->menuLanguages()
+        $this->menuLanguages(),
+        $this->menuLogin()
     ]);
   }
 
@@ -147,9 +148,15 @@ class JustLightTheme extends JustBaseTheme {
           $attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
         }
 
-        $class = trim('nav-item btn-group ' . $menu->getClass());
+        $class = trim($menu->getClass() . ' btn-group');
 
-        $html .= '<div class="' . $class . '"><button class="btn btn-sm btn-primary" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
+        if ($menu->getClass() === 'menu-login') {
+          $btn_class = 'btn-secondary';
+        } else {
+          $btn_class = 'btn-primary';
+        }
+
+        $html .= '<div class="' . $class . '"><a class="btn btn-sm ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
       }
     }
 

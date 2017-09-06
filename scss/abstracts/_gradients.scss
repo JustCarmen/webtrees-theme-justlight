@@ -7,34 +7,42 @@
 // Gradient for table, card headers, buttons etc.
 // =======================================================================================
 @mixin jl-theme-gradient() {
-  // http://colorzilla.com/gradient-editor/#337ab7+0,2e6da4+100
-  @include background-image(linear-gradient(top,  theme-color(primary) 0, darken(theme-color(primary), 6.5%) 100%));
+  @include background-image(linear-gradient(top,  theme-color(primary) 0, theme-color-level(primary, 4) 50%));
   &, a, .fa {
     color: $white;
   } 
 }
 
-@mixin jl-button-gradient() {
-  @include jl-theme-gradient;
-  &:hover {
-    @include background-image(linear-gradient(top,  darken(theme-color(primary), 6.5%) 0, darken(theme-color(primary), 15%) 100%));
-  }
+@mixin jl-theme-gradient-hover() {
+  @include background-image(linear-gradient(top,  theme-color-level(primary, 2), theme-color-level(primary, 6) 100%));
 }
 
-@mixin jl-header-gradient() {
-  // http://colorzilla.com/gradient-editor/#ffffff+0,f8f8f8+100
-  @include background-image(linear-gradient(top,  $white 0, #f8f8f8 100%));
-}
-
-@mixin jl-light-gradient() {
-  // http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D
-  @include background-image(linear-gradient(top,  #eeeeee 0%, #cccccc 100%));
+@mixin jl-theme-gradient-light() {
+  @include background-image(linear-gradient(top,  $gray-100 0%, $gray-400 100%));
   &, a, .fa {
     color: $body-color;
   }
 }
 
-// optional hover state for jl-light-gradient
-@mixin jl-light-gradient-hover() {
-  @include background-image(linear-gradient(top,  darken(#eeeeee, 6.5%) 0%, darken(#cccccc, 15%) 100%));
+@mixin jl-theme-gradient-light-hover() {
+  @include background-image(linear-gradient(top,  $gray-200 0%, $gray-500 100%));
 }
+
+@mixin jl-header-gradient() {
+  @include background-image(linear-gradient(top,  $white 0, $gray-100 100%));
+}
+
+@mixin jl-button-gradient() {
+  @include jl-theme-gradient;
+  &:hover {
+    @include jl-theme-gradient-hover;
+  }
+}
+
+@mixin jl-button-gradient-light() {
+  @include jl-theme-gradient-light;
+  &:hover {
+    @include jl-theme-gradient-light-hover;
+  }
+}
+

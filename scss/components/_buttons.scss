@@ -1,8 +1,10 @@
 .btn-primary {
   @include jl-button-gradient;
 }
-.btn-group {
-  .jc-secondary-navigation & {
-    margin: 0 .15rem;
+
+.btn-secondary {
+  @include jl-button-gradient-light;
+  .input-group-btn & {
+    background-image: none;
   }
 }
