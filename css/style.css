@@ -6595,7 +6595,13 @@ h2,
 
 .pr-1,
 .px-1,
-.faq_body {
+.faq_body,
+.wt-block-gedcom-block-block .col,
+.wt-block-gedcom-block-block .media-display-image,
+.wt-block-gedcom-block-block .media-display-title,
+.wt-block-user-welcome-block .col,
+.wt-block-user-welcome-block .media-display-image,
+.wt-block-user-welcome-block .media-display-title {
   padding-right: 0.25rem !important;
 }
 
@@ -6609,7 +6615,13 @@ h2,
 
 .pl-1,
 .px-1,
-.faq_body {
+.faq_body,
+.wt-block-gedcom-block-block .col,
+.wt-block-gedcom-block-block .media-display-image,
+.wt-block-gedcom-block-block .media-display-title,
+.wt-block-user-welcome-block .col,
+.wt-block-user-welcome-block .media-display-image,
+.wt-block-user-welcome-block .media-display-title {
   padding-left: 0.25rem !important;
 }
 
@@ -9638,6 +9650,11 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .jc-global-index .wt-side-blocks .card-block {
   font-size: 0.75rem;
+}
+.wt-block-gedcom-block-block .row,
+.wt-block-user-welcome-block .row {
+  justify-content: stretch;
+  text-align: center;
 }
 
 .jc-global-individual #individual-names .card-header {
