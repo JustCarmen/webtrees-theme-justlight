@@ -1,6 +1,6 @@
 // Edit interface page
-.jc-global-edit_interface:not(.modal-open) {
-  form {
+.jc-global-edit_interface {
+  form[name="editform"] {
     background: theme-color(light);
     border: 1px solid $input-border-color;
     @extend .px-5;
@@ -11,12 +11,6 @@
       @extend .pt-3;
       @extend .pb-2;
       border-top: 1px solid $input-border-color;
-    }
-
-    .modal-open & {
-      .row {
-        @extend .px-0;
-      }
     }
   }
 }

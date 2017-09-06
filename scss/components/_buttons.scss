@@ -8,3 +8,7 @@
     background-image: none;
   }
 }
+
+.btn-text {
+  @extend .btn-secondary;
+}
