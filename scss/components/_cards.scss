@@ -6,7 +6,9 @@
 }
 
 .card-header {
-  @include jl-theme-gradient; 
+  .jc-global-individual & {
+    @include jl-theme-gradient;
+  }
 
   .jc-global-index & {
     background: transparent;
@@ -20,7 +22,9 @@
 }
 
 .card-block {
-  background: theme-color(light);
+  .jc-global-individual & {
+    background: theme-color(light);
+  }
   .jc-global-index & {
     background: transparent;
     border: none;

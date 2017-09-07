@@ -3817,7 +3817,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #337ab7;
+  background-color: #f8f9fa;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
@@ -3826,7 +3826,7 @@ tbody.collapse.show {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: #337ab7;
+  background-color: #f8f9fa;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
@@ -8218,23 +8218,6 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important;
 }
 
-.jc-global-individual #individual-names, .jc-global-individual .tab-content, .jc-global-individual #sidebar, .jc-global-family .facts_table {
-  font-size: 0.875rem;
-}
-.jc-global-individual #individual-names a, .jc-global-individual .tab-content a, .jc-global-individual #sidebar a, .jc-global-family .facts_table a {
-  color: #212529;
-}
-.jc-global-individual #individual-names a:hover, .jc-global-individual .tab-content a:hover, .jc-global-individual #sidebar a:hover, .jc-global-family .facts_table a:hover {
-  color: black;
-}
-.jc-global-individual #individual-names .quickfacts a, .jc-global-individual .tab-content .quickfacts a, .jc-global-individual #sidebar .quickfacts a, .jc-global-family .facts_table .quickfacts a {
-  font-size: 0.75rem;
-  color: #337ab7;
-}
-.jc-global-individual #individual-names .quickfacts a:hover, .jc-global-individual .tab-content .quickfacts a:hover, .jc-global-individual #sidebar .quickfacts a:hover, .jc-global-family .facts_table .quickfacts a:hover {
-  color: #22527b;
-}
-
 /*! THEME BASE */
 ul {
   margin: 0;
@@ -8986,6 +8969,25 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   flex-flow: row-reverse;
 }
 
+.jc-global-individual .card-header {
+  font-size: 0.875rem;
+}
+.jc-global-individual #individual-names .card-block {
+  font-size: 0.875rem;
+}
+.jc-global-individual #individual-names .card-block a {
+  color: #212529;
+}
+.jc-global-individual #individual-names .card-block a:hover {
+  color: black;
+}
+.jc-global-individual #individual-names .card-block .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual #individual-names .card-block .quickfacts a:hover {
+  color: #22527b;
+}
 .jc-global-individual #name-header-0,
 .jc-global-individual #name-content-0 {
   font-size: 1rem;
@@ -8999,12 +9001,65 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .jc-global-individual #individual-tabs {
   margin-top: 3rem;
 }
-.jc-global-individual .tab-content .facts_table > tbody > tr:first-child > td[colspan="2"] {
+.jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #notes_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #lightbox_content .facts_table:first-of-type > tbody > tr:first-child td {
   background-color: #212529;
   color: #fff;
 }
+.jc-global-individual .tab-content {
+  font-size: 0.875rem;
+}
+.jc-global-individual .tab-content a {
+  color: #212529;
+}
+.jc-global-individual .tab-content a:hover {
+  color: black;
+}
+.jc-global-individual .tab-content .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual .tab-content .quickfacts a:hover {
+  color: #22527b;
+}
+.jc-global-individual #sidebar .card-block {
+  font-size: 0.875rem;
+}
+.jc-global-individual #sidebar .card-block a {
+  color: #212529;
+}
+.jc-global-individual #sidebar .card-block a:hover {
+  color: black;
+}
+.jc-global-individual #sidebar .card-block .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual #sidebar .card-block .quickfacts a:hover {
+  color: #22527b;
+}
 #sb_family_nav_content .nav_content {
   border-collapse: separate;
+}
+
+.jc-global-family .facts_table {
+  font-size: 0.875rem;
+}
+.jc-global-family .facts_table a {
+  color: #212529;
+}
+.jc-global-family .facts_table a:hover {
+  color: black;
+}
+.jc-global-family .facts_table .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-family .facts_table .quickfacts a:hover {
+  color: #22527b;
 }
 
 #pedigree_canvas {
@@ -9613,7 +9668,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   border: none;
 }
 
-.card-header {
+.jc-global-individual .card-header {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzN2FiNyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjM1MzdjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #337ab7), color-stop(50%, #23537c));
@@ -9621,7 +9676,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   background-image: -webkit-linear-gradient(top, #337ab7 0%, #23537c 50%);
   background-image: linear-gradient(to bottom, #337ab7 0%, #23537c 50%);
 }
-.card-header, .card-header a, .card-header .fa {
+.jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa {
   color: #fff;
 }
 .jc-global-index .card-header {
@@ -9633,7 +9688,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   color: #212529;
 }
 
-.card-block {
+.jc-global-individual .card-block {
   background: #f8f9fa;
 }
 .jc-global-index .card-block {
@@ -9657,35 +9712,17 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   text-align: center;
 }
 
-.jc-global-individual #individual-names .card-header {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjlmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NlZDRkYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f8f9fa), color-stop(100%, #ced4da));
-  background-image: -moz-linear-gradient(top, #f8f9fa 0%, #ced4da 100%);
-  background-image: -webkit-linear-gradient(top, #f8f9fa 0%, #ced4da 100%);
-  background-image: linear-gradient(to bottom, #f8f9fa 0%, #ced4da 100%);
-}
-.jc-global-individual #individual-names .card-header, .jc-global-individual #individual-names .card-header a, .jc-global-individual #individual-names .card-header .fa {
-  color: #212529;
-}
-.jc-global-individual #individual-names .card-header#name-header-0 {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzN2FiNyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjM1MzdjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #337ab7), color-stop(50%, #23537c));
-  background-image: -moz-linear-gradient(top, #337ab7 0%, #23537c 50%);
-  background-image: -webkit-linear-gradient(top, #337ab7 0%, #23537c 50%);
-  background-image: linear-gradient(to bottom, #337ab7 0%, #23537c 50%);
-}
-.jc-global-individual #individual-names .card-header#name-header-0, .jc-global-individual #individual-names .card-header#name-header-0 a, .jc-global-individual #individual-names .card-header#name-header-0 .fa {
-  color: #fff;
-}
 .jc-global-individual #individual-names .card-header#name-header-add {
   background: #f8f9fa;
 }
-.jc-global-individual #sidebar .card-header, .jc-global-individual #sidebar .card-header a, .jc-global-individual #sidebar .card-header .fa {
-  color: #fff;
+.jc-global-individual #individual-names .card-header#name-header-add, .jc-global-individual #individual-names .card-header#name-header-add a, .jc-global-individual #individual-names .card-header#name-header-add .fa {
+  color: #212529;
 }
-.jc-global-individual .tab-content .facts_table > tbody > tr:first-child > td[colspan="2"] {
+.jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #notes_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #lightbox_content .facts_table:first-of-type > tbody > tr:first-child td {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjlmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NlZDRkYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f8f9fa), color-stop(100%, #ced4da));
@@ -9693,7 +9730,19 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   background-image: -webkit-linear-gradient(top, #f8f9fa 0%, #ced4da 100%);
   background-image: linear-gradient(to bottom, #f8f9fa 0%, #ced4da 100%);
 }
-.jc-global-individual .tab-content .facts_table > tbody > tr:first-child > td[colspan="2"], .jc-global-individual .tab-content .facts_table > tbody > tr:first-child > td[colspan="2"] a, .jc-global-individual .tab-content .facts_table > tbody > tr:first-child > td[colspan="2"] .fa {
+.jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td, .jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td a, .jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td .fa,
+.jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td a,
+.jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td .fa,
+.jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td a,
+.jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td .fa,
+.jc-global-individual .tab-content #notes_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #notes_content .facts_table:first-of-type > tbody > tr:first-child td a,
+.jc-global-individual .tab-content #notes_content .facts_table:first-of-type > tbody > tr:first-child td .fa,
+.jc-global-individual .tab-content #lightbox_content .facts_table:first-of-type > tbody > tr:first-child td,
+.jc-global-individual .tab-content #lightbox_content .facts_table:first-of-type > tbody > tr:first-child td a,
+.jc-global-individual .tab-content #lightbox_content .facts_table:first-of-type > tbody > tr:first-child td .fa {
   color: #212529;
 }
 

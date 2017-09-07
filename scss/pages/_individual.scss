@@ -4,27 +4,18 @@
 
   #individual-names {
     .card-header {
-      @include jl-theme-gradient-light;
-      &#name-header-0 {
-        @include jl-theme-gradient;
-      }
       &#name-header-add {
         background: theme-color(light);
-      }
-    }
-  }
-
-  #sidebar {
-    .card-header {
-      &, a, .fa {
-        color: $white;
+        &, a, .fa {
+          color: $body-color;
+        }
       }
     }
   }
 
   // tab content of the main section
   .tab-content {
-    .facts_table > tbody > tr:first-child > td[colspan="2"] {
+    @include facts-table-header {
       @include jl-theme-gradient-light;
     }
   }
