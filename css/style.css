@@ -9076,9 +9076,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 #pedigree_canvas {
   color: #000;
 }
-.jc-global-pedigree .shadow .person_box_template, .jc-global-pedigree .shadow #lifespan-people .popup, #lifespan-people .jc-global-pedigree .shadow .popup {
-  box-shadow: 5px 7px 2px 0 #000;
-}
 
 #lifespan-scale {
   background-image: url(charts/lifespan-chunk.png);
