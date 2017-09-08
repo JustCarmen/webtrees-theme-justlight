@@ -6,6 +6,10 @@
 }
 
 .card-header {
+  &, a, .fa {
+      color: $body-color;
+    }
+    
   .jc-global-individual & {
     @include jl-theme-gradient;
   }
@@ -14,10 +18,7 @@
     background: transparent;
     border: none;
     @extend .py-2;
-    font-size: $font-size-lg;
-    &, a, .fa {
-      color: $body-color;
-    }
+    font-size: $font-size-lg;    
   }
 }
 
