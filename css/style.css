@@ -6583,7 +6583,7 @@ h2,
   padding: 0.25rem !important;
 }
 
-.pt-1,
+.pt-1, .jc-global-individual .card-header,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-block,
@@ -8667,12 +8667,15 @@ a.fa:hover {
 }
 
 .card-header {
-  padding-top: .25rem;
+  padding-top: .5rem;
   padding-bottom: .5rem;
   font-weight: 500;
 }
 .card-header#name-header-add {
   background: transparent;
+}
+.card-header .card-title {
+  margin-bottom: 0;
 }
 
 .table, .facts_table,

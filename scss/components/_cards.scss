@@ -12,6 +12,7 @@
     
   .jc-global-individual & {
     @include jl-theme-gradient;
+    @extend .pt-1;
   }
 
   .jc-global-index & {
