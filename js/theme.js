@@ -103,7 +103,7 @@ function strip_tags(str) {
 /* Put here scripts to override webtrees behavior which doesn't fit in any of the other categories */
 
 // Prevent jumping to the top of the page when clicking on a javascript link
-if ($('a[onclick]').attr('href') == '#') {
+if ($('a[onclick]').attr('href') === '#') {
   $('a[onclick]').attr('href', 'javascript:void(0)');
 }
 
