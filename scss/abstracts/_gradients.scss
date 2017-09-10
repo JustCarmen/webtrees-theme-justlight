@@ -30,6 +30,10 @@
 
 @mixin jl-header-gradient() {
   @include background-image(linear-gradient(top,  $white 0, $gray-100 100%));
+  border-top: 5px solid theme-color(primary);
+  border-bottom: $border-width solid gray(200);
+  // shadow is off by default in this theme. We only use it at two places. The header gradient and the dropdown menus.
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
 
 @mixin jl-button-gradient() {

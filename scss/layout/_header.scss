@@ -1,7 +1,4 @@
 .wt-header-wrapper {
-  border-top: 5px solid theme-color(primary);
-  border-bottom: $border-width solid gray(200);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
   @include jl-header-gradient;
 }
 
