@@ -6437,7 +6437,7 @@ h2,
 .pt-0,
 .py-0,
 .faq_title,
-.jc-global-index .card-block {
+.jc-global-index .card-body {
   padding-top: 0 !important;
 }
 
@@ -6449,7 +6449,7 @@ h2,
 .pb-0,
 .py-0,
 .faq_title,
-.jc-global-index .card-block {
+.jc-global-index .card-body {
   padding-bottom: 0 !important;
 }
 
@@ -6502,7 +6502,7 @@ h2,
   padding-left: 0.25rem !important;
 }
 
-.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-block {
+.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
   padding: 0.5rem !important;
 }
 
@@ -8809,7 +8809,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   right: .25rem;
 }
 
-.jc-global-index .wt-side-blocks .card-block {
+.jc-global-index .wt-side-blocks .card-body {
   font-size: 0.875rem;
 }
 .wt-block-gedcom-block-block i,
@@ -9562,7 +9562,8 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .jc-global-individual .card-block {
   background: #f8f9fa;
 }
-.jc-global-index .card-block {
+
+.jc-global-index .card-body {
   background: transparent;
   border: none;
 }
@@ -9574,7 +9575,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   border-bottom: 1px solid #337ab7;
   border-radius: 0;
 }
-.jc-global-index .wt-side-blocks .card-block {
+.jc-global-index .wt-side-blocks .card-body {
   font-size: 0.75rem;
 }
 .wt-block-gedcom-block-block .row,
