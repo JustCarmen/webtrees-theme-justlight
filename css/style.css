@@ -8684,12 +8684,12 @@ td.optionbox, td.facts_value {
   text-decoration: underline;
 }
 
-.wt-block-content-gedcom-stats-block .stat-row,
-.wt-block-content-gedcom-stats-block .stat-cell {
+.wt-block-content-gedcom-stats .stat-row,
+.wt-block-content-gedcom-stats .stat-cell {
   border: none;
 }
 
-.wt-block-content-gedcom-stats-block {
+.wt-block-content-gedcom-stats {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8752,11 +8752,11 @@ td.optionbox, td.facts_value {
 [dir=rtl] .stat-table2 .stats_value {
   text-align: left;
 }
-.wt-block-content-gedcom-stats-block .stat-cell,
-.wt-block-content-gedcom-stats-block .common_surnames {
+.wt-block-content-gedcom-stats .stat-cell,
+.wt-block-content-gedcom-stats .common_surnames {
   font-size: 0.875rem;
 }
-.wt-block-content-gedcom-stats-block .clearfloat {
+.wt-block-content-gedcom-stats .clearfloat {
   width: 100%;
 }
 
