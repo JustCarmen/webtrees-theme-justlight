@@ -288,7 +288,7 @@ jQuery("body").one('click', 'a.gallery', function() {
   });
 });
 
-// Bootstrap popovers and/or tooltips
+// Bootstrap popovers
 jQuery(".wt-global").waitUntilExists('.icon-pedigree', function() {
   jQuery('.icon-pedigree').each(function() {
     var title = jQuery(this).parents(".person_box_template").find(".chart_textbox .NAME").parents("a").outerHtml();
