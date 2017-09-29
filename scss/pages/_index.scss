@@ -31,19 +31,5 @@
       @extend .p-2;
     }
   }
-
-  @at-root {
-    .wt-block-gedcom-block-block,
-    .wt-block-user-welcome-block {
-      .row {
-        @extend .mx-0;
-        justify-content: stretch;
-        text-align: center;
-      }
-      .col {
-        @extend .px-1;
-      }
-    }
-  }
 }
 

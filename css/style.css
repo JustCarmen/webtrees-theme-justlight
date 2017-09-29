@@ -6280,9 +6280,7 @@ h2,
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-block,
 .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-block,
 .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.wt-block-gedcom-block-block .row,
-.wt-block-user-welcome-block .row {
+.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
   margin-right: 0 !important;
 }
 
@@ -6300,9 +6298,7 @@ h2,
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-block,
 .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-block,
 .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.wt-block-gedcom-block-block .row,
-.wt-block-user-welcome-block .row {
+.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
   margin-left: 0 !important;
 }
 
@@ -6472,13 +6468,7 @@ h2,
 
 .pr-1,
 .px-1,
-.faq_body,
-.wt-block-gedcom-block-block .col,
-.wt-block-gedcom-block-block .media-display-image,
-.wt-block-gedcom-block-block .media-display-title,
-.wt-block-user-welcome-block .col,
-.wt-block-user-welcome-block .media-display-image,
-.wt-block-user-welcome-block .media-display-title {
+.faq_body {
   padding-right: 0.25rem !important;
 }
 
@@ -6492,13 +6482,7 @@ h2,
 
 .pl-1,
 .px-1,
-.faq_body,
-.wt-block-gedcom-block-block .col,
-.wt-block-gedcom-block-block .media-display-image,
-.wt-block-gedcom-block-block .media-display-title,
-.wt-block-user-welcome-block .col,
-.wt-block-user-welcome-block .media-display-image,
-.wt-block-user-welcome-block .media-display-title {
+.faq_body {
   padding-left: 0.25rem !important;
 }
 
@@ -8814,8 +8798,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .wt-block-gedcom-block-block i,
 .wt-block-user-welcome-block i {
-  font-size: 2rem;
-  width: 100%;
+  font-size: 2.25rem;
 }
 .jc-global-index .wt-block-content-charts-block {
   display: flex;
@@ -9577,11 +9560,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .jc-global-index .wt-side-blocks .card-body {
   font-size: 0.75rem;
-}
-.wt-block-gedcom-block-block .row,
-.wt-block-user-welcome-block .row {
-  justify-content: stretch;
-  text-align: center;
 }
 
 .jc-global-individual #individual-names .card-header#name-header-add {
