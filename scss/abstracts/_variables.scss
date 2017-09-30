@@ -20,7 +20,7 @@ $theme-colors: (
   secondary: $gray-200
 );
 
-$primary-color: map-get($theme-colors, primary);
+$primary-color: theme-color("primary");
 
 // overwrite font-awesome icons used by webtrees
 $webtrees-fa-icons: (

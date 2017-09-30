@@ -12,9 +12,9 @@
     }
 
     &.text-muted {
-      background: darken(gray(200), 5%);
+      background: darken($gray-200, 5%);
       &:hover {
-        background: darken(gray(200), 15%);
+        background: darken($gray-200, 15%);
         color: darken($text-muted, 5%);
       }
     }
