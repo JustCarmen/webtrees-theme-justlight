@@ -4,6 +4,8 @@ JustLight Theme for webtrees
 A light clean theme using the Bootstrap framework.
 This theme requires [webtrees 1.7.x](https://github.com/fisharebest/webtrees). Download the latest stable release of this theme [here](https://github.com/JustCarmen/justlight/releases/latest).
 
+*Note: the current development version (master branch) is compatible with webtrees 2.0.0-dev only. It does not work with older versions of webtrees.*
+
 Description
 -----------
 This is a new modern theme in clean white and blue. The layout is adjusted as much as possible for use on touch devices like tablets and mobile phones.
