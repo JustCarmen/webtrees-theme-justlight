@@ -6138,7 +6138,7 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .btn-link, .stat-table1 .stat-cell, .jc-global-index-gedcom .wt-main-container {
+.p-0, .stat-table1 .stat-cell, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -6166,7 +6166,7 @@ h2,
   padding-left: 0 !important;
 }
 
-.p-1, .jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
+.p-1, .btn-link, .jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
   padding: 0.25rem !important;
 }
 
@@ -8238,10 +8238,6 @@ a.fa:hover {
 .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9 {
   font-size: 1rem;
   padding: 0 .25rem;
-}
-
-.wt-header-search .input-group-btn, .jc-change-root .input-group-btn {
-  background-color: #337ab7;
 }
 
 .card {
