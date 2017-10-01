@@ -3377,7 +3377,7 @@ tbody.collapse.show {
   border-radius: 0.25rem;
 }
 
-.card-body {
+.card-body, .card-block {
   flex: 1 1 auto;
   padding: 1.25rem;
 }
@@ -6145,7 +6145,8 @@ h2,
 .pt-0,
 .py-0,
 .faq_title,
-.jc-global-index .card-body {
+.jc-global-index .card-body,
+.jc-global-index .card-block {
   padding-top: 0 !important;
 }
 
@@ -6157,7 +6158,8 @@ h2,
 .pb-0, .jc-global-index-user .wt-main-container,
 .py-0,
 .faq_title,
-.jc-global-index .card-body {
+.jc-global-index .card-body,
+.jc-global-index .card-block {
   padding-bottom: 0 !important;
 }
 
@@ -6198,7 +6200,7 @@ h2,
   padding-left: 0.25rem !important;
 }
 
-.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
+.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body, .jc-global-index .wt-side-blocks .card-block {
   padding: 0.5rem !important;
 }
 
@@ -8256,6 +8258,49 @@ a.fa:hover {
   margin-bottom: 0;
 }
 
+.jc-global-index .wt-side-blocks .card-body, .jc-global-index .wt-side-blocks .card-block {
+  font-size: 0.875rem;
+}
+
+.jc-global-individual .card-header {
+  font-size: 0.875rem;
+}
+.jc-global-individual #individual-names .card-block {
+  font-size: 0.875rem;
+}
+.jc-global-individual #individual-names .card-block a {
+  color: #212529;
+}
+.jc-global-individual #individual-names .card-block a:hover {
+  color: black;
+}
+.jc-global-individual #individual-names .card-block .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual #individual-names .card-block .quickfacts a:hover {
+  color: #22527b;
+}
+.jc-global-individual #name-header-add .card-title b {
+  font-weight: 500;
+}
+.jc-global-individual #sidebar .card-block {
+  font-size: 0.875rem;
+}
+.jc-global-individual #sidebar .card-block a {
+  color: #212529;
+}
+.jc-global-individual #sidebar .card-block a:hover {
+  color: black;
+}
+.jc-global-individual #sidebar .card-block .quickfacts a {
+  font-size: 0.75rem;
+  color: #337ab7;
+}
+.jc-global-individual #sidebar .card-block .quickfacts a:hover {
+  color: #22527b;
+}
+
 .table, .facts_table,
 .markdown table, .faq {
   border-spacing: 0;
@@ -8500,9 +8545,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   right: .25rem;
 }
 
-.jc-global-index .wt-side-blocks .card-body {
-  font-size: 0.875rem;
-}
 .wt-block-gedcom-block-block i,
 .wt-block-user-welcome-block i {
   font-size: 2.25rem;
@@ -8512,34 +8554,12 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   flex-flow: row-reverse;
 }
 
-.jc-global-individual .card-header {
-  font-size: 0.875rem;
-}
-.jc-global-individual #individual-names .card-block {
-  font-size: 0.875rem;
-}
-.jc-global-individual #individual-names .card-block a {
-  color: #212529;
-}
-.jc-global-individual #individual-names .card-block a:hover {
-  color: black;
-}
-.jc-global-individual #individual-names .card-block .quickfacts a {
-  font-size: 0.75rem;
-  color: #337ab7;
-}
-.jc-global-individual #individual-names .card-block .quickfacts a:hover {
-  color: #22527b;
-}
 .jc-global-individual #name-header-0,
 .jc-global-individual #name-content-0 {
   font-size: 1rem;
 }
 .jc-global-individual #name-header-add {
   font-weight: normal;
-}
-.jc-global-individual #name-header-add .card-title b {
-  font-weight: 500;
 }
 .jc-global-individual #individual-tabs {
   margin-top: 3rem;
@@ -8566,22 +8586,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   color: #337ab7;
 }
 .jc-global-individual .tab-content .quickfacts a:hover {
-  color: #22527b;
-}
-.jc-global-individual #sidebar .card-block {
-  font-size: 0.875rem;
-}
-.jc-global-individual #sidebar .card-block a {
-  color: #212529;
-}
-.jc-global-individual #sidebar .card-block a:hover {
-  color: black;
-}
-.jc-global-individual #sidebar .card-block .quickfacts a {
-  font-size: 0.75rem;
-  color: #337ab7;
-}
-.jc-global-individual #sidebar .card-block .quickfacts a:hover {
   color: #22527b;
 }
 #sb_family_nav_content .nav_content {
@@ -9267,6 +9271,12 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa {
   color: #fff;
 }
+.jc-global-individual .card-header#name-header-add {
+  background: #f8f9fa;
+}
+.jc-global-individual .card-header#name-header-add, .jc-global-individual .card-header#name-header-add a, .jc-global-individual .card-header#name-header-add .fa {
+  color: #212529;
+}
 .jc-global-index .card-header {
   background: transparent;
   border: none;
@@ -9277,9 +9287,17 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   background: #f8f9fa;
 }
 
-.jc-global-index .card-body {
+.jc-global-index .card-body, .jc-global-index .card-block {
   background: transparent;
   border: none;
+}
+
+.jc-global-index .wt-side-blocks .card {
+  border-bottom: 1px solid #337ab7;
+  border-radius: 0;
+}
+.jc-global-index .wt-side-blocks .card-body, .jc-global-index .wt-side-blocks .card-block {
+  font-size: 0.75rem;
 }
 
 .jc-global-index-user h2 {
@@ -9288,20 +9306,7 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .jc-global-index .wt-side-blocks {
   border-left: 1px solid #e9ecef;
 }
-.jc-global-index .wt-side-blocks .card {
-  border-bottom: 1px solid #337ab7;
-  border-radius: 0;
-}
-.jc-global-index .wt-side-blocks .card-body {
-  font-size: 0.75rem;
-}
 
-.jc-global-individual #individual-names .card-header#name-header-add {
-  background: #f8f9fa;
-}
-.jc-global-individual #individual-names .card-header#name-header-add, .jc-global-individual #individual-names .card-header#name-header-add a, .jc-global-individual #individual-names .card-header#name-header-add .fa {
-  color: #212529;
-}
 .jc-global-individual .tab-content #personal_facts_content .facts_table:first-of-type > tbody > tr:first-child td,
 .jc-global-individual .tab-content #relatives_content .facts_table:first-of-type > tbody > tr:first-child td,
 .jc-global-individual .tab-content #sources_tab_content .facts_table:first-of-type > tbody > tr:first-child td,

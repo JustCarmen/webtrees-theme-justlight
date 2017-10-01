@@ -33,18 +33,6 @@
     @extend .col-sm-3;
     @extend .py-3;
     border-left: $border-width solid $gray-200;
-    .card {
-      border-bottom: $border-width solid theme-color(primary);
-      border-radius: 0;
-      @extend .m-0;
-    }
-    .card-header {
-      @extend .p-2;
-    }
-    .card-body {
-      font-size: $font-size-xs;
-      @extend .p-2;
-    }
   }
 }
 

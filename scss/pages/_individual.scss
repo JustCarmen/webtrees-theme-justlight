@@ -1,18 +1,6 @@
 // Put specific code for the Individual page here
 
 .jc-global-individual {
-
-  #individual-names {
-    .card-header {
-      &#name-header-add {
-        background: theme-color(light);
-        &, a, .fa {
-          color: $body-color;
-        }
-      }
-    }
-  }
-
   // tab content of the main section
   .tab-content {
     @include jc-facts-table-header {
