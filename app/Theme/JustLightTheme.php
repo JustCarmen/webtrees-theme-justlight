@@ -134,7 +134,7 @@ class JustLightTheme extends JustBaseTheme {
         $class = trim('nav-item dropdown ' . $menu->getClass());
 
         $html .= '<div class="' . $menu->getClass() . ' btn-group">' .
-            '<button class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
+            '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
             '<span class="menu-label">' . $menu->getLabel() . '</span>' .
             '<i class="caret"></i>' .
             '</button>' .
