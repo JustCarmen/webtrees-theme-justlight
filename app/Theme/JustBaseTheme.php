@@ -57,6 +57,18 @@ class JustBaseTheme extends MinimalTheme {
     }
   }
 
+  /**
+	 * {@inheritdoc}
+	 *
+	 * We use our own faviocns in our themes
+	 */
+	protected function favicon() {
+		return
+			'<link rel="icon" href="' . static::ASSET_DIR . 'favicon.png" type="image/png">' .
+			'<link rel="icon" type="image/png" href="' . static::ASSET_DIR . 'favicon192.png" sizes="192x192">' .
+			'<link rel="apple-touch-icon" sizes="180x180" href="' . static::ASSET_DIR . 'favicon180.png">';
+	}
+
   /** {@inheritdoc} */
   public function footerContainer() {
     return
