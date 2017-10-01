@@ -3,11 +3,26 @@
 // and jc-global-index-user for the mypage
 
 .jc-global-index {
-  .wt-main-wrapper {
-    @extend .mt-0;
+
+  &-gedcom {
+    .wt-main-wrapper {
+      @extend .mt-0;
+    }
+    .wt-main-container {
+      @extend .p-0;
+    }
   }
-  .wt-main-container {
-    @extend .p-0;
+
+  &-user {
+    .wt-main-container {
+      @extend .pb-0;
+    }
+
+    h2 {
+      @extend .mb-0;
+      @extend .pb-3;
+      border-bottom: $border-width solid $gray-200;
+    }
   }
 
   .wt-main-blocks {

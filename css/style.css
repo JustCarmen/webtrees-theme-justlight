@@ -434,19 +434,19 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h3, .h3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 h4, .h4, .jc-global-search_advanced #div-holder .form-group.my-3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 h5, .h5 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 h6, .h6 {
@@ -5978,7 +5978,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 0 !important;
 }
 
-.mt-0, h2, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index .wt-main-wrapper,
+.mt-0, h2, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
 .my-0 {
   margin-top: 0 !important;
 }
@@ -5996,7 +5996,7 @@ h2,
   margin-right: 0 !important;
 }
 
-.mb-0, dl, .wt-page-options .form-group, #lightbox_content .facts_table,
+.mb-0, dl, .wt-page-options .form-group, #lightbox_content .facts_table, .jc-global-index-user h2,
 .my-0 {
   margin-bottom: 0 !important;
 }
@@ -6138,7 +6138,7 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .btn-link, .stat-table1 .stat-cell, .jc-global-index .wt-main-container {
+.p-0, .btn-link, .stat-table1 .stat-cell, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -6154,7 +6154,7 @@ h2,
   padding-right: 0 !important;
 }
 
-.pb-0,
+.pb-0, .jc-global-index-user .wt-main-container,
 .py-0,
 .faq_title,
 .jc-global-index .card-body {
@@ -6243,7 +6243,7 @@ h2,
   padding-right: 1rem !important;
 }
 
-.pb-3,
+.pb-3, .jc-global-index-user h2,
 .py-3,
 .jc-global-index .wt-main-blocks,
 .jc-global-index .wt-side-blocks,
@@ -9259,6 +9259,9 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   border: none;
 }
 
+.jc-global-index-user h2 {
+  border-bottom: 1px solid #e9ecef;
+}
 .jc-global-index .wt-side-blocks {
   border-left: 1px solid #e9ecef;
 }
