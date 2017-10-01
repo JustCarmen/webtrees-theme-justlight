@@ -61,6 +61,22 @@ class JustLightTheme extends JustBaseTheme {
     }
   }
 
+   /**
+    * {@inheritdoc}
+    *
+    * responsive layout - use small buttons on small screens
+   */
+	protected function formQuickSearchFields() {
+		return
+			'<div class="input-group">' .
+			'<label class="sr-only" for="quick-search">' . I18N::translate('Search') . '</label>' .
+			'<input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="' . I18N::translate('Search') . '">' .
+			'<span class="input-group-btn">' .
+			'<button type="submit" class="btn btn-primary wt-header-search-button"><i class="fa fa-search"></i></button>' .
+			'</span>' .
+			'</div>';
+	}
+
   /** {@inheritdoc} */
   protected function headerContent() {
     return
@@ -156,7 +172,7 @@ class JustLightTheme extends JustBaseTheme {
           $btn_class = 'btn-primary';
         }
 
-        $html .= '<div class="' . $class . '"><a class="btn btn-sm ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
+        $html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
       }
     }
 

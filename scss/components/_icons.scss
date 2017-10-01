@@ -7,3 +7,11 @@
 .fa-map-marker {
   color: color(red) !important;
 }
+
+// special icon
+.fa-search {
+  .wt-header-search & {
+    font-size: $font-size-sm;
+    vertical-align: top;
+  }
+}

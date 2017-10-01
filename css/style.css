@@ -7886,9 +7886,6 @@ a[href^="https:"] {
     display: block;
   }
 }
-.wt-header-search .fa-search {
-  font-size: 1.25rem;
-}
 
 .jc-primary-navigation {
   padding: 0 calc(50vw - 50%);
@@ -8205,6 +8202,10 @@ a.fa:hover {
   color: #337ab7 !important;
 }
 
+.wt-header-search .fa-search {
+  font-size: 1.25rem;
+}
+
 .jc-global-individual .wt-silhouette-F::before, .jc-global-individual .wt-silhouette-M::before, .jc-global-individual .wt-silhouette-U::before {
   font-size: 6rem;
 }
@@ -8242,6 +8243,14 @@ a.fa:hover {
   padding: 0 .25rem;
 }
 
+@media (max-width: 991px) {
+  .btn, input[type="submit"] {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+  }
+}
 .card {
   margin-bottom: .25rem;
 }
@@ -9083,10 +9092,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   background-image: -webkit-linear-gradient(top, #2b669a, #1b3f5f 100%);
   background-image: linear-gradient(to bottom, #2b669a, #1b3f5f 100%);
 }
-.wt-header-search .fa-search {
-  font-size: 0.875rem;
-  vertical-align: top;
-}
 
 .jc-primary-navigation {
   border: none;
@@ -9208,6 +9213,11 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .fa-trash-o,
 .fa-map-marker {
   color: #b80000 !important;
+}
+
+.wt-header-search .fa-search {
+  font-size: 0.875rem;
+  vertical-align: top;
 }
 
 .btn-primary, input[type="submit"] {
