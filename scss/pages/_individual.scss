@@ -15,7 +15,7 @@
 
   // tab content of the main section
   .tab-content {
-    @include facts-table-header {
+    @include jc-facts-table-header {
       @include jl-theme-gradient-light;
     }
   }
