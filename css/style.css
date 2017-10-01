@@ -7606,7 +7606,7 @@ h2,
   text-align: right !important;
 }
 
-.text-center, h2, div[id^="caldiv"] > table table td, .jc-global-listpage .wt-page-options {
+.text-center, h2, .wt-page-options-family-list, .wt-page-options-individual-list, div[id^="caldiv"] > table table td {
   text-align: center !important;
 }
 
