@@ -7831,6 +7831,10 @@ a[href^="https:"] {
   text-decoration: none;
 }
 
+.font9 {
+  font-size: 0.75rem;
+}
+
 .wt-global {
   color: #212529;
   background-color: #fff;
