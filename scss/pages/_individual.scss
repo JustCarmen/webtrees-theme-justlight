@@ -1,10 +1,23 @@
 // Put specific code for the Individual page here
 
 .jc-global-individual {
-  // tab content of the main section
-  .tab-content {
-    @include jc-facts-table-header {
+  // main section
+  .wt-facts-table {
+    &[role="presentation"] td,
+    td[colspan="2"] {
       @include jl-theme-gradient-light;
+    }
+  }
+
+  @at-root {
+    #relatives_content {
+      .wt-gender-M td {
+        background-color: $personbox-male-bg;
+      }
+
+      .wt-gender-F td {
+        background-color: $personbox-female-bg;
+      }
     }
   }
 }
