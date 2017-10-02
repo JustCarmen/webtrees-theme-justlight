@@ -31,9 +31,7 @@
 }
 
 
-// card-block is a non existing class in bootstrap, but it is used in webtrees
-// See: https://github.com/fisharebest/webtrees/issues/1379
-.card-block {
+.card-body {
   .jc-global-individual & {
     background: theme-color(light);
   }
