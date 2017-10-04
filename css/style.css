@@ -9148,7 +9148,8 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   color: #78818a;
 }
 
-.fa-plus {
+.fa-plus,
+.icon-selected {
   color: #28a745 !important;
 }
 
