@@ -6109,7 +6109,10 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content caption, .jc-global-index-gedcom .wt-main-container {
+.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content caption,
+.jc-global-individual #relatives_content .person_box_template,
+.jc-global-individual #relatives_content #lifespan-people .popup,
+#lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -6169,7 +6172,7 @@ h2,
   padding-left: 0.25rem !important;
 }
 
-.p-2, div[id^="caldiv"] table td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
+.p-2, div[id^="caldiv"] table td, .jc-global-individual #relatives_content td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
   padding: 0.5rem !important;
 }
 
@@ -8367,7 +8370,6 @@ tr.even {
 }
 .person_box_template .chart_textbox, #lifespan-people .popup .chart_textbox {
   font-size: 0.75rem;
-  font-weight: 200;
   line-height: 1.2;
 }
 .person_box_template .name1, #lifespan-people .popup .name1 {
