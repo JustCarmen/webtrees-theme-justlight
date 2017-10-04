@@ -6109,7 +6109,7 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .stat-table1 .stat-cell, .jc-global-index-gedcom .wt-main-container {
+.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content caption, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -7802,6 +7802,10 @@ a[href^="https:"] {
 
 .font9 {
   font-size: 80%;
+}
+
+.subheaders {
+  font-weight: bold;
 }
 
 .wt-global {
