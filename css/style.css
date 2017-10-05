@@ -5861,7 +5861,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   width: 10% !important;
 }
 
-.w-20, .width20, .wt-facts-table th, .jc-global-individual .wt-facts-table th {
+.w-20, .width20, #individual-tabs th {
   width: 20% !important;
 }
 
