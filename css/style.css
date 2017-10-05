@@ -1316,7 +1316,7 @@ pre code {
 .table-sm th, .markdown table th,
 .table-sm td,
 .markdown table td {
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 
 .table-bordered, .markdown table {
@@ -5949,7 +5949,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 0 !important;
 }
 
-.mt-0, h2, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
+.mt-0, h2, #sb_family_nav_content, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
 .my-0 {
   margin-top: 0 !important;
 }
@@ -6109,15 +6109,13 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content caption,
-.jc-global-individual #relatives_content .person_box_template,
-.jc-global-individual #relatives_content #lifespan-people .popup,
-#lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-index-gedcom .wt-main-container {
+.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, #sb_family_nav_content .nav-link, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
 .pt-0,
 .py-0,
+.wt-facts-table caption,
 .faq_title,
 .jc-global-index .card-body {
   padding-top: 0 !important;
@@ -6130,6 +6128,7 @@ h2,
 
 .pb-0, .jc-global-index-user .wt-main-container,
 .py-0,
+.wt-facts-table caption,
 .faq_title,
 .jc-global-index .card-body {
   padding-bottom: 0 !important;
@@ -8443,7 +8442,7 @@ tr.even {
   background-color: transparent;
 }
 .stat-table2 .stat-cell {
-  padding: 0.5rem;
+  padding: 0.3rem;
   vertical-align: text-top;
 }
 .stat-table2 .stat-cell.facts_value br, .stat-table2 .stat-cell.facts_value br::after {
