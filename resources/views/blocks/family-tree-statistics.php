@@ -1,0 +1,211 @@
+<?php use Fisharebest\Webtrees\I18N; ?>
+
+<?php if ($show_last_update): ?>
+	<p>
+		<?= I18N::translate('This family tree was last updated on %s.', strip_tags($stats->gedcomUpdated())) ?>
+	</p>
+<?php endif ?>
+
+<div class="jc-statistics-row mb-3">
+  <dl class="d-flex flex-wrap">
+    <dt class="sr-only">
+      <?= I18N::translate('Statistics') ?>
+    </dt>
+    <?php if ($stat_indi): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Individuals') ?>
+    </dt>
+    <dd class="mr-1">
+      <?= $stats->totalIndividuals() ?>
+    </dd>
+    <dt class="mr-1">
+      <?= I18N::translate('Males') ?>
+    </dt>
+    <dd class="mr-1">
+      <?= $stats->totalSexMales() ?>
+      (<?= $stats->totalSexMalesPercentage() ?>)
+    </dd>
+    <dt class="mr-1">
+      <?= I18N::translate('Females') ?>
+    </dt>
+    <dd class="mr-1">
+			<?= $stats->totalSexFemales() ?>
+			(<?= $stats->totalSexFemalesPercentage() ?>)
+    </dd>
+		<?php endif ?>
+		<?php if ($stat_surname): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Surnames') ?>
+    </dt>
+    <dd class="mr-1">
+      <?= $stats->totalSurnames() ?>
+    </dd>
+		<?php endif ?>
+		<?php if ($stat_fam): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Families') ?>
+    </dt>
+    <dd class="mr-1">
+      <?= $stats->totalFamilies() ?>
+    </dd>
+    <?php endif ?>
+		<?php if ($stat_sour): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Sources') ?>
+    </dt>
+    <dd class="mr-1">
+      <?= $stats->totalSources() ?>
+    </dd>
+    <?php endif ?>
+    <?php if ($stat_media): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Media objects') ?>
+    </dt>
+    <dd class="mr-1">
+			<?= $stats->totalMedia() ?>
+    </dd>
+    <?php endif ?>
+    <?php if ($stat_repo): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Repositories') ?>
+    </dt>
+    <dd class="mr-1">
+			<?= $stats->totalRepositories() ?>
+    </dd>
+    <?php endif ?>
+		<?php if ($stat_events): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Events') ?>
+    </dt>
+    <dd class="mr-1">
+			<?= $stats->totalEvents() ?>
+    </dd>
+    <?php endif ?>
+		<?php if ($stat_users): ?>
+    <dt class="mr-1">
+      <?= I18N::translate('Users') ?>
+    </dt>
+    <dd class="mr-1">
+			<?= $stats->totalUsers() ?>
+    </dd>
+		<?php endif ?>
+	</dl>
+</div>
+
+<div class="jc-statistics-table">
+  <table class="table wt-facts-table">
+    <caption class="sr-only">
+      <?= I18N::translate('Statistics') ?>
+    </caption>
+
+    <tbody>
+    <?php if ($stat_first_birth): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Earliest birth') ?>
+        </th>
+        <td>
+          <?= $stats->firstBirth() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_last_birth): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Latest birth') ?>
+        </th>
+        <td>
+          <?= $stats->lastBirth() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_first_death): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Earliest death') ?>
+        </th>
+        <td>
+          <?= $stats->firstDeath() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_last_death): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Latest death') ?>
+        </th>
+        <td>
+          <?= $stats->lastDeath() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_long_life): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Individual who lived the longest') ?>
+        </th>
+        <td>
+          <?= $stats->longestLife() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_avg_life): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Average age at death') ?>
+        </th>
+        <td>
+          <?= $stats->averageLifespan() ?>
+          <br>
+          <?= I18N::translate('Males') ?>:&nbsp;<?= $stats->averageLifespanMale() ?>
+          <br>
+          <?= I18N::translate('Females') ?>&nbsp;<?= $stats->averageLifespanFemale() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_most_chil): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Family with the most children') ?>
+        </th>
+        <td>
+          <?= I18N::plural('%s child', '%s children', $stats->largestFamilySize(), I18N::number($stats->largestFamilySize())) ?>
+          <br>
+          <?= $stats->largestFamily() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+
+    <?php if ($stat_avg_chil): ?>
+      <tr>
+        <th scope="row">
+          <?= I18N::translate('Average number of children per family') ?>
+        </th>
+        <td>
+          <?= $stats->averageChildren() ?>
+        </td>
+      </tr>
+    <?php endif ?>
+    </tbody>
+  </table>
+</div>
+
+<?php if (!empty($surnames)): ?>
+	<div class="clearfloat">
+		<p>
+			<strong>
+				<?= I18N::translate('Most common surnames') ?>
+			</strong>
+			<br>
+			<span class="common_surnames">
+				<?= $surnames ?>
+			</span>
+		</p>
+	</div>
+<?php endif ?>

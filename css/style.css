@@ -6109,7 +6109,7 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .stat-table1 .stat-cell, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, #sb_family_nav_content .nav-link, .jc-global-index-gedcom .wt-main-container {
+.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, #sb_family_nav_content .nav-link, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -8389,80 +8389,14 @@ tr.even {
   text-decoration: underline;
 }
 
-.wt-block-content-gedcom-stats .stat-row,
-.wt-block-content-gedcom-stats .stat-cell {
-  border: none;
-}
-
-.wt-block-content-gedcom-stats {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.stat-table1 {
-  margin-bottom: 1rem;
-  width: 100%;
-}
-.stat-table1 .stat-row {
-  display: inline;
-}
-.stat-table1 .stat-row br {
-  content: "";
-}
-.stat-table1 .stat-row br:after {
-  content: " - ";
-}
-.stat-table1 .stat-row:not(:last-child):after {
-  content: "\2022";
-  padding-left: .25rem;
-  padding-right: .25rem;
-}
-.stat-table1 .stat-cell {
-  vertical-align: initial;
-}
-.stat-table1 .facts_label {
-  padding-right: 0.25rem;
-}
-[dir=rtl] .stat-table1 .facts_label {
-  padding-left: 0.25rem;
-}
-.stat-table2 {
-  border: 1px solid #cbd3da;
-}
-.stat-table2 .stat-row {
-  border-bottom: 1px solid #cbd3da;
-}
-.stat-table2 .stat-row:last-child {
-  border-bottom: none;
-}
-.stat-table2 .stat-row:nth-child(odd) {
-  background-color: #e9ecef;
-}
-.stat-table2 .stat-row:nth-child(even) {
-  background-color: transparent;
-}
-.stat-table2 .stat-cell {
-  padding: 0.3rem;
-  vertical-align: text-top;
-}
-.stat-table2 .stat-cell.facts_value br, .stat-table2 .stat-cell.facts_value br::after {
-  content: ' ';
-}
-.stat-table2 .facts_label {
-  text-align: initial;
-}
-.stat-table2 .stats_value {
-  text-align: right;
-}
-[dir=rtl] .stat-table2 .stats_value {
-  text-align: left;
-}
-.wt-block-content-gedcom-stats .stat-cell,
-.wt-block-content-gedcom-stats .common_surnames {
+.jc-statistics-row {
   font-size: 0.875rem;
 }
-.wt-block-content-gedcom-stats .clearfloat {
-  width: 100%;
+.jc-statistics-row dt {
+  font-weight: 500;
+}
+.jc-statistics-row dd:not(:last-child)::after {
+  content: " \2022 ";
 }
 
 div[id^="caldiv"] table td {
