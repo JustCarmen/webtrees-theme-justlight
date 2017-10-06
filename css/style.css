@@ -5949,7 +5949,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 0 !important;
 }
 
-.mt-0, h2, #sb_family_nav_content, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
+.mt-0, h2, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
 .my-0 {
   margin-top: 0 !important;
 }
@@ -6109,7 +6109,7 @@ h2,
   margin-left: 3rem !important;
 }
 
-.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, #sb_family_nav_content .nav-link, .jc-global-index-gedcom .wt-main-container {
+.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-index-gedcom .wt-main-container {
   padding: 0 !important;
 }
 
@@ -8481,9 +8481,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 .jc-global-individual .wt-facts-table .person_box, .jc-global-individual .wt-facts-table .person_boxF, .jc-global-individual .wt-facts-table .person_boxU {
   background-color: transparent;
   border: none;
-}
-#sb_family_nav_content .nav_content {
-  border-collapse: separate;
 }
 
 #pedigree_canvas {
