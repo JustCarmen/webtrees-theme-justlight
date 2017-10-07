@@ -5963,7 +5963,11 @@ h2,
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
 .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body,
 .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
+.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily,
+.wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
   margin-right: 0 !important;
 }
 
@@ -5981,7 +5985,11 @@ h2,
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
 .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body,
 .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
+.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily,
+.wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
   margin-left: 0 !important;
 }
 
@@ -5991,9 +5999,13 @@ h2,
 
 .mt-1, .jc-global-search_advanced .wt-page-options-label.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-header:not(#name-header-0),
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-page-options-value.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
+.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-label.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-label.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-page-options-value.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
 .my-1 {
   margin-top: 0.25rem !important;
 }
@@ -6139,7 +6151,7 @@ h2,
   padding-left: 0 !important;
 }
 
-.p-1, .btn-link, .jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
+.p-1, .btn-link {
   padding: 0.25rem !important;
 }
 
@@ -6147,7 +6159,9 @@ h2,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-body,
-.jc-global-module-tree #tv_tools .icon-sfamily {
+.jc-global-module-tree #tv_tools .icon-sfamily,
+.wt-block-charts-block #tv_tools .icon-sfamily,
+#tree #tv_tools .icon-sfamily {
   padding-top: 0.25rem !important;
 }
 
@@ -6161,7 +6175,9 @@ h2,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-body,
-.jc-global-module-tree #tv_tools .icon-sfamily {
+.jc-global-module-tree #tv_tools .icon-sfamily,
+.wt-block-charts-block #tv_tools .icon-sfamily,
+#tree #tv_tools .icon-sfamily {
   padding-bottom: 0.25rem !important;
 }
 
@@ -6203,7 +6219,8 @@ h2,
   padding: 1rem !important;
 }
 
-.pt-3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label, .jc-global-search_advanced #div-holder .form-group.my-3, #lightbox_content, .jc-global-module-tree .tv_out, .jc-global-edit_interface form[name="editform"] h3,
+.pt-3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label, .jc-global-search_advanced #div-holder .form-group.my-3, #lightbox_content, .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
+#tree .tv_out, .jc-global-edit_interface form[name="editform"] h3,
 .py-3,
 .jc-global-index .wt-main-blocks,
 .jc-global-index .wt-side-blocks,
@@ -8521,7 +8538,9 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .jc-global-search_advanced .wt-page-options-label.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-header:not(#name-header-0),
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily {
+.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-label.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-label.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily {
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
 }
@@ -8533,7 +8552,9 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .jc-global-search_advanced .wt-page-options-value.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
 .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
+.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
+#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
 }
@@ -8599,51 +8620,73 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   font-size: 0.875rem;
 }
 
-.jc-global-module-tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU {
+.jc-global-module-tree #tv_tree .tv_box .tvM, .wt-block-charts-block #tv_tree .tv_box .tvM,
+#tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .wt-block-charts-block #tv_tree .tv_box .tvF,
+#tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU, .wt-block-charts-block #tv_tree .tv_box .tvU,
+#tree #tv_tree .tv_box .tvU {
   border-radius: 0;
 }
 
-.jc-global-module-tree .tv_out {
+.jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
+#tree .tv_out {
   background-color: #fff;
 }
-.jc-global-module-tree .tv_out #tree-title {
+.jc-global-module-tree .tv_out #tree-title, .wt-block-charts-block .tv_out #tree-title,
+#tree .tv_out #tree-title {
   color: #212529;
 }
-.jc-global-module-tree #tv_tools {
+.jc-global-module-tree #tv_tools, .wt-block-charts-block #tv_tools,
+#tree #tv_tools {
   top: 1rem;
   left: 1rem;
 }
-.jc-global-module-tree #tv_tools .tv_button {
+.jc-global-module-tree #tv_tools .tv_button, .wt-block-charts-block #tv_tools .tv_button,
+#tree #tv_tools .tv_button {
   width: auto;
   height: 2rem;
   padding: 3px;
 }
-.jc-global-module-tree #tv_tools .icon-sfamily {
+.jc-global-module-tree #tv_tools .icon-sfamily, .wt-block-charts-block #tv_tools .icon-sfamily,
+#tree #tv_tools .icon-sfamily {
   font-size: 1rem;
 }
-.jc-global-module-tree .tv_in td {
-  font-size: 0.875rem !important;
+.jc-global-module-tree .tv_in td, .wt-block-charts-block .tv_in td,
+#tree .tv_in td {
+  font-size: 0.75rem !important;
 }
-.jc-global-module-tree #tv_tree .tv_box {
-  border: thin outset #343a40;
-  border-radius: 0.25rem;
-  box-shadow: none;
+.jc-global-module-tree #tv_tree .tv_box, .wt-block-charts-block #tv_tree .tv_box,
+#tree #tv_tree .tv_box {
+  border: thin outset #94c7ef;
+  box-shadow: 2px 2px 5px #868e96;
+  overflow: hidden;
 }
-.jc-global-module-tree #tv_tree .tv_box .tvM {
+.jc-global-module-tree #tv_tree .tv_box .tvM, .wt-block-charts-block #tv_tree .tv_box .tvM,
+#tree #tv_tree .tv_box .tvM {
   background-color: #d7eaf9 !important;
 }
-.jc-global-module-tree #tv_tree .tv_box .tvF {
+.jc-global-module-tree #tv_tree .tv_box .tvF, .wt-block-charts-block #tv_tree .tv_box .tvF,
+#tree #tv_tree .tv_box .tvF {
   background-color: #fff0f5 !important;
 }
-.jc-global-module-tree #tv_tree .tv_box .tvU {
+.jc-global-module-tree #tv_tree .tv_box .tvU, .wt-block-charts-block #tv_tree .tv_box .tvU,
+#tree #tv_tree .tv_box .tvU {
   background-color: #fff !important;
 }
-.jc-global-module-tree #tv_tree .tv_box .dashed {
+.jc-global-module-tree #tv_tree .tv_box .dashed, .wt-block-charts-block #tv_tree .tv_box .dashed,
+#tree #tv_tree .tv_box .dashed {
   border-color: #343a40 !important;
 }
-.jc-global-module-tree #tv_tree div.tv_hline,
-.jc-global-module-tree #tv_tree div.tv_vline {
+.jc-global-module-tree #tv_tree div.tv_hline, .wt-block-charts-block #tv_tree div.tv_hline,
+#tree #tv_tree div.tv_hline,
+.jc-global-module-tree #tv_tree div.tv_vline,
+.wt-block-charts-block #tv_tree div.tv_vline,
+#tree #tv_tree div.tv_vline {
   background-color: #343a40;
+}
+
+.wt-block-charts-block h2,
+#tree h2 {
+  display: none;
 }
 
 /*
@@ -9218,10 +9261,6 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
 }
 .jc-global-edit_interface form[name="editform"] h3 {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.jc-global-module-tree .tv_out {
-  border: 1px solid #cbd3da;
 }
 
 /*# sourceMappingURL=style.css.map */
