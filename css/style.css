@@ -416,7 +416,7 @@ template {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label, .h4, .jc-global-search_advanced #div-holder .form-group.my-3, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
@@ -432,11 +432,11 @@ h2, .h2 {
   font-size: 1.8rem;
 }
 
-h3, .h3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label {
+h3, .h3 {
   font-size: 1.6rem;
 }
 
-h4, .h4, .jc-global-search_advanced #div-holder .form-group.my-3 {
+h4, .h4 {
   font-size: 1.4rem;
 }
 
@@ -5949,25 +5949,14 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 0 !important;
 }
 
-.mt-0, h2, .jc-global-search_advanced #div-holder .form-group.my-3, .jc-global-index-gedcom .wt-main-wrapper,
+.mt-0, h2, .jc-global-index-gedcom .wt-main-wrapper,
 .my-0 {
   margin-top: 0 !important;
 }
 
 .mr-0,
 .mx-0,
-h2,
-.jc-global-search_advanced .wt-page-options-value.py-1,
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body,
-.jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily,
-.wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
+h2 {
   margin-right: 0 !important;
 }
 
@@ -5978,18 +5967,7 @@ h2,
 
 .ml-0,
 .mx-0,
-h2,
-.jc-global-search_advanced .wt-page-options-value.py-1,
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body,
-.jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily,
-.jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily,
-.wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
+h2 {
   margin-left: 0 !important;
 }
 
@@ -5997,15 +5975,7 @@ h2,
   margin: 0.25rem !important;
 }
 
-.mt-1, .jc-global-search_advanced .wt-page-options-label.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-label.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-label.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-page-options-value.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
+.mt-1,
 .my-1 {
   margin-top: 0.25rem !important;
 }
@@ -6015,7 +5985,7 @@ h2,
   margin-right: 0.25rem !important;
 }
 
-.mb-1, dd,
+.mb-1, dd, .wt-page-options-search-advanced .form-group,
 .my-1 {
   margin-bottom: 0.25rem !important;
 }
@@ -6159,6 +6129,7 @@ h2,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-body,
+.wt-page-options-search-advanced .wt-page-options-label .form-row,
 .jc-global-module-tree #tv_tools .icon-sfamily,
 .wt-block-charts-block #tv_tools .icon-sfamily,
 #tree #tv_tools .icon-sfamily {
@@ -6175,6 +6146,7 @@ h2,
 .py-1,
 .jc-global-individual #individual-names .card-header:not(#name-header-0),
 .jc-global-individual #individual-names .card-body,
+.wt-page-options-search-advanced .wt-page-options-label .form-row,
 .jc-global-module-tree #tv_tools .icon-sfamily,
 .wt-block-charts-block #tv_tools .icon-sfamily,
 #tree #tv_tools .icon-sfamily {
@@ -6203,7 +6175,7 @@ h2,
   padding-right: 0.5rem !important;
 }
 
-.pb-2, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label, .jc-global-edit_interface form[name="editform"] h3,
+.pb-2, .jc-global-edit_interface form[name="editform"] h3,
 .py-2,
 .wt-page-options-value,
 .jc-global-index .card-header {
@@ -6219,7 +6191,7 @@ h2,
   padding: 1rem !important;
 }
 
-.pt-3, .jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label, .jc-global-search_advanced #div-holder .form-group.my-3, #lightbox_content, .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
+.pt-3, #lightbox_content, .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
 #tree .tv_out, .jc-global-edit_interface form[name="editform"] h3,
 .py-3,
 .jc-global-index .wt-main-blocks,
@@ -8519,47 +8491,37 @@ div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
   color: #212529;
 }
 
-.jc-global-search_advanced .wt-page-options {
+.wt-page-options-search-advanced {
   border: none;
 }
-.jc-global-search_advanced .wt-page-options .form-group:first-child {
-  border-top: 1px solid #cbd3da;
-}
-.jc-global-search_advanced .wt-page-options .form-group.wt-page-options-label {
-  background-color: transparent;
+.wt-page-options-search-advanced .wt-page-options-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   border-top: 1px solid #cbd3da;
   border-bottom: 1px solid #cbd3da;
-  border-left: none;
-  border-right: none;
-}
-.jc-global-search_advanced .wt-page-options-label {
   border-left: 1px solid #cbd3da;
+  border-right: transparent;
+}
+[dir=rtl] .wt-page-options-search-advanced .wt-page-options-label {
   border-right: 1px solid #cbd3da;
 }
-.jc-global-search_advanced .wt-page-options-label.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-label.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-label.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-label.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-label.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-label.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-label.icon-sfamily {
-  border-top: 1px solid #cbd3da;
-  border-bottom: 1px solid #cbd3da;
+[dir=rtl] .wt-page-options-search-advanced .wt-page-options-label {
+  border-left: transparent;
 }
-.jc-global-search_advanced .wt-page-options-value {
+.wt-page-options-search-advanced .wt-page-options-label.form-group {
   border-right: 1px solid #cbd3da;
 }
-[dir=rtl] .jc-global-search_advanced .wt-page-options-value {
+[dir=rtl] .wt-page-options-search-advanced .wt-page-options-label.form-group {
   border-left: 1px solid #cbd3da;
 }
-.jc-global-search_advanced .wt-page-options-value.py-1, .jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-header:not(#name-header-0), .jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-header:not(#name-header-0),
-.jc-global-search_advanced .jc-global-individual #individual-names .wt-page-options-value.card-body,
-.jc-global-individual #individual-names .jc-global-search_advanced .wt-page-options-value.card-body, .jc-global-search_advanced .jc-global-module-tree #tv_tools .wt-page-options-value.icon-sfamily, .jc-global-module-tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily, .jc-global-search_advanced .wt-block-charts-block #tv_tools .wt-page-options-value.icon-sfamily, .wt-block-charts-block #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily,
-.jc-global-search_advanced #tree #tv_tools .wt-page-options-value.icon-sfamily,
-#tree #tv_tools .jc-global-search_advanced .wt-page-options-value.icon-sfamily {
-  border-top: 1px solid #cbd3da;
-  border-bottom: 1px solid #cbd3da;
+.wt-page-options-search-advanced .wt-page-options-label .form-row {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.1;
 }
-.jc-global-search_advanced #div-holder .form-group.my-3 {
-  border-top: 1px solid #cbd3da;
+.wt-page-options-search-advanced .wt-page-options-value {
+  border: 1px solid #cbd3da;
 }
 
 #lightbox_content {
