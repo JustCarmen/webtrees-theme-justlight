@@ -6125,8 +6125,8 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pt-1, .jc-global-individual .card-header,
 .py-1,
-.jc-global-individual #individual-names .card-header:not(#name-header-0),
-.jc-global-individual #individual-names .card-body,
+#individual-names .card-header:not(#name-header-0),
+#individual-names .card-body,
 .wt-page-options-search-advanced .wt-page-options-label .form-row,
 .jc-global-module-tree #tv_tools .icon-sfamily,
 .wt-block-charts-block #tv_tools .icon-sfamily,
@@ -6142,8 +6142,8 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pb-1, .jc-secondary-navigation .menu-label,
 .py-1,
-.jc-global-individual #individual-names .card-header:not(#name-header-0),
-.jc-global-individual #individual-names .card-body,
+#individual-names .card-header:not(#name-header-0),
+#individual-names .card-body,
 .wt-page-options-search-advanced .wt-page-options-label .form-row,
 .jc-global-module-tree #tv_tools .icon-sfamily,
 .wt-block-charts-block #tv_tools .icon-sfamily,
@@ -8250,7 +8250,7 @@ a.fa:hover {
 .jc-global-individual .card-header {
   font-size: 0.875rem;
 }
-.jc-global-individual #name-header-add .card-title b {
+#name-header-add .card-title b {
   font-weight: 500;
 }
 
