@@ -1508,7 +1508,7 @@ pre code {
   }
 }
 
-.form-control {
+.form-control, .jc-view-report-setup input {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -1522,21 +1522,21 @@ pre code {
   border-radius: 0.25rem;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-.form-control::-ms-expand {
+.form-control::-ms-expand, .jc-view-report-setup input::-ms-expand {
   background-color: transparent;
   border: 0;
 }
-.form-control:focus {
+.form-control:focus, .jc-view-report-setup input:focus {
   color: #495057;
   background-color: #fff;
   border-color: #8bb8df;
   outline: none;
 }
-.form-control::placeholder {
+.form-control::placeholder, .jc-view-report-setup input::placeholder {
   color: #868e96;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, .jc-view-report-setup input:disabled, .form-control[readonly], .jc-view-report-setup input[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -1587,10 +1587,10 @@ select.form-control:focus::-ms-value {
   border: solid transparent;
   border-width: 1px 0;
 }
-.form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control,
+.form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .jc-view-report-setup .input-group-sm > input.form-control-plaintext,
 .input-group-sm > .form-control-plaintext.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-plaintext.btn,
-.input-group-sm > .input-group-btn > input.form-control-plaintext[type="submit"], .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control,
+.input-group-sm > .input-group-btn > input.form-control-plaintext[type="submit"], .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .jc-view-report-setup .input-group-lg > input.form-control-plaintext,
 .input-group-lg > .form-control-plaintext.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
 .input-group-lg > .input-group-btn > input.form-control-plaintext[type="submit"] {
@@ -1598,7 +1598,7 @@ select.form-control:focus::-ms-value {
   padding-left: 0;
 }
 
-.form-control-sm, .input-group-sm > .form-control,
+.form-control-sm, .input-group-sm > .form-control, .jc-view-report-setup .input-group-sm > input,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > input[type="submit"] {
@@ -1614,7 +1614,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
   height: calc(1.8125rem + 2px);
 }
 
-.form-control-lg, .input-group-lg > .form-control,
+.form-control-lg, .input-group-lg > .form-control, .jc-view-report-setup .input-group-lg > input,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > input[type="submit"] {
@@ -1704,19 +1704,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: .2rem;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid, .was-validated
+.was-validated .form-control:valid, .was-validated .jc-view-report-setup input:valid, .jc-view-report-setup .was-validated input:valid, .form-control.is-valid, .jc-view-report-setup input.is-valid, .was-validated
 .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745;
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus, .was-validated
+.was-validated .form-control:valid:focus, .was-validated .jc-view-report-setup input:valid:focus, .jc-view-report-setup .was-validated input:valid:focus, .form-control.is-valid:focus, .jc-view-report-setup input.is-valid:focus, .was-validated
 .custom-select:valid:focus,
 .custom-select.is-valid:focus {
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
-.was-validated .form-control:valid ~ .invalid-feedback,
-.was-validated .form-control:valid ~ .invalid-tooltip, .form-control.is-valid ~ .invalid-feedback,
-.form-control.is-valid ~ .invalid-tooltip, .was-validated
+.was-validated .form-control:valid ~ .invalid-feedback, .was-validated .jc-view-report-setup input:valid ~ .invalid-feedback, .jc-view-report-setup .was-validated input:valid ~ .invalid-feedback,
+.was-validated .form-control:valid ~ .invalid-tooltip,
+.was-validated .jc-view-report-setup input:valid ~ .invalid-tooltip,
+.jc-view-report-setup .was-validated input:valid ~ .invalid-tooltip, .form-control.is-valid ~ .invalid-feedback, .jc-view-report-setup input.is-valid ~ .invalid-feedback,
+.form-control.is-valid ~ .invalid-tooltip,
+.jc-view-report-setup input.is-valid ~ .invalid-tooltip, .was-validated
 .custom-select:valid ~ .invalid-feedback,
 .was-validated
 .custom-select:valid ~ .invalid-tooltip,
@@ -1746,19 +1749,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
+.was-validated .form-control:invalid, .was-validated .jc-view-report-setup input:invalid, .jc-view-report-setup .was-validated input:invalid, .form-control.is-invalid, .jc-view-report-setup input.is-invalid, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #b80000;
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
+.was-validated .form-control:invalid:focus, .was-validated .jc-view-report-setup input:invalid:focus, .jc-view-report-setup .was-validated input:invalid:focus, .form-control.is-invalid:focus, .jc-view-report-setup input.is-invalid:focus, .was-validated
 .custom-select:invalid:focus,
 .custom-select.is-invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(184, 0, 0, 0.25);
 }
-.was-validated .form-control:invalid ~ .invalid-feedback,
-.was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
-.form-control.is-invalid ~ .invalid-tooltip, .was-validated
+.was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .jc-view-report-setup input:invalid ~ .invalid-feedback, .jc-view-report-setup .was-validated input:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip,
+.was-validated .jc-view-report-setup input:invalid ~ .invalid-tooltip,
+.jc-view-report-setup .was-validated input:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .jc-view-report-setup input.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.jc-view-report-setup input.is-invalid ~ .invalid-tooltip, .was-validated
 .custom-select:invalid ~ .invalid-feedback,
 .was-validated
 .custom-select:invalid ~ .invalid-tooltip,
@@ -1810,7 +1816,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     align-items: center;
     margin-bottom: 0;
   }
-  .form-inline .form-control {
+  .form-inline .form-control, .form-inline .jc-view-report-setup input, .jc-view-report-setup .form-inline input {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -2628,26 +2634,30 @@ tbody.collapse.show {
   display: flex;
   width: 100%;
 }
-.input-group .form-control {
+.input-group .form-control, .input-group .jc-view-report-setup input, .jc-view-report-setup .input-group input {
   position: relative;
   z-index: 2;
   flex: 1 1 auto;
   width: 1%;
   margin-bottom: 0;
 }
-.input-group .form-control:focus, .input-group .form-control:active, .input-group .form-control:hover {
+.input-group .form-control:focus, .input-group .jc-view-report-setup input:focus, .jc-view-report-setup .input-group input:focus, .input-group .form-control:active, .input-group .jc-view-report-setup input:active, .jc-view-report-setup .input-group input:active, .input-group .form-control:hover, .input-group .jc-view-report-setup input:hover, .jc-view-report-setup .input-group input:hover {
   z-index: 3;
 }
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group .jc-view-report-setup input,
+.jc-view-report-setup .input-group input {
   display: flex;
   align-items: center;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group .jc-view-report-setup input:not(:first-child):not(:last-child),
+.jc-view-report-setup .input-group input:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -2670,7 +2680,7 @@ tbody.collapse.show {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
-.input-group-addon.form-control-sm,
+.input-group-addon.form-control-sm, .jc-view-report-setup .input-group-sm > input.input-group-addon,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"] {
@@ -2678,7 +2688,7 @@ tbody.collapse.show {
   font-size: 0.875rem;
   border-radius: 0.2rem;
 }
-.input-group-addon.form-control-lg,
+.input-group-addon.form-control-lg, .jc-view-report-setup .input-group-lg > input.input-group-addon,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"] {
@@ -2691,7 +2701,7 @@ tbody.collapse.show {
   margin-top: 0;
 }
 
-.input-group .form-control:not(:last-child),
+.input-group .form-control:not(:last-child), .input-group .jc-view-report-setup input:not(:last-child), .jc-view-report-setup .input-group input:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn,
 .input-group-btn:not(:last-child) > input[type="submit"],
@@ -2710,7 +2720,7 @@ tbody.collapse.show {
   border-right: 0;
 }
 
-.input-group .form-control:not(:first-child),
+.input-group .form-control:not(:first-child), .input-group .jc-view-report-setup input:not(:first-child), .jc-view-report-setup .input-group input:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn,
 .input-group-btn:not(:first-child) > input[type="submit"],
@@ -2725,7 +2735,7 @@ tbody.collapse.show {
   border-bottom-left-radius: 0;
 }
 
-.form-control + .input-group-addon:not(:first-child) {
+.form-control + .input-group-addon:not(:first-child), .jc-view-report-setup input + .input-group-addon:not(:first-child) {
   border-left: 0;
 }
 
@@ -5945,7 +5955,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   max-height: 100% !important;
 }
 
-.m-0, div[id^="caldiv"] table, .faq_title, .jc-global-index .wt-side-blocks .card {
+.m-0, div[id^="caldiv"] table,
+div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .card {
   margin: 0 !important;
 }
 
@@ -6157,7 +6168,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   padding-left: 0.25rem !important;
 }
 
-.p-2, div[id^="caldiv"] table td, .jc-global-individual #relatives_content td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
+.p-2, div[id^="caldiv"] table td,
+div[id^="calendar-widget"] table td, .jc-global-individual #relatives_content td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
   padding: 0.5rem !important;
 }
 
@@ -7564,7 +7576,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   text-align: right !important;
 }
 
-.text-center, .wt-page-options-family-list, .wt-page-options-individual-list, div[id^="caldiv"] > table table td {
+.text-center, .wt-page-options-family-list, .wt-page-options-individual-list, div[id^="caldiv"] > table table td,
+div[id^="calendar-widget"] > table table td {
   text-align: center !important;
 }
 
@@ -7891,7 +7904,7 @@ h2 {
   background-color: #337ab7;
 }
 
-.input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single {
+.input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, .input-group .jc-view-report-setup .input-group-btn + input.select2 + .select2-container--default .select2-selection--single, .jc-view-report-setup .input-group .input-group-btn + input.select2 + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -8392,47 +8405,64 @@ tr.even {
   content: " \2022 ";
 }
 
-div[id^="caldiv"] table td {
+div[id^="caldiv"] table td,
+div[id^="calendar-widget"] table td {
   background-color: #fff !important;
 }
-div[id^="caldiv"] > table {
+div[id^="caldiv"] > table,
+div[id^="calendar-widget"] > table {
   border: 1px solid #cbd3da;
 }
-div[id^="caldiv"] > table td {
+div[id^="caldiv"] > table td,
+div[id^="calendar-widget"] > table td {
   border: none !important;
 }
-div[id^="caldiv"] > table table td {
+div[id^="caldiv"] > table table td,
+div[id^="calendar-widget"] > table table td {
   border-radius: .25rem;
 }
-div[id^="caldiv"] > table table td a {
+div[id^="caldiv"] > table table td a,
+div[id^="calendar-widget"] > table table td a {
   color: #a1a8ae;
   text-decoration: none;
 }
-div[id^="caldiv"] > table table td.optionbox a, div[id^="caldiv"] > table table td.descriptionbox a {
+div[id^="caldiv"] > table table td.optionbox a, div[id^="caldiv"] > table table td.descriptionbox a,
+div[id^="calendar-widget"] > table table td.optionbox a,
+div[id^="calendar-widget"] > table table td.descriptionbox a {
   color: #212529;
 }
-div[id^="caldiv"] > table table td:hover {
+div[id^="caldiv"] > table table td:hover,
+div[id^="calendar-widget"] > table table td:hover {
   background-color: #e9ecef !important;
 }
-div[id^="caldiv"] > table table td:hover a {
+div[id^="caldiv"] > table table td:hover a,
+div[id^="calendar-widget"] > table table td:hover a {
   color: #16181b;
 }
-div[id^="caldiv"] > table table tr:first-child {
+div[id^="caldiv"] > table table tr:first-child,
+div[id^="calendar-widget"] > table table tr:first-child {
   font-weight: 700;
 }
-div[id^="caldiv"] > table table tr:first-child td:hover {
+div[id^="caldiv"] > table table tr:first-child td:hover,
+div[id^="calendar-widget"] > table table tr:first-child td:hover {
   background: none !important;
 }
-div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox {
   position: relative;
 }
-div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:hover {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:hover,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:hover {
   background-color: #337ab7 !important;
 }
-div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a:hover {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a, div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox a:hover,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox a,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox a:hover {
   color: #fff;
 }
-div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before {
+div[id^="caldiv"] > table table tr:not(:first-child) td.descriptionbox:before,
+div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:before {
   content: '';
   display: inline-block;
   border: solid transparent;
