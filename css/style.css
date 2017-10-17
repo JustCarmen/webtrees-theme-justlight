@@ -8564,6 +8564,11 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: 1px solid #cbd3da;
 }
 
+.jc-album-tab-container {
+  background: #f8f9fa;
+  border: 1px solid #cbd3da;
+}
+
 .wt-album-tab-caption {
   overflow: hidden;
   text-overflow: ellipsis;
