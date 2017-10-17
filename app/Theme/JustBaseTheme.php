@@ -252,7 +252,7 @@ class JustBaseTheme extends MinimalTheme {
   protected function hookJavascriptVariables() {
     $variables = [
         'AUTH_ID'              => Auth::id(),
-        'COLORBOX_ACTION_FILE' => self::THEME_DIR . 'colorbox/action.php',
+        'COLORBOX_ACTION_FILE' => 'themes/' . static::THEME_DIR . '/resources/colorbox.php',
         'WT_BASE_URL'          => WT_BASE_URL
     ];
 

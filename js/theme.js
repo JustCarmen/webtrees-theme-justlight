@@ -163,12 +163,12 @@ table.columns.adjust().draw();
 
 function get_imagetype() {
   var xrefs = [];
-  jQuery('a[type^=image].gallery').each(function() {
-    var xref = qstring('mid', jQuery(this).attr('href'));
-    jQuery(this).attr('id', xref);
+  $('a[type^=image].gallery').each(function() {
+    var xref = qstring('mid', $(this).attr('href'));
+    $(this).attr('id', xref);
     xrefs.push(xref);
   });
-  jQuery.ajax({
+  $.ajax({
     url: COLORBOX_ACTION_FILE + '?action=imagetype',
     type: 'POST',
     dataType: 'json',
@@ -176,48 +176,22 @@ function get_imagetype() {
       'xrefs': xrefs
     },
     success: function(data) {
-      jQuery.each(data, function(index, value) {
-        jQuery('a[id=' + index + ']').attr('data-obje-type', value);
+      $.each(data, function(index, value) {
+        $('a[id=' + index + ']').attr('data-obje-type', value);
       });
     }
   });
 }
 
-function longTitles() {
-  var tClass = jQuery("#cboxTitle .title");
-  var tID = jQuery("#cboxTitle");
-  if (tClass.width() > tID.width() - 100) { // 100 because the width of the 4 buttons is 25px each
-    tClass.css({
-      "width": tID.width() - 100,
-      "margin-left": "75px"
-    });
-  }
-  if (tClass.height() > 25) { // 26 is 2 lines
-    tID.css({
-      "bottom": 0
-    });
-    tClass.css({
-      "height": "26px"
-    }); // max 2 lines.
-  } else {
-    tID.css({
-      "bottom": "6px"
-    }); // set the value to vertically center a 1 line title.
-    tClass.css({
-      "height": "auto"
-    }); // set the value back;
-  }
-}
-
 function resizeImg() {
-  jQuery("#cboxLoadedContent").css('overflow-x', 'hidden');
-  var outerW = parseInt(jQuery("#cboxLoadedContent").css("width"), 10);
-  var innerW = parseInt(jQuery(".cboxPhoto").css("width"), 10);
+  $("#cboxLoadedContent").css('overflow-x', 'hidden');
+  var outerW = parseInt($("#cboxLoadedContent").css("width"), 10);
+  var innerW = parseInt($(".cboxPhoto").css("width"), 10);
   if (innerW > outerW) {
-    var innerH = parseInt(jQuery(".cboxPhoto").css("height"), 10);
+    var innerH = parseInt($(".cboxPhoto").css("height"), 10);
     var ratio = innerH / innerW;
     var outerH = outerW * ratio;
-    jQuery(".cboxPhoto").css({
+    $(".cboxPhoto").css({
       "width": outerW + "px",
       "height": outerH + "px"
     });
@@ -225,11 +199,11 @@ function resizeImg() {
 }
 
 // add colorbox function to all images on the page when first clicking on an image.
-jQuery("body").one('click', 'a.gallery', function() {
-  get_imagetype();
+$("body").one('click', 'a.gallery', function() {
+   get_imagetype();
 
   // General (both images and pdf)
-  jQuery("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
+  $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
     rel: "gallery",
     current: "",
     slideshow: true,
@@ -239,53 +213,63 @@ jQuery("body").one('click', 'a.gallery', function() {
   });
 
   // Image settings
-  jQuery("a[type^=image].gallery").colorbox({
+  $("a[type^=image].gallery").colorbox({
     photo: true,
+    maxWidth: "95%",
+    maxHeight: "95%",
     scalePhotos: function() {
-      if (jQuery(this).data('obje-type') === 'photo') {
-        return true;
+      if ($(this).data('obje-type') === 'photo' || $(this).data('obje-type') === 'book') {
+        return true; // default;
+      } else {
+        return false;
       }
     },
-    maxWidth: "90%",
-    maxHeight: "90%",
+    scrolling: function() {
+      if ($(this).data('obje-type') === 'photo' || $(this).data('obje-type') === 'book') {
+        return false;
+      } else {
+        return true; // default;
+      }
+    },    
     title: function() {
-      var img_title = jQuery(this).data("title");
-      return "<div class=\"title\">" + img_title + "</div>";
+      return '<span class="jc-cbox-title">' + $(this).find("img").attr("alt") + '</span>';
     },
     onComplete: function() {
-      if (jQuery(this).data('obje-type') !== 'photo') {
+      if ($(this).data('obje-type') !== 'photo') {
         resizeImg();
       }
-      jQuery(".cboxPhoto").wheelzoom();
-      jQuery(".cboxPhoto img").on("click", function(e) {
-        e.preventDefault();
-      });
-      longTitles();
+      if ($("#colorbox").width() < 300) {
+        $.colorbox.resize({
+          width: 300
+        });
+      }
+      if ($("#colorbox").height() < 300) {
+        $.colorbox.resize({
+          height: 300
+        });
+      }
+      $('.cboxPhoto').unbind('click');
+      wheelzoom(document.querySelectorAll('.cboxPhoto'));     
     }
   });
 
-  // PDF settings
-  jQuery("a[type$=pdf].gallery").colorbox({
+  // PDF settings - needs to be adjusted after webtrees has fixed pdf display
+  $("a[type$=pdf].gallery").colorbox({
     width: "75%",
     height: "90%",
     iframe: true,
     title: function() {
-      var pdf_title = jQuery(this).data("title");
+      var pdf_title = $(this).data("title");
       return '<div class="title">' + pdf_title + '</div>';
-    },
-    onComplete: function() {
-      longTitles();
     }
   });
+});
 
-  // Do not open the gallery when clicking on the mainimage on the individual page
-  jQuery('a.gallery').each(function() {
-    if (jQuery(this).parents("#indi_mainimage").length > 0) {
-      jQuery(this).colorbox({
-        rel: "nofollow"
-      });
-    }
-  });
+// Stop browser scrolling
+$(document).bind('cbox_open', function(){
+    $('body').css({overflow:'hidden'});
+}).bind('cbox_closed', function(){
+    $('body').css({overflow:'auto'});
 });
 
 // Bootstrap popovers
