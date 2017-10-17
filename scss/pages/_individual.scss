@@ -3,8 +3,7 @@
 .jc-global-individual {
   // main section
   .wt-facts-table {
-    &[role="presentation"] td,
-    td[colspan="2"] {
+    @include jc-indi-tab-header {
       @include jl-theme-gradient-light;
     }
   }
