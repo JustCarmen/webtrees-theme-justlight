@@ -558,7 +558,7 @@ mark,
 
 .figure-caption {
   font-size: 90%;
-  color: #868e96;
+  color: #212529;
 }
 
 code,
@@ -5970,7 +5970,7 @@ div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .
   margin-right: 0 !important;
 }
 
-.mb-0, dl, .wt-page-options .form-group, #lightbox_content, .jc-global-index-user h2,
+.mb-0, dl, .wt-page-options .form-group, .jc-global-index-user h2,
 .my-0 {
   margin-bottom: 0 !important;
 }
@@ -6201,7 +6201,7 @@ div[id^="calendar-widget"] table td, .jc-global-individual #relatives_content td
   padding: 1rem !important;
 }
 
-.pt-3, #lightbox_content, .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
+.pt-3, .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out,
 #tree .tv_out, .jc-global-edit_interface form[name="editform"] h3,
 .py-3,
 .jc-global-index .wt-main-blocks,
@@ -8496,6 +8496,12 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 .jc-global-individual .nav-tabs {
   border-bottom: none;
 }
+.jc-global-individual .tab-pane a {
+  color: #212529;
+}
+.jc-global-individual .tab-pane a:hover {
+  color: black;
+}
 .jc-global-individual .wt-facts-table[role="presentation"] td,
 .jc-global-individual .wt-facts-table td[colspan="2"] {
   background-color: #212529;
@@ -8558,45 +8564,10 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: 1px solid #cbd3da;
 }
 
-#lightbox_content {
-  font-size: 0.875rem;
-  background-color: transparent;
-  border: 1px solid #cbd3da;
-}
-#lightbox_content a {
-  color: #212529;
-}
-#lightbox_content a:hover {
-  color: black;
-}
-
-.album-list {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-}
-.album-list-item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
-  height: auto;
-  width: calc(100%/2);
-}
-@media (min-width: 576px) {
-  .album-list-item {
-    width: calc(100%/3);
-  }
-}
-@media (min-width: 768px) {
-  .album-list-item {
-    width: calc(100%/4);
-  }
-}
-.album-image {
-  height: 78px;
-}
-.album-title {
-  height: 100%;
+.wt-album-tab-caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .faq,
