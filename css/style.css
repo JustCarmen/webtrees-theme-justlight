@@ -1334,7 +1334,7 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #e9ecef;
+  background-color: #f8f9fa;
 }
 
 .table-hover tbody tr:hover {
@@ -8280,7 +8280,7 @@ a.fa:hover {
 }
 
 tr.odd {
-  background-color: #e9ecef;
+  background-color: #f8f9fa;
 }
 tr.even {
   background-color: transparent;
