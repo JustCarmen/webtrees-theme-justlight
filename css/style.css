@@ -8338,7 +8338,7 @@ tr.even {
 .dt-bootstrap4 .dataTable thead th.sorting:after, .dt-bootstrap4 .dataTable thead th.sorting_asc:after, .dt-bootstrap4 .dataTable thead th.sorting_desc:after {
   font-family: FontAwesome;
   top: initial;
-  bottom: .5rem;
+  bottom: .25rem;
 }
 .dt-bootstrap4 .dataTable thead th.sorting:after {
   content: "\f0dc";
@@ -8348,6 +8348,9 @@ tr.even {
 }
 .dt-bootstrap4 .dataTable thead th.sorting_desc:after {
   content: "\f0dd";
+}
+.dt-bootstrap4 .dataTable .jc-last-change {
+  white-space: nowrap;
 }
 
 .person_box_template .icon-silhouette-F, #lifespan-people .popup .icon-silhouette-F, .person_box_template .icon-silhouette-M, #lifespan-people .popup .icon-silhouette-M, .person_box_template .icon-silhouette-U, #lifespan-people .popup .icon-silhouette-U, .person_box_template a.gallery, #lifespan-people .popup a.gallery,

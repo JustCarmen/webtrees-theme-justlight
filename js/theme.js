@@ -113,51 +113,66 @@ if ($('a[onclick]').attr('href') === '#') {
 // target = column number - 1
 
 // Repository table
-var table = $('.table-repository').DataTable({
-   columnDefs: [
-    {width: "20%", targets: 1},
-    {width: "5%", targets: 3}
-  ],
-  autoWidth: false
-});
+if ($(".table-repository").length) {
+  var table = $('.table-repository').DataTable({
+     columnDefs: [
+      {width: "5%", targets: 1},
+      {width: "15%", targets: 2},
+      {className: "jc-last-change", targets: 2}
+    ],
+    autoWidth: false
+  });
 
-// Don't show the last change column
-table.column(2).visible(false).columns.adjust().draw();
+  table.column(2, {order: 'index'}).data().each(function (value, index) {
+      var date = value.split("-");
+      var cell = table.cell(index, 2);
+      cell.data($.trim(date[0]));
+  });
+  table.columns.adjust().draw();
+}
 
 // Source table
-var table = $('.table-source').DataTable({
-   columnDefs: [
-    {width: "15%", targets: 1},
-    {width: "7.5%", targets: [2, 3, 4, 5]},
-    {width: "5%", targets: 7},
-  ],
-  autoWidth: false
-});
+if ($(".table-source").length) {
+  var table = $('.table-source').DataTable({
+     columnDefs: [
+      {width: "15%", targets: 1},
+      {width: "5%", targets: [2, 3, 4, 5]},
+      {width: "15%", targets: 6},
+      {className: "jc-last-change", targets: 6}
+    ],
+    autoWidth: false
+  });
 
-// Don't show the last change column
-table.column(6).visible(false).columns.adjust().draw();
+  table.column(6, {order: 'index'}).data().each(function (value, index) {
+      var date = value.split("-");
+      var cell = table.cell(index, 6);
+      cell.data($.trim(date[0]));
+  });
+  table.columns.adjust().draw();
+}
 
 // Shared notes table
-var table = $('.table-note').DataTable({
-   columnDefs: [
-    {width: "15%", targets: 1},
-    {width: "7.5%", targets: [2, 3, 4]},
-    {width: "5%", targets: 6},
-  ],
-  autoWidth: false
-});
+if ($(".table-note").length) {
+  var table = $('.table-note').DataTable({
+     columnDefs: [
+      {width: "5%", targets: [1, 2, 3, 4]},
+      {className: "jc-last-change", targets: 5}
+    ],
+    autoWidth: false
+  });
 
-// Don't show the last change column
-table.column(5).visible(false).columns.adjust().draw();
+  table.column(5, {order: 'index'}).data().each(function (value, index) {
+      var date = value.split("-");
+      var cell = table.cell(index, 5);
+      cell.data($.trim(date[0]));
+  });
+  table.columns.adjust().draw();
+}
 
 // Surname table
-var table = $('.table-surname').DataTable({
-  columnDefs: [
-    {width: "50%", targets: '_all'}
-  ]
-});
-$('.table-surname').addClass('mx-auto');
-table.columns.adjust().draw();
+var table = $('.table-surname').DataTable();
+$(table.table().container()).addClass('col-sm-12 col-md-8 col-lg-6 mx-auto');
+table.rows().invalidate().draw();
 
 /* global THEME_COLORBOX_URL */
 
