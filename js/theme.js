@@ -179,9 +179,11 @@ if ($(".table-note").length) {
 }
 
 // Surname table
-var table = $('.table-surname').DataTable();
-$(table.table().container()).addClass('col-sm-12 col-md-8 col-lg-6 mx-auto');
-table.rows().invalidate().draw();
+if ($('.table-surname').length) {
+  var table = $('.table-surname').DataTable();
+  $(table.table().container()).addClass('col-sm-12 col-md-8 col-lg-6 mx-auto');
+  table.rows().invalidate().draw();
+}
 
 /* global THEME_COLORBOX_URL */
 
