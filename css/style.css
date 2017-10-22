@@ -8317,13 +8317,11 @@ tr.even {
   font-size: 0.875rem;
 }
 
-.dt-bootstrap4 .dataTables_length select,
-.dt-bootstrap4 .dataTables_filter input {
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+.dt-bootstrap4 .dataTables_length, .dt-bootstrap4 .dataTables_filter, .dt-bootstrap4 .dataTables_paginate, .dt-bootstrap4 .dataTables_info {
+  float: none;
 }
-.dt-bootstrap4 .dataTables_length select.form-control {
-  height: calc(2.25rem + 2px);
+.dt-bootstrap4 .dataTables_length select, .dt-bootstrap4 .dataTables_filter input {
+  padding: 0.25rem 0.5rem;
 }
 .dt-bootstrap4 .dataTable {
   border-spacing: 0;
@@ -8350,9 +8348,18 @@ tr.even {
   content: "\f0dd";
 }
 .dt-bootstrap4 .dataTable .jc-last-change {
+  text-align: right;
   white-space: nowrap;
 }
+[dir=rtl] .dt-bootstrap4 .dataTable .jc-last-change {
+  text-align: left;
+}
 
+@media (max-width: 767px) {
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: center;
+  }
+}
 .person_box_template .icon-silhouette-F, #lifespan-people .popup .icon-silhouette-F, .person_box_template .icon-silhouette-M, #lifespan-people .popup .icon-silhouette-M, .person_box_template .icon-silhouette-U, #lifespan-people .popup .icon-silhouette-U, .person_box_template a.gallery, #lifespan-people .popup a.gallery,
 .person_box_template img,
 #lifespan-people .popup img {

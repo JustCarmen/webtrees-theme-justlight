@@ -112,10 +112,17 @@ if ($('a[onclick]').attr('href') === '#') {
 // Tweak the datatables made by webtrees
 // target = column number - 1
 
+var dtDom =
+    "<'row mb-lg-1'<'col-md-6 float-none'l><'col-md-6 float-sm-none float-md-right'f>>" +
+    "<'row'<'col-6 d-none d-lg-block'i><'col-6 d-none d-lg-block'p>>" +
+    "<'row'<'col-sm-12'tr>>" +
+    "<'row'<'col-md-6'i><'col-md-6 float-sm-none float-md-right'p>>";
+
 // Repository table
 if ($(".table-repository").length) {
   var table = $('.table-repository').DataTable({
-     columnDefs: [
+    sDom: dtDom,
+    columnDefs: [
       {width: "5%", targets: 1},
       {width: "15%", targets: 2},
       {className: "jc-last-change", targets: 2}
@@ -123,10 +130,10 @@ if ($(".table-repository").length) {
     autoWidth: false
   });
 
-  table.column(2, {order: 'index'}).data().each(function (value, index) {
-      var date = value.split("-");
-      var cell = table.cell(index, 2);
-      cell.data($.trim(date[0]));
+  table.column(2, {order: 'index'}).data().each(function(value, index) {
+    var date = value.split("-");
+    var cell = table.cell(index, 2);
+    cell.data($.trim(date[0]));
   });
   table.columns.adjust().draw();
 }
@@ -134,7 +141,8 @@ if ($(".table-repository").length) {
 // Source table
 if ($(".table-source").length) {
   var table = $('.table-source').DataTable({
-     columnDefs: [
+    sDom: dtDom,
+    columnDefs: [
       {width: "15%", targets: 1},
       {width: "5%", targets: [2, 3, 4, 5]},
       {width: "15%", targets: 6},
@@ -143,10 +151,10 @@ if ($(".table-source").length) {
     autoWidth: false
   });
 
-  table.column(6, {order: 'index'}).data().each(function (value, index) {
-      var date = value.split("-");
-      var cell = table.cell(index, 6);
-      cell.data($.trim(date[0]));
+  table.column(6, {order: 'index'}).data().each(function(value, index) {
+    var date = value.split("-");
+    var cell = table.cell(index, 6);
+    cell.data($.trim(date[0]));
   });
   table.columns.adjust().draw();
 }
@@ -154,17 +162,18 @@ if ($(".table-source").length) {
 // Shared notes table
 if ($(".table-note").length) {
   var table = $('.table-note').DataTable({
-     columnDefs: [
+    sDom: dtDom,
+    columnDefs: [
       {width: "5%", targets: [1, 2, 3, 4]},
       {className: "jc-last-change", targets: 5}
     ],
     autoWidth: false
   });
 
-  table.column(5, {order: 'index'}).data().each(function (value, index) {
-      var date = value.split("-");
-      var cell = table.cell(index, 5);
-      cell.data($.trim(date[0]));
+  table.column(5, {order: 'index'}).data().each(function(value, index) {
+    var date = value.split("-");
+    var cell = table.cell(index, 5);
+    cell.data($.trim(date[0]));
   });
   table.columns.adjust().draw();
 }
