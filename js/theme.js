@@ -213,12 +213,14 @@ $(".indi-list, .fam-list, .media-list").each(function() {
   list.find('.dataTables_info').wrap('<div class="col-6 d-none d-lg-block">');
   list.find('.dataTables_paginate').wrap('<div class="col-6 d-none d-lg-block">');
 });
+
 $('table[id^=table-]').each(function() {
   $(this).addClass('table table-sm table-bordered table-responsive');
   var toolbar = $(this).find('.btn-toolbar');
   toolbar.removeClass('mb-2');
+  toolbar.parents('thead').find('.btn-group').addClass('mb-2');
   toolbar.find('.btn').addClass('btn-sm mr-1');
-  toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar p-2');
+  toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar px-2 pt-2 pb-0');
   toolbar.parent('tfoot th').addClass('jc-toolbar jc-footer-toolbar p-2');
 });
 
