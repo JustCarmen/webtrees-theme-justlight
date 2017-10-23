@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-/*! BOOTSTRAP CORE CSS */
+/*! == BOOTSTRAP CORE CSS == */
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -7749,11 +7749,8 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important;
 }
 
-/*! THEME BASE */
-:focus {
-  outline-style: none !important;
-}
-
+/*! == BASE THEME (JUSTFANCY THEME: SEE https://github.com/JustCarmen/justfancy) == */
+/*** Common styles ***/
 ul {
   margin: 0;
   padding: 0;
@@ -7780,6 +7777,10 @@ a[href^="https:"] {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+:focus {
+  outline-style: none !important;
 }
 
 .media-display-image,
@@ -7824,6 +7825,7 @@ h2 {
   font-size: 0.875rem;
 }
 
+/*** Body ***/
 .wt-global {
   color: #212529;
   background-color: #fff;
@@ -7833,6 +7835,7 @@ h2 {
   flex: 1;
 }
 
+/*** Header ***/
 .wt-header-container {
   margin-top: 0;
 }
@@ -7888,6 +7891,7 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+/*** Footer ***/
 .wt-footer-container {
   color: #383f45;
   font-size: 0.875rem;
@@ -7897,6 +7901,7 @@ h2 {
   content: url(images/powered-by-webtrees.png);
 }
 
+/*** Forms ***/
 .select2-container--default .select2-selection--single {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -7955,6 +7960,7 @@ h2 {
   background: #f8f9fa;
 }
 
+/*** Icons ***/
 .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   background: none;
   width: auto;
@@ -8240,6 +8246,7 @@ a.fa:hover {
   padding: 0 .25rem;
 }
 
+/*** Buttons ***/
 @media (max-width: 991px) {
   .btn, input[type="submit"] {
     padding: 0.25rem 0.5rem;
@@ -8248,6 +8255,7 @@ a.fa:hover {
     border-radius: 0.2rem;
   }
 }
+/*** Cards ***/
 .card {
   margin-bottom: .25rem;
 }
@@ -8275,6 +8283,7 @@ a.fa:hover {
   font-weight: 500;
 }
 
+/*** Tables ***/
 .table, .markdown table, .faq {
   border-spacing: 0;
 }
@@ -8366,6 +8375,7 @@ tr.even {
     justify-content: center;
   }
 }
+/*** Person boxes ***/
 .person_box_template .icon-silhouette-F, #lifespan-people .popup .icon-silhouette-F, .person_box_template .icon-silhouette-M, #lifespan-people .popup .icon-silhouette-M, .person_box_template .icon-silhouette-U, #lifespan-people .popup .icon-silhouette-U, .person_box_template a.gallery, #lifespan-people .popup a.gallery,
 .person_box_template img,
 #lifespan-people .popup img {
@@ -8409,6 +8419,7 @@ tr.even {
   font-size: 0.75rem;
 }
 
+/*** Popovers ***/
 .popover a:focus, .popover a:hover {
   color: #16181b;
 }
@@ -8419,6 +8430,7 @@ tr.even {
   text-decoration: underline;
 }
 
+/*** Statistic block ***/
 .jc-statistics-row {
   font-size: 0.875rem;
 }
@@ -8429,6 +8441,7 @@ tr.even {
   content: " \2022 ";
 }
 
+/*** Calendar ***/
 div[id^="caldiv"] table td,
 div[id^="calendar-widget"] table td {
   background-color: #fff !important;
@@ -8498,7 +8511,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   right: .25rem;
 }
 
-/** Colorbox 1.6.4 - Core style **/
+/*** Colorbox 1.6.4 - Core style ***/
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
   top: 0;
@@ -8591,7 +8604,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   -webkit-box-sizing: content-box;
 }
 
-/** Colorbox 1.6.4 - User style 1 **/
+/*** Colorbox 1.6.4 - User style 1 (modified) ***/
 #cboxOverlay {
   background: url(colorbox/overlay.png) repeat 0 0;
   opacity: 0.9;
@@ -8766,6 +8779,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background-position: -75px -25px;
 }
 
+/*** Index page (homepage and my page) ***/
 .wt-block-gedcom-block-block i,
 .wt-block-user-welcome-block i {
   font-size: 2.25rem;
@@ -8775,6 +8789,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   flex-flow: row-reverse;
 }
 
+/*** Individual page ***/
 .jc-global-individual #name-header-0,
 .jc-global-individual #name-content-0 {
   font-size: 1rem;
@@ -8804,6 +8819,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: none;
 }
 
+/*** Charts pages ***/
 #pedigree_canvas {
   color: #000;
 }
@@ -8819,10 +8835,12 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   outline: none;
 }
 
+/*** List pages ***/
 .jc-global-listpage .wt-initial.active {
   color: #212529;
 }
 
+/*** Advanced search page ***/
 .wt-page-options-search-advanced {
   border: none;
 }
@@ -8856,6 +8874,8 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: 1px solid #cbd3da;
 }
 
+/*** Report pages (see forms) ***/
+/*** Album module ***/
 .jc-album-tab-container {
   background: #f8f9fa;
   border: 1px solid #cbd3da;
@@ -8867,6 +8887,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   white-space: nowrap;
 }
 
+/*** FAQ Module ***/
 .faq,
 .faq .odd td {
   background-color: transparent !important;
@@ -8876,6 +8897,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background-color: transparent !important;
 }
 
+/*** Googlemaps module ***/
 .gm-ancestor {
   font-size: 0.875rem;
 }
@@ -8884,6 +8906,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   font-size: 0.875rem;
 }
 
+/*** Interactive tree module ***/
 .jc-global-module-tree #tv_tree .tv_box .tvM, .wt-block-charts-block #tv_tree .tv_box .tvM,
 #tree #tv_tree .tv_box .tvM, .jc-global-module-tree #tv_tree .tv_box .tvF, .wt-block-charts-block #tv_tree .tv_box .tvF,
 #tree #tv_tree .tv_box .tvF, .jc-global-module-tree #tv_tree .tv_box .tvU, .wt-block-charts-block #tv_tree .tv_box .tvU,
@@ -8954,6 +8977,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 /*! JUSTLIGHT THEME */
+/*** Header ***/
 .wt-header-wrapper {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y4ZjlmYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -9048,18 +9072,22 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   vertical-align: middle;
 }
 
+/*** Footer ***/
 .wt-footer-container {
   background-color: #e6e6e6;
 }
 
+/*** Nav bar ***/
 .nav-pills .nav-link:not(.active):focus, .nav-pills .nav-link:not(.active):hover {
   background-color: #e9ecef;
 }
 
+/*** Dropdown menu ***/
 .dropdown-menu {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.175);
 }
 
+/*** Tabs ***/
 .nav-tabs .nav-item {
   margin-right: 0.15rem;
 }
@@ -9114,6 +9142,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   color: #78818a;
 }
 
+/*** Icons ***/
 .fa-plus,
 .icon-selected {
   color: #28a745 !important;
@@ -9129,6 +9158,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   vertical-align: top;
 }
 
+/*** Buttons ***/
 .btn-primary, input[type="submit"] {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzMzN2FiNyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjM1MzdjIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
@@ -9172,6 +9202,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background-image: none;
 }
 
+/*** Cards ***/
 .jc-global-index .card {
   border: none;
 }
@@ -9219,6 +9250,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   font-size: 0.75rem;
 }
 
+/*** Index page (homepage and my page) ***/
 .jc-global-index-user h2 {
   border-bottom: 1px solid #e9ecef;
 }
@@ -9226,6 +9258,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border-left: 1px solid #e9ecef;
 }
 
+/*** Individual page ***/
 .jc-global-individual .wt-facts-table[role="presentation"] td,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjlmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NlZDRkYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -9248,6 +9281,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background-color: #fff0f5;
 }
 
+/*** Edit interface ***/
 .jc-global-edit_interface form[name="editform"] {
   background: #f8f9fa;
   border: 1px solid rgba(0, 0, 0, 0.15);
