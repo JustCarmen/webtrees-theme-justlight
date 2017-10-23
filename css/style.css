@@ -8354,6 +8354,12 @@ tr.even {
 [dir=rtl] .dt-bootstrap4 .dataTable .jc-last-change {
   text-align: left;
 }
+.dt-bootstrap4 .dataTable .jc-toolbar {
+  background-color: #f8f9fa;
+}
+.dt-bootstrap4 .dataTable .jc-toolbar i {
+  font-size: 0.875rem;
+}
 
 @media (max-width: 767px) {
   div.dataTables_wrapper div.dataTables_paginate ul.pagination {

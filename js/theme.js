@@ -113,13 +113,13 @@ if ($('a[onclick]').attr('href') === '#') {
 // target = column number - 1
 
 var dtDom =
-    "<'row mb-lg-1'<'col-md-6 float-none'l><'col-md-6 float-sm-none float-md-right'f>>" +
+    "<'row mt-1 mb-lg-1'<'col-md-6 float-none'l><'col-md-6 float-sm-none float-md-right'f>>" +
     "<'row'<'col-6 d-none d-lg-block'i><'col-6 d-none d-lg-block'p>>" +
     "<'row'<'col-sm-12'tr>>" +
-    "<'row'<'col-md-6'i><'col-md-6 float-sm-none float-md-right'p>>";
+    "<'row'<'col-md-6 float-none'i><'col-md-6 float-sm-none float-md-right'p>>";
 
 // Repository table
-if ($(".table-repository").length) {
+if ($('.table-repository').length) {
   var table = $('.table-repository').DataTable({
     sDom: dtDom,
     columnDefs: [
@@ -139,7 +139,7 @@ if ($(".table-repository").length) {
 }
 
 // Source table
-if ($(".table-source").length) {
+if ($('.table-source').length) {
   var table = $('.table-source').DataTable({
     sDom: dtDom,
     columnDefs: [
@@ -160,11 +160,12 @@ if ($(".table-source").length) {
 }
 
 // Shared notes table
-if ($(".table-note").length) {
+if ($('.table-note').length) {
   var table = $('.table-note').DataTable({
     sDom: dtDom,
     columnDefs: [
       {width: "5%", targets: [1, 2, 3, 4]},
+      {width: "15%", targets: 5},
       {className: "jc-last-change", targets: 5}
     ],
     autoWidth: false
@@ -184,6 +185,42 @@ if ($('.table-surname').length) {
   $(table.table().container()).addClass('col-sm-12 col-md-8 col-lg-6 mx-auto');
   table.rows().invalidate().draw();
 }
+
+// Tab list tables - only change some markup. The indi, fam and media tab still have the old jquery markup.
+// This is a change webtrees should make, so we wait with our final modifications until these changes have taken place.
+
+// The datatable option markup is temporary code
+$('[class^=filtersH], [class^=filtersF], .dt-clear').remove();
+$(".indi-list, .fam-list, .media-list").each(function() {
+  var list = $(this);
+  $('<div class="row mt-1 mb-lg-1">')
+      .appendTo(list.find('.dataTables_paginate:first').parent())
+      .append(list.find('.dataTables_length:first'))
+      .append(list.find('.dataTables_filter'));
+  $('<div class="row">')
+      .appendTo(list.find('.dataTables_paginate:first').parent())
+      .append(list.find('.dataTables_info'))
+      .append(list.find('.dataTables_paginate:first'));
+  $('<div class="row">')
+      .appendTo(list.find('.dataTables_paginate:last').parent())
+      .append(list.find('.dataTables_info').clone())
+      .append(list.find('.dataTables_paginate:last'));
+  list.find('.dataTables_length:last').remove();
+  list.find('.dataTables_length select').addClass('form-control-sm');
+  
+  list.find('.dataTables_length').wrap('<div class="col-md-6 float-none">');
+  list.find('.dataTables_filter').wrap('<div class="col-md-6 float-sm-none float-md-right">');
+  list.find('.dataTables_info').wrap('<div class="col-6 d-none d-lg-block">');
+  list.find('.dataTables_paginate').wrap('<div class="col-6 d-none d-lg-block">');
+});
+$('table[id^=table-]').each(function() {
+  $(this).addClass('table table-sm table-bordered table-responsive');
+  var toolbar = $(this).find('.btn-toolbar');
+  toolbar.removeClass('mb-2');
+  toolbar.find('.btn').addClass('btn-sm mr-1');
+  toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar p-2');
+  toolbar.parent('tfoot th').addClass('jc-toolbar jc-footer-toolbar p-2');
+});
 
 /* global THEME_COLORBOX_URL */
 
