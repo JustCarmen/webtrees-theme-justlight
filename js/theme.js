@@ -189,40 +189,42 @@ if ($('.table-surname').length) {
 // Tab list tables - only change some markup. The indi, fam and media tab still have the old jquery markup.
 // This is a change webtrees should make, so we wait with our final modifications until these changes have taken place.
 
-// The datatable option markup is temporary code
-$('[class^=filtersH], [class^=filtersF], .dt-clear').remove();
-$(".indi-list, .fam-list, .media-list").each(function() {
-  var list = $(this);
-  $('<div class="row mt-1 mb-lg-1">')
-      .appendTo(list.find('.dataTables_paginate:first').parent())
-      .append(list.find('.dataTables_length:first'))
-      .append(list.find('.dataTables_filter'));
-  $('<div class="row">')
-      .appendTo(list.find('.dataTables_paginate:first').parent())
-      .append(list.find('.dataTables_info'))
-      .append(list.find('.dataTables_paginate:first'));
-  $('<div class="row">')
-      .appendTo(list.find('.dataTables_paginate:last').parent())
-      .append(list.find('.dataTables_info').clone())
-      .append(list.find('.dataTables_paginate:last'));
-  list.find('.dataTables_length:last').remove();
-  list.find('.dataTables_length select').addClass('form-control-sm');
-  
-  list.find('.dataTables_length').wrap('<div class="col-md-6 float-none">');
-  list.find('.dataTables_filter').wrap('<div class="col-md-6 float-sm-none float-md-right">');
-  list.find('.dataTables_info').wrap('<div class="col-6 d-none d-lg-block">');
-  list.find('.dataTables_paginate').wrap('<div class="col-6 d-none d-lg-block">');
-});
+if ($('.nav-tabs').length) {
+  // The datatable option markup is temporary code
+  $('[class^=filtersH], [class^=filtersF], .dt-clear').remove();
+  $(".indi-list, .fam-list, .media-list").each(function() {
+    var list = $(this);
+    $('<div class="row mt-1 mb-lg-1">')
+        .appendTo(list.find('.dataTables_paginate:first').parent())
+        .append(list.find('.dataTables_length:first'))
+        .append(list.find('.dataTables_filter'));
+    $('<div class="row">')
+        .appendTo(list.find('.dataTables_paginate:first').parent())
+        .append(list.find('.dataTables_info'))
+        .append(list.find('.dataTables_paginate:first'));
+    $('<div class="row">')
+        .appendTo(list.find('.dataTables_paginate:last').parent())
+        .append(list.find('.dataTables_info').clone())
+        .append(list.find('.dataTables_paginate:last'));
+    list.find('.dataTables_length:last').remove();
+    list.find('.dataTables_length select').addClass('form-control-sm');
 
-$('table[id^=table-]').each(function() {
-  $(this).addClass('table table-sm table-bordered table-responsive');
-  var toolbar = $(this).find('.btn-toolbar');
-  toolbar.removeClass('mb-2');
-  toolbar.parents('thead').find('.btn-group').addClass('mb-2');
-  toolbar.find('.btn').addClass('btn-sm mr-1');
-  toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar px-2 pt-2 pb-0');
-  toolbar.parent('tfoot th').addClass('jc-toolbar jc-footer-toolbar p-2');
-});
+    list.find('.dataTables_length').wrap('<div class="col-md-6 float-none">');
+    list.find('.dataTables_filter').wrap('<div class="col-md-6 float-sm-none float-md-right">');
+    list.find('.dataTables_info').wrap('<div class="col-6 d-none d-lg-block">');
+    list.find('.dataTables_paginate').wrap('<div class="col-6 d-none d-lg-block">');
+  });
+
+  $('table[id^=table-]').each(function() {
+    $(this).addClass('table table-sm table-bordered table-responsive');
+    var toolbar = $(this).find('.btn-toolbar');
+    toolbar.removeClass('mb-2');
+    toolbar.parents('thead').find('.btn-group').addClass('mb-2');
+    toolbar.find('.btn').addClass('btn-sm mr-1');
+    toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar px-2 pt-2 pb-0');
+    toolbar.parent('tfoot th').addClass('jc-toolbar jc-footer-toolbar p-2');
+  });
+}
 
 /* global THEME_COLORBOX_URL */
 
