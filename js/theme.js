@@ -107,8 +107,12 @@ if ($('a[onclick]').attr('href') === '#') {
   $('a[onclick]').attr('href', 'javascript:void(0)');
 }
 
-
-
+// Change blocks page uses old markup. Temporary fix
+$('#change_blocks').each(function() {
+  $(this).removeAttr('border').addClass('table');
+  $(this).find('.topbottombar:first').addClass('pl-0');
+  $(this).find('.topbottombar:last').addClass('text-right pr-0');
+})
 // Tweak the datatables made by webtrees
 // target = column number - 1
 

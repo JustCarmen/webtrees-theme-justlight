@@ -7825,6 +7825,12 @@ h2 {
   font-size: 0.875rem;
 }
 
+.optionbox,
+.descriptionbox,
+.topbottombar {
+  border-color: #cbd3da;
+}
+
 /*** Body ***/
 .wt-global {
   color: #212529;
