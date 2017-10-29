@@ -7915,6 +7915,9 @@ h2 {
   height: calc(2.25rem + 2px);
   line-height: 2.25;
 }
+.select2-container--default .select2-selection--single img, .select2-container--default .select2-selection--single .select2-selection__rendered img, .select2-container--default .select2-selection--single .select2-selection__arrow img {
+  margin-top: -.25rem;
+}
 .input-group-addon + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
