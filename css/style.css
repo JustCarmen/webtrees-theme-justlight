@@ -7918,6 +7918,10 @@ h2 {
 .select2-container--default .select2-selection--single img, .select2-container--default .select2-selection--single .select2-selection__rendered img, .select2-container--default .select2-selection--single .select2-selection__arrow img {
   margin-top: -.25rem;
 }
+.input-group .select2-container--default .select2-selection--single {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .input-group-addon + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -7929,6 +7933,10 @@ h2 {
 .input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, .input-group .jc-view-report-setup .input-group-btn + input.select2 + .select2-container--default .select2-selection--single, .jc-view-report-setup .input-group .input-group-btn + input.select2 + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.select2-container--default + .input-group-addon {
+  border-left: 0;
 }
 
 .col-form-label .wt-icon-help {
