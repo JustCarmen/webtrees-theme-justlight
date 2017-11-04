@@ -15,12 +15,8 @@ $babyblue:                  #d7eaf9;
 $babypink:                  #fff0f5;
 
 // Theme colors
-$theme-colors: (
-  primary: $blue,
-  secondary: $gray-200
-);
-
-$primary-color: theme-color("primary");
+$primary:                   $blue;
+$secondary:                 $gray-200;
 
 // overwrite font-awesome icons used by webtrees
 $webtrees-fa-icons: (

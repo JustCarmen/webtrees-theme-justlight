@@ -1,5 +1,4 @@
 // Declaration of theme specific gradients
-// Needs latest Compass, add '@import "compass"' to your scss
 // Permalinks are used to edit these gradients:
 // Use the prefix 'jl-' here.
 
@@ -7,29 +6,29 @@
 // Gradient for table, card headers, buttons etc.
 // =======================================================================================
 @mixin jl-theme-gradient() {
-  @include background-image(linear-gradient(top,  theme-color(primary) 0, theme-color-level(primary, 4) 50%));
+  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
   &, a, .fa {
     color: $white;
   } 
 }
 
 @mixin jl-theme-gradient-hover() {
-  @include background-image(linear-gradient(top,  theme-color-level(primary, 2), theme-color-level(primary, 6) 100%));
+  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
 }
 
 @mixin jl-theme-gradient-light() {
-  @include background-image(linear-gradient(top,  $gray-100 0%, $gray-400 100%));
+  background: linear-gradient($gray-100 0%, $gray-400 100%);
   &, a, .fa {
     color: $body-color;
   }
 }
 
 @mixin jl-theme-gradient-light-hover() {
-  @include background-image(linear-gradient(top,  $gray-200 0%, $gray-500 100%));
+  background: linear-gradient($gray-200 0%, $gray-500 100%);
 }
 
 @mixin jl-header-gradient() {
-  @include background-image(linear-gradient(top,  $white 0, $gray-100 100%));
+  background: linear-gradient($white 0, $gray-100 100%);
   border-top: 5px solid theme-color(primary);
   border-bottom: $border-width solid $gray-200;
   // shadow is off by default in this theme. We only use it at two places. The header gradient and the dropdown menus.
