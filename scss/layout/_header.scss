@@ -46,6 +46,12 @@
     @extend .pb-1;
   }
 
+  .dropdown-item {
+    &.active {
+      @include jl-button-gradient;
+    }
+  }
+
   .dropdown-toggle:after {
     vertical-align: middle;
   }

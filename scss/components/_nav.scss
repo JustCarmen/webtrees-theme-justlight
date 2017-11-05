@@ -2,7 +2,7 @@
 .nav-pills {
   .nav-link:not(.active) {
     @include hover-focus {
-      background-color: $gray-200;
+      background-color: $dropdown-link-active-bg;
     }
   }
 }

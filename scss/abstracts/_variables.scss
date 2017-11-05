@@ -18,6 +18,10 @@ $babypink:                  #fff0f5;
 $primary:                   $blue;
 $secondary:                 $gray-200;
 
+// Components
+$component-active-color:    $primary;
+$component-active-bg:       $gray-200;
+
 // overwrite font-awesome icons used by webtrees
 $webtrees-fa-icons: (
   fa-plus: 'f0fe' // fa-plus replaced with fa-plus-square
@@ -47,6 +51,9 @@ $card-cap-bg:                       $gray-100;
 
 // Tables
 $table-accent-bg:                   $gray-100;
+
+// Buttons
+$input-btn-focus-width:             0;
 
 // Facts tables
 $facts-table-header-bg:             $gray-200;
