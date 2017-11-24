@@ -184,9 +184,8 @@ class JustLightTheme extends JustBaseTheme {
    */
   protected function setFluidClass() {
     $pages   = ['individual'];
-    $modules = ['tree'];
 
-    if (in_array($this->getPage(), $pages) || (in_array(Filter::get('mod'), $modules))) {
+    if (in_array($this->getPage(), $pages)) {
       return '-fluid px-5'; // container-fluid
     }
   }
