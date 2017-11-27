@@ -19,53 +19,51 @@
 namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\Auth;
-use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\Html;
 use Fisharebest\Webtrees\I18N;
 
 class JustLightTheme extends JustBaseTheme {
+	const THEME_VERSION = '2.0.0';
+	const THEME_NAME    = 'JustLight';
+	const THEME_DIR     = 'justlight';
+	const ASSET_DIR     = 'themes/' . self::THEME_DIR . '/css/';
+	const STYLESHEET    = self::ASSET_DIR . 'style.css?v' . self::THEME_VERSION;
+	const JAVASCRIPT    = 'themes/' . self::THEME_DIR . '/js/theme.js?v' . self::THEME_VERSION;
 
-  const THEME_VERSION = '2.0.0';
-  const THEME_NAME    = 'JustLight';
-  const THEME_DIR     = 'justlight';
-  const ASSET_DIR     = 'themes/' . self::THEME_DIR . '/css/';
-  const STYLESHEET    = self::ASSET_DIR . 'style.css?v' . self::THEME_VERSION;
-  const JAVASCRIPT    = 'themes/' . self::THEME_DIR . '/js/theme.js?v' . self::THEME_VERSION;
+	/** {@inheritdoc} */
+	public function bodyHeader() {
+		return
+		'<body class="wt-global' . $this->getPageGlobalClass() . ' theme-' . self::THEME_DIR . '">' .
+		'<header class="wt-header-wrapper px-5 mb-3">' .
+		'<div class="wt-header-container">' .
+		'<div class="row wt-header-content mb-3">' .
+		$this->headerContent() .
+		'</div>' .
+		'</div>' .
+		$this->primaryMenuContainer($this->primaryMenu()) .
+		'</header>' .
+		$this->fancyImagebar() .
+		'<main id="content" class="container' . $this->setFluidClass() . ' wt-main-wrapper mt-3">' .
+		'<div class="wt-main-container">' .
+		$this->flashMessagesContainer(FlashMessages::getMessages());
+	}
 
-  /** {@inheritdoc} */
-  public function bodyHeader() {
-    return
-        '<body class="wt-global' . $this->getPageGlobalClass() . ' theme-' . self::THEME_DIR . '">' .
-        '<header class="wt-header-wrapper px-5 mb-3">' .
-        '<div class="wt-header-container">' .
-        '<div class="row wt-header-content mb-3">' .
-        $this->headerContent() .
-        '</div>' .
-        '</div>' .
-        $this->primaryMenuContainer($this->primaryMenu()) .
-        '</header>' .
-        $this->fancyImagebar() .
-        '<main id="content" class="container' . $this->setFluidClass() . ' wt-main-wrapper mt-3">' .
-        '<div class="wt-main-container">' .
-        $this->flashMessagesContainer(FlashMessages::getMessages());
-  }
+	/** {@inheritdoc} */
+	public function formatTreeTitle() {
+		if ($this->tree) {
+			return
+		  '<h1 class="col wt-site-title">' . $this->formatTreeTitleLink() . '</h1>';
+		} else {
+			return '';
+		}
+	}
 
-  /** {@inheritdoc} */
-  public function formatTreeTitle() {
-    if ($this->tree) {
-      return
-          '<h1 class="col wt-site-title">' . $this->formatTreeTitleLink() . '</h1>';
-    } else {
-      return '';
-    }
-  }
-
-   /**
-    * {@inheritdoc}
-    *
-    * responsive layout - use small buttons on small screens
-   */
+	/**
+	* {@inheritdoc}
+	*
+	* responsive layout - use small buttons on small screens
+	*/
 	protected function formQuickSearchFields() {
 		return
 			'<div class="input-group">' .
@@ -77,129 +75,129 @@ class JustLightTheme extends JustBaseTheme {
 			'</div>';
 	}
 
-  /** {@inheritdoc} */
-  protected function headerContent() {
-    return
-        $this->accessibilityLinks() .
-        '<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-2">' .
-        $this->logoHeader() .
-        $this->formatTreeTitle() .
-        '</div>' .
-        '<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">' .
-        '<div class="wt-secondary-menu d-flex">' .
-        $this->secondaryMenuContainer($this->secondaryMenu()) .
-        '</div>' .
-        $this->formQuickSearch() .
-        '</div>';
-  }
+	/** {@inheritdoc} */
+	protected function headerContent() {
+		return
+		$this->accessibilityLinks() .
+		'<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-2">' .
+		$this->logoHeader() .
+		$this->formatTreeTitle() .
+		'</div>' .
+		'<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">' .
+		'<div class="wt-secondary-menu d-flex">' .
+		$this->secondaryMenuContainer($this->secondaryMenu()) .
+		'</div>' .
+		$this->formQuickSearch() .
+		'</div>';
+	}
 
-  public function hookHeaderExtraContent() {
-    return '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">';
-  }
+	public function hookHeaderExtraContent() {
+		return '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">';
+	}
 
-  public function menuMyPages() {
-    $menu = parent::menuMyPages();
-    if (Auth::id()) {
-      $menu->addSubmenu($this->menuLogout());
-    }
-    return $menu;
-  }
+	public function menuMyPages() {
+		$menu = parent::menuMyPages();
+		if (Auth::id()) {
+			$menu->addSubmenu($this->menuLogout());
+		}
+		return $menu;
+	}
 
-  /**
-   * Do not use the default class 'col wt-primary navigation' here.
-   * It causes an horizontal overflow in our design
-   *
-   * {@inheritdoc}
-   */
-  protected function primaryMenuContainer(array $menus) {
-    return '<nav class="jc-primary-navigation px-0"><ul class="nav nav-pills wt-primary-menu justify-content-start">' . $this->primaryMenuContent($menus) . '</ul></nav>';
-  }
+	/**
+	 * Do not use the default class 'col wt-primary navigation' here.
+	 * It causes an horizontal overflow in our design
+	 *
+	 * {@inheritdoc}
+	 */
+	protected function primaryMenuContainer(array $menus) {
+		return '<nav class="jc-primary-navigation px-0"><ul class="nav nav-pills wt-primary-menu justify-content-start">' . $this->primaryMenuContent($menus) . '</ul></nav>';
+	}
 
-  /** (@inheritdoc) */
-  public function secondaryMenu() {
-    return array_filter([
-        $this->menuMyPages(),
-        $this->menuFavorites(),
-        $this->menuThemes(),
-        $this->menuLanguages(),
-        $this->menuLogin()
-    ]);
-  }
+	/** (@inheritdoc) */
+	public function secondaryMenu() {
+		return array_filter([
+		$this->menuMyPages(),
+		$this->menuFavorites(),
+		$this->menuThemes(),
+		$this->menuLanguages(),
+		$this->menuLogin()
+	]);
+	}
 
-  /**
-   * Render this menu using Bootstrap4 markup
-   * We use buttons in stead of links in this theme
-   *
-   * @return string
-   */
-  public function secondaryMenuContainer(array $menus) {
-    $html = '';
-    foreach ($menus as $menu) {
-      if ($menu->getSubmenus()) {
-        $submenus = '';
-        foreach ($menu->getSubmenus() as $submenu) {
-          $attrs = '';
-          foreach ($submenu->getAttrs() as $key => $value) {
-            $attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
-          }
+	/**
+	 * Render this menu using Bootstrap4 markup
+	 * We use buttons in stead of links in this theme
+	 *
+	 * @return string
+	 */
+	public function secondaryMenuContainer(array $menus) {
+		$html = '';
+		foreach ($menus as $menu) {
+			if ($menu->getSubmenus()) {
+				$submenus = '';
+				foreach ($menu->getSubmenus() as $submenu) {
+					$attrs = '';
+					foreach ($submenu->getAttrs() as $key => $value) {
+						$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
+					}
 
-          $class    = trim('dropdown-item ' . $submenu->getClass());
-          $submenus .= '<a class="' . $class . '" href="' . $submenu->getLink() . '"' . $attrs . '>' . $submenu->getLabel() . '</a>';
-        }
+					$class    = trim('dropdown-item ' . $submenu->getClass());
+					$submenus .= '<a class="' . $class . '" href="' . $submenu->getLink() . '"' . $attrs . '>' . $submenu->getLabel() . '</a>';
+				}
 
-        $class = trim('nav-item dropdown ' . $menu->getClass());
+				$class = trim('nav-item dropdown ' . $menu->getClass());
 
-        $html .= '<div class="' . $menu->getClass() . ' btn-group">' .
-            '<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
-            '<span class="menu-label">' . $menu->getLabel() . '</span>' .
-            '<i class="caret"></i>' .
-            '</button>' .
-            '<div class="dropdown-menu" role="menu">' .
-            $submenus .
-            '</div>' .
-            '</div>';
-      } else {
-        $attrs = '';
-        foreach ($menu->getAttrs() as $key => $value) {
-          $attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
-        }
+				$html .= '<div class="' . $menu->getClass() . ' btn-group">' .
+			'<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
+			'<span class="menu-label">' . $menu->getLabel() . '</span>' .
+			'<i class="caret"></i>' .
+			'</button>' .
+			'<div class="dropdown-menu" role="menu">' .
+			$submenus .
+			'</div>' .
+			'</div>';
+			} else {
+				$attrs = '';
+				foreach ($menu->getAttrs() as $key => $value) {
+					$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
+				}
 
-        $class = trim($menu->getClass() . ' btn-group');
+				$class = trim($menu->getClass() . ' btn-group');
 
-        if ($menu->getClass() === 'menu-login') {
-          $btn_class = 'btn-secondary';
-        } else {
-          $btn_class = 'btn-primary';
-        }
+				if ($menu->getClass() === 'menu-login') {
+					$btn_class = 'btn-secondary';
+				} else {
+					$btn_class = 'btn-primary';
+				}
 
-        $html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
-      }
-    }
+				$html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
+			}
+		}
 
-    return $html;
-  }
+		return $html;
+	}
 
-  /**
-   * In this theme we use full width pages on some pages
-   */
-  protected function setFluidClass() {
-    $pages   = ['individual'];
+	/**
+	 * In this theme we use full width pages on some pages
+	 */
+	protected function setFluidClass() {
+		$pages   = ['individual'];
 
-    if (in_array($this->getPage(), $pages)) {
-      return '-fluid px-5'; // container-fluid
-    }
-  }
+		if (in_array($this->getPage(), $pages)) {
+			return '-fluid px-5'; // container-fluid
+		}
+	}
 
-  /** @inheritdoc} */
-  public function stylesheets() {
-    return array_merge(
-      parent::stylesheets(), [self::STYLESHEET]
-    );
-  }
+	/** @inheritdoc} */
+	public function stylesheets() {
+		return array_merge(
+	  parent::stylesheets(),
+		[self::STYLESHEET]
+	);
+	}
 
-  /** {@inheritdoc} */
-  public function themeName() {
-    return /* I18N: Name of a theme. */ I18N::translate(self::THEME_NAME);
-  }
-
+	/** {@inheritdoc} */
+	public function themeName() {
+		return /* I18N: Name of a theme. */ I18N::translate(self::THEME_NAME);
+	}
 }

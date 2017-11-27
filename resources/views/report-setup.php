@@ -2,7 +2,7 @@
 <?php use Fisharebest\Webtrees\I18N; ?>
 
 <h2 class="wt-page-title">
-	<?= I18N::translate("Report") . ' - ' . $title ?><br/>
+	<?= I18N::translate('Report') . ' - ' . $title ?><br/>
   <small class="text-muted"><?= $description ?></small>
 </h2>
 <hr/>
