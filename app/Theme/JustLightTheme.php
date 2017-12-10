@@ -141,7 +141,7 @@ class JustLightTheme extends JustBaseTheme {
 						$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
 					}
 
-					$class    = trim('dropdown-item ' . $submenu->getClass());
+					$class = trim('dropdown-item ' . $submenu->getClass());
 					$submenus .= '<a class="' . $class . '" href="' . $submenu->getLink() . '"' . $attrs . '>' . $submenu->getLabel() . '</a>';
 				}
 
@@ -181,7 +181,7 @@ class JustLightTheme extends JustBaseTheme {
 	 * In this theme we use full width pages on some pages
 	 */
 	protected function setFluidClass() {
-		$pages   = ['individual'];
+		$pages = ['individual'];
 
 		if (in_array($this->getPage(), $pages)) {
 			return '-fluid px-5'; // container-fluid

@@ -35,10 +35,10 @@ switch (Filter::post('action', null, Filter::get('action'))) {
 	case 'imagetype':
 		$xrefs = Filter::postArray('xrefs');
 
-		$data = array();
+		$data = [];
 		foreach ($xrefs as $xref) {
-			$row		 = Database::prepare('SELECT m_type as imagetype FROM `##media` WHERE m_id=?')
-				->execute(array($xref))
+			$row = Database::prepare('SELECT m_type as imagetype FROM `##media` WHERE m_id=?')
+				->execute([$xref])
 				->fetchOneRow();
 			$data[$xref] = $row->imagetype;
 		};

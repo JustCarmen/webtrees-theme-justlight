@@ -278,11 +278,9 @@ class JustBaseTheme extends MinimalTheme {
 		$content = '<span class="namedef name1">' . $individual->getFullName() . '</span>';
 		$icons   = '';
 		if ($individual->canShow()) {
-			$content =
-				'<a href="' . $individual->getHtmlUrl() . '">' . $content . '</a>' .
+			$content = '<a href="' . $individual->getHtmlUrl() . '">' . $content . '</a>' .
 				'<div class="namedef name1">' . $individual->getAddName() . '</div>';
-			$icons   =
-				'<div class="icons order-2">' .
+			$icons = '<div class="icons order-2">' .
 				'<span class="iconz icon-zoomin" title="' . I18N::translate('Zoom in/out on this box.') . '"></span>' .
 				'<div class="itr"><i class="icon-pedigree"></i><div class="popup">' .
 				'<ul class="' . $personBoxClass . '">' . implode('', array_map(function (Menu $menu) {
