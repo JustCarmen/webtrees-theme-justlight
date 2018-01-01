@@ -9085,8 +9085,16 @@ h2 {
   content: "\f010";
 }
 
-.fa-trash-o:before {
+.fa-trash-alt {
+  font-weight: 900;
+}
+
+.fa-trash-alt:before {
   content: "\f00d";
+}
+
+.fa-plus {
+  font-weight: 900;
 }
 
 .fa-plus:before {
