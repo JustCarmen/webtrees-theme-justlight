@@ -10222,12 +10222,12 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 /*** Icons ***/
 .fa-plus,
 .icon-selected {
-  color: !important;
+  color: #28a745 !important;
 }
 
 .fa-trash-o,
 .fa-map-marker {
-  color: !important;
+  color: #b80000 !important;
 }
 
 .wt-header-search .fa-search {
