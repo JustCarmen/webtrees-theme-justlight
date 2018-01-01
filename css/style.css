@@ -9297,6 +9297,11 @@ h2 {
   margin-bottom: .25rem;
 }
 
+.card.wt-osk {
+  position: fixed;
+  display: none;
+}
+
 .card-header {
   padding-top: .5rem;
   padding-bottom: .5rem;
