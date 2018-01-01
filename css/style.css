@@ -8962,53 +8962,74 @@ h2 {
   font-family: "icomoon";
 }
 
-.fa,
-a.fa {
+.fa, .fab, .fal, .far, .fas, a.fa, a.fab, a.fal, a.far, a.fas {
   color: #212529;
   text-decoration: none;
 }
 
-.fa:hover,
-a.fa:hover {
+.fa:hover, .fab:hover, .fal:hover, .far:hover, .fas:hover, a.fa:hover, a.fab:hover, a.fal:hover, a.far:hover, a.fas:hover {
   color: #0a0c0d;
 }
 
-.input-group-addon .fa,
+.input-group-addon .fa, .input-group-addon .fab, .input-group-addon .fal, .input-group-addon .far, .input-group-addon .fas,
 .input-group-btn .fa,
-.btn-secondary .fa, .btn-text .fa, .input-group-addon
-a.fa,
-.input-group-btn
-a.fa,
-.btn-secondary
-a.fa,
-.btn-text
-a.fa {
+.input-group-btn .fab,
+.input-group-btn .fal,
+.input-group-btn .far,
+.input-group-btn .fas,
+.btn-secondary .fa, .btn-text .fa,
+.btn-secondary .fab, .btn-text .fab,
+.btn-secondary .fal, .btn-text .fal,
+.btn-secondary .far, .btn-text .far,
+.btn-secondary .fas, .btn-text .fas, .input-group-addon a.fa, .input-group-addon a.fab, .input-group-addon a.fal, .input-group-addon a.far, .input-group-addon a.fas,
+.input-group-btn a.fa,
+.input-group-btn a.fab,
+.input-group-btn a.fal,
+.input-group-btn a.far,
+.input-group-btn a.fas,
+.btn-secondary a.fa, .btn-text a.fa,
+.btn-secondary a.fab, .btn-text a.fab,
+.btn-secondary a.fal, .btn-text a.fal,
+.btn-secondary a.far, .btn-text a.far,
+.btn-secondary a.fas, .btn-text a.fas {
   color: #212529;
 }
 
-.input-group-addon .fa:hover,
+.input-group-addon .fa:hover, .input-group-addon .fab:hover, .input-group-addon .fal:hover, .input-group-addon .far:hover, .input-group-addon .fas:hover,
 .input-group-btn .fa:hover,
-.btn-secondary .fa:hover, .btn-text .fa:hover, .input-group-addon
-a.fa:hover,
-.input-group-btn
-a.fa:hover,
-.btn-secondary
-a.fa:hover,
-.btn-text
-a.fa:hover {
+.input-group-btn .fab:hover,
+.input-group-btn .fal:hover,
+.input-group-btn .far:hover,
+.input-group-btn .fas:hover,
+.btn-secondary .fa:hover, .btn-text .fa:hover,
+.btn-secondary .fab:hover, .btn-text .fab:hover,
+.btn-secondary .fal:hover, .btn-text .fal:hover,
+.btn-secondary .far:hover, .btn-text .far:hover,
+.btn-secondary .fas:hover, .btn-text .fas:hover, .input-group-addon a.fa:hover, .input-group-addon a.fab:hover, .input-group-addon a.fal:hover, .input-group-addon a.far:hover, .input-group-addon a.fas:hover,
+.input-group-btn a.fa:hover,
+.input-group-btn a.fab:hover,
+.input-group-btn a.fal:hover,
+.input-group-btn a.far:hover,
+.input-group-btn a.fas:hover,
+.btn-secondary a.fa:hover, .btn-text a.fa:hover,
+.btn-secondary a.fab:hover, .btn-text a.fab:hover,
+.btn-secondary a.fal:hover, .btn-text a.fal:hover,
+.btn-secondary a.far:hover, .btn-text a.far:hover,
+.btn-secondary a.fas:hover, .btn-text a.fas:hover {
   color: #0a0c0d;
 }
 
-.btn-primary .fa, input[type="submit"] .fa,
+.btn-primary .fa, input[type="submit"] .fa, .btn-primary .fab, input[type="submit"] .fab, .btn-primary .fal, input[type="submit"] .fal, .btn-primary .far, input[type="submit"] .far, .btn-primary .fas, input[type="submit"] .fas,
 .btn-primary .fa:hover, input[type="submit"] .fa:hover,
-.btn-primary
-a.fa,
-input[type="submit"]
-a.fa,
-.btn-primary
-a.fa:hover,
-input[type="submit"]
-a.fa:hover {
+.btn-primary .fab:hover, input[type="submit"] .fab:hover,
+.btn-primary .fal:hover, input[type="submit"] .fal:hover,
+.btn-primary .far:hover, input[type="submit"] .far:hover,
+.btn-primary .fas:hover, input[type="submit"] .fas:hover, .btn-primary a.fa, input[type="submit"] a.fa, .btn-primary a.fab, input[type="submit"] a.fab, .btn-primary a.fal, input[type="submit"] a.fal, .btn-primary a.far, input[type="submit"] a.far, .btn-primary a.fas, input[type="submit"] a.fas,
+.btn-primary a.fa:hover, input[type="submit"] a.fa:hover,
+.btn-primary a.fab:hover, input[type="submit"] a.fab:hover,
+.btn-primary a.fal:hover, input[type="submit"] a.fal:hover,
+.btn-primary a.far:hover, input[type="submit"] a.far:hover,
+.btn-primary a.fas:hover, input[type="submit"] a.fas:hover {
   color: #fff;
 }
 
@@ -10096,7 +10117,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   padding: 0.25rem 0.5rem;
 }
 
-.wt-header-search .btn-primary, .wt-header-search input[type="submit"], .wt-header-search .btn-primary a, .wt-header-search input[type="submit"] a, .wt-header-search .btn-primary .fa, .wt-header-search input[type="submit"] .fa {
+.wt-header-search .btn-primary, .wt-header-search input[type="submit"], .wt-header-search .btn-primary a, .wt-header-search input[type="submit"] a, .wt-header-search .btn-primary .fa, .wt-header-search input[type="submit"] .fa, .wt-header-search .btn-primary .fab, .wt-header-search input[type="submit"] .fab, .wt-header-search .btn-primary .fal, .wt-header-search input[type="submit"] .fal, .wt-header-search .btn-primary .far, .wt-header-search input[type="submit"] .far, .wt-header-search .btn-primary .fas, .wt-header-search input[type="submit"] .fas {
   color: #fff;
 }
 
@@ -10118,10 +10139,14 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-primary-navigation .nav-link.active, .jc-primary-navigation .nav-link.active a, .jc-primary-navigation .nav-link.active .fa,
+.jc-primary-navigation .nav-link.active, .jc-primary-navigation .nav-link.active a, .jc-primary-navigation .nav-link.active .fa, .jc-primary-navigation .nav-link.active .fab, .jc-primary-navigation .nav-link.active .fal, .jc-primary-navigation .nav-link.active .far, .jc-primary-navigation .nav-link.active .fas,
 .jc-primary-navigation .dropdown-item.active,
 .jc-primary-navigation .dropdown-item.active a,
-.jc-primary-navigation .dropdown-item.active .fa {
+.jc-primary-navigation .dropdown-item.active .fa,
+.jc-primary-navigation .dropdown-item.active .fab,
+.jc-primary-navigation .dropdown-item.active .fal,
+.jc-primary-navigation .dropdown-item.active .far,
+.jc-primary-navigation .dropdown-item.active .fas {
   color: #fff;
 }
 
@@ -10148,7 +10173,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-secondary-navigation .dropdown-item.active, .jc-secondary-navigation .dropdown-item.active a, .jc-secondary-navigation .dropdown-item.active .fa {
+.jc-secondary-navigation .dropdown-item.active, .jc-secondary-navigation .dropdown-item.active a, .jc-secondary-navigation .dropdown-item.active .fa, .jc-secondary-navigation .dropdown-item.active .fab, .jc-secondary-navigation .dropdown-item.active .fal, .jc-secondary-navigation .dropdown-item.active .far, .jc-secondary-navigation .dropdown-item.active .fas {
   color: #fff;
 }
 
@@ -10190,7 +10215,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   font-weight: 500;
 }
 
-.nav-tabs .nav-link, .nav-tabs .nav-link a, .nav-tabs .nav-link .fa {
+.nav-tabs .nav-link, .nav-tabs .nav-link a, .nav-tabs .nav-link .fa, .nav-tabs .nav-link .fab, .nav-tabs .nav-link .fal, .nav-tabs .nav-link .far, .nav-tabs .nav-link .fas {
   color: #212529;
 }
 
@@ -10202,7 +10227,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.nav-tabs .nav-link.active, .nav-tabs .nav-link.active a, .nav-tabs .nav-link.active .fa {
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active a, .nav-tabs .nav-link.active .fa, .nav-tabs .nav-link.active .fab, .nav-tabs .nav-link.active .fal, .nav-tabs .nav-link.active .far, .nav-tabs .nav-link.active .fas {
   color: #fff;
 }
 
@@ -10240,7 +10265,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.btn-primary, input[type="submit"], .btn-primary a, input[type="submit"] a, .btn-primary .fa, input[type="submit"] .fa {
+.btn-primary, input[type="submit"], .btn-primary a, input[type="submit"] a, .btn-primary .fa, input[type="submit"] .fa, .btn-primary .fab, input[type="submit"] .fab, .btn-primary .fal, input[type="submit"] .fal, .btn-primary .far, input[type="submit"] .far, .btn-primary .fas, input[type="submit"] .fas {
   color: #fff;
 }
 
@@ -10252,7 +10277,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
 }
 
-.btn-secondary, .btn-text, .btn-secondary a, .btn-text a, .btn-secondary .fa, .btn-text .fa {
+.btn-secondary, .btn-text, .btn-secondary a, .btn-text a, .btn-secondary .fa, .btn-text .fa, .btn-secondary .fab, .btn-text .fab, .btn-secondary .fal, .btn-text .fal, .btn-secondary .far, .btn-text .far, .btn-secondary .fas, .btn-text .fas {
   color: #212529;
 }
 
@@ -10269,7 +10294,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: none;
 }
 
-.card-header, .card-header a, .card-header .fa {
+.card-header, .card-header a, .card-header .fa, .card-header .fab, .card-header .fal, .card-header .far, .card-header .fas {
   color: #212529;
 }
 
@@ -10277,7 +10302,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa {
+.jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa, .jc-global-individual .card-header .fab, .jc-global-individual .card-header .fal, .jc-global-individual .card-header .far, .jc-global-individual .card-header .fas {
   color: #fff;
 }
 
@@ -10285,7 +10310,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: #f8f9fa;
 }
 
-.jc-global-individual .card-header#name-header-add, .jc-global-individual .card-header#name-header-add a, .jc-global-individual .card-header#name-header-add .fa {
+.jc-global-individual .card-header#name-header-add, .jc-global-individual .card-header#name-header-add a, .jc-global-individual .card-header#name-header-add .fa, .jc-global-individual .card-header#name-header-add .fab, .jc-global-individual .card-header#name-header-add .fal, .jc-global-individual .card-header#name-header-add .far, .jc-global-individual .card-header#name-header-add .fas {
   color: #212529;
 }
 
@@ -10328,10 +10353,14 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
 }
 
-.jc-global-individual .wt-facts-table[role="presentation"] td, .jc-global-individual .wt-facts-table[role="presentation"] td a, .jc-global-individual .wt-facts-table[role="presentation"] td .fa,
+.jc-global-individual .wt-facts-table[role="presentation"] td, .jc-global-individual .wt-facts-table[role="presentation"] td a, .jc-global-individual .wt-facts-table[role="presentation"] td .fa, .jc-global-individual .wt-facts-table[role="presentation"] td .fab, .jc-global-individual .wt-facts-table[role="presentation"] td .fal, .jc-global-individual .wt-facts-table[role="presentation"] td .far, .jc-global-individual .wt-facts-table[role="presentation"] td .fas,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"],
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] a,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fa {
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fa,
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fab,
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fal,
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .far,
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fas {
   color: #212529;
 }
 
