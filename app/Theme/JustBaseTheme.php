@@ -234,8 +234,6 @@ class JustBaseTheme extends MinimalTheme {
 	public function hookFooterExtraJavascript() {
 		return
 		$this->PhpToJavascript($this->hookJavascriptVariables()) .
-		'<script src="' . WT_JQUERY_COLORBOX_URL . '"></script>' .
-		'<script src="' . WT_JQUERY_WHEELZOOM_URL . '"></script>' .
 		'<script src="' . static::JAVASCRIPT . '"></script>';
 	}
 
@@ -506,18 +504,6 @@ class JustBaseTheme extends MinimalTheme {
 		return
 		parent::secondaryMenuContent($menus) .
 		$this->formatQuickSearchIcon();
-	}
-
-	/**
-	 * Remove the bootstrap css.
-	 * We will implement a modified version into this theme
-	 *
-	 * {@inheritdoc}
-	 */
-	public function stylesheets() {
-		return array_merge(
-	  array_diff(parent::stylesheets(), [WT_BOOTSTRAP_CSS_URL])
-	);
 	}
 
 	// Fancy Themes options module
