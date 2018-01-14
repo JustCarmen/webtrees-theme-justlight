@@ -419,12 +419,13 @@ class JustBaseTheme extends MinimalTheme {
 	 * @return string|int|float
 	 */
 	public function parameter($parameter_name) {
+		$path = static::ASSET_DIR . 'css/images/charts/';
 		$parameters = [
-		'image-dline'  => static::ASSET_DIR . 'charts/dline.png',
-		'image-dline2' => static::ASSET_DIR . 'charts/dline2.png',
-		'image-hline'  => static::ASSET_DIR . 'charts/hline.png',
-		'image-spacer' => static::ASSET_DIR . 'charts/spacer.png',
-		'image-vline'  => static::ASSET_DIR . 'charts/vline.png'
+		'image-dline'  => $path . 'dline.png',
+		'image-dline2' => $path . 'dline2.png',
+		'image-hline'  => $path . 'hline.png',
+		'image-spacer' => $path . 'spacer.png',
+		'image-vline'  => $path . 'vline.png'
 	];
 
 		if (WT_SCRIPT_NAME === 'pedigree.php' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
@@ -504,6 +505,16 @@ class JustBaseTheme extends MinimalTheme {
 		return
 		parent::secondaryMenuContent($menus) .
 		$this->formatQuickSearchIcon();
+	}
+
+	/**
+	 * Remove the default css.
+	 * We will implement a modified stylesheet into this theme with sass
+	 *
+	 * {@inheritdoc}
+	 */
+	public function stylesheets() {
+		return [];
 	}
 
 	// Fancy Themes options module

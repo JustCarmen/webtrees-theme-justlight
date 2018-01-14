@@ -27,9 +27,9 @@ class JustLightTheme extends JustBaseTheme {
 	const THEME_VERSION = '2.0.0';
 	const THEME_NAME    = 'JustLight';
 	const THEME_DIR     = 'justlight';
-	const ASSET_DIR     = 'themes/' . self::THEME_DIR . '/css/';
-	const STYLESHEET    = self::ASSET_DIR . 'style.css?v' . self::THEME_VERSION;
-	const JAVASCRIPT    = 'themes/' . self::THEME_DIR . '/js/theme.js?v' . self::THEME_VERSION;
+	const ASSET_DIR     = 'themes/' . self::THEME_DIR . '/assets/';
+	const STYLESHEET    = self::ASSET_DIR . 'css/style.css?v' . self::THEME_VERSION;
+	const JAVASCRIPT    = self::ASSET_DIR . 'js/theme.js?v' . self::THEME_VERSION;
 
 	/** {@inheritdoc} */
 	public function bodyHeader() {
