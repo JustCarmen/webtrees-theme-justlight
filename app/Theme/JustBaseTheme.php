@@ -227,7 +227,11 @@ class JustBaseTheme extends MinimalTheme {
 	 * @return type
 	 */
 	protected function getPage() {
-		return basename(WT_SCRIPT_NAME, '.php');
+		if (Filter::get('route')) {
+			return Filter::get('route');
+		} else {
+			return basename(WT_SCRIPT_NAME, '.php');
+		}
 	}
 
 	/** {@inheritdoc} */
