@@ -10,14 +10,42 @@ module.exports = function(grunt) {
     // ========================================================================================
     // WATCH TASK
     // ========================================================================================
-    watch: {      
+    watch: {
+      config: { // watch JustFancy base theme for changes
+        files: ['../justfancy/app/Theme/JustBaseTheme.php'],
+        tasks: ['copy:config'],
+        options: {
+          spawn: false // Key ‘spawn’ defines whether to seed/repeat the task continuously or not.
+        }
+      },
+      resources: {
+        files: ['../justfancy/resources/*'],
+        tasks: ['copy:resources'],
+        options: {
+          spawn: false
+        }
+      },
+      fonts: {
+        files: ['../justfancy/assets/css/fonts/*'],
+        tasks: ['copy:fonts'],
+        options: {
+          spawn: false
+        }
+      },
+      other: {
+        files: ['../justfancy/.php_cs', '../justfancy/.gitattributes', '../justfancy/.gitignore'],
+        tasks: ['copy:other'],
+        options: {
+          spawn: false
+        }
+      },
       scss: {
         files: ['assets/scss/*.scss'],
         tasks: ['default'],
         options: {
           spawn: false
         }
-      },      
+      },
       js: {
         files: ['assets/js/src/*.js'],
         tasks: ['concat'],
@@ -44,7 +72,7 @@ module.exports = function(grunt) {
           sourceMap: true
 
         },
-        files: {          
+        files: {
           'assets/css/style.css': ['assets/scss/style.scss']
         }
       }
@@ -110,10 +138,28 @@ module.exports = function(grunt) {
     },
 
     // ========================================================================================
+    // PHP CS FIXER
+    //
+    // Source: https://github.com/FriendsOfPHP/PHP-CS-Fixer    //
+    // Configurator: https://mlocati.github.io/php-cs-fixer-configurator/
+    // ========================================================================================
+
+    phpcsfixer: {
+      app: {
+          dir: ''
+      },
+      options: {
+          bin: '../../vendor/bin/php-cs-fixer',
+          configfile: '.php_cs',
+          quiet: true
+      }
+    },
+
+    // ========================================================================================
     // COPY TASK
     // ========================================================================================
     copy: {
-      basetheme: {
+      config: {
         files: [{
           src: '../justfancy/app/Theme/JustBaseTheme.php',
           dest: 'app/Theme/JustBaseTheme.php'
@@ -145,15 +191,28 @@ module.exports = function(grunt) {
       fonts: {
         files: [
           {
-            cwd: '../justfancy/fonts/css/icomoon/',
+            cwd: '../justfancy/assets/css/fonts/',
             src: ['**'],
-            dest: 'assets/css/fonts/icomoon/',
+            dest: 'assets/css/fonts/',
             expand: true
-          },
+          }
         ]
+      },
+
+      other: {
+       files: [{
+         cwd: '../justfancy',
+         src: [
+           '.php_cs',
+           '.gitattributes',
+           '.gitignore'
+         ],
+         dest: '',
+         expand: true
+       }]
       }
     }
-  });
+  }); // end of grunt configuration
 
   // ========================================================================================
   // TASKS
@@ -162,8 +221,8 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass:dev', 'postcss:default']);
 
   // Custom tasks (development)
-  grunt.registerTask('_dev-theme', ['sass:dev', 'postcss:default', 'concat', 'copy']);
+  grunt.registerTask('_dev-theme', ['sass:dev', 'postcss:default', 'concat', 'copy', 'phpcsfixer']);
 
   // Custom tasks (distribution)
-  grunt.registerTask('_dist-theme', ['sass:dev', 'postcss', 'concat', 'uglify', 'copy']);
+  grunt.registerTask('_dist-theme', ['_dev-theme', 'postcss:dist', 'uglify']);
 };

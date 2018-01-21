@@ -210,11 +210,6 @@ class JustBaseTheme extends MinimalTheme {
 			$class .= '-' . $module;
 		}
 
-		$ctype = Filter::get('ctype');
-		if ($ctype) {
-			$class .= $class . '-' . $ctype;
-		}
-
 		if (in_array($this->getPage(), $this->getListPages())) {
 			$class .= ' jc-global-listpage';
 		}
@@ -423,7 +418,7 @@ class JustBaseTheme extends MinimalTheme {
 	 * @return string|int|float
 	 */
 	public function parameter($parameter_name) {
-		$path = static::ASSET_DIR . 'css/images/charts/';
+		$path       = static::ASSET_DIR . 'css/images/charts/';
 		$parameters = [
 		'image-dline'  => $path . 'dline.png',
 		'image-dline2' => $path . 'dline2.png',
