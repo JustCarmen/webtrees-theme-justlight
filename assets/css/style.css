@@ -17851,6 +17851,22 @@ h2 {
   font-size: 1.25rem;
 }
 
+.fa-arrow-start::before {
+  content: "\f060";
+}
+
+[dir=rtl] .fa-arrow-start::before {
+  content: "\f061";
+}
+
+.fa-arrow-end::before {
+  content: "\f061";
+}
+
+[dir=rtl] .fa-arrow-end::before {
+  content: "\f060";
+}
+
 .jc-global-individual .wt-silhouette-F::before, .jc-global-individual .wt-silhouette-M::before, .jc-global-individual .wt-silhouette-U::before {
   font-size: 6rem;
 }
