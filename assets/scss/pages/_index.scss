@@ -19,19 +19,11 @@
     }
 
     h2 {
-      @extend .mb-0;
-      @extend .pb-3;
       border-bottom: $border-width solid $gray-200;
     }
   }
 
-  .wt-main-blocks {
-    @extend .col-sm-9;
-    @extend .py-3;
-  }
   .wt-side-blocks {
-    @extend .col-sm-3;
-    @extend .py-3;
     border-left: $border-width solid $gray-200;
   }
 }
