@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         }
       },
       scss: {
-        files: ['assets/scss/*.scss'],
+        files: ['assets/scss/**/*.scss'],
         tasks: ['default'],
         options: {
           spawn: false
