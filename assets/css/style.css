@@ -10961,11 +10961,11 @@ button.bg-dark:hover {
 }
 
 .m-0, div[id^="caldiv"] table,
-div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .card {
+div[id^="calendar-widget"] table, .faq_title, .wt-side-blocks .card {
   margin: 0 !important;
 }
 
-.mt-0, .jc-global-index-gedcom .wt-main-wrapper,
+.mt-0, .jc-global-tree-page .wt-main-wrapper,
 .my-0 {
   margin-top: 0 !important;
 }
@@ -11105,7 +11105,7 @@ div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .
   margin-left: 3rem !important;
 }
 
-.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-index-gedcom .wt-main-container {
+.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-tree-page .wt-main-container {
   padding: 0 !important;
 }
 
@@ -11113,7 +11113,8 @@ div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .
 .py-0,
 .wt-facts-table caption,
 .faq_title,
-.jc-global-index .card-body {
+.jc-global-tree-page .card-body,
+.jc-global-user-page .card-body {
   padding-top: 0 !important;
 }
 
@@ -11122,11 +11123,12 @@ div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .
   padding-right: 0 !important;
 }
 
-.pb-0, .jc-global-index-user .wt-main-container,
+.pb-0, .jc-global-user-page .wt-main-container,
 .py-0,
 .wt-facts-table caption,
 .faq_title,
-.jc-global-index .card-body {
+.jc-global-tree-page .card-body,
+.jc-global-user-page .card-body {
   padding-bottom: 0 !important;
 }
 
@@ -11174,14 +11176,15 @@ div[id^="calendar-widget"] table, .faq_title, .jc-global-index .wt-side-blocks .
 }
 
 .p-2, div[id^="caldiv"] table td,
-div[id^="calendar-widget"] table td, .jc-global-individual #relatives_content td, .jc-global-index .wt-side-blocks .card-header, .jc-global-index .wt-side-blocks .card-body {
+div[id^="calendar-widget"] table td, .jc-global-individual #relatives_content td, .wt-side-blocks .card-header, .wt-side-blocks .card-body {
   padding: 0.5rem !important;
 }
 
 .pt-2,
 .py-2,
 .wt-page-options-value,
-.jc-global-index .card-header {
+.jc-global-tree-page .card-header,
+.jc-global-user-page .card-header {
   padding-top: 0.5rem !important;
 }
 
@@ -11193,7 +11196,8 @@ div[id^="calendar-widget"] table td, .jc-global-individual #relatives_content td
 .pb-2, .jc-global-edit_interface form[name="editform"] h3,
 .py-2,
 .wt-page-options-value,
-.jc-global-index .card-header {
+.jc-global-tree-page .card-header,
+.jc-global-user-page .card-header {
   padding-bottom: 0.5rem !important;
 }
 
@@ -18928,7 +18932,8 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 /*** Cards ***/
-.jc-global-index .card {
+.jc-global-tree-page .card,
+.jc-global-user-page .card {
   border: none;
 }
 
@@ -18952,7 +18957,8 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   color: #212529;
 }
 
-.jc-global-index .card-header {
+.jc-global-tree-page .card-header,
+.jc-global-user-page .card-header {
   background: transparent;
   border: none;
   font-size: 1.25rem;
@@ -18962,26 +18968,27 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: #f8f9fa;
 }
 
-.jc-global-index .card-body {
+.jc-global-tree-page .card-body,
+.jc-global-user-page .card-body {
   background: transparent;
   border: none;
 }
 
-.jc-global-index .wt-side-blocks .card {
+.wt-side-blocks .card {
   border-bottom: 1px solid #337ab7;
   border-radius: 0;
 }
 
-.jc-global-index .wt-side-blocks .card-body {
+.wt-side-blocks .card-body {
   font-size: 0.75rem;
 }
 
 /*** Index page (homepage and my page) ***/
-.jc-global-index-user h2 {
+.jc-global-user-page h2 {
   border-bottom: 1px solid #e9ecef;
 }
 
-.jc-global-index .wt-side-blocks {
+.wt-side-blocks {
   border-left: 1px solid #e9ecef;
 }
 

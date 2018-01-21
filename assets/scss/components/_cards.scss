@@ -1,6 +1,7 @@
 /*** Cards ***/
 .card {
-  .jc-global-index & {
+  .jc-global-tree-page &,
+  .jc-global-user-page & {
     border: none;
   }
 }
@@ -22,7 +23,8 @@
     }
   }
 
-  .jc-global-index & {
+  .jc-global-tree-page &,
+  .jc-global-user-page & {
     background: transparent;
     border: none;
     @extend .py-2;
@@ -38,26 +40,30 @@
 }
 
 .card-body {
-  .jc-global-index & {
+  .jc-global-tree-page &,
+  .jc-global-user-page & {
     background: transparent;
     border: none;
     @extend .py-0;
   }
 }
 
-.jc-global-index {
-  .wt-side-blocks {
-    .card {
-      border-bottom: $border-width solid theme-color(primary);
-      border-radius: 0;
-      @extend .m-0;
-    }
-    .card-header {
-      @extend .p-2;
-    }
-    .card-body {
-      font-size: $font-size-xs;
-      @extend .p-2;
+.jc-global-tree-page,
+.jc-global-user-page {
+  @at-root {
+    .wt-side-blocks {
+      .card {
+        border-bottom: $border-width solid theme-color(primary);
+        border-radius: 0;
+        @extend .m-0;
+      }
+      .card-header {
+        @extend .p-2;
+      }
+      .card-body {
+        font-size: $font-size-xs;
+        @extend .p-2;
+      }
     }
   }
 }

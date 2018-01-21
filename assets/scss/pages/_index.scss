@@ -1,30 +1,32 @@
 /*** Index page (homepage and my page) ***/
-// Use jc-global-index to access both pages or use jc-global-index-gedcom for the homepage
-// and jc-global-index-user for the mypage
+// Use jc-global-tree-page for the homepage
+// and jc-global-user-page for the mypage
 
-.jc-global-index {
+.jc-global-tree-page {
+  .wt-main-wrapper {
+    @extend .mt-0;
+  }
+  .wt-main-container {
+    @extend .p-0;
+  }
+}
 
-  &-gedcom {
-    .wt-main-wrapper {
-      @extend .mt-0;
-    }
-    .wt-main-container {
-      @extend .p-0;
-    }
+.jc-global-user-page {
+  .wt-main-container {
+    @extend .pb-0;
   }
 
-  &-user {
-    .wt-main-container {
-      @extend .pb-0;
-    }
-
-    h2 {
-      border-bottom: $border-width solid $gray-200;
-    }
+  h2 {
+    border-bottom: $border-width solid $gray-200;
   }
+}
 
-  .wt-side-blocks {
-    border-left: $border-width solid $gray-200;
+.jc-global-tree-page,
+.jc-global-user-page {
+  @at-root {
+    .wt-side-blocks {
+      border-left: $border-width solid $gray-200;
+    }
   }
 }
 
