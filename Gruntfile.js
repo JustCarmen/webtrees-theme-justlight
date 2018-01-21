@@ -40,14 +40,14 @@ module.exports = function(grunt) {
         }
       },
       scss: {
-        files: ['assets/scss/**/*.scss'],
+        files: ['assets/scss/**/*.scss', '../justfancy/assets/scss/**/*.scss'],
         tasks: ['default'],
         options: {
           spawn: false
         }
       },
       js: {
-        files: ['assets/js/src/*.js'],
+        files: ['assets/js/src/*.js', '../justfancy/assets/js/src/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false
