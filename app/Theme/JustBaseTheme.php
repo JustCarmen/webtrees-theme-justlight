@@ -178,7 +178,7 @@ class JustBaseTheme extends MinimalTheme {
 	 * @return type
 	 */
 	protected function formatTreeTitleLink() {
-		return '<a href="index.php?ctype=gedcom&ged=' . $this->tree->getName() . '">' . $this->tree->getTitleHtml() . '</a>';
+		return '<a href="index.php?route=tree-page&ged=' . $this->tree->getName() . '">' . $this->tree->getTitleHtml() . '</a>';
 	}
 
 	/** Get list page
