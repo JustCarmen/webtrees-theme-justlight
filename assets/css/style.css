@@ -17794,19 +17794,19 @@ h2 {
 .wt-icon-bing-maps::before {
   height: 16px;
   width: 16px;
-  content: url(icons/bing-maps.png);
+  content: url(images/icons/bing-maps.png);
 }
 
 .wt-icon-google-maps::before {
   height: 16px;
   width: 16px;
-  content: url(icons/google-maps.png);
+  content: url(images/icons/google-maps.png);
 }
 
 .icon-resn-confidential {
   height: 16px;
   width: 16px;
-  background-image: url(icons/resn-confidential.png);
+  background-image: url(images/icons/resn-confidential.png);
 }
 
 .icon-resn-confidential::before {
@@ -17816,7 +17816,7 @@ h2 {
 .icon-resn-locked {
   height: 16px;
   width: 16px;
-  background-image: url(icons/resn-locked.png);
+  background-image: url(images/icons/resn-locked.png);
 }
 
 .icon-resn-locked::before {
@@ -17826,7 +17826,7 @@ h2 {
 .icon-resn-none {
   height: 16px;
   width: 16px;
-  background-image: url(icons/resn-none.png);
+  background-image: url(images/icons/resn-none.png);
 }
 
 .icon-resn-none::before {
@@ -17836,7 +17836,7 @@ h2 {
 .icon-resn-privacy {
   height: 16px;
   width: 16px;
-  background-image: url(icons/resn-privacy.png);
+  background-image: url(images/icons/resn-privacy.png);
 }
 
 .icon-resn-privacy::before {
@@ -18342,7 +18342,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 
 /*** Colorbox 1.6.4 - User style 1 (modified) ***/
 #cboxOverlay {
-  background: url(colorbox/overlay.png) repeat 0 0;
+  background: url(images/colorbox/overlay.png) repeat 0 0;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -18354,45 +18354,45 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 #cboxTopLeft {
   width: 21px;
   height: 21px;
-  background: url(colorbox/controls.png) no-repeat -151px 0;
+  background: url(images/colorbox/controls.png) no-repeat -151px 0;
 }
 
 #cboxTopRight {
   width: 21px;
   height: 21px;
-  background: url(colorbox/controls.png) no-repeat -180px 0;
+  background: url(images/colorbox/controls.png) no-repeat -180px 0;
 }
 
 #cboxBottomLeft {
   width: 21px;
   height: 21px;
-  background: url(colorbox/controls.png) no-repeat -151px -29px;
+  background: url(images/colorbox/controls.png) no-repeat -151px -29px;
 }
 
 #cboxBottomRight {
   width: 21px;
   height: 21px;
-  background: url(colorbox/controls.png) no-repeat -180px -29px;
+  background: url(images/colorbox/controls.png) no-repeat -180px -29px;
 }
 
 #cboxMiddleLeft {
   width: 21px;
-  background: url(colorbox/controls.png) left top repeat-y;
+  background: url(images/colorbox/controls.png) left top repeat-y;
 }
 
 #cboxMiddleRight {
   width: 21px;
-  background: url(colorbox/controls.png) right top repeat-y;
+  background: url(images/colorbox/controls.png) right top repeat-y;
 }
 
 #cboxTopCenter {
   height: 21px;
-  background: url(colorbox/border.png) 0 0 repeat-x;
+  background: url(images/colorbox/border.png) 0 0 repeat-x;
 }
 
 #cboxBottomCenter {
   height: 21px;
-  background: url(colorbox/border.png) 0 -29px repeat-x;
+  background: url(images/colorbox/border.png) 0 -29px repeat-x;
 }
 
 #cboxContent {
@@ -18424,11 +18424,11 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 #cboxLoadingOverlay {
-  background: url(colorbox/loading-background.png) no-repeat center center;
+  background: url(images/colorbox/loading-background.png) no-repeat center center;
 }
 
 #cboxLoadingGraphic {
-  background: url(colorbox/loading.gif) no-repeat center center;
+  background: url(images/colorbox/loading.gif) no-repeat center center;
 }
 
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
@@ -18452,7 +18452,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .cboxSlideshow_on #cboxSlideshow {
-  background: url(colorbox/controls.png) no-repeat -25px 0;
+  background: url(images/colorbox/controls.png) no-repeat -25px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -18463,7 +18463,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .cboxSlideshow_off #cboxSlideshow {
-  background: url(colorbox/controls.png) no-repeat -50px 0px;
+  background: url(images/colorbox/controls.png) no-repeat -50px 0px;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -18477,7 +18477,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url(colorbox/controls.png) no-repeat -125px 0;
+  background: url(images/colorbox/controls.png) no-repeat -125px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -18491,7 +18491,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   position: absolute;
   bottom: 0;
   left: 27px;
-  background: url(colorbox/controls.png) no-repeat -100px 0;
+  background: url(images/colorbox/controls.png) no-repeat -100px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
@@ -18505,7 +18505,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   position: absolute;
   bottom: 0;
   right: 0;
-  background: url(colorbox/controls.png) no-repeat -75px 0;
+  background: url(images/colorbox/controls.png) no-repeat -75px 0;
   width: 25px;
   height: 25px;
   text-indent: -9999px;
