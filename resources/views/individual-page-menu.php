@@ -1,3 +1,11 @@
+<?php
+/**
+ * Change: add media link and reorder-media link moved from individual-page view to individual-page-menu view
+ * Themes: all themes
+ *
+ */
+?>
+
 <?php use Fisharebest\Webtrees\Auth; ?>
 <?php use Fisharebest\Webtrees\FontAwesome; ?>
 <?php use Fisharebest\Webtrees\Html; ?>
@@ -29,6 +37,18 @@
 		<?php if (empty($individual->getFacts('SEX'))): ?>
 			<a class="dropdown-item menu-indi-editraw" href="<?= e(Html::url('edit_interface.php', ['action' => 'add', 'fact' => 'SEX', 'ged' => $individual->getTree()->getName(), 'xref' => $individual->getXref()])) ?>">
 				<?= I18N::translate('Edit the gender') ?>
+			</a>
+		<?php endif ?>
+
+		<?php if ($individual->getTree()->getPreference('MEDIA_UPLOAD') >= Auth::accessLevel($individual->getTree())): ?>
+			<a class="dropdown-item menu-indi-addmedia" href="<?= e(Html::url('edit_interface.php', ['action' => 'add-media-link', 'ged' => $individual->getTree()->getName(), 'xref' => $individual->getXref()])) ?>">
+				<?= I18N::translate('Add a media object') ?>
+			</a>
+		<?php endif ?>
+
+		<?php if (count($individual->getFacts('OBJE')) > 1): ?>
+			<a class="dropdown-item menu-indi-reordermedia" href="<?= e(route('reorder-media', ['ged' => $individual->getTree()->getName(), 'xref' => $individual->getXref()])) ?>">
+				<?= I18N::translate('Re-order media') ?>
 			</a>
 		<?php endif ?>
 
