@@ -9,10 +9,10 @@
 
 <form action="reportengine.php" class="jc-view-report-setup">
 	<input type="hidden" name="action" value="run">
-	<input type="hidden" name="report" value="<?= Html::escape($report) ?>">
+	<input type="hidden" name="report" value="<?= e($report) ?>">
 
 	<?php foreach ($inputs as $n => $input): ?>
-		<input type="hidden" name="varnames[]" value="<?= Html::escape($input['name']) ?>">
+		<input type="hidden" name="varnames[]" value="<?= e($input['name']) ?>">
 		<div class="row form-group">
 			<label class="col-sm-3 col-form-label text-right" for="input-<?= $n ?>">
 				<?= I18N::translate($input['value']) ?>

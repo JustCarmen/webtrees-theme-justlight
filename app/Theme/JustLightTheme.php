@@ -20,7 +20,6 @@ namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\FlashMessages;
-use Fisharebest\Webtrees\Html;
 use Fisharebest\Webtrees\I18N;
 
 class JustLightTheme extends JustBaseTheme {
@@ -138,7 +137,7 @@ class JustLightTheme extends JustBaseTheme {
 				foreach ($menu->getSubmenus() as $submenu) {
 					$attrs = '';
 					foreach ($submenu->getAttrs() as $key => $value) {
-						$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
+						$attrs .= ' ' . $key . '="' . e($value) . '"';
 					}
 
 					$class = trim('dropdown-item ' . $submenu->getClass());
@@ -159,7 +158,7 @@ class JustLightTheme extends JustBaseTheme {
 			} else {
 				$attrs = '';
 				foreach ($menu->getAttrs() as $key => $value) {
-					$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
+					$attrs .= ' ' . $key . '="' . e($value) . '"';
 				}
 
 				$class = trim($menu->getClass() . ' btn-group');

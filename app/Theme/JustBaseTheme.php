@@ -17,7 +17,6 @@ namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Filter;
-use Fisharebest\Webtrees\Html;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Menu;
@@ -134,7 +133,7 @@ class JustBaseTheme extends MinimalTheme {
 	protected function formatMultilevelMenuItem(Menu $menu) {
 		$attrs = '';
 		foreach ($menu->getAttrs() as $key => $value) {
-			$attrs .= ' ' . $key . '="' . Html::escape($value) . '"';
+			$attrs .= ' ' . $key . '="' . e($value) . '"';
 		}
 		return
 		'<li class="' . $menu->getClass() . '">' .
