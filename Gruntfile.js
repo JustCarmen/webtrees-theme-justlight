@@ -179,6 +179,7 @@ module.exports = function(grunt) {
           cwd: '../justfancy/resources',
           src: [
             'colorbox.php',
+            'views/individual-page*',
             'views/report-setup-page.php',
             'views/blocks/*',
             'views/selects/*'
