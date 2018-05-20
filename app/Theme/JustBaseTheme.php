@@ -31,7 +31,7 @@ class JustBaseTheme extends MinimalTheme {
 	protected function bodyHeaderEnd() {
 		return '</div></main>';
 	}
-  
+
 	/**
 	 * Url to the homepage of the designer of this theme
 	 * @return type
@@ -86,7 +86,7 @@ class JustBaseTheme extends MinimalTheme {
 	}
 
 	/** {@inheritdoc} */
-	protected function formatContactLinks() {
+	public function formatContactLinks() {
 		return '<div class="jc-footer-item col-md-4 text-left">' . parent::formatContactLinks() . '</div>';
 	}
 
@@ -151,7 +151,7 @@ class JustBaseTheme extends MinimalTheme {
 	}
 
 	/** {@inheritdoc} */
-	protected function formatPageViews($count) {
+	public function formatPageViews($count) {
 		return '<div class="jc-footer-item col-md-4 text-center">' . parent::formatPageViews($count) . '</div>';
 	}
 
@@ -302,7 +302,7 @@ class JustBaseTheme extends MinimalTheme {
 	}
 
 	/** {@inheritdoc} */
-	protected function logoPoweredBy() {
+	public function logoPoweredBy() {
 		return '<a href="' . WT_WEBTREES_URL . '" class="wt-powered-by-webtrees" title="' . WT_WEBTREES_URL . '" dir="ltr"></a>';
 	}
 
@@ -344,7 +344,7 @@ class JustBaseTheme extends MinimalTheme {
 	 *
 	 * Part of list menu
 	 */
-	protected function menuListsMedia() {
+	public function menuListsMedia() {
 		return new Menu(I18N::translate('Media objects'), 'medialist.php?' . $this->tree_url . '&amp;action=filter&amp;search=no&amp;folder=&amp;sortby=title&amp;subdirs=on&amp;max=20&amp;columns=2&amp;action=submit', 'menu-list-obje', ['rel' => 'nofollow']);
 	}
 
@@ -491,7 +491,7 @@ class JustBaseTheme extends MinimalTheme {
 			}
 		}, $menus));
 	}
-  
+
 	/**
 	 * Format the secondary menu.
 	 *
@@ -499,7 +499,7 @@ class JustBaseTheme extends MinimalTheme {
 	 *
 	 * @return string
 	 */
-	protected function secondaryMenuContent(array $menus) {
+	public function secondaryMenuContent(array $menus) {
 		return
 		parent::secondaryMenuContent($menus) .
 		$this->formatQuickSearchIcon();
