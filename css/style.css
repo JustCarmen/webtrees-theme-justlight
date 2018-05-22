@@ -3664,7 +3664,10 @@ footer {
 }
 
 .jc-footer-content {
-	display: flex;
+  display: flex;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 .jc-footer-item {
