@@ -149,7 +149,7 @@ module.exports = function(grunt) {
           dir: ''
       },
       options: {
-          bin: '../../vendor/bin/php-cs-fixer',
+          bin: '../justfancy/vendor/bin/php-cs-fixer',
           configfile: '.php_cs',
           quiet: true
       }
