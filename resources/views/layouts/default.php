@@ -1,3 +1,10 @@
+<?php
+/**
+ * Change: default layout
+ * Themes: JustLight theme
+ *
+ */
+?>
 <?php use Fisharebest\Webtrees\Auth; ?>
 <?php use Fisharebest\Webtrees\DebugBar; ?>
 <?php use Fisharebest\Webtrees\FlashMessages; ?>
@@ -28,15 +35,9 @@
 		<link rel="icon" type="image/png" href="<?= Theme::theme()::ASSET_DIR ?>favicon192.png" sizes="192x192">
 		<link rel="apple-touch-icon" sizes="180x180" href="<?= Theme::theme()::ASSET_DIR ?>favicon180.png">
 
-		<?php if (I18N::direction() === 'rtl'): ?>
-			<link rel="stylesheet" type="text/css" href="<?= e(WT_ASSETS_URL . 'css/vendor-rtl.css') ?>">
-		<?php else: ?>
-			<link rel="stylesheet" type="text/css" href="<?= e(WT_ASSETS_URL . 'css/vendor.css') ?>">
-		<?php endif ?>
-
-		<?php foreach (Theme::theme()->stylesheets() as $stylesheet): ?>
-			<link rel="stylesheet" type="text/css" href="<?=  $stylesheet ?>">
-		<?php endforeach ?>
+		<?php /* Load the theme stylesheets */ ?>
+		<link rel="stylesheet" type="text/css" href="<?= e(Theme::theme()::STYLESHEET) ?>">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 		<?= View::stack('styles') ?>
 
@@ -45,20 +46,37 @@
 		<?= DebugBar::renderHead() ?>
 	</head>
 
-	<body class="wt-global">
-		<header class="wt-header-wrapper d-print-none">
-			<div class="container wt-header-container">
-				<div class="row wt-header-content">
+	<body class="wt-global<?= Theme::theme()->getThemeGlobalClass() ?>">
+		<header class="wt-header-wrapper d-print-none px-5 mb-3">
+			<div class="wt-header-container">
+				<div class="row wt-header-content mb-3">
 					<div class="wt-accessibility-links">
 						<a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
 							<?= /* I18N: Skip over the headers and menus, to the main content of the page */ I18N::translate('Skip to content') ?>
 						</a>
 					</div>
-					<div class="col wt-site-logo"></div>
 
-					<?php if ($tree !== null): ?>
-						<h1 class="col wt-site-title"><?= e($tree->getTitle()) ?></h1>
+					<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-2">
+						<div class="col wt-site-logo"></div>
 
+						<?php if ($tree !== null): ?>
+						<h1 class="col wt-site-title">
+						  <a href="index.php?route=tree-page&ged=<?= e($tree->getName()) ?>"><?= e($tree->getTitle()) ?></a>
+						</h1>
+						<?php endif ?>
+					</div>
+
+					<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">
+						<div class="wt-secondary-menu d-flex">
+							<ul class="nav wt-secondary-menu">
+								<?= Theme::theme()->secondaryMenuContainer(Theme::theme()->secondaryMenu()) ?>
+								<li class="nav-item quick-search-small d-lg-none align-self-center">
+									<a class="nav-link fa fa-search" href="search.php?ged=<?= e($tree->getName()) ?>"></a>
+								</li>
+							</ul>
+						</div>
+				  
+						<?php if ($tree !== null): ?>
 						<div class="col wt-header-search">
 							<form class="wt-header-search-form" role="search">
 								<input type="hidden" name="route" value="search-quick">
@@ -74,31 +92,26 @@
 								</div>
 							</form>
 						</div>
-					<?php endif ?>
-
-					<div class="col wt-secondary-navigation">
-						<ul class="nav wt-secondary-menu">
-							<?php foreach (Theme::theme()->secondaryMenu() as $menu): ?>
-								<?= $menu->bootstrap4() ?>
-							<?php endforeach ?>
-						</ul>
+						<?php endif ?>
 					</div>
-
-					<?php if ($tree !== null): ?>
-					<nav class="col wt-primary-navigation">
-						<ul class="nav wt-primary-menu">
-							<?php foreach (Theme::theme()->primaryMenu($individual ?? $tree->significantIndividual(Auth::user())) as $menu): ?>
-								<?= $menu->bootstrap4() ?>
-							<?php endforeach ?>
-						</ul>
-					</nav>
-					<?php endif ?>
 				</div>
 			</div>
+
+			<?php if ($tree !== null): ?>
+			<nav class="jc-primary-navigation px-0">
+				<ul class="nav nav-pills wt-primary-menu justify-content-start">
+					<?php foreach (Theme::theme()->primaryMenu($individual ?? $tree->significantIndividual(Auth::user())) as $menu): ?>
+						<?= $menu->bootstrap4() ?>
+					<?php endforeach ?>
+				</ul>
+			</nav>
+			<?php endif ?>
 		</header>
 
-		<main id="content" class="wt-main-wrapper">
-			<div class="container wt-main-container">
+		<?= Theme::theme()->fancyImagebar(); ?>
+	  
+		<main id="content" class="container<?= Theme::theme()->setFluidClass() ?> wt-main-wrapper mt-3">
+			<div class="wt-main-container">
 				<div class="flash-messages">
 					<?php foreach (FlashMessages::getMessages() as $message): ?>
 						<div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
@@ -114,36 +127,46 @@
 			</div>
 		</main>
 
-		<footer class="wt-footer-container">
-			<div class="wt-footer-content container d-print-none">
-				<?= Theme::theme()->formatContactLinks() ?>
-				<?= Theme::theme()->logoPoweredBy() ?>
-
-				<?php if ($page_hits ?? 0 > 0): ?>
-				<div class="wt-page-views">
-					<?= I18N::plural('This page has been viewed %s time.', 'This page has been viewed %s times.', $page_hits,
-					'<span class="odometer">' . I18N::digits($page_hits) . '</span>') ?>
+		<footer class="wt-footer-container bg-faded py-3">
+			<div class="jc-footer-content d-flex align-items-end d-print-none">
+				<div class="jc-footer-item col-md-4 text-left">
+					<?= Theme::theme()->formatContactLinks() ?>
 				</div>
-				<?php endif ?>
 
-				<?= Theme::theme()->cookieWarning()?>
+				<div class="jc-footer-item col-md-4 text-center">
+					<?php if ($page_hits ?? 0 > 0): ?>
+					<div class="wt-page-views">
+						<?= I18N::plural(
+	'This page has been viewed %s time.',
+	'This page has been viewed %s times.',
+	$page_hits,
+						'<span class="odometer">' . I18N::digits($page_hits) . '</span>'
+) ?>
+					</div>
+					<?php endif ?>
+				</div>
+
+				<div class="jc-footer-item col-md-4 text-right">
+					<div class="credits d-flex flex-column"><?= Theme::theme()->logoPoweredBy() . Theme::theme()->designerUrl() ?></div>
+				</div>
 			</div>
 		</footer>
-
+		<div class="flash-messages">
+			<?php if (Theme::theme()->cookieWarning()): ?>
+			<?= Theme::theme()->htmlAlert(Theme::theme()->cookieWarning(), 'info', true) ?>
+			<?php endif ?>
+		</div>
+	  
 		<script src="<?= e(WT_ASSETS_URL . 'js/vendor.js') ?>?<?= filemtime(WT_ROOT . WT_ASSETS_URL . 'js/vendor.js') ?>"></script>
-		<script src="<?= e(WT_ASSETS_URL . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . WT_ASSETS_URL . 'js/webtrees.js') ?>"></script>
-
+		<script src="<?= e(WT_ASSETS_URL . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . WT_ASSETS_URL . 'js/webtrees.js') ?>"></script>		
+		
 		<script>
-      activate_colorbox();
-      jQuery.extend(jQuery.colorbox.settings, {
-       width: "85%",
-       height: "85%",
-       transition: "none",
-       slideshowStart: "<?= I18N::translate('Play') ?>",
-       slideshowStop: "<?= I18N::translate('Stop') ?>",
-       title: function() { return this.dataset.title; }
-      });
-    </script>
+			var AUTH_ID = "<?= Auth::id() ?>";
+			var COLORBOX_ACTION_FILE = "themes/<?= Theme::theme()::THEME_DIR ?>/resources/colorbox.php";
+			var WT_BASE_URL = "<?= WT_BASE_URL ?>";
+		</script>
+
+		<script src="<?= e(Theme::theme()::JAVASCRIPT) ?>"></script>
 
 		<?= View::stack('javascript') ?>
 

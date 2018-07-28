@@ -16,6 +16,7 @@
 namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\I18N;
 
@@ -27,86 +28,12 @@ class JustLightTheme extends JustBaseTheme {
 	const STYLESHEET    = self::ASSET_DIR . 'css/style.css?v' . self::THEME_VERSION;
 	const JAVASCRIPT    = self::ASSET_DIR . 'js/theme.js?v' . self::THEME_VERSION;
 
-	/** {@inheritdoc} */
-	public function bodyHeader() {
-		return
-		'<body class="wt-global' . $this->getPageGlobalClass() . ' theme-' . self::THEME_DIR . '">' .
-		'<header class="wt-header-wrapper px-5 mb-3">' .
-		'<div class="wt-header-container">' .
-		'<div class="row wt-header-content mb-3">' .
-		$this->headerContent() .
-		'</div>' .
-		'</div>' .
-		$this->primaryMenuContainer($this->primaryMenu()) .
-		'</header>' .
-		$this->fancyImagebar() .
-		'<main id="content" class="container' . $this->setFluidClass() . ' wt-main-wrapper mt-3">' .
-		'<div class="wt-main-container">' .
-		$this->flashMessagesContainer(FlashMessages::getMessages());
-	}
-
-	/** {@inheritdoc} */
-	public function formatTreeTitle() {
-		if ($this->tree) {
-			return
-		  '<h1 class="col wt-site-title">' . $this->formatTreeTitleLink() . '</h1>';
-		} else {
-			return '';
-		}
-	}
-
-	/**
-	* {@inheritdoc}
-	*
-	* responsive layout - use small buttons on small screens
-	*/
-	protected function formQuickSearchFields() {
-		return
-			'<div class="input-group">' .
-			'<label class="sr-only" for="quick-search">' . I18N::translate('Search') . '</label>' .
-			'<input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="' . I18N::translate('Search') . '">' .
-			'<span class="input-group-btn">' .
-			'<button type="submit" class="btn btn-primary wt-header-search-button"><i class="fa fa-search"></i></button>' .
-			'</span>' .
-			'</div>';
-	}
-
-	/** {@inheritdoc} */
-	protected function headerContent() {
-		return
-		$this->accessibilityLinks() .
-		'<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 mt-2">' .
-		$this->logoHeader() .
-		$this->formatTreeTitle() .
-		'</div>' .
-		'<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">' .
-		'<div class="wt-secondary-menu d-flex">' .
-		$this->secondaryMenuContainer($this->secondaryMenu()) .
-		'</div>' .
-		$this->formQuickSearch() .
-		'</div>';
-	}
-
-	public function hookHeaderExtraContent() {
-		return '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">';
-	}
-
 	public function menuMyPages() {
 		$menu = parent::menuMyPages();
 		if (Auth::id()) {
 			$menu->addSubmenu($this->menuLogout());
 		}
 		return $menu;
-	}
-
-	/**
-	 * Do not use the default class 'col wt-primary navigation' here.
-	 * It causes an horizontal overflow in our design
-	 *
-	 * {@inheritdoc}
-	 */
-	protected function primaryMenuContainer(array $menus) {
-		return '<nav class="jc-primary-navigation px-0"><ul class="nav nav-pills wt-primary-menu justify-content-start">' . $this->primaryMenuContent($menus) . '</ul></nav>';
 	}
 
 	/** (@inheritdoc) */
@@ -176,20 +103,12 @@ class JustLightTheme extends JustBaseTheme {
 	/**
 	 * In this theme we use full width pages on some pages
 	 */
-	protected function setFluidClass() {
+	public function setFluidClass() {
 		$pages = ['individual'];
 
-		if (in_array($this->getPage(), $pages)) {
+		if (in_array(Filter::get('route'), $pages)) {
 			return '-fluid px-5'; // container-fluid
 		}
-	}
-
-	/** @inheritdoc} */
-	public function stylesheets() {
-		return array_merge(
-	  parent::stylesheets(),
-		[self::STYLESHEET]
-	);
 	}
 
 	/** {@inheritdoc} */
