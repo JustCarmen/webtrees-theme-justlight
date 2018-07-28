@@ -1,6 +1,11 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
 
+  // load all grunt tasks with this command. No need to set grunt.loadNpmTasks(...) for each task separately;
   require('load-grunt-tasks')(grunt);
+
+  // output time table
 	require('time-grunt')(grunt);
 
   // Project configuration.
@@ -68,6 +73,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
+          implementation: sass,
           outputStyle: 'expanded',
           sourceMap: true
 
@@ -222,7 +228,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass:dev', 'postcss:default']);
 
   // Custom tasks (development)
-  grunt.registerTask('_dev-theme', ['sass:dev', 'postcss:default', 'concat', 'copy', 'phpcsfixer']);
+  grunt.registerTask('_dev-theme', ['concat', 'sass:dev', 'postcss:default', 'copy', 'phpcsfixer']);
 
   // Custom tasks (distribution)
   grunt.registerTask('_dist-theme', ['_dev-theme', 'postcss:dist', 'uglify']);
