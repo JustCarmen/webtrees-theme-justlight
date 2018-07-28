@@ -3,13 +3,6 @@
   @include jl-header-gradient;
 }
 
-.wt-site-title {
-  font-family: 'Open Sans', $font-family-base;
-  & a {
-    color: theme-color(primary);
-  }
-}
-
 .wt-header-search {
   align-self: flex-start;
   @include jc-direction(padding, 0, '', right);
@@ -22,7 +15,6 @@
 
 .jc-primary-navigation {
   border: none;
-  @include jc-direction(margin, -.5rem, '', left);
   .nav-link,
   .dropdown-item {
     &.active {

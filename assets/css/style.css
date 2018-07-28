@@ -3683,7 +3683,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -4015,7 +4015,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   font-weight: 300;
 }
 
@@ -4087,7 +4087,7 @@ mark,
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
 }
 
 .blockquote-footer {
@@ -5291,7 +5291,7 @@ pre code {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -5346,7 +5346,7 @@ pre code {
 }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
 }
 
 select.form-control:focus::-ms-value {
@@ -5371,7 +5371,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
 }
 
@@ -5433,7 +5433,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > input[type="submit"],
 .input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > input[type="submit"] {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -5443,7 +5443,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(2.875rem + 2px);
+  height: calc(2.640625rem + 2px);
 }
 
 .form-group {
@@ -5785,7 +5785,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
           user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -6405,7 +6405,7 @@ fieldset:disabled a.btn {
 
 .btn-lg, .btn-group-lg > .btn, .btn-group-lg > input[type="submit"] {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -6497,7 +6497,7 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #212529;
   text-align: left;
   list-style: none;
@@ -6932,7 +6932,7 @@ input[type="button"].btn-block {
   align-items: center;
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -7093,7 +7093,7 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -7141,7 +7141,7 @@ input[type="button"].btn-block {
 }
 
 .custom-select-lg {
-  height: calc(2.875rem + 2px);
+  height: calc(2.640625rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 125%;
@@ -7151,7 +7151,7 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   margin-bottom: 0;
 }
 
@@ -7159,7 +7159,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   margin: 0;
   opacity: 0;
 }
@@ -7187,7 +7187,7 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -7203,7 +7203,7 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: 2.25rem;
+  height: 2.0625rem;
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -7469,10 +7469,10 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.3359375rem;
+  padding-bottom: 0.3359375rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -7513,7 +7513,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -8162,7 +8162,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
 }
 
@@ -8343,7 +8343,7 @@ input[type="button"].btn-block {
 }
 
 .alert-dismissible {
-  padding-right: 4rem;
+  padding-right: 3.8125rem;
 }
 
 .alert-dismissible .close {
@@ -8488,7 +8488,7 @@ input[type="button"].btn-block {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.65625rem;
   background-color: #e9ecef;
   border-radius: 0.25rem;
 }
@@ -8734,7 +8734,7 @@ input[type="button"].btn-block {
 
 .close {
   float: right;
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -9192,7 +9192,7 @@ button.close {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: inherit;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -18075,18 +18075,10 @@ h2 {
   display: none;
 }
 
-.wt-site-title {
+.jc-site-title {
   order: 2;
   font-size: 2rem;
   font-weight: 500;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.wt-site-title a {
-  color: #212529;
-  text-decoration: none;
 }
 
 .wt-secondary-navigation {
@@ -18233,13 +18225,13 @@ h2 {
 
 @media (min-width: 768px) {
   .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (min-width: 992px) {
   .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
-    font-size: 1.25rem;
+    font-size: 1.09375rem;
   }
 }
 
@@ -18553,7 +18545,7 @@ input[type="submit"] a.fas:hover {
 }
 
 .wt-header-search .fa-search {
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
 }
 
 .fa-arrow-start::before {
@@ -18573,18 +18565,18 @@ input[type="submit"] a.fas:hover {
 }
 
 .jc-global-individual .wt-silhouette-F::before, .jc-global-individual .wt-silhouette-M::before, .jc-global-individual .wt-silhouette-U::before {
-  font-size: 6rem;
+  font-size: 5.25rem;
 }
 
 @media (min-width: 768px) {
   .jc-global-individual .wt-silhouette-F::before, .jc-global-individual .wt-silhouette-M::before, .jc-global-individual .wt-silhouette-U::before {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 
 @media (min-width: 992px) {
   .jc-global-individual .wt-silhouette-F::before, .jc-global-individual .wt-silhouette-M::before, .jc-global-individual .wt-silhouette-U::before {
-    font-size: 10rem;
+    font-size: 8.75rem;
   }
 }
 
@@ -18593,7 +18585,7 @@ input[type="submit"] a.fas:hover {
 #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
 #sidebar .icon-silhouette-U {
   cursor: default;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 768px) {
@@ -18601,7 +18593,7 @@ input[type="submit"] a.fas:hover {
   #sidebar .icon-silhouette-F, #individual-tabs .icon-silhouette-M,
   #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
   #sidebar .icon-silhouette-U {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -18610,7 +18602,7 @@ input[type="submit"] a.fas:hover {
   #sidebar .icon-silhouette-F, #individual-tabs .icon-silhouette-M,
   #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
   #sidebar .icon-silhouette-U {
-    font-size: 3rem;
+    font-size: 2.625rem;
   }
 }
 
@@ -18622,7 +18614,7 @@ input[type="submit"] a.fas:hover {
 }
 
 .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   padding: 0 .25rem;
 }
 
@@ -19250,7 +19242,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 /*** Index page (homepage and my page) ***/
 .wt-block-gedcom-block-block i,
 .wt-block-user-welcome-block i {
-  font-size: 2.25rem;
+  font-size: 1.96875rem;
 }
 
 .jc-global-tree-page .wt-block-content-charts-block,
@@ -19262,7 +19254,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 /*** Individual page ***/
 .jc-global-individual #name-header-0,
 .jc-global-individual #name-content-0 {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .jc-global-individual #name-header-add {
@@ -19350,7 +19342,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .wt-page-options-search-advanced .wt-page-options-label .form-row {
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -19418,7 +19410,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .jc-global-module-tree #tv_tools .icon-sfamily, .wt-block-charts-block #tv_tools .icon-sfamily, #tree #tv_tools .icon-sfamily {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .jc-global-module-tree .tv_in td, .wt-block-charts-block .tv_in td, #tree .tv_in td {
@@ -19468,14 +19460,6 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
 }
 
-.wt-site-title {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-.wt-site-title a {
-  color: #337ab7;
-}
-
 .wt-header-search {
   align-self: flex-start;
   padding-right: 0;
@@ -19500,11 +19484,6 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 
 .jc-primary-navigation {
   border: none;
-  margin-left: -0.5rem;
-}
-
-[dir=rtl] .jc-primary-navigation {
-  margin-right: "";
 }
 
 .jc-primary-navigation .nav-link.active,
@@ -19702,7 +19681,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 .jc-global-user-page .card-header {
   background: transparent;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
 }
 
 .jc-global-individual .card-body {
