@@ -1,4 +1,10 @@
-<?php use Fisharebest\Webtrees\Html; ?>
+<?php
+/**
+ * Change: report page layout
+ * Themes: all themes
+ *
+ */
+?>
 <?php use Fisharebest\Webtrees\I18N; ?>
 
 <h2 class="wt-page-title">
@@ -7,8 +13,8 @@
 </h2>
 <hr/>
 
-<form action="reportengine.php" class="jc-view-report-setup">
-	<input type="hidden" name="action" value="run">
+<form class="jc-view-report-setup">
+	<input type="hidden" name="action" value="report-run">
 	<input type="hidden" name="report" value="<?= e($report) ?>">
 
 	<?php foreach ($inputs as $n => $input): ?>

@@ -1,44 +1,80 @@
 <?php
 /**
- * Change: add media link and reorder-media link moved from individual-page view to individual-page-menu view
+ * Layout: page title with subtitle
+ * Functionality:
+ * - add media link and reorder-media link moved from individual-page view to individual-page-menu view
+ * - use only images of the type 'photo' in the carousel
  * Themes: all themes
  *
  */
 ?>
-
 <?php use Fisharebest\Webtrees\Auth; ?>
 <?php use Fisharebest\Webtrees\Functions\FunctionsPrint; ?>
 <?php use Fisharebest\Webtrees\I18N; ?>
+<?php use Fisharebest\Webtrees\Media;?>
 <?php use Fisharebest\Webtrees\View; ?>
+<?php use Fisharebest\Webtrees\User; ?>
 
 <?php if ($individual->isPendingDeletion()): ?>
 	<?php if (Auth::isModerator($individual->getTree())): ?>
-		<?= view('alerts/warning-dissmissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . $individual->getXref() . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . $individual->getXref() . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php elseif (Auth::isEditor($individual->getTree())): ?>
-		<?= view('alerts/warning-dissmissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php endif ?>
 <?php elseif ($individual->isPendingAddition()): ?>
 	<?php if (Auth::isModerator($individual->getTree())): ?>
-		<?= view('alerts/warning-dissmissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . $individual->getXref() . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . $individual->getXref() . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php elseif (Auth::isEditor($individual->getTree())): ?>
-		<?= view('alerts/warning-dissmissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php endif ?>
 <?php endif ?>
 
-<div class="d-flex mb-4">
-	<h2 class="wt-page-title mx-auto">
-		<?= $individual->getFullName() ?><?= $user_link ?>, <?= $individual->getLifeSpan() ?> <?= $age ?>
+<?php
+// Only use images of the type 'photo' in the carousel
+// overwrite declaration of $individual_media from app\Http\Controllers\IndividualController.php
+$individual_media = [];
+foreach ($individual->getFacts() as $fact) {
+	$media_object = $fact->getTarget();
+	if ($media_object instanceof Media) {
+		foreach ($media_object->mediaFiles() as $media_file) {
+			if ($media_file->isImage() && $media_file->type() === 'photo') {
+				$individual_media[] = $media_file;
+			}
+		}
+	}
+}
+$individual_media = array_filter($individual_media);
+?>
+
+<?php
+// If this individual is linked to a user account, show the link
+// We use a slightly different layout for the user link and use a bootstrap subtitle style
+// overwrite declaration of $user_link from app\Http\Controllers\IndividualController.php
+$user_link = '';
+if (Auth::isAdmin()) {
+	$user = User::findByIndividual($individual);
+	if ($user) {
+		$user_link = ' (<a href="' . e(route('admin-users', ['filter' => $user->getEmail()])) . '">' . e($user->getUserName()) . '</a>)';
+	};
+}
+?>
+
+<div class="d-flex mb-4 justify-content-between">
+	<h2 class="wt-page-title">
+		<?= $individual->getFullName() ?><small class="text-muted"><?= $user_link ?></small>
+		<br/><small class="text-muted"><?= $individual->getLifeSpan() ?> <?= $age ?></small>
 	</h2>
+	
 	<?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
 		<?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
 	<?php endif ?>
 </div>
 
 <div class="row">
-	<div class="col-sm-8">
-		<div class="row mb-4">
+	<div class="col-12 col-md-8">
+		<div class="d-flex col p-0 mb-4">
 			<!-- Individual images -->
-			<div class="col-sm-3">
+			<div class="col-sm-3 px-0">
 				<?php if (empty($individual_media)): ?>
 					<i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
 				<?php elseif (count($individual_media) === 1): ?>
@@ -96,7 +132,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-4" id="sidebar" role="tablist">
+	<div class="col-12 col-md-4" id="sidebar" role="tablist">
 		<?php foreach ($sidebars as $sidebar): ?>
 			<div class="card">
 				<div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">
