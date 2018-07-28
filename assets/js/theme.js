@@ -1,6 +1,6 @@
 /*!
- * webtrees: online genealogy
- * Copyright (C) 2017 JustCarmen (http://www.justcarmen.nl)
+ * JustLight theme for webtrees (online genealogy)
+ * Copyright (C) 2018 JustCarmen (http://www.justcarmen.nl)
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -105,129 +105,6 @@ function strip_tags(str) {
 // Prevent jumping to the top of the page when clicking on a javascript link
 if ($('a[onclick]').attr('href') === '#') {
   $('a[onclick]').attr('href', 'javascript:void(0)');
-}
-
-// Change blocks page uses old markup. Temporary fix
-$('#change_blocks').each(function() {
-  $(this).removeAttr('border').addClass('table');
-  $(this).find('.topbottombar:first').addClass('pl-0');
-  $(this).find('.topbottombar:last').addClass('text-right pr-0');
-})
-// Tweak the datatables made by webtrees
-// target = column number - 1
-
-var dtDom =
-    "<'row mt-1 mb-lg-1'<'col-md-6 float-none'l><'col-md-6 float-sm-none float-md-right'f>>" +
-    "<'row'<'col-6 d-none d-lg-block'i><'col-6 d-none d-lg-block'p>>" +
-    "<'row'<'col-sm-12'tr>>" +
-    "<'row'<'col-md-6 float-none'i><'col-md-6 float-sm-none float-md-right'p>>";
-
-// Repository table
-if ($('.table-repository').length) {
-  var table = $('.table-repository').DataTable({
-    sDom: dtDom,
-    columnDefs: [
-      {width: "5%", targets: 1},
-      {width: "15%", targets: 2},
-      {className: "jc-last-change", targets: 2}
-    ],
-    autoWidth: false
-  });
-
-  table.column(2, {order: 'index'}).data().each(function(value, index) {
-    var date = value.split("-");
-    var cell = table.cell(index, 2);
-    cell.data($.trim(date[0]));
-  });
-  table.columns.adjust().draw();
-}
-
-// Source table
-if ($('.table-source').length) {
-  var table = $('.table-source').DataTable({
-    sDom: dtDom,
-    columnDefs: [
-      {width: "15%", targets: 1},
-      {width: "5%", targets: [2, 3, 4, 5]},
-      {width: "15%", targets: 6},
-      {className: "jc-last-change", targets: 6}
-    ],
-    autoWidth: false
-  });
-
-  table.column(6, {order: 'index'}).data().each(function(value, index) {
-    var date = value.split("-");
-    var cell = table.cell(index, 6);
-    cell.data($.trim(date[0]));
-  });
-  table.columns.adjust().draw();
-}
-
-// Shared notes table
-if ($('.table-note').length) {
-  var table = $('.table-note').DataTable({
-    sDom: dtDom,
-    columnDefs: [
-      {width: "5%", targets: [1, 2, 3, 4]},
-      {width: "15%", targets: 5},
-      {className: "jc-last-change", targets: 5}
-    ],
-    autoWidth: false
-  });
-
-  table.column(5, {order: 'index'}).data().each(function(value, index) {
-    var date = value.split("-");
-    var cell = table.cell(index, 5);
-    cell.data($.trim(date[0]));
-  });
-  table.columns.adjust().draw();
-}
-
-// Surname table
-if ($('.table-surname').length) {
-  var table = $('.table-surname').DataTable();
-  $(table.table().container()).addClass('col-sm-12 col-md-8 col-lg-6 mx-auto');
-  table.rows().invalidate().draw();
-}
-
-// Tab list tables - only change some markup. The indi, fam and media tab still have the old jquery markup.
-// This is a change webtrees should make, so we wait with our final modifications until these changes have taken place.
-
-if ($('.nav-tabs').length) {
-  // The datatable option markup is temporary code
-  $('[class^=filtersH], [class^=filtersF], .dt-clear').remove();
-  $(".indi-list, .fam-list, .media-list").each(function() {
-    var list = $(this);
-    $('<div class="row mt-1 mb-lg-1">')
-        .appendTo(list.find('.dataTables_paginate:first').parent())
-        .append(list.find('.dataTables_length:first'))
-        .append(list.find('.dataTables_filter'));
-    $('<div class="row">')
-        .appendTo(list.find('.dataTables_paginate:first').parent())
-        .append(list.find('.dataTables_info'))
-        .append(list.find('.dataTables_paginate:first'));
-    $('<div class="row">')
-        .appendTo(list.find('.dataTables_paginate:last').parent())
-        .append(list.find('.dataTables_info').clone())
-        .append(list.find('.dataTables_paginate:last'));
-    list.find('.dataTables_length:last').remove();
-    list.find('.dataTables_length select').addClass('form-control-sm');
-
-    list.find('.dataTables_length').wrap('<div class="col-md-6 float-none">');
-    list.find('.dataTables_filter').wrap('<div class="col-md-6 float-sm-none float-md-right">');
-    list.find('.dataTables_info').wrap('<div class="col-6 d-none d-lg-block">');
-    list.find('.dataTables_paginate').wrap('<div class="col-6 d-none d-lg-block">');
-  });
-
-  $('table[id^=table-]').each(function() {
-    $(this).addClass('table table-sm table-bordered table-responsive');
-    var toolbar = $(this).find('.btn-toolbar');
-    toolbar.removeClass('mb-2');
-    toolbar.parents('thead').find('.btn-group').addClass('mb-2');
-    toolbar.find('.btn').addClass('btn-sm mr-1');
-    toolbar.parents('thead th:first').addClass('jc-toolbar jc-header-toolbar px-2 pt-2 pb-0');
-    toolbar.parent('tfoot th').addClass('jc-toolbar jc-footer-toolbar p-2');
-  });
 }
 
 /* global THEME_COLORBOX_URL */
@@ -358,8 +235,8 @@ jQuery(".wt-global").waitUntilExists('.icon-pedigree', function() {
     }
     jQuery(this).attr("data-toggle", "popover");
     jQuery(this).popover({
-      title: title,
-      content: content,
+      title: title || "",
+      content: content || "",
       html: true,
       placement: placement,
       container: 'body'
