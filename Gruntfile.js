@@ -115,7 +115,10 @@ module.exports = function(grunt) {
     // ========================================================================================
     concat: {
       options: {
-        separator: '' + grunt.util.linefeed
+        separator: '' + grunt.util.linefeed,
+        process: function (content) {
+          return content.replace(/JustFancy/, 'JustLight');
+        }
       },
 
       justlight: {
@@ -172,27 +175,39 @@ module.exports = function(grunt) {
         }],
         options: {
           process: function (content) {
+            content = content.replace(/JustFancy/, 'JustLight');
             return content.replace('JustFancy\\Theme', 'JustLight\\Theme');
           }
         }
       },
 
-     // excluded files:
-      // - views/tab/album.php
+      // excluded files:
+      // - views/layouts/*
+      // - views/modules/lightbox/*
+      // files which does not exists in JustFancy:
+      // - views/tree-page.php
+      // - views/user-page.php
       // Add all other files explicitly
       resources: {
         files: [{
           cwd: '../justfancy/resources',
           src: [
             'colorbox.php',
-            'views/individual-page*',
-            'views/report-setup-page.php',
-            'views/blocks/*',
-            'views/selects/*'
+            'views/*page*',
+            'views/lists/*',
+            'modules/gedcom_block/*',
+            'modules/gedcom_stats/*',
+            'modules/user_welcome/*',
+            'selects/*'
           ],
           dest: 'resources',
           expand: true
-        }]
+        }],
+        options: {
+          process: function (content) {
+            return content.replace(/JustFancy/, 'JustLight');
+          }
+        }
       },
 
       fonts: {
@@ -206,13 +221,14 @@ module.exports = function(grunt) {
         ]
       },
 
+      // gitignore is different in both themes
+      // we won't copy that file.
       other: {
        files: [{
          cwd: '../justfancy',
          src: [
            '.php_cs',
            '.gitattributes',
-           '.gitignore'
          ],
          dest: '',
          expand: true
