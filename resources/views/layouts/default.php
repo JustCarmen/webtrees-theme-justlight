@@ -48,7 +48,7 @@
 	<body class="wt-global<?= Theme::theme()->getThemeGlobalClass() ?>">
 		<header class="wt-header-wrapper d-print-none px-5 mb-3">
 			<div class="wt-header-container">
-				<div class="row wt-header-content mb-3">
+				<div class="row wt-header-content">
 					<div class="wt-accessibility-links">
 						<a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
 							<?= /* I18N: Skip over the headers and menus, to the main content of the page */ I18N::translate('Skip to content') ?>

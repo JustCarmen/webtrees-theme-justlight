@@ -18066,6 +18066,10 @@ h2 {
 }
 
 /*** Header ***/
+.wt-header-wrapper a:hover {
+  text-decoration: none !important;
+}
+
 .wt-header-container {
   margin-top: 0;
 }
@@ -18104,6 +18108,11 @@ h2 {
   .wt-header-search {
     display: block;
   }
+}
+
+.wt-header-search-button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .jc-primary-navigation {
@@ -19469,16 +19478,15 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   padding-left: "";
 }
 
-.wt-header-search .btn-primary, .wt-header-search input[type="submit"] {
+.wt-header-search-button {
   background: linear-gradient(#337ab7 0, #23537c 50%);
-  padding: 0.25rem 0.5rem;
 }
 
-.wt-header-search .btn-primary, .wt-header-search input[type="submit"], .wt-header-search .btn-primary a, .wt-header-search input[type="submit"] a, .wt-header-search .btn-primary .fa, .wt-header-search input[type="submit"] .fa, .wt-header-search .btn-primary .fab, .wt-header-search input[type="submit"] .fab, .wt-header-search .btn-primary .fal, .wt-header-search input[type="submit"] .fal, .wt-header-search .btn-primary .far, .wt-header-search input[type="submit"] .far, .wt-header-search .btn-primary .fas, .wt-header-search input[type="submit"] .fas {
+.wt-header-search-button, .wt-header-search-button a, .wt-header-search-button .fa, .wt-header-search-button .fab, .wt-header-search-button .fal, .wt-header-search-button .far, .wt-header-search-button .fas {
   color: #fff;
 }
 
-.wt-header-search .btn-primary:hover, .wt-header-search input:hover[type="submit"] {
+.wt-header-search-button:hover {
   background: linear-gradient(#2b669a, #1b3f5f 100%);
 }
 
