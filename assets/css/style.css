@@ -10780,7 +10780,7 @@ div[id^="calendar-widget"] table, .faq_title, .wt-side-blocks .card {
   margin-right: 0.25rem !important;
 }
 
-.mb-1, dd, .wt-page-options-search-advanced .form-group,
+.mb-1, dd, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .wt-page-options-search-advanced .form-group,
 .my-1 {
   margin-bottom: 0.25rem !important;
 }
@@ -12385,7 +12385,7 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.woff") format("woff"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.ttf") format("truetype"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
-.far {
+.far, .icon-plus, .icon-minus, .icon-reminder {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -12398,8 +12398,21 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../../../../public/assets-2.0.0/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../../../public/assets-2.0.0/webfonts/fa-solid-900.woff2") format("woff2"), url("../../../../public/assets-2.0.0/webfonts/fa-solid-900.woff") format("woff"), url("../../../../public/assets-2.0.0/webfonts/fa-solid-900.ttf") format("truetype"), url("../../../../public/assets-2.0.0/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
-.fa, .fab, .fal, .far, .fas,
-.fas {
+.fa,
+.fas,
+.icon-sex_m_9x9,
+.icon-sex_f_9x9,
+.icon-sex_u_9x9,
+.icon-sex_m_15x15,
+.icon-sex_f_15x15,
+.icon-sex_u_15x15,
+.icon-mypage,
+.icon-clippings,
+.icon-selected,
+.icon-indis,
+.icon-user_add,
+.icon-zoomin,
+.icon-zoomout {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -12408,9 +12421,21 @@ a.text-dark:hover, a.text-dark:focus {
  * Font Awesome Free 5.0.2 by @fontawesome - http://fontawesome.com
  * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, .fab, .fal, .far, .fas,
+.fa,
 .fas,
-.far,
+.icon-sex_m_9x9,
+.icon-sex_f_9x9,
+.icon-sex_u_9x9,
+.icon-sex_m_15x15,
+.icon-sex_f_15x15,
+.icon-sex_u_15x15,
+.icon-mypage,
+.icon-clippings,
+.icon-selected,
+.icon-indis,
+.icon-user_add,
+.icon-zoomin,
+.icon-zoomout, .far, .icon-plus, .icon-minus, .icon-reminder,
 .fal,
 .fab {
   -moz-osx-font-smoothing: grayscale;
@@ -12513,17 +12538,49 @@ a.text-dark:hover, a.text-dark:focus {
   float: right;
 }
 
-.fa.fa-pull-left, .fa-pull-left.fab, .fa-pull-left.fal, .fa-pull-left.far, .fa-pull-left.fas,
+.fa.fa-pull-left,
 .fas.fa-pull-left,
+.fa-pull-left.icon-sex_m_9x9,
+.fa-pull-left.icon-sex_f_9x9,
+.fa-pull-left.icon-sex_u_9x9,
+.fa-pull-left.icon-sex_m_15x15,
+.fa-pull-left.icon-sex_f_15x15,
+.fa-pull-left.icon-sex_u_15x15,
+.fa-pull-left.icon-mypage,
+.fa-pull-left.icon-clippings,
+.fa-pull-left.icon-selected,
+.fa-pull-left.icon-indis,
+.fa-pull-left.icon-user_add,
+.fa-pull-left.icon-zoomin,
+.fa-pull-left.icon-zoomout,
 .far.fa-pull-left,
+.fa-pull-left.icon-plus,
+.fa-pull-left.icon-minus,
+.fa-pull-left.icon-reminder,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: .3em;
 }
 
-.fa.fa-pull-right, .fa-pull-right.fab, .fa-pull-right.fal, .fa-pull-right.far, .fa-pull-right.fas,
+.fa.fa-pull-right,
 .fas.fa-pull-right,
+.fa-pull-right.icon-sex_m_9x9,
+.fa-pull-right.icon-sex_f_9x9,
+.fa-pull-right.icon-sex_u_9x9,
+.fa-pull-right.icon-sex_m_15x15,
+.fa-pull-right.icon-sex_f_15x15,
+.fa-pull-right.icon-sex_u_15x15,
+.fa-pull-right.icon-mypage,
+.fa-pull-right.icon-clippings,
+.fa-pull-right.icon-selected,
+.fa-pull-right.icon-indis,
+.fa-pull-right.icon-user_add,
+.fa-pull-right.icon-zoomin,
+.fa-pull-right.icon-zoomout,
 .far.fa-pull-right,
+.fa-pull-right.icon-plus,
+.fa-pull-right.icon-minus,
+.fa-pull-right.icon-reminder,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
   margin-left: .3em;
@@ -12953,7 +13010,7 @@ readers do not read off random characters that represent icons */
   content: "\f1b5";
 }
 
-.fa-bell:before {
+.fa-bell:before, .icon-reminder:before {
   content: "\f0f3";
 }
 
@@ -13229,7 +13286,7 @@ readers do not read off random characters that represent icons */
   content: "\f058";
 }
 
-.fa-check-square:before {
+.fa-check-square:before, .icon-selected:before {
   content: "\f14a";
 }
 
@@ -13425,7 +13482,7 @@ readers do not read off random characters that represent icons */
   content: "\f1b3";
 }
 
-.fa-cut:before {
+.fa-cut:before, .icon-clippings:before {
   content: "\f0c4";
 }
 
@@ -13857,7 +13914,7 @@ readers do not read off random characters that represent icons */
   content: "\f3a5";
 }
 
-.fa-genderless:before {
+.fa-genderless:before, .icon-sex_u_9x9:before, .icon-sex_u_15x15:before {
   content: "\f22d";
 }
 
@@ -14409,7 +14466,7 @@ readers do not read off random characters that represent icons */
   content: "\f277";
 }
 
-.fa-mars:before {
+.fa-mars:before, .icon-sex_m_9x9:before, .icon-sex_m_15x15:before {
   content: "\f222";
 }
 
@@ -14489,7 +14546,7 @@ readers do not read off random characters that represent icons */
   content: "\f056";
 }
 
-.fa-minus-square:before {
+.fa-minus-square:before, .icon-minus:before {
   content: "\f146";
 }
 
@@ -14757,7 +14814,7 @@ readers do not read off random characters that represent icons */
   content: "\f055";
 }
 
-.fa-plus-square:before {
+.fa-plus-square:before, .icon-plus:before {
   content: "\f0fe";
 }
 
@@ -14953,11 +15010,11 @@ readers do not read off random characters that represent icons */
   content: "\f002";
 }
 
-.fa-search-minus:before {
+.fa-search-minus:before, .icon-zoomout:before {
   content: "\f010";
 }
 
-.fa-search-plus:before {
+.fa-search-plus:before, .icon-zoomin:before {
   content: "\f00e";
 }
 
@@ -15305,7 +15362,7 @@ readers do not read off random characters that represent icons */
   content: "\f3fa";
 }
 
-.fa-tachometer-alt:before {
+.fa-tachometer-alt:before, .icon-mypage:before {
   content: "\f3fd";
 }
 
@@ -15557,7 +15614,7 @@ readers do not read off random characters that represent icons */
   content: "\f287";
 }
 
-.fa-user:before {
+.fa-user:before, .icon-indis:before {
   content: "\f007";
 }
 
@@ -15569,7 +15626,7 @@ readers do not read off random characters that represent icons */
   content: "\f0f0";
 }
 
-.fa-user-plus:before {
+.fa-user-plus:before, .icon-user_add:before {
   content: "\f234";
 }
 
@@ -15601,7 +15658,7 @@ readers do not read off random characters that represent icons */
   content: "\f408";
 }
 
-.fa-venus:before {
+.fa-venus:before, .icon-sex_f_9x9:before, .icon-sex_f_15x15:before {
   content: "\f221";
 }
 
@@ -18218,208 +18275,22 @@ h2 {
 }
 
 /*** Icons ***/
-.icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
+.icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   background: none;
   width: auto;
   height: auto;
   color: #212529;
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 400;
   font-style: normal;
-  line-height: 1;
-  padding: 0 .25rem;
-  vertical-align: baseline;
 }
 
-@media (min-width: 768px) {
-  .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
-    font-size: 1.09375rem;
-  }
-}
-
-.icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-plus:hover, .icon-minus:hover, .icon-indis:hover, .icon-user_add:hover, .icon-reminder:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-edit_indi:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
+.icon-edit_indi:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
   color: #0a0c0d;
   text-decoration: none;
-}
-
-.icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-reminder, .icon-zoomin, .icon-zoomout {
-  font-family: "fontawesome";
 }
 
 .icon-edit_indi, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   font-family: "icomoon";
-}
-
-.fa, .fab, .fal, .far, .fas, a.fa, a.fab, a.fal, a.far, a.fas {
-  color: #212529;
-  text-decoration: none;
-}
-
-.fa:hover, .fab:hover, .fal:hover, .far:hover, .fas:hover, a.fa:hover, a.fab:hover, a.fal:hover, a.far:hover, a.fas:hover {
-  color: #0a0c0d;
-}
-
-.input-group-addon .fa, .input-group-addon .fab, .input-group-addon .fal, .input-group-addon .far, .input-group-addon .fas,
-.input-group-btn .fa,
-.input-group-btn .fab,
-.input-group-btn .fal,
-.input-group-btn .far,
-.input-group-btn .fas,
-.btn-secondary .fa,
-.btn-text .fa,
-.btn-secondary .fab,
-.btn-text .fab,
-.btn-secondary .fal,
-.btn-text .fal,
-.btn-secondary .far,
-.btn-text .far,
-.btn-secondary .fas,
-.btn-text .fas, .input-group-addon a.fa, .input-group-addon a.fab, .input-group-addon a.fal, .input-group-addon a.far, .input-group-addon a.fas,
-.input-group-btn a.fa,
-.input-group-btn a.fab,
-.input-group-btn a.fal,
-.input-group-btn a.far,
-.input-group-btn a.fas,
-.btn-secondary a.fa,
-.btn-text a.fa,
-.btn-secondary a.fab,
-.btn-text a.fab,
-.btn-secondary a.fal,
-.btn-text a.fal,
-.btn-secondary a.far,
-.btn-text a.far,
-.btn-secondary a.fas,
-.btn-text a.fas {
-  color: #212529;
-}
-
-.input-group-addon .fa:hover, .input-group-addon .fab:hover, .input-group-addon .fal:hover, .input-group-addon .far:hover, .input-group-addon .fas:hover,
-.input-group-btn .fa:hover,
-.input-group-btn .fab:hover,
-.input-group-btn .fal:hover,
-.input-group-btn .far:hover,
-.input-group-btn .fas:hover,
-.btn-secondary .fa:hover,
-.btn-text .fa:hover,
-.btn-secondary .fab:hover,
-.btn-text .fab:hover,
-.btn-secondary .fal:hover,
-.btn-text .fal:hover,
-.btn-secondary .far:hover,
-.btn-text .far:hover,
-.btn-secondary .fas:hover,
-.btn-text .fas:hover, .input-group-addon a.fa:hover, .input-group-addon a.fab:hover, .input-group-addon a.fal:hover, .input-group-addon a.far:hover, .input-group-addon a.fas:hover,
-.input-group-btn a.fa:hover,
-.input-group-btn a.fab:hover,
-.input-group-btn a.fal:hover,
-.input-group-btn a.far:hover,
-.input-group-btn a.fas:hover,
-.btn-secondary a.fa:hover,
-.btn-text a.fa:hover,
-.btn-secondary a.fab:hover,
-.btn-text a.fab:hover,
-.btn-secondary a.fal:hover,
-.btn-text a.fal:hover,
-.btn-secondary a.far:hover,
-.btn-text a.far:hover,
-.btn-secondary a.fas:hover,
-.btn-text a.fas:hover {
-  color: #0a0c0d;
-}
-
-.btn-primary .fa, input[type="submit"] .fa, .btn-primary .fab, input[type="submit"] .fab, .btn-primary .fal, input[type="submit"] .fal, .btn-primary .far, input[type="submit"] .far, .btn-primary .fas, input[type="submit"] .fas,
-.btn-primary .fa:hover,
-input[type="submit"] .fa:hover,
-.btn-primary .fab:hover,
-input[type="submit"] .fab:hover,
-.btn-primary .fal:hover,
-input[type="submit"] .fal:hover,
-.btn-primary .far:hover,
-input[type="submit"] .far:hover,
-.btn-primary .fas:hover,
-input[type="submit"] .fas:hover, .btn-primary a.fa, input[type="submit"] a.fa, .btn-primary a.fab, input[type="submit"] a.fab, .btn-primary a.fal, input[type="submit"] a.fal, .btn-primary a.far, input[type="submit"] a.far, .btn-primary a.fas, input[type="submit"] a.fas,
-.btn-primary a.fa:hover,
-input[type="submit"] a.fa:hover,
-.btn-primary a.fab:hover,
-input[type="submit"] a.fab:hover,
-.btn-primary a.fal:hover,
-input[type="submit"] a.fal:hover,
-.btn-primary a.far:hover,
-input[type="submit"] a.far:hover,
-.btn-primary a.fas:hover,
-input[type="submit"] a.fas:hover {
-  color: #fff;
-}
-
-.icon-sex_m_9x9:before {
-  content: "\f222";
-}
-
-.icon-sex_f_9x9:before {
-  content: "\f221";
-}
-
-.icon-sex_u_9x9:before {
-  content: "\f22d";
-}
-
-.icon-sex_m_15x15:before {
-  content: "\f222";
-}
-
-.icon-sex_f_15x15:before {
-  content: "\f221";
-}
-
-.icon-sex_u_15x15:before {
-  content: "\f22d";
-}
-
-.icon-mypage:before {
-  content: "\f0e4";
-}
-
-.icon-clippings:before {
-  content: "\f0c4";
-}
-
-.icon-selected:before {
-  content: "\f00c";
-}
-
-.icon-plus:before {
-  content: "\f0fe";
-}
-
-.icon-minus:before {
-  content: "\f146";
-}
-
-.icon-indis:before {
-  content: "\f007";
-}
-
-.icon-user_add:before {
-  content: "\f234";
-}
-
-.icon-reminder:before {
-  content: "\f0f3";
-}
-
-.icon-zoomin:before {
-  content: "\f00e";
-}
-
-.icon-zoomout:before {
-  content: "\f010";
 }
 
 .fa-trash-alt {
@@ -18635,6 +18506,10 @@ input[type="submit"] a.fas:hover {
   padding: 0 .25rem;
 }
 
+.icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15 {
+  font-size: 1.09375rem;
+}
+
 /*** Buttons ***/
 @media (max-width: 991.98px) {
   .btn, input[type="submit"] {
@@ -18805,10 +18680,6 @@ tr.even {
 
 .dt-bootstrap4 .dataTable .jc-toolbar.jc-footer-toolbar {
   border-top: 1px solid #cbd3da;
-}
-
-.dt-bootstrap4 .dataTable .jc-toolbar i {
-  font-size: 0.875rem;
 }
 
 @media (max-width: 767.98px) {
@@ -19491,7 +19362,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.wt-header-search-button, .wt-header-search-button a, .wt-header-search-button .fa, .wt-header-search-button .fab, .wt-header-search-button .fal, .wt-header-search-button .far, .wt-header-search-button .fas {
+.wt-header-search-button, .wt-header-search-button a, .wt-header-search-button .fa {
   color: #fff;
 }
 
@@ -19508,14 +19379,10 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-primary-navigation .nav-link.active, .jc-primary-navigation .nav-link.active a, .jc-primary-navigation .nav-link.active .fa, .jc-primary-navigation .nav-link.active .fab, .jc-primary-navigation .nav-link.active .fal, .jc-primary-navigation .nav-link.active .far, .jc-primary-navigation .nav-link.active .fas,
+.jc-primary-navigation .nav-link.active, .jc-primary-navigation .nav-link.active a, .jc-primary-navigation .nav-link.active .fa,
 .jc-primary-navigation .dropdown-item.active,
 .jc-primary-navigation .dropdown-item.active a,
-.jc-primary-navigation .dropdown-item.active .fa,
-.jc-primary-navigation .dropdown-item.active .fab,
-.jc-primary-navigation .dropdown-item.active .fal,
-.jc-primary-navigation .dropdown-item.active .far,
-.jc-primary-navigation .dropdown-item.active .fas {
+.jc-primary-navigation .dropdown-item.active .fa {
   color: #fff;
 }
 
@@ -19542,7 +19409,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-secondary-navigation .dropdown-item.active, .jc-secondary-navigation .dropdown-item.active a, .jc-secondary-navigation .dropdown-item.active .fa, .jc-secondary-navigation .dropdown-item.active .fab, .jc-secondary-navigation .dropdown-item.active .fal, .jc-secondary-navigation .dropdown-item.active .far, .jc-secondary-navigation .dropdown-item.active .fas {
+.jc-secondary-navigation .dropdown-item.active, .jc-secondary-navigation .dropdown-item.active a, .jc-secondary-navigation .dropdown-item.active .fa {
   color: #fff;
 }
 
@@ -19584,7 +19451,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   font-weight: 500;
 }
 
-.nav-tabs .nav-link, .nav-tabs .nav-link a, .nav-tabs .nav-link .fa, .nav-tabs .nav-link .fab, .nav-tabs .nav-link .fal, .nav-tabs .nav-link .far, .nav-tabs .nav-link .fas {
+.nav-tabs .nav-link, .nav-tabs .nav-link a, .nav-tabs .nav-link .fa {
   color: #212529;
 }
 
@@ -19596,7 +19463,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.nav-tabs .nav-link.active, .nav-tabs .nav-link.active a, .nav-tabs .nav-link.active .fa, .nav-tabs .nav-link.active .fab, .nav-tabs .nav-link.active .fal, .nav-tabs .nav-link.active .far, .nav-tabs .nav-link.active .fas {
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active a, .nav-tabs .nav-link.active .fa {
   color: #fff;
 }
 
@@ -19634,7 +19501,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.btn-primary, input[type="submit"], .btn-primary a, input[type="submit"] a, .btn-primary .fa, input[type="submit"] .fa, .btn-primary .fab, input[type="submit"] .fab, .btn-primary .fal, input[type="submit"] .fal, .btn-primary .far, input[type="submit"] .far, .btn-primary .fas, input[type="submit"] .fas {
+.btn-primary, input[type="submit"], .btn-primary a, input[type="submit"] a, .btn-primary .fa, input[type="submit"] .fa {
   color: #fff;
 }
 
@@ -19646,17 +19513,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
 }
 
-.btn-secondary, .btn-text, .btn-secondary a, .btn-text a,
-.btn-secondary .fa,
-.btn-text .fa,
-.btn-secondary .fab,
-.btn-text .fab,
-.btn-secondary .fal,
-.btn-text .fal,
-.btn-secondary .far,
-.btn-text .far,
-.btn-secondary .fas,
-.btn-text .fas {
+.btn-secondary, .btn-text, .btn-secondary a, .btn-text a, .btn-secondary .fa, .btn-text .fa {
   color: #212529;
 }
 
@@ -19674,7 +19531,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   border: none;
 }
 
-.card-header, .card-header a, .card-header .fa, .card-header .fab, .card-header .fal, .card-header .far, .card-header .fas {
+.card-header, .card-header a, .card-header .fa {
   color: #212529;
 }
 
@@ -19682,7 +19539,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#337ab7 0, #23537c 50%);
 }
 
-.jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa, .jc-global-individual .card-header .fab, .jc-global-individual .card-header .fal, .jc-global-individual .card-header .far, .jc-global-individual .card-header .fas {
+.jc-global-individual .card-header, .jc-global-individual .card-header a, .jc-global-individual .card-header .fa {
   color: #fff;
 }
 
@@ -19690,7 +19547,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: #f8f9fa;
 }
 
-.jc-global-individual .card-header#name-header-add, .jc-global-individual .card-header#name-header-add a, .jc-global-individual .card-header#name-header-add .fa, .jc-global-individual .card-header#name-header-add .fab, .jc-global-individual .card-header#name-header-add .fal, .jc-global-individual .card-header#name-header-add .far, .jc-global-individual .card-header#name-header-add .fas {
+.jc-global-individual .card-header#name-header-add, .jc-global-individual .card-header#name-header-add a, .jc-global-individual .card-header#name-header-add .fa {
   color: #212529;
 }
 
@@ -19735,14 +19592,10 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
 }
 
-.jc-global-individual .wt-facts-table[role="presentation"] td, .jc-global-individual .wt-facts-table[role="presentation"] td a, .jc-global-individual .wt-facts-table[role="presentation"] td .fa, .jc-global-individual .wt-facts-table[role="presentation"] td .fab, .jc-global-individual .wt-facts-table[role="presentation"] td .fal, .jc-global-individual .wt-facts-table[role="presentation"] td .far, .jc-global-individual .wt-facts-table[role="presentation"] td .fas,
+.jc-global-individual .wt-facts-table[role="presentation"] td, .jc-global-individual .wt-facts-table[role="presentation"] td a, .jc-global-individual .wt-facts-table[role="presentation"] td .fa,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"],
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] a,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fa,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fab,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fal,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .far,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fas {
+.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fa {
   color: #212529;
 }
 
