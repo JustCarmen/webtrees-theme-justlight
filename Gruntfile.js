@@ -124,6 +124,7 @@ module.exports = function(grunt) {
       justlight: {
         src: [
           '../justfancy/assets/js/_base.js',
+          'assets/js/src/nav.js'
         ],
         dest: 'assets/js/theme.js'
       }
