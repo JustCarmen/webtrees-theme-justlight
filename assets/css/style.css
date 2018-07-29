@@ -18749,10 +18749,6 @@ tr.even {
   padding: 0.25rem 0.5rem;
 }
 
-.dt-bootstrap4 .dataTables_length select {
-  width: 50% !important;
-}
-
 .dt-bootstrap4 .dataTable {
   border-spacing: 0;
   border-collapse: collapse !important;
