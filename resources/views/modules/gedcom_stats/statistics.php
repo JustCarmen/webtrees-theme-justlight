@@ -1,7 +1,9 @@
+<?php
 /**
  * Change: statisctics table layout
  * Themes: all themes
  */
+?>
 <?php use Fisharebest\Webtrees\I18N; ?>
 
 <?php if ($show_last_update): ?>
