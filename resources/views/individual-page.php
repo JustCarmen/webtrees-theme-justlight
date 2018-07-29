@@ -59,22 +59,23 @@ if (Auth::isAdmin()) {
 }
 ?>
 
-<div class="d-flex mb-4 justify-content-between">
-	<h2 class="wt-page-title">
+<div class="row d-flex mb-4 justify-content-between">
+	<h2 class="col wt-page-title">
 		<?= $individual->getFullName() ?><small class="text-muted"><?= $user_link ?></small>
 		<br/><small class="text-muted"><?= $individual->getLifeSpan() ?> <?= $age ?></small>
 	</h2>
-	
-	<?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
-		<?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
-	<?php endif ?>
+	<div class="col text-right">
+	  <?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
+		  <?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
+	  <?php endif ?>
+	</div>
 </div>
 
 <div class="row">
-	<div class="col-12 col-md-8">
+	<div class="col-12 col-lg-9 col-md-8">
 		<div class="d-flex col p-0 mb-4">
 			<!-- Individual images -->
-			<div class="col-sm-3 px-0">
+			<div class="col-2 px-0">
 				<?php if (empty($individual_media)): ?>
 					<i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
 				<?php elseif (count($individual_media) === 1): ?>
@@ -102,7 +103,7 @@ if (Auth::isAdmin()) {
 			</div>
 
 			<!-- Name accordion -->
-			<div class="col-sm-9" id="individual-names" role="tablist">
+			<div class="col-10" id="individual-names" role="tablist">
 				<?php foreach ($name_records as $name_record): ?>
 					<?= $name_record ?>
 				<?php endforeach ?>
@@ -113,7 +114,7 @@ if (Auth::isAdmin()) {
 			</div>
 		</div>
 
-		<div id="individual-tabs">
+	  <div id="individual-tabs" class="col">
 			<ul class="nav nav-tabs flex-wrap">
 				<?php foreach ($tabs as $tab): ?>
 					<li class="nav-item">
@@ -132,7 +133,7 @@ if (Auth::isAdmin()) {
 			</div>
 		</div>
 	</div>
-	<div class="col-12 col-md-4" id="sidebar" role="tablist">
+	<div class="col-12 col-lg-3 col-md-4" id="sidebar" role="tablist">
 		<?php foreach ($sidebars as $sidebar): ?>
 			<div class="card">
 				<div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">

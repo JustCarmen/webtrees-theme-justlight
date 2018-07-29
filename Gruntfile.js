@@ -124,7 +124,6 @@ module.exports = function(grunt) {
       justlight: {
         src: [
           '../justfancy/assets/js/_base.js',
-          'assets/js/src/grid.js'
         ],
         dest: 'assets/js/theme.js'
       }
@@ -182,6 +181,7 @@ module.exports = function(grunt) {
       },
 
       // excluded files:
+      // - individual-page
       // - views/layouts/*
       // - views/modules/lightbox/*
       // files which does not exists in JustFancy:
@@ -193,7 +193,11 @@ module.exports = function(grunt) {
           cwd: '../justfancy/resources',
           src: [
             'colorbox.php',
-            'views/*page*',
+            'views/edit*',
+            'views/individual-page-menu*',
+            'views/report*',
+            'views/tree*',
+            'views/user*',
             'views/lists/*',
             'modules/gedcom_block/*',
             'modules/gedcom_stats/*',

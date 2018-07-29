@@ -56,10 +56,10 @@
 					</div>
 
 					<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 my-3">
-						<div class="col wt-site-logo"></div>
+						<div class="wt-site-logo"></div>
 
 						<?php if ($tree !== null): ?>
-						<h1 class="col jc-site-title">
+						<h1 class="jc-site-title">
 						  <a href="index.php?route=tree-page&ged=<?= e($tree->getName()) ?>"><?= e($tree->getTitle()) ?></a>
 						</h1>
 						<?php endif ?>
@@ -97,7 +97,7 @@
 			</div>
 
 			<?php if ($tree !== null): ?>
-			<nav class="jc-primary-navigation px-2">
+			<nav class="row jc-primary-navigation px-2">
 				<ul class="nav nav-pills wt-primary-menu justify-content-start">
 					<?php foreach (Theme::theme()->primaryMenu($individual ?? $tree->significantIndividual(Auth::user())) as $menu): ?>
 						<?= $menu->bootstrap4() ?>
