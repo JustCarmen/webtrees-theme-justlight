@@ -200,10 +200,10 @@ module.exports = function(grunt) {
             'views/tree*',
             'views/user*',
             'views/lists/*',
-            'modules/gedcom_block/*',
-            'modules/gedcom_stats/*',
-            'modules/user_welcome/*',
-            'selects/*'
+            'views/modules/gedcom_block/*',
+            'views/modules/gedcom_stats/*',
+            'views/modules/user_welcome/*',
+            'views/selects/*'
           ],
           dest: 'resources',
           expand: true
