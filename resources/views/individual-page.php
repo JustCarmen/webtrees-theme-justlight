@@ -73,9 +73,9 @@ if (Auth::isAdmin()) {
 
 <div class="row">
 	<div class="col-12 col-lg-9 col-md-8">
-		<div class="d-flex col p-0 mb-4">
+		<div class="row mb-4">
 			<!-- Individual images -->
-			<div class="col-2 px-0">
+			<div class="col-2">
 				<?php if (empty($individual_media)): ?>
 					<i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
 				<?php elseif (count($individual_media) === 1): ?>
@@ -114,7 +114,7 @@ if (Auth::isAdmin()) {
 			</div>
 		</div>
 
-	  <div id="individual-tabs" class="col">
+	  <div id="individual-tabs">
 			<ul class="nav nav-tabs flex-wrap">
 				<?php foreach ($tabs as $tab): ?>
 					<li class="nav-item">
