@@ -19322,6 +19322,11 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   outline: none;
 }
 
+.wt-ancestors-chart-list,
+.generations {
+  background-image: url("images/charts/vline.png");
+}
+
 /*** List pages ***/
 .jc-global-list .wt-initial.active {
   color: #b80000;
