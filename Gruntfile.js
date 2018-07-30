@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         files: ['assets/scss/**/*.scss', '../justfancy/assets/scss/**/*.scss'],
         tasks: ['default'],
         options: {
-          spawn: false
+          spawn: true
         }
       },
       js: {
