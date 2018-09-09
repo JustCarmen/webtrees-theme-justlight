@@ -92,7 +92,7 @@ class JustBaseTheme extends MinimalTheme {
 	 *
 	 * @return string
 	 */
-	public function individualBox(Individual $individual) {
+	public function individualBox(Individual $individual): string {
 		$personBoxClass = array_search($individual->getSex(), ['person_box' => 'M', 'person_boxF' => 'F', 'person_boxNN' => 'U']);
 		if ($individual->canShow() && $individual->getTree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
 			$thumbnail = $individual->displayImage(40, 50, 'crop', []);
@@ -131,7 +131,7 @@ class JustBaseTheme extends MinimalTheme {
 	}
 
 	/** {@inheritdoc} */
-	public function logoPoweredBy() {
+	public function logoPoweredBy():string {
 		return '<a href="' . WT_WEBTREES_URL . '" class="wt-powered-by-webtrees" title="' . WT_WEBTREES_URL . '" dir="ltr"></a>';
 	}
 

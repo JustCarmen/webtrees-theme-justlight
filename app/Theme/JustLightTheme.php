@@ -36,7 +36,7 @@ class JustLightTheme extends JustBaseTheme {
 	}
 
 	/** (@inheritdoc) */
-	public function secondaryMenu() {
+	public function secondaryMenu():array {
 		return array_filter([
 		$this->menuMyPages(),
 		$this->menuFavorites(),
@@ -52,7 +52,7 @@ class JustLightTheme extends JustBaseTheme {
 	 *
 	 * @return string
 	 */
-	public function secondaryMenuContainer(array $menus) {
+	public function secondaryMenuContainer(array $menus):string {
 		$html = '';
 		foreach ($menus as $menu) {
 			if ($menu->getSubmenus()) {
@@ -111,7 +111,7 @@ class JustLightTheme extends JustBaseTheme {
 	}
 
 	/** {@inheritdoc} */
-	public function themeName() {
+	public function themeName():string {
 		return /* I18N: Name of a theme. */ I18N::translate(self::THEME_NAME);
 	}
 }
