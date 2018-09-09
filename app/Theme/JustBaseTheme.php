@@ -15,7 +15,6 @@
  */
 namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
-use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Menu;
@@ -70,14 +69,14 @@ class JustBaseTheme extends MinimalTheme {
 	 * @return string
 	 */
 	public function getThemeGlobalClass() {
-		$class = ' jc-global-' . Filter::get('route');
+		$class = ' jc-global-' . $this->request->get('route');
 
-		$module = Filter::get('module');
+		$module = $this->request->get('module');
 		if ($module) {
 			$class .= '-' . $module;
 		}
 
-		if (strpos(Filter::get('route'), '-list') !== false && Filter::get('route') !== 'media-list') {
+		if (strpos($this->request->get('route'), '-list') !== false && $this->request->get('route') !== 'media-list') {
 			$class .= ' jc-global-list';
 		}
 		return $class;
@@ -152,7 +151,7 @@ class JustBaseTheme extends MinimalTheme {
 		'image-vline'  => $path . 'vline.png'
 	];
 
-		if (Filter::get('route') === 'pedigree' && (Filter::getInteger('orientation') === 2 || Filter::getInteger('orientation') === 3)) {
+		if ($this->request->get('route') === 'pedigree' && ($this->request->get('orientation') === 2 || $this->request->get('orientation') === 3)) {
 			$parameters['compact-chart-box-x'] = 90;
 			$parameters['compact-chart-box-y'] = 120;
 		}

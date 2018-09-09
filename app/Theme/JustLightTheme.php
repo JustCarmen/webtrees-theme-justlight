@@ -105,7 +105,7 @@ class JustLightTheme extends JustBaseTheme {
 	public function setFluidClass() {
 		$pages = ['individual'];
 
-		if (in_array(Filter::get('route'), $pages)) {
+		if (in_array($this->request->get('route'), $pages)) {
 			return '-fluid px-5'; // container-fluid
 		}
 	}
