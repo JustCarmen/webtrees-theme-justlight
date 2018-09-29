@@ -3,8 +3,7 @@
  * JustLight Theme
  *
  * webtrees: online genealogy
- * Copyright (C) 2017 webtrees development team
- * Copyright (C) 2017 JustCarmen
+ * Copyright (C) 2018 JustCarmen (http://justcarmen.nl)
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -34,10 +33,10 @@ use JustCarmen\WebtreesAddOns\JustLight\JustLightThemeOptionsClass;
 
 class JustLightTheme extends AbstractTheme implements ThemeInterface {
 
-	const THEME_VERSION		 = '1.8.0-dev';
+	const THEME_VERSION		 = '1.7.11';
 	const THEME_DIR			 = WT_THEMES_DIR . 'justlight/';
-	const THEME_CSS_URL		 = self::THEME_DIR . 'css/';
-	const THEME_JS_URL		 = self::THEME_DIR . 'js/';
+	const THEME_CSS_URL			 = self::THEME_DIR . 'css-' . self::THEME_VERSION . '/';
+	const THEME_JS_URL			 = self::THEME_DIR . 'js-' . self::THEME_VERSION . '/';
 	const THEME_BOOTSTRAP_URL	 = self::THEME_DIR . 'bootstrap-3.3.7/';
 	const THEME_JQUERY_UI_URL	 = self::THEME_DIR . 'jquery-ui-1.11.4/';
 	const THEME_COLORBOX_URL	 = self::THEME_DIR . 'colorbox-1.5.14/';
@@ -703,8 +702,8 @@ class JustLightTheme extends AbstractTheme implements ThemeInterface {
 			self::THEME_JQUERY_UI_URL . 'jquery-ui.min.css',
 			self::THEME_COLORBOX_URL . 'colorbox.css',
 			self::THEME_BOOTSTRAP_URL . 'bootstrap-theme.min.css',
-			$this->assetUrl() . 'style.css?v' . self::THEME_VERSION,
-			$this->assetUrl() . 'justlight.css?v' . self::THEME_VERSION
+			$this->assetUrl() . 'style.css',
+			$this->assetUrl() . 'justlight.css'
 		];
 		return array_merge(parent::stylesheets(), $stylesheets);
 	}
