@@ -157,8 +157,8 @@
 			<?php endif ?>
 		</div>
 	  
-		<script src="<?= e(WT_ASSETS_URL . 'js/vendor.js') ?>?<?= filemtime(WT_ROOT . WT_ASSETS_URL . 'js/vendor.js') ?>"></script>
-		<script src="<?= e(WT_ASSETS_URL . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . WT_ASSETS_URL . 'js/webtrees.js') ?>"></script>		
+		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/vendor.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/vendor.js') ?>"></script>
+		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>"></script>		
 		
 		<script>
 			var AUTH_ID = "<?= Auth::id() ?>";
