@@ -17,6 +17,7 @@ namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Media;
 use Fisharebest\Webtrees\Menu;
 use Fisharebest\Webtrees\Module;
 use Fisharebest\Webtrees\Theme\MinimalTheme;
@@ -95,7 +96,25 @@ class JustBaseTheme extends MinimalTheme {
 	public function individualBox(Individual $individual): string {
 		$personBoxClass = array_search($individual->getSex(), ['person_box' => 'M', 'person_boxF' => 'F', 'person_boxNN' => 'U']);
 		if ($individual->canShow() && $individual->tree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
-			$thumbnail = $individual->displayImage(40, 50, 'crop', []);
+			// Only use images of the type 'photo' as thumbnail
+			// Source: $individual_media from app\Http\Controllers\IndividualController.php
+			$individual_media = [];
+			foreach ($individual->facts(['OBJE']) as $fact) {
+				$media_object = $fact->target();
+				if ($media_object instanceof Media) {
+					foreach ($media_object->mediaFiles() as $media_file) {
+						if ($media_file->isImage() && $media_file->type() === 'photo') {
+							$individual_media[] = $media_file;
+						}
+					}
+				}
+			}
+			$individual_media = array_filter($individual_media);
+			if (empty($individual_media)) {
+				$thumbnail = '<i class="icon-silhouette-' . $individual->getSex() . '"></i>';
+			} else {
+				$thumbnail = $individual_media[0]->displayImage(40, 50, 'crop', []);
+			}
 		} else {
 			$thumbnail = '';
 		}
@@ -133,6 +152,20 @@ class JustBaseTheme extends MinimalTheme {
 	/** {@inheritdoc} */
 	public function logoPoweredBy(): string {
 		return '<a href="' . e(Webtrees::URL) . '" class="wt-powered-by-webtrees" title="' . e(Webtrees::URL) . '" dir="ltr"></a>';
+	}
+
+	/**
+	 * Generate the facts, for display in charts.
+	 *
+	 * @param Individual $individual
+	 *
+	 * @return string
+	 *
+	 * Use a compact layout in this theme
+	 * TODO: make this optional. Choose between the default and the customized setting.
+	 */
+	public function individualBoxFacts(Individual $individual): string {
+		return $individual->getLifeSpan();
 	}
 
 	/**
