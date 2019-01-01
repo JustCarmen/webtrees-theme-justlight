@@ -19760,6 +19760,10 @@ h2 {
   }
 }
 
+.icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U {
+  font-size: 2.625rem;
+}
+
 #individual-tabs .icon-silhouette-F,
 #sidebar .icon-silhouette-F, #individual-tabs .icon-silhouette-M,
 #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
@@ -19774,15 +19778,6 @@ h2 {
   #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
   #sidebar .icon-silhouette-U {
     font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 992px) {
-  #individual-tabs .icon-silhouette-F,
-  #sidebar .icon-silhouette-F, #individual-tabs .icon-silhouette-M,
-  #sidebar .icon-silhouette-M, #individual-tabs .icon-silhouette-U,
-  #sidebar .icon-silhouette-U {
-    font-size: 2.625rem;
   }
 }
 
