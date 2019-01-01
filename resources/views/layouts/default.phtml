@@ -11,6 +11,7 @@
 <?php use Fisharebest\Webtrees\I18N; ?>
 <?php use Fisharebest\Webtrees\Theme; ?>
 <?php use Fisharebest\Webtrees\View; ?>
+<?php use Fisharebest\Webtrees\Webtrees; ?>
 
 <!DOCTYPE html>
 <html <?= I18N::htmlAttributes() ?>>
@@ -19,7 +20,7 @@
 		<meta name="csrf" content="<?= e(csrf_token()) ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="<?= e($meta_robots ?? 'noindex,nofollow') ?>">
-		<meta name="generator" content="<?= e(WT_WEBTREES) ?>">
+		<meta name="generator" content="<?= e(Webtrees::NAME) ?>">
 		<?php if ($tree !== null): ?>
 			<meta name="description" content="<?= e($tree->getPreference('META_DESCRIPTION')) ?>">
 		<?php endif ?>
@@ -60,7 +61,7 @@
 
 						<?php if ($tree !== null): ?>
 						<h1 class="jc-site-title">
-						  <a href="index.php?route=tree-page&ged=<?= e($tree->getName()) ?>"><?= e($tree->title()) ?></a>
+						  <a href="index.php?route=tree-page&ged=<?= e($tree->name()) ?>"><?= e($tree->title()) ?></a>
 						</h1>
 						<?php endif ?>
 					</div>
@@ -70,7 +71,7 @@
 							<ul class="nav wt-secondary-menu">
 								<?= Theme::theme()->secondaryMenuContainer(Theme::theme()->secondaryMenu()) ?>
 								<li class="nav-item quick-search-small d-lg-none align-self-center">
-									<a class="nav-link fa fa-search" href="search.php?ged=<?= e($tree->getName()) ?>"></a>
+									<a class="nav-link fa fa-search" href="search.php?ged=<?= e($tree->name()) ?>"></a>
 								</li>
 							</ul>
 						</div>
@@ -79,7 +80,7 @@
 						<div class="col wt-header-search">
 							<form class="wt-header-search-form" role="search">
 								<input type="hidden" name="route" value="search-quick">
-								<input type="hidden" name="ged" value="<?= e($tree->getName()) ?>">
+								<input type="hidden" name="ged" value="<?= e($tree->name()) ?>">
 								<div class="input-group">
 									<label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
 									<input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
