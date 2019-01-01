@@ -91,7 +91,7 @@ class JustLightTheme extends JustBaseTheme {
 					$btn_class = 'btn-primary';
 				}
 
-				$html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->label() . '</a></li>';
+				$html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
 			}
 		}
 
