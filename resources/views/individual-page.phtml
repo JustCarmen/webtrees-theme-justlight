@@ -16,15 +16,15 @@
 <?php use Fisharebest\Webtrees\User; ?>
 
 <?php if ($individual->isPendingDeletion()): ?>
-	<?php if (Auth::isModerator($individual->getTree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php elseif (Auth::isEditor($individual->getTree())): ?>
+	<?php if (Auth::isModerator($individual->tree())): ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->getName()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+	<?php elseif (Auth::isEditor($individual->tree())): ?>
 		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php endif ?>
 <?php elseif ($individual->isPendingAddition()): ?>
-	<?php if (Auth::isModerator($individual->getTree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->getXref()) . '\', \'' . e($individual->getTree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php elseif (Auth::isEditor($individual->getTree())): ?>
+	<?php if (Auth::isModerator($individual->tree())): ?>
+		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->getName()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+	<?php elseif (Auth::isEditor($individual->tree())): ?>
 		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
 	<?php endif ?>
 <?php endif ?>
@@ -33,8 +33,8 @@
 // Only use images of the type 'photo' in the carousel
 // overwrite declaration of $individual_media from app\Http\Controllers\IndividualController.php
 $individual_media = [];
-foreach ($individual->getFacts() as $fact) {
-	$media_object = $fact->getTarget();
+foreach ($individual->facts() as $fact) {
+	$media_object = $fact->target();
 	if ($media_object instanceof Media) {
 		foreach ($media_object->mediaFiles() as $media_file) {
 			if ($media_file->isImage() && $media_file->type() === 'photo') {
@@ -118,8 +118,8 @@ if (Auth::isAdmin()) {
 			<ul class="nav nav-tabs flex-wrap">
 				<?php foreach ($tabs as $tab): ?>
 					<li class="nav-item">
-						<a class="nav-link<?= $tab->isGrayedOut($individual) ? ' text-muted' : '' ?>" data-toggle="tab" role="tab" data-href="<?= e(route('individual-tab', ['xref' => $individual->getXref(), 'ged' => $individual->getTree()->getName(), 'module' => $tab->getName()])) ?>" href="#<?= $tab->getName() ?>">
-							<?= $tab->getTitle() ?>
+						<a class="nav-link<?= $tab->isGrayedOut($individual) ? ' text-muted' : '' ?>" data-toggle="tab" role="tab" data-href="<?= e(route('individual-tab', ['xref' => $individual->xref(), 'ged' => $individual->tree()->getName(), 'module' => $tab->getName()])) ?>" href="#<?= $tab->getName() ?>">
+							<?= $tab->title() ?>
 						</a>
 					</li>
 				<?php endforeach ?>
@@ -139,7 +139,7 @@ if (Auth::isAdmin()) {
 				<div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">
 					<div class="card-title mb-0">
 						<a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-content-<?= $sidebar->getName() ?>" aria-expanded="<?= $sidebar->getName() === 'family_nav' ? 'true' : 'false' ?>" aria-controls="sidebar-content-<?= $sidebar->getName() ?>">
-							<?= $sidebar->getTitle() ?>
+							<?= $sidebar->title() ?>
 						</a>
 					</div>
 				</div>

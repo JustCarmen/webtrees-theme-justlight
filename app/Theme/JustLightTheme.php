@@ -64,14 +64,14 @@ class JustLightTheme extends JustBaseTheme {
 					}
 
 					$class = trim('dropdown-item ' . $submenu->getClass());
-					$submenus .= '<a class="' . $class . '" href="' . $submenu->getLink() . '"' . $attrs . '>' . $submenu->getLabel() . '</a>';
+					$submenus .= '<a class="' . $class . '" href="' . $submenu->getLink() . '"' . $attrs . '>' . $submenu->label() . '</a>';
 				}
 
 				$class = trim('nav-item dropdown ' . $menu->getClass());
 
 				$html .= '<div class="' . $menu->getClass() . ' btn-group">' .
 			'<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">' .
-			'<span class="menu-label">' . $menu->getLabel() . '</span>' .
+			'<span class="menu-label">' . $menu->label() . '</span>' .
 			'<i class="caret"></i>' .
 			'</button>' .
 			'<div class="dropdown-menu" role="menu">' .
@@ -92,7 +92,7 @@ class JustLightTheme extends JustBaseTheme {
 					$btn_class = 'btn-primary';
 				}
 
-				$html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->getLabel() . '</a></li>';
+				$html .= '<div class="' . $class . '"><a class="btn ' . $btn_class . '" href="' . $menu->getLink() . '"' . $attrs . '>' . $menu->label() . '</a></li>';
 			}
 		}
 

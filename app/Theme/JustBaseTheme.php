@@ -93,7 +93,7 @@ class JustBaseTheme extends MinimalTheme {
 	 */
 	public function individualBox(Individual $individual): string {
 		$personBoxClass = array_search($individual->getSex(), ['person_box' => 'M', 'person_boxF' => 'F', 'person_boxNN' => 'U']);
-		if ($individual->canShow() && $individual->getTree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
+		if ($individual->canShow() && $individual->tree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
 			$thumbnail = $individual->displayImage(40, 50, 'crop', []);
 		} else {
 			$thumbnail = '';
@@ -102,7 +102,7 @@ class JustBaseTheme extends MinimalTheme {
 		$content = '<span class="namedef name1">' . $individual->getFullName() . '</span>';
 		$icons   = '';
 		if ($individual->canShow()) {
-			$content = '<a href="' . $individual->getHtmlUrl() . '">' . $content . '</a>' .
+			$content = '<a href="' . $individual->url() . '">' . $content . '</a>' .
 				'<div class="namedef name1">' . $individual->getAddName() . '</div>';
 			$icons = '<div class="icons order-2">' .
 				'<span class="iconz icon-zoomin" title="' . I18N::translate('Zoom in/out on this box.') . '"></span>' .
@@ -116,7 +116,7 @@ class JustBaseTheme extends MinimalTheme {
 		}
 
 		return
-			'<div data-pid="' . $individual->getXref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+			'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 			$icons .
 			'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 			$thumbnail .

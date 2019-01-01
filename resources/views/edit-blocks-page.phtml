@@ -174,7 +174,7 @@
 					<select multiple="multiple" id="main_select" name="main[]" size="10" onchange="show_description('main_select');">
 						<?php foreach ($main_blocks as $block_id => $block): ?>
 							<option value="<?= $block_id ?>">
-								<?= $all_blocks[$block->getName()]->getTitle() ?>
+								<?= $all_blocks[$block->getName()]->title() ?>
 							</option>
 						<?php endforeach ?>
 					</select>
@@ -186,7 +186,7 @@
 					<select multiple id="available_select" size="10" onchange="show_description('available_select');">
 						<?php foreach ($all_blocks as $block_name => $block): ?>
 							<option value="<?= $block_name ?>">
-								<?= $block->getTitle() ?>
+								<?= $block->title() ?>
 							</option>
 						<?php endforeach ?>
 					</select>
@@ -198,7 +198,7 @@
 					<select multiple="multiple" id="side_select" name="side[]" size="10" onchange="show_description('side_select');">
 						<?php foreach ($side_blocks as $block_id => $block): ?>
 							<option value="<?= $block_id ?>">
-								<?= $all_blocks[$block->getName()]->getTitle() ?>
+								<?= $all_blocks[$block->getName()]->title() ?>
 							</option>
 						<?php endforeach ?>
 					</select>
