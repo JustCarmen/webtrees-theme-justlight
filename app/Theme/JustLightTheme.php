@@ -16,7 +16,6 @@
 namespace JustCarmen\WebtreesThemes\JustLight\Theme;
 
 use Fisharebest\Webtrees\Auth;
-use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\I18N;
 
 class JustLightTheme extends JustBaseTheme {
