@@ -20,6 +20,7 @@ use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Menu;
 use Fisharebest\Webtrees\Module;
 use Fisharebest\Webtrees\Theme\MinimalTheme;
+use Fisharebest\Webtrees\Webtrees;
 use JustCarmen\WebtreesAddOns\FancyImagebar\FancyImagebarClass;
 
 class JustBaseTheme extends MinimalTheme {
@@ -130,8 +131,8 @@ class JustBaseTheme extends MinimalTheme {
 	}
 
 	/** {@inheritdoc} */
-	public function logoPoweredBy():string {
-		return '<a href="' . WT_WEBTREES_URL . '" class="wt-powered-by-webtrees" title="' . WT_WEBTREES_URL . '" dir="ltr"></a>';
+	public function logoPoweredBy(): string {
+		return '<a href="' . e(Webtrees::URL) . '" class="wt-powered-by-webtrees" title="' . e(Webtrees::URL) . '" dir="ltr"></a>';
 	}
 
 	/**
