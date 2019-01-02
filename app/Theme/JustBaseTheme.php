@@ -90,6 +90,7 @@ class JustBaseTheme extends MinimalTheme {
 	 *
 	 * @param Individual $individual
 	 * We need an extra div to use a flexbox layout
+	 * Thumbnail restriction
 	 *
 	 * @return string
 	 */
@@ -135,18 +136,32 @@ class JustBaseTheme extends MinimalTheme {
 				'</div>';
 		}
 
-		return
-			'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
-			$icons .
-			'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
-			$thumbnail .
-	  '<div class="d-flex flex-column">' .
-			$content .
-			'<div class="inout2 details1">' . $this->individualBoxFacts($individual) . '</div>' .
-	  '</div>' .
-			'</div>' .
-			'<div class="inout"></div>' .
-			'</div>';
+		// specific compact layout for the pedigree chart. We prefer a compact layout with default oldest on top on the pedigree chart
+		if ($this->request->get('route') === 'pedigree-chart' && ($this->request->get('orientation') === '2' || $this->request->get('orientation') === '3')) {
+			return
+				'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+				'<div class="chart_textbox d-flex width100 justify-content-center" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
+				'<div class="d-flex flex-column align-items-center text-center">' .
+				$thumbnail . $content .
+				'<div class="inout2 details1">' . $this->individualBoxFacts($individual) . '</div>' .
+				'</div>' .
+				'</div>' .
+				'<div class="inout"></div>' .
+				'</div>';
+		} else {
+			return
+				'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+				$icons .
+				'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
+				$thumbnail .
+				'<div class="d-flex flex-column">' .
+				$content .
+				'<div class="inout2 details1">' . $this->individualBoxFacts($individual) . '</div>' .
+				'</div>' .
+				'</div>' .
+				'<div class="inout"></div>' .
+				'</div>';
+		}
 	}
 
 	/** {@inheritdoc} */
@@ -185,9 +200,9 @@ class JustBaseTheme extends MinimalTheme {
 		'image-vline'  => $path . 'vline.png'
 	];
 
-		if ($this->request->get('route') === 'pedigree' && ($this->request->get('orientation') === 2 || $this->request->get('orientation') === 3)) {
-			$parameters['compact-chart-box-x'] = 90;
-			$parameters['compact-chart-box-y'] = 120;
+		if ($this->request->get('route') === 'pedigree-chart' && ($this->request->get('orientation') === '2' || $this->request->get('orientation') === '3')) {
+			$parameters['chart-box-x'] = 105;
+			$parameters['chart-box-y'] = 140;
 		}
 
 		if (array_key_exists($parameter_name, $parameters)) {

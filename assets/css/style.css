@@ -20017,7 +20017,7 @@ tr.even {
 }
 
 .person_box_template .name1, #lifespan-people .popup .name1 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
@@ -20479,6 +20479,11 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 .wt-ancestors-chart-list,
 .generations {
   background-image: url("images/charts/vline.png");
+}
+
+#familybook_chart .spacer,
+#pedigree-page .spacer {
+  background-image: url("images/charts/spacer.png");
 }
 
 /*** List pages ***/
