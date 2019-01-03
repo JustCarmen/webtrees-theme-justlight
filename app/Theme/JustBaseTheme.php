@@ -35,10 +35,10 @@ class JustBaseTheme extends MinimalTheme {
 	 */
 	public function datatableMarkup() {
 		return
-			"<'row mt-3 mb-lg-1'<'col-md-6 float-none'l><'col-md-6 float-sm-none float-md-right'f>>" .
+			"<'row mt-3 mb-lg-1'<'col-md-12 col-lg-6'l><'col-md-12 col-lg-6 d-flex justify-content-lg-end'f>>" .
 			"<'row'<'col-6 d-none d-lg-block'i><'col-6 d-none d-lg-block'p>>" .
 			"<'row'<'col-sm-12'tr>>" .
-			"<'row'<'col-md-6 float-none'i><'col-md-6 float-sm-none float-md-right'p>>";
+			"<'row'<'col-md-12 col-lg-6'i><'col-md-12 col-lg-6'p>>";
 	}
 
 	/**
