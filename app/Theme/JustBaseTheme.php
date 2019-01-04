@@ -1,7 +1,7 @@
 <?php
 /**
  * JustLight theme for webtrees (online genealogy)
- * Copyright (C) 2018 JustCarmen (http://www.justcarmen.nl)
+ * Copyright (C) 2019 JustCarmen (http://www.justcarmen.nl)
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -143,7 +143,7 @@ class JustBaseTheme extends MinimalTheme {
 				'<div class="chart_textbox d-flex width100 justify-content-center" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 				'<div class="d-flex flex-column align-items-center text-center">' .
 				$thumbnail . $content .
-				'<div class="inout2 details1">' . $this->individualBoxFacts($individual) . '</div>' .
+				'<div class="inout2 details1">' . $individual->getLifeSpan() . '</div>' .
 				'</div>' .
 				'</div>' .
 				'<div class="inout"></div>' .
@@ -167,20 +167,6 @@ class JustBaseTheme extends MinimalTheme {
 	/** {@inheritdoc} */
 	public function logoPoweredBy(): string {
 		return '<a href="' . e(Webtrees::URL) . '" class="wt-powered-by-webtrees" title="' . e(Webtrees::URL) . '" dir="ltr"></a>';
-	}
-
-	/**
-	 * Generate the facts, for display in charts.
-	 *
-	 * @param Individual $individual
-	 *
-	 * @return string
-	 *
-	 * Use a compact layout in this theme
-	 * TODO: make this optional. Choose between the default and the customized setting.
-	 */
-	public function individualBoxFacts(Individual $individual): string {
-		return $individual->getLifeSpan();
 	}
 
 	/**
