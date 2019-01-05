@@ -4,7 +4,7 @@
  * - start with orientation nr. 2 (oldest at top) as default when using the compact layout
  *
  * Themes: all themes
- * 
+ *
  * TODO: make this choice optional (see also the JustBaseTheme)
  *
  */
@@ -15,7 +15,7 @@
 
 <?php
     // The querystring orientation is not set when clicking on the menu item charts/pedigree
-    global $request; 
+    global $request;
     if (empty($request->get('orientation')) && $request->get('orientation') !== '0')  {
         $orientation = '2';
     }

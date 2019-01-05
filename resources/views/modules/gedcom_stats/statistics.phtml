@@ -7,9 +7,9 @@
 <?php use Fisharebest\Webtrees\I18N; ?>
 
 <?php if ($show_last_update): ?>
-	<p>
-		<?= I18N::translate('This family tree was last updated on %s.', strip_tags($stats->gedcomUpdated())) ?>
-	</p>
+    <p>
+        <?= I18N::translate('This family tree was last updated on %s.', strip_tags($stats->gedcomUpdated())) ?>
+    </p>
 <?php endif ?>
 
 <div class="jc-statistics-row mb-3">
@@ -35,19 +35,19 @@
       <?= I18N::translate('Females') ?>
     </dt>
     <dd class="mr-1">
-			<?= $stats->totalSexFemales() ?>
-			(<?= $stats->totalSexFemalesPercentage() ?>)
+            <?= $stats->totalSexFemales() ?>
+            (<?= $stats->totalSexFemalesPercentage() ?>)
     </dd>
-		<?php endif ?>
-		<?php if ($stat_surname): ?>
+        <?php endif ?>
+        <?php if ($stat_surname): ?>
     <dt class="mr-1">
       <?= I18N::translate('Surnames') ?>
     </dt>
     <dd class="mr-1">
       <?= $stats->totalSurnames() ?>
     </dd>
-		<?php endif ?>
-		<?php if ($stat_fam): ?>
+        <?php endif ?>
+        <?php if ($stat_fam): ?>
     <dt class="mr-1">
       <?= I18N::translate('Families') ?>
     </dt>
@@ -55,7 +55,7 @@
       <?= $stats->totalFamilies() ?>
     </dd>
     <?php endif ?>
-		<?php if ($stat_sour): ?>
+        <?php if ($stat_sour): ?>
     <dt class="mr-1">
       <?= I18N::translate('Sources') ?>
     </dt>
@@ -68,7 +68,7 @@
       <?= I18N::translate('Media objects') ?>
     </dt>
     <dd class="mr-1">
-			<?= $stats->totalMedia() ?>
+            <?= $stats->totalMedia() ?>
     </dd>
     <?php endif ?>
     <?php if ($stat_repo): ?>
@@ -76,26 +76,26 @@
       <?= I18N::translate('Repositories') ?>
     </dt>
     <dd class="mr-1">
-			<?= $stats->totalRepositories() ?>
+            <?= $stats->totalRepositories() ?>
     </dd>
     <?php endif ?>
-		<?php if ($stat_events): ?>
+        <?php if ($stat_events): ?>
     <dt class="mr-1">
       <?= I18N::translate('Events') ?>
     </dt>
     <dd class="mr-1">
-			<?= $stats->totalEvents() ?>
+            <?= $stats->totalEvents() ?>
     </dd>
     <?php endif ?>
-		<?php if ($stat_users): ?>
+        <?php if ($stat_users): ?>
     <dt class="mr-1">
       <?= I18N::translate('Users') ?>
     </dt>
     <dd class="mr-1">
-			<?= $stats->totalUsers() ?>
+            <?= $stats->totalUsers() ?>
     </dd>
-		<?php endif ?>
-	</dl>
+        <?php endif ?>
+    </dl>
 </div>
 
 <div class="jc-statistics-table">
@@ -203,15 +203,15 @@
 </div>
 
 <?php if (!empty($surnames)): ?>
-	<div class="clearfloat">
-		<p>
-			<strong>
-				<?= I18N::translate('Most common surnames') ?>
-			</strong>
-			<br>
-			<span class="common_surnames">
-				<?= $surnames ?>
-			</span>
-		</p>
-	</div>
+    <div class="clearfloat">
+        <p>
+            <strong>
+                <?= I18N::translate('Most common surnames') ?>
+            </strong>
+            <br>
+            <span class="common_surnames">
+                <?= $surnames ?>
+            </span>
+        </p>
+    </div>
 <?php endif ?>

@@ -5,7 +5,7 @@
  * - add media link and reorder-media link moved from individual-page view to individual-page-menu view
  * - use only one image (with the type 'photo') as main image in stead of the carousel
  * Themes: all themes
- * 
+ *
  * TODO: make the carrousel and cropped image (default) optional
  *
  */
@@ -18,17 +18,17 @@
 <?php use Fisharebest\Webtrees\User; ?>
 
 <?php if ($individual->isPendingDeletion()): ?>
-	<?php if (Auth::isModerator($individual->tree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php elseif (Auth::isEditor($individual->tree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php endif ?>
+    <?php if (Auth::isModerator($individual->tree())): ?>
+        <?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+    <?php elseif (Auth::isEditor($individual->tree())): ?>
+        <?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+    <?php endif ?>
 <?php elseif ($individual->isPendingAddition()): ?>
-	<?php if (Auth::isModerator($individual->tree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php elseif (Auth::isEditor($individual->tree())): ?>
-		<?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-	<?php endif ?>
+    <?php if (Auth::isModerator($individual->tree())): ?>
+        <?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+    <?php elseif (Auth::isEditor($individual->tree())): ?>
+        <?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
+    <?php endif ?>
 <?php endif ?>
 
 <?php
@@ -36,14 +36,14 @@
 // overwrite declaration of $individual_media from app\Http\Controllers\IndividualController.php
 $individual_media = [];
 foreach ($individual->facts() as $fact) {
-	$media_object = $fact->target();
-	if ($media_object instanceof Media) {
-		foreach ($media_object->mediaFiles() as $media_file) {
-			if ($media_file->isImage() && $media_file->type() === 'photo') {
-				$individual_media[] = $media_file;
-			}
-		}
-	}
+    $media_object = $fact->target();
+    if ($media_object instanceof Media) {
+        foreach ($media_object->mediaFiles() as $media_file) {
+            if ($media_file->isImage() && $media_file->type() === 'photo') {
+                $individual_media[] = $media_file;
+            }
+        }
+    }
 }
 $individual_media = array_filter($individual_media);
 ?>
@@ -59,85 +59,85 @@ $age = str_replace(I18N::translate('age') . " ", "", $age);
 // overwrite declaration of $user_link from app\Http\Controllers\IndividualController.php
 $user_link = '';
 if (Auth::isAdmin()) {
-	$user = User::findByIndividual($individual);
-	if ($user) {
-		$user_link = ' (<a href="' . e(route('admin-users', ['filter' => $user->getEmail()])) . '">' . e($user->getUserName()) . '</a>)';
-	};
+    $user = User::findByIndividual($individual);
+    if ($user) {
+        $user_link = ' (<a href="' . e(route('admin-users', ['filter' => $user->getEmail()])) . '">' . e($user->getUserName()) . '</a>)';
+    };
 }
 ?>
 
 <div class="d-flex mb-4 justify-content-between">
-	<h2 class="wt-page-title">
-		<?= $individual->getFullName() ?><small class="text-muted"><?= $user_link ?></small>
-		<br/><small class="text-muted"><?= $individual->getLifeSpan() ?> <?= $age ?></small>
-	</h2>
-	
-	<?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
-		<?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
-	<?php endif ?>
+    <h2 class="wt-page-title">
+        <?= $individual->getFullName() ?><small class="text-muted"><?= $user_link ?></small>
+        <br/><small class="text-muted"><?= $individual->getLifeSpan() ?> <?= $age ?></small>
+    </h2>
+
+    <?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
+        <?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
+    <?php endif ?>
 </div>
 
 <div class="row">
-	<div class="col-12 col-md-8">
-		<div class="d-flex col p-0 mb-4">
+    <div class="col-12 col-md-8">
+        <div class="d-flex col p-0 mb-4">
 
-			<!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
-			<div class="col-sm-3 px-0">
-				<?php if (empty($individual_media)): ?>
-					<i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
-				<?php else : ?>
-					<?= $individual_media[0]->displayImage(200, 260, 'contain', ['class' => 'img-thumbnail img-fluid w-100']) ?>
-				<?php endif; ?>			
-			</div>
+            <!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
+            <div class="col-sm-3 px-0">
+                <?php if (empty($individual_media)): ?>
+                    <i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
+                <?php else : ?>
+                    <?= $individual_media[0]->displayImage(200, 260, 'contain', ['class' => 'img-thumbnail img-fluid w-100']) ?>
+                <?php endif ?>
+            </div>
 
-			<!-- Name accordion -->
-			<div class="col-sm-9" id="individual-names" role="tablist">
-				<?php foreach ($name_records as $name_record): ?>
-					<?= $name_record ?>
-				<?php endforeach ?>
+            <!-- Name accordion -->
+            <div class="col-sm-9" id="individual-names" role="tablist">
+                <?php foreach ($name_records as $name_record): ?>
+                    <?= $name_record ?>
+                <?php endforeach ?>
 
-				<?php foreach ($sex_records as $sex_record): ?>
-					<?= $sex_record ?>
-				<?php endforeach ?>
-			</div>
-		</div>
+                <?php foreach ($sex_records as $sex_record): ?>
+                    <?= $sex_record ?>
+                <?php endforeach ?>
+            </div>
+        </div>
 
-		<div id="individual-tabs">
-			<ul class="nav nav-tabs flex-wrap">
-				<?php foreach ($tabs as $tab): ?>
-					<li class="nav-item">
-						<a class="nav-link<?= $tab->isGrayedOut($individual) ? ' text-muted' : '' ?>" data-toggle="tab" role="tab" data-href="<?= e(route('individual-tab', ['xref' => $individual->xref(), 'ged' => $individual->tree()->name(), 'module' => $tab->getName()])) ?>" href="#<?= $tab->getName() ?>">
-							<?= $tab->getTitle() ?>
-						</a>
-					</li>
-				<?php endforeach ?>
-			</ul>
-			<div class="tab-content">
-				<?php	foreach ($tabs as $tab): ?>
-					<div id="<?= $tab->getName() ?>" class="tab-pane fade wt-ajax-load" role="tabpanel"><?php if (!$tab->canLoadAjax()): ?>
-							<?= $tab->getTabContent($individual) ?>
-						<?php endif ?></div>
-				<?php endforeach ?>
-			</div>
-		</div>
-	</div>
-	<div class="col-12 col-md-4" id="sidebar" role="tablist">
-		<?php foreach ($sidebars as $sidebar): ?>
-			<div class="card">
-				<div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">
-					<div class="card-title mb-0">
-						<a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-content-<?= $sidebar->getName() ?>" aria-expanded="<?= $sidebar->getName() === 'family_nav' ? 'true' : 'false' ?>" aria-controls="sidebar-content-<?= $sidebar->getName() ?>">
-							<?= $sidebar->getTitle() ?>
-						</a>
-					</div>
-				</div>
-				<div id="sidebar-content-<?= $sidebar->getName() ?>" class="collapse<?= $sidebar->getName() === 'family_nav' ? ' show' : '' ?>" role="tabpanel" aria-labelledby="sidebar-header-<?= $sidebar->getName() ?>">
-					<div class="card-body">
-						<?= $sidebar->getSidebarContent($individual) ?></div>
-				</div>
-			</div>
-		<?php endforeach ?>
-	</div>
+        <div id="individual-tabs">
+            <ul class="nav nav-tabs flex-wrap">
+                <?php foreach ($tabs as $tab): ?>
+                    <li class="nav-item">
+                        <a class="nav-link<?= $tab->isGrayedOut($individual) ? ' text-muted' : '' ?>" data-toggle="tab" role="tab" data-href="<?= e(route('individual-tab', ['xref' => $individual->xref(), 'ged' => $individual->tree()->name(), 'module' => $tab->getName()])) ?>" href="#<?= $tab->getName() ?>">
+                            <?= $tab->getTitle() ?>
+                        </a>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+            <div class="tab-content">
+                <?php	foreach ($tabs as $tab): ?>
+                    <div id="<?= $tab->getName() ?>" class="tab-pane fade wt-ajax-load" role="tabpanel"><?php if (!$tab->canLoadAjax()): ?>
+                            <?= $tab->getTabContent($individual) ?>
+                        <?php endif ?></div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4" id="sidebar" role="tablist">
+        <?php foreach ($sidebars as $sidebar): ?>
+            <div class="card">
+                <div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">
+                    <div class="card-title mb-0">
+                        <a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-content-<?= $sidebar->getName() ?>" aria-expanded="<?= $sidebar->getName() === 'family_nav' ? 'true' : 'false' ?>" aria-controls="sidebar-content-<?= $sidebar->getName() ?>">
+                            <?= $sidebar->getTitle() ?>
+                        </a>
+                    </div>
+                </div>
+                <div id="sidebar-content-<?= $sidebar->getName() ?>" class="collapse<?= $sidebar->getName() === 'family_nav' ? ' show' : '' ?>" role="tabpanel" aria-labelledby="sidebar-header-<?= $sidebar->getName() ?>">
+                    <div class="card-body">
+                        <?= $sidebar->getSidebarContent($individual) ?></div>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
 </div>
 
 <?php View::push('javascript') ?>
