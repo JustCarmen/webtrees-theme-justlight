@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Layout: page title with subtitle
  * Functionality:
@@ -13,20 +14,20 @@
 <?php use Fisharebest\Webtrees\Auth; ?>
 <?php use Fisharebest\Webtrees\Functions\FunctionsPrint; ?>
 <?php use Fisharebest\Webtrees\I18N; ?>
-<?php use Fisharebest\Webtrees\Media;?>
+<?php use Fisharebest\Webtrees\Media; ?>
 <?php use Fisharebest\Webtrees\View; ?>
 <?php use Fisharebest\Webtrees\User; ?>
 
-<?php if ($individual->isPendingDeletion()): ?>
-    <?php if (Auth::isModerator($individual->tree())): ?>
+<?php if ($individual->isPendingDeletion()) : ?>
+    <?php if (Auth::isModerator($individual->tree())) : ?>
         <?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been deleted. You should review the deletion and then %1$s or %2$s it.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the deletion and then accept or reject it.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-    <?php elseif (Auth::isEditor($individual->tree())): ?>
+    <?php elseif (Auth::isEditor($individual->tree())) : ?>
         <?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been deleted. The deletion will need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
     <?php endif ?>
-<?php elseif ($individual->isPendingAddition()): ?>
-    <?php if (Auth::isModerator($individual->tree())): ?>
+<?php elseif ($individual->isPendingAddition()) : ?>
+    <?php if (Auth::isModerator($individual->tree())) : ?>
         <?= view('components/alert-warning-dismissible', ['alert' => /* I18N: %1$s is “accept”, %2$s is “reject”. These are links. */ I18N::translate('This individual has been edited. You should review the changes and then %1$s or %2$s them.', '<a href="#" class="alert-link" onclick="accept_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'accept') . '</a>', '<a href="#" class="alert-link" onclick="reject_changes(\'' . e($individual->xref()) . '\', \'' . e($individual->tree()->name()) . '\');">' . I18N::translateContext('You should review the changes and then accept or reject them.', 'reject') . '</a>') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
-    <?php elseif (Auth::isEditor($individual->tree())): ?>
+    <?php elseif (Auth::isEditor($individual->tree())) : ?>
         <?= view('components/alert-warning-dismissible', ['alert' => I18N::translate('This individual has been edited. The changes need to be reviewed by a moderator.') . ' ' . FunctionsPrint::helpLink('pending_changes')]) ?>
     <?php endif ?>
 <?php endif ?>
@@ -72,7 +73,7 @@ if (Auth::isAdmin()) {
         <br/><small class="text-muted"><?= $individual->getLifeSpan() ?> <?= $age ?></small>
     </h2>
 
-    <?php if ($individual->canEdit() && !$individual->isPendingDeletion()): ?>
+    <?php if ($individual->canEdit() && !$individual->isPendingDeletion()) : ?>
         <?= view('individual-page-menu', ['individual' => $individual, 'count_names' => $count_names, 'count_sex' => $count_sex]) ?>
     <?php endif ?>
 </div>
@@ -83,7 +84,7 @@ if (Auth::isAdmin()) {
 
             <!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
             <div class="col-sm-3 px-0">
-                <?php if (empty($individual_media)): ?>
+                <?php if (empty($individual_media)) : ?>
                     <i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
                 <?php else : ?>
                     <?= $individual_media[0]->displayImage(200, 260, 'contain', ['class' => 'img-thumbnail img-fluid w-100']) ?>
@@ -92,11 +93,11 @@ if (Auth::isAdmin()) {
 
             <!-- Name accordion -->
             <div class="col-sm-9" id="individual-names" role="tablist">
-                <?php foreach ($name_records as $name_record): ?>
+                <?php foreach ($name_records as $name_record) : ?>
                     <?= $name_record ?>
                 <?php endforeach ?>
 
-                <?php foreach ($sex_records as $sex_record): ?>
+                <?php foreach ($sex_records as $sex_record) : ?>
                     <?= $sex_record ?>
                 <?php endforeach ?>
             </div>
@@ -104,7 +105,7 @@ if (Auth::isAdmin()) {
 
         <div id="individual-tabs">
             <ul class="nav nav-tabs flex-wrap">
-                <?php foreach ($tabs as $tab): ?>
+                <?php foreach ($tabs as $tab) : ?>
                     <li class="nav-item">
                         <a class="nav-link<?= $tab->isGrayedOut($individual) ? ' text-muted' : '' ?>" data-toggle="tab" role="tab" data-href="<?= e(route('individual-tab', ['xref' => $individual->xref(), 'ged' => $individual->tree()->name(), 'module' => $tab->getName()])) ?>" href="#<?= $tab->getName() ?>">
                             <?= $tab->getTitle() ?>
@@ -113,8 +114,8 @@ if (Auth::isAdmin()) {
                 <?php endforeach ?>
             </ul>
             <div class="tab-content">
-                <?php	foreach ($tabs as $tab): ?>
-                    <div id="<?= $tab->getName() ?>" class="tab-pane fade wt-ajax-load" role="tabpanel"><?php if (!$tab->canLoadAjax()): ?>
+                <?php	foreach ($tabs as $tab) : ?>
+                    <div id="<?= $tab->getName() ?>" class="tab-pane fade wt-ajax-load" role="tabpanel"><?php if (!$tab->canLoadAjax()) : ?>
                             <?= $tab->getTabContent($individual) ?>
                         <?php endif ?></div>
                 <?php endforeach ?>
@@ -122,7 +123,7 @@ if (Auth::isAdmin()) {
         </div>
     </div>
     <div class="col-12 col-md-4" id="sidebar" role="tablist">
-        <?php foreach ($sidebars as $sidebar): ?>
+        <?php foreach ($sidebars as $sidebar) : ?>
             <div class="card">
                 <div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">
                     <div class="card-title mb-0">
@@ -142,17 +143,27 @@ if (Auth::isAdmin()) {
 
 <?php View::push('javascript') ?>
 <script>
-  'use strict';
+  "use strict";
+
+  // Bootstrap tabs - load content dynamically using AJAX
+  $('a[data-toggle="tab"][data-href]').on('show.bs.tab', function () {
+    $(this.getAttribute('href') + ':empty').load($(this).data('href'));
+  });
 
   // If the URL contains a fragment, then activate the corresponding tab.
   // Use a prefix on the fragment, to prevent scrolling to the element.
   var target = window.location.hash.replace("tab-", "");
-  var tab = $("#individual-tabs .nav-link[href='" + target + "']");
+  var tab    = $("#individual-tabs .nav-link[href='" + target + "']");
   // If not, then activate the first tab.
   if (tab.length === 0) {
     tab = $("#individual-tabs .nav-link:first");
   }
   tab.tab("show");
+
+  // If the user selects a tab, update the URL to reflect this
+  $('#individual-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    window.location.hash = "tab-" + e.target.href.substring(e.target.href.indexOf('#') + 1);
+  });
 </script>
 <?php View::endpush() ?>
 

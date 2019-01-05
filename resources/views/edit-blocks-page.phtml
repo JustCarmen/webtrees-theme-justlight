@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Change: layout and styling
  * Themes: all themes
@@ -126,7 +127,7 @@
     }
   }
   var block_descr = { advice1: "&nbsp;"};
-    <?php foreach ($all_blocks as $block_name => $block): ?>
+    <?php foreach ($all_blocks as $block_name => $block) : ?>
   block_descr[<?= json_encode($block_name) ?>] = <?= json_encode($block->getDescription()) ?>;
     <?php endforeach ?>
 </script>
@@ -172,7 +173,7 @@
                 </td>
                 <td class="optionbox center">
                     <select multiple="multiple" id="main_select" name="main[]" size="10" onchange="show_description('main_select');">
-                        <?php foreach ($main_blocks as $block_id => $block): ?>
+                        <?php foreach ($main_blocks as $block_id => $block) : ?>
                             <option value="<?= $block_id ?>">
                                 <?= $all_blocks[$block->getName()]->title() ?>
                             </option>
@@ -184,7 +185,7 @@
                 </td>
                 <td class="optionbox center">
                     <select multiple id="available_select" size="10" onchange="show_description('available_select');">
-                        <?php foreach ($all_blocks as $block_name => $block): ?>
+                        <?php foreach ($all_blocks as $block_name => $block) : ?>
                             <option value="<?= $block_name ?>">
                                 <?= $block->title() ?>
                             </option>
@@ -196,7 +197,7 @@
                 </td>
                 <td class="optionbox center">
                     <select multiple="multiple" id="side_select" name="side[]" size="10" onchange="show_description('side_select');">
-                        <?php foreach ($side_blocks as $block_id => $block): ?>
+                        <?php foreach ($side_blocks as $block_id => $block) : ?>
                             <option value="<?= $block_id ?>">
                                 <?= $all_blocks[$block->getName()]->title() ?>
                             </option>
@@ -224,7 +225,7 @@
             </tr>
             <tr>
                 <td class="topbottombar pl-0" colspan="4">
-                    <?php if ($can_reset): ?>
+                    <?php if ($can_reset) : ?>
                         <label>
                             <input type="checkbox" name="default">
                             <?= I18N::translate('Restore the default block layout') ?>

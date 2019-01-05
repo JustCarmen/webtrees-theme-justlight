@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Change: datatable markup and styling
  * Themes: all themes
@@ -6,7 +7,7 @@
  */
 ?>
 <?php use Fisharebest\Webtrees\Database; ?>
-<?php use Fisharebest\Webtrees\Functions\FunctionsDate ?>
+<?php use Fisharebest\Webtrees\Functions\FunctionsDate; ?>
 <?php use Fisharebest\Webtrees\I18N; ?>
 <?php use Fisharebest\Webtrees\Theme; ?>
 
@@ -30,15 +31,15 @@ $count_sources = Database::prepare(
 
 <table
     class="table table-bordered table-sm wt-table-note datatables"
-    data-dom="<?=  Theme::theme()->datatableMarkup() ?>"
+    data-dom="<?= Theme::theme()->datatableMarkup() ?>"
     data-columns="<?= e(json_encode([
-        null,
-        ['visible' => array_sum($count_individuals) > 0],
-        ['visible' => array_sum($count_families) > 0],
-        ['visible' => array_sum($count_media) > 0],
-        ['visible' => array_sum($count_sources) > 0],
-        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
-    ])) ?>"
+                        null,
+                        ['visible' => array_sum($count_individuals) > 0],
+                        ['visible' => array_sum($count_families) > 0],
+                        ['visible' => array_sum($count_media) > 0],
+                        ['visible' => array_sum($count_sources) > 0],
+                        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
+                    ])) ?>"
     data-state-save="true"
     data-auto-width="false"
 >
@@ -58,7 +59,7 @@ $count_sources = Database::prepare(
     </thead>
 
     <tbody>
-        <?php foreach ($notes as $note): ?>
+        <?php foreach ($notes as $note) : ?>
             <tr class="<?= $note->isPendingDeletion() ? 'old' : ($note->isPendingAddition() ? 'new' : '') ?>">
                 <!-- Title -->
                 <td data-sort="<?= e($note->getSortName()) ?>">

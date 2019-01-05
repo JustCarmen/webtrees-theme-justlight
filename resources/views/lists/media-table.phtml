@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Change: datatable markup and styling.
  * Correction: removed (bool) from (bool) $tree->getPreference('SHOW_LAST_CHANGE') to show last change column
@@ -7,7 +8,7 @@
  */
 ?>
 <?php use Fisharebest\Webtrees\Database; ?>
-<?php use Fisharebest\Webtrees\Functions\FunctionsDate ?>
+<?php use Fisharebest\Webtrees\Functions\FunctionsDate; ?>
 <?php use Fisharebest\Webtrees\I18N; ?>
 <?php use Fisharebest\Webtrees\Theme; ?>
 
@@ -28,15 +29,15 @@ $count_sources = Database::prepare(
 
 <table
     class="table table-bordered table-sm wt-table-media datatables"
-    data-dom="<?=  Theme::theme()->datatableMarkup() ?>"
+    data-dom="<?= Theme::theme()->datatableMarkup() ?>"
     data-columns="<?= e(json_encode([
-        null,
-        null,
-        ['visible' => array_sum($count_individuals) > 0],
-        ['visible' => array_sum($count_families) > 0],
-        ['visible' => array_sum($count_sources) > 0],
-        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
-    ])) ?>"
+                        null,
+                        null,
+                        ['visible' => array_sum($count_individuals) > 0],
+                        ['visible' => array_sum($count_families) > 0],
+                        ['visible' => array_sum($count_sources) > 0],
+                        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
+                    ])) ?>"
     data-state-save="true"
     data-auto-width="false"
 >
@@ -56,11 +57,11 @@ $count_sources = Database::prepare(
     </thead>
 
     <tbody>
-        <?php foreach ($media_objects as $media_object): ?>
+        <?php foreach ($media_objects as $media_object) : ?>
             <tr class="<?= $media_object->isPendingDeletion() ? 'old' : ($media_object->isPendingAddition() ? 'new' : '') ?>">
                 <!-- Thumbnails-->
                 <td data-sort="<?= e($media_object->getSortName()) ?>">
-                    <?php foreach ($media_object->mediaFiles() as $media_file): ?>
+                    <?php foreach ($media_object->mediaFiles() as $media_file) : ?>
                         <?= $media_file->displayImage(100, 100, 'contain', []) ?>
                     <?php endforeach ?>
                 </td>

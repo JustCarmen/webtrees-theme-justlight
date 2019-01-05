@@ -207,7 +207,7 @@ for ($year = 1550; $year < 2030; $year += 10) {
                 <th><?= I18N::translate('Given names') ?></th>
                 <th><?= I18N::translate('Surname') ?></th>
                 <th><?= /* I18N: Abbreviation for “Sosa-Stradonitz number”. This is an individual’s surname, so may need transliterating into non-latin alphabets. */
-                            I18N::translate('Sosa') ?></th>
+                    I18N::translate('Sosa') ?></th>
                 <th><?= I18N::translate('Birth') ?></th>
                 <th>
                     <i class="icon-reminder" title="<?= I18N::translate('Anniversary') ?>"></i>
@@ -285,7 +285,7 @@ for ($year = 1550; $year < 2030; $year += 10) {
                 <!-- Birth anniversary -->
                 <td class="center" data-sort="<?= -$individual->getEstimatedBirthDate()->julianDay() ?>">
                     <?php if (isset($birth_dates[0]) && $birth_dates[0]->gregorianYear() >= 1550 && $birth_dates[0]->gregorianYear() < 2030 && !isset($unique_indis[$individual->xref()])) : ?>
-                        <?php $birt_by_decade[(int)($birth_dates[0]->gregorianYear() / 10) * 10] .= $individual->getSex() ?>
+                        <?php $birt_by_decade[(int) ($birth_dates[0]->gregorianYear() / 10) * 10] .= $individual->getSex() ?>
                         <?= Date::getAge($birth_dates[0], null) ?>
                     <?php endif ?>
                 </td>
@@ -305,11 +305,11 @@ for ($year = 1550; $year < 2030; $year += 10) {
                     <?= I18N::number($individual->getNumberOfChildren()) ?>
                 </td>
 
-                <!--	Death date -->
+                <!--    Death date -->
                 <?php $death_dates = $individual->getAllDeathDates() ?>
                 <td data-sort="<?= $individual->getEstimatedDeathDate()->julianDay() ?>">
                     <?php foreach ($death_dates as $num => $death_date) : ?>
-                    <?= $death_date->display(true) ?>
+                        <?= $death_date->display(true) ?>
                     <br>
                     <?php endforeach ?>
                 </td>
@@ -317,14 +317,14 @@ for ($year = 1550; $year < 2030; $year += 10) {
                 <!-- Death anniversary -->
                 <td class="center" data-sort="<?= -$individual->getEstimatedDeathDate()->julianDay() ?>">
                     <?php if (isset($death_dates[0]) && $death_dates[0]->gregorianYear() >= 1550 && $death_dates[0]->gregorianYear() < 2030 && !isset($unique_indis[$individual->xref()])) : ?>
-                        <?php $deat_by_decade[(int)($death_dates[0]->gregorianYear() / 10) * 10] .= $individual->getSex() ?>
+                        <?php $deat_by_decade[(int) ($death_dates[0]->gregorianYear() / 10) * 10] .= $individual->getSex() ?>
                         <?= Date::getAge($death_dates[0], null) ?>
                     <?php endif ?>
                 </td>
 
                 <!-- Age at death -->
                 <?php if (isset($birth_dates[0]) && isset($death_dates[0])) : ?>
-                    <?php $age_at_death = I18N::number((int)Date::getAgeYears($birth_dates[0], $death_dates[0])); ?>
+                    <?php $age_at_death = I18N::number((int) Date::getAgeYears($birth_dates[0], $death_dates[0])); ?>
                     <?php $age_at_death_sort = Date::getAge($birth_dates[0], $death_dates[0]); ?>
                     <?php if (!isset($unique_indis[$individual->xref()]) && $age_at_death >= 0 && $age_at_death <= $max_age) : ?>
                         <?php $deat_by_age[$age_at_death] .= $individual->getSex(); ?>

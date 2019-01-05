@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functionality:
  * - start with orientation nr. 2 (oldest at top) as default when using the compact layout
@@ -15,10 +16,10 @@
 
 <?php
     // The querystring orientation is not set when clicking on the menu item charts/pedigree
-    global $request;
-    if (empty($request->get('orientation')) && $request->get('orientation') !== '0')  {
-        $orientation = '2';
-    }
+global $request;
+if (empty($request->get('orientation')) && $request->get('orientation') !== '0') {
+    $orientation = '2';
+}
 ?>
 
 <h2 class="wt-page-title">

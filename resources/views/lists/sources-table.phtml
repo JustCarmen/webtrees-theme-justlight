@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Change: datatable markup and styling.
  * Correction: removed (bool) from (bool) $tree->getPreference('SHOW_LAST_CHANGE') to show last change column
@@ -7,7 +8,7 @@
  */
 ?>
 <?php use Fisharebest\Webtrees\Database; ?>
-<?php use Fisharebest\Webtrees\Functions\FunctionsDate ?>
+<?php use Fisharebest\Webtrees\Functions\FunctionsDate; ?>
 <?php use Fisharebest\Webtrees\I18N; ?>
 <?php use Fisharebest\Webtrees\Theme; ?>
 
@@ -31,16 +32,16 @@ $count_notes = Database::prepare(
 
 <table
     class="table table-bordered table-sm wt-table-source datatables d-none"
-    data-dom="<?=  Theme::theme()->datatableMarkup() ?>"
+    data-dom="<?= Theme::theme()->datatableMarkup() ?>"
     data-columns="<?= e(json_encode([
-        null,
-        null,
-        ['visible' => array_sum($count_individuals) > 0],
-        ['visible' => array_sum($count_families) > 0],
-        ['visible' => array_sum($count_media) > 0],
-        ['visible' => array_sum($count_notes) > 0],
-        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
-    ])) ?>"
+                        null,
+                        null,
+                        ['visible' => array_sum($count_individuals) > 0],
+                        ['visible' => array_sum($count_families) > 0],
+                        ['visible' => array_sum($count_media) > 0],
+                        ['visible' => array_sum($count_notes) > 0],
+                        ['visible' => $tree->getPreference('SHOW_LAST_CHANGE'), 'searchable' => false],
+                    ])) ?>"
     data-state-save="true"
     data-auto-width="false"
 >
@@ -61,7 +62,7 @@ $count_notes = Database::prepare(
     </thead>
 
     <tbody>
-        <?php foreach ($sources as $source): ?>
+        <?php foreach ($sources as $source) : ?>
             <tr class="<?= $source->isPendingDeletion() ? 'old' : ($source->isPendingAddition() ? 'new' : '') ?>">
                 <!-- Title -->
                 <td data-sort="<?= e($source->getSortName()) ?>">
