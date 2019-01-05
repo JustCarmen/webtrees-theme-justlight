@@ -3,10 +3,10 @@
  * Layout: page title with subtitle
  * Functionality:
  * - add media link and reorder-media link moved from individual-page view to individual-page-menu view
- * - use only images of the type 'photo' in the carousel
+ * - use only one image (with the type 'photo') as main image in stead of the carousel
  * Themes: all themes
  * 
- * TODO: make the carrousel optional
+ * TODO: make the carrousel and cropped image (default) optional
  *
  */
 ?>
@@ -32,7 +32,7 @@
 <?php endif ?>
 
 <?php
-// Only use images of the type 'photo' in the carousel
+// Use the first image of the type 'photo' as highlighted image
 // overwrite declaration of $individual_media from app\Http\Controllers\IndividualController.php
 $individual_media = [];
 foreach ($individual->facts() as $fact) {
@@ -46,6 +46,11 @@ foreach ($individual->facts() as $fact) {
 	}
 }
 $individual_media = array_filter($individual_media);
+?>
+
+<?php
+// redefine $age variable. Do not use the text 'age'
+$age = str_replace(I18N::translate('age') . " ", "", $age);
 ?>
 
 <?php
@@ -75,32 +80,14 @@ if (Auth::isAdmin()) {
 <div class="row">
 	<div class="col-12 col-md-8">
 		<div class="d-flex col p-0 mb-4">
-			<!-- Individual images -->
+
+			<!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
 			<div class="col-sm-3 px-0">
 				<?php if (empty($individual_media)): ?>
 					<i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
-				<?php elseif (count($individual_media) === 1): ?>
-					<?= $individual_media[0]->displayImage(200, 260, 'crop', ['class' => 'img-thumbnail img-fluid w-100']) ?>
-				<?php else: ?>
-					<div id="individual-images" class="carousel slide" data-ride="carousel" data-interval="false">
-						<div class="carousel-inner">
-							<?php foreach ($individual_media as $n => $media_file): ?>
-								<div class="carousel-item <?= $n === 0 ? 'active' : '' ?>">
-									<?= $media_file->displayImage(200, 260, 'crop', ['class' => 'img-thumbnail img-fluid w-100']) ?>
-								</div>
-							<?php endforeach ?>
-						</div>
-						<a class="carousel-control-prev" href="#individual-images" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only"><?= I18N::translate('previous') ?></span>
-						</a>
-						<a class="carousel-control-next" href="#individual-images" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only"><?= I18N::translate('next') ?></span>
-						</a>
-					</div>
-
-				<?php endif ?>
+				<?php else : ?>
+					<?= $individual_media[0]->displayImage(200, 260, 'contain', ['class' => 'img-thumbnail img-fluid w-100']) ?>
+				<?php endif; ?>			
 			</div>
 
 			<!-- Name accordion -->

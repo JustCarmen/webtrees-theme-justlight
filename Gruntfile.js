@@ -182,7 +182,6 @@ module.exports = function (grunt) {
       },
 
       // excluded files:
-      // - individual-page
       // - views/layouts/*
       // - views/modules/lightbox/*
       // files which does not exists in JustFancy:
