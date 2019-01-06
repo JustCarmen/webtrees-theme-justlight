@@ -19493,21 +19493,24 @@ h2 {
 }
 
 /*** Forms ***/
+.select2-container--default {
+  width: 100% !important;
+}
+
 .select2-container--default .select2-selection--single {
   border: 1px solid #ced4da;
+  height: auto;
 }
 
-.select2-container--default .select2-selection--single,
-.select2-container--default .select2-selection--single .select2-selection__rendered,
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  height: auto;
+  padding-left: 2px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container--default .select2-selection--single .select2-selection__clear {
   height: calc(2.25rem + 2px);
   line-height: 2.25;
-}
-
-.select2-container--default .select2-selection--single img,
-.select2-container--default .select2-selection--single .select2-selection__rendered img,
-.select2-container--default .select2-selection--single .select2-selection__arrow img {
-  margin-top: -.25rem;
 }
 
 .input-group .select2-container--default .select2-selection--single {
