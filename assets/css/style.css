@@ -10775,10 +10775,7 @@ div[id^="calendar-widget"] table, .faq_title, .wt-side-blocks .card {
 .py-1,
 #individual-names .card-header:not(#name-header-0),
 #individual-names .card-body,
-.wt-page-options-search-advanced .wt-page-options-label .form-row,
-.jc-global-module-tree #tv_tools .icon-sfamily,
-.wt-block-charts-block #tv_tools .icon-sfamily,
-#tree #tv_tools .icon-sfamily {
+.wt-page-options-search-advanced .wt-page-options-label .form-row {
   padding-top: 0.25rem !important;
 }
 
@@ -10792,10 +10789,7 @@ div[id^="calendar-widget"] table, .faq_title, .wt-side-blocks .card {
 .py-1,
 #individual-names .card-header:not(#name-header-0),
 #individual-names .card-body,
-.wt-page-options-search-advanced .wt-page-options-label .form-row,
-.jc-global-module-tree #tv_tools .icon-sfamily,
-.wt-block-charts-block #tv_tools .icon-sfamily,
-#tree #tv_tools .icon-sfamily {
+.wt-page-options-search-advanced .wt-page-options-label .form-row {
   padding-bottom: 0.25rem !important;
 }
 
@@ -12286,9 +12280,7 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-user_add,
 .icon-edit_indi,
 .icon-zoomin,
-.icon-zoomout,
-.fa-trash-alt,
-.fa-plus {
+.icon-zoomout {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -12312,9 +12304,7 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-user_add,
 .icon-edit_indi,
 .icon-zoomin,
-.icon-zoomout,
-.fa-trash-alt,
-.fa-plus, .far, .icon-plus, .icon-minus, .icon-reminder,
+.icon-zoomout, .far, .icon-plus, .icon-minus, .icon-reminder,
 .fal,
 .fab {
   -moz-osx-font-smoothing: grayscale;
@@ -12433,8 +12423,6 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-pull-left.icon-edit_indi,
 .fa-pull-left.icon-zoomin,
 .fa-pull-left.icon-zoomout,
-.fa-pull-left.fa-trash-alt,
-.fa-pull-left.fa-plus,
 .far.fa-pull-left,
 .fa-pull-left.icon-plus,
 .fa-pull-left.icon-minus,
@@ -12460,8 +12448,6 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-pull-right.icon-edit_indi,
 .fa-pull-right.icon-zoomin,
 .fa-pull-right.icon-zoomout,
-.fa-pull-right.fa-trash-alt,
-.fa-pull-right.fa-plus,
 .far.fa-pull-right,
 .fa-pull-right.icon-plus,
 .fa-pull-right.icon-minus,
@@ -19580,7 +19566,7 @@ h2 {
 }
 
 /*** Icons ***/
-.icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-edit_indi, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
+.icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-edit_indi, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   background: none;
   width: auto;
   height: auto;
@@ -19591,21 +19577,13 @@ h2 {
   vertical-align: baseline;
 }
 
-.icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-plus:hover, .icon-minus:hover, .icon-indis:hover, .icon-user_add:hover, .icon-edit_indi:hover, .icon-reminder:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-button_family:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
+.icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-plus:hover, .icon-minus:hover, .icon-indis:hover, .icon-user_add:hover, .icon-edit_indi:hover, .icon-reminder:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
   color: #0a0c0d;
   text-decoration: none;
 }
 
-.icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-button_family, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
+.icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   font-family: "icomoon";
-}
-
-.fa-trash-alt:before {
-  content: "\f00d";
-}
-
-.fa-plus:before {
-  content: "\f0fe";
 }
 
 @font-face {
@@ -19625,10 +19603,6 @@ h2 {
 
 .icon-silhouette-U:before {
   content: "\e603";
-}
-
-.icon-button_family:before {
-  content: "\e604";
 }
 
 .icon-sfamily:before {
@@ -19798,6 +19772,11 @@ h2 {
 
 .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15 {
   font-size: 1.09375rem;
+}
+
+.icon-plus,
+.icon-minus {
+  font-size: 0.75rem;
 }
 
 /*** Buttons ***/
@@ -20599,10 +20578,6 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   width: auto;
   height: 2rem;
   padding: 3px;
-}
-
-.jc-global-module-tree #tv_tools .icon-sfamily, .wt-block-charts-block #tv_tools .icon-sfamily, #tree #tv_tools .icon-sfamily {
-  font-size: 0.875rem;
 }
 
 .jc-global-module-tree .tv_in td, .wt-block-charts-block .tv_in td, #tree .tv_in td {
