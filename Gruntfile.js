@@ -195,9 +195,9 @@ module.exports = function (grunt) {
             'colorbox.php',
             'views/*page*',
             'views/lists/*',
-            'views/modules/gedcom_block/*',
-            'views/modules/gedcom_stats/*',
-            'views/modules/user_welcome/*',
+            'views/modules/gedcom*/*',
+            'views/modules/user*/*',
+            'views/modules/random_media/*',
             'views/selects/*'
           ],
           dest: 'resources',
