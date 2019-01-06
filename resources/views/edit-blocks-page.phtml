@@ -172,10 +172,10 @@
                     <?= FontAwesome::linkIcon('arrow-down', I18N::translate('Move down'), ['class' => 'btn btn-link', 'href' => '#', 'onclick' => 'return move_down_block("main_select");']) ?>
                 </td>
                 <td class="optionbox center">
-                    <select multiple="multiple" id="main_select" name="main[]" size="10" onchange="show_description('main_select');">
+                    <select multiple="multiple" id="main_select" name="main[]" size="10" onchange="show_description('main_select');" class="w-100 border-0">
                         <?php foreach ($main_blocks as $block_id => $block) : ?>
                             <option value="<?= $block_id ?>">
-                                <?= $all_blocks[$block->getName()]->title() ?>
+                                <?= $all_blocks[$block->getName()]->getTitle() ?>
                             </option>
                         <?php endforeach ?>
                     </select>
@@ -184,10 +184,10 @@
                     <?= FontAwesome::linkIcon('arrow-start', I18N::translate('Add'), ['class' => 'btn btn-link', 'href' => '#', 'onclick' => 'return move_left_right_block("available_select", "main_select");']) ?>
                 </td>
                 <td class="optionbox center">
-                    <select multiple id="available_select" size="10" onchange="show_description('available_select');">
+                    <select multiple id="available_select" size="10" onchange="show_description('available_select');" class="w-100 border-0">
                         <?php foreach ($all_blocks as $block_name => $block) : ?>
                             <option value="<?= $block_name ?>">
-                                <?= $block->title() ?>
+                                <?= $block->getTitle() ?>
                             </option>
                         <?php endforeach ?>
                     </select>
@@ -196,10 +196,10 @@
                     <?= FontAwesome::linkIcon('arrow-end', I18N::translate('Add'), ['class' => 'btn btn-link', 'href' => '#', 'onclick' => 'return move_left_right_block("available_select", "side_select");']) ?>
                 </td>
                 <td class="optionbox center">
-                    <select multiple="multiple" id="side_select" name="side[]" size="10" onchange="show_description('side_select');">
+                    <select multiple="multiple" id="side_select" name="side[]" size="10" onchange="show_description('side_select');" class="w-100 border-0">
                         <?php foreach ($side_blocks as $block_id => $block) : ?>
                             <option value="<?= $block_id ?>">
-                                <?= $all_blocks[$block->getName()]->title() ?>
+                                <?= $all_blocks[$block->getName()]->getTitle() ?>
                             </option>
                         <?php endforeach ?>
                     </select>
