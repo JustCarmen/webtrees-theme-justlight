@@ -194,6 +194,7 @@ module.exports = function (grunt) {
           src: [
             'colorbox.php',
             'views/*page*',
+            'views/icons/*',
             'views/lists/*',
             'views/modules/gedcom*/*',
             'views/modules/user*/*',
