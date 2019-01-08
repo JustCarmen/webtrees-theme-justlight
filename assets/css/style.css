@@ -12248,7 +12248,7 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.woff") format("woff"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.ttf") format("truetype"), url("../../../../public/assets-2.0.0/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
-.far, .icon-plus, .icon-minus, .icon-reminder {
+.far, .icon-minus, .icon-plus, .icon-reminder {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -12267,20 +12267,22 @@ a.text-dark:hover, a.text-dark:focus {
 
 .fa,
 .fas,
+.icon-clippings,
+.icon-edit_indi,
+.icon-indis,
+.icon-mypage,
+.icon-selected,
 .icon-sex_m_9x9,
 .icon-sex_f_9x9,
 .icon-sex_u_9x9,
 .icon-sex_m_15x15,
 .icon-sex_f_15x15,
 .icon-sex_u_15x15,
-.icon-mypage,
-.icon-clippings,
-.icon-selected,
-.icon-indis,
 .icon-user_add,
-.icon-edit_indi,
 .icon-zoomin,
-.icon-zoomout {
+.icon-zoomout,
+.wt-icon-delete,
+.wt-icon-individual {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -12291,20 +12293,22 @@ a.text-dark:hover, a.text-dark:focus {
  */
 .fa,
 .fas,
+.icon-clippings,
+.icon-edit_indi,
+.icon-indis,
+.icon-mypage,
+.icon-selected,
 .icon-sex_m_9x9,
 .icon-sex_f_9x9,
 .icon-sex_u_9x9,
 .icon-sex_m_15x15,
 .icon-sex_f_15x15,
 .icon-sex_u_15x15,
-.icon-mypage,
-.icon-clippings,
-.icon-selected,
-.icon-indis,
 .icon-user_add,
-.icon-edit_indi,
 .icon-zoomin,
-.icon-zoomout, .far, .icon-plus, .icon-minus, .icon-reminder,
+.icon-zoomout,
+.wt-icon-delete,
+.wt-icon-individual, .far, .icon-minus, .icon-plus, .icon-reminder,
 .fal,
 .fab {
   -moz-osx-font-smoothing: grayscale;
@@ -12409,23 +12413,25 @@ a.text-dark:hover, a.text-dark:focus {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+.fa-pull-left.icon-clippings,
+.fa-pull-left.icon-edit_indi,
+.fa-pull-left.icon-indis,
+.fa-pull-left.icon-mypage,
+.fa-pull-left.icon-selected,
 .fa-pull-left.icon-sex_m_9x9,
 .fa-pull-left.icon-sex_f_9x9,
 .fa-pull-left.icon-sex_u_9x9,
 .fa-pull-left.icon-sex_m_15x15,
 .fa-pull-left.icon-sex_f_15x15,
 .fa-pull-left.icon-sex_u_15x15,
-.fa-pull-left.icon-mypage,
-.fa-pull-left.icon-clippings,
-.fa-pull-left.icon-selected,
-.fa-pull-left.icon-indis,
 .fa-pull-left.icon-user_add,
-.fa-pull-left.icon-edit_indi,
 .fa-pull-left.icon-zoomin,
 .fa-pull-left.icon-zoomout,
+.fa-pull-left.wt-icon-delete,
+.fa-pull-left.wt-icon-individual,
 .far.fa-pull-left,
-.fa-pull-left.icon-plus,
 .fa-pull-left.icon-minus,
+.fa-pull-left.icon-plus,
 .fa-pull-left.icon-reminder,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
@@ -12434,23 +12440,25 @@ a.text-dark:hover, a.text-dark:focus {
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+.fa-pull-right.icon-clippings,
+.fa-pull-right.icon-edit_indi,
+.fa-pull-right.icon-indis,
+.fa-pull-right.icon-mypage,
+.fa-pull-right.icon-selected,
 .fa-pull-right.icon-sex_m_9x9,
 .fa-pull-right.icon-sex_f_9x9,
 .fa-pull-right.icon-sex_u_9x9,
 .fa-pull-right.icon-sex_m_15x15,
 .fa-pull-right.icon-sex_f_15x15,
 .fa-pull-right.icon-sex_u_15x15,
-.fa-pull-right.icon-mypage,
-.fa-pull-right.icon-clippings,
-.fa-pull-right.icon-selected,
-.fa-pull-right.icon-indis,
 .fa-pull-right.icon-user_add,
-.fa-pull-right.icon-edit_indi,
 .fa-pull-right.icon-zoomin,
 .fa-pull-right.icon-zoomout,
+.fa-pull-right.wt-icon-delete,
+.fa-pull-right.wt-icon-individual,
 .far.fa-pull-right,
-.fa-pull-right.icon-plus,
 .fa-pull-right.icon-minus,
+.fa-pull-right.icon-plus,
 .fa-pull-right.icon-reminder,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
@@ -19566,7 +19574,7 @@ h2 {
 }
 
 /*** Icons ***/
-.icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-mypage, .icon-clippings, .icon-selected, .icon-plus, .icon-minus, .icon-indis, .icon-user_add, .icon-edit_indi, .icon-reminder, .icon-zoomin, .icon-zoomout, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
+.icon-clippings, .icon-edit_indi, .icon-indis, .icon-minus, .icon-mypage, .icon-plus, .icon-reminder, .icon-selected, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-user_add, .icon-zoomin, .icon-zoomout, .wt-icon-delete, .wt-icon-individual, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   background: none;
   width: auto;
   height: auto;
@@ -19577,13 +19585,21 @@ h2 {
   vertical-align: baseline;
 }
 
-.icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-mypage:hover, .icon-clippings:hover, .icon-selected:hover, .icon-plus:hover, .icon-minus:hover, .icon-indis:hover, .icon-user_add:hover, .icon-edit_indi:hover, .icon-reminder:hover, .icon-zoomin:hover, .icon-zoomout:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
+.icon-clippings:hover, .icon-edit_indi:hover, .icon-indis:hover, .icon-minus:hover, .icon-mypage:hover, .icon-plus:hover, .icon-reminder:hover, .icon-selected:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .wt-icon-delete:hover, .wt-icon-individual:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
   color: #0a0c0d;
   text-decoration: none;
 }
 
 .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   font-family: "icomoon";
+}
+
+.wt-icon-delete:before {
+  content: "\f00d";
+}
+
+.wt-icon-individual:before {
+  content: "\f007";
 }
 
 @font-face {

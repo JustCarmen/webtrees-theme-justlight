@@ -6,61 +6,55 @@
 // =============================================================================
 
 // Options
-$enable-gradients:          true;
+$enable-gradients: true;
 
 // Colors
-$blue:                      #337ab7;
-$red:                       #b80000;
-$babyblue:                  #d7eaf9;
-$babypink:                  #fff0f5;
+$blue: #337ab7;
+$red: #b80000;
+$babyblue: #d7eaf9;
+$babypink: #fff0f5;
 
 // Theme colors
-$primary:                   $blue;
-$secondary:                 $gray-200;
+$primary: $blue;
+$secondary: $gray-200;
 
 // Fonts
-$font-size-base:            0.875rem; // 14px
-
-// Components
-$component-active-color:    $primary;
-$component-active-bg:       $gray-200;
+$font-size-base: 0.875rem; // 14px
 
 // Image icons used by this theme
 // Type: arrows, webtrees or other (icons without the prefix wt)
 // optional parameters: width (default 16), height (default 16)
-$image-icons: (
-  webtrees: (
-    bing-maps: (),
-    google-maps: ()
-  ),
-  other: (
-    resn-confidential: (),
-    resn-locked: (),
-    resn-none: (),
-    resn-privacy: ()
-  )
-);
+$image-icons: (webtrees: (bing-maps: (),
+google-maps: ()),
+other: (resn-confidential: (),
+resn-locked: (),
+resn-none: (),
+resn-privacy: ()));
+
+// Components
+$component-active-color: $primary;
+$component-active-bg: $gray-200;
 
 // Dropdowns
-$dropdown-border-color:             $gray-200;
+$dropdown-border-color: $gray-200;
 
 // Cards
-$card-cap-bg:                       $gray-100;
+$card-cap-bg: $gray-100;
 
 // Tables
-$table-accent-bg:                   $gray-100;
+$table-accent-bg: $gray-100;
 
 // Buttons
-$input-btn-focus-width:             0;
+$input-btn-focus-width: 0;
 
 // Facts tables
-$facts-table-header-bg:             $gray-200;
+$facts-table-header-bg: $gray-200;
 
 // Personboxes
-$personbox-male-bg:                 $babyblue;
-$personbox-female-bg:               $babypink;
+$personbox-male-bg: $babyblue;
+$personbox-female-bg: $babypink;
 
 // Treeview
-$treeview-bg-color:                 $body-bg;
-$treeview-box-male-bg:              $personbox-male-bg;
-$treeview-box-female-bg:            $personbox-female-bg;
+$treeview-bg-color: $body-bg;
+$treeview-box-male-bg: $personbox-male-bg;
+$treeview-box-female-bg: $personbox-female-bg;
