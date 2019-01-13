@@ -83,7 +83,7 @@ if (Auth::isAdmin()) {
         <div class="d-flex col p-0 mb-4">
 
             <!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
-            <div class="col-sm-3 px-0">
+            <div class="col-sm-2 px-0">
                 <?php if (empty($individual_media)) : ?>
                     <i class="wt-silhouette wt-silhouette-<?= $individual->getSex() ?>"></i>
                 <?php else : ?>
@@ -92,7 +92,7 @@ if (Auth::isAdmin()) {
             </div>
 
             <!-- Name accordion -->
-            <div class="col-sm-9" id="individual-names" role="tablist">
+            <div class="col-sm-10" id="individual-names" role="tablist">
                 <?php foreach ($name_records as $name_record) : ?>
                     <?= $name_record ?>
                 <?php endforeach ?>
