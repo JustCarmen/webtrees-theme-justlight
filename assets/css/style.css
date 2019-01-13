@@ -12270,6 +12270,7 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-clippings,
 .icon-edit_indi,
 .icon-indis,
+.icon-media-shuffle,
 .icon-mypage,
 .icon-selected,
 .icon-sex_m_9x9,
@@ -12296,6 +12297,7 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-clippings,
 .icon-edit_indi,
 .icon-indis,
+.icon-media-shuffle,
 .icon-mypage,
 .icon-selected,
 .icon-sex_m_9x9,
@@ -12416,6 +12418,7 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-pull-left.icon-clippings,
 .fa-pull-left.icon-edit_indi,
 .fa-pull-left.icon-indis,
+.fa-pull-left.icon-media-shuffle,
 .fa-pull-left.icon-mypage,
 .fa-pull-left.icon-selected,
 .fa-pull-left.icon-sex_m_9x9,
@@ -12443,6 +12446,7 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-pull-right.icon-clippings,
 .fa-pull-right.icon-edit_indi,
 .fa-pull-right.icon-indis,
+.fa-pull-right.icon-media-shuffle,
 .fa-pull-right.icon-mypage,
 .fa-pull-right.icon-selected,
 .fa-pull-right.icon-sex_m_9x9,
@@ -16161,7 +16165,7 @@ readers do not read off random characters that represent icons */
   content: "\f5ba";
 }
 
-.fa-sort:before {
+.fa-sort:before, .icon-media-shuffle:before {
   content: "\f0dc";
 }
 
@@ -19574,7 +19578,7 @@ h2 {
 }
 
 /*** Icons ***/
-.icon-clippings, .icon-edit_indi, .icon-indis, .icon-minus, .icon-mypage, .icon-plus, .icon-reminder, .icon-selected, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-user_add, .icon-zoomin, .icon-zoomout, .wt-icon-delete, .wt-icon-individual, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
+.icon-clippings, .icon-edit_indi, .icon-indis, .icon-media-shuffle, .icon-minus, .icon-mypage, .icon-plus, .icon-reminder, .icon-selected, .icon-sex_m_9x9, .icon-sex_f_9x9, .icon-sex_u_9x9, .icon-sex_m_15x15, .icon-sex_f_15x15, .icon-sex_u_15x15, .icon-user_add, .icon-zoomin, .icon-zoomout, .wt-icon-delete, .wt-icon-individual, .icon-silhouette-F, .icon-silhouette-M, .icon-silhouette-U, .icon-sfamily, .icon-cfamily, .icon-children, .icon-childless, .icon-target, .icon-wiki, .icon-pedigree, .wt-silhouette-F, .wt-silhouette-M, .wt-silhouette-U {
   background: none;
   width: auto;
   height: auto;
@@ -19585,7 +19589,7 @@ h2 {
   vertical-align: baseline;
 }
 
-.icon-clippings:hover, .icon-edit_indi:hover, .icon-indis:hover, .icon-minus:hover, .icon-mypage:hover, .icon-plus:hover, .icon-reminder:hover, .icon-selected:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .wt-icon-delete:hover, .wt-icon-individual:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
+.icon-clippings:hover, .icon-edit_indi:hover, .icon-indis:hover, .icon-media-shuffle:hover, .icon-minus:hover, .icon-mypage:hover, .icon-plus:hover, .icon-reminder:hover, .icon-selected:hover, .icon-sex_m_9x9:hover, .icon-sex_f_9x9:hover, .icon-sex_u_9x9:hover, .icon-sex_m_15x15:hover, .icon-sex_f_15x15:hover, .icon-sex_u_15x15:hover, .icon-user_add:hover, .icon-zoomin:hover, .icon-zoomout:hover, .wt-icon-delete:hover, .wt-icon-individual:hover, .icon-silhouette-F:hover, .icon-silhouette-M:hover, .icon-silhouette-U:hover, .icon-sfamily:hover, .icon-cfamily:hover, .icon-children:hover, .icon-childless:hover, .icon-target:hover, .icon-wiki:hover, .icon-pedigree:hover, .wt-silhouette-F:hover, .wt-silhouette-M:hover, .wt-silhouette-U:hover {
   color: #0a0c0d;
   text-decoration: none;
 }
