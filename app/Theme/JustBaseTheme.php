@@ -90,32 +90,16 @@ class JustBaseTheme extends MinimalTheme {
 	 *
 	 * @param Individual $individual
 	 * We need an extra div to use a flexbox layout
-	 * Thumbnail restriction
+	 * We only use thumbnails of the type 'photo' in the boxes
+	 * Use a compact layout in the pedigree chart
 	 *
 	 * @return string
 	 */
 	public function individualBox(Individual $individual): string {
-		$personBoxClass = array_search($individual->getSex(), ['person_box' => 'M', 'person_boxF' => 'F', 'person_boxNN' => 'U']);
+		$person_box_class = self::PERSON_BOX_CLASSES[$individual->getSex()];
+
 		if ($individual->canShow() && $individual->tree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
-			// Only use images of the type 'photo' as thumbnail
-			// Source: $individual_media from app\Http\Controllers\IndividualController.php
-			$individual_media = [];
-			foreach ($individual->facts(['OBJE']) as $fact) {
-				$media_object = $fact->target();
-				if ($media_object instanceof Media) {
-					foreach ($media_object->mediaFiles() as $media_file) {
-						if ($media_file->isImage() && $media_file->type() === 'photo') {
-							$individual_media[] = $media_file;
-						}
-					}
-				}
-			}
-			$individual_media = array_filter($individual_media);
-			if (empty($individual_media)) {
-				$thumbnail = '<i class="icon-silhouette-' . $individual->getSex() . '"></i>';
-			} else {
-				$thumbnail = $individual_media[0]->displayImage(40, 50, 'crop', []);
-			}
+			$thumbnail = $this->individualBoxThumb($individual);
 		} else {
 			$thumbnail = '';
 		}
@@ -139,7 +123,7 @@ class JustBaseTheme extends MinimalTheme {
 		// specific compact layout for the pedigree chart. We prefer a compact layout with default oldest on top on the pedigree chart
 		if ($this->request->get('route') === 'pedigree-chart' && ($this->request->get('orientation') === '2' || $this->request->get('orientation') === '3')) {
 			return
-				'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+				'<div data-xref="' . e($individual->xref()) . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 				'<div class="chart_textbox d-flex width100 justify-content-center" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 				'<div class="d-flex flex-column align-items-center text-center">' .
 				$thumbnail . $content .
@@ -162,6 +146,75 @@ class JustBaseTheme extends MinimalTheme {
 				'<div class="inout"></div>' .
 				'</div>';
 		}
+	}
+
+	/**
+	* Display an individual in a box - for charts, etc.
+	*
+	* @param Individual $individual
+	* We only use thumbnails of the type 'photo' in the boxes
+	*
+	* @return string
+	*/
+	public function individualBoxLarge(Individual $individual): string {
+		$person_box_class = self::PERSON_BOX_CLASSES[$individual->getSex()];
+
+		if ($individual->canShow() && $individual->tree()->getPreference('SHOW_HIGHLIGHT_IMAGES')) {
+			$thumbnail = $this->individualBoxThumb($individual);
+		} else {
+			$thumbnail = '';
+		}
+
+		$content = '<span class="namedef name1">' . $individual->getFullName() . '</span>';
+		$icons   = '';
+		if ($individual->canShow()) {
+			$content = '<a href="' . e($individual->url()) . '">' . $content . '</a>' .
+				'<div class="namedef name2">' . $individual->getAddName() . '</div>';
+			$icons = '<div class="icons">' .
+				'<span class="iconz icon-zoomin" title="' . I18N::translate('Zoom in/out on this box.') . '"></span>' .
+				'<div class="itr"><i class="icon-pedigree"></i><div class="popup">' .
+				'<ul class="' . $person_box_class . '">' . implode('', array_map(function (Menu $menu): string {
+					return $menu->bootstrap4();
+				}, $this->individualBoxMenu($individual))) . '</ul>' .
+				'</div>' .
+				'</div>' .
+				'</div>';
+		}
+
+		return
+			'<div data-xref="' . e($individual->xref()) . '" data-tree="' . e($individual->tree()->name()) . '" class="person_box_template ' . $person_box_class . ' box-style2">' .
+			$icons .
+			'<div class="chart_textbox" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
+			$thumbnail .
+			$content .
+			'<div class="inout2 details2">' . $this->individualBoxFacts($individual) . '</div>' .
+			'</div>' .
+			'<div class="inout"></div>' .
+			'</div>';
+	}
+
+	public function individualBoxThumb(Individual $individual): string {
+		// Only use images of the type 'photo' as thumbnail
+		// Source: $individual_media from app\Http\Controllers\IndividualController.php
+		$individual_media = [];
+		foreach ($individual->facts(['OBJE']) as $fact) {
+			$media_object = $fact->target();
+			if ($media_object instanceof Media) {
+				foreach ($media_object->mediaFiles() as $media_file) {
+					if ($media_file->isImage() && $media_file->type() === 'photo') {
+						$individual_media[] = $media_file;
+					}
+				}
+			}
+		}
+		$individual_media = array_filter($individual_media);
+		if (empty($individual_media)) {
+			$thumbnail = '<i class="icon-silhouette-' . $individual->getSex() . '"></i>';
+		} else {
+			$thumbnail = $individual_media[0]->displayImage(40, 50, 'crop', []);
+		}
+
+		return $thumbnail;
 	}
 
 	/** {@inheritdoc} */
