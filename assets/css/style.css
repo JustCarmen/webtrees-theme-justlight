@@ -20458,15 +20458,23 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   color: black;
 }
 
-.jc-global-individual .wt-facts-table[role="presentation"]:first-child td,
-.jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] {
-  background-color: #212529;
-  color: #fff;
-}
-
 .jc-global-individual .wt-facts-table .person_box, .jc-global-individual .wt-facts-table .person_boxF, .jc-global-individual .wt-facts-table .person_boxU {
   background-color: transparent;
   border: none;
+}
+
+.jc-global-individual .jc-indi-tab-header {
+  background-color: #212529;
+  border: 1px solid;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.jc-global-individual .jc-indi-tab-content {
+  background: #f8f9fa;
+  border: 1px solid #cbd3da;
+  font-size: 0.875rem;
+  padding: 0.75rem;
 }
 
 /*** Charts pages ***/
@@ -20555,11 +20563,6 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 /*** Album module ***/
-.jc-album-tab-container {
-  background: #f8f9fa;
-  border: 1px solid #cbd3da;
-}
-
 .wt-album-tab-caption {
   overflow: hidden;
   text-overflow: ellipsis;

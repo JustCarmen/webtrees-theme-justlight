@@ -181,9 +181,8 @@ module.exports = function (grunt) {
         }
       },
 
-      // excluded files:
+      // excluded folders:
       // - views/layouts/*
-      // - views/modules/lightbox/*
       // files which does not exists in JustFancy:
       // - views/tree-page.php
       // - views/user-page.php
@@ -193,13 +192,11 @@ module.exports = function (grunt) {
           cwd: '../justfancy/resources',
           src: [
             'colorbox.php',
-            'views/*page*',
-            'views/icons/*',
-            'views/lists/*',
-            'views/modules/gedcom*/*',
-            'views/modules/user*/*',
-            'views/modules/random_media/*',
-            'views/selects/*'
+            'views/*',
+            'views/icons/**',
+            'views/lists/**',
+            'views/modules/**',
+            'views/selects/**'
           ],
           dest: 'resources',
           expand: true

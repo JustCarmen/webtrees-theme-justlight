@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Change: styling
+ * Themes: all themes
+ *
+ */
+?>
+
+<?php use Fisharebest\Webtrees\I18N; ?>
+
+<div class="wt-stories-tab pb-4">
+    <?php foreach ($stories as $story) : ?>
+        <div class="jc-indi-tab-header">
+            <?= e($story->title) ?>
+        </div>
+        <div class="jc-indi-tab-content">
+            <?= $story->story_body ?>
+        </div>
+        <?php if ($is_admin) : ?>
+            <div class="small font-italic">
+                <a href="<?= e(route('module', ['module' => 'stories', 'action' => 'AdminEdit', 'block_id' => $story->block_id, 'ged' => $tree->name()])) ?>">
+                    <?= I18N::translate('Edit the story') ?>
+                </a>
+            </div>
+        <?php endif ?>
+    <?php endforeach ?>
+
+    <?php if ($is_admin && empty($stories)) : ?>
+        <div class="jc-indi-tab-content small font-italic">
+            <a href="<?= e(route('module', ['module' => 'stories', 'action' => 'AdminEdit', 'xref' => $individual->xref(), 'ged' => $tree->name()])) ?>">
+                <?= I18N::translate('Add a story') ?>
+            </a>
+        </div>
+    <?php endif ?>
+</div>
