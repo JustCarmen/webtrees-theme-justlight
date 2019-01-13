@@ -112,7 +112,7 @@ class JustBaseTheme extends MinimalTheme {
 			$icons = '<div class="icons order-2">' .
 				'<span class="iconz icon-zoomin" title="' . I18N::translate('Zoom in/out on this box.') . '"></span>' .
 				'<div class="itr"><i class="icon-pedigree"></i><div class="popup">' .
-				'<ul class="' . $personBoxClass . '">' . implode('', array_map(function (Menu $menu) {
+				'<ul class="' . $person_box_class . '">' . implode('', array_map(function (Menu $menu) {
 					return $menu->bootstrap4();
 				}, $this->individualBoxMenu($individual))) . '</ul>' .
 				'</div>' .
@@ -123,7 +123,7 @@ class JustBaseTheme extends MinimalTheme {
 		// specific compact layout for the pedigree chart. We prefer a compact layout with default oldest on top on the pedigree chart
 		if ($this->request->get('route') === 'pedigree-chart' && ($this->request->get('orientation') === '2' || $this->request->get('orientation') === '3')) {
 			return
-				'<div data-xref="' . e($individual->xref()) . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+				'<div data-xref="' . e($individual->xref()) . '" class="person_box_template ' . $person_box_class . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 				'<div class="chart_textbox d-flex width100 justify-content-center" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 				'<div class="d-flex flex-column align-items-center text-center">' .
 				$thumbnail . $content .
