@@ -20458,7 +20458,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   color: black;
 }
 
-.jc-global-individual .wt-facts-table[role="presentation"] td,
+.jc-global-individual .wt-facts-table[role="presentation"]:first-child td,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] {
   background-color: #212529;
   color: #fff;
@@ -20885,12 +20885,12 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 /*** Individual page ***/
-.jc-global-individual .wt-facts-table[role="presentation"] td,
+.jc-global-individual .wt-facts-table[role="presentation"]:first-child td,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] {
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
 }
 
-.jc-global-individual .wt-facts-table[role="presentation"] td, .jc-global-individual .wt-facts-table[role="presentation"] td a, .jc-global-individual .wt-facts-table[role="presentation"] td .fa,
+.jc-global-individual .wt-facts-table[role="presentation"]:first-child td, .jc-global-individual .wt-facts-table[role="presentation"]:first-child td a, .jc-global-individual .wt-facts-table[role="presentation"]:first-child td .fa,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"],
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] a,
 .jc-global-individual .wt-facts-table tr:first-child td[colspan="2"] .fa {
