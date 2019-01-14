@@ -272,7 +272,7 @@
   list-style: none outside none;
 }
 
-.wt-ancestors-chart .person_box_template, .wt-ancestors-chart #lifespan-people .popup, #lifespan-people .wt-ancestors-chart .popup {
+.wt-ancestors-chart .person_box_template {
   line-height: 1.0;
 }
 
@@ -287,7 +287,7 @@
   list-style: none outside none;
 }
 
-#descendancy_chart .person_box_template, #descendancy_chart #lifespan-people .popup, #lifespan-people #descendancy_chart .popup, .wt-descendants-chart .person_box_template, .wt-descendants-chart #lifespan-people .popup, #lifespan-people .wt-descendants-chart .popup {
+#descendancy_chart .person_box_template, .wt-descendants-chart .person_box_template {
   line-height: 1.0;
 }
 
@@ -300,7 +300,7 @@
  *
  * wt-chart, wt-family-book-chart
  */
-.wt-family-book-chart .person_box_template, .wt-family-book-chart #lifespan-people .popup, #lifespan-people .wt-family-book-chart .popup {
+.wt-family-book-chart .person_box_template {
   line-height: 1.0;
 }
 
@@ -318,7 +318,7 @@
  *
  * wt-chart, wt-hourglass-chart
  */
-.hourglassChart .person_box_template, .hourglassChart #lifespan-people .popup, #lifespan-people .hourglassChart .popup {
+.hourglassChart .person_box_template {
   line-height: 1.0;
 }
 
@@ -346,7 +346,7 @@
   z-index: -1000;
 }
 
-.wt-pedigree-chart .person_box_template, .wt-pedigree-chart #lifespan-people .popup, #lifespan-people .wt-pedigree-chart .popup {
+.wt-pedigree-chart .person_box_template {
   line-height: 1.0;
 }
 
@@ -416,7 +416,7 @@
  *
  * wt-chart, wt-relationships-chart
  */
-.wt-relationship-chart .person_box_template, .wt-relationship-chart #lifespan-people .popup, #lifespan-people .wt-relationship-chart .popup {
+.wt-relationship-chart .person_box_template {
   line-height: 1.0;
 }
 
@@ -1021,9 +1021,8 @@ table {
   border: 1px solid #ccc;
 }
 
-.person_box_template .details0, #lifespan-people .popup .details0,
-.person_box_template .details1,
-#lifespan-people .popup .details1 {
+.person_box_template .details0,
+.person_box_template .details1 {
   font-size: 11px;
 }
 
@@ -1070,8 +1069,7 @@ table {
 /* ======== Person box ======= */
 .gedcom_favorites_block,
 .user_favorites_block,
-.person_box_template,
-#lifespan-people .popup {
+.person_box_template {
   overflow: visible !important;
 }
 
@@ -1095,56 +1093,53 @@ table {
   line-height: 1.5em !important;
 }
 
-
-.person_box_template,
-#lifespan-people .popup {
+.person_box_template {
   height: auto;
   white-space: normal;
   overflow: hidden !important;
 }
 
-.person_box_template .namedef i[class^="icon-sex"], #lifespan-people .popup .namedef i[class^="icon-sex"] {
+.person_box_template .namedef i[class^="icon-sex"] {
   margin-left: 3px;
 }
 
-[dir=rtl] .person_box_template .namedef i[class^="icon-sex"], [dir=rtl] #lifespan-people .popup .namedef i[class^="icon-sex"], #lifespan-people [dir=rtl] .popup .namedef i[class^="icon-sex"] {
+[dir=rtl] .person_box_template .namedef i[class^="icon-sex"] {
   margin-right: 3px;
 }
 
-.person_box_template .icons, #lifespan-people .popup .icons {
+.person_box_template .icons {
   float: right;
 }
 
-[dir=rtl] .person_box_template .icons, [dir=rtl] #lifespan-people .popup .icons, #lifespan-people [dir=rtl] .popup .icons {
+[dir=rtl] .person_box_template .icons {
   float: left;
 }
 
-.person_box_template .inout, #lifespan-people .popup .inout {
+.person_box_template .inout {
   clear: both;
   display: none;
 }
 
-.person_box_template .noprint, #lifespan-people .popup .noprint {
+.person_box_template .noprint {
   width: 25px;
   height: 50px;
   position: relative;
 }
 
-.person_box_template .chart_textbox, #lifespan-people .popup .chart_textbox {
+.person_box_template .chart_textbox {
   overflow: hidden;
   font-size: .75rem;
   line-height: 1;
   padding-bottom: 4px;
 }
 
-.person_box_template .chart_textbox .name1, #lifespan-people .popup .chart_textbox .name1 {
+.person_box_template .chart_textbox .name1 {
   line-height: 1;
   font-weight: bold;
 }
 
-.person_box_template img, #lifespan-people .popup img,
-.person_box_template a.gallery,
-#lifespan-people .popup a.gallery {
+.person_box_template img,
+.person_box_template a.gallery {
   float: left;
   height: 50px;
   margin: 0 2px 0 0;
@@ -1152,19 +1147,17 @@ table {
   width: auto;
 }
 
-[dir=rtl] .person_box_template img, [dir=rtl] #lifespan-people .popup img, #lifespan-people [dir=rtl] .popup img,
-[dir=rtl] .person_box_template a.gallery,
-[dir=rtl] #lifespan-people .popup a.gallery,
-#lifespan-people [dir=rtl] .popup a.gallery {
+[dir=rtl] .person_box_template img,
+[dir=rtl] .person_box_template a.gallery {
   float: right;
   margin: 0 0 0 2px;
 }
 
-.person_box_template i[class^="icon-silhouette"], #lifespan-people .popup i[class^="icon-silhouette"] {
+.person_box_template i[class^="icon-silhouette"] {
   float: left;
 }
 
-[dir=rtl] .person_box_template i[class^="icon-silhouette"], [dir=rtl] #lifespan-people .popup i[class^="icon-silhouette"], #lifespan-people [dir=rtl] .popup i[class^="icon-silhouette"] {
+[dir=rtl] .person_box_template i[class^="icon-silhouette"] {
   float: right;
 }
 
@@ -1562,7 +1555,7 @@ table {
 }
 
 /* ==== Favourites block ===== */
-.blockcontent .person_box_template .details2, .blockcontent #lifespan-people .popup .details2, #lifespan-people .blockcontent .popup .details2 {
+.blockcontent .person_box_template .details2 {
   min-height: 40px;
 }
 
@@ -10735,7 +10728,7 @@ div[id^="calendar-widget"] table, .faq_title, .wt-side-blocks .card {
   margin-left: 3rem !important;
 }
 
-.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-individual #relatives_content #lifespan-people .popup, #lifespan-people .jc-global-individual #relatives_content .popup, .jc-global-tree-page .wt-main-container {
+.p-0, .jc-global-individual #relatives_content .person_box_template, .jc-global-tree-page .wt-main-container {
   padding: 0 !important;
 }
 
@@ -19990,15 +19983,13 @@ tr.even {
 }
 
 /*** Person boxes ***/
-.person_box_template .icon-silhouette-F, #lifespan-people .popup .icon-silhouette-F, .person_box_template .icon-silhouette-M, #lifespan-people .popup .icon-silhouette-M, .person_box_template .icon-silhouette-U, #lifespan-people .popup .icon-silhouette-U, .person_box_template a.gallery, #lifespan-people .popup a.gallery,
-.person_box_template img,
-#lifespan-people .popup img {
+.person_box_template .icon-silhouette-F, .person_box_template .icon-silhouette-M, .person_box_template .icon-silhouette-U, .person_box_template a.gallery,
+.person_box_template img {
   margin-right: 0.25rem;
 }
 
-[dir=rtl] .person_box_template .icon-silhouette-F, .person_box_template [dir=rtl] .icon-silhouette-F, [dir=rtl] #lifespan-people .popup .icon-silhouette-F, #lifespan-people .popup [dir=rtl] .icon-silhouette-F, [dir=rtl] .person_box_template .icon-silhouette-M, .person_box_template [dir=rtl] .icon-silhouette-M, [dir=rtl] #lifespan-people .popup .icon-silhouette-M, #lifespan-people .popup [dir=rtl] .icon-silhouette-M, [dir=rtl] .person_box_template .icon-silhouette-U, .person_box_template [dir=rtl] .icon-silhouette-U, [dir=rtl] #lifespan-people .popup .icon-silhouette-U, #lifespan-people .popup [dir=rtl] .icon-silhouette-U, [dir=rtl] .person_box_template a.gallery, .person_box_template [dir=rtl] a.gallery, [dir=rtl] #lifespan-people .popup a.gallery, #lifespan-people .popup [dir=rtl] a.gallery,
-[dir=rtl] .person_box_template img, .person_box_template [dir=rtl] img,
-[dir=rtl] #lifespan-people .popup img, #lifespan-people .popup [dir=rtl] img {
+[dir=rtl] .person_box_template .icon-silhouette-F, .person_box_template [dir=rtl] .icon-silhouette-F, [dir=rtl] .person_box_template .icon-silhouette-M, .person_box_template [dir=rtl] .icon-silhouette-M, [dir=rtl] .person_box_template .icon-silhouette-U, .person_box_template [dir=rtl] .icon-silhouette-U, [dir=rtl] .person_box_template a.gallery, .person_box_template [dir=rtl] a.gallery,
+[dir=rtl] .person_box_template img, .person_box_template [dir=rtl] img {
   margin-left: 0.25rem;
 }
 
@@ -20017,27 +20008,26 @@ tr.even {
   border-color: #cbd3da;
 }
 
-.table-bordered td .person_box_template, .markdown table td .person_box_template, .table-bordered td #lifespan-people .popup, #lifespan-people .table-bordered td .popup, .markdown table td #lifespan-people .popup, #lifespan-people .markdown table td .popup {
+.table-bordered td .person_box_template, .markdown table td .person_box_template {
   border: none;
 }
 
-.person_box_template a, #lifespan-people .popup a {
+.person_box_template a {
   color: #337ab7;
 }
 
-.person_box_template .chart_textbox, #lifespan-people .popup .chart_textbox {
+.person_box_template .chart_textbox {
   font-size: 0.75rem;
   line-height: 1.2;
 }
 
-.person_box_template .name1, #lifespan-people .popup .name1 {
+.person_box_template .name1 {
   font-size: 0.75rem;
   font-weight: 500;
 }
 
-.person_box_template .details0, #lifespan-people .popup .details0,
-.person_box_template .details1,
-#lifespan-people .popup .details1 {
+.person_box_template .details0,
+.person_box_template .details1 {
   font-size: 0.75rem;
 }
 
@@ -20484,14 +20474,6 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 /*** Charts pages ***/
 #pedigree_canvas {
   color: #52a4e5;
-}
-
-#lifespan-scale {
-  background-image: url(charts/lifespan-chunk.png);
-}
-
-#lifespan-people .popup div:first-of-type {
-  font-weight: 500;
 }
 
 .jc-global-fanchart :focus {

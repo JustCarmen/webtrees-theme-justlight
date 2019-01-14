@@ -1,13 +1,24 @@
+<?php
+
+/**
+ * Layout: lifespan summary in personbox style
+ * Coding style formatting
+ *
+ * Themes: All themes
+ *
+ */
+?>
 <?php use Fisharebest\Webtrees\Gedcom; ?>
+<?php use Fisharebest\Webtrees\Theme; ?>
 
 <p class="wt-lifespans-subtitle">
     <?= $subtitle ?>
 </p>
 
 <div class="wt-lifespans-scale">
-    <?php for ($year = $start_year; $year < $end_year; $year += 10) :
-        ?><div class="wt-lifespans-decade"><?= $year ?></div><?php
-    endfor ?>
+    <?php for ($year = $start_year; $year < $end_year; $year += 10) : ?>
+        <div class="wt-lifespans-decade"><?= $year ?></div>
+    <?php endfor ?>
 </div>
 
 <div class="wt-lifespans-individuals position-relative" style="height: <?= (5 + $max_rows) * 1.5 ?>rem; width: <?= ($end_year - $start_year) * 7 ?>px;">
@@ -19,7 +30,7 @@
         </div>
     </a>
 
-    <div class="wt-lifespans-summary collapse position-absolute" id="<?= e($lifespan->id) ?>" style="<?= $dir === 'ltr' ? 'left' : 'right' ?>:<?= (min($lifespan->birth_year, $end_year - 50) - $start_year) * 7 ?>px; top:<?= ($lifespan->row + 1) * 1.5 ?>rem; width:350px;">
+    <div class="wt-lifespans-summary person_box_template <?= Theme::theme()::PERSON_BOX_CLASSES[$lifespan->individual->getSex()] ?> collapse position-absolute small p-1" id="<?= e($lifespan->id) ?>" style="<?= $dir === 'ltr' ? 'left' : 'right' ?>:<?= (min($lifespan->birth_year, $end_year - 50) - $start_year) * 7 ?>px; top:<?= ($lifespan->row + 1) * 1.5 ?>rem; width:350px;">
         <a class="wt-lifespans-summary-link" href="<?= e($lifespan->individual->url()) ?>">
             <?= $lifespan->individual->getFullName() ?>
         </a>
@@ -30,4 +41,3 @@
     </div>
     <?php endforeach ?>
 </div>
-
