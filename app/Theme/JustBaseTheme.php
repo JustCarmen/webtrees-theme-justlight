@@ -134,7 +134,7 @@ class JustBaseTheme extends MinimalTheme {
 				'</div>';
 		} else {
 			return
-				'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $personBoxClass . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
+				'<div data-pid="' . $individual->xref() . '" class="person_box_template ' . $person_box_class . ' box-style1 d-flex justify-content-between" style="width: ' . $this->parameter('chart-box-x') . 'px; height: ' . $this->parameter('chart-box-y') . 'px">' .
 				$icons .
 				'<div class="chart_textbox d-flex order-1" style="max-height:' . $this->parameter('chart-box-y') . 'px;">' .
 				$thumbnail .
