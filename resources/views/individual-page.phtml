@@ -1,11 +1,13 @@
 <?php
 
 /**
- * Layout: page title with subtitle
+ * Layout:
+ * - page title with subtitle
+ * - Main section larger, sidebar smaller
  * Functionality:
  * - add media link and reorder-media link moved from individual-page view to individual-page-menu view
  * - use only one image (with the type 'photo') as main image in stead of the carousel
- * Themes: all themes
+ * Themes: JustLight
  *
  * TODO: make the carrousel and cropped image (default) optional
  *
@@ -79,7 +81,7 @@ if (Auth::isAdmin()) {
 </div>
 
 <div class="row">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-9">
         <div class="d-flex col p-0 mb-4">
 
             <!-- Individual images - We do not use the carrousel and we use full images in stead of cropped. TODO: make this optional? -->
@@ -122,7 +124,7 @@ if (Auth::isAdmin()) {
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-4" id="sidebar" role="tablist">
+    <div class="col-12 col-md-3" id="sidebar" role="tablist">
         <?php foreach ($sidebars as $sidebar) : ?>
             <div class="card">
                 <div class="card-header" role="tab" id="sidebar-header-<?= $sidebar->getName() ?>">

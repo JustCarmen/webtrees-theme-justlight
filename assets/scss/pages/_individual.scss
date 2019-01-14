@@ -7,6 +7,11 @@
     }
   }
 
+  .wt-facts-table,
+  #sidebar {
+    font-size: $font-size-xs !important;
+  }
+
   @at-root {
     #relatives_content {
       .wt-gender-M td {

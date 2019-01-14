@@ -5,9 +5,15 @@
    color: color("green") !important;
 }
 
-.fa-trash-o,
+.wt-icon-delete,
 .fa-map-marker {
   color: color("red") !important;
+}
+
+.card-header {
+  .wt-icon-delete {
+    color: white !important;
+  }
 }
 
 // special icon

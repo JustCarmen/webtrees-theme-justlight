@@ -196,7 +196,8 @@ module.exports = function (grunt) {
             'views/icons/**',
             'views/lists/**',
             'views/modules/**',
-            'views/selects/**'
+            'views/selects/**',
+            '!views/individual-page.phtml'
           ],
           dest: 'resources',
           expand: true
