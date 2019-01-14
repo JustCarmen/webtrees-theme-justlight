@@ -109,6 +109,28 @@ class JustLightTheme extends JustBaseTheme {
 		}
 	}
 
+	/**
+	 * Miscellaneous dimensions, fonts, styles, etc.
+	 *
+	 * @param string $parameter_name
+	 *
+	 * @return string|int|float
+	 *
+	 * Theme specific parameters
+	 * Person box colors in fan chart (see assets/scss/abstracts/_variables.scss
+	 * and assets/scss/abstracts/_common.scss for the color codes)
+	 *
+	 */
+	public function parameter($parameter_name) {
+		$parameters = [
+			'chart-background-f' => 'fff0f5',
+			'chart-background-m' => 'd7eaf9',
+			'chart-background-u' => 'f8f9fa',
+		];
+
+		return $parameters[$parameter_name] ?? parent::parameter($parameter_name);
+	}
+
 	/** {@inheritdoc} */
 	public function themeName():string {
 		return /* I18N: Name of a theme. */ I18N::translate(self::THEME_NAME);

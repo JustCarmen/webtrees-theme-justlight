@@ -19394,8 +19394,12 @@ h2 {
   text-align: center;
 }
 
-.font9 {
-  font-size: 80%;
+.font9, .details1 {
+  font-size: 0.75rem;
+}
+
+.details1 {
+  font-style: italic;
 }
 
 .subheaders {
@@ -20009,8 +20013,8 @@ tr.even {
 }
 
 .person_boxNN {
-  background-color: #fff;
-  border-color: #94c7ef;
+  background-color: #f8f9fa;
+  border-color: #cbd3da;
 }
 
 .table-bordered td .person_box_template, .markdown table td .person_box_template, .table-bordered td #lifespan-people .popup, #lifespan-people .table-bordered td .popup, .markdown table td #lifespan-people .popup, #lifespan-people .markdown table td .popup {
@@ -20479,7 +20483,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 
 /*** Charts pages ***/
 #pedigree_canvas {
-  color: #000;
+  color: #52a4e5;
 }
 
 #lifespan-scale {
@@ -20502,6 +20506,10 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 #familybook_chart .spacer,
 #pedigree-page .spacer {
   background-image: url("images/charts/spacer.png");
+}
+
+.wt-lifespans-decade {
+  background-image: url("images/charts/lifespan-chunk.png");
 }
 
 /*** List pages ***/
@@ -20585,7 +20593,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .jc-global-module-tree .tv_out, .wt-block-charts-block .tv_out, #tree .tv_out {
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 
 .jc-global-module-tree .tv_out #tree-title, .wt-block-charts-block .tv_out #tree-title, #tree .tv_out #tree-title {

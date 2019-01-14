@@ -53,8 +53,9 @@ $facts-table-header-bg: $gray-200;
 // Personboxes
 $personbox-male-bg: $babyblue;
 $personbox-female-bg: $babypink;
+$personbox-unknown-bg: $gray-100;
 
 // Treeview
-$treeview-bg-color: $body-bg;
+$treeview-bg-color: $personbox-unknown-bg;
 $treeview-box-male-bg: $personbox-male-bg;
 $treeview-box-female-bg: $personbox-female-bg;
