@@ -55,6 +55,16 @@ $personbox-male-bg: $babyblue;
 $personbox-female-bg: $babypink;
 $personbox-unknown-bg: $gray-100;
 
+// Timeline chart
+$timeline-colors: (
+person0: $babyblue,
+person1: $babypink,
+person2: #c487cb,
+person3: #98e2c6,
+person4: #ffe1c6,
+person5: $gray-300,
+);
+
 // Treeview
 $treeview-bg-color: $personbox-unknown-bg;
 $treeview-box-male-bg: $personbox-male-bg;
