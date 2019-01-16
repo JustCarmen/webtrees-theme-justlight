@@ -19389,12 +19389,12 @@ h2 {
   text-align: center;
 }
 
-.font9, .details1 {
+.font9 {
   font-size: 0.75rem;
 }
 
 .details1 {
-  font-style: italic;
+  font-size: 0.75rem;
 }
 
 .subheaders {
