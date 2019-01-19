@@ -19608,6 +19608,14 @@ h2 {
 }
 
 /*** Forms ***/
+.select2-container--default .select2-selection--single .select2-selection__rendered .gallery img, .select2-container--default .select2-results__option .gallery img {
+  margin-right: 0.25rem;
+}
+
+[dir=rtl] .select2-container--default .select2-selection--single .select2-selection__rendered .gallery img, .select2-container--default .select2-selection--single [dir=rtl] .select2-selection__rendered .gallery img, [dir=rtl] .select2-container--default .select2-results__option .gallery img, .select2-container--default [dir=rtl] .select2-results__option .gallery img {
+  margin-left: 0.25rem;
+}
+
 .select2-container--default {
   flex: 1 1 auto;
 }
