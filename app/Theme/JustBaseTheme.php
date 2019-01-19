@@ -195,6 +195,7 @@ class JustBaseTheme extends MinimalTheme {
 
 	public function individualBoxThumb(Individual $individual): string {
 		// Only use images of the type 'photo' as thumbnail
+		// Don't crop the image. Use contain and the default thumbnail width from webtrees 1
 		// Source: $individual_media from app\Http\Controllers\IndividualController.php
 		$individual_media = [];
 		foreach ($individual->facts(['OBJE']) as $fact) {
@@ -211,7 +212,7 @@ class JustBaseTheme extends MinimalTheme {
 		if (empty($individual_media)) {
 			$thumbnail = '<i class="icon-silhouette-' . $individual->getSex() . '"></i>';
 		} else {
-			$thumbnail = $individual_media[0]->displayImage(40, 50, 'crop', []);
+			$thumbnail = $individual_media[0]->displayImage(100, 100, 'contain', []);
 		}
 
 		return $thumbnail;
