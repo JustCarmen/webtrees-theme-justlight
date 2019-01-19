@@ -35,6 +35,10 @@ resn-privacy: ()));
 $component-active-color: $primary;
 $component-active-bg: $gray-200;
 
+// Forms
+$input-focus-border-color: lighten($component-active-color, 25%);
+$input-btn-focus-color: rgba($component-active-color, .25) !default;
+
 // Dropdowns
 $dropdown-border-color: $gray-200;
 
@@ -43,9 +47,6 @@ $card-cap-bg: $gray-100;
 
 // Tables
 $table-accent-bg: $gray-100;
-
-// Buttons
-$input-btn-focus-width: 0;
 
 // Facts tables
 $facts-table-header-bg: $gray-200;
