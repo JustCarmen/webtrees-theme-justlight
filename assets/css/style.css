@@ -6694,37 +6694,106 @@ input[type="button"].btn-block {
   border-bottom-left-radius: 0;
 }
 
-.input-group-prepend,
+.input-group-prepend, .input-group-btn,
 .input-group-append {
   display: flex;
 }
 
-.input-group-prepend .btn, .input-group-prepend input[type="submit"],
+.input-group-prepend .btn, .input-group-btn .btn, .input-group-prepend input[type="submit"], .input-group-btn input[type="submit"],
 .input-group-append .btn,
 .input-group-append input[type="submit"] {
   position: relative;
   z-index: 2;
 }
 
-.input-group-prepend .btn + .btn, .input-group-prepend input[type="submit"] + .btn, .input-group-prepend .btn + input[type="submit"], .input-group-prepend input[type="submit"] + input[type="submit"],
+.input-group-prepend .btn + .btn, .input-group-btn .btn + .btn, .input-group-prepend input[type="submit"] + .btn, .input-group-btn input[type="submit"] + .btn, .input-group-prepend .btn + input[type="submit"], .input-group-btn .btn + input[type="submit"], .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-btn input[type="submit"] + input[type="submit"],
 .input-group-prepend .btn + .input-group-text,
+.input-group-btn .btn + .input-group-text,
 .input-group-prepend input[type="submit"] + .input-group-text,
+.input-group-btn input[type="submit"] + .input-group-text,
+.input-group-btn .input-group-prepend .btn + .btn,
+.input-group-btn .btn + .btn,
+.input-group-btn .input-group-prepend input[type="submit"] + .btn,
+.input-group-btn input[type="submit"] + .btn,
+.input-group-btn .input-group-prepend .btn + input[type="submit"],
+.input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-prepend input[type="submit"] + input[type="submit"],
+.input-group-btn input[type="submit"] + input[type="submit"],
 .input-group-prepend .input-group-text + .input-group-text,
+.input-group-btn .input-group-text + .input-group-text,
+.input-group-btn .input-group-prepend .btn + .input-group-text,
+.input-group-btn .btn + .input-group-text,
+.input-group-btn .input-group-prepend input[type="submit"] + .input-group-text,
+.input-group-btn input[type="submit"] + .input-group-text,
+.input-group-btn .input-group-prepend .input-group-text + .btn,
+.input-group-btn .input-group-text + .btn,
+.input-group-btn .input-group-prepend .btn + .btn,
+.input-group-btn .btn + .btn,
+.input-group-btn .input-group-prepend input[type="submit"] + .btn,
+.input-group-btn input[type="submit"] + .btn,
+.input-group-btn .input-group-prepend .input-group-text + input[type="submit"],
+.input-group-btn .input-group-text + input[type="submit"],
+.input-group-btn .input-group-prepend .btn + input[type="submit"],
+.input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-prepend input[type="submit"] + input[type="submit"],
+.input-group-btn input[type="submit"] + input[type="submit"],
 .input-group-prepend .input-group-text + .btn,
+.input-group-btn .input-group-text + .btn,
+.input-group-btn .input-group-prepend .btn + .btn,
+.input-group-btn .btn + .btn,
+.input-group-btn .input-group-prepend input[type="submit"] + .btn,
+.input-group-btn input[type="submit"] + .btn,
 .input-group-prepend .input-group-text + input[type="submit"],
+.input-group-btn .input-group-text + input[type="submit"],
+.input-group-btn .input-group-prepend .btn + input[type="submit"],
+.input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-prepend input[type="submit"] + input[type="submit"],
+.input-group-btn input[type="submit"] + input[type="submit"],
 .input-group-append .btn + .btn,
 .input-group-append input[type="submit"] + .btn,
 .input-group-append .btn + input[type="submit"],
 .input-group-append input[type="submit"] + input[type="submit"],
 .input-group-append .btn + .input-group-text,
 .input-group-append input[type="submit"] + .input-group-text,
+.input-group-append .input-group-btn .btn + .btn,
+.input-group-btn .input-group-append .btn + .btn,
+.input-group-append .input-group-btn input[type="submit"] + .btn,
+.input-group-btn .input-group-append input[type="submit"] + .btn,
+.input-group-append .input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-append .btn + input[type="submit"],
+.input-group-append .input-group-btn input[type="submit"] + input[type="submit"],
+.input-group-btn .input-group-append input[type="submit"] + input[type="submit"],
 .input-group-append .input-group-text + .input-group-text,
+.input-group-append .input-group-btn .btn + .input-group-text,
+.input-group-btn .input-group-append .btn + .input-group-text,
+.input-group-append .input-group-btn input[type="submit"] + .input-group-text,
+.input-group-btn .input-group-append input[type="submit"] + .input-group-text,
+.input-group-append .input-group-btn .input-group-text + .btn,
+.input-group-btn .input-group-append .input-group-text + .btn,
+.input-group-append .input-group-btn .btn + .btn,
+.input-group-btn .input-group-append .btn + .btn,
+.input-group-append .input-group-btn input[type="submit"] + .btn,
+.input-group-btn .input-group-append input[type="submit"] + .btn,
+.input-group-append .input-group-btn .input-group-text + input[type="submit"],
+.input-group-btn .input-group-append .input-group-text + input[type="submit"],
+.input-group-append .input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-append .btn + input[type="submit"],
+.input-group-append .input-group-btn input[type="submit"] + input[type="submit"],
+.input-group-btn .input-group-append input[type="submit"] + input[type="submit"],
 .input-group-append .input-group-text + .btn,
-.input-group-append .input-group-text + input[type="submit"] {
+.input-group-append .input-group-btn .btn + .btn,
+.input-group-btn .input-group-append .btn + .btn,
+.input-group-append .input-group-btn input[type="submit"] + .btn,
+.input-group-btn .input-group-append input[type="submit"] + .btn,
+.input-group-append .input-group-text + input[type="submit"],
+.input-group-append .input-group-btn .btn + input[type="submit"],
+.input-group-btn .input-group-append .btn + input[type="submit"],
+.input-group-append .input-group-btn input[type="submit"] + input[type="submit"],
+.input-group-btn .input-group-append input[type="submit"] + input[type="submit"] {
   margin-left: -1px;
 }
 
-.input-group-prepend {
+.input-group-prepend, .input-group-btn {
   margin-right: -1px;
 }
 
@@ -6732,7 +6801,7 @@ input[type="button"].btn-block {
   margin-left: -1px;
 }
 
-.input-group-text {
+.input-group-text, .input-group-btn .btn, .input-group-btn input[type="submit"] {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
@@ -6748,16 +6817,27 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.input-group-text input[type="radio"],
-.input-group-text input[type="checkbox"] {
+.input-group-text input[type="radio"], .input-group-btn .btn input[type="radio"], .input-group-btn input[type="submit"] input[type="radio"],
+.input-group-text input[type="checkbox"],
+.input-group-btn .btn input[type="checkbox"],
+.input-group-btn input[type="submit"] input[type="checkbox"] {
   margin-top: 0;
 }
 
 .input-group-lg > .form-control, .jc-view-report-setup .input-group-lg > input:not([type=checkbox]):not([type=radio]),
 .input-group-lg > .input-group-prepend > .input-group-text,
+.input-group-lg > .input-group-btn > .input-group-text,
+.input-group-btn .input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-btn > .btn,
+.input-group-btn .input-group-lg > .input-group-prepend > input[type="submit"],
+.input-group-lg > .input-group-btn > input[type="submit"],
 .input-group-lg > .input-group-append > .input-group-text,
+.input-group-btn .input-group-lg > .input-group-append > .btn,
+.input-group-btn .input-group-lg > .input-group-append > input[type="submit"],
 .input-group-lg > .input-group-prepend > .btn,
+.input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-prepend > input[type="submit"],
+.input-group-lg > .input-group-btn > input[type="submit"],
 .input-group-lg > .input-group-append > .btn,
 .input-group-lg > .input-group-append > input[type="submit"] {
   height: calc(2.640625rem + 2px);
@@ -6769,9 +6849,18 @@ input[type="button"].btn-block {
 
 .input-group-sm > .form-control, .jc-view-report-setup .input-group-sm > input:not([type=checkbox]):not([type=radio]),
 .input-group-sm > .input-group-prepend > .input-group-text,
+.input-group-sm > .input-group-btn > .input-group-text,
+.input-group-btn .input-group-sm > .input-group-prepend > .btn,
+.input-group-sm > .input-group-btn > .btn,
+.input-group-btn .input-group-sm > .input-group-prepend > input[type="submit"],
+.input-group-sm > .input-group-btn > input[type="submit"],
 .input-group-sm > .input-group-append > .input-group-text,
+.input-group-btn .input-group-sm > .input-group-append > .btn,
+.input-group-btn .input-group-sm > .input-group-append > input[type="submit"],
 .input-group-sm > .input-group-prepend > .btn,
+.input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-prepend > input[type="submit"],
+.input-group-sm > .input-group-btn > input[type="submit"],
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > input[type="submit"] {
   height: calc(1.8125rem + 2px);
@@ -6781,26 +6870,51 @@ input[type="button"].btn-block {
   border-radius: 0.2rem;
 }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > input[type="submit"],
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-btn > .btn, .input-group > .input-group-prepend > input[type="submit"], .input-group > .input-group-btn > input[type="submit"],
 .input-group > .input-group-prepend > .input-group-text,
+.input-group > .input-group-btn > .input-group-text,
+.input-group-btn .input-group > .input-group-prepend > .btn,
+.input-group > .input-group-btn > .btn,
+.input-group-btn .input-group > .input-group-prepend > input[type="submit"],
+.input-group > .input-group-btn > input[type="submit"],
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > input[type="submit"],
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
+.input-group-btn .input-group > .input-group-append:not(:last-child) > .btn,
+.input-group-btn .input-group > .input-group-append:not(:last-child) > input[type="submit"],
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > input:not(:last-child):not(.dropdown-toggle)[type="submit"],
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+.input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
+.input-group-btn .input-group > .input-group-append:last-child > .btn:not(:last-child),
+.input-group-btn .input-group > .input-group-append:last-child > input:not(:last-child)[type="submit"] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .input-group > .input-group-append > .btn, .input-group > .input-group-append > input[type="submit"],
 .input-group > .input-group-append > .input-group-text,
+.input-group-btn .input-group > .input-group-append > .btn,
+.input-group-btn .input-group > .input-group-append > input[type="submit"],
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-btn:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
+.input-group > .input-group-btn:not(:first-child) > input[type="submit"],
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
+.input-group > .input-group-btn:not(:first-child) > .input-group-text,
+.input-group-btn .input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-btn:not(:first-child) > .btn,
+.input-group-btn .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
+.input-group > .input-group-btn:not(:first-child) > input[type="submit"],
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-btn:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > input:not(:first-child)[type="submit"],
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+.input-group > .input-group-btn:first-child > input:not(:first-child)[type="submit"],
+.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child),
+.input-group > .input-group-btn:first-child > .input-group-text:not(:first-child),
+.input-group-btn .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn .input-group > .input-group-prepend:first-child > input:not(:first-child)[type="submit"],
+.input-group > .input-group-btn:first-child > input:not(:first-child)[type="submit"] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -19495,17 +19609,22 @@ h2 {
 
 /*** Forms ***/
 .select2-container--default {
-  width: 100% !important;
+  flex: 1 1 auto;
 }
 
 .select2-container--default .select2-selection--single {
   border: 1px solid #ced4da;
-  height: auto;
+  height: 100%;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   height: auto;
-  padding-left: 2px;
+  line-height: 2.5;
+  padding-left: 0.75rem;
+}
+
+[dir=rtl] .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-right: 0.75rem;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow,
@@ -19545,15 +19664,29 @@ h2 {
   padding-right: 0.25rem;
 }
 
-.input-group {
-  display: flex;
-  align-items: stretch;
+.input-group > .form-control, .jc-view-report-setup .input-group > input:not([type=checkbox]):not([type=radio]) {
+  width: 1% !important;
 }
 
-.input-group .input-group-addon,
-.input-group .input-group-btn {
-  display: flex;
-  align-items: center;
+.input-group > .twitter-typeahead {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+
+.input-group > .twitter-typeahead:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .twitter-typeahead > .tt-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-control.tt-input:focus, .jc-view-report-setup input.tt-input:focus:not([type=checkbox]):not([type=radio]) {
+  z-index: 3;
 }
 
 .wt-page-options {
