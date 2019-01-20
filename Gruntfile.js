@@ -16,29 +16,36 @@ module.exports = function (grunt) {
     // WATCH TASK
     // ========================================================================================
     watch: {
-      config: { // watch JustFancy base theme for changes
+      basetheme: { // watch JustFancy base theme for changes
         files: ['../justfancy/app/Theme/JustBaseTheme.php'],
-        tasks: ['copy:config'],
+        tasks: ['copy:basetheme'],
         options: {
           spawn: false // Key ‘spawn’ defines whether to seed/repeat the task continuously or not.
         }
       },
-      resources: {
-        files: ['../justfancy/resources/*'],
-        tasks: ['copy:resources'],
+      colorbox: {
+        files: ['../justfancy/resources/colorbox.php'],
+        tasks: ['copy:colorbox'],
+        options: {
+          spawn: false
+        }
+      },
+      views: { // watch views folder for changes
+        files: ['../justfancy/resources/views/**'],
+        tasks: ['copy:views'],
         options: {
           spawn: false
         }
       },
       fonts: {
-        files: ['../justfancy/assets/css/fonts/*'],
+        files: ['../justfancy/assets/css/fonts/**'],
         tasks: ['copy:fonts'],
         options: {
           spawn: false
         }
       },
       other: {
-        files: ['../justfancy/.php_cs', '../justfancy/.gitattributes', '../justfancy/.gitignore'],
+        files: ['../justfancy/.php_cs', '../justfancy/.gitattributes'],
         tasks: ['copy:other'],
         options: {
           spawn: false
@@ -168,7 +175,7 @@ module.exports = function (grunt) {
     // COPY TASK
     // ========================================================================================
     copy: {
-      config: {
+      basetheme: {
         files: [{
           src: '../justfancy/app/Theme/JustBaseTheme.php',
           dest: 'app/Theme/JustBaseTheme.php'
@@ -181,32 +188,37 @@ module.exports = function (grunt) {
         }
       },
 
-      // excluded folders:
-      // - views/layouts/*
+      colorbox: {
+        files: [{
+            cwd: '../justfancy/resources',
+            src: 'colorbox.php',
+            dest: 'resources',
+            expand: true
+          }],
+          options: {
+            process: function (content) {
+              content = content.replace(/JustFancy/, 'JustLight');
+              return content.replace(/JustFancy/, 'JustLight');
+            }
+          }
+      },
+
+      // Copy the view folder. Use ** to include subfolders
+      // Use '!' to exclude a file or folder
       // files which does not exists in JustFancy:
       // - views/tree-page.php
       // - views/user-page.php
-      // Add all other files explicitly
-      resources: {
+      views: {
         files: [{
-          cwd: '../justfancy/resources',
+          cwd: '../justfancy/resources/views/',
           src: [
-            'colorbox.php',
-            'views/*',
-            'views/icons/**',
-            'views/lists/**',
-            'views/modules/**',
-            'views/selects/**',
+            '**',
+            '!layouts/*',
             '!views/individual-page.phtml'
           ],
-          dest: 'resources',
+          dest: 'resources/views',
           expand: true
-        }],
-        options: {
-          process: function (content) {
-            return content.replace(/JustFancy/, 'JustLight');
-          }
-        }
+        }]
       },
 
       fonts: {
@@ -225,7 +237,7 @@ module.exports = function (grunt) {
           cwd: '../justfancy',
           src: [
             '.php_cs',
-            '.gitattributes',
+            '.gitattributes'
           ],
           dest: '',
           expand: true
