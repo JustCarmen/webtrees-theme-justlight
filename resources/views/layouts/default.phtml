@@ -71,11 +71,11 @@
 							<ul class="nav wt-secondary-menu">
 								<?= Theme::theme()->secondaryMenuContainer(Theme::theme()->secondaryMenu()) ?>
 								<li class="nav-item quick-search-small d-lg-none align-self-center">
-									<a class="nav-link fa fa-search" href="search.php?ged=<?= e($tree->name()) ?>"></a>
+                                <a class="nav-link" href="<?= e(route('search-quick', ['ged=' => $tree->name()])) ?>"><?= view('icons/search') ?></a>
 								</li>
 							</ul>
 						</div>
-				  
+
 						<?php if ($tree !== null): ?>
 						<div class="col wt-header-search">
 							<form class="wt-header-search-form" role="search">
@@ -86,7 +86,7 @@
 									<input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
 									<span class="input-group-btn">
 										<button type="submit" class="btn btn-primary wt-header-search-button">
-											<i class="fas fa-search"></i>
+											<?= view('icons/search') ?>
 										</button>
 									</span>
 								</div>
@@ -109,7 +109,7 @@
 		</header>
 
 		<?= Theme::theme()->fancyImagebar(); ?>
-	  
+
 		<main id="content" class="container<?= Theme::theme()->setFluidClass() ?> wt-main-wrapper mt-3">
 			<div class="wt-main-container">
 				<div class="flash-messages">
@@ -156,10 +156,10 @@
 			<?= Theme::theme()->htmlAlert(Theme::theme()->cookieWarning(), 'info', true) ?>
 			<?php endif ?>
 		</div>
-	  
+
 		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/vendor.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/vendor.js') ?>"></script>
-		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>"></script>		
-		
+		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>"></script>
+
 		<script>
 			var AUTH_ID = "<?= Auth::id() ?>";
 			var COLORBOX_ACTION_FILE = "themes/<?= Theme::theme()::THEME_DIR ?>/resources/colorbox.php";
