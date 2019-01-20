@@ -214,7 +214,7 @@ module.exports = function (grunt) {
           src: [
             '**',
             '!layouts/*',
-            '!views/individual-page.phtml'
+            '!individual-page.phtml'
           ],
           dest: 'resources/views',
           expand: true
