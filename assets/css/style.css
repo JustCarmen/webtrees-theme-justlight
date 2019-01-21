@@ -5205,7 +5205,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -5228,9 +5228,9 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-sm {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.71875rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -5324,7 +5324,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(40, 167, 69, 0.9);
@@ -5427,7 +5427,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(184, 0, 0, 0.9);
@@ -6207,7 +6207,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn, .btn-group-sm > input[type="submit"] {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -6452,7 +6452,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: #868e96;
   white-space: nowrap;
 }
@@ -6853,9 +6853,9 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-btn > input[type="submit"],
 .input-group-sm > .input-group-append > .btn,
 .input-group-sm > .input-group-append > input[type="submit"] {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.71875rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -7071,10 +7071,10 @@ input[type="button"].btn-block {
 }
 
 .custom-select-sm {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.71875rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .custom-select-lg {
@@ -8115,7 +8115,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -8877,7 +8877,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -8990,7 +8990,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -19481,7 +19481,7 @@ a[href^="https:"] {
 }
 
 .quickfacts a {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .quickfacts a:not(:last-of-type):after {
@@ -19510,7 +19510,7 @@ h2 {
 }
 
 .popup.person_box, .popup.person_boxF {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .optionbox,
@@ -19520,6 +19520,10 @@ h2 {
 }
 
 /*** Body ***/
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .wt-global {
   color: #212529;
   background-color: #fff;
@@ -19590,7 +19594,7 @@ h2 {
 /*** Footer ***/
 .wt-footer-container {
   color: #383f45;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .wt-powered-by-webtrees:after {
@@ -19963,7 +19967,7 @@ h2 {
 @media (max-width: 991.98px) {
   .btn, input[type="submit"] {
     padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
     border-radius: 0.2rem;
   }
@@ -19998,11 +20002,11 @@ h2 {
 }
 
 .wt-side-blocks .card-body {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .jc-global-individual .card-header {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 #name-header-add .card-title b {
@@ -20024,7 +20028,7 @@ tr.even {
 }
 
 .wt-facts-table {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .wt-facts-table a {
@@ -20057,7 +20061,7 @@ tr.even {
 }
 
 .table-sm, .markdown table {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .dt-bootstrap4 .dataTables_length, .dt-bootstrap4 .dataTables_filter, .dt-bootstrap4 .dataTables_paginate, .dt-bootstrap4 .dataTables_info {
@@ -20209,7 +20213,7 @@ tr.even {
 
 /*** Statistic block ***/
 .jc-statistics-row {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .jc-statistics-row dt {
@@ -20351,7 +20355,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
   margin: 0;
   top: initial;
   bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: normal;
   padding-left: 50px;
   padding-right: 50px;
@@ -20630,7 +20634,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 .jc-global-individual .jc-indi-tab-content {
   background: #f8f9fa;
   border: 1px solid #cbd3da;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   padding: 0.75rem;
 }
 
@@ -20644,7 +20648,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .person0, .person1, .person2, .person3, .person4, .person5 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .person0 {
@@ -20960,7 +20964,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 
 .nav-tabs .nav-link {
   background: linear-gradient(#f8f9fa 0%, #ced4da 100%);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
 }
 
@@ -21009,7 +21013,7 @@ div[id^="calendar-widget"] > table table tr:not(:first-child) td.descriptionbox:
 }
 
 .wt-header-search .fa-search {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   vertical-align: top;
 }
 
