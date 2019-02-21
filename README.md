@@ -1,6 +1,8 @@
 JustLight Theme for webtrees
 ============================
 
+[![Latest Release](https://img.shields.io/github/release/JustCarmen/justlight.svg)](https://github.com/JustCarmen/justlight/releases/latest)
+
 A light clean theme using the Bootstrap framework.
 This theme requires [webtrees 1.7.x](https://github.com/fisharebest/webtrees). Download the latest stable release of this theme [here](https://github.com/JustCarmen/justlight/releases/latest).
 
