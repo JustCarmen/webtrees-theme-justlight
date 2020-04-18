@@ -1,8 +1,10 @@
 JustLight Theme for webtrees
 ============================
 
-A light clean theme using the Bootstrap framework.
-This theme requires [webtrees 1.7.x](https://github.com/fisharebest/webtrees). Download the latest stable release of this theme [here](https://github.com/JustCarmen/justlight/releases/latest).
+[![Latest Release](https://img.shields.io/github/release/JustCarmen/justlight.svg)][1]
+[![webtrees major version](https://img.shields.io/badge/webtrees-v1.x-green)][2]
+
+JustLight Theme for webtrees is a light clean theme using the Bootstrap framework. This is a webtrees 1 module. It cannot be used with webtrees 2.
 
 Description
 -----------
@@ -17,12 +19,20 @@ A few things to mention:
 
 And much more...
 
-Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have [it's own option module](https://github.com/JustCarmen/justlight_theme_options). You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
+This theme also have [it's own option module][3]. You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
 
 Installation and upgrading
 --------------------------
-For more information about these subjects go to the JustCarmen help pages: http://www.justcarmen.nl/help. You will find there other tips as well.
+For more information about these subjects go to the [JustCarmen help pages][4].
 
 Bugs and feature requests
 -------------------------
-If you experience any bugs or have a feature request for this theme you can [create a new issue](https://github.com/JustCarmen/justlight/issues?state=open) or [use the webtrees subforum 'customising'](http://www.webtrees.net/index.php/en/forum/4-customising) to contact me.
+If you experience any bugs or have a feature request for this module you can [create a new issue on GitHub][5] or [use the webtrees subforum 'customising'][6] to contact me.
+
+ [1]: https://github.com/JustCarmen/justlight/releases/latest
+ [2]: https://webtrees.github.io/download/
+ [3]: https://github.com/JustCarmen/justlight_theme_options
+ [4]: http://www.justcarmen.nl/help-category/modules-help
+ [5]: https://github.com/JustCarmen/justlight/issues?state=open
+ [6]: http://www.webtrees.net/index.php/en/forum/4-customising
+
