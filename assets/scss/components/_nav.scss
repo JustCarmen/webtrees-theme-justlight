@@ -1,8 +1,0 @@
-/*** Nav bar ***/
-.nav-pills {
-  .nav-link:not(.active) {
-    @include hover-focus {
-      background-color: $dropdown-link-active-bg;
-    }
-  }
-}
