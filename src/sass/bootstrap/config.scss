@@ -1,0 +1,92 @@
+/**
+ * JustLight Theme - Bootstrap entry point
+ *
+ * JustCarmen webtrees modules
+ * Copyright (C) 2014-2020 Carmen Pijpers-Knegt
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of JustCarmen webtrees modules
+ *  
+ * JustCarmen webtrees modules is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * JustCarmen webtrees modules is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with JustCarmen webtrees modules. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@import "pre-default";
+
+// Bootstrap v4.5.0
+// https://github.com/twbs/bootstrap/blob/master/scss/bootstrap.scss
+
+// *** Core with grid
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+//@import "~bootstrap/scss/type";
+//@import "~bootstrap/scss/images";
+//@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+
+// *** Standards
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+
+// *** Components
+//@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+//@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+//@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+//@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+//@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/progress";
+//@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+//@import "~bootstrap/scss/close";
+
+// *** Components w/ JavaScript
+//@import "~bootstrap/scss/toasts";
+//@import "~bootstrap/scss/modal";
+//@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/popover";
+//@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/spinners";
+
+// *** Utility classes
+//@import "~bootstrap/scss/utilities/align";
+@import "~bootstrap/scss/utilities/background";
+@import "~bootstrap/scss/utilities/borders";
+//@import "~bootstrap/scss/utilities/clearfix";
+@import "~bootstrap/scss/utilities/display";
+//@import "~bootstrap/scss/utilities/embed";
+@import "~bootstrap/scss/utilities/flex";
+//@import "~bootstrap/scss/utilities/float";
+//@import "~bootstrap/scss/utilities/overflow";
+@import "~bootstrap/scss/utilities/position";
+//@import "~bootstrap/scss/utilities/screenreaders";
+//@import "~bootstrap/scss/utilities/shadows";
+@import "~bootstrap/scss/utilities/sizing";
+//@import "~bootstrap/scss/utilities/stretched-link";
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/text";
+//@import "~bootstrap/scss/utilities/visibility";
+
+// *** Print classes
+//@import "~bootstrap/scss/print";

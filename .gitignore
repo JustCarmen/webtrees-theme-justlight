@@ -1,0 +1,6 @@
+.vscode
+/resources/css/
+/resources/images/
+mix-manifest.json
+/node_modules/
+/vendor/

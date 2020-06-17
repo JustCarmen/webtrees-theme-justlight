@@ -1,0 +1,1504 @@
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Charts block
+ */
+
+.wt-block.wt-block-charts {
+    /* This strange workaround creates a new stacking context, which allows the absolutely-positioned */
+    /* pedigree chart lines to be displayed. */
+    opacity: 0.99;
+}
+
+.wt-block-charts .wt-chart-box {
+    width: 15rem;
+    height: 3.5rem;
+}
+
+.wt-block-charts .wt-chart-box-extra,
+.wt-block-charts .wt-chart-box-facts {
+    display: none;
+}
+
+.wt-block-charts .wt-chart-box .wt-chart-box-lifespan {
+    display: block;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Ancestors chart
+ */
+.wt-chart-ancestors .wt-chart-box {
+    width: 20rem;
+}
+
+.wt-chart-ancestors .wt-chart-box-lifespan {
+    display: none;
+}
+
+.wt-sosa-number {
+    border: thin dotted grey;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Compact chart
+ *
+ * wt-chart, wt-chart-compact
+ * +---- wt-chart-compact-table
+ */
+.wt-chart.wt-chart-compact {
+    overflow-x: inherit;
+}
+
+.wt-chart-compact .wt-chart-box {
+    min-width: 5rem;
+}
+
+.wt-chart-compact .wt-chart-box-thumbnail,
+.wt-chart-compact .wt-chart-box-extra,
+.wt-chart-compact .wt-chart-box-facts {
+    display: none;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Descendants chart
+ */
+.wt-chart-descendants .wt-chart-box {
+    width: 20rem;
+}
+
+.wt-chart-descendants .wt-chart-box-lifespan {
+    display: none;
+}
+
+.wt-daboville-number {
+    border: thin dotted grey;
+}
+
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Family book chart
+ *
+ * wt-chart, wt-chart-family-book
+ */
+.wt-chart-family-book .wt-chart-box {
+    width: 15rem;
+}
+
+.wt-chart-family-book .wt-chart-box-lifespan {
+    display: none;
+}
+.wt-chart-family-book .wt-family-break {
+    page-break-before: always;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Fan chart
+ *
+ * wt-chart, wt-chart-fan
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Hourglass chart
+ *
+ * wt-chart, wt-chart-hourglass
+ */
+.wt-chart-hourglass {
+    overflow-y: auto;
+}
+
+.wt-chart-hourglass .wt-chart-box {
+    width: 15rem;
+}
+
+.wt-chart-hourglass .wt-chart-box-lifespan {
+    display: none;
+}
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Interactive tree
+ *
+ * wt-chart, wt-chart-interactive
+ */
+
+.tv_out {
+    position: relative;
+    overflow: hidden;
+    border: thin solid #CCCCCC; /* customizable */
+    /* The chart height can be adjusted to fill the pag */
+    height: 50vh;
+    resize: vertical;
+    min-height: 25vh;
+    max-height: 95vh;
+    background: #E6E6E6; /* customizable */
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+.tv_out img {
+    border: 0;
+}
+
+.tv_in {
+    clear: both;
+    cursor: move;
+    display: inline-block; /* prevent from blinking on IE */
+}
+
+.tv_in table.tv_tree,
+.tv_in table.tv_tree tbody,
+.tv_in table.tv_tree tr,
+.tv_in table.tv_tree td {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    font-size: 11px;
+}
+.tv_in table.tv_tree {
+    border-collapse: collapse;
+}
+
+#tvbCompact {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAYFBMVEX///8ebbHNz8wAAAAaZqkib7Eca64fa64eba4kcLEkcLMZaKoZaKwVY6UaaKwfbbEQXqAebbAaaKofba4baKoZaqwhbq8hb7Eib7Acaqwcaq4daqwmcrMpdbYVZKcZZqmjvWxQAAAAAXRSTlMAQObYZgAAAHVJREFUeF51z0cOA0EIRNGCyc45h/vf0hKoUbXR/F09sQFzvaW0YH5BPVQ8xriO/Wb5WTs/AKjx1kCcz67qELySiDglshPkyCRqK4ZawOGPbahWvEfJ3in1UA9fUPcYLfNzuNy6qTsOJ+YGPFizN6m5a/I8cj9MEgMLAHk6jAAAAABJRU5ErkJggg==');
+}
+
+/* Border (also have class table.tv_tree) */
+table#tvTreeBorder td#tv_tree_topleft {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_top {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_top div{
+    font-family: Arial,Verdana,sans-serif;
+    font-size: 18px;
+}
+table#tvTreeBorder td#tv_tree_topright {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_left {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_right {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_bottomleft {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_bottom {
+    background: none;
+}
+table#tvTreeBorder td#tv_tree_bottomright {
+    background: none;
+}
+/* tree */
+table#tvTreeBorder td,
+#tv_tree {
+    background: none;
+}
+
+/* horizontal and vertical lines color */
+#tv_tree div.tv_vline,
+#tv_tree div.tv_hline {
+    background-color: #81A9CB; /* customizable :should be the same color than in background images of td.tv_vline_x */
+}
+
+/* TD container for a vertical line */
+#tv_tree table.tv_tree td.tv_vline {
+    width: 1px;
+    background: repeat-x 50% 50%;
+    height: 100%; /* required */
+}
+#tv_tree table.tv_tree td.tv_vline_h {
+    background-image: url('data:image/gif;base64,R0lGODdhAQDiBIABAIGpzP///ywAAAAAAQDiBAACIoSPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzXXQEAOw=='); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
+}
+#tv_tree table.tv_tree td.tv_vline_t {
+    vertical-align: bottom;
+    background-image: url('data:image/gif;base64,R0lGODlhAQDECeMKAIGoyX6py4GpzISpxn6qz3+qzYGqyoOqy4CrzYKry////////////////////////yH5BAEKAA8ALAAA4gQBAOIEAAQwUMhJq7046827/2AojmRpnmiqrmzrvnAsz3Rt33iu73zv/8Bgp1AYDAgEQwJwCCAiADs='); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
+}
+#tv_tree table.tv_tree td.tv_vline_b {
+    vertical-align: top;
+    background-image: url('data:image/gif;base64,R0lGODlhAQDECaEDAICpyYGpzIKry////yH5BAEKAAMALAAAAAABAOIEAAIjjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNcbIBQAOw=='); /* customizable: image color must be the same color than div.tv_vline and div.tv_hline */
+}
+#tv_tree table.tv_tree td.tv_vline_c,
+.tv_in table.tv_tree td.tv_vline_h {
+    vertical-align: middle;
+}
+#tv_tree table.tv_tree td.tv_vline_c {
+    height: 1px;
+}
+/* vertical line drawing */
+#tv_tree table.tv_tree div.tv_vline {
+    width: 1px;
+}
+#tv_tree table.tv_tree div.tv_vline_t,
+#tv_tree table.tv_tree div.tv_vline_b {
+    height: 50%;
+}
+#tv_tree table.tv_tree div.tv_vline_c {
+    height: 1px;
+    overflow: hidden; /* required for IE */
+}
+#tv_tree table.tv_tree div.tv_vline_h {
+    height: 100%;
+}
+
+/* horizontal line drawing */
+#tv_tree td.tv_hline,
+#tv_tree div.tv_hline {
+    overflow: hidden; /* required for IE */
+    width: 8px; /* customizable */
+}
+#tv_tree div.tv_hline {
+    height: 1px;
+}
+
+/* Person or couple(s) box style */
+#tv_tree div.tv_box {
+    border: thin outset #81A9CB; /* customizable */
+    background: #fffdfd; /* customizable */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0;
+    width: 180px; /* customizable:initial box width */
+    cursor: help; /* customizable */
+    border-collapse: collapse; /* required */
+    border-radius: 4px; /* customizable */
+    box-shadow: 1px 1px 2px #cfcfdf; /* customizable */
+}
+#tv_tree div.boxExpanded {
+    width: 250px; /* customizable:initial expanded box width */
+}
+#tv_tree div.tv_box div.tvM {
+    background: #f5fdff; /* customizable */
+    color: #220000; /* customizable */
+}
+#tv_tree div.tv_box div.tvF {
+    background: #fff8f5; /* customizable */
+    color: #000022; /* customizable */
+}
+#tv_tree div.tv_box span.tvSexSymbol {
+    font-weight: bold;
+    font-family: x-large, serif; /*Arial Unicode MS, monospace; /* customizable, BUT test required for ALL browsers */
+    vertical-align: top;
+    margin: 1px;
+}
+#tv_tree div.tv_box span.tvM {
+    color: #8f8fdf; /* customizable */
+}
+#tv_tree div.tv_box span.tvF {
+    color: #df8f8f; /* customizable */
+}
+
+#tv_tree div.tv_box div.tvM,
+#tv_tree .tv_box div.tvF {
+    clear: both;
+    border: 0;
+    margin: 0;
+    padding: 1px 4px;
+    border-radius: 4px; /* customizable */
+}
+#tv_tree div.tv_box i.dates {
+    float: right;
+    font-size: 75%;
+    margin-left: 4px;
+}
+#tv_tree div.tv_box img.tv_treelink {
+    height: 15px;
+    width: 15px;
+    float: right;
+}
+#tv_tree div.tv_box img.tv_box_loading {
+    height: 12px;
+    width: 12px;
+    margin: 2px;
+    float: right;
+}
+#tv_tree div.tv_box div.tv_person_expanded {
+    min-height: 55px;
+    padding: 2px;
+}
+#tv_tree div.tv_box img {
+    float: left;
+    margin: 2px;
+    max-height: 50px;
+    max-width: 80px;
+    width: auto;
+}
+[dir=rtl] #tv_tree div.tv_box img {
+    float: right;
+}
+#tv_tree div.tv_box .icon-silhouette-M,
+#tv_tree div.tv_box .icon-silhouette-F,
+#tv_tree div.tv_box .icon-silhouette-U {
+    float: left;
+}
+[dir=rtl] #tv_tree div.tv_box .icon-silhouette-M,
+[dir=rtl] #tv_tree div.tv_box .icon-silhouette-F,
+[dir=rtl] #tv_tree div.tv_box .icon-silhouette-U {
+    float: right;
+}
+
+#tv_tree div.tv_box div.tv_person_expanded a {
+    font-weight: bold;
+}
+
+/* The toolbox style. Button's images come from the active theme */
+#tv_tools,
+#tvStylesSubmenu {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0; /* required */
+    z-index: 90; /* should be < 100 because 100 is the z-index of WT menus */
+    background-color: #efefef; /* customizable */
+    border: 1px outset #dfdfdf; /* customizable */
+    border-radius: 4px; /* customizable */
+    box-shadow: 1px 1px 2px #cfcfdf; /* customizable */
+}
+
+/* styles submenu */
+#tvStylesSubmenu {
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 91; /* just over tv_tools */
+}
+
+#tv_tools ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; /* required */
+}
+#tv_tools li.tv_button {
+    float: left;
+    position: relative;
+    padding: 0; /* required */
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    border: thin solid #efefef; /* customizable */
+    background-color: #efefef; /* customizable */
+    border-radius: 4px;
+}
+#tvStylesSubmenu li.tv_button {
+    float : none;
+}
+#tv_tools li.tv_button a {
+    margin: 0;
+    display: block;
+}
+#tv_tools li.tv_button:hover {
+    border: thin outset #fdfffd; /* customizable */
+    cursor: pointer;
+}
+#tv_tools li.tvPressed {
+    border: thin inset #ffffff; /* customizable */
+}
+#tv_tools ul li img {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+}
+#tv_tools ul li a.help img.icon {
+    margin: 3px 0 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+
+#tvToolsHandler {
+    float: left;
+    cursor: move;
+    height: 22px;
+    width: 2px;
+    border: thin inset #f6f6f6; /* customizable */
+    margin: 2px;
+    overflow: hidden; /* required for IE */
+}
+
+#tvToolsHandler:hover {
+    border: thin outset #f6f6f6; /* customizable */
+}
+
+
+#tv_tree div.tv_box div.tvM,
+#tv_tree div.tv_box div.tvF {
+    background: none;
+    color: #000;
+    border: 0;
+    margin: 0;
+    padding: 0 4px;
+}
+
+.tvM {background-color: #DDF !important;}
+.tvF {background-color: #FDD !important;}
+
+.dashed {border-top: thin dashed #81A9CB !important;}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Lifespans chart
+ *
+ * wt-chart, wt-chart-lifespans
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Pedigree chart
+ *
+ * wt-chart, wt-chart-pedigree
+ */
+.wt-chart-pedigree {
+    overflow-y: auto;
+}
+
+.wt-chart-pedigree-left .wt-chart-box,
+.wt-chart-pedigree-right .wt-chart-box {
+    width: 15rem;
+}
+
+.wt-chart-pedigree-up .wt-chart-box,
+.wt-chart-pedigree-down .wt-chart-box {
+    width: 10rem;
+    height: 8rem;
+}
+
+.wt-chart-pedigree .wt-chart-box-lifespan {
+    display: none;
+}
+
+/* Pedigree chart with oldest on the right */
+.wt-chart-pedigree-right .wt-pedigree-lines {
+    right: 0;
+    top: 25%;
+    bottom: 25%;
+    border: var(--chart-line);
+    border-right: none;
+    border-radius: var(--chart-line-radius) 0 0 var(--chart-line-radius);
+    width: 25%;
+    height: 50%;
+}
+
+.wt-chart-pedigree-right .wt-generation-rev-2 > .wt-pedigree-lines {
+    top: 12.5%;
+    bottom: 12.5%;
+    height: 75%;
+}
+
+/* Pedigree chart with oldest on the left */
+.wt-chart-pedigree-left .wt-pedigree-lines {
+    left: 0;
+    top: 25%;
+    bottom: 25%;
+    border: var(--chart-line);
+    border-left: none;
+    border-radius: 0 var(--chart-line-radius) var(--chart-line-radius) 0;
+    width: 25%;
+    height: 50%;
+}
+
+.wt-chart-pedigree-left .wt-generation-rev-2 > .wt-pedigree-lines {
+    top: 12.5%;
+    bottom: 12.5%;
+    height: 75%;
+}
+
+/* Pedigree chart with oldest at the bottom */
+.wt-chart-pedigree-down {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.wt-chart-pedigree-down .wt-pedigree-lines {
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    border: var(--chart-line);
+    border-bottom: none;
+    border-radius: var(--chart-line-radius) var(--chart-line-radius) 0 0;
+    width: 50%;
+    height: 25%;
+}
+
+.wt-chart-pedigree-down .wt-generation-rev-2 > .wt-pedigree-lines {
+    left: 12.5%;
+    right: 12.5%;
+    width: 75%;
+}
+
+/* Pedigree chart with oldest at the top */
+.wt-chart-pedigree-up {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+
+.wt-chart-pedigree-up .wt-pedigree-lines {
+    top: 0;
+    left: 25%;
+    right: 25%;
+    border: var(--chart-line);
+    border-top: none;
+    border-radius: 0 0 var(--chart-line-radius) var(--chart-line-radius);
+    width: 50%;
+    height: 25%;
+}
+
+.wt-chart-pedigree-up .wt-generation-rev-2 > .wt-pedigree-lines {
+    left: 12.5%;
+    right: 12.5%;
+    width: 75%;
+}
+
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Pedigree map
+ *
+ * wt-chart, wt-chart-pedigree-map
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Relationships chart
+ *
+ * wt-chart, wt-chart-relationships
+ */
+.wt-chart-relationships .wt-chart-box {
+    width: 15rem;
+}
+
+.wt-chart-relationships .wt-chart-box-lifespan {
+    display: none;
+}
+
+.vline-text, .hline-text {
+    font-size: 0.7rem;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Statistics chart
+ *
+ * wt-chart, wt-chart-statistics
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Timeline chart
+ *
+ * wt-chart, wt-chart-timeline
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* Lines for "vertical" charts, such as the ancestors and descendants chart. */
+.wt-chart-vertical-indent {
+    width: 3rem;
+}
+
+.wt-chart-vertical-line {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    border-left: var(--chart-line);
+}
+
+.wt-chart-vertical-last-child-line {
+    width: 50%;
+    right: 0;
+    height: 2.5rem;
+    top: 0;
+    border-left: var(--chart-line);
+    border-bottom: var(--chart-line);
+    border-radius: 0 0 0 var(--chart-line-radius);
+}
+
+.wt-chart-vertical-child-line {
+    width: 50%;
+    right: 0;
+    height: 2.5rem;
+    top: 0;
+    border-bottom: var(--chart-line);
+}
+
+/* Lines for horizontal trees, such as the family page */
+.wt-chart-horizontal-spacer {
+    width: 1rem;
+}
+
+.wt-chart-horizontal-line {
+    width: 1rem;
+    height: 50%;
+    border-bottom: var(--chart-line);
+}
+
+.wt-chart-horizontal-first-child {
+    height: 50%;
+    position: relative;
+    top: 50%;
+    border-top: var(--chart-line);
+    border-right: var(--chart-line);
+    border-radius: 0 var(--chart-line-radius) 0 0;
+}
+
+.wt-chart-horizontal-middle-child {
+    height: 100%;
+    border-right: var(--chart-line);
+}
+
+.wt-chart-horizontal-last-child {
+    height: 50%;
+    border-bottom: var(--chart-line);
+    border-right: var(--chart-line);
+    border-radius: 0 0 var(--chart-line-radius) 0;
+}
+
+.wt-chart-horizontal-first-parent {
+    height: 50%;
+    position: relative;
+    top: 50%;
+    border-top: var(--chart-line);
+    border-left: var(--chart-line);
+    border-radius: var(--chart-line-radius) 0 0 0;
+}
+
+.wt-chart-horizontal-last-parent {
+    height: 50%;
+    border-bottom: var(--chart-line);
+    border-left: var(--chart-line);
+    border-radius: 0 0 0 var(--chart-line-radius);
+}
+
+/* Buttons to expand/collapse other parts of the chart */
+.wt-chart-expansion-control > .chart-expand {
+    display: none;
+}
+
+.wt-chart-expansion-control > .chart-collapse {
+    display: inline;
+}
+
+.wt-chart-expansion-control.collapsed > .chart-expand {
+    display: inline;
+}
+
+.wt-chart-expansion-control.collapsed > .chart-collapse {
+    display: none;
+}
+
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * http://www.jacklmoore.com/colorbox
+ *
+ * #cboxOverlay
+ * #cboxLoadingOverlay
+ * #cboxLoadingGraphic
+ * #colorbox
+ * +----#cboxWrapper
+ *      +----<div>
+ *      |    +----#cboxTopLeft
+ *      |    +----#cboxTopCentre
+ *      |    +----#cboxTopRight
+ *      +----<div>
+ *      |    +----#cboxMiddleLeft
+ *      |    +----#cboxContent
+ *      |    |    +----#cboxLoadedContent
+ *      |    |         +----#cboxPhoto
+ *      |    |    +----#cboxTitle
+ *      |    |    +----#cboxCurrent
+ *      |    |    +----#cboxPrevious
+ *      |    |    +----#cboxNext
+ *      |    |    +----#cboxSlideshow
+ *      |    |    +----#cboxLoadingOverlay
+ *      |    |    +----#cboxLoadingGraphic
+ *      |    |    +----#cboxClose
+ *      |    +----cboxMiddleRight
+ *      +----<div>
+ *           +----#cboxBottomLeft
+ *           +----#cboxBottomCenter
+ *           +----#cboxBottomRight
+ */
+
+#cboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#cboxOverlay,
+#colorbox {
+    z-index: 9999;
+}
+
+#cboxContent,
+#cboxOverlay {
+    background: #fff;
+}
+
+#cboxContent {
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem;
+    border: 0.25rem solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: content-box;
+}
+
+.cboxPhoto {
+    margin: auto;
+    display: block;
+}
+
+#cboxError {
+    padding: 50px;
+    border: 1px solid #ccc;
+}
+
+#cboxLoadedContent {
+    margin-bottom: 28px;
+    box-sizing: content-box;
+}
+
+#cboxTitle {
+    background: #fff;
+    position: absolute;
+    bottom: 0.25rem;
+    margin: 0 2rem 0 4.5rem;
+    text-align: center;
+}
+
+#cboxLoadingGraphic {
+    background: url('data:image/gif;base64,R0lGODlhIAAgALMAAP///7Ozs/v7+9bW1uHh4fLy8rq6uoGBgTQ0NAEBARsbG8TExJeXl/39/VRUVAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBQAAACwAAAAAIAAgAAAE5xDISSlLrOrNp0pKNRCdFhxVolJLEJQUoSgOpSYT4RowNSsvyW1icA16k8MMMRkCBjskBTFDAZyuAEkqCfxIQ2hgQRFvAQEEIjNxVDW6XNE4YagRjuBCwe60smQUDnd4Rz1ZAQZnFAGDd0hihh12CEE9kjAEVlycXIg7BAsMB6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YEvpJivxNaGmLHT0VnOgGYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ/V/nmOM82XiHQjYKhKP1oZmADdEAAAh+QQFBQAAACwAAAAAGAAXAAAEchDISasKNeuJFKoHs4mUYlJIkmjIV54Soypsa0wmLSnqoTEtBw52mG0AjhYpBxioEqRNy8V0qFzNw+GGwlJki4lBqx1IBgjMkRIghwjrzcDti2/Gh7D9qN774wQGAYOEfwCChIV/gYmDho+QkZKTR3p7EQAh+QQFBQAAACwBAAAAHQAOAAAEchDISWdANesNHHJZwE2DUSEo5SjKKB2HOKGYFLD1CB/DnEoIlkti2PlyuKGEATMBaAACSyGbEDYD4zN1YIEmh0SCQQgYehNmTNNaKsQJXmBuuEYPi9ECAU/UFnNzeUp9VBQEBoFOLmFxWHNoQw6RWEocEQAh+QQFBQAAACwHAAAAGQARAAAEaRDICdZZNOvNDsvfBhBDdpwZgohBgE3nQaki0AYEjEqOGmqDlkEnAzBUjhrA0CoBYhLVSkm4SaAAWkahCFAWTU0A4RxzFWJnzXFWJJWb9pTihRu5dvghl+/7NQmBggo/fYKHCX8AiAmEEQAh+QQFBQAAACwOAAAAEgAYAAAEZXCwAaq9ODAMDOUAI17McYDhWA3mCYpb1RooXBktmsbt944BU6zCQCBQiwPB4jAihiCK86irTB20qvWp7Xq/FYV4TNWNz4oqWoEIgL0HX/eQSLi69boCikTkE2VVDAp5d1p0CW4RACH5BAUFAAAALA4AAAASAB4AAASAkBgCqr3YBIMXvkEIMsxXhcFFpiZqBaTXisBClibgAnd+ijYGq2I4HAamwXBgNHJ8BEbzgPNNjz7LwpnFDLvgLGJMdnw/5DRCrHaE3xbKm6FQwOt1xDnpwCvcJgcJMgEIeCYOCQlrF4YmBIoJVV2CCXZvCooHbwGRcAiKcmFUJhEAIfkEBQUAAAAsDwABABEAHwAABHsQyAkGoRivELInnOFlBjeM1BCiFBdcbMUtKQdTN0CUJru5NJQrYMh5VIFTTKJcOj2HqJQRhEqvqGuU+uw6AwgEwxkOO55lxIihoDjKY8pBoThPxmpAYi+hKzoeewkTdHkZghMIdCOIhIuHfBMOjxiNLR4KCW1ODAlxSxEAIfkEBQUAAAAsCAAOABgAEgAABGwQyEkrCDgbYvvMoOF5ILaNaIoGKroch9hacD3MFMHUBzMHiBtgwJMBFolDB4GoGGBCACKRcAAUWAmzOWJQExysQsJgWj0KqvKalTiYPhp1LBFTtp10Is6mT5gdVFx1bRN8FTsVCAqDOB9+KhEAIfkEBQUAAAAsAgASAB0ADgAABHgQyEmrBePS4bQdQZBdR5IcHmWEgUFQgWKaKbWwwSIhc4LonsXhBSCsQoOSScGQDJiWwOHQnAxWBIYJNXEoFCiEWDI9jCzESey7GwMM5doEwW4jJoypQQ743u1WcTV0CgFzbhJ5XClfHYd/EwZnHoYVDgiOfHKQNREAIfkEBQUAAAAsAAAPABkAEQAABGeQqUQruDjrW3vaYCZ5X2ie6EkcKaooTAsi7ytnTq046BBsNcTvItz4AotMwKZBIC6H6CVAJaCcT0CUBTgaTg5nTCu9GKiDEMPJg5YBBOpwlnVzLwtqyKnZagZWahoMB2M3GgsHSRsRACH5BAUFAAAALAEACAARABgAAARcMKR0gL34npkUyyCAcAmyhBijkGi2UW02VHFt33iu7yiDIDaD4/erEYGDlu/nuBAOJ9Dvc2EcDgFAYIuaXS3bbOh6MIC5IAP5Eh5fk2exC4tpgwZyiyFgvhEMBBEAIfkEBQUAAAAsAAACAA4AHQAABHMQyAnYoViSlFDGXBJ808Ep5KRwV8qEg+pRCOeoioKMwJK0Ekcu54h9AoghKgXIMZgAApQZcCCu2Ax2O6NUud2pmJcyHA4L0uDM/ljYDCnGfGakJQE5YH0wUBYBAUYfBIFkHwaBgxkDgX5lgXpHAXcpBIsRADs=') no-repeat center center;
+}
+
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+    background: #eee;
+    border: 0;
+    border-radius: 0.5rem;
+    overflow: visible;
+    padding: 0 0.5rem;
+    position: absolute;
+}
+
+#cboxSlideshow {
+    bottom: 0.25rem;
+    right: 0.25rem;
+}
+
+#cboxPrevious {
+    bottom: 0.25rem;
+    left: 0.25rem;
+}
+
+#cboxNext {
+    bottom: 0.25rem;
+    left: 2.5rem;
+}
+
+#cboxClose {
+    top: 0.25rem;
+    right: 0.25rem;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Branches list
+ *
+ * wt-route-branches-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Individual and family list
+ *
+ * wt-route-individual-list, wt-route-family-list
+ * +---wt-page-options
+ *     +---wt-initials-list, wt-initials-list-surnames
+ *         +---wt-initial-list-item
+ *             +---wt-initial
+ *             +---wt-initial, active
+ *     +---wt-initials-list, wt-initials-list-given-names
+ *         +---wt-initial-list-item
+ *             +---wt-initial
+ *             +---wt-initial, active
+ * +---wt-page-content
+ *     +---wt-list, wt-{family,individual}-list
+ */
+
+.wt-initials-list {
+    font-size: 1.25rem;
+}
+
+.wt-initials-list-item {
+    display: inline;
+}
+
+.wt-initials-list-item + .wt-initials-list-item::before {
+    content: '|';
+}
+
+.wt-initial {
+}
+
+.wt-initial.active {
+    color: #f00;
+    font-weight: bold;
+}
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Media object list
+ *
+ * wt-route-media-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Note list
+ *
+ * wt-route-note-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Place list/hierarchy
+ *
+ * wt-route-place-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Repository list
+ *
+ * wt-route-repository-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Source list
+ *
+ * wt-route-source-list
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Icons for file types
+ *
+ * Icons made by Zlatko Najdenovski
+ * https://www.flaticon.com/packs/file-formats-3"
+ * Creative Commons BY 3.0
+ */
+.wt-mime {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M465.067%20123.733v341.333c0%2018.773-15.36%2034.133-34.133%2034.133h-358.4c-18.773%200-34.133-15.36-34.133-34.133V38.4c0-18.773%2015.36-34.133%2034.133-34.133H345.6V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133h85.334z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M465.067%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267l119.466%20119.466z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M294.4%20354.133c5.12%200%208.533-3.413%208.533-8.533%200-5.12-3.413-8.533-8.533-8.533s-8.533%203.413-8.533%208.533c0%205.12%203.413%208.533%208.533%208.533zm-42.667%200c5.12%200%208.533-3.413%208.533-8.533%200-5.12-3.413-8.533-8.533-8.533-5.12%200-8.533%203.413-8.533%208.533%200%205.12%203.413%208.533%208.533%208.533zm-42.666%200c5.12%200%208.533-3.413%208.533-8.533%200-5.12-3.413-8.533-8.533-8.533s-8.533%203.413-8.533%208.533c-.001%205.12%203.413%208.533%208.533%208.533z%22%20fill%3D%22%23ff7474%22%2F%3E%3Cpath%20d%3D%22M430.933%20503.467h-358.4c-21.333%200-38.4-17.067-38.4-38.4V38.4C34.133%2017.067%2051.2%200%2072.533%200H345.6c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H72.533c-16.213%200-29.867%2013.653-29.867%2029.867v426.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h358.4c16.213%200%2029.867-13.653%2029.867-29.867V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c-.001%2022.186-17.067%2039.253-38.401%2039.253zM311.467%20384c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267s12.8-.853%2012.8-12.8v-25.6c0-.853%200-16.213%2013.653-25.6-13.653-12.8-13.653-40.96-13.653-42.667v-8.533c0-11.947-11.093-12.8-12.8-12.8-2.56%200-4.267-1.707-4.267-4.267s1.707-4.267%204.267-4.267c7.68%200%2021.333%204.267%2021.333%2021.333v8.533c0%208.533%202.56%2032.427%2014.507%2039.253%201.707.853%202.56%202.56%202.56%203.413%200%20.853-.853%203.413-2.56%203.413-14.507%207.68-14.507%2021.333-14.507%2022.187v25.6c0%2017.069-13.653%2021.336-21.333%2021.336zM192%20384c-7.68%200-21.333-4.267-21.333-21.333v-25.6c0-.853%200-14.507-14.507-22.187-1.707-.853-2.56-2.56-2.56-3.413%200-.853.853-3.413%202.56-3.413%2011.947-5.973%2014.507-29.867%2014.507-39.253v-8.533c0-17.067%2013.653-21.333%2021.333-21.333%202.56%200%204.267%201.707%204.267%204.267s-1.707%204.267-4.267%204.267-12.8.853-12.8%2012.8v8.533c0%201.707%200%2029.013-13.653%2042.667%2013.653%2010.24%2013.653%2024.747%2013.653%2025.6v25.6c0%2011.947%2011.093%2012.8%2012.8%2012.8%202.56%200%204.267%201.707%204.267%204.267%200%202.557-1.707%204.264-4.267%204.264zm102.4-25.6c-6.827%200-12.8-5.973-12.8-12.8%200-6.827%205.973-12.8%2012.8-12.8s12.8%205.973%2012.8%2012.8c0%206.827-5.973%2012.8-12.8%2012.8zm0-17.067c-2.56%200-4.267%201.707-4.267%204.267%200%202.56%201.707%204.267%204.267%204.267s4.267-1.707%204.267-4.267c0-2.56-1.707-4.267-4.267-4.267zM251.733%20358.4c-6.827%200-12.8-5.973-12.8-12.8%200-6.827%205.973-12.8%2012.8-12.8%206.827%200%2012.8%205.973%2012.8%2012.8%200%206.827-5.973%2012.8-12.8%2012.8zm0-17.067c-2.56%200-4.267%201.707-4.267%204.267%200%202.56%201.707%204.267%204.267%204.267%202.56%200%204.267-1.707%204.267-4.267%200-2.56-1.707-4.267-4.267-4.267zM209.067%20358.4c-6.827%200-12.8-5.973-12.8-12.8%200-6.827%205.973-12.8%2012.8-12.8s12.8%205.973%2012.8%2012.8c0%206.827-5.974%2012.8-12.8%2012.8zm0-17.067c-2.56%200-4.267%201.707-4.267%204.267%200%202.56%201.707%204.267%204.267%204.267s4.267-1.707%204.267-4.267c-.001-2.56-1.707-4.267-4.267-4.267z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+
+.wt-mime-application-pdf {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M465.067%20123.733v341.333c0%2018.773-15.36%2034.133-34.133%2034.133h-358.4c-18.773%200-34.133-15.36-34.133-34.133V38.4c0-18.773%2015.36-34.133%2034.133-34.133H345.6V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133h85.334z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M465.067%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267l119.466%20119.466z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M224.427%20346.453c-20.48%2033.28-40.96%2058.88-40.96%2058.88-21.333%2021.333-59.733%200-34.133-25.6%2016.213-17.066%2044.373-27.306%2075.093-33.28zm44.373-120.32c4.267%2017.92-4.267%2045.227-17.92%2073.387-16.213-33.28-24.747-65.707-24.747-73.387%200-17.066%2035.84-27.306%2042.667%200zm-17.92%2073.387c6.827%2013.653%2014.507%2028.16%2023.893%2040.107-16.213%201.707-34.133%203.413-50.347%207.68%208.534-15.36%2018.774-31.574%2026.454-47.787zm94.72%2037.547c17.067%200%2031.573%2042.667-8.533%2042.667-23.893%200-45.227-17.067-62.293-40.107%2036.693-3.414%2066.559-2.56%2070.826-2.56z%22%20fill%3D%22%23ff7474%22%2F%3E%3Cpath%20d%3D%22M430.933%20503.467h-358.4c-21.333%200-38.4-17.067-38.4-38.4V38.4C34.133%2017.067%2051.2%200%2072.533%200H345.6c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H72.533c-16.213%200-29.867%2013.653-29.867%2029.867v426.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h358.4c16.213%200%2029.867-13.653%2029.867-29.867V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c-.001%2022.186-17.067%2039.253-38.401%2039.253zm-268.8-85.334c-7.68%200-15.36-2.56-20.48-7.68-6.827-6.827-10.24-19.627%203.413-34.133%2017.067-17.067%2044.373-27.307%2075.093-34.133%208.533-13.653%2017.067-29.013%2024.747-43.52-16.213-34.133-23.893-66.56-23.893-73.387%200-11.093%2011.947-19.627%2023.04-21.333%2010.24-.853%2023.893%203.413%2028.16%2019.627%205.12%2018.773-4.267%2046.08-17.067%2074.24%205.973%2011.947%2012.8%2024.747%2021.333%2035.84%2026.453-2.56%2050.347-2.56%2066.56-2.56h1.707c11.947%200%2021.333%2014.507%2021.333%2027.307%200%206.827-2.56%2012.8-6.827%2017.067-5.12%205.12-12.8%206.827-23.04%206.827-25.6%200-46.933-17.067-64.853-40.107-15.36%201.707-30.72%203.413-45.227%206.827-19.627%2030.72-38.4%2055.467-40.107%2058.027-6.825%208.531-15.358%2011.091-23.892%2011.091zm52.907-64.853c-25.6%205.973-48.64%2015.36-62.293%2029.867-8.533%208.533-9.387%2016.213-3.413%2022.187%206.827%206.827%2022.187%207.68%2031.573-2.56%200-.854%2016.213-21.334%2034.133-49.494zm68.267-10.24c15.36%2018.773%2034.133%2032.427%2053.76%2032.427%207.68%200%2013.653-1.707%2017.067-5.12%203.413-3.413%204.267-7.68%204.267-10.24%200-9.387-6.827-18.773-12.8-18.773h-2.56c-14.508-.001-35.841-.001-59.734%201.706zm-32.427-34.133c-5.973%2011.093-11.947%2021.333-17.92%2031.573%2011.093-1.707%2022.187-3.413%2033.28-4.267-5.12-8.533-11.093-17.92-15.36-27.306zm-2.56-95.574h-2.56c-8.533.853-15.36%206.827-15.36%2012.8%200%207.68%207.68%2034.133%2020.48%2063.147%2011.093-23.893%2017.92-46.933%2013.653-62.293-2.56-11.947-11.946-13.654-16.213-13.654z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+}
+
+.wt-mime-audio {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M465.067%20123.733v341.333c0%2018.773-15.36%2034.133-34.133%2034.133h-358.4c-18.773%200-34.133-15.36-34.133-34.133V38.4c0-18.773%2015.36-34.133%2034.133-34.133H345.6V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133h85.334z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M465.067%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267l119.466%20119.466z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M174.933%20413.867c18.773%200%2034.133-15.36%2034.133-34.133%200-18.773-15.36-34.133-34.133-34.133S140.8%20360.96%20140.8%20379.733c0%2018.774%2015.36%2034.134%2034.133%2034.134zm136.534-34.134c18.773%200%2034.133-15.36%2034.133-34.133s-15.36-34.133-34.133-34.133c-18.773%200-34.133%2015.36-34.133%2034.133s15.359%2034.133%2034.133%2034.133z%22%20fill%3D%22%23ff7474%22%2F%3E%3Cpath%20d%3D%22M430.933%20503.467h-358.4c-21.333%200-38.4-17.067-38.4-38.4V38.4C34.133%2017.067%2051.2%200%2072.533%200H345.6c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H72.533c-16.213%200-29.867%2013.653-29.867%2029.867v426.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h358.4c16.213%200%2029.867-13.653%2029.867-29.867V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c-.001%2022.186-17.067%2039.253-38.401%2039.253zm-256-85.334c-21.333%200-38.4-17.067-38.4-38.4s17.067-38.4%2038.4-38.4c2.56%200%204.267%201.707%204.267%204.267%200%202.56-1.707%204.267-4.267%204.267-16.213%200-29.867%2013.653-29.867%2029.867%200%2016.213%2013.653%2029.867%2029.867%2029.867s29.867-13.653%2029.867-29.867v-153.6c0-1.707%201.707-3.413%203.413-4.267l136.533-34.133c.853%200%202.56%200%203.413.853.853.853%201.707%201.707%201.707%203.413v153.6c0%2021.333-17.067%2038.4-38.4%2038.4s-38.4-17.067-38.4-38.4%2017.067-38.4%2038.4-38.4c2.56%200%204.267%201.707%204.267%204.267%200%202.56-1.707%204.267-4.267%204.267-16.213%200-29.867%2013.653-29.867%2029.867%200%2016.213%2013.653%2029.867%2029.867%2029.867s29.867-13.653%2029.867-29.867V197.12l-128%2032.427v150.187c0%2021.333-17.066%2038.399-38.4%2038.399z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+}
+
+.wt-mime-text {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M433.067%20430.933l-51.2%2051.2-25.6-25.6-25.6%2025.6L296.533%20448%20262.4%20482.133l-17.067-17.067L211.2%20499.2l-34.133-34.133-34.134%2034.133-51.2-51.2-51.2%2051.2V38.4c0-18.773%2015.36-34.133%2034.133-34.133h273.067V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133H467.2v341.333l-34.133-34.133z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M467.2%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267L467.2%20123.733z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M40.533%20503.467h-1.707c-1.707-.853-2.56-2.56-2.56-4.267V38.4c0-21.333%2017.067-38.4%2038.4-38.4h273.067c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H74.667C58.453%207.68%2044.8%2021.334%2044.8%2037.547v450.56l43.52-43.52c1.707-1.707%204.267-1.707%205.973%200l47.787%2047.787%2030.72-30.72c1.707-1.707%204.267-1.707%205.973%200l30.72%2030.72%2030.72-30.72c1.707-1.707%204.267-1.707%205.973%200l13.653%2013.653%2030.72-30.72c1.707-1.707%204.267-1.707%205.973%200l30.72%2030.72%2022.187-22.187c1.707-1.707%204.267-1.707%205.973%200l22.187%2022.187%2047.787-47.787c1.707-1.707%204.267-1.707%205.973%200l26.453%2026.453V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c0%201.707-.853%203.413-2.56%204.267-1.707.853-3.413%200-4.267-.853l-30.72-30.72-47.787%2047.787c-1.707%201.707-4.267%201.707-5.973%200l-22.187-22.187-22.187%2022.187c-1.707%201.707-4.267%201.707-5.973%200l-30.72-30.72-30.72%2030.72c-1.707%201.707-4.267%201.707-5.973%200l-13.653-13.653-30.72%2030.72c-1.707%201.707-4.267%201.707-5.973%200l-30.72-30.72-30.72%2030.72c-1.707%201.707-4.267%201.707-5.973%200l-47.787-47.787-47.786%2047.785c-.854.853-2.56%201.707-3.414%201.707zm341.334-136.534h-51.2c-2.56%200-4.267-1.707-4.267-4.267s1.707-4.267%204.267-4.267h51.2c2.56%200%204.267%201.707%204.267%204.267s-1.707%204.267-4.267%204.267zm-85.334%200H211.2c-2.56%200-4.267-1.707-4.267-4.267s1.707-4.267%204.267-4.267h85.333c2.56%200%204.267%201.707%204.267%204.267s-1.707%204.267-4.267%204.267zm-119.466%200h-51.2c-2.56%200-4.267-1.707-4.267-4.267s1.707-4.267%204.267-4.267h51.2c2.56%200%204.267%201.707%204.267%204.267s-1.707%204.267-4.267%204.267zm187.733-51.2H228.267c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267H364.8c2.56%200%204.267%201.707%204.267%204.267%200%202.561-1.707%204.267-4.267%204.267zm-170.667%200h-68.267c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267h68.267c2.56%200%204.267%201.707%204.267%204.267%200%202.561-1.707%204.267-4.267%204.267zm153.6-51.2h-51.2c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267h51.2c2.56%200%204.267%201.707%204.267%204.267%200%202.561-1.707%204.267-4.267%204.267zm-85.333%200h-34.133c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267H262.4c2.56%200%204.267%201.707%204.267%204.267%200%202.561-1.707%204.267-4.267%204.267zm-68.267%200h-68.267c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267h68.267c2.56%200%204.267%201.707%204.267%204.267%200%202.561-1.707%204.267-4.267%204.267zm187.734-51.2H313.6c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267h68.267c2.56%200%204.267%201.707%204.267%204.267-.001%202.561-1.707%204.267-4.267%204.267zm-102.4%200h-153.6c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267h153.6c2.56%200%204.267%201.707%204.267%204.267-.001%202.561-1.707%204.267-4.267%204.267zM211.2%20145.067h-85.333c-2.56%200-4.267-1.707-4.267-4.267%200-2.56%201.707-4.267%204.267-4.267H211.2c2.56%200%204.267%201.707%204.267%204.267%200%202.56-1.707%204.267-4.267%204.267z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+}
+
+.wt-mime-text-html {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M465.067%20123.733v341.333c0%2018.773-15.36%2034.133-34.133%2034.133h-358.4c-18.773%200-34.133-15.36-34.133-34.133V38.4c0-18.773%2015.36-34.133%2034.133-34.133H345.6V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133h85.334z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M465.067%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267l119.466%20119.466z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M430.933%20503.467h-358.4c-21.333%200-38.4-17.067-38.4-38.4V38.4C34.133%2017.067%2051.2%200%2072.533%200H345.6c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H72.533c-16.213%200-29.867%2013.653-29.867%2029.867v426.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h358.4c16.213%200%2029.867-13.653%2029.867-29.867V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c-.001%2022.186-17.067%2039.253-38.401%2039.253zM311.467%20384c-.853%200-1.707%200-1.707-.853-1.707-.853-2.56-3.413-1.707-5.973l33.28-66.56-33.28-66.56c-.853-1.707%200-4.267%201.707-5.973%201.707-.853%204.267%200%205.973%201.707l34.133%2068.267c.853.853.853%202.56%200%203.413l-34.133%2068.267c-.853%203.412-2.56%204.265-4.266%204.265zM192%20384c-1.707%200-3.413-.853-3.413-2.56l-34.133-68.267c-.853-.853-.853-2.56%200-3.413l34.133-68.267c.853-1.707%203.413-2.56%205.973-1.707%201.707.853%202.56%203.413%201.707%205.973l-33.28%2066.56%2033.28%2066.56c.853%201.707%200%204.267-1.707%205.973-.853-.852-1.707-.852-2.56-.852zm34.133-17.067c-.853%200-1.707%200-1.707-.853-1.707-.853-2.56-3.413-1.707-5.973l51.2-102.4c.853-1.707%203.413-2.56%205.973-1.707%201.707.853%202.56%203.413%201.707%205.973l-51.2%20102.4c-.852%201.707-2.559%202.56-4.266%202.56z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+}
+
+.wt-mime-video {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20503.467%20503.467%22%3E%3Cpath%20d%3D%22M465.067%20123.733v341.333c0%2018.773-15.36%2034.133-34.133%2034.133h-358.4c-18.773%200-34.133-15.36-34.133-34.133V38.4c0-18.773%2015.36-34.133%2034.133-34.133H345.6V89.6c0%2018.773%2015.36%2034.133%2034.133%2034.133h85.334z%22%20fill%3D%22%23f2edda%22%2F%3E%3Cpath%20d%3D%22M465.067%20123.733h-85.333c-18.773%200-34.133-15.36-34.133-34.133V4.267l119.466%20119.466z%22%20fill%3D%22%23ffd0a1%22%2F%3E%3Cpath%20d%3D%22M251.733%20192c61.44%200%20110.933%2049.493%20110.933%20110.933s-49.493%20110.933-110.933%20110.933c-61.44%200-110.933-49.493-110.933-110.933S190.293%20192%20251.733%20192z%22%20fill%3D%22%2380d6fa%22%2F%3E%3Cpath%20fill%3D%22%23ecf4f7%22%20d%3D%22M285.867%20302.933l-59.734%2034.134V268.8z%22%2F%3E%3Cpath%20d%3D%22M430.933%20503.467h-358.4c-21.333%200-38.4-17.067-38.4-38.4V38.4C34.133%2017.067%2051.2%200%2072.533%200H345.6c.853%200%202.56.853%203.413.853l85.333%2085.333c1.707%201.707%201.707%204.267%200%205.973-1.707%201.707-4.267%201.707-5.973%200l-84.48-84.48H72.533c-16.213%200-29.867%2013.653-29.867%2029.867v426.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h358.4c16.213%200%2029.867-13.653%2029.867-29.867V127.147h-81.067c-21.333%200-38.4-17.067-38.4-38.4V46.08c0-2.56%201.707-4.267%204.267-4.267s4.267%201.707%204.267%204.267v42.667c0%2016.213%2013.653%2029.867%2029.867%2029.867h85.333c2.56%200%204.267%201.707%204.267%204.267v341.333c-.001%2022.186-17.067%2039.253-38.401%2039.253zm-179.2-85.334c-63.147%200-115.2-52.053-115.2-115.2s52.053-115.2%20115.2-115.2%20115.2%2052.053%20115.2%20115.2-52.053%20115.2-115.2%20115.2zm0-221.866c-58.88%200-106.667%2047.787-106.667%20106.667S192.853%20409.6%20251.733%20409.6%20358.4%20361.813%20358.4%20302.933s-47.787-106.666-106.667-106.666zm-25.6%20145.066c-.853%200-1.707%200-2.56-.853-1.707-.853-1.707-2.56-1.707-3.413V268.8c0-1.707.853-2.56%201.707-3.413%201.707-.853%202.56-.853%204.267%200l59.733%2034.133c1.707.853%202.56%202.56%202.56%203.413s-.853%202.56-2.56%203.413L227.84%20340.48c0%20.853-.853.853-1.707.853zm4.267-64.853v53.76l46.933-26.453L230.4%20276.48z%22%20fill%3D%22%2351565f%22%2F%3E%3C%2Fsvg%3E');
+}
+
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * On-screen keyboard, for entering characters that are not on the keyboard
+ */
+.wt-osk {
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    display: none;
+}
+
+.wt-osk-keys {
+    background: #eee;
+    padding: 0.25rem;
+    font-size: larger;
+}
+
+.wt-osk-group {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.25rem 0;
+}
+
+.wt-osk-key {
+    background: #ddd;
+    border-radius: .25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.wt-osk-key-shift {
+    color: #aaa;
+    font-size: smaller;
+}
+
+.wt-osk-keys.shifted .wt-osk-key {
+    color: #aaa;
+}
+
+.wt-osk-keys.shifted .wt-osk-key-shift {
+    color: #555;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* Sortable lists */
+
+.wt-sortable-item .card-header {
+    cursor: move;
+}
+
+/* Buttons to re-order items in a list */
+.wt-sortable-item:first-child .wt-btn-reorder-first,
+.wt-sortable-item:first-child .wt-btn-reorder-previous {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.wt-sortable-item:last-child .wt-btn-reorder-next,
+.wt-sortable-item:last-child .wt-btn-reorder-last {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2019 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Close relatives tab
+ *
+ * wt-tabs-individual
+ * +--- wt-tab-relatives
+ */
+.wt-tab-relatives .wt-chart-box-lifespan {
+    display: none;
+}
+/**
+ * webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Common formatting for all themes.
+ */
+
+/* Some icons need to be reversed on right-to-left pages */
+[dir=rtl] .wt-icon-flip-rtl,
+[dir=rtl] .wt-icon-flip-rtl svg
+{
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+}
+
+/* Remove border-radius for left-to-right input groups on right-to-left pages */
+[dir=rtl] .input-group[dir=ltr] [dir=ltr] {
+    border-radius: 0;
+}
+
+/* rtl:ignore */
+td.align-digits,
+th.align-digits {
+    text-align: right;
+}
+
+/* Allows twitter typeahead to work with bootstrap input groups */
+.input-group > .twitter-typeahead {
+    -webkit-box-flex: 1;
+            flex: 1 1;
+}
+
+/* Allows select2 to work with bootstrap input groups */
+.input-group > .select2-container {
+    -webkit-box-flex: 1;
+            flex: 1 1;
+}
+
+/* Workaround for dropdown menu position on RTL with popper.js */
+/* See also https://github.com/FezVrasta/popper.js/issues/695 */
+[dir=rtl] .wt-genealogy-menu .dropdown-menu {
+    right: 0;
+    left: auto !important;
+}
+
+/*
+ * https://github.com/fisharebest/webtrees/issues/2291
+ * Chrome 72 has problems with all cards in the control panel.
+ * Chrome 73 has problems with the family-tree card in the control panel.
+ * Chrome 76 seems OK.
+ * https://github.com/fisharebest/webtrees/issues/2813
+ * Safari 13 has the same issue.
+ */
+.wt-control-panel .card {
+    display: block;
+}
+
+/*
+ * Flexbox fixes for IE11
+ */
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Move the body down below the mangled header */
+    div.wt-main-container {
+        padding-top: 4rem;
+    }
+}
+
+/* Keep the page as tall as the window, so the footer can remain at the bottom. */
+.wt-global {
+    display: -webkit-box;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.wt-main-container {
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+/* Scrollbars */
+.wt-global {
+    /* Prevent redraws when dynamic content requires a scrollbar. */
+    overflow-y: scroll;
+    /* Any wide content will have its own horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+/* Browsers only understand US English */
+[lang=en-AU] q,
+[lang=en-GB] q {
+    quotes: "\2018" "\2019" "\201C" "\201D";
+}
+
+/* Expand/collapse icons on accordions, etc. */
+[data-toggle=collapse][aria-expanded=true] > .wt-icon-expand {
+    display: none;
+}[data-toggle=collapse][aria-expanded=false] > .wt-icon-collapse {
+    display: none;
+}
