@@ -1,0 +1,13 @@
+<?php 
+use Fisharebest\Webtrees\View; 
+?>
+
+<?php View::push('javascript') ?>
+<script>
+// Bootstrap active tab in navbar
+var url = location.href;
+$('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
+$('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
+</script>
+<?php View::endpush() ?>
+

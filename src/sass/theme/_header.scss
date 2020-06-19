@@ -40,3 +40,85 @@
  *         +---wt-primary-navigation
  *             +---wt-genealogy-menu
  */
+.jc-site-title {
+    color: $jc-brand-primary;
+    font-size: 2rem;
+    font-weight: 400;
+    @include hover {
+        color:$jc-brand-primary-hover;
+    }    
+}
+
+.wt-header-wrapper {
+    @include jc-header-gradient;
+    margin-bottom: 2.5rem;
+
+    .wt-header-container {
+        @include jc-container-fluid;
+    }
+
+    .wt-site-logo {
+        display: none;
+    }
+
+    .wt-site-title {
+        order: 1;
+        flex: 1 0 auto;
+        width: auto;
+        margin-top: 1rem;
+        @extend .jc-site-title;    
+    }
+
+    .wt-header-search {
+        order: 3;
+    }
+
+    .wt-header-search-button {
+        @include jc-button-gradient;
+    }
+
+    .wt-secondary-navigation {
+        order: 2;
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+    
+        .wt-user-menu {
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            
+            .nav-link {
+                @include jc-navigation-button;
+                border-radius: 0;
+                margin:0 0.25rem;
+            }
+
+            .menu-logout .nav-link {
+                @extend .btn-secondary;
+            }
+        }
+    }
+
+    .wt-primary-navigation {
+        order: 4;
+        /* Extend to full page width */
+        flex: 0 1 100vw;
+        max-width: 100vw;
+        /* Recalculate margins for content */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+        .wt-genealogy-menu {
+            margin-right: -0.5rem;
+            margin-left: -0.5rem;
+
+            .nav-link {
+                padding: 0.5rem;
+            }
+
+            .jc-nav-link-active {
+                @include jc-navigation-button;
+            }
+        }
+    }
+}
