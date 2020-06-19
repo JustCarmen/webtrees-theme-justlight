@@ -33,7 +33,7 @@
 }
 
 // menu button
-@mixin jc-navigation-button {
+@mixin jc-nav-button {
     @extend .btn;
     @extend .btn-primary;
     @include jc-button-gradient;
