@@ -45,6 +45,7 @@
     font-weight: 400;
     @include hover {
         color:$jc-brand-primary-hover;
+        text-decoration: none;
     }    
 }
 
@@ -65,7 +66,10 @@
         flex: 1 0 auto;
         width: auto;
         margin-top: 1rem;
-        @extend .jc-site-title;    
+        
+        a {
+            @extend .jc-site-title; 
+        }  
     }
 
     .wt-header-search {

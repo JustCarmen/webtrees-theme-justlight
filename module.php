@@ -59,7 +59,12 @@ class JustLightTheme extends MinimalTheme implements ModuleCustomInterface
     {
         // Register a namespace for our views.
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
+
+        // Add all javascript used by this module in a view
         View($this->name() . '::script.js');
+
+        // Replace an existing view with our own version.
+        View::registerCustomView('::layouts/default', $this->name() . '::layout-default');
     }
         
     /**

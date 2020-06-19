@@ -1,0 +1,14 @@
+<?php
+
+use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
+
+/**
+ * Use regex to add a header link to the homepage
+ */
+
+$view = view('::layouts/default', get_defined_vars());
+$pattern = '~<h1 class="col wt-site-title">(.*)</h1>~s';
+$replace = '<h1 class="col wt-site-title"><a href="' . e(route(TreePage::class, ['tree' => $tree->name()])) . '">$1</a></h1>';
+$new_view = preg_replace($pattern, $replace , $view, 1);
+
+echo $new_view;
