@@ -25,6 +25,7 @@
     "laravel-mix-alias": "^1.0.2",
     "laravel-mix-clean": "^0.1.0",
     "postcss-custom-properties": "^9.1.1",
+    "postcss-discard-comments": "^4.0.2",
     "postcss-image-inliner": "^4.0.2",
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
