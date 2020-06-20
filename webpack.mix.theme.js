@@ -19,7 +19,7 @@ const postcss_rtl = require("postcss-rtl")();
 //https://github.com/gridonic/postcss-replace
 const postcss_replace = require("postcss-replace")({
     data : {
-        webtrees: config.webtrees_dir
+        webtrees: config.webtrees_css_dir
     }
 });
 

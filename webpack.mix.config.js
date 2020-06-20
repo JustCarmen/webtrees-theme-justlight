@@ -4,7 +4,8 @@
 
 module.exports = {
     images_dir: 'src/sass/resources/images/',
-    webtrees_dir: '../../resources/css',
+    webtrees_css_dir: 'vendor/fisharebest/webtrees/resources/css',
+    webtrees_npm_dir: 'vendor/fisharebest/webtrees/node_modules',
     build_dir: 'build',
     public_dir: 'resources'
 }
