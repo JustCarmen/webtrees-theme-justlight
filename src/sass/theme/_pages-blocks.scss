@@ -1,1 +1,36 @@
 /** JustLight Theme - Specific pages - Home page blocks */
+
+.wt-block {
+    border: none;
+
+    &:first-child {
+        margin-top: 2.5rem;
+    }
+
+    .wt-block-header {        
+        border: none;
+        background: none;
+        padding: 0;
+
+        .wt-main-blocks & {
+            @extend .h3;
+        }
+
+        .wt-side-blocks & {
+            @extend .h4;
+        }
+    }
+
+    .wt-block-content {
+        padding: 0;
+
+        .wt-side-blocks & {
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+.wt-side-blocks {
+    border-left: $border-width solid $jc-secondary;
+}
+
