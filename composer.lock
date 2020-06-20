@@ -875,16 +875,16 @@
         },
         {
             "name": "fisharebest/webtrees",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fisharebest/webtrees.git",
-                "reference": "8f4ce9007559e4fdea9fcd607af8ab936e218221"
+                "reference": "60c703e3f4a36a1feb58f8cc29a81ef1daba4376"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/8f4ce9007559e4fdea9fcd607af8ab936e218221",
-                "reference": "8f4ce9007559e4fdea9fcd607af8ab936e218221",
+                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/60c703e3f4a36a1feb58f8cc29a81ef1daba4376",
+                "reference": "60c703e3f4a36a1feb58f8cc29a81ef1daba4376",
                 "shasum": ""
             },
             "require": {
@@ -921,7 +921,7 @@
                 "mlocati/ip-lib": "~1.9",
                 "nesbot/carbon": "~2.34",
                 "nyholm/psr7": "~1.2",
-                "nyholm/psr7-server": "~0.4",
+                "nyholm/psr7-server": "~1.0",
                 "oscarotero/middleland": "~1.0",
                 "psr/cache": "~1.0",
                 "psr/http-message": "~1.0",
@@ -967,7 +967,7 @@
                 "genealogy",
                 "webtrees"
             ],
-            "time": "2020-06-04T17:17:01+00:00"
+            "time": "2020-06-18T13:33:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2103,16 +2103,16 @@
         },
         {
             "name": "nyholm/psr7-server",
-            "version": "0.4.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7-server.git",
-                "reference": "aab2962c970a1776447894e4fd3825a3d69dee61"
+                "reference": "862529918766fb3825116d39e96feabf1e4bee4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/aab2962c970a1776447894e4fd3825a3d69dee61",
-                "reference": "aab2962c970a1776447894e4fd3825a3d69dee61",
+                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/862529918766fb3825116d39e96feabf1e4bee4e",
+                "reference": "862529918766fb3825116d39e96feabf1e4bee4e",
                 "shasum": ""
             },
             "require": {
@@ -2161,7 +2161,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-06-06T10:33:29+00:00"
+            "time": "2020-06-06T12:17:00+00:00"
         },
         {
             "name": "oscarotero/middleland",
