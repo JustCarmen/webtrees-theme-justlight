@@ -24,23 +24,27 @@
 
 declare(strict_types=1);
 
-namespace JustCarmen\WebtreesModules\JustLightTheme;
+namespace JustCarmen\WebtreesModules;
 
-use Fig\Http\Message\StatusCodeInterface;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
-use Fisharebest\Webtrees\Module\MinimalTheme;
-use Fisharebest\Webtrees\Module\ModuleCustomInterface;
-use Fisharebest\Webtrees\Module\ModuleCustomTrait;
-use Psr\Http\Message\ResponseInterface;
+use Fisharebest\Webtrees\Session;
 use Psr\Http\Message\ServerRequestInterface;
+use Fisharebest\Webtrees\Module\MinimalTheme;
+use Fisharebest\Webtrees\Module\ModuleThemeTrait;
+use Fisharebest\Webtrees\Module\ModuleCustomTrait;
+use Fisharebest\Webtrees\Module\ModuleFooterTrait;
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Module\ModuleCustomInterface;
+use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 
 /**
  * Class JustLightTheme - Main class for JustLight Theme.
  */
-class JustLightTheme extends MinimalTheme implements ModuleCustomInterface
-{
+class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface{
+    use ModuleThemeTrait;
     use ModuleCustomTrait;
+    use ModuleFooterTrait;
     
     /**
      * {@inheritDoc}
@@ -128,6 +132,25 @@ class JustLightTheme extends MinimalTheme implements ModuleCustomInterface
         return 'https://github.com/justcarmen/justlight';
     }
 
-}
+    /**
+     * A footer, to be added at the bottom of every page.
+     *
+     * @param ServerRequestInterface $request
+     *
+     * @return string
+     */
+    public function getFooter(ServerRequestInterface $request): string
+    {
+        if (Session::get('theme') === $this->name()) {
+            return view($this->name() . '::footer-credits', [
+                'url' => 'https://justcarmen.nl',
+                'text' => 'Design: justcarmen.nl'
+            ]);
+        } else {
+            return "";
+        }
+    }
 
-return new JustLightTheme();
+};
+
+return new JustLightTheme;

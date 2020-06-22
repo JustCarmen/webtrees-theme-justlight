@@ -1,10 +1,14 @@
-/** JustLight Theme - Specific pages - Home page blocks */
+/** JustLight Theme - Specific pages - Home page and User page blocks */
 
 .wt-block {
     border: none;
 
     &:first-child {
         margin-top: 2.5rem;
+    }
+
+    &:last-child {
+        margin-bottom: 2.5rem;
     }
 
     .wt-block-header {        

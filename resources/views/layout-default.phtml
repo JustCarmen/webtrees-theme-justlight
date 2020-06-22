@@ -1,14 +1,28 @@
 <?php
 
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
 
 /**
- * Use regex to add a header link to the homepage
+ * Replace layouts/default.phtml
+ * 
+ * Use regex to:
+ * 1. Make the site title clickable with a header link to the homepage
+ * 2. Replace the default footer with our own version
  */
 
-$view = view('::layouts/default', get_defined_vars());
-$pattern = '~<h1 class="col wt-site-title">(.*)</h1>~s';
-$replace = '<h1 class="col wt-site-title"><a href="' . e(route(TreePage::class, ['tree' => $tree->name()])) . '">$1</a></h1>';
-$new_view = preg_replace($pattern, $replace , $view, 1);
+ // View 0: the original view
+$view0 = view('::layouts/default', get_defined_vars());
 
-echo $new_view;
+// View 1: With clickable site title
+$pattern1 = '~<h1 class="col wt-site-title">(.*)</h1>~s';
+$replace1 = '<h1 class="col wt-site-title"><a href="' . e(route(TreePage::class, ['tree' => $tree->name()])) . '">$1</a></h1>';
+$view1 = preg_replace($pattern1, $replace1 , $view0, 1);
+
+// View 2: With custom footer
+$pattern2 = '~<footer(.*)</footer>~s';
+$replace2 = view(app(ModuleThemeInterface::class)->name() . '::footer');
+$view2 = preg_replace($pattern2, $replace2 , $view1, 1);
+
+// Output the last view which contain all customizations
+echo $view2;

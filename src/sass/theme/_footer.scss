@@ -5,3 +5,54 @@
  * wt-footers
  * +---wt-footer wt-footer-xxxxx
  */
+
+
+.wt-footers {
+
+  font-size: $font-size-sm;
+  @extend .py-2;
+
+  @include media-breakpoint-up(sm) {
+    border-top: $border-width solid $jc-hr-border-color;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: darken($body-bg, 10%);
+    margin-bottom: 1.5rem;
+    min-height: 100px;
+
+    .jc-footer-section-1>div {
+      text-align: left !important;
+    }
+
+    .jc-footer-section-3>div {
+      text-align: right !important;
+    }
+
+    .jc-footer-section>div {
+      padding: 0 !important;
+
+      &:nth-child(1) {
+        margin-top: auto;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .wt-footer-hit-counter {
+    .odometer {
+      background-color: $gray-900;
+      color: $white;
+      @extend .p-1;
+    }
+  }
+
+  .wt-footer-powered-by {
+    a {
+      content: url('powered-by-webtrees.png');
+    }
+  }
+}

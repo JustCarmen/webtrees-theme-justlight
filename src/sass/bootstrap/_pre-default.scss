@@ -21,11 +21,14 @@ $enable-gradients: true !default;
 // $enable-validation-icons: true !default;
 // $enable-deprecation-messages: true !default;
 
-$font-size-base:              $jc-font-size-base;
+$font-size-base: $jc-font-size-base;
 
-$h1-font-size:                $font-size-base * 2.0;
-$h2-font-size:                $font-size-base * 1.8;
-$h3-font-size:                $font-size-base * 1.6;
-$h4-font-size:                $font-size-base * 1.4;
-$h5-font-size:                $font-size-base * 1.2;
-$h6-font-size:                $font-size-base;
+$h1-font-size: $font-size-base * 2.0;
+$h2-font-size: $font-size-base * 1.8;
+$h3-font-size: $font-size-base * 1.6;
+$h4-font-size: $font-size-base * 1.4;
+$h5-font-size: $font-size-base * 1.2;
+$h6-font-size: $font-size-base;
+
+$hr-border-color: $jc-hr-border-color;
+// $hr-border-width:             $border-width !default;
