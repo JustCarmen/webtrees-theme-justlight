@@ -4,11 +4,11 @@
     border: none;
 
     &:first-child {
-        margin-top: 2.5rem;
+        margin-top: $jc-main-wrapper-margin;
     }
 
     &:last-child {
-        margin-bottom: 2.5rem;
+        margin-bottom: $jc-main-wrapper-margin;
     }
 
     .wt-block-header {        

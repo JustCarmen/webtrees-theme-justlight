@@ -11,6 +11,12 @@
 
   font-size: $font-size-sm;
   @extend .py-2;
+  margin-top: $jc-main-wrapper-margin;
+
+  .wt-route-TreePage &,
+  .wt-route-UserPage & {
+    margin-top: 0; // no margin because of sidebar border 
+  }
 
   @include media-breakpoint-up(sm) {
     border-top: $border-width solid $jc-hr-border-color;
