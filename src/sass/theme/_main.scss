@@ -11,3 +11,16 @@
  *         +---wt-page-options wt-page-options-xxxxx
  *         +---wt-page-content
  */
+
+.wt-page-title {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.wt-route-UserPage h2 {
+    margin-top: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: $border-width solid $jc-hr-border-color;
+}
+
+
