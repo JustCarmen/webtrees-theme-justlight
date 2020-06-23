@@ -9,13 +9,14 @@
     }
 }
 
-// menu button
+// menu button (dropdown)
 @mixin jc-nav-button {
     @extend .btn;
     @extend .btn-primary;
     @include jc-button-gradient;
 }
 
+// padding
 @mixin jc-padding-top-bottom($size) {
     padding-top: $size;
     padding-bottom: $size;
