@@ -1,2 +1,42 @@
 /** JustLight Theme - Global CSS */
- 
+/*
+ * Pages have the following high-level structure:
+ *
+ * wt-global wt-theme-<THEME> wt-route-<ROUTE>
+ * +---wt-header-wrapper
+ * |   +---wt-header-container
+ * |       +---wt-header-content
+ * |           +---wt-accessibility-links
+ * |           +---wt-site-logo
+ * |           +---wt-site-title
+ * |           +---wt-header-search
+ * |           |   +---wt-header-search-form
+ * |           |       +---wt-header-search-field
+ * |           |       +---wt-header-search-button
+ * |           +---wt-secondary-navigation
+ * |           |   +---wt-user-menu
+ * |           +---wt-primary-navigation
+ * |               +---wt-genealogy-menu
+ * +---wt-main-wrapper
+ * |   +---wt-main-container
+ * |       +---wt-main-content
+ * |           +---wt-messages
+ * |           +---wt-page-title
+ * |           +---wt-page-options wt-page-options-xxxxx
+ * |           +---wt-page-content
+ * +---wt-footers
+ *     +---wt-footer wt-footer-xxxxx
+ */
+.wt-global {
+    &.wt-route-UserPage h2 {
+        margin-top: $jc-main-wrapper-margin;
+        padding-bottom: 0.5rem;
+        border-bottom: $border-width solid $jc-hr-border-color;
+    }
+
+    &.wt-route-IndividualPage {
+        .wt-main-container {
+            @include jc-container-fluid;
+        }
+    }
+}

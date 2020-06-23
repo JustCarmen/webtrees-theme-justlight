@@ -11,21 +11,52 @@
  *         +---wt-page-options wt-page-options-xxxxx
  *         +---wt-page-content
  */
-.wt-main-wrapper {
-    flex: 1;
-    height: 100vw;
+#content {
+    .wt-main-wrapper {
+        flex: 1;
+        height: 100vw;
 
-    .wt-page-title {
-        margin-top: $jc-main-wrapper-margin;
-        margin-bottom: $jc-main-wrapper-margin;
+        .wt-page-title {
+            margin-top: $jc-main-wrapper-margin;
+            margin-bottom: $jc-main-wrapper-margin;
+        }
     }
-
-    .wt-route-UserPage h2 {
-        margin-top: $jc-main-wrapper-margin;
-        padding-bottom: 1rem;
-        border-bottom: $border-width solid $jc-hr-border-color;
-    }
-
 }
 
+/** Individual page name cards */
+#individual-names {
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include jc-padding-top-bottom(0);
+
+        &:not(#name-header-add) {
+            @include jc-theme-gradient-light;
+        }
+
+        a:first-child,
+        .card-title {
+            flex: 1;
+        }
+        .btn-link {
+            @include jc-padding-top-bottom(0.25rem);
+        }
+
+        &#name-header-0 {
+            @include jc-theme-gradient;
+        }
+    }
+}
+
+/** Nav tabs */
+#individual-tabs {
+    .nav-link {
+        @include jc-theme-gradient-light;
+        border: $border-width solid $jc-nav-tabs-border-color;
+        &.active {
+            @include jc-theme-gradient;
+        }
+    }
+}
 
