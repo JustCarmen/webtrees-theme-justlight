@@ -15,3 +15,13 @@
     @extend .btn-primary;
     @include jc-button-gradient;
 }
+
+@mixin jc-padding-top-bottom($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin jc-padding-left-right($size) {
+    padding-left: $size;
+    padding-right: $size;
+}
