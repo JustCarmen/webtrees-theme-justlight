@@ -1,7 +1,6 @@
-
 // Standard sizes etc.
 $jc-font-size-base: 1rem; // Bootstrap default
-$jc-main-wrapper-margin: 2.5rem;
+$jc-main-wrapper-spacer: 2.5rem;
 
 // Theme Colors
 $jc-blue: #337ab7;
@@ -9,13 +8,21 @@ $jc-red: #b80000;
 $jc-babyblue: #d7eaf9;
 $jc-babypink: #fff0f5;
 $jc-gray-200: #e9ecef; // Bootstrap gray-200
+$jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-500: #adb5bd; // Bootstrap gray-500
+$jc-gray-900: #212529; // Bootstrap gray-500
 
+// Theme primary colors
 $jc-primary: $jc-blue;
 $jc-secondary: $jc-gray-200;
+
+// Used for the title brand (derived from Bootstrap 3)
 $jc-brand-primary: #428bca;
 $jc-brand-primary-hover: #5e5e5e;
 
-// Border colors
-$jc-hr-border-color: $jc-secondary;
-$jc-nav-tabs-border-color: $jc-gray-500;
+// Border colors etc.
+$jc-theme-lighter: $jc-secondary;
+$jc-theme-light: $jc-gray-300;
+$jc-theme-medium: $jc-gray-500;
+$jc-theme-dark: $jc-brand-primary-hover;
+$jc-theme-darker: $jc-gray-900;

@@ -29,9 +29,9 @@
  */
 .wt-global {
     &.wt-route-UserPage h2 {
-        margin-top: $jc-main-wrapper-margin;
+        margin-top: $jc-main-wrapper-spacer;
         padding-bottom: 0.5rem;
-        border-bottom: $border-width solid $jc-hr-border-color;
+        border-bottom: $border-width solid $jc-theme-lighter;
     }
 
     &.wt-route-IndividualPage {

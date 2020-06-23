@@ -4,11 +4,11 @@
     border: none;
 
     &:first-child {
-        margin-top: $jc-main-wrapper-margin;
+        margin-top: $jc-main-wrapper-spacer;
     }
 
     &:last-child {
-        margin-bottom: $jc-main-wrapper-margin;
+        margin-bottom: $jc-main-wrapper-spacer;
     }
 
     .wt-block-header {        
@@ -35,6 +35,6 @@
 }
 
 .wt-side-blocks {
-    border-left: $border-width solid $jc-hr-border-color;
+    border-left: $border-width solid $jc-theme-lighter;
 }
 

@@ -30,7 +30,7 @@ $h4-font-size: $font-size-base * 1.4;
 $h5-font-size: $font-size-base * 1.2;
 $h6-font-size: $font-size-base;
 
-$hr-border-color: $jc-hr-border-color;
+$hr-border-color: $jc-theme-lighter;
 //$hr-border-width: $border-width !default;
 
 // Navs
@@ -39,7 +39,7 @@ $hr-border-color: $jc-hr-border-color;
 // $nav-link-padding-x: 1rem !default;
 // $nav-link-disabled-color: $gray-600 !default;
 
-$nav-tabs-border-color: $jc-nav-tabs-border-color;
+$nav-tabs-border-color: $jc-theme-medium;
 // $nav-tabs-border-width: $border-width !default;
 // $nav-tabs-border-radius: $border-radius !default;
 // $nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;

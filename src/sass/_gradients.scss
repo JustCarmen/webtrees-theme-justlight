@@ -12,6 +12,7 @@
 
 @mixin jc-theme-gradient-hover() {
   background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  color: $white;
 }
 
 @mixin jc-theme-gradient-light() {
@@ -23,6 +24,10 @@
 
 @mixin jc-theme-gradient-light-hover() {
   background: linear-gradient($gray-200 0%, $gray-500 100%);
+}
+
+@mixin jc-theme-gradient-light-disabled() {
+  background: linear-gradient($gray-200 0%, $gray-500 75%);
 }
 
 @mixin jc-header-gradient() {

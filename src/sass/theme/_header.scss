@@ -18,7 +18,7 @@
  *         +---wt-primary-navigation
  *             +---wt-genealogy-menu
  */
-.jc-site-title {
+%jc-site-title {
     color: $jc-brand-primary;
     font-weight: 400;
     @include hover {
@@ -45,7 +45,7 @@
         margin-top: 1rem;
 
         a {
-            @extend .jc-site-title; 
+            @extend %jc-site-title; 
         }  
     }
 

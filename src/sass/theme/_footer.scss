@@ -9,7 +9,7 @@
 
   font-size: $font-size-sm;
   @extend .py-2;
-  margin-top: $jc-main-wrapper-margin;
+  margin-top: $jc-main-wrapper-spacer;
 
   .wt-route-TreePage &,
   .wt-route-UserPage & {
@@ -17,11 +17,11 @@
   }
 
   @include media-breakpoint-up(sm) {
-    border-top: $border-width solid $jc-hr-border-color;
+    border-top: $border-width solid $jc-theme-lighter;
   }
 
   @include media-breakpoint-up(lg) {
-    background-color: darken($body-bg, 10%);
+    background-color: $jc-theme-light;
     margin-bottom: 1.5rem;
     min-height: 100px;
 
@@ -48,7 +48,7 @@
 
   .wt-footer-hit-counter {
     .odometer {
-      background-color: $gray-900;
+      background-color: $jc-theme-darker;
       color: $white;
       @extend .p-1;
     }
