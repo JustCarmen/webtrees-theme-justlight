@@ -1,26 +1,14 @@
 // Bootstrap pre defaults
+
+// Color system
 $primary: $jc-primary;
 $secondary: $jc-secondary;
-// $success: $green !default;
-// $info: $cyan !default;
-// $warning: $yellow !default;
-// $danger: $red !default;
 $light: $jc-secondary;
-// $dark: $gray-800 !default;
 
-// $enable-caret: true !default;
-// $enable-rounded: true !default;
-// $enable-shadows: false !default;
-$enable-gradients: true !default;
-// $enable-transitions: true !default;
-// $enable-prefers-reduced-motion-media-query: true !default;
-// $enable-grid-classes: true !default;
-// $enable-pointer-cursor-for-buttons: true !default;
-// $enable-print-styles: true !default;
-// $enable-responsive-font-sizes: false !default;
-// $enable-validation-icons: true !default;
-// $enable-deprecation-messages: true !default;
+// Options
+$enable-gradients: true;
 
+// Typography
 $font-size-base: $jc-font-size-base;
 
 $h1-font-size: $font-size-base * 2.0;
@@ -31,79 +19,12 @@ $h5-font-size: $font-size-base * 1.2;
 $h6-font-size: $font-size-base;
 
 $hr-border-color: $jc-theme-lighter;
-//$hr-border-width: $border-width !default;
 
 // Navs
-
-// $nav-link-padding-y: .5rem !default;
-// $nav-link-padding-x: 1rem !default;
-// $nav-link-disabled-color: $gray-600 !default;
-
 $nav-tabs-border-color: $jc-theme-medium;
-// $nav-tabs-border-width: $border-width !default;
-// $nav-tabs-border-radius: $border-radius !default;
-// $nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;
-// $nav-tabs-link-active-color: $gray-700 !default;
-// $nav-tabs-link-active-bg: $body-bg !default;
-// $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
-// $nav-pills-border-radius: $border-radius !default;
-// $nav-pills-link-active-color: $component-active-color !default;
-// $nav-pills-link-active-bg: $component-active-bg !default;
-
-// $nav-divider-color: $gray-200 !default;
-// $nav-divider-margin-y: $spacer / 2 !default;
-
-// Dropdown menu container and contents.
-
-// $dropdown-min-width: 10rem !default;
-// $dropdown-padding-y: .5rem !default;
-// $dropdown-spacer: .125rem !default;
-// $dropdown-font-size: $font-size-base !default;
-// $dropdown-color: $body-color !default;
-// $dropdown-bg: $white !default;
-// $dropdown-border-color: rgba($black, .15) !default;
-// $dropdown-border-radius: $border-radius !default;
-// $dropdown-border-width: $border-width !default;
-// $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width) !default;
-// $dropdown-divider-bg: $gray-200 !default;
-// $dropdown-divider-margin-y: $nav-divider-margin-y !default;
-// $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
-
-// $dropdown-link-color: $gray-900 !default;
-// $dropdown-link-hover-color: darken($gray-900, 5%) !default;
+// Dropdown menu container and contents
 $dropdown-link-hover-bg: $jc-secondary;
 
-// $dropdown-link-active-color: $component-active-color !default;
-// $dropdown-link-active-bg: $component-active-bg !default;
-
-// $dropdown-link-disabled-color: $gray-600 !default;
-
-// $dropdown-item-padding-y: .25rem !default;
-// $dropdown-item-padding-x: 1.5rem !default;
-
-// $dropdown-header-color: $gray-600 !default;
-// $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x !default;
-
 // Cards
-
-// $card-spacer-y: .75rem !default;
-// $card-spacer-x: 1.25rem !default;
-// $card-border-width: $border-width !default;
-// $card-border-radius: $border-radius !default;
 $card-border-color: $jc-theme-medium;
-// $card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
-// $card-cap-bg: rgba($black, .03) !default;
-// $card-cap-color: null !default;
-// $card-height: null !default;
-// $card-color: null !default;
-// $card-bg: $white !default;
-
-// $card-img-overlay-padding: 1.25rem !default;
-
-// $card-group-margin: $grid-gutter-width / 2 !default;
-// $card-deck-margin: $card-group-margin !default;
-
-// $card-columns-count: 3 !default;
-// $card-columns-gap: 1.25rem !default;
-// $card-columns-margin: $card-spacer-y !default;
