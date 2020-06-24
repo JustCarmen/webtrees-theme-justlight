@@ -29,7 +29,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include jc-padding-top-bottom(0);
+        @include jc-padding-top-bottom(.25);
 
         &:not(#name-header-add) {
             @include jc-theme-gradient-light;
@@ -49,8 +49,8 @@
     }
 }
 
-/** Nav tabs */
-#individual-tabs {
+/** Tabs */
+.nav-tabs {
     .nav-link {
         @include jc-theme-gradient-light;
         border: $border-width solid $jc-theme-medium;
@@ -64,6 +64,26 @@
             @include jc-theme-gradient-light-disabled;
             &:hover {
                 @include jc-theme-gradient-light-hover;
+            }
+        }
+    }
+}
+
+.tab-content {
+    .wt-facts-table {
+        th {
+            background-color: $jc-theme-light;
+            border: $border-width solid $jc-theme-medium;
+            font-weight: 400;
+        }
+        td {
+            background-color: $jc-theme-lightest;
+            border: $border-width solid $jc-theme-medium;
+        }
+        a {
+            color: $body-color;      
+            @include hover-focus() {
+              color: $body-color;
             }
         }
     }
