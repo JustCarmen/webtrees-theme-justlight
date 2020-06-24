@@ -21,7 +21,7 @@ $view1 = preg_replace($pattern1, $replace1 , $view0, 1);
 
 // View 2: With custom footer
 $pattern2 = '~<footer(.*)</footer>~s';
-$replace2 = view(app(ModuleThemeInterface::class)->name() . '::footer');
+$replace2 = view(app(ModuleThemeInterface::class)->name() . '::theme/footer');
 $view2 = preg_replace($pattern2, $replace2 , $view1, 1);
 
 // Output the last view which contain all customizations

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Replace individual-page.phtml
+ * 
+ * Use regex to:
+ * 1. Make the main section wider and the sidebar smaller
+ */
+
+ // View 0: the original view
+$view0 = view('::individual-page', get_defined_vars());
+
+// View 1: Expand the main section
+$pattern1 = '~div class="col-sm-8(.*)div class="col-sm-4~s';
+$replace1 = 'div class="col-sm-9$1div class="col-sm-3';
+$view1 = preg_replace($pattern1, $replace1 , $view0, 1);
+
+// Output the last view which contain all customizations
+echo $view1;

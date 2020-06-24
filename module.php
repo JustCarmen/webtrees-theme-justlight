@@ -65,10 +65,11 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
 
         // Add all javascript used by this module in a view
-        View($this->name() . '::script.js');
+        View($this->name() . '::theme/script.js');
 
         // Replace an existing view with our own version.
-        View::registerCustomView('::layouts/default', $this->name() . '::layout-default');
+        View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
+        View::registerCustomView('::individual-page', $this->name() . '::individual-page');
     }
         
     /**
@@ -142,7 +143,7 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     public function getFooter(ServerRequestInterface $request): string
     {
         if (Session::get('theme') === $this->name()) {
-            return view($this->name() . '::footer-credits', [
+            return view($this->name() . '::theme/footer-credits', [
                 'url' => 'https://justcarmen.nl',
                 'text' => 'Design: justcarmen.nl'
             ]);
