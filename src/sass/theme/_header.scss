@@ -69,15 +69,17 @@
             justify-content: flex-end;
             
             .nav-link {
-                @include jc-nav-button;
+                @include jc-button-gradient;
                 border-radius: 0;
-                line-height: 1.1rem;
                 margin:0 0.25rem;
-                padding: 0.25rem 0.75rem 0.75rem
             }
 
-            .menu-logout .nav-link {
-                @extend .btn-secondary;
+            .menu-login, 
+            .menu-logout {
+                .nav-link,
+                .active {
+                    @include jc-button-gradient-light;
+                }
             }
         }
     }
@@ -96,8 +98,8 @@
             margin-left: -0.5rem;
 
             .jc-nav-link-active {
-                @include jc-nav-button;
-            }
+                @include jc-button-gradient;
+            }            
         }
     }
 }

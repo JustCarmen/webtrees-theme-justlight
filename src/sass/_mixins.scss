@@ -9,17 +9,10 @@
     }
 }
 
-// Navigation buttons
-@mixin jc-nav-button {
-    @extend .btn;
-    @extend .btn-primary;
-    @include jc-button-gradient;
-}
-
 // Sizes
 @mixin jc-padding-top-bottom($size) {
     @if ($size > 0) {
-        $size: $size + 'rem';
+        $size: #{$size} + 'rem';
     }
     padding-top: $size;
     padding-bottom: $size;
