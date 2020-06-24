@@ -13,20 +13,18 @@ $jc-gray-400: #ced4da; // Bootstrap gray-400
 $jc-gray-500: #adb5bd; // Bootstrap gray-500
 $jc-gray-900: #212529; // Bootstrap gray-900
 
-// Theme colors
 $jc-primary: $jc-blue;
 $jc-secondary: $jc-gray-200;
 
-
-// Used for the title brand (derived from Bootstrap 3)
+// Usage: main site title (derived from Bootstrap 3)
 $jc-brand-primary: #428bca;
 $jc-brand-primary-hover: #5e5e5e;
 
 // Border colors etc.
-$jc-theme-lightest: #f9f9f9;
+$jc-theme-lightest: #f9f9f9; // background in fact-tables
 $jc-theme-lighter: $jc-secondary;
 $jc-theme-light: $jc-gray-300;
-$jc-theme-medium: $jc-gray-400;
+$jc-theme-medium: $jc-gray-400; // table borders
 $jc-theme-medium-dark: $jc-gray-500;
 $jc-theme-dark: $jc-brand-primary-hover;
 $jc-theme-darker: $jc-gray-900; // body color
