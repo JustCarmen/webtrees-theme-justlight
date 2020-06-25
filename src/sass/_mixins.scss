@@ -19,6 +19,9 @@
 }
 
 @mixin jc-padding-left-right($size) {
+    @if ($size > 0) {
+        $size: #{$size} + 'rem';
+    }
     padding-left: $size;
     padding-right: $size;
 }

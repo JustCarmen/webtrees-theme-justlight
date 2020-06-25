@@ -27,6 +27,19 @@
  * +---wt-footers
  *     +---wt-footer wt-footer-xxxxx
  */
+
+ /* Colors for chart boxes, etc. */
+:root {
+    --sex-f-fg: #ff2080;
+    --sex-m-fg: #81a9cb;
+    --sex-u-fg: #81a9cb;
+    --sex-f-bg: $jc-baby-pink;
+    --sex-m-bg: $jc-baby-blue;
+    --sex-u-bg: $white;
+    --chart-line: solid gray thin;
+    --chart-line-radius: 1rem;
+}
+
 .wt-global {
     &.wt-route-UserPage h2 {
         margin-top: $jc-main-wrapper-spacer;
@@ -39,6 +52,14 @@
             @include jc-container-fluid;
         }
     }
+}
+
+.btn-link {
+    @include jc-padding-left-right(.25);
+}
+
+dd {
+    margin-bottom: 0;
 }
 
 .dropdown {
@@ -56,6 +77,22 @@
             &.disabled {
                 display: none;
             }
+        }
+    }
+}
+
+// remove default blue outline on focus
+:focus {
+	outline-style: none !important;;
+}
+
+.markdown {
+    table {
+        @extend .table-sm;
+        font-size: $font-size-sm;
+
+        th {
+            font-weight: 600;
         }
     }
 }

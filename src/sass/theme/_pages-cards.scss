@@ -1,0 +1,41 @@
+/** JustLight Theme - Specific pages - Cards */
+
+.card-header {
+
+    /** Individual page name cards */
+    #individual-names & {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.8rem;
+        @include jc-padding-top-bottom(.25);
+
+        &:not(#name-header-add) {
+            @include jc-theme-gradient-light;
+        }
+
+        a:first-child,
+        .card-title {
+            flex: 1;
+        }
+
+        .btn-link {
+            @include jc-padding-top-bottom(0);
+        }
+
+        &#name-header-0 {
+            @include jc-theme-gradient;
+        }
+    }
+
+    /** Individual page Sidebar */
+    #sidebar & {
+        @include jc-theme-gradient;
+        @include jc-padding-top-bottom(.25);
+        line-height: 1.8rem;
+    }
+}
+
+.card-body {
+    @include jc-padding-top-bottom(.5);
+}
