@@ -21,10 +21,11 @@
 %jc-site-title {
     color: $jc-brand-primary;
     font-weight: 400;
+
     @include hover {
-        color:$jc-brand-primary-hover;
+        color: $jc-brand-primary-hover;
         text-decoration: none;
-    }    
+    }
 }
 
 .wt-header-wrapper {
@@ -45,8 +46,8 @@
         margin-top: 1rem;
 
         a {
-            @extend %jc-site-title; 
-        }  
+            @extend %jc-site-title;
+        }
     }
 
     .wt-header-search {
@@ -63,19 +64,20 @@
         flex: 0 0 auto;
         width: auto;
         white-space: nowrap;
-    
+
         .wt-user-menu {
             flex-wrap: nowrap;
             justify-content: flex-end;
-            
+
             .nav-link {
                 @include jc-button-gradient;
                 border-radius: 0;
-                margin:0 0.25rem;
+                margin: 0 0.25rem;
             }
 
-            .menu-login, 
+            .menu-login,
             .menu-logout {
+
                 .nav-link,
                 .active {
                     @include jc-button-gradient-light;
@@ -92,14 +94,14 @@
         /* Recalculate margins for content */
         margin-top: 1rem;
         margin-bottom: 1rem;
-    
+
         .wt-genealogy-menu {
             margin-right: -0.5rem;
             margin-left: -0.5rem;
 
             .jc-nav-link-active {
                 @include jc-button-gradient;
-            }            
+            }
         }
     }
 }
