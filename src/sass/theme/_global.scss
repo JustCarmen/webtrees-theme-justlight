@@ -41,6 +41,11 @@
     @include jc-padding-lr(.25);
 }
 
+caption {
+    caption-side: top;
+    font-weight: 600;
+}
+
 dd {
     margin-bottom: 0;
 }
@@ -49,17 +54,11 @@ dd {
     &-menu {
         max-height: 100vh;
         overflow-x: hidden;
+    }
 
-        .dropdown-item {
-            &.active {
-                @include hover-focus() {
-                    color: $white;
-                }
-            }
-
-            &.disabled {
-                display: none;
-            }
+    .wt-header-content {
+        &-item.active {
+            @include jc-theme-gradient;
         }
     }
 }
