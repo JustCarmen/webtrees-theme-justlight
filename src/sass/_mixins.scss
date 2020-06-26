@@ -10,18 +10,20 @@
 }
 
 // Sizes
-@mixin jc-padding-top-bottom($size) {
+@mixin jc-padding-tb($size) {
     @if ($size > 0) {
-        $size: #{$size} + 'rem';
+        $size: #{$size}+'rem';
     }
+
     padding-top: $size;
     padding-bottom: $size;
 }
 
-@mixin jc-padding-left-right($size) {
+@mixin jc-padding-lr($size) {
     @if ($size > 0) {
-        $size: #{$size} + 'rem';
+        $size: #{$size}+'rem';
     }
+
     padding-left: $size;
     padding-right: $size;
 }

@@ -69,7 +69,6 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
 
         // Replace an existing view with our own version.
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
-        View::registerCustomView('::individual-page', $this->name() . '::individual-page');
     }
         
     /**

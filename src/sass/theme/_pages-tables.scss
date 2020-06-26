@@ -1,0 +1,47 @@
+/** JustLight Theme - Specific pages - Tables */
+
+/** Facts Table */
+.wt-facts-table {
+    th {
+        background-color: $jc-theme-light;
+        font-weight: 400;
+        width: $jc-facts-table-header-width;
+    }
+
+    td {
+        background-color: $jc-theme-lightest;
+    }
+
+    th, td {
+        border: $border-width solid $jc-theme-medium;
+        padding: .75rem; 
+    }
+
+    a {
+        color: $body-color;
+
+        @include hover-focus() {
+            color: $body-color;
+        }
+    }
+
+    .editfacts {
+        white-space: nowrap;
+    }
+
+    .wt-chart-box {
+        padding: .75rem;
+    }
+}
+
+/** Markdown table */
+.markdown {
+    table {
+        @extend .table-sm;
+        font-size: $font-size-sm;
+
+        th {
+            font-weight: 600;
+        }
+    }
+}

@@ -23,26 +23,3 @@
     }
 }
 
-/** Content */
-.wt-facts-table {
-    th {
-        background-color: $jc-theme-light;
-        border: $border-width solid $jc-theme-medium;
-        font-weight: 400;
-        width: $jc-facts-table-header-width;        
-    }
-    td {
-        background-color: $jc-theme-lightest;
-        border: $border-width solid $jc-theme-medium;
-    }
-    a {
-        color: $body-color;      
-        @include hover-focus() {
-            color: $body-color;
-        }
-    }
-    .editfacts {
-        white-space: nowrap;
-    }
-}
-

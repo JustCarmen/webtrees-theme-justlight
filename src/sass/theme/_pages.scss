@@ -1,8 +1,37 @@
 /** JustLight Theme - Specific pages */
 
+.wt-route-UserPage {
+    h2 {
+        margin-top: $jc-main-wrapper-spacer;
+        padding-bottom: 0.5rem;
+        border-bottom: $border-width solid $jc-theme-lighter;
+    }
+}
+
+.wt-route-IndividualPage {
+    .wt-main-container {
+        @include jc-container-fluid;
+
+        @include media-breakpoint-up(lg) {
+            // individual page main section - treat as col-sm-9
+            .col-sm-8 {
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+
+            // individual page sidebar - treat as col-sm-3
+            .col-sm-4 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+    }
+}
+
 @import "pages-blocks";
 @import "pages-cards";
 @import "pages-charts";
 @import "pages-colorbox";
 @import "pages-datatables";
+@import "pages-tables";
 @import "pages-tabs";

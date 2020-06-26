@@ -28,34 +28,17 @@
  *     +---wt-footer wt-footer-xxxxx
  */
 
- /* Colors for chart boxes, etc. */
+/* Colors for chart boxes, etc. */
 :root {
-    --sex-f-fg: #ff2080;
-    --sex-m-fg: #81a9cb;
-    --sex-u-fg: #81a9cb;
-    --sex-f-bg: $jc-baby-pink;
-    --sex-m-bg: $jc-baby-blue;
-    --sex-u-bg: $white;
-    --chart-line: solid gray thin;
-    --chart-line-radius: 1rem;
-}
-
-.wt-global {
-    &.wt-route-UserPage h2 {
-        margin-top: $jc-main-wrapper-spacer;
-        padding-bottom: 0.5rem;
-        border-bottom: $border-width solid $jc-theme-lighter;
-    }
-
-    &.wt-route-IndividualPage {
-        .wt-main-container {
-            @include jc-container-fluid;
-        }
-    }
+    --sex-f-bg: #{$jc-babypink}; // sass/css compatibility - see: https://sass-lang.com/documentation/breaking-changes/css-vars
+    --sex-m-bg: #{$jc-babyblue};
+    --sex-u-bg: #{$jc-theme-lighter};
+    --chart-line: solid #{theme-color()} #{$border-width};
+    --chart-line-radius: 0;
 }
 
 .btn-link {
-    @include jc-padding-left-right(.25);
+    @include jc-padding-lr(.25);
 }
 
 dd {
@@ -83,16 +66,6 @@ dd {
 
 // remove default blue outline on focus
 :focus {
-	outline-style: none !important;;
-}
-
-.markdown {
-    table {
-        @extend .table-sm;
-        font-size: $font-size-sm;
-
-        th {
-            font-weight: 600;
-        }
-    }
+    outline-style: none !important;
+    ;
 }
