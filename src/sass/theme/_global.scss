@@ -56,8 +56,8 @@ dd {
         overflow-x: hidden;
     }
 
-    .wt-header-content {
-        &-item.active {
+    .wt-header-content &-item {
+        &.active {
             @include jc-theme-gradient;
         }
     }
