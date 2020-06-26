@@ -9,7 +9,7 @@ var url = location.href;
 $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
 $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
-// Not able to overwrite with css
+// Remove classes which are not easy to overwrite with css
 $('caption').removeClass('text-center');
 </script>
 <?php View::endpush() ?>
