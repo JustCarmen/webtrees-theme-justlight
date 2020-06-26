@@ -32,6 +32,21 @@
     .wt-chart-box {
         padding: .75rem;
     }
+
+    #sidebar-content-family_nav & {
+        @extend .table-striped;
+        tr {
+            text-align: left !important;
+        }
+        th, td {
+            background: none; // remove the default background to use a striped table.
+            border: none;
+            padding: .3rem;
+        }
+        caption {
+            padding: .3rem;
+        }
+    }
 }
 
 /** Markdown table */

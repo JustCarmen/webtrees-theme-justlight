@@ -38,4 +38,8 @@
 
 .card-body {
     @include jc-padding-tb(.5);
+
+    #sidebar-content-family_nav & {
+        padding: 0;
+    }
 }
