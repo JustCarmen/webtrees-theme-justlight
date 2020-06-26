@@ -19,7 +19,7 @@ $pattern1 = '~<h1 class="col wt-site-title">(.*)</h1>~s';
 $replace1 = '<h1 class="col wt-site-title"><a href="' . e(route(TreePage::class, ['tree' => $tree->name()])) . '">$1</a></h1>';
 $view1 = preg_replace($pattern1, $replace1 , $view0, 1);
 
-// View 2: With custom footer
+// View 2: With custom footer (the footer is part of the default view)
 $pattern2 = '~<footer(.*)</footer>~s';
 $replace2 = view(app(ModuleThemeInterface::class)->name() . '::theme/footer');
 $view2 = preg_replace($pattern2, $replace2 , $view1, 1);
