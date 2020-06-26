@@ -66,6 +66,9 @@ dd {
 
 // remove default blue outline on focus
 :focus {
-    outline-style: none !important;
-    ;
+    box-shadow: none !important;
+}
+
+.wt-page-menu-button {
+    @include jc-button-gradient;
 }

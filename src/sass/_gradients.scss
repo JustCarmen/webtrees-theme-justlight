@@ -17,7 +17,7 @@
 
 @mixin jc-theme-gradient-light() {
   background: linear-gradient($gray-100 0%, $gray-400 100%);
-  &, a, .far, .fas {
+  &, a {
     color: $body-color;
   }
 }
@@ -27,7 +27,7 @@
 }
 
 @mixin jc-theme-gradient-light-disabled() {
-  background: linear-gradient($gray-200 0%, $gray-500 75%);
+  background: linear-gradient($gray-200 0%, $gray-100 75%);
 }
 
 @mixin jc-header-gradient() {
