@@ -41,6 +41,15 @@
     @include jc-padding-lr(.25);
 }
 
+.btn-secondary, .btn-outline-secondary {
+	@include jc-button-gradient-light;
+}
+
+.btn-toolbar {
+    background: transparent;
+    border: none;
+}
+
 caption {
     caption-side: top;
     font-weight: 600;

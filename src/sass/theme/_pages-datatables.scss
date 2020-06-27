@@ -1,1 +1,33 @@
 /** JustLight Theme - Specific pages - Datatables */
+
+.dataTables_wrapper {	
+    @extend .table-responsive;
+
+    @at-root .page-item.active {
+        .page-link {
+            @include jc-theme-gradient;
+        }
+    }
+
+    @at-root .dataTables_paginate {
+        margin-bottom: .5rem;
+    }
+
+    @at-root .dataTables_filter {
+        align-self: flex-end;
+    }
+
+    @at-root .dataTables_length {
+        padding-top: .85rem;
+    }
+    
+    @at-root table.dataTable {
+        @extend .table-striped;
+            
+        thead {
+            @include jc-theme-gradient-light;
+        }
+    }
+    
+}
+

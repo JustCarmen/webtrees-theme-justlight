@@ -19,7 +19,13 @@ $h4-font-size: $font-size-base * 1.4;
 $h5-font-size: $font-size-base * 1.2;
 $h6-font-size: $font-size-base;
 
+$text-muted: $jc-theme-medium-dark;
+
 $hr-border-color: $jc-theme-lighter;
+
+// Tables
+$table-accent-bg: $jc-theme-lightest;
+$table-striped-order: even;
 
 // Navs
 $nav-tabs-border-color: $jc-theme-medium;

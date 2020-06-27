@@ -8,17 +8,20 @@
 
         &.active {
             @include jc-theme-gradient;
+            &:hover {
+                @include jc-theme-gradient-hover;
+            }
         }
 
         &:hover {
-            @include jc-theme-gradient-hover;
+            @include jc-theme-gradient-light-hover;
         }
 
         &.text-muted {
-            @include jc-theme-gradient-light-disabled;
+            background: $jc-theme-lightest;
 
             &:hover {
-                @include jc-theme-gradient-light-hover;
+                background: $jc-theme-light;
             }
         }
     }
