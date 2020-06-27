@@ -56,7 +56,7 @@
 
   .wt-footer-powered-by {
     a {
-      content: url('powered-by-webtrees.png');
+      content: url('{{ webtrees }}/images/powered-by-webtrees.png');
     }
   }
 }
