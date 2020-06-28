@@ -80,3 +80,10 @@ dd {
 .wt-page-menu-button {
     @include jc-button-gradient;
 }
+
+.wt-quick-facts {
+    font-size: $font-size-sm;
+    a:not(:last-child)::after {
+        content: "|"
+    }
+}
