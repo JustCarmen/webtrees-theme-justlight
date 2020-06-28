@@ -1,10 +1,20 @@
 <?php
 
+/**
+ * Replace layouts/default.phtml
+ *
+ * Changes
+ * - Make the site title clickable with a header link to the homepage
+ * - Replace the default footer with our own version
+ * - Add theme <script> to the footer (rename the stack to distinguish it from the default stacks loaded in multiple places)
+ *
+ */
+
 use Fisharebest\Webtrees\DebugBar;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
+use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Services\ModuleService;
@@ -81,7 +91,11 @@ use Psr\Http\Message\ServerRequestInterface;
                     <div class="col wt-site-logo"></div>
 
                     <?php if ($tree !== null) : ?>
-                        <h1 class="col wt-site-title"><?= e($tree->title()) ?></h1>
+                        <?php // START THEME JUSTLIGHT ?>  
+                         <h1 class="col wt-site-title">
+                             <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
+                        </h1>
+                        <?php // END THEME JUSTLIGHT ?>
 
                         <div class="col wt-header-search">
                             <form method="post"
@@ -141,11 +155,9 @@ use Psr\Http\Message\ServerRequestInterface;
             </div>
         </main>
 
-        <footer class="wt-footers container d-print-none">
-            <?= app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
-                return $module->getFooter($request);
-            })->implode('') ?>
-        </footer>
+        <?php // START THEME JUSTLIGHT ?>
+        <?= view(app(ModuleThemeInterface::class)->name() . '::theme/footer'); ?>
+        <?php // END THEME JUSTLIGHT ?>
 
         <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
         <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
@@ -185,6 +197,9 @@ use Psr\Http\Message\ServerRequestInterface;
         </script>
 
         <?= View::stack('javascript') ?>
+        <?php // START THEME JUSTLIGHT ?>
+        <?= View::stack('jc-javascript') ?>
+        <?php // END THEME JUSTLIGHT ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
             return $module->bodyContent();
