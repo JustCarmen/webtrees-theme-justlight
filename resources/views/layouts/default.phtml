@@ -1,28 +1,195 @@
 <?php
 
+use Fisharebest\Webtrees\DebugBar;
+use Fisharebest\Webtrees\FlashMessages;
+use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
+use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Module\ModuleFooterInterface;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
-use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
+use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Tree;
+use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Webtrees;
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
- * Replace layouts/default.phtml
- * 
- * Use regex to:
- * 1. Make the site title clickable with a header link to the homepage
- * 2. Replace the default footer with our own version
+ * @var string                 $content
+ * @var ServerRequestInterface $request
+ * @var string                 $title
+ * @var Tree                   $tree
  */
 
- // View 0: the original view
-$view0 = view('::layouts/default', get_defined_vars());
+?>
 
-// View 1: With clickable site title
-$pattern1 = '~<h1 class="col wt-site-title">(.*)</h1>~s';
-$replace1 = '<h1 class="col wt-site-title"><a href="' . e(route(TreePage::class, ['tree' => $tree->name()])) . '">$1</a></h1>';
-$view1 = preg_replace($pattern1, $replace1 , $view0, 1);
+<!DOCTYPE html>
+<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="csrf" content="<?= e(csrf_token()) ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="<?= e($meta_robots ?? 'noindex') ?>">
+        <meta name="generator" content="<?= e(Webtrees::NAME) ?> <?= e(Webtrees::VERSION) ?>">
+        <meta name="description" content="<?= $meta_description ?? '' ?>">
 
-// View 2: With custom footer (the footer-container is part of the default view)
-$pattern2 = '~<footer(.*)</footer>~s';
-$replace2 = view(app(ModuleThemeInterface::class)->name() . '::theme/footer');
-$view2 = preg_replace($pattern2, $replace2 , $view1, 1);
+        <title>
+            <?= strip_tags($title) ?>
+            <?php if ($tree !== null && $tree->getPreference('META_TITLE') !== '') : ?>
+                – <?= e($tree->getPreference('META_TITLE')) ?>
+            <?php endif ?>
+        </title>
 
-// Output the last view which contain all customizations
-echo $view2;
+        <!--Generic favicons-->
+        <link rel="icon" sizes="32x32" href="<?= e(asset('favicon-32.png')) ?>">
+        <link rel="icon" sizes="128x128" href="<?= e(asset('favicon-128.png')) ?>">
+        <link rel="icon" sizes="192x192" href="<?= e(asset('favicon-192.png')) ?>">
+        <!--Android-->
+        <link rel="shortcut icon" sizes="196x196" href="<?= e(asset('favicon-196.png')) ?>">
+        <!--iPad-->
+        <link rel="apple-touch-icon" sizes="152x152" href="<?= e(asset('favicon-152.png')) ?>">
+        <!--iPhone-->
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('favicon-180.png')) ?>">
+        <!--IE11/Edge-->
+        <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
+
+        <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
+
+        <link rel="stylesheet" href="<?= e(asset('css/vendor.min.css')) ?>">
+        <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
+            <link rel="stylesheet" href="<?= e($stylesheet) ?>">
+        <?php endforeach ?>
+
+        <?= View::stack('styles') ?>
+
+        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+            return $module->headContent();
+        })->implode('') ?>
+
+        <?= DebugBar::renderHead() ?>
+    </head>
+
+    <body class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
+        <header class="wt-header-wrapper d-print-none">
+            <div class="container wt-header-container">
+                <div class="row wt-header-content">
+                    <div class="wt-accessibility-links position-fixed">
+                        <a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
+                            <?= /* I18N: Skip over the headers and menus, to the main content of the page */
+                            I18N::translate('Skip to content') ?>
+                        </a>
+                    </div>
+                    <div class="col wt-site-logo"></div>
+
+                    <?php if ($tree !== null) : ?>
+                        <h1 class="col wt-site-title"><?= e($tree->title()) ?></h1>
+
+                        <div class="col wt-header-search">
+                            <form method="post"
+                                  action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>"
+                                  class="wt-header-search-form" role="search">
+                                <?= csrf_field() ?>
+                                <div class="input-group">
+                                    <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
+                                    <input type="search" class="form-control wt-header-search-field" id="quick-search"
+                                           name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary wt-header-search-button">
+                                            <?= view('icons/search') ?>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <?php endif ?>
+
+                    <div class="col wt-secondary-navigation">
+                        <ul class="nav wt-user-menu">
+                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+                                <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?php endforeach ?>
+                        </ul>
+                    </div>
+
+                    <?php if ($tree !== null) : ?>
+                        <nav class="col wt-primary-navigation">
+                            <ul class="nav wt-genealogy-menu">
+                                <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                                    <?= view('components/menu-item', ['menu' => $menu]) ?>
+                                <?php endforeach ?>
+                            </ul>
+                        </nav>
+                    <?php endif ?>
+                </div>
+            </div>
+        </header>
+
+        <main id="content" class="wt-main-wrapper">
+            <div class="container wt-main-container">
+                <div class="flash-messages">
+                    <?php foreach (FlashMessages::getMessages() as $message) : ?>
+                        <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert"
+                                    aria-label="<?= I18N::translate('close') ?>">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <?= $message->text ?>
+                        </div>
+                    <?php endforeach ?>
+                </div>
+
+                <?= $content ?>
+            </div>
+        </main>
+
+        <footer class="wt-footers container d-print-none">
+            <?= app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
+                return $module->getFooter($request);
+            })->implode('') ?>
+        </footer>
+
+        <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
+        <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
+
+        <script>
+            // Trigger an event when we click on an (any) image
+            $('body').on('click', 'a.gallery', function () {
+                // Enable colorbox for images
+                $("a[type^=image].gallery").colorbox({
+                    // Don't scroll window with document
+                    fixed: true,
+                    width: "85%",
+                    height: "85%",
+                    current: "",
+                    previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
+                    next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
+                    slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
+                    slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
+                    close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
+                    title: function () {
+                        return this.dataset.title;
+                    },
+                    photo: true,
+                    rel: "gallery", // Turn all images on the page into a slideshow
+                    slideshow: true,
+                    slideshowAuto: false,
+                    // Add wheelzoom to the displayed image
+                    onComplete: function () {
+                        // Disable click on image triggering next image
+                        // https://github.com/jackmoore/colorbox/issues/668
+                        $(".cboxPhoto").unbind("click");
+
+                        wheelzoom(document.querySelectorAll(".cboxPhoto"));
+                    }
+                });
+            });
+        </script>
+
+        <?= View::stack('javascript') ?>
+
+        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+            return $module->bodyContent();
+        })->implode('') ?>
+
+        <?= DebugBar::render() ?>
+    </body>
+</html>
