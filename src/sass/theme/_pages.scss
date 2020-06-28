@@ -27,16 +27,6 @@
             }
         }
     }
-
-    .wt-facts-table {
-        a {
-            color: $body-color;
-
-            @include hover-focus() {
-                color: $body-color;
-            }
-        }
-    }
 }
 
 @import "pages-blocks";

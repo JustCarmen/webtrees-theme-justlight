@@ -22,6 +22,14 @@ table {
         padding: .75rem;
     }
 
+    a {
+        color: $body-color;
+
+        @include hover-focus() {
+            color: $body-color;
+        }
+    }
+
     .editfacts {
         white-space: nowrap;
     }
