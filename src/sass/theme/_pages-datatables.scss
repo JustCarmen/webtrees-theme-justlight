@@ -2,6 +2,7 @@
 
 .dataTables_wrapper {	
     @extend .table-responsive;
+    margin-top: 1rem;
 
     @at-root .page-item.active {
         .page-link {
@@ -24,10 +25,18 @@
     @at-root table.dataTable {
         @extend .table-striped;
             
-        thead {
+        thead
+            tr:last-child {
             @include jc-theme-gradient-light;
         }
     }
     
+    @at-root .wt-table-individual,
+    .wt-table-family {
+        thead tr:first-child,
+        tfoot tr {
+            background: $jc-theme-dark;
+        }
+    }
 }
 

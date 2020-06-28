@@ -23,6 +23,10 @@
             &:hover {
                 background: $jc-theme-light;
             }
+
+            .wt-page-content & {
+                display: none;
+            }
         }
     }
 }
