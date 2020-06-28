@@ -38,3 +38,14 @@
     border-left: $border-width solid $jc-theme-lighter;
 }
 
+/** Special blocks */
+.wt-block-content-gedcom_stats {
+    .list-inline-item {
+        margin: 0;
+        &:not(:last-child) {
+            &::after {
+                content: " •";
+            }
+        }
+    }
+}

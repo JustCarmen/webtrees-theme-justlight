@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Replace modules/gedcom_stats/statics.phtml
+ *
+ * Changes
+ * - Transform the global statistics to an inline list
+ *
+ */
+
 use Fisharebest\Webtrees\I18N;
 
 ?>
@@ -10,231 +18,164 @@ use Fisharebest\Webtrees\I18N;
     </p>
 <?php endif ?>
 
-<div class="row">
-    <div class="col col">
-        <table class="table wt-facts-table">
-            <caption class="sr-only">
-                <?= I18N::translate('Statistics') ?>
-            </caption>
-            <tbody>
-            <?php if ($stat_indi) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Individuals') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalIndividuals() ?>
-                    </td>
-                </tr>
+<?php // START THEME JUSTLIGHT ?>
+<ul class="jc-stats-list list-inline">
+    <?php if ($stat_indi) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Individuals') ?>:&nbsp;<?= $stats->totalIndividuals() ?>
+        </li>
+        <li class="list-inline-item">
+            <?= I18N::translate('Males') ?>:&nbsp;<?= $stats->totalSexMales() ?> (<?= $stats->totalSexMalesPercentage() ?>)
+        </li>
+        <li class="list-inline-item">
+            <?= I18N::translate('Females') ?>:&nbsp;<?= $stats->totalSexFemales() ?> (<?= $stats->totalSexFemalesPercentage() ?>)
+        </li>
+    <?php endif ?>
 
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Males') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalSexMales() ?>
-                        <br>
-                        <?= $stats->totalSexMalesPercentage() ?>
-                    </td>
-                </tr>
+    <?php if ($stat_surname) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Surnames') ?>:&nbsp;<?= $stats->totalSurnames() ?>
+        </li>
+    <?php endif ?>
 
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Females') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalSexFemales() ?>
-                        <br>
-                        <?= $stats->totalSexFemalesPercentage() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <?php if ($stat_fam) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Families') ?>:&nbsp;<?= $stats->totalFamilies() ?>
+        </li>
+    <?php endif ?>
 
-            <?php if ($stat_surname) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Surnames') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalSurnames() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <?php if ($stat_sour) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Sources') ?>:&nbsp;<?= $stats->totalSources() ?>
+        </li>
+    <?php endif ?>
 
-            <?php if ($stat_fam) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Families') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalFamilies() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <?php if ($stat_media) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Media objects') ?>:&nbsp;<?= $stats->totalMedia() ?>
+        </li>
+    <?php endif ?>
 
+    <?php if ($stat_repo) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Repositories') ?>:&nbsp;<?= $stats->totalRepositories() ?>
+        </li>
+    <?php endif ?>
 
-            <?php if ($stat_sour) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Sources') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalSources() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <?php if ($stat_events) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Events') ?>:&nbsp;<?= $stats->totalEvents() ?>
+        </li>
+    <?php endif ?>
 
-            <?php if ($stat_media) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Media objects') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalMedia() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <?php if ($stat_users) : ?>
+        <li class="list-inline-item">
+            <?= I18N::translate('Users') ?>:&nbsp;<?= $stats->totalUsers() ?>
+        </li>
+    <?php endif ?>
+</ul>
+<?php // END THEME JUSTLIGHT ?>
 
-            <?php if ($stat_repo) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Repositories') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalRepositories() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+<?php // START THEME JUSTLIGHT ?>
+<table class="table table-sm table-striped jc-stats-table">
+    <caption class="sr-only">
+        <?= I18N::translate('Statistics') ?>
+    </caption>
 
-            <?php if ($stat_events) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Events') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalEvents() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+    <tbody>
+        <?php if ($stat_first_birth) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Earliest birth') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->firstBirth()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <?php if ($stat_users) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Users') ?>
-                    </th>
-                    <td>
-                        <?= $stats->totalUsers() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
-            </tbody>
-        </table>
-    </div>
+        <?php if ($stat_last_birth) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Latest birth') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->lastBirth()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
 
-    <div class="col col">
-        <table class="table wt-facts-table">
-            <caption class="sr-only">
-                <?= I18N::translate('Statistics') ?>
-            </caption>
+        <?php if ($stat_first_death) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Earliest death') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->firstDeath()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <tbody>
-            <?php if ($stat_first_birth) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Earliest birth') ?>
-                    </th>
-                    <td>
-                        <?= $stats->firstBirth() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+        <?php if ($stat_last_death) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Latest death') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->lastDeath()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <?php if ($stat_last_birth) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Latest birth') ?>
-                    </th>
-                    <td>
-                        <?= $stats->lastBirth() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+        <?php if ($stat_long_life) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Individual who lived the longest') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->longestLife()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <?php if ($stat_first_death) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Earliest death') ?>
-                    </th>
-                    <td>
-                        <?= $stats->firstDeath() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+        <?php if ($stat_avg_life) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Average age at death') ?>
+                </th>
+                <td>
+                    <?= $stats->averageLifespan() ?>
+                    (<?= strtolower(I18N::translate('Males')) ?>:&nbsp;<?= $stats->averageLifespanMale() ?>;
+                    <?= strtolower(I18N::translate('Females')) ?>:&nbsp;<?= $stats->averageLifespanFemale() ?>)
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <?php if ($stat_last_death) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Latest death') ?>
-                    </th>
-                    <td>
-                        <?= $stats->lastDeath() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
+        <?php if ($stat_most_chil) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Family with the most children') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->largestFamily()) ?>&nbsp;
+                    (<?= e($stats->largestFamilySize()) ?>&nbsp;<?= strtolower(I18N::translate('Children')) ?>)
+                </td>
+            </tr>
+        <?php endif ?>
 
-            <?php if ($stat_long_life) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Individual who lived the longest') ?>
-                    </th>
-                    <td>
-                        <?= $stats->longestLife() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
-
-            <?php if ($stat_avg_life) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Average age at death') ?>
-                    </th>
-                    <td>
-                        <?= $stats->averageLifespan() ?>
-                        <br>
-                        <?= I18N::translate('Males') ?>:&nbsp;<?= $stats->averageLifespanMale() ?>
-                        <br>
-                        <?= I18N::translate('Females') ?>&nbsp;<?= $stats->averageLifespanFemale() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
-
-            <?php if ($stat_most_chil) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Family with the most children') ?>
-                    </th>
-                    <td>
-                        <?= e($stats->largestFamilySize()) ?>
-                        <br>
-                        <?= $stats->largestFamily() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
-
-            <?php if ($stat_avg_chil) : ?>
-                <tr>
-                    <th scope="row">
-                        <?= I18N::translate('Average number of children per family') ?>
-                    </th>
-                    <td>
-                        <?= $stats->averageChildren() ?>
-                    </td>
-                </tr>
-            <?php endif ?>
-            </tbody>
-        </table>
-    </div>
-</div>
+        <?php if ($stat_avg_chil) : ?>
+            <tr>
+                <th scope="row">
+                    <?= I18N::translate('Average number of children per family') ?>
+                </th>
+                <td>
+                    <?= str_replace("<br>", ":&nbsp;", $stats->averageChildren()) ?>
+                </td>
+            </tr>
+        <?php endif ?>
+    </tbody>
+</table>
+<?php // END THEME JUSTLIGHT ?>
 
 <?php if ($surnames !== '') : ?>
     <div class="clearfix">

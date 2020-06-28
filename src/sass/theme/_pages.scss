@@ -13,6 +13,7 @@
         @include jc-container-fluid;
 
         @include media-breakpoint-up(lg) {
+
             // individual page main section - treat as col-sm-9
             .col-sm-8 {
                 flex: 0 0 75%;
@@ -23,6 +24,16 @@
             .col-sm-4 {
                 flex: 0 0 25%;
                 max-width: 25%;
+            }
+        }
+    }
+
+    .wt-facts-table {
+        a {
+            color: $body-color;
+
+            @include hover-focus() {
+                color: $body-color;
             }
         }
     }

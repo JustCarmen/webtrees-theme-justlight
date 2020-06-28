@@ -1,4 +1,8 @@
 /** JustLight Theme - Specific pages - Tables */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
 
 /** Facts Table */
 .wt-facts-table {
@@ -12,17 +16,10 @@
         background-color: $jc-theme-lightest;
     }
 
-    th, td {
+    th,
+    td {
         border: $border-width solid $jc-theme-medium;
-        padding: .75rem; 
-    }
-
-    a {
-        color: $body-color;
-
-        @include hover-focus() {
-            color: $body-color;
-        }
+        padding: .75rem;
     }
 
     .editfacts {
@@ -35,14 +32,18 @@
 
     #sidebar-content-family_nav & {
         @extend .table-striped;
+
         tr {
             text-align: left !important;
         }
-        th, td {
+
+        th,
+        td {
             background: none; // remove the default background to use a striped table.
             border: none;
             padding: .3rem;
         }
+
         caption {
             padding: .3rem;
         }
@@ -58,5 +59,16 @@
         th {
             font-weight: 600;
         }
+    }
+}
+
+/** JC Stats Table */
+.jc-stats-table {
+    border: $border-width solid $jc-theme-medium;
+    font-size: $font-size-sm;
+
+    th {
+        font-weight: 400;
+        white-space: nowrap;
     }
 }
