@@ -34,6 +34,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 <!DOCTYPE html>
 <html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>">
+
     <head>
         <meta charset="UTF-8">
         <meta name="csrf" content="<?= e(csrf_token()) ?>">
@@ -45,7 +46,7 @@ use Psr\Http\Message\ServerRequestInterface;
         <title>
             <?= strip_tags($title) ?>
             <?php if ($tree !== null && $tree->getPreference('META_TITLE') !== '') : ?>
-                – <?= e($tree->getPreference('META_TITLE')) ?>
+            – <?= e($tree->getPreference('META_TITLE')) ?>
             <?php endif ?>
         </title>
 
@@ -66,7 +67,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
         <link rel="stylesheet" href="<?= e(asset('css/vendor.min.css')) ?>">
         <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
-            <link rel="stylesheet" href="<?= e($stylesheet) ?>">
+        <link rel="stylesheet" href="<?= e($stylesheet) ?>">
         <?php endforeach ?>
 
         <?= View::stack('styles') ?>
@@ -91,47 +92,44 @@ use Psr\Http\Message\ServerRequestInterface;
                     <div class="col wt-site-logo"></div>
 
                     <?php if ($tree !== null) : ?>
-                        <?php // START THEME JUSTLIGHT ?>  
-                         <h1 class="col wt-site-title">
-                             <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
-                        </h1>
-                        <?php // END THEME JUSTLIGHT ?>
+                    <?php // START THEME JUSTLIGHT ?>
+                    <h1 class="col wt-site-title">
+                        <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
+                    </h1>
+                    <?php // END THEME JUSTLIGHT ?>
 
-                        <div class="col wt-header-search">
-                            <form method="post"
-                                  action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>"
-                                  class="wt-header-search-form" role="search">
-                                <?= csrf_field() ?>
-                                <div class="input-group">
-                                    <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
-                                    <input type="search" class="form-control wt-header-search-field" id="quick-search"
-                                           name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
-                                    <div class="input-group-append">
-                                        <button type="submit" class="btn btn-primary wt-header-search-button">
-                                            <?= view('icons/search') ?>
-                                        </button>
-                                    </div>
+                    <div class="col wt-header-search">
+                        <form method="post" action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>" class="wt-header-search-form" role="search">
+                            <?= csrf_field() ?>
+                            <div class="input-group">
+                                <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
+                                <input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary wt-header-search-button">
+                                        <?= view('icons/search') ?>
+                                    </button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
+                    </div>
                     <?php endif ?>
 
                     <div class="col wt-secondary-navigation">
                         <ul class="nav wt-user-menu">
                             <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
-                                <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?= view('components/menu-item', ['menu' => $menu]) ?>
                             <?php endforeach ?>
                         </ul>
                     </div>
 
                     <?php if ($tree !== null) : ?>
-                        <nav class="col wt-primary-navigation">
-                            <ul class="nav wt-genealogy-menu">
-                                <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
-                                    <?= view('components/menu-item', ['menu' => $menu]) ?>
-                                <?php endforeach ?>
-                            </ul>
-                        </nav>
+                    <nav class="col wt-primary-navigation">
+                        <ul class="nav wt-genealogy-menu">
+                            <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                            <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?php endforeach ?>
+                        </ul>
+                    </nav>
                     <?php endif ?>
                 </div>
             </div>
@@ -141,13 +139,12 @@ use Psr\Http\Message\ServerRequestInterface;
             <div class="container wt-main-container">
                 <div class="flash-messages">
                     <?php foreach (FlashMessages::getMessages() as $message) : ?>
-                        <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert"
-                                    aria-label="<?= I18N::translate('close') ?>">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <?= $message->text ?>
-                        </div>
+                    <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="<?= I18N::translate('close') ?>">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <?= $message->text ?>
+                    </div>
                     <?php endforeach ?>
                 </div>
 
@@ -207,4 +204,5 @@ use Psr\Http\Message\ServerRequestInterface;
 
         <?= DebugBar::render() ?>
     </body>
+
 </html>
