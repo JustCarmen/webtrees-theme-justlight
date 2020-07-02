@@ -4,6 +4,8 @@
  * Replace layouts/default.phtml
  *
  * Changes
+ * - Sticky top
+ * - Collapsable navbar for smaller screens (Genealogy and user menu)
  * - Make the site title clickable with a header link to the homepage
  * - Replace the default footer with our own version
  * - Add theme <script> to the footer (rename the stack to distinguish it from the default stacks loaded in multiple places)
@@ -73,16 +75,21 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= View::stack('styles') ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-            return $module->headContent();
-        })->implode('') ?>
+        return $module->headContent();
+    })->implode('') ?>
 
         <?= DebugBar::renderHead() ?>
     </head>
 
-    <body class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
-        <header class="wt-header-wrapper d-print-none">
+    <body
+        class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
+        <?php // START THEME JUSTLIGHT ?>
+        <header class="wt-header-wrapper d-print-none sticky-top">
+            <?php // END THEME JUSTLIGHT ?>
             <div class="container wt-header-container">
-                <div class="row wt-header-content">
+                <?php // START THEME JUSTLIGHT ?>
+                <div class="row wt-header-content navbar navbar-expand-md navbar-light">
+                    <?php // END THEME JUSTLIGHT ?>
                     <div class="wt-accessibility-links position-fixed">
                         <a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
                             <?= /* I18N: Skip over the headers and menus, to the main content of the page */
@@ -98,12 +105,23 @@ use Psr\Http\Message\ServerRequestInterface;
                     </h1>
                     <?php // END THEME JUSTLIGHT ?>
 
+                    <?php // START THEME JUSTLIGHT ?>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#primaryMenu, #secondaryMenu" aria-controls="primaryMenu, secondaryMenu"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <?php // END THEME JUSTLIGHT ?>
+
                     <div class="col wt-header-search">
-                        <form method="post" action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>" class="wt-header-search-form" role="search">
+                        <form method="post"
+                            action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>"
+                            class="wt-header-search-form" role="search">
                             <?= csrf_field() ?>
                             <div class="input-group">
                                 <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
-                                <input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
+                                <input type="search" class="form-control wt-header-search-field" id="quick-search"
+                                    name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-primary wt-header-search-button">
                                         <?= view('icons/search') ?>
@@ -113,8 +131,9 @@ use Psr\Http\Message\ServerRequestInterface;
                         </form>
                     </div>
                     <?php endif ?>
-
-                    <div class="col wt-secondary-navigation">
+                    <?php // START THEME JUSTLIGHT ?>
+                    <div class="col wt-secondary-navigation collapse navbar-collapse d-sm-none" id="secondaryMenu">
+                        <?php // END THEME JUSTLIGHT ?>
                         <ul class="nav wt-user-menu">
                             <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
                             <?= view('components/menu-item', ['menu' => $menu]) ?>
@@ -123,12 +142,21 @@ use Psr\Http\Message\ServerRequestInterface;
                     </div>
 
                     <?php if ($tree !== null) : ?>
-                    <nav class="col wt-primary-navigation">
-                        <ul class="nav wt-genealogy-menu">
-                            <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                    <?php // START THEME JUSTLIGHT ?>
+                    <nav class="col wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                    <?php // START THEME JUSTLIGHT ?>
+                        <ul class=" nav wt-genealogy-menu">
+                        <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                        <?= view('components/menu-item', ['menu' => $menu]) ?>
+                        <?php endforeach ?>
+                        </ul>
+                        <?php // START THEME JUSTLIGHT ?>
+                        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
+                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
                             <?= view('components/menu-item', ['menu' => $menu]) ?>
                             <?php endforeach ?>
                         </ul>
+                        <?php // START THEME JUSTLIGHT ?>
                     </nav>
                     <?php endif ?>
                 </div>
@@ -140,7 +168,8 @@ use Psr\Http\Message\ServerRequestInterface;
                 <div class="flash-messages">
                     <?php foreach (FlashMessages::getMessages() as $message) : ?>
                     <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="<?= I18N::translate('close') ?>">
+                        <button type="button" class="close" data-dismiss="alert"
+                            aria-label="<?= I18N::translate('close') ?>">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <?= $message->text ?>
@@ -160,38 +189,38 @@ use Psr\Http\Message\ServerRequestInterface;
         <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
         <script>
-            // Trigger an event when we click on an (any) image
-            $('body').on('click', 'a.gallery', function () {
-                // Enable colorbox for images
-                $("a[type^=image].gallery").colorbox({
-                    // Don't scroll window with document
-                    fixed: true,
-                    width: "85%",
-                    height: "85%",
-                    current: "",
-                    previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
-                    next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
-                    slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
-                    slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
-                    close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
-                    title: function () {
-                        return this.dataset.title;
-                    },
-                    photo: true,
-                    rel: "gallery", // Turn all images on the page into a slideshow
-                    slideshow: true,
-                    slideshowAuto: false,
-                    // Add wheelzoom to the displayed image
-                    onComplete: function () {
-                        // Disable click on image triggering next image
-                        // https://github.com/jackmoore/colorbox/issues/668
-                        $(".cboxPhoto").unbind("click");
+        // Trigger an event when we click on an (any) image
+        $('body').on('click', 'a.gallery', function() {
+            // Enable colorbox for images
+            $("a[type^=image].gallery").colorbox({
+                // Don't scroll window with document
+                fixed: true,
+                width: "85%",
+                height: "85%",
+                current: "",
+                previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
+                next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
+                slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
+                slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
+                close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
+                title: function() {
+                    return this.dataset.title;
+                },
+                photo: true,
+                rel: "gallery", // Turn all images on the page into a slideshow
+                slideshow: true,
+                slideshowAuto: false,
+                // Add wheelzoom to the displayed image
+                onComplete: function() {
+                    // Disable click on image triggering next image
+                    // https://github.com/jackmoore/colorbox/issues/668
+                    $(".cboxPhoto").unbind("click");
 
-                        wheelzoom(document.querySelectorAll(".cboxPhoto"));
-                    }
-                });
+                    wheelzoom(document.querySelectorAll(".cboxPhoto"));
+                }
             });
-        </script>
+        });
+    </script>
 
         <?= View::stack('javascript') ?>
         <?php // START THEME JUSTLIGHT ?>
@@ -199,8 +228,8 @@ use Psr\Http\Message\ServerRequestInterface;
         <?php // END THEME JUSTLIGHT ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-            return $module->bodyContent();
-        })->implode('') ?>
+        return $module->bodyContent();
+    })->implode('') ?>
 
         <?= DebugBar::render() ?>
     </body>

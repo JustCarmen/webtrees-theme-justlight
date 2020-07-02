@@ -44,6 +44,7 @@
         flex: 1 0 auto;
         width: auto;
         margin-top: 1rem;
+        margin-bottom: 1rem;
 
         a {
             @extend %jc-site-title;
@@ -51,57 +52,58 @@
     }
 
     .wt-header-search {
-        order: 3;
+        order: 4;
         max-width: 15rem;
-    }
 
-    .wt-header-search-button {
-        @include jc-button-gradient;
-    }
+        .wt-header-search-button {
+            @include jc-button-gradient;
+        }
 
-    .wt-secondary-navigation {
-        order: 2;
-        flex: 0 0 auto;
-        width: auto;
-        white-space: nowrap;
-
-        .wt-user-menu {
-            flex-wrap: nowrap;
-            justify-content: flex-end;
-
-            .nav-link {
-                @include jc-button-gradient;
-                border-radius: 0;
-                margin: 0 0.25rem;
+        @include media-breakpoint-down(md) {
+            .wt-header-search-field {
+                display: none;
             }
+        }
 
-            .menu-login,
-            .menu-logout {
-
-                .nav-link,
-                .active {
-                    @include jc-button-gradient-light;
-                }
-            }
+        @include media-breakpoint-down(sm) {
+            display: none;
         }
     }
 
+    .wt-secondary-navigation {
+        order: 3;
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+    }
+
     .wt-primary-navigation {
-        order: 4;
+        order: 5;
         /* Extend to full page width */
         flex: 0 1 100vw;
         max-width: 100vw;
         /* Recalculate margins for content */
         margin-top: 1rem;
         margin-bottom: 1rem;
+    }
 
-        .wt-genealogy-menu {
-            margin-right: -0.5rem;
-            margin-left: -0.5rem;
+    .navbar {
+        align-items: flex-start;
+        padding: 0;
+    }
 
-            .jc-nav-link-active {
-                @include jc-button-gradient;
-            }
+    .navbar-toggler {
+        order: 2;
+        margin-top: 1rem;
+
+        &:focus {
+            outline-color: $jc-theme-light;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .dropdown-item.active {
+            @include jc-theme-gradient;
         }
     }
 }

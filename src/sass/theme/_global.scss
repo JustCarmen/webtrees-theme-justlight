@@ -41,8 +41,9 @@
     @include jc-padding-lr(.25);
 }
 
-.btn-secondary, .btn-outline-secondary {
-	@include jc-button-gradient-light;
+.btn-secondary,
+.btn-outline-secondary {
+    @include jc-button-gradient-light;
 }
 
 .btn-toolbar {
@@ -64,12 +65,6 @@ dd {
         max-height: 100vh;
         overflow-x: hidden;
     }
-
-    .wt-header-content &-item {
-        &.active {
-            @include jc-theme-gradient;
-        }
-    }
 }
 
 // remove default blue outline on focus
@@ -83,6 +78,7 @@ dd {
 
 .wt-quick-facts {
     font-size: $font-size-sm;
+
     a:not(:last-child)::after {
         content: "|"
     }

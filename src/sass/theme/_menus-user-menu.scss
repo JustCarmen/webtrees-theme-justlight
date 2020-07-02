@@ -1,0 +1,29 @@
+/** JustLight Theme - User menu */
+
+.wt-user-menu {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    .nav-item {
+        &:first-child a {
+            margin-left: 0;
+        }
+    }
+
+    .nav-link {
+        @include jc-button-gradient;
+        border-radius: 0;
+        margin: 0 0.25rem;
+    }
+
+    .menu-login,
+    .menu-logout {
+
+        .nav-link,
+        .active {
+            @include jc-button-gradient-light;
+        }
+    }
+
+    @include jc-dropdown-menu-sm;
+}
