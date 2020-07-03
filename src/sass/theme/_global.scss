@@ -41,6 +41,10 @@
     @include jc-padding-lr(.25);
 }
 
+.btn-primary {
+    @include jc-button-gradient;
+}
+
 .btn-secondary,
 .btn-outline-secondary {
     @include jc-button-gradient-light;
