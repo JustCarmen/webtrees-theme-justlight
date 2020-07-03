@@ -36,6 +36,14 @@
 
 .wt-side-blocks {
     border-left: $border-width solid $jc-theme-lighter;
+
+    > div {
+        &:not(:last-child) {
+            padding-bottom: 0.5rem;
+            border-bottom: $border-width solid theme-color();
+            border-radius: 0;
+        }
+    }
 }
 
 /** Special blocks */
