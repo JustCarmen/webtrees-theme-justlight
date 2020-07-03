@@ -11,6 +11,10 @@ Description
 -----------
 This is a modern theme in clean white and blue. Originally it was designed to give the user a better experienced on touch devices liked tablets and mobile phones. To achieve this we use the Bootstrap framework in this theme.
 
+Some features:
+- Sticky header
+- Footer stays at the bottom even when the page has little content.
+
 Webtrees didn't ignore the success of this theme and recognized the need to upgrade the core to meet nowadays user demands. And I am glad they did. Webtrees 2 has adopted the same Bootstrap framework and works smootly now on mobile phones and tablets.
 
 Is this theme become superflous now? No! It still has enough fans to make it worth upgrading. At the end it is all a matter of taste.
