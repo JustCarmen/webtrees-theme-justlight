@@ -30,5 +30,13 @@
             @include jc-theme-gradient-light;
         }
     }
+    
+    @at-root .wt-table-individual,
+    .wt-table-family {
+        thead tr:first-child,
+        tfoot tr {
+            background: $jc-theme-dark;
+        }
+    }
 }
 
