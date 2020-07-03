@@ -30,16 +30,19 @@
     &,
     & .wt-chart-box-menu {
         background: var(--sex-u-bg);
+        border: $border-width solid var(--sex-u-fg);
     }
 
     &-f,
     &-f .wt-chart-box-dropdown {
         background: var(--sex-f-bg);
+        border: $border-width solid var(--sex-f-fg);
     }
 
     &-m,
     &-m .wt-chart-box-dropdown {
         background: var(--sex-m-bg);
+        border: $border-width solid var(--sex-m-fg);
     }
 
     .wt-chart-box-zoom-dropdown {
