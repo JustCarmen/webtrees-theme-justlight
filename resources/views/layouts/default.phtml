@@ -8,7 +8,6 @@
  * - Collapsable navbar for smaller screens (Genealogy and user menu)
  * - Make the site title clickable with a header link to the homepage
  * - Replace the default footer with our own version
- * - Add theme <script> to the footer (rename the stack to distinguish it from the default stacks loaded in multiple places)
  *
  */
 
@@ -223,9 +222,6 @@ use Psr\Http\Message\ServerRequestInterface;
     </script>
 
         <?= View::stack('javascript') ?>
-        <?php // START THEME JUSTLIGHT ?>
-        <?= View::stack('jc-javascript') ?>
-        <?php // END THEME JUSTLIGHT ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
         return $module->bodyContent();

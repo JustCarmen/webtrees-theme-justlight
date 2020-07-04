@@ -65,7 +65,7 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
 
         // Add all javascript used by this module in a view
-        View($this->name() . '::theme/script.js');
+        View($this->name() . '::theme/script');
 
         // Replace an existing view with our own version.
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');

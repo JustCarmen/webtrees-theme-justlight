@@ -1,0 +1,23 @@
+<?php 
+use Fisharebest\Webtrees\View; 
+?>
+
+<?php View::push('javascript') ?>
+<script>
+// Bootstrap active tab in navbar
+var url = location.href;
+$('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
+$('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
+
+// Remove class from caption (this class cannot be overwritten with css)
+$('caption').removeClass('text-center');
+
+// Descendants chart - add classes for styling purposes
+$('.wt-chart-descendants [id^="fam"]').each(function() {
+    $(this).addClass('jc-chart-descendants-family'),
+    $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
+    $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
+});
+</script>
+<?php View::endpush() ?>
+

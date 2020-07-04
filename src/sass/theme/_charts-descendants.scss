@@ -1,0 +1,20 @@
+/** JustLight Theme - Charts - Descendants chart */
+
+.jc-chart-descendants-family {
+    
+    .wt-chart-box {
+        margin-bottom: .5rem;
+
+        &.jc-chart-box-parent {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .wt-chart-vertical-indent {
+        margin-top: -.5rem;
+
+        &.jc-chart-first-indent {
+            margin-top: -1rem;
+        }
+    }
+}
