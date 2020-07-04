@@ -18,6 +18,9 @@ $('.wt-chart-descendants [id^="fam"]').each(function() {
     $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
     $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
 });
+
+// Badges static page - maybe we should restyle all badges
+$('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
 </script>
 <?php View::endpush() ?>
 
