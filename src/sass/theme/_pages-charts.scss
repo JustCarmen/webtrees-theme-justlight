@@ -20,17 +20,13 @@
  */
 .wt-chart-box {
 
-    :not(.wt-facts-table &) {
-        font-size: $font-size-sm;
-        padding: .25rem;
-        line-height: 1.1;
-        min-height: 5rem;
-    }
+    padding: .25rem;
+    min-height: 5rem;
 
     &,
     & .wt-chart-box-menu {
         background: var(--sex-u-bg);
-        border: $border-width solid var(--sex-u-fg);
+        border: $border-width * 2 dotted var(--sex-u-fg);
     }
 
     &-f,
@@ -51,6 +47,7 @@
         @extend .rounded;
         background: $white;
         font-size: .75rem;
+
         .label {
             font-weight: 600;
         }

@@ -32,10 +32,10 @@
 :root {
     --sex-f-bg: #{$jc-babypink}; // sass/css compatibility - see: https://sass-lang.com/documentation/breaking-changes/css-vars
     --sex-m-bg: #{$jc-babyblue};
-    --sex-u-bg: #{$jc-theme-lighter};
+    --sex-u-bg: #{$jc-theme-lightest};
     --sex-f-fg: #{darken($jc-babypink, 10%)};
     --sex-m-fg: #{darken($jc-babyblue, 10%)};
-    --sex-u-fg: #{darken($jc-theme-lighter, 10%)};
+    --sex-u-fg: #{darken($jc-theme-lightest, 20%)};
     --chart-line: solid #{theme-color()} #{$border-width};
     --chart-line-radius: 0;
 }
