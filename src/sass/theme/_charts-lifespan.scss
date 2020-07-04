@@ -1,0 +1,45 @@
+/** JustLight Theme - Charts - Lifespans chart */
+
+.wt-lifespans {
+    &-subtitle {
+        @extend .h3;
+    }
+
+    &-scale {
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+
+    &-decade {
+        width: 70px;
+        height: 60px;
+        display: inline-block;
+        background-image: url('{{ webtrees }}/images/lifespan-decade.png');
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: 70px 37px;
+    }
+
+    &-individuals {
+        @include jc-container-breakout;
+        margin-top: 2.5rem;
+    }
+
+    &-summary {
+        @extend .dropdown-menu;
+        padding-top: 0;
+
+        &-link {
+            font-weight: 700;
+            display: block;
+            background: $jc-theme-lighter;
+            padding: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        div {
+            font-size: $font-size-sm;
+            @include jc-padding-lr(.5);
+        }
+    }
+}
