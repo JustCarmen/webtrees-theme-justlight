@@ -1,0 +1,35 @@
+/** JustLight Theme - Charts - Interactive chart */
+
+%jc-container-break-out {
+	width: 100vw;
+	position: relative;
+	left: calc(-1 * (100vw - 100%) / 2);
+}
+
+.wt-chart-interactive,
+.tab-pane {
+	.tv {
+		&_out {
+			background-color: $white;
+			border: none;
+		}
+
+		&M {
+			background: var(--sex-m-bg) !important;
+		}
+
+		&F {
+			background: var(--sex-f-bg) !important;
+		}
+	}
+}
+
+.wt-chart-interactive {
+	@extend %jc-container-break-out;
+}
+
+.tab-pane {
+	.tv_out {
+		border: $border-width solid $jc-theme-medium;
+	}
+}
