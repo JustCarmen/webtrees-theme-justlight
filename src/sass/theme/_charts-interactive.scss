@@ -1,11 +1,4 @@
 /** JustLight Theme - Charts - Interactive chart */
-
-%jc-container-break-out {
-	width: 100vw;
-	position: relative;
-	left: calc(-1 * (100vw - 100%) / 2);
-}
-
 .wt-chart-interactive,
 .tab-pane {
 	.tv {
@@ -25,7 +18,7 @@
 }
 
 .wt-chart-interactive {
-	@extend %jc-container-break-out;
+	@include jc-container-breakout;
 }
 
 .tab-pane {
