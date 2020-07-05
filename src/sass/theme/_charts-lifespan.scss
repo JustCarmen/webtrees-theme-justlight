@@ -1,4 +1,10 @@
 /** JustLight Theme - Charts - Lifespans chart */
+.wt-route-LifespansChartModule {
+    .wt-timeline-chart {
+        @include jc-container-breakout;
+        overflow-x: auto;
+    }
+}
 
 .wt-lifespans {
     &-subtitle {
@@ -7,7 +13,6 @@
 
     &-scale {
         white-space: nowrap;
-        overflow-x: scroll;
     }
 
     &-decade {
@@ -21,7 +26,6 @@
     }
 
     &-individuals {
-        @include jc-container-breakout;
         margin-top: 2.5rem;
     }
 
