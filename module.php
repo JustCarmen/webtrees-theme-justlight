@@ -97,25 +97,25 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleThemeInterface::stylesheets()
+     * Usage: FanChartModule and Statistics charts
      */
     public function parameter($parameter_name)
     {
         $parameters = [
-            'chart-background-f'             => 'fff0f5',
-            'chart-background-m'             => 'd7eaf9',
-            'chart-background-u'             => 'f9f9f9',
-            'chart-box-x'                    => 260,
-            'chart-box-y'                    => 85,
-            'chart-font-color'               => '000000',
-            'chart-spacing-x'                => 5,
-            'chart-spacing-y'                => 10,
-            'compact-chart-box-x'            => 240,
-            'compact-chart-box-y'            => 50,
-            'distribution-chart-high-values' => 'fff0f5',
-            'distribution-chart-low-values'  => 'd7eaf9',
-            'distribution-chart-no-values'   => 'f9f9f9',
+            'chart-background-f'             => 'fff0f5', // FanChart
+            'chart-background-m'             => 'd7eaf9', // Fanchart
+            'chart-background-u'             => 'f9f9f9', // Fanchart
+            'chart-box-x'                    => 260, // unused
+            'chart-box-y'                    => 85, // unused
+            'chart-font-color'               => '#212529', // FanChart
+            'chart-spacing-x'                => 5, // unused
+            'chart-spacing-y'                => 10, // unused
+            'compact-chart-box-x'            => 240, // unused
+            'compact-chart-box-y'            => 50, // unused
+            'distribution-chart-high-values' => 'fff0f5', // Statistics charts
+            'distribution-chart-low-values'  => 'd7eaf9', // Statistics charts
+            'distribution-chart-no-values'   => 'f9f9f9', // Statistics charts
         ];
-
         return $parameters[$parameter_name];
     }
     
