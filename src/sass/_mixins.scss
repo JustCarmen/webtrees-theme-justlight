@@ -71,5 +71,7 @@
 @mixin jc-container-breakout {
 	width: 100vw;
 	position: relative;
-	left: calc(-1 * (100vw - 100%) / 2);
+    left: calc(-1 * (100vw - 100%) / 2);
+    padding-left: 30px;
+    padding-right: 30px;
 }
