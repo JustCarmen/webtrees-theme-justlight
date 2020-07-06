@@ -19,8 +19,10 @@
  *     +--- wt-chart-box-fact
  */
 
+@import "charts-ancestors";
 @import "charts-chartbox";
 @import "charts-descendants";
 @import "charts-interactive";
 @import "charts-lifespan";
 @import "charts-pedigree";
+@import "charts-timeline";
