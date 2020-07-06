@@ -62,10 +62,18 @@ table {
 .markdown {
     table {
         @extend .table-sm;
+        @extend .table-responsive;
         font-size: $font-size-sm;
 
         th {
+            @include jc-theme-gradient-light;
             font-weight: 600;
+        }
+
+        tr:nth-of-type(odd) {
+            td {
+                background-color: $jc-theme-lighter;
+            }
         }
     }
 }
