@@ -83,6 +83,13 @@ dd {
     @include jc-button-gradient;
 }
 
+.wt-page-options {
+    background: $jc-theme-lighter;
+    border: $border-width solid $jc-theme-medium;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
 .wt-quick-facts {
     font-size: $font-size-sm;
 
