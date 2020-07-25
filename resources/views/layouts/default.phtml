@@ -143,21 +143,21 @@ use Psr\Http\Message\ServerRequestInterface;
                     <?php // END THEME JUSTLIGHT ?>
                 <?php if ($tree !== null) : ?>
                 <?php // START THEME JUSTLIGHT ?>
-                <nav class="row wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
-                <?php // ENd THEME JUSTLIGHT ?>
-                    <ul class=" nav wt-genealogy-menu">
-                    <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
-                    <?= view('components/menu-item', ['menu' => $menu]) ?>
-                    <?php endforeach ?>
-                    </ul>
-                    <?php // START THEME JUSTLIGHT ?>
-                    <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
-                        <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+                <div class="row wt-header-content navbar navbar-expand-md navbar-light">
+                    <nav class="row wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                        <ul class=" nav wt-genealogy-menu">
+                        <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
                         <?= view('components/menu-item', ['menu' => $menu]) ?>
                         <?php endforeach ?>
-                    </ul>
-                    <?php // START THEME JUSTLIGHT ?>
-                </nav>
+                        </ul>
+                        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
+                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+                            <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?php endforeach ?>
+                        </ul>
+                    </nav>
+                </div>
+                <?php // END THEME JUSTLIGHT ?>
                 <?php endif ?>
             </div>
         </header>
