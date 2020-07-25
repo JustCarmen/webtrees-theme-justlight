@@ -54,6 +54,7 @@
     .wt-header-search {
         order: 4;
         max-width: 15rem;
+        margin-bottom: auto;
 
         .wt-header-search-button {
             @include jc-button-gradient;
@@ -75,6 +76,7 @@
         flex: 0 0 auto;
         width: auto;
         white-space: nowrap;
+        margin-bottom: auto;
     }
 
     .wt-primary-navigation {
@@ -85,7 +87,6 @@
         /* Recalculate margins for content */
         margin-top: 1rem;
         margin-bottom: 1rem;
-        margin-left: -0.5rem;
     }
 
     .navbar {

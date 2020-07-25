@@ -65,8 +65,7 @@ use Psr\Http\Message\ServerRequestInterface;
         <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
 
         <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
-
-        <link rel="stylesheet" href="<?= e(asset('css/vendor.min.css')) ?>">
+        
         <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
         <link rel="stylesheet" href="<?= e($stylesheet) ?>">
         <?php endforeach ?>
@@ -139,26 +138,27 @@ use Psr\Http\Message\ServerRequestInterface;
                             <?php endforeach ?>
                         </ul>
                     </div>
-
-                    <?php if ($tree !== null) : ?>
                     <?php // START THEME JUSTLIGHT ?>
-                    <nav class="col wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                </div>
+                    <?php // END THEME JUSTLIGHT ?>
+                <?php if ($tree !== null) : ?>
+                <?php // START THEME JUSTLIGHT ?>
+                <nav class="row wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                <?php // ENd THEME JUSTLIGHT ?>
+                    <ul class=" nav wt-genealogy-menu">
+                    <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                    <?= view('components/menu-item', ['menu' => $menu]) ?>
+                    <?php endforeach ?>
+                    </ul>
                     <?php // START THEME JUSTLIGHT ?>
-                        <ul class=" nav wt-genealogy-menu">
-                        <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                    <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
+                        <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
                         <?= view('components/menu-item', ['menu' => $menu]) ?>
                         <?php endforeach ?>
-                        </ul>
-                        <?php // START THEME JUSTLIGHT ?>
-                        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
-                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
-                            <?= view('components/menu-item', ['menu' => $menu]) ?>
-                            <?php endforeach ?>
-                        </ul>
-                        <?php // START THEME JUSTLIGHT ?>
-                    </nav>
-                    <?php endif ?>
-                </div>
+                    </ul>
+                    <?php // START THEME JUSTLIGHT ?>
+                </nav>
+                <?php endif ?>
             </div>
         </header>
 
