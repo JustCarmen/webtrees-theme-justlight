@@ -89,9 +89,23 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     public function stylesheets(): array
     {
         return [
+            route('module', ['module' => $this->name(), 'action' => 'Stylesheet']),
             $this->assetUrl('css/justlight.min.css')
+
         ];
     }
+
+    function getStylesheetAction()
+    {
+        $response = view($this->name() . '::theme/style.css', [
+            'eot_url'   => $this->assetUrl('fonts/icomoon.eot'),
+            'svg_url'   => $this->assetUrl('fonts/icomoon.svg'),
+            'ttf_url'   => $this->assetUrl('fonts/icomoon.ttf'),
+            'woff_url'  => $this->assetUrl('fonts/icomoon.woff')
+       ]);
+
+       return response($response)->withHeader('Content-type', 'text/css');
+     } 
 
     
     /**
