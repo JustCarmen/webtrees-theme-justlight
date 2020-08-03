@@ -8,7 +8,6 @@
 let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 require('laravel-mix-alias');
-require('laravel-mix-clean');
 
 //https://github.com/postcss/autoprefixer
 const postcss_autoprefixer = require("autoprefixer")();
@@ -33,8 +32,10 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 //Enable CSS variables in IE
 const postcss_custom_properties = require("postcss-custom-properties")();
 mix
-    .setPublicPath(config.public_dir + '/css')
+    .setPublicPath('./')
     .alias('build', config.build_dir)
+    .sourceMaps()
+    .js('src/js/vendor.js', config.public_dir + '/js/vendor.min.js')
     .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
     .options({
         processCssUrls: false,
@@ -45,7 +46,4 @@ mix
             postcss_image_inliner,
             postcss_custom_properties,
         ]
-    })
-    .sourceMaps()
-    .clean()
-    ;
+    });
