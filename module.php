@@ -1,4 +1,5 @@
 <?php
+
 /**
  * JustLight Theme
  * 
@@ -41,11 +42,12 @@ use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 /**
  * Class JustLightTheme - Main class for JustLight Theme.
  */
-class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface{
+class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface
+{
     use ModuleThemeTrait;
     use ModuleCustomTrait;
     use ModuleFooterTrait;
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::title()
@@ -54,7 +56,7 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     {
         return I18N::translate('JustLight');
     }
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::boot()
@@ -71,8 +73,9 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
         View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
         View::registerCustomView('::icons/anniversary', $this->name() . '::icons/anniversary');
+        View::registerCustomView('::icons/individual', $this->name() . '::icons/individual');
     }
-        
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::resourcesFolder()
@@ -81,8 +84,8 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     {
         return __DIR__ . '/resources/';
     }
-    
-    
+
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::stylesheets()
@@ -103,12 +106,12 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             'svg_url'   => $this->assetUrl('fonts/icomoon.svg'),
             'ttf_url'   => $this->assetUrl('fonts/icomoon.ttf'),
             'woff_url'  => $this->assetUrl('fonts/icomoon.woff')
-       ]);
+        ]);
 
-       return response($response)->withHeader('Content-type', 'text/css');
-     } 
+        return response($response)->withHeader('Content-type', 'text/css');
+    }
 
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleThemeInterface::stylesheets()
@@ -133,7 +136,7 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         ];
         return $parameters[$parameter_name];
     }
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleAuthorName()
@@ -142,15 +145,14 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     {
         return 'Carmen Pijpers-Knegt';
     }
-    
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
      */
     public function customModuleVersion(): string
     {
-        return '2.0';
+        return '2.0.0';
     }
 
     /**
@@ -180,7 +182,6 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             return "";
         }
     }
-
 };
 
 return new JustLightTheme;

@@ -35,7 +35,6 @@ mix
     .setPublicPath('./')
     .alias('build', config.build_dir)
     .sourceMaps()
-    .js('src/js/vendor.js', config.public_dir + '/js/vendor.min.js')
     .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
     .options({
         processCssUrls: false,
