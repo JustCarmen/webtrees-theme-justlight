@@ -29,3 +29,7 @@ $jc-theme-medium: $jc-gray-400; // table borders
 $jc-theme-medium-dark: $jc-gray-500;
 $jc-theme-dark: $jc-brand-primary-hover;
 $jc-theme-darker: $jc-gray-900; // body color
+
+// Icon colors
+$jc-icon-color: $jc-gray-900; // Bootstrap body color
+$jc-icon-hover-color: darken($jc-icon-color, 10%);

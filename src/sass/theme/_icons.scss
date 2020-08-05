@@ -1,1 +1,7 @@
 /** JustLight Theme - Theme icons */
+[class^=wt-icon] {
+    color: $jc-icon-color;
+    @include hover-focus {
+        color: $jc-icon-hover-color;
+    }
+}
