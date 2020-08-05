@@ -42,7 +42,7 @@ use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 /**
  * Class JustLightTheme - Main class for JustLight Theme.
  */
-class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface
+return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface
 {
     use ModuleThemeTrait;
     use ModuleCustomTrait;
@@ -183,5 +183,3 @@ class JustLightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         }
     }
 };
-
-return new JustLightTheme;
