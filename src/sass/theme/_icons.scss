@@ -4,4 +4,30 @@
     @include hover-focus {
         color: $jc-icon-hover-color;
     }
+
+    .btn-primary & {
+        color: $white;
+    }
+
+    .editfacts & {
+        font-size: 1.15rem;
+    }
+}
+
+.wt-icon {
+    &-add {
+        color: $jc-icon-accent-plus-color;
+        @include hover-focus {
+            color: $jc-icon-accent-plus-hover-color;
+        } 
+    }
+    &-delete {
+        color: $jc-icon-accent-color;
+        @include hover-focus {
+            color: $jc-icon-accent-hover-color;
+        }
+    }
+    &-help {
+        color: theme-color();
+    }
 }
