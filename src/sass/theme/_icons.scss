@@ -30,4 +30,11 @@
     &-help {
         color: theme-color();
     }
+
+    #sidebar .card-title & {
+        &-collapse,
+        &-expand {
+            color: $white;
+        }
+    }
 }
