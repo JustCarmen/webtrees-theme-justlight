@@ -7,14 +7,27 @@
     height:3.5rem;
 }
 
-.wt-block-charts .wt-chart-box-extra,
-.wt-block-charts .wt-chart-box-facts{
+.wt-block-charts .wt-chart-box .wt-chart-box-extra,
+.wt-block-charts .wt-chart-box .wt-chart-box-facts,
+.wt-block-charts .wt-chart-box .wt-chart-box-name-alt{
     display:none;
 }
 
 .wt-block-charts .wt-chart-box .wt-chart-box-lifespan{
     display:block;
 }
+.wt-block-tree_favorites .wt-chart-box-facts,
+.wt-block-user_favorites .wt-chart-box-facts{
+    display:block;
+}
+
+.wt-block-tree_favorites .wt-chart-box-extra,
+.wt-block-user_favorites .wt-chart-box-extra,
+.wt-block-tree_favorites .wt-chart-box-lifespan,
+.wt-block-user_favorites .wt-chart-box-lifespan{
+    display:none;
+}
+
 .wt-chart-ancestors .wt-chart-box{
     width:20rem;
 }
@@ -586,7 +599,9 @@ table#tvTreeBorder td,
     display:none;
 }
 
-
+.wt-chart-box-name{
+    font-weight:bold;
+}
 #cboxOverlay{
     position:fixed;
     width:100%;
@@ -765,6 +780,13 @@ table#tvTreeBorder td,
 
 .wt-osk-keys.shifted .wt-osk-key-shift{
     color:#555;
+}
+.wt-family-members .wt-chart-box{
+    width:22.5vw;
+}
+
+.wt-family-members .wt-chart-box-lifespan{
+    display:none;
 }
 .wt-sortable-item .card-header{
     cursor:move;
