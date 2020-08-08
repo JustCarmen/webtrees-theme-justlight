@@ -1,5 +1,5 @@
 {
-  "name": "justlight",
+  "name": "jc-theme-justlight",
   "version": "2.0.0",
   "description": "JustLight theme for webtrees",
   "repository": {
@@ -19,17 +19,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "clean-webpack-plugin": "^3.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
     "laravel-mix": "^5.0.4",
     "laravel-mix-alias": "^1.0.2",
-    "laravel-mix-clean": "^0.1.0",
     "postcss-custom-properties": "^9.1.1",
     "postcss-discard-comments": "^4.0.2",
     "postcss-image-inliner": "^4.0.2",
+    "postcss-import": "^12.0.1",
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
     "sass": "^1.26.10",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
