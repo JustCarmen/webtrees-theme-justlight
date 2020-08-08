@@ -1,28 +1,13 @@
-<?php /** JustLight Theme - Theme icons */ ?>
+<?php /** JustLight Theme - Load theme font - See: https://icomoon.io/ */ ?>
 
 @font-face {
-  font-family: "icomoon";
+  font-family: 'icomoon';
   src: url("<?= $eot_url ?>");
   src: url("<?= $eot_url ?>#iefix") format("embedded-opentype"), 
-        url("<?= $ttf_url ?>") format("truetype"), 
-        url("<?= $woff_url ?>") format("woff"), 
-        url("<?= $svg_url ?>#icomoon") format("svg");
+    url("<?= $ttf_url ?>") format("truetype"), 
+    url("<?= $woff_url ?>") format("woff"), 
+    url("<?= $svg_url ?>#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
-}
-
-.icon-arrow-left, .icon-silhouette-M {
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;<?= $eot_url ?>
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-silhouette-M:before {
-  content: "\E602";
+  font-display: block;
 }

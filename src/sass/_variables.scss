@@ -39,3 +39,17 @@ $jc-icon-accent-color: $jc-red;
 $jc-icon-accent-hover-color: darken($jc-icon-accent-color, 10%);
 $jc-icon-accent-plus-color: $jc-green;
 $jc-icon-accent-plus-hover-color: darken($jc-icon-accent-plus-color, 10%);
+
+// Icomoon icons - see: https://icomoon.io/
+// These icons are especially made to use in this theme
+$jc-icomoon-icons: () !default;
+$jc-icomoon-icons: map_merge(( // class 'icon-'    unicode
+        silhouette-F: 'e601',
+        silhouette-M: 'e602',
+        silhouette-U: 'e603',
+        sfamily: 'e604',
+        cfamily: 'e604',
+        children: 'e605',
+        childless: 'e606',
+        pedigree: 'e609'
+    ), $jc-icomoon-icons);

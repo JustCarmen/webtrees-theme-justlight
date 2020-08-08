@@ -1,9 +1,18 @@
 /** JustLight Theme - Theme icons */
-[class^=wt-icon] {
+[class*="icon-"] {
     color: $jc-icon-color;
-    @include hover-focus {
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    line-height: 1;
+    vertical-align: bottom;
+
+    @include hover-focus() {
         color: $jc-icon-hover-color;
     }
+
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 
     .btn-primary & {
         color: $white;
@@ -14,27 +23,62 @@
     }
 }
 
+/* Icomoon Icons */
+
+// workaround for unicode icons in sass.
+// See: http://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
+@function unicode($str) {
+    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
+}
+
+@each $icon,
+$unicode in $jc-icomoon-icons {
+    .icon-#{$icon} {
+        font-family: 'icomoon' !important;
+
+        &:before {
+            content: unicode($unicode);
+        }
+    }
+}
+
+// Special wt-icon styling
 .wt-icon {
     &-add {
         color: $jc-icon-accent-plus-color;
-        @include hover-focus {
+
+        @include hover-focus() {
             color: $jc-icon-accent-plus-hover-color;
-        } 
+        }
     }
+
     &-delete {
         color: $jc-icon-accent-color;
-        @include hover-focus {
+
+        @include hover-focus() {
             color: $jc-icon-accent-hover-color;
         }
     }
+
     &-help {
         color: theme-color();
     }
 
     #sidebar .card-title & {
+
         &-collapse,
         &-expand {
             color: $white;
+        }
+    }
+}
+
+// special icon styling
+.wt-block-content {
+    &-gedcom_block,
+    &-user_welcome {
+        [class*="icon-"] {
+            font-size: 2rem;
         }
     }
 }
