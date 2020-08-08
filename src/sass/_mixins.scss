@@ -75,3 +75,11 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
+// Icons
+@mixin jc-icon-color($color: $jc-icon-color, $darken: 10%) {
+    color: $color;
+    @include hover-focus() {
+        color: darken($color, $darken);
+    }
+}

@@ -1,21 +1,18 @@
 /** JustLight Theme - Theme icons */
 [class*="icon-"] {
-    color: $jc-icon-color;
+    @include jc-icon-color();
+
     cursor: pointer;
     display: inline-block;
     font-style: normal;
     line-height: 1;
-    vertical-align: bottom;
-
-    @include hover-focus() {
-        color: $jc-icon-hover-color;
-    }
+    font-size: 1.1rem;
 
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 
     .btn-primary & {
-        color: $white;
+        color: $jc-icon-white-color;
     }
 
     .editfacts & {
@@ -45,40 +42,47 @@ $unicode in $jc-icomoon-icons {
 // Special wt-icon styling
 .wt-icon {
     &-add {
-        color: $jc-icon-accent-plus-color;
-
-        @include hover-focus() {
-            color: $jc-icon-accent-plus-hover-color;
-        }
+        @include jc-icon-color($jc-icon-green-color);
     }
 
     &-delete {
-        color: $jc-icon-accent-color;
-
-        @include hover-focus() {
-            color: $jc-icon-accent-hover-color;
-        }
+        @include jc-icon-color($jc-icon-red-color);
     }
 
     &-help {
-        color: theme-color();
+        @include jc-icon-color($jc-icon-blue-color, 0%);
     }
 
     #sidebar .card-title & {
-
         &-collapse,
         &-expand {
-            color: $white;
+            @include jc-icon-color($jc-icon-white-color, 0%);
         }
     }
 }
 
 // special icon styling
+.icon {
+    &-cfamily {
+        font-size: 2rem;
+    }
+    &-selected {
+        @include jc-icon-color($jc-icon-green-color);
+    }
+    &-silhouette {
+        &-M, &-F, &-U {
+            font-size: 3rem;
+        }
+    };
+}
+
 .wt-block-content {
     &-gedcom_block,
     &-user_welcome {
         [class*="icon-"] {
             font-size: 2rem;
+            vertical-align: bottom;
         }
     }
 }
+
