@@ -53,6 +53,11 @@
     @include jc-button-gradient-light;
 }
 
+.jc-btn-secondary { /* container for the add button in forms (prepending select2 elements) */
+    @extend .input-group-text;
+    padding: .375rem;
+}
+
 .btn-toolbar {
     background: transparent;
     border: none;

@@ -39,6 +39,8 @@ $unicode in $jc-icomoon-icons {
 .wt-icon {
     &-add {
         @include jc-icon-color($jc-icon-green-color);
+        font-size: 1.25rem;
+        height: 1em;
     }
 
     &-delete {
