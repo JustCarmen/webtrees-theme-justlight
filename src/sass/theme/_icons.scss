@@ -14,10 +14,6 @@
     .btn-primary & {
         color: $jc-icon-white-color;
     }
-
-    .editfacts & {
-        font-size: 1.15rem;
-    }
 }
 
 /* Icomoon Icons */
@@ -30,7 +26,7 @@
 
 @each $icon,
 $unicode in $jc-icomoon-icons {
-    .icon-#{$icon} {
+    .#{$icon} {
         font-family: 'icomoon' !important;
 
         &:before {
@@ -39,7 +35,7 @@ $unicode in $jc-icomoon-icons {
     }
 }
 
-// Special wt-icon styling
+// Styling icons with the .wt-icon class
 .wt-icon {
     &-add {
         @include jc-icon-color($jc-icon-green-color);
@@ -61,7 +57,7 @@ $unicode in $jc-icomoon-icons {
     }
 }
 
-// special icon styling
+// Styling icons with the .icon class
 .icon {
     &-cfamily {
         font-size: 2rem;
@@ -83,6 +79,19 @@ $unicode in $jc-icomoon-icons {
             font-size: 2rem;
             vertical-align: bottom;
         }
+    }
+}
+
+// Styling other icons
+.fa-map-marker-alt {
+    @include jc-icon-color($jc-icon-red-color, 5%);
+}
+
+.wt-individual-silhouette {
+    &-f, &-m, &-u {   
+        line-height: 1;
+        font-style: normal;
+        font-size: 8rem;
     }
 }
 
