@@ -28,6 +28,7 @@ $select: "select2-selection--single";
     .#{$select} {
         border: $border-width solid $input-border-color;
         height: 100%;
+        min-height: 2rem;
 
         & .select2-selection__rendered {
             height: auto;

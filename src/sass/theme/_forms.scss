@@ -1,4 +1,18 @@
 /** JustLight Theme - Form elements */
 @import "forms-calendar";
 @import "forms-modals";
-@import "forms-select2"
+@import "forms-select2";
+
+.hideShowPassword-wrapper {
+	button {        
+        @extend .btn;
+        @extend .btn-secondary;
+        border: $jc-theme-medium-dark;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+	}
+}
+
+.form-row {
+    margin-bottom: .5rem;
+}

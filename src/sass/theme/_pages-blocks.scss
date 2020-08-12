@@ -56,3 +56,23 @@
         }
     }
 }
+
+.wt-block-content-user_messages {
+    button {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-primary;
+    }
+    form {
+        @extend .form-inline;
+        @extend .mb-3;
+    }
+    select {
+        @extend .form-control;
+        @extend .mx-2;
+    }
+    .table-responsive {
+        max-height: 30rem; /* 480px */
+        @extend .mb-5;
+    }
+}
