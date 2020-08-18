@@ -25,7 +25,11 @@
         @extend .table-striped;
 
         thead tr:last-child {
-            @include jc-theme-gradient-light;
+            background: theme-color('secondary');
+            height: 4rem;
+            th {
+               vertical-align: top; 
+            }            
         }
     }
 
