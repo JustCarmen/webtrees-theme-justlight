@@ -10,4 +10,10 @@
     @include jc-dropdown-menu-sm {
         flex-direction: column;
     }
+
+    .nav-link {
+        &:hover {
+            background: theme-color('secondary');
+        }
+    }
 }
