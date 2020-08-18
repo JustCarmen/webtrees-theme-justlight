@@ -48,8 +48,7 @@
     @include jc-button-gradient;
 }
 
-.btn-secondary,
-.btn-outline-secondary {
+.btn-secondary {
     @include jc-button-gradient-light;
 }
 
@@ -61,6 +60,22 @@
 .btn-toolbar {
     background: transparent;
     border: none;
+}
+
+.btn-outline-secondary {
+    color: $jc-theme-dark;
+    border-color: $jc-theme-medium-dark;
+    &:not(:disabled):not(.disabled) {
+        &.active,
+        &:active {
+            background: $jc-theme-medium;
+            border-color: $jc-theme-medium-dark;
+            box-shadow: none;
+        }
+    }
+    &:hover {
+        border-color: $jc-theme-medium-dark;
+    }
 }
 
 caption {
