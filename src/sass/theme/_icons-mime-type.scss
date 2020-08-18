@@ -1,0 +1,15 @@
+/** JustLight Theme - Icons - Mime type icons */
+.wt-mime {    
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 4rem;
+}
+
+@include jc-mime-icon('blank', 'blank');
+@include jc-mime-icon('application-pdf', 'pdf');
+@include jc-mime-icon('audio', 'mp3');
+@include jc-mime-icon('text', 'txt');
+@include jc-mime-icon('text-html', 'html');
+@include jc-mime-icon('video', 'mp4');

@@ -1,4 +1,4 @@
-/** JustLight Theme - Theme icons */
+/** JustLight Theme - Icons - general icons */
 [class*="icon-"] {
     @include jc-icon-color();
 
@@ -16,50 +16,6 @@
     }
 }
 
-/* Icomoon Icons */
-
-// workaround for unicode icons in sass.
-// See: http://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
-@function unicode($str) {
-    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
-}
-
-@each $icon,
-$unicode in $jc-icomoon-icons {
-    .#{$icon} {
-        font-family: 'icomoon' !important;
-
-        &:before {
-            content: unicode($unicode);
-        }
-    }
-}
-
-// Styling icons with the .wt-icon class
-.wt-icon {
-    &-add {
-        @include jc-icon-color($jc-icon-green-color);
-        font-size: 1.25rem;
-        height: 1em;
-    }
-
-    &-delete {
-        @include jc-icon-color($jc-icon-red-color);
-    }
-
-    &-help {
-        @include jc-icon-color($jc-icon-blue-color, 0%);
-    }
-
-    #sidebar .card-title & {
-        &-collapse,
-        &-expand {
-            @include jc-icon-color($jc-icon-white-color, 0%);
-        }
-    }
-}
-
-// Styling icons with the .icon class
 .icon {
     &-cfamily {
         font-size: 2rem;
@@ -74,6 +30,7 @@ $unicode in $jc-icomoon-icons {
     };
 }
 
+// Miscellaneous icons
 .wt-block-content {
     &-gedcom_block,
     &-user_welcome {
@@ -84,7 +41,6 @@ $unicode in $jc-icomoon-icons {
     }
 }
 
-// Styling other icons
 .fa-map-marker-alt {
     @include jc-icon-color($jc-icon-red-color, 5%);
 }
@@ -97,3 +53,6 @@ $unicode in $jc-icomoon-icons {
     }
 }
 
+@import "icons-theme";
+@import "icons-icomoon";
+@import "icons-mime-type";

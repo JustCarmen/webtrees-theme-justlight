@@ -83,3 +83,16 @@
         color: darken($color, $darken);
     }
 }
+
+// Mime type icons - https://github.com/dmhendricks/file-icon-vectors/
+@mixin jc-mime-icon($class, $svg) {
+    $image_dir: 'node_modules/file-icon-vectors/dist/icons/vivid/';
+    @if ($class == 'blank') {
+        $class: '.wt-mime';
+    } @else {
+        $class: '.wt-mime-' + $class;
+    }
+    #{$class} {
+        background-image: url($image_dir + $svg + '.svg');
+    }  
+}
