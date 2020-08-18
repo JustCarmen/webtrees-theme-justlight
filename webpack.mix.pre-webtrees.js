@@ -15,18 +15,16 @@ const CopyPlugin = require('copy-webpack-plugin');
 // It's purpose is to prevent the webtrees colorbox css from loading
 mix.webpackConfig({
     plugins: [
-      new CopyPlugin({
-        patterns: [
-          {
-            from: __dirname + '/' + config.webtrees_css_dir + '/_base.css',
-            to: __dirname + '/' + config.webtrees_css_dir + '/_base.tmp.css',
-            transform(content) {
-                return content
-                  .toString()
-                  .replace('@import "_colorbox.css";', '/* @import "_colorbox.css"; */')
-            },
-          },
-        ],
-      }),
+        new CopyPlugin({
+            patterns: [{
+                from: __dirname + '/' + config.webtrees_css_dir + '/_base.css',
+                to: __dirname + '/' + config.webtrees_css_dir + '/_base.tmp.css',
+                transform(content) {
+                    return content
+                        .toString()
+                        .replace('@import "_colorbox.css";', '/* @import "_colorbox.css"; */')
+                },
+            }, ],
+        }),
     ],
 })
