@@ -2,20 +2,26 @@
  * Laravel mix - Mainstream webtrees base
  * 
  * Output:
- * 		- webtrees.base.css
+ *    	- webtrees.base.css
+ *      - webtrees.colorbox.css
+ *      - webtrees.vendor.css
+ * 	
  */
 
 let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 
 //https://github.com/bezoerb/postcss-image-inliner
-const postcss_image_inliner = require("postcss-image-inliner")({
-    assetPaths: [config.webtrees_css_dir],
+const postcss_image_inliner = require('postcss-image-inliner')({
+    assetPaths: [config.webtrees_css_dir, config.webtrees_npm_dir + '/jquery-colorbox/example1/'],
     maxFileSize: 0
 });
 
 //https://www.npmjs.com/package/postcss-discard-comments
 const postcss_discard_comments = require("postcss-discard-comments")();
+
+//https://github.com/gregnb/filemanager-webpack-plugin
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 // see: webtrees - resources/css/vendor.css. 
 // We need to compile it again because we don't want bootstrap inside this package.
@@ -35,11 +41,24 @@ mix
         config.webtrees_npm_dir + '/leaflet.markercluster/dist/MarkerCluster.css',
         config.webtrees_css_dir + '/_vendor-patches.css'
     ], config.build_dir + '/webtrees.vendor.css')
-    .postCss(config.webtrees_css_dir + '/_base.css' ,  config.build_dir + '/webtrees.base.css')   
+    .postCss(config.webtrees_npm_dir + '/jquery-colorbox/example1/colorbox.css', config.build_dir + '/webtrees.colorbox.css')
+    .postCss(config.webtrees_css_dir + '/_base.tmp.css', config.build_dir + '/webtrees.base.css')
     .options({
         processCssUrls: false,
         postCss: [
             postcss_image_inliner,
-            postcss_discard_comments
+            postcss_discard_comments            
+        ]
+    })
+    .webpackConfig({
+        plugins: [
+          new FileManagerPlugin({
+            onEnd: {
+              delete: [
+                  __dirname + '/' + config.webtrees_css_dir + '/_base.tmp.css'
+              ]
+            }
+          })
         ]
     });
+    

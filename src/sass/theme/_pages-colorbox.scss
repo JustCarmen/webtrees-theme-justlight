@@ -31,3 +31,41 @@
  *           +----#cboxBottomCenter
  *           +----#cboxBottomRight
  */
+
+@import "~build/webtrees.colorbox";
+
+#cboxSlideshow {
+    .cboxSlideshow_on & {
+        position:absolute;
+        bottom:0; left:54px;
+        background:url(slideshow_controls.png) no-repeat 0 0;
+        width:25px; height:25px;
+        text-indent:-9999px;
+    }
+
+    &:hover {
+        background-position:0 -25px;
+    }
+
+    .cboxSlideshow_off & {
+        position:absolute;
+        bottom:0; left:54px;
+        background:url(slideshow_controls.png) no-repeat -25px 0;
+        width:25px;
+        height:25px;
+        text-indent:-9999px;
+    }
+
+    &:hover {
+        background-position:-25px -25px;
+    }
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {
+    &:focus {
+        outline: 0;
+    }
+}

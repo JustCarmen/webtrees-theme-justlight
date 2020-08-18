@@ -190,38 +190,53 @@ use Psr\Http\Message\ServerRequestInterface;
         <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
         <script>
-        // Trigger an event when we click on an (any) image
-        $('body').on('click', 'a.gallery', function() {
-            // Enable colorbox for images
-            $("a[type^=image].gallery").colorbox({
-                // Don't scroll window with document
-                fixed: true,
-                width: "85%",
-                height: "85%",
-                current: "",
-                previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
-                next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
-                slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
-                slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
-                close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
-                title: function() {
-                    return this.dataset.title;
-                },
-                photo: true,
-                rel: "gallery", // Turn all images on the page into a slideshow
-                slideshow: true,
-                slideshowAuto: false,
-                // Add wheelzoom to the displayed image
-                onComplete: function() {
-                    // Disable click on image triggering next image
-                    // https://github.com/jackmoore/colorbox/issues/668
-                    $(".cboxPhoto").unbind("click");
+	        // In this theme we use colorbox for pdf's
+	        $('.wt-mime-application-pdf').parent('a').each(function() {
+	            $(this).addClass('gallery');
+	            $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
+	        });
 
-                    wheelzoom(document.querySelectorAll(".cboxPhoto"));
-                }
-            });
-        });
-    </script>
+	        // Trigger an event when we click on an (any) image or pdf
+	        $('body').on('click', 'a.gallery', function() {
+	            // Enable colorbox for images and pdf
+	            $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
+	                // Don't scroll window with document
+	                fixed: true,
+	                width: "85%",
+	                height: "85%",
+	                current: "",
+	                previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
+	                next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
+	                slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
+	                slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
+	                close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
+	                title: function() {
+	                    return this.dataset.title;
+	                },
+	                rel: "gallery", // Turn all images on the page into a slideshow
+	                slideshow: true,
+	                slideshowAuto: false,
+	                // Add wheelzoom to the displayed image
+	                onComplete: function() {
+	                    // Disable click on image triggering next image
+	                    // https://github.com/jackmoore/colorbox/issues/668
+	                    $(".cboxPhoto").unbind("click");
+                        // Enable wheel/pinch zooming
+                        $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
+	                }
+	            });
+
+	            // Image settings
+	            $("a[type^=image].gallery").colorbox({
+	                photo: true,  
+	            });
+
+	            // PDF settings
+	            $("a[type$=pdf].gallery").colorbox({
+	                iframe: true
+	            });
+	        });
+        </script>
 
         <?= View::stack('javascript') ?>
 

@@ -4,13 +4,14 @@
   "description": "JustLight theme for webtrees",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justcarmen/jc-basetheme.git"
+    "url": "https://github.com/justcarmen/justlight.git"
   },
   "author": "Carmen Pijpers-Knegt",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/justcarmen/jc-basetheme#readme",
+  "homepage": "https://github.com/justcarmen/justlight#readme",
   "scripts": {
-    "webtrees": "cross-env process.env.section=webtrees NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "pre-webtrees": "cross-env process.env.section=pre-webtrees NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "webtrees": "npm run pre-webtrees && cross-env process.env.section=webtrees NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "development": "cross-env process.env.section=theme NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "development-webtrees": "npm run webtrees && npm run development",
     "debug": "cross-env process.env.section=theme NODE_ENV=development node --nolazy --inspect-brk=9229 node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "copy-webpack-plugin": "^6.0.3",
     "filemanager-webpack-plugin": "^2.0.5",
     "laravel-mix": "^5.0.4",
     "laravel-mix-alias": "^1.0.2",
