@@ -2,8 +2,13 @@
 .wt-genealogy-menu {
 
     @include media-breakpoint-up(md) {
-        .jc-nav-link-active {
-            @include jc-button-gradient;
+        .nav-link {
+            &.jc-nav-link-active {
+                @include jc-button-gradient;
+            }
+            &:hover {
+                background: theme-color('secondary');
+            }
         }
     }
 
@@ -11,9 +16,4 @@
         flex-direction: column;
     }
 
-    .nav-link {
-        &:hover {
-            background: theme-color('secondary');
-        }
-    }
 }
