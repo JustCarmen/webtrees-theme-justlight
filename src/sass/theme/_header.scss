@@ -31,6 +31,12 @@
 .wt-header-wrapper {
     @include jc-header-gradient;
 
+    @include media-breakpoint-down(md) {
+        &.sticky-top {
+            position: relative;
+        }
+    }
+
     .wt-header-container {
         @include jc-container-fluid;
     }
@@ -88,6 +94,10 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         @include jc-padding-lr(2);
+
+        &.navbar-collapse {
+            align-items: flex-start;
+        }
     }
 
     .navbar {
