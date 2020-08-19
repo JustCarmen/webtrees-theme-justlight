@@ -6,10 +6,10 @@ use Fisharebest\Webtrees\I18N;
 
 <h2 class="wt-page-title"><?= $title ?></h2>
 
-<table class="faq">
+<table class="faq table table-sm">
     <?php foreach ($faqs as $id => $faq) : ?>
     <tr>
-        <td style="padding: 5px;">
+        <td p-1>
             <a href="#faq<?= e($id) ?>"><?= e($faq->header) ?></a>
         </td>
     </tr>
@@ -18,9 +18,11 @@ use Fisharebest\Webtrees\I18N;
 
 <?php foreach ($faqs as $id => $faq) : ?>
     <hr>
-    <div class="faq_title" id="faq<?= $id ?>">
-        <?= e($faq->header) ?>
-        <div class="faq_top faq_italic">
+    <div class="row">
+        <div class="faq_title col-sm-9 h3" id="faq<?= $id ?>">
+            <?= e($faq->header) ?>       
+        </div>
+        <div class="faq_top font-italic col-sm-3 text-right">
             <a href="#content"><?= I18N::translate('back to top') ?></a>
         </div>
     </div>
