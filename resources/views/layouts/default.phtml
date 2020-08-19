@@ -241,8 +241,8 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= View::stack('javascript') ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-        return $module->bodyContent();
-    })->implode('') ?>
+            return $module->bodyContent();
+        })->implode('') ?>
 
         <?= DebugBar::render() ?>
     </body>
