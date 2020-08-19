@@ -8,6 +8,12 @@
   &, a, .far, .fas {
     color: $white;
   }
+  & .wt-icon {
+    &-collapse,
+    &-expand {
+      @include jc-icon-color($jc-icon-white-color, 0%);
+    }
+  }
 }
 
 @mixin jc-theme-gradient-hover() {

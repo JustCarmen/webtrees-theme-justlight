@@ -1,6 +1,12 @@
 /** JustLight Theme - Specific pages - Cards */
 .card {
     overflow-x: auto;
+
+    /** Individual page Sidebar */
+    #sidebar & {
+        font-size: $font-size-sm;
+    }
+
 }
 
 .card-header {
@@ -13,10 +19,6 @@
         line-height: 1.8rem;
         @include jc-padding-tb(.25);
 
-        &:not(#name-header-add) {
-            @include jc-theme-gradient-light;
-        }
-
         a:first-child,
         .card-title {
             flex: 1;
@@ -25,10 +27,11 @@
         .btn-link {
             @include jc-padding-tb(0);
         }
-
-        &#name-header-0 {
-            @include jc-theme-gradient;
-        }
+    }
+    
+    /** Individual page name card (first) */
+    #individual-names .card:first-of-type & {
+        @include jc-theme-gradient;
     }
 
     /** Individual page Sidebar */
