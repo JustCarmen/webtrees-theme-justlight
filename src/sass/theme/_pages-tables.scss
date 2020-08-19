@@ -88,3 +88,13 @@ table {
         white-space: nowrap;
     }
 }
+
+/** Stories table */
+.jc-stories-table {
+    thead tr {
+        @include jc-theme-gradient;
+        th {
+           vertical-align: top; 
+        }
+    }
+}
