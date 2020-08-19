@@ -25,6 +25,39 @@
             .wt-page-content & {
                 display: none;
             }
+        } 
+        
+        @include media-breakpoint-down(md) {
+            border: none;
+            padding: .5rem;
+
+            &, 
+            &.active,
+            &.active:hover,
+            &:hover {
+                background: transparent;
+                color: $body-color;
+            }
+
+            &:hover {
+                color: theme-color();                
+            }
+
+            &.active {
+                background: $jc-theme-lightest;
+                border-left: $border-width solid $jc-theme-medium; 
+                border-top: $border-width solid $jc-theme-medium; 
+                border-right: $border-width solid $jc-theme-medium; 
+            }
+
+            &.active:hover {
+                background: $jc-theme-lighter;
+            }
+
+            &.text-muted {
+                display: none;
+            }
         }
     }
+   
 }
