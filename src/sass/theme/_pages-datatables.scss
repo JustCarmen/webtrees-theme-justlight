@@ -24,12 +24,11 @@
     @at-root table.dataTable {
         @extend .table-striped;
 
-        thead tr:last-child {
-            background: theme-color('secondary');
-            height: 4rem;
+        thead tr {
+            @include jc-theme-gradient;
             th {
                vertical-align: top; 
-            }            
+            }
         }
     }
 
