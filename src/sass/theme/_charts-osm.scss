@@ -1,0 +1,16 @@
+/** JustLight Theme - Charts - Openstreetmap chart */
+.osm-wrapper {
+    margin: 0;
+}
+
+.osm-sidebar {
+    .gchart {
+        border: $border-width dashed $jc-theme-medium-dark;
+        margin-bottom: .5rem;
+        color: theme-color();
+
+        .label{
+            font-weight: 700;
+        }
+    }
+}
