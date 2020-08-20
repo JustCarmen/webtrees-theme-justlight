@@ -24,7 +24,7 @@
     @at-root table.dataTable {
         @extend .table-striped;
 
-        thead tr {
+        thead tr:last-child {
             @include jc-theme-gradient;
             th {
                vertical-align: top; 
