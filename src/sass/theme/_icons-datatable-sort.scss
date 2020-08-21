@@ -1,0 +1,48 @@
+/** JustLight Theme - Icons - Datatable sort icons */
+
+// https://datatables.net/forums/discussion/40100/replacing-original-sorting-icons-with-bootstrap-4
+%jc-dtsort {
+    font-family: "Font Awesome 5 Free";
+    opacity: 1;
+    top: .5rem !important;
+}
+
+table.dataTable {
+    thead {
+        th {
+            &.sorting {
+                &:before,
+                &_asc:before,
+                &_desc:before,
+                &_asc_disabled:before,
+                &_desc_disabled:before {
+                    right: 0 !important;
+                    content: "";
+                }
+
+                &:after {
+                    @extend %jc-dtsort;
+                    content: unicode($jc-dtsort);
+                    color: $jc-icon-white-color;
+                    font-size: 1rem;
+                }
+
+                &_asc:after {
+                    @extend %jc-dtsort;
+                    content: unicode($jc-dtsort-up);                    
+                }
+
+                &_desc:after {
+                   @extend %jc-dtsort;
+                   content: unicode($jc-dtsort-down);
+                }
+
+                &_asc_disabled:after,
+                &_desc_disabled:after {
+                    right: 0 !important;
+                    content: "";
+                }
+            }
+        }
+    }
+}
