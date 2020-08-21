@@ -6,19 +6,16 @@
 @mixin jc-theme-gradient() {
   background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
   &, a, .far, .fas {
-    color: $white;
+    color: $jc-theme-lightest;
   }
-  & .wt-icon {
-    &-collapse,
-    &-expand {
-      @include jc-icon-color($jc-icon-white-color, 0%);
-    }
+  & [class*="icon-"] {
+    @include jc-icon-color($jc-icon-white-color, 0%);
   }
 }
 
 @mixin jc-theme-gradient-hover() {
   background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
-  color: $white;
+  color: $jc-theme-lightest;
 }
 
 @mixin jc-theme-gradient-light() {

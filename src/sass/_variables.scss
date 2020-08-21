@@ -24,7 +24,7 @@ $jc-brand-primary: #428bca;
 $jc-brand-primary-hover: #5e5e5e;
 
 // Border colors etc.
-$jc-theme-lightest: #f9f9f9; // background in fact-tables
+$jc-theme-lightest: #f9f9f9; // background in fact-tables and colors on blue gradient
 $jc-theme-lighter: $jc-secondary;
 $jc-theme-light: $jc-gray-300;
 $jc-theme-medium: $jc-gray-400; // table borders
@@ -37,22 +37,22 @@ $jc-icon-color: $jc-gray-900; // Bootstrap body color
 $jc-icon-blue-color: $jc-primary;
 $jc-icon-green-color: $jc-green;
 $jc-icon-red-color: $jc-red;
-$jc-icon-white-color: #fff; // Bootstrap $white
+$jc-icon-white-color: $jc-theme-lightest;
 
 // Icomoon icons - see: https://icomoon.io/
 // These icons are especially made to use in this theme
 // Class = 'icon-*'
 $jc-icomoon-icons: () !default;
 $jc-icomoon-icons: map_merge((      
-        icon-silhouette-F: 'e601',        
-        icon-silhouette-M: 'e602',
-        icon-silhouette-U: 'e603',
-        icon-sfamily: 'e604',
-        icon-cfamily: 'e604',
-        icon-children: 'e605',
-        icon-childless: 'e606',
-        icon-pedigree: 'e609',
-        wt-individual-silhouette-f: 'e601',
-        wt-individual-silhouette-m: 'e602',
-        wt-individual-silhouette-u: 'e603',
-    ), $jc-icomoon-icons);
+    icon-silhouette-F: 'e601',        
+    icon-silhouette-M: 'e602',
+    icon-silhouette-U: 'e603',
+    icon-sfamily: 'e604',
+    icon-cfamily: 'e604',
+    icon-children: 'e605',
+    icon-childless: 'e606',
+    icon-pedigree: 'e609',
+    wt-individual-silhouette-f: 'e601',
+    wt-individual-silhouette-m: 'e602',
+    wt-individual-silhouette-u: 'e603',
+), $jc-icomoon-icons);
