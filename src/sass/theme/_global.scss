@@ -104,8 +104,8 @@ dd {
 }
 
 .wt-page-options {
+    @include jc-table-border-medium;
     background: $jc-theme-lighter;
-    border: $border-width solid $jc-theme-medium;
     padding: 1rem;
     margin-bottom: 2rem;
 }

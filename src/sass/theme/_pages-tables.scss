@@ -18,7 +18,7 @@ table {
 
     th,
     td {
-        border: $border-width solid $jc-theme-medium;
+        @include jc-table-border-medium;
         padding: .75rem;
     }
 
@@ -80,7 +80,7 @@ table {
 
 /** JC Stats Table */
 .jc-stats-table {
-    border: $border-width solid $jc-theme-medium;
+    @include jc-table-border-medium;
     font-size: $font-size-sm;
 
     th {

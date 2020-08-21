@@ -67,6 +67,11 @@
     }
 }
 
+// Table border
+@mixin jc-table-border-medium {
+    border: $border-width solid $jc-theme-medium;
+}
+
 // breakout of the default container
 @mixin jc-container-breakout {
 	width: 100vw;
