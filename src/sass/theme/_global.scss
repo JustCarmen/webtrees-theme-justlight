@@ -94,9 +94,18 @@ dd {
     }
 }
 
+.error {
+    color: $jc-red;
+    font-weight: 600;
+}
+
 // remove default blue outline on focus
 :focus {
     box-shadow: none !important;
+}
+
+.indent {
+    padding-left: 1rem;
 }
 
 .wt-page-menu-button {
