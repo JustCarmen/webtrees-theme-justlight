@@ -73,8 +73,8 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= View::stack('styles') ?>
 
         <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-        return $module->headContent();
-    })->implode('') ?>
+            return $module->headContent();
+        })->implode('') ?>
 
         <?= DebugBar::renderHead() ?>
     </head>
