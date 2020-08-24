@@ -4,7 +4,7 @@
 %jc-dtsort {
     font-family: "Font Awesome 5 Free";
     opacity: 1;
-    top: .5rem !important;
+    right: .25rem;
 }
 
 table.dataTable {
@@ -16,7 +16,6 @@ table.dataTable {
                 &_desc:before,
                 &_asc_disabled:before,
                 &_desc_disabled:before {
-                    right: 0 !important;
                     content: "";
                 }
 
@@ -39,7 +38,6 @@ table.dataTable {
 
                 &_asc_disabled:after,
                 &_desc_disabled:after {
-                    right: 0 !important;
                     content: "";
                 }
             }
