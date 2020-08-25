@@ -35,6 +35,7 @@
 
 .wt-side-blocks {
     border-left: $border-width solid $jc-theme-lighter;
+    font-size: $font-size-sm;
 
     > div {
         &:not(:last-child) {
