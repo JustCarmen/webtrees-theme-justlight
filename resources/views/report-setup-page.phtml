@@ -1,0 +1,94 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+
+/**
+ * @var string               $title
+ * @var string               $description
+ * @var string               $destination
+ * @var string               $format
+ * @var array<array<string>> $inputs
+ * @var string               $format
+ */
+
+?>
+
+<h2 class="wt-page-title">
+    <?= $title ?>
+</h2>
+
+<form method="post" class="wt-page-options wt-page-options-report-setup">
+    <?= csrf_field() ?>
+
+    <div class="row form-group">
+        <div class="col-sm-3 col-form-label wt-page-options-label">
+            <?= I18N::translate('Description') ?>
+        </div>
+        <div class="col-sm-9 wt-page-options-value">
+            <?= $description ?>
+        </div>
+    </div>
+
+    <?php foreach ($inputs as $n => $input) : ?>
+        <input type="hidden" name="varnames[]" value="<?= e($input['name']) ?>">
+        <div class="row form-group">
+            <label class="col-sm-3 col-form-label wt-page-options-label" for="input-<?= $n ?>">
+                <?= I18N::translate($input['value']) ?>
+            </label>
+            <div class="col-sm-9 wt-page-options-value">
+                <?= $input['control'] ?>
+                <?= $input['extra'] ?>
+            </div>
+        </div>
+    <?php endforeach ?>
+
+    <div class="row form-group">
+        <div class="col-sm-3 col-form-label wt-page-options-label">
+            <?= I18N::translate('Format') ?>
+        </div>
+
+        <div class="col-sm-9 wt-page-options-value d-flex justify-content-around">
+            <div class="text-center">
+                <label for="HTML" title="HTML">
+                    <?= view('icons/mime', ['type' => 'text/html']) ?>
+                    <span class="sr-only">HTML</span>
+                </label>
+                <br>
+                <input type="radio" name="format" id="HTML" value="HTML" <?= $format === 'HTML' ? 'checked' : '' ?>>
+            </div>
+            <div class="text-center">
+                <label for="PDF" title="PDF">
+                    <?= view('icons/mime', ['type' => 'application/pdf']) ?>
+                    <span class="sr-only">PDF</span>
+                </label>
+                <br>
+                <input type="radio" name="format" value="PDF" id="PDF" <?= $format === 'PDF' ? 'checked' : '' ?>>
+            </div>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-sm-3 col-form-label wt-page-options-label"></div>
+        <div class="col-sm-9 wt-page-options-value">
+            <?php if ($destination === 'download') : ?>
+                <button type="submit" name="destination" value="download" class="btn btn-primary">
+                    <?= view('icons/download') ?>
+                    <?= I18N::translate('download') ?>
+                </button>
+                <button type="submit" name="destination" value="view" class="btn btn-secondary">
+                    <?= view('icons/report') ?>
+                    <?= I18N::translate('view') ?>
+                </button>
+            <?php else : ?>
+                <button type="submit" name="destination" value="view" class="btn btn-primary">
+                    <?= view('icons/report') ?>
+                    <?= I18N::translate('view') ?>
+                </button>
+                <button type="submit" name="destination" value="download" class="btn btn-secondary">
+                    <?= view('icons/download') ?>
+                    <?= I18N::translate('download') ?>
+                </button>
+            <?php endif ?>
+        </div>
+    </div>
+</form>
