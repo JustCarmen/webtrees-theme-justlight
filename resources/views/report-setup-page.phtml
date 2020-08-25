@@ -14,20 +14,12 @@ use Fisharebest\Webtrees\I18N;
 ?>
 
 <h2 class="wt-page-title">
-    <?= $title ?>
+    <?= I18N::translate('Report') . ' - ' . $title ?>
+    <p class="small mt-2"> <?= $description ?></p>
 </h2>
 
 <form method="post" class="wt-page-options wt-page-options-report-setup">
     <?= csrf_field() ?>
-
-    <div class="row form-group">
-        <div class="col-sm-3 col-form-label wt-page-options-label">
-            <?= I18N::translate('Description') ?>
-        </div>
-        <div class="col-sm-9 wt-page-options-value">
-            <?= $description ?>
-        </div>
-    </div>
 
     <?php foreach ($inputs as $n => $input) : ?>
         <input type="hidden" name="varnames[]" value="<?= e($input['name']) ?>">
@@ -36,8 +28,12 @@ use Fisharebest\Webtrees\I18N;
                 <?= I18N::translate($input['value']) ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
-                <?= $input['control'] ?>
-                <?= $input['extra'] ?>
+                <div class="input-group">
+                    <?= $input['control'] ?>
+                    <div class="input-group-append">
+                        <?= $input['extra'] ?>
+                    </div>
+                </div>
             </div>
         </div>
     <?php endforeach ?>
