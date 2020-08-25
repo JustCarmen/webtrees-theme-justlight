@@ -1,8 +1,8 @@
 {
-	"name" : "justcarmen/jc-theme-justlight",
+	"name" : "justcarmen/webtrees-theme-justlight",
 	"description" : "justlight theme for webtrees",
 	"type" : "webtrees-theme",
-	"homepage" : "https://github.com/justcarmen/justlight",
+	"homepage" : "https://github.com/justcarmen/webtrees-theme-justlight",
 	"license" : "GPL-3.0+",
 	"minimum-stability" : "stable",
 	"authors" : [{
@@ -13,7 +13,7 @@
 		}
 	],
 	"support" : {
-		"issues" : "https://github.com/justcarmen/justlight/issues"
+		"issues" : "https://github.com/justcarmen/webtrees-theme-justlight/issues"
 	},
 	"keywords" : [
 		"webtrees",
@@ -25,6 +25,6 @@
 		}
 	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "~2.0.5"
+		"fisharebest/webtrees" : "~2.0.7"
 	}
 }

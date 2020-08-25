@@ -1,14 +1,14 @@
 {
-  "name": "jc-theme-justlight",
-  "version": "2.0.0",
+  "name": "webtrees-theme-justlight",
+  "version": "2.0.7",
   "description": "JustLight theme for webtrees",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justcarmen/justlight.git"
+    "url": "https://github.com/justcarmen/webtrees-theme-justlight.git"
   },
   "author": "Carmen Pijpers-Knegt",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/justcarmen/justlight#readme",
+  "homepage": "https://github.com/justcarmen/webtrees-theme-justlight#readme",
   "scripts": {
     "pre-webtrees": "cross-env process.env.section=pre-webtrees NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "webtrees": "npm run pre-webtrees && cross-env process.env.section=webtrees NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
