@@ -67,7 +67,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
 
         // Add all javascript used by this module in a view
-        View($this->name() . '::theme/script');
+        View($this->name() . '::theme/script.js');
 
         // Replace an existing view with our own version.
         View::registerCustomView('::report-setup-page', $this->name() . '::report-setup-page');
