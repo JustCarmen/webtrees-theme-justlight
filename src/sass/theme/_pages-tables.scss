@@ -91,6 +91,7 @@ table {
 
 /** Stories table */
 .jc-stories-table {
+    @include jc-table-border-medium;
     thead tr {
         @include jc-theme-gradient;
         th {
