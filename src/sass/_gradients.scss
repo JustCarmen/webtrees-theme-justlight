@@ -11,6 +11,9 @@
   & [class*="icon-"] {
     @include jc-icon-color($jc-icon-white-color, 0%);
   }
+  th {
+    font-weight: 600;
+  }
 }
 
 @mixin jc-theme-gradient-hover() {
