@@ -32,7 +32,7 @@
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
     "sass": "^1.26.10",
-    "sass-loader": "^10.0.0",
+    "sass-loader": "^10.0.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
