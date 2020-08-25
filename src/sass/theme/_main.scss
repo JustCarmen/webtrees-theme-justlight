@@ -1,0 +1,25 @@
+/** JustLight Theme - Page main content */
+
+/*
+ * Pages main have the following high-level structure:
+ *
+ * wt-main-wrapper
+ * +---wt-main-container
+ *     +---wt-main-content
+ *         +---wt-messages
+ *         +---wt-page-title
+ *         +---wt-page-options wt-page-options-xxxxx
+ *         +---wt-page-content
+ */
+.wt-main-wrapper {
+    flex: 1;
+    height: 100vw;
+
+    .wt-page-title {
+        margin-top: $jc-main-wrapper-spacer;
+        margin-bottom: $jc-main-wrapper-spacer;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+}
+

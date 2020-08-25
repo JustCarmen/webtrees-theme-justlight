@@ -1,0 +1,63 @@
+/** JustLight Theme - Specific pages - Tabs */
+.nav-tabs {
+    .nav-link {
+        @include jc-theme-gradient-light;
+        border: $border-width solid $jc-theme-medium;
+
+        &.active {
+            @include jc-theme-gradient;
+            &:hover {
+                @include jc-theme-gradient-hover;
+            }
+        }
+
+        &:hover {
+            @include jc-theme-gradient-light-hover;
+        }
+
+        &.text-muted {
+            background: $jc-theme-lightest;
+
+            &:hover {
+                background: $jc-theme-light;
+            }
+
+            .wt-page-content & {
+                display: none;
+            }
+        } 
+        
+        @include media-breakpoint-down(md) {
+            border: none;
+            padding: .5rem;
+
+            &, 
+            &.active,
+            &.active:hover,
+            &:hover {
+                background: transparent;
+                color: $body-color;
+            }
+
+            &:hover {
+                color: theme-color();                
+            }
+
+            &.active {
+                background: $jc-theme-lightest;
+                border-left: $border-width solid $jc-theme-medium; 
+                border-top: $border-width solid $jc-theme-medium; 
+                border-right: $border-width solid $jc-theme-medium; 
+            }
+
+            &.active:hover {
+                background: $jc-theme-lighter;
+            }
+
+            &.text-muted {
+                display: none;
+            }
+        }
+    }
+   
+}

@@ -1,0 +1,83 @@
+/** JustLight Theme - Specific pages - Datatables */
+.dataTables_wrapper {
+    @extend .table-responsive;
+    margin-top: 1rem;
+
+    @at-root .page-item.active {
+        .page-link {
+            @include jc-theme-gradient;
+        }
+    }
+
+    @at-root .dataTables_paginate {
+        margin-bottom: .5rem;
+    }
+
+    @at-root .dataTables_filter {
+        align-self: flex-end;
+    }
+
+    @at-root .dataTables_length {
+        padding-top: .85rem;
+    }
+
+    @at-root table.dataTable {
+        @extend .table-striped;
+
+        thead tr:last-child {
+            @include jc-theme-gradient;
+            th {
+               vertical-align: top; 
+            }
+        }
+    }
+
+    @at-root .wt-table-individual,
+    .wt-table-family {
+        border: 0;
+
+        thead {
+            tr {
+                &:first-child {
+                    th {
+                        border: 0 !important;
+                        padding: 0 !important;
+                    }
+                }
+
+                &:not(:first-child) {
+                    th {
+                        border-left-width: 1px !important;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            td {
+                border-left-width: 1px !important;
+                border-bottom-width: 1px !important;
+            }
+        }
+
+        tfoot {
+            th {
+                border: 0;
+                padding: 0;
+
+                .btn-group {
+                    margin-top: 1.5rem;
+
+                    .btn {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        .btn-toolbar {
+            margin-top: 1rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+    }
+}

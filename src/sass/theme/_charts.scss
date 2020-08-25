@@ -1,0 +1,34 @@
+/** JustLight Theme - Specific pages - Charts */
+
+/*
+ * Chart-boxes are used to build the various charts.
+ * Each type of chart will set its own size and hide/show content.
+ *
+ * wt-chart-box
+ * +--- wt-chart-box-thumbnail
+ * +--- wt-chart-box-extra
+ *      +--- wt-chart-box-zoom
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-zoom-dropdown
+ *      +--- wt-chart-box-links
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-links-dropdown
+ * +--- wt-chart-box-name
+ * +--- wt-chart-box-lifespan
+ * +--- wt-chart-box-facts
+ *     +--- wt-chart-box-fact
+ */
+
+ .wt-chart-box {
+     font-size: $font-size-sm;
+ }
+
+@import "charts-ancestors";
+@import "charts-chartbox";
+@import "charts-descendants";
+@import "charts-fanchart";
+@import "charts-interactive";
+@import "charts-lifespan";
+@import "charts-osm";
+@import "charts-pedigree";
+@import "charts-timeline";

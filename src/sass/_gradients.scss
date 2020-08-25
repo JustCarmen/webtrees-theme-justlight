@@ -1,0 +1,67 @@
+// Declaration of the theme gradients
+
+// =======================================================================================
+// Gradient for table, card headers, buttons etc.
+// =======================================================================================
+@mixin jc-theme-gradient() {
+  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  &, a, .far, .fas {
+    color: $jc-theme-lightest;
+  }
+  & [class*="icon-"] {
+    @include jc-icon-color($jc-icon-white-color, 0%);
+  }
+  th {
+    font-weight: 600;
+  }
+}
+
+@mixin jc-theme-gradient-hover() {
+  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  color: $jc-theme-lightest;
+}
+
+@mixin jc-theme-gradient-light() {
+  background: linear-gradient($jc-theme-lightest 0%, $jc-theme-lighter 50%, $jc-theme-medium 100%);
+  &, a {
+    color: $body-color;
+  }
+}
+
+@mixin jc-theme-gradient-light-hover() {
+  background: linear-gradient($jc-theme-lighter 0%, $jc-theme-medium, $jc-theme-medium-dark 100%);
+}
+
+@mixin jc-theme-gradient-light-disabled() {
+  background: linear-gradient($jc-theme-lighter 0%, $jc-theme-lightest 75%);
+}
+
+@mixin jc-header-gradient() {
+  background: linear-gradient($white 0, $jc-theme-lightest 100%);
+  border-top: 5px solid theme-color(primary);
+  border-bottom: $border-width solid $jc-theme-lighter;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+}
+
+@mixin jc-button($color) {
+  border: $border-width solid theme-color($color);
+  border-radius: .25rem;
+  padding: $btn-padding-y $btn-padding-x;
+}
+
+@mixin jc-button-gradient() {
+  @include jc-button('primary');
+  @include jc-theme-gradient;
+  &:hover {
+    @include jc-theme-gradient-hover;
+  }
+}
+
+@mixin jc-button-gradient-light() {
+  @include jc-button('secondary');
+  @include jc-theme-gradient-light;
+  &:hover {
+    @include jc-theme-gradient-light-hover;
+  }
+}
+

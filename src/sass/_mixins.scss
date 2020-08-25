@@ -1,0 +1,103 @@
+// grid
+@mixin jc-container-fluid {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            max-width: 100vw;
+            padding-right: $grid-gutter-width;
+            padding-left: $grid-gutter-width;
+        }
+    }
+}
+
+// Sizes
+@mixin jc-padding-tb($size) {
+    @if ($size > 0) {
+        $size: #{$size}+'rem';
+    }
+
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin jc-padding-lr($size) {
+    @if ($size > 0) {
+        $size: #{$size}+'rem';
+    }
+
+    padding-left: $size;
+    padding-right: $size;
+}
+
+// Dropdown menu for small screens
+@mixin jc-dropdown-menu-sm {
+    @include media-breakpoint-down(sm) {
+        .dropdown-menu {
+            &.show {
+                position: relative;
+                background: none;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                padding-top: 0;
+                max-height: none;
+                height: auto;
+                overflow: visible;
+            }
+        }
+
+        .dropdown-item {
+            color: $link-color; // reset to original color
+
+            &.active {
+                background: none;
+                font-weight: 600;
+            }
+
+            @include hover-focus {
+                background: none;
+                color: $link-hover-color;
+                text-decoration: underline;
+            }
+
+            &:focus {
+                font-weight: 600;
+            }
+        }
+        @content;
+    }
+}
+
+// Table border
+@mixin jc-table-border-medium {
+    border: $border-width solid $jc-theme-medium;
+}
+
+// breakout of the default container
+@mixin jc-container-breakout {
+	width: 100vw;
+	position: relative;
+    left: calc(-1 * (100vw - 100%) / 2);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+// Icons
+@mixin jc-icon-color($color: $jc-icon-color, $darken: 10%) {
+    color: $color;
+    @include hover-focus() {
+        color: darken($color, $darken);
+    }
+}
+
+// Mime type icons - https://github.com/dmhendricks/file-icon-vectors/
+@mixin jc-mime-icon($class, $svg) {
+    $image_dir: 'node_modules/file-icon-vectors/dist/icons/vivid/';
+    @if ($class == 'blank') {
+        $class: '.wt-mime';
+    } @else {
+        $class: '.wt-mime-' + $class;
+    }
+    #{$class} {
+        background-image: url($image_dir + $svg + '.svg');
+    }  
+}

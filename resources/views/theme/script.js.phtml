@@ -1,0 +1,46 @@
+<?php 
+use Fisharebest\Webtrees\View; 
+?>
+
+<?php View::push('javascript') ?>
+<script>
+// Bootstrap active tab in navbar
+var url = location.href;
+$('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
+$('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
+
+// Remove class from caption (this class cannot be overwritten with css)
+$('caption').removeClass('text-center');
+
+// Descendants chart - add classes for styling purposes
+$('.wt-chart-descendants [id^="fam"]').each(function() {
+    $(this).addClass('jc-chart-descendants-family'),
+    $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
+    $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
+});
+
+// Ancestors chart - add classes for styling purposes
+$('.wt-chart-ancestors [id^="fam"]').each(function() {
+    $(this)
+        .find('.d-flex:first')
+        .addClass('mb-2')
+        .next('.d-flex')
+        .find('.wt-chart-vertical-indent')
+        .addClass('jc-chart-first-indent')    
+});
+
+// Badges static page - maybe we should restyle all badges
+$('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
+
+// Icons - Use fontawesome. These icons do not have a view to alter
+$('.icon-indis').addClass('fas fa-user');
+$('.icon-mypage').addClass('fas fa-tachometer-alt');
+$('.icon-selected').addClass('fas fa-check');
+$('.wt-icon-add').parent('.btn').removeClass('btn-secondary').addClass('jc-btn-secondary');
+$('.wt-icon-preferences').parent('.btn-link').addClass('ml-n1');
+
+// Prevent underlining when hovering over icons
+$('[class*="icon-"]').closest('a').addClass('text-decoration-none');
+</script>
+<?php View::endpush() ?>
+

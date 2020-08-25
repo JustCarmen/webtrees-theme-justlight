@@ -1,0 +1,64 @@
+// Standard sizes etc.
+$jc-font-size-base: 1rem; // Bootstrap default
+$jc-font-size-xs: .75rem;
+$jc-main-wrapper-spacer: 2.5rem;
+$jc-facts-table-header-width: 100%/6; // col-2 equivalent
+
+// Theme Colors
+$jc-blue: #337ab7;
+$jc-red: #B80000;
+$jc-green: #70D62C;
+$jc-babyblue: #d7eaf9;
+$jc-babypink: #fff0f5;
+$jc-gray-200: #e9ecef; // Bootstrap gray-200
+$jc-gray-300: #dee2e6; // Bootstrap gray-300
+$jc-gray-400: #ced4da; // Bootstrap gray-400
+$jc-gray-500: #adb5bd; // Bootstrap gray-500
+$jc-gray-900: #212529; // Bootstrap gray-900
+
+$jc-primary: $jc-blue;
+$jc-secondary: $jc-gray-200;
+
+// Usage: main site title (derived from Bootstrap 3)
+$jc-brand-primary: #428bca;
+$jc-brand-primary-hover: #5e5e5e;
+
+// Border colors etc.
+$jc-theme-lightest: #f9f9f9; // background in fact-tables and colors on blue gradient
+$jc-theme-lighter: $jc-secondary;
+$jc-theme-light: $jc-gray-300;
+$jc-theme-medium: $jc-gray-400; // table borders
+$jc-theme-medium-dark: $jc-gray-500;
+$jc-theme-dark: $jc-brand-primary-hover;
+$jc-theme-darker: $jc-gray-900; // body color
+
+// Icon colors
+$jc-icon-color: $jc-gray-900; // Bootstrap body color
+$jc-icon-blue-color: $jc-primary;
+$jc-icon-green-color: $jc-green;
+$jc-icon-red-color: $jc-red;
+$jc-icon-white-color: $jc-theme-lightest;
+
+// Icomoon icons - see: https://icomoon.io/
+// These icons are especially made to use in this theme
+// Class = 'icon-*'
+$jc-icomoon-icons: () !default;
+$jc-icomoon-icons: map_merge((      
+    icon-silhouette-F: 'e601',        
+    icon-silhouette-M: 'e602',
+    icon-silhouette-U: 'e603',
+    icon-sfamily: 'e604',
+    icon-cfamily: 'e604',
+    icon-children: 'e605',
+    icon-childless: 'e606',
+    icon-pedigree: 'e609',
+    wt-individual-silhouette-f: 'e601',
+    wt-individual-silhouette-m: 'e602',
+    wt-individual-silhouette-u: 'e603',
+), $jc-icomoon-icons);
+
+// Datatable sort icons
+$jc-dtsort: 'f0dc';
+$jc-dtsort-down: 'f0dd';
+$jc-dtsort-up: 'f0de';
+

@@ -1,3 +1,6 @@
-/.vscode/
-/assets/css/*.map
+.vscode
+mix-manifest.json
+/build/
+/resources/css/
 /node_modules/
+/vendor/

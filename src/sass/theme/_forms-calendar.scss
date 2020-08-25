@@ -1,0 +1,82 @@
+/** JustLight Theme - Forms - Calendar widget */
+div[id^="caldiv"],
+div[id^="calendar-widget"] {
+  table {
+    @extend .m-0;
+    td {
+      @extend .p-2;
+      background-color: $body-bg !important;
+    }
+  }
+  
+  > table {
+    border: $table-border-width solid $table-border-color;
+    @include box-shadow ($dropdown-box-shadow);
+
+    td {
+      border: none !important;
+    }
+
+    table {
+      td {        
+        border-radius: .25rem;
+        @extend .text-center;
+
+        a {
+          color: lighten($dropdown-link-disabled-color, 10%);
+          text-decoration: none;
+        }
+
+        &.optionbox,
+        &.descriptionbox {
+          a {
+           color: $body-color;
+          }
+        }
+
+        &:hover {
+          background-color: $dropdown-link-hover-bg !important;
+          a {
+            color: $dropdown-link-hover-color;
+          }
+        }
+      }
+      
+      tr:first-child {
+        font-weight: 700;
+        td {
+          &:hover {
+            background: none !important;
+          }
+        }        
+      }
+
+      tr:not(:first-child) {
+        td.descriptionbox {
+          position: relative;
+          &,
+          &:hover {
+            background-color: theme-color() !important;
+          }
+          a {
+            &,
+            &:hover {
+              color: $dropdown-link-active-color;
+            }
+          }
+          &:before {
+            content: '';
+            display: inline-block;
+            border: solid transparent;
+            border-width: 0 0 .5rem .5rem;
+            border-bottom-color: $dropdown-link-active-color;
+            border-top-color: rgba($black, .2);
+            position: absolute;
+            bottom: .25rem;
+            right: .25rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,26 +2,24 @@ JustLight Theme for webtrees
 ============================
 
 [![Latest Release](https://img.shields.io/github/release/JustCarmen/justlight.svg)](https://github.com/JustCarmen/justlight/releases/latest)
+[![Github Latest Release](https://img.shields.io/github/downloads/JustCarmen/justlight/total.svg)]()
+[![Github Latest Release](https://img.shields.io/github/downloads/JustCarmen/justlight/latest/total.svg)]()
 
-A light clean theme using the Bootstrap framework.
-This theme requires [webtrees 1.7.x](https://github.com/fisharebest/webtrees). Download the latest stable release of this theme [here](https://github.com/JustCarmen/justlight/releases/latest).
-
-*Note: the current development version (master branch) has been tested against webtrees 2.0 alpha.4. It does not work with older versions of webtrees, but it is also unlikely to be compatible with the latest webtrees development version, since webtrees is undergoing major changes right now.*
+A light theme in white and blue with focus on readibility. It uses a full screen where neccessary but takes into account small screens too. Since webtrees 1 this theme is optimized for using on tablets and mobile phones. Now webtrees 2 has implemented that by default. But still this theme has some extra's.
 
 Description
 -----------
-This is a new modern theme in clean white and blue. The layout is adjusted as much as possible for use on touch devices like tablets and mobile phones.
+This is a modern theme in clean white and blue. Originally it was designed to give the user a better experienced on touch devices liked tablets and mobile phones. To achieve this we use the Bootstrap framework in this theme.
 
-A few things to mention:
-* The menu is responsive. This means it will collapse on smaller screens and have only clickable items. You might be used to hover over a menu item to get it’s submenu but on touch devices the hover functionality doesn’t exist.
+Some features:
+- Sticky header
+- Footer stays at the bottom even when the page has little content.
 
-* The tabs at the individual page are replaced with bootstrap panels for a better layout on mobile devices.
+Webtrees didn't ignore the success of this theme and recognized the need to upgrade the core to meet nowadays user demands. And I am glad they did. Webtrees 2 has adopted the same Bootstrap framework and works smootly now on mobile phones and tablets.
 
-* At the individual page the sidebar will collapse automatically when viewing from smaller screens.
+Is this theme become superflous now? No! It still has enough fans to make it worth upgrading. At the end it is all a matter of taste.
 
-And much more...
-
-Like the [JustBlack theme](https://github.com/JustCarmen/justblack), this theme also have [it's own option module](https://github.com/JustCarmen/justlight_theme_options). You can opt for a compact menu, a separate media menu and/or to place the main menu items in any order you like.
+Since the core code has changed a lot I've made some concessions. Webtrees 2 required a complete rewrite of this theme and for sake of simplicity some features will not return. This also counts for the theme option module. If there is a lot of need for special options I might consider to bring it back but at the moment I don't feel the need. 
 
 Installation and upgrading
 --------------------------

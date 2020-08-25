@@ -1,0 +1,26 @@
+/** JustLight Theme - Charts - Pedigree chart */
+.wt-pedigree-generation {
+    .wt-chart-pedigree-left & {
+        padding-left: .5rem;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+    }
+
+    .wt-chart-pedigree-right & {
+        padding-right: .5rem;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+    }
+
+    .wt-chart-pedigree-up & {
+        padding-top: .5rem;
+        padding-right: .25rem;
+        padding-left: .25rem;
+    }
+
+    .wt-chart-pedigree-down & {
+        padding-bottom: .5rem;
+        padding-right: .25rem;
+        padding-left: .25rem;
+    }
+}

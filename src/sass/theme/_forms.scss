@@ -1,0 +1,33 @@
+/** JustLight Theme - Form elements */
+@import "forms-calendar";
+@import "forms-modals";
+@import "forms-select2";
+
+.hideShowPassword-wrapper {
+	button {        
+        @extend .btn;
+        @extend .btn-secondary;
+        border-color: $jc-theme-medium-dark;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+	}
+}
+
+.form-row {
+    margin-bottom: .5rem;
+}
+
+.custom-select {
+    @extend .form-control;
+}
+
+.wt-route-ReportSetupPage {
+    input[type="text"] {
+        @extend .form-control;
+    }
+    .input-group-append {
+        .btn-link {
+            @extend .input-group-text;
+        }
+    }
+}

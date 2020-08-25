@@ -1,0 +1,136 @@
+/** JustLight Theme - Specific pages - Tables */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/** Facts Table */
+.wt-facts-table {
+    th {
+        background-color: $jc-theme-light;
+        font-weight: 400;
+        width: $jc-facts-table-header-width;
+    }
+
+    td {
+        background-color: $jc-theme-lightest;
+    }
+
+    th,
+    td {
+        @include jc-table-border-medium;
+        padding: .75rem;
+    }
+
+    a {
+        color: $body-color;
+
+        @include hover-focus() {
+            color: $body-color;
+        }
+    }
+
+    .editfacts {
+        white-space: nowrap;
+    }
+
+    .wt-chart-box {
+        padding: .75rem;
+    }
+
+    #sidebar-content-family_nav & {
+        @extend .table-striped;
+
+        tr {
+            text-align: left !important;
+        }
+
+        th,
+        td {
+            background: none; // remove the default background to use a striped table.
+            border: none;
+            padding: .3rem;
+        }
+
+        caption {
+            padding: .3rem;
+        }
+    }
+}
+
+/** Markdown table */
+.markdown {
+    table {
+        @extend .table-sm;
+        @extend .table-responsive;
+        font-size: $font-size-sm;
+
+        th {
+            @include jc-theme-gradient-light;
+            font-weight: 600;
+        }
+
+        tr:nth-of-type(odd) {
+            td {
+                background-color: $jc-theme-lighter;
+            }
+        }
+    }
+}
+
+/** JC Stats Table */
+.jc-stats-table {
+    @include jc-table-border-medium;
+    font-size: $font-size-sm;
+
+    th {
+        font-weight: 400;
+        white-space: nowrap;
+    }
+}
+
+/** Stories table */
+.jc-stories-table {
+    @include jc-table-border-medium;
+    thead tr {
+        @include jc-theme-gradient;
+        th {
+           vertical-align: top; 
+        }
+    }
+}
+
+/** Calendar Page table */
+.wt-route-CalendarPage {
+    table {
+        @extend .table;
+        @extend .table-sm;
+        @include jc-table-border-medium;
+
+        th, 
+        td {
+            border: 0;
+        }
+
+        .topbottombar {
+            background-color: $jc-theme-lighter;
+        }
+    }
+
+    .wt-page-content {
+        table {
+            @extend .table-bordered;
+            @extend .table-info;
+            td {
+                li {
+                    > a {
+                        font-weight: 700;
+                    }
+                    .indent {
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }   
+    }
+}

@@ -1,0 +1,122 @@
+/** JustLight Theme - Page header */
+
+/*
+ * Pages header has the following high-level structure:
+ *
+ * wt-header-wrapper
+ * +---wt-header-container
+ *     +---wt-header-content
+ *         +---wt-accessibility-links
+ *         +---wt-site-logo
+ *         +---wt-site-title
+ *         +---wt-header-search
+ *         |   +---wt-header-search-form
+ *         |       +---wt-header-search-field
+ *         |       +---wt-header-search-button
+ *         +---wt-secondary-navigation
+ *         |   +---wt-user-menu
+ *         +---wt-primary-navigation
+ *             +---wt-genealogy-menu
+ */
+%jc-site-title {
+    color: $jc-brand-primary;
+    font-weight: 400;
+
+    @include hover {
+        color: $jc-brand-primary-hover;
+        text-decoration: none;
+    }
+}
+
+.wt-header-wrapper {
+    @include jc-header-gradient;
+
+    @include media-breakpoint-down(md) {
+        &.sticky-top {
+            position: relative;
+        }
+    }
+
+    .wt-header-container {
+        @include jc-container-fluid;
+    }
+
+    .wt-site-logo {
+        display: none;
+    }
+
+    .wt-site-title {
+        order: 1;
+        flex: 1 0 auto;
+        width: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        a {
+            @extend %jc-site-title;
+        }
+    }
+
+    .wt-header-search {
+        order: 4;
+        max-width: 15rem;
+        margin-bottom: auto;
+
+        .wt-header-search-button {
+            @include jc-button-gradient;
+        }
+
+        @include media-breakpoint-down(md) {
+            .wt-header-search-field {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .wt-secondary-navigation {
+        order: 3;
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+        margin-bottom: auto;
+    }
+
+    .wt-primary-navigation {
+        order: 5;
+        /* Extend to full page width */
+        flex: 0 1 100vw;
+        max-width: 100vw;
+        /* Recalculate margins for content */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        @include jc-padding-lr(2);
+
+        &.navbar-collapse {
+            align-items: flex-start;
+        }
+    }
+
+    .navbar {
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-top: 1rem;
+
+        &:focus {
+            outline-color: $jc-theme-light;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .dropdown-item.active {
+            @include jc-theme-gradient;
+        }
+    }
+}

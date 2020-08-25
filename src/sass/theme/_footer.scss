@@ -1,0 +1,62 @@
+/** JustLight Theme - Page footer */
+
+/*
+ * Pages footer has the following high-level structure:
+ * wt-footers
+ * +---wt-footer wt-footer-xxxxx
+ */
+.wt-footers {
+
+  font-size: $font-size-sm;
+  @extend .py-2;
+  margin-top: $jc-main-wrapper-spacer;
+
+  .wt-route-TreePage &,
+  .wt-route-UserPage & {
+    margin-top: 0; // no margin because of sidebar border 
+  }
+
+  @include media-breakpoint-up(sm) {
+    border-top: $border-width solid $jc-theme-lighter;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $jc-theme-light;
+    margin-bottom: 1.5rem;
+    min-height: 100px;
+
+    .jc-footer-section-1>div {
+      text-align: left !important;
+    }
+
+    .jc-footer-section-3>div {
+      text-align: right !important;
+    }
+
+    .jc-footer-section>div {
+      padding: 0 !important;
+
+      &:nth-child(1) {
+        margin-top: auto;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .wt-footer-hit-counter {
+    .odometer {
+      background-color: $jc-theme-darker;
+      color: $white;
+      @extend .p-1;
+    }
+  }
+
+  .wt-footer-powered-by {
+    a {
+      content: url('{{ webtrees }}/images/powered-by-webtrees.png');
+    }
+  }
+}

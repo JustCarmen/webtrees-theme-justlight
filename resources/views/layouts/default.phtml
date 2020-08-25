@@ -1,175 +1,254 @@
 <?php
+
 /**
- * Change: default layout
- * Themes: JustLight theme
+ * Replace layouts/default.phtml
+ *
+ * Changes
+ * - Sticky top
+ * - Collapsable navbar for smaller screens (Genealogy and user menu)
+ * - Make the site title clickable with a header link to the homepage
+ * - Replace the default footer with our own version
  *
  */
+
+use Fisharebest\Webtrees\DebugBar;
+use Fisharebest\Webtrees\FlashMessages;
+use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
+use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
+use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Tree;
+use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Webtrees;
+use Psr\Http\Message\ServerRequestInterface;
+
+/**
+ * @var string                 $content
+ * @var ServerRequestInterface $request
+ * @var string                 $title
+ * @var Tree                   $tree
+ */
+
 ?>
-<?php use Fisharebest\Webtrees\Auth; ?>
-<?php use Fisharebest\Webtrees\DebugBar; ?>
-<?php use Fisharebest\Webtrees\FlashMessages; ?>
-<?php use Fisharebest\Webtrees\I18N; ?>
-<?php use Fisharebest\Webtrees\Theme; ?>
-<?php use Fisharebest\Webtrees\View; ?>
-<?php use Fisharebest\Webtrees\Webtrees; ?>
 
 <!DOCTYPE html>
-<html <?= I18N::htmlAttributes() ?>>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="csrf" content="<?= e(csrf_token()) ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="<?= e($meta_robots ?? 'noindex,nofollow') ?>">
-		<meta name="generator" content="<?= e(Webtrees::NAME) ?>">
-		<?php if ($tree !== null): ?>
-			<meta name="description" content="<?= e($tree->getPreference('META_DESCRIPTION')) ?>">
-		<?php endif ?>
+<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>">
 
-		<title>
-			<?= strip_tags($title) ?>
-			<?php if ($tree !== null && $tree->getPreference('META_TITLE') !== ''): ?>
-				– <?= e($tree->getPreference('META_TITLE')) ?>
-			<?php endif ?>
-		</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="csrf" content="<?= e(csrf_token()) ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="<?= e($meta_robots ?? 'noindex') ?>">
+        <meta name="generator" content="<?= e(Webtrees::NAME) ?> <?= e(Webtrees::VERSION) ?>">
+        <meta name="description" content="<?= $meta_description ?? '' ?>">
 
-		<link rel="icon" href="<?= Theme::theme()::ASSET_DIR ?>favicon.png" type="image/png">
-		<link rel="icon" type="image/png" href="<?= Theme::theme()::ASSET_DIR ?>favicon192.png" sizes="192x192">
-		<link rel="apple-touch-icon" sizes="180x180" href="<?= Theme::theme()::ASSET_DIR ?>favicon180.png">
+        <title>
+            <?= strip_tags($title) ?>
+            <?php if ($tree !== null && $tree->getPreference('META_TITLE') !== '') : ?>
+            – <?= e($tree->getPreference('META_TITLE')) ?>
+            <?php endif ?>
+        </title>
 
-		<?php /* Load the theme stylesheets */ ?>
-		<link rel="stylesheet" type="text/css" href="<?= e(Theme::theme()::STYLESHEET) ?>">
+        <!--Generic favicons-->
+        <link rel="icon" sizes="32x32" href="<?= e(asset('favicon-32.png')) ?>">
+        <link rel="icon" sizes="128x128" href="<?= e(asset('favicon-128.png')) ?>">
+        <link rel="icon" sizes="192x192" href="<?= e(asset('favicon-192.png')) ?>">
+        <!--Android-->
+        <link rel="shortcut icon" sizes="196x196" href="<?= e(asset('favicon-196.png')) ?>">
+        <!--iPad-->
+        <link rel="apple-touch-icon" sizes="152x152" href="<?= e(asset('favicon-152.png')) ?>">
+        <!--iPhone-->
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('favicon-180.png')) ?>">
+        <!--IE11/Edge-->
+        <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
 
-		<?= View::stack('styles') ?>
+        <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
+        
+        <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
+        <link rel="stylesheet" href="<?= e($stylesheet) ?>">
+        <?php endforeach ?>
 
-		<?= Theme::theme()->analytics() ?>
+        <?= View::stack('styles') ?>
 
-		<?= DebugBar::renderHead() ?>
-	</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" integrity="sha512-QN7X/bUbbeel9bbq6JVNJXk1Zowt+n+QPN+DjhEmTa4TdL1YPCsCey5JrvfRW8xp28LDYgGG/waNVdrhwMQmVQ==" crossorigin="anonymous" />
 
-	<body class="wt-global<?= Theme::theme()->getThemeGlobalClass() ?>">
-		<header class="wt-header-wrapper d-print-none px-5 mb-3">
-			<div class="wt-header-container">
-				<div class="row wt-header-content">
-					<div class="wt-accessibility-links">
-						<a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
-							<?= /* I18N: Skip over the headers and menus, to the main content of the page */ I18N::translate('Skip to content') ?>
-						</a>
-					</div>
+        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+            return $module->headContent();
+        })->implode('') ?>
 
-					<div class="d-flex col-12 col-lg-6 order-2 order-lg-1 my-3">
-						<div class="wt-site-logo"></div>
+        <?= DebugBar::renderHead() ?>
+    </head>
 
-						<?php if ($tree !== null): ?>
-						<h1 class="jc-site-title">
-						  <a href="index.php?route=tree-page&ged=<?= e($tree->name()) ?>"><?= e($tree->title()) ?></a>
-						</h1>
-						<?php endif ?>
-					</div>
+    <body
+        class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
+        <?php // START THEME JUSTLIGHT ?>
+        <header class="wt-header-wrapper d-print-none sticky-top">
+            <?php // END THEME JUSTLIGHT ?>
+            <div class="container wt-header-container">
+                <?php // START THEME JUSTLIGHT ?>
+                <div class="row wt-header-content navbar navbar-expand-md navbar-light">
+                    <?php // END THEME JUSTLIGHT ?>
+                    <div class="wt-accessibility-links position-fixed">
+                        <a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
+                            <?= /* I18N: Skip over the headers and menus, to the main content of the page */
+                            I18N::translate('Skip to content') ?>
+                        </a>
+                    </div>
+                    <div class="col wt-site-logo"></div>
 
-					<div class="jc-secondary-navigation d-flex flex-row flex-nowrap col-12 col-lg-6 order-1 order-lg-2 justify-content-sm-start justify-content-md-end align-items-start">
-						<div class="wt-secondary-menu d-flex">
-							<ul class="nav wt-secondary-menu">
-								<?= Theme::theme()->secondaryMenuContainer(Theme::theme()->secondaryMenu()) ?>
-								<li class="nav-item quick-search-small d-lg-none align-self-center">
-                                <a class="nav-link" href="<?= e(route('search-quick', ['ged=' => $tree->name()])) ?>"><?= view('icons/search') ?></a>
-								</li>
-							</ul>
-						</div>
+                    <?php if ($tree !== null) : ?>
+                    <?php // START THEME JUSTLIGHT ?>
+                    <h1 class="col wt-site-title">
+                        <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
+                    </h1>
+                    <?php // END THEME JUSTLIGHT ?>
 
-						<?php if ($tree !== null): ?>
-						<div class="col wt-header-search">
-							<form class="wt-header-search-form" role="search">
-								<input type="hidden" name="route" value="search-quick">
-								<input type="hidden" name="ged" value="<?= e($tree->name()) ?>">
-								<div class="input-group">
-									<label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
-									<input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
-									<span class="input-group-btn">
-										<button type="submit" class="btn btn-primary wt-header-search-button">
-											<?= view('icons/search') ?>
-										</button>
-									</span>
-								</div>
-							</form>
-						</div>
-						<?php endif ?>
-					</div>
-				</div>
-			</div>
+                    <?php // START THEME JUSTLIGHT ?>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#primaryMenu, #secondaryMenu" aria-controls="primaryMenu, secondaryMenu"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <?php // END THEME JUSTLIGHT ?>
 
-			<?php if ($tree !== null): ?>
-			<nav class="row jc-primary-navigation px-2">
-				<ul class="nav nav-pills wt-primary-menu justify-content-start">
-					<?php foreach (Theme::theme()->primaryMenu($individual ?? $tree->significantIndividual(Auth::user())) as $menu): ?>
-						<?= $menu->bootstrap4() ?>
-					<?php endforeach ?>
-				</ul>
-			</nav>
-			<?php endif ?>
-		</header>
+                    <div class="col wt-header-search">
+                        <form method="post"
+                            action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>"
+                            class="wt-header-search-form" role="search">
+                            <?= csrf_field() ?>
+                            <div class="input-group">
+                                <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
+                                <input type="search" class="form-control wt-header-search-field" id="quick-search"
+                                    name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-primary wt-header-search-button">
+                                        <?= view('icons/search') ?>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <?php endif ?>
+                    <?php // START THEME JUSTLIGHT ?>
+                    <div class="col wt-secondary-navigation collapse navbar-collapse d-none" id="secondaryMenu">
+                        <?php // END THEME JUSTLIGHT ?>
+                        <ul class="nav wt-user-menu">
+                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+                            <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?php endforeach ?>
+                        </ul>
+                    </div>
+                    <?php // START THEME JUSTLIGHT ?>
+                </div>
+                    <?php // END THEME JUSTLIGHT ?>
+                <?php if ($tree !== null) : ?>
+                <?php // START THEME JUSTLIGHT ?>
+                <div class="row wt-header-content navbar navbar-expand-md navbar-light">
+                    <nav class="row wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                        <ul class=" nav wt-genealogy-menu">
+                        <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
+                        <?= view('components/menu-item', ['menu' => $menu]) ?>
+                        <?php endforeach ?>
+                        </ul>
+                        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
+                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+                            <?= view('components/menu-item', ['menu' => $menu]) ?>
+                            <?php endforeach ?>
+                        </ul>
+                    </nav>
+                </div>
+                <?php // END THEME JUSTLIGHT ?>
+                <?php endif ?>
+            </div>
+        </header>
 
-		<?= Theme::theme()->fancyImagebar(); ?>
+        <main id="content" class="wt-main-wrapper">
+            <div class="container wt-main-container">
+                <div class="flash-messages">
+                    <?php foreach (FlashMessages::getMessages() as $message) : ?>
+                    <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert"
+                            aria-label="<?= I18N::translate('close') ?>">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <?= $message->text ?>
+                    </div>
+                    <?php endforeach ?>
+                </div>
 
-		<main id="content" class="container<?= Theme::theme()->setFluidClass() ?> wt-main-wrapper mt-3">
-			<div class="wt-main-container">
-				<div class="flash-messages">
-					<?php foreach (FlashMessages::getMessages() as $message): ?>
-						<div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
-							<button type="button" class="close" data-dismiss="alert" aria-label="<?= I18N::translate('close') ?>">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<?= $message->text ?>
-						</div>
-					<?php endforeach ?>
-				</div>
+                <?= $content ?>
+            </div>
+        </main>
 
-				<?= $content ?>
-			</div>
-		</main>
+        <?php // START THEME JUSTLIGHT ?>
+        <?= view(app(ModuleThemeInterface::class)->name() . '::theme/footer'); ?>
+        <?php // END THEME JUSTLIGHT ?>
 
-		<footer class="wt-footer-container bg-faded py-3">
-			<div class="jc-footer-content d-flex align-items-end d-print-none">
-				<div class="jc-footer-item col-md-4 text-left">
-					<?= Theme::theme()->formatContactLinks() ?>
-				</div>
+        <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
+        <?php // START THEME JUSTLIGHT ?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" integrity="sha512-r6vrUzzJsN9hfGYoYo5qIFyuI4Hg/6wkIEaxCgFWneGHo1Nn2ES58YuRmrUU44JrD64yIBNwvepKexEIyk+TTQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/solid.min.js" integrity="sha512-y0arK64LEWHxtkMLukPhGHPEu2v1fpWcK+mNRolb7DIjqqD5dVJDWKCHiBFOdM+lsPAKZZBC1x/hD+PXTS3Djg==" crossorigin="anonymous"></script>
+        <?php // END THEME JUSTLIGHT ?>
+        <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
-				<div class="jc-footer-item col-md-4 text-center">
-					<?php if ($page_hits ?? 0 > 0): ?>
-					<div class="wt-page-views">
-						<?= I18N::plural(
-	'This page has been viewed %s time.',
-	'This page has been viewed %s times.',
-	$page_hits,
-						'<span class="odometer">' . I18N::digits($page_hits) . '</span>'
-) ?>
-					</div>
-					<?php endif ?>
-				</div>
+        <script>
+	        // In this theme we use colorbox for pdf's
+	        $('.wt-mime-application-pdf').parent('a').each(function() {
+	            $(this).addClass('gallery');
+	            $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
+	        });
 
-				<div class="jc-footer-item col-md-4 text-right">
-					<div class="credits d-flex flex-column"><?= Theme::theme()->logoPoweredBy() . Theme::theme()->designerUrl() ?></div>
-				</div>
-			</div>
-		</footer>
-		<div class="flash-messages">
-			<?php if (Theme::theme()->cookieWarning()): ?>
-			<?= Theme::theme()->htmlAlert(Theme::theme()->cookieWarning(), 'info', true) ?>
-			<?php endif ?>
-		</div>
+	        // Trigger an event when we click on an (any) image or pdf
+	        $('body').on('click', 'a.gallery', function() {
+	            // Enable colorbox for images and pdf
+	            $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
+	                // Don't scroll window with document
+	                fixed: true,
+	                width: "85%",
+	                height: "85%",
+	                current: "",
+	                previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
+	                next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
+	                slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
+	                slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
+	                close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
+	                title: function() {
+	                    return this.dataset.title;
+	                },
+	                rel: "gallery", // Turn all images on the page into a slideshow
+	                slideshow: true,
+	                slideshowAuto: false,
+	                // Add wheelzoom to the displayed image
+	                onComplete: function() {
+	                    // Disable click on image triggering next image
+	                    // https://github.com/jackmoore/colorbox/issues/668
+	                    $(".cboxPhoto").unbind("click");
+                        // Enable wheel/pinch zooming
+                        $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
+	                }
+	            });
 
-		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/vendor.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/vendor.js') ?>"></script>
-		<script src="<?= e(Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>?<?= filemtime(WT_ROOT . Webtrees::ASSETS_PATH . 'js/webtrees.js') ?>"></script>
+	            // Image settings
+	            $("a[type^=image].gallery").colorbox({
+	                photo: true,  
+	            });
 
-		<script>
-			var AUTH_ID = "<?= Auth::id() ?>";
-			var COLORBOX_ACTION_FILE = "themes/<?= Theme::theme()::THEME_DIR ?>/resources/colorbox.php";
-			var WT_BASE_URL = "<?= WT_BASE_URL ?>";
-		</script>
+	            // PDF settings
+	            $("a[type$=pdf].gallery").colorbox({
+	                iframe: true
+	            });
+	        });
+        </script>
 
-		<script src="<?= e(Theme::theme()::JAVASCRIPT) ?>"></script>
+        <?= View::stack('javascript') ?>
 
-		<?= View::stack('javascript') ?>
+        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+            return $module->bodyContent();
+        })->implode('') ?>
 
-		<?= DebugBar::render() ?>
-	</body>
+        <?= DebugBar::render() ?>
+    </body>
+
 </html>

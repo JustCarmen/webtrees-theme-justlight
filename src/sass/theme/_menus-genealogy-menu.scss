@@ -1,0 +1,19 @@
+/** JustLight Theme - Menu's */
+.wt-genealogy-menu {
+
+    @include media-breakpoint-up(md) {
+        .nav-link {
+            &.jc-nav-link-active {
+                @include jc-button-gradient;
+            }
+            &:hover {
+                background: theme-color('secondary');
+            }
+        }
+    }
+
+    @include jc-dropdown-menu-sm {
+        flex-direction: column;
+    }
+
+}

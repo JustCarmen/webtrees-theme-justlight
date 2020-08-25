@@ -1,0 +1,48 @@
+/** JustLight Theme - Charts - Chart-box */
+.wt-chart-box {
+
+    line-height: 1.1rem;
+    padding: .25rem;
+    min-height: 5rem;
+
+    &,
+    & .wt-chart-box-menu {
+        background: var(--sex-u-bg);
+        border: $border-width solid var(--sex-u-fg);
+    }
+
+    &-f,
+    &-f .wt-chart-box-dropdown {
+        background: var(--sex-f-bg);
+        border: $border-width solid var(--sex-f-fg);
+    }
+
+    &-m,
+    &-m .wt-chart-box-dropdown {
+        background: var(--sex-m-bg);
+        border: $border-width solid var(--sex-m-fg);
+    }
+
+    .wt-chart-box-zoom-dropdown {
+        @include jc-padding-lr(.5);
+        @extend .shadow;
+        @extend .rounded;
+        background: $white;
+        font-size: .75rem;
+
+        .label {
+            font-weight: 600;
+        }
+    }
+
+    .wt-chart-pedigree-up &,
+    .wt-chart-pedigree-down & {
+        height: 10rem;
+    }
+
+    .wt-chart-compact & {
+        font-size: $jc-font-size-xs;
+        min-height: 4rem;
+        min-width: 10rem;
+    }
+}

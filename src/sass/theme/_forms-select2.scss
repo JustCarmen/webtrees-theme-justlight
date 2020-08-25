@@ -1,0 +1,79 @@
+// JustLight theme - Select2 form elements - convert into Bootstrap style
+// =============================================================================
+%thumb {
+    .gallery img {
+        margin-right: $thumbnail-padding;
+    }
+    .wt-mime {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    [type=application\/pdf] {
+        vertical-align: middle;
+    }
+}
+
+$container: "select2-container--default";
+$select: "select2-selection--single";
+
+.#{$container} {
+    flex: 1 1 auto;
+    width: 100% !important;
+
+    & *:focus {
+        outline: none;
+    }
+
+    .#{$select} {
+        border: $border-width solid $input-border-color;
+        height: 100%;
+        min-height: 2rem;
+
+        & .select2-selection__rendered {
+            height: auto;
+            line-height: 2.5;
+            padding-left: $input-padding-x;
+            @extend %thumb;
+        }
+
+        & .select2-selection__arrow,
+        & .select2-selection__clear {
+            height: calc(2.25rem + 2px);
+            line-height: 2.25;
+        }
+
+        .input-group & {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .input-group-addon+& {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    .select2-results__option {
+        @extend %thumb;
+
+        &--highlighted[aria-selected] {
+            background-color: theme-color(primary);
+        }
+    }
+}
+
+.input-group {
+    .input-group-btn+.select2.form-control+.#{$container} {
+        width: auto !important;
+
+        .#{$select} {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+.#{$container}+.input-group-addon {
+    border-left: 0;
+}

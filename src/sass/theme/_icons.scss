@@ -1,0 +1,59 @@
+/** JustLight Theme - Icons - general icons */
+[class*="icon-"] {
+    @include jc-icon-color();
+
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    line-height: 1;
+    font-size: 1.1rem;
+
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+    .btn-primary & {
+        color: $jc-icon-white-color;
+    }
+}
+
+.icon {
+    &-cfamily {
+        font-size: 2rem;
+    }
+    &-selected {
+        @include jc-icon-color($jc-icon-green-color);
+    }
+    &-silhouette {
+        &-M, &-F, &-U {
+            font-size: 3rem;
+        }
+    };
+}
+
+// Miscellaneous icons
+.wt-block-content {
+    &-gedcom_block,
+    &-user_welcome {
+        [class*="icon-"] {
+            font-size: 2rem;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.fa-map-marker-alt {
+    @include jc-icon-color($jc-icon-red-color, 5%);
+}
+
+.wt-individual-silhouette {
+    &-f, &-m, &-u {   
+        line-height: 1;
+        font-style: normal;
+        font-size: 8rem;
+    }
+}
+
+@import "icons-theme";
+@import "icons-icomoon";
+@import "icons-datatable-sort";
+@import "icons-mime-type";

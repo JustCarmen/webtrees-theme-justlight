@@ -1,0 +1,132 @@
+/** JustLight Theme - Global CSS */
+/*
+ * Pages have the following high-level structure:
+ *
+ * wt-global wt-theme-<THEME> wt-route-<ROUTE>
+ * +---wt-header-wrapper
+ * |   +---wt-header-container
+ * |       +---wt-header-content
+ * |           +---wt-accessibility-links
+ * |           +---wt-site-logo
+ * |           +---wt-site-title
+ * |           +---wt-header-search
+ * |           |   +---wt-header-search-form
+ * |           |       +---wt-header-search-field
+ * |           |       +---wt-header-search-button
+ * |           +---wt-secondary-navigation
+ * |           |   +---wt-user-menu
+ * |           +---wt-primary-navigation
+ * |               +---wt-genealogy-menu
+ * +---wt-main-wrapper
+ * |   +---wt-main-container
+ * |       +---wt-main-content
+ * |           +---wt-messages
+ * |           +---wt-page-title
+ * |           +---wt-page-options wt-page-options-xxxxx
+ * |           +---wt-page-content
+ * +---wt-footers
+ *     +---wt-footer wt-footer-xxxxx
+ */
+
+/* Colors for chart boxes, etc. */
+:root {
+    --sex-f-bg: #{$jc-babypink}; // sass/css compatibility - see: https://sass-lang.com/documentation/breaking-changes/css-vars
+    --sex-m-bg: #{$jc-babyblue};
+    --sex-u-bg: #{$jc-theme-lightest};
+    --sex-f-fg: #{darken($jc-babypink, 10%)};
+    --sex-m-fg: #{darken($jc-babyblue, 10%)};
+    --sex-u-fg: #{darken($jc-theme-lightest, 20%)};
+    --chart-line: solid #{theme-color()} #{$border-width};
+    --chart-line-radius: 0;
+}
+
+.btn-link {
+    @include jc-padding-lr(.25);
+}
+
+.btn-primary {
+    @include jc-button-gradient;
+}
+
+.btn-secondary {
+    @include jc-button-gradient-light;
+}
+
+.jc-btn-secondary { /* container for the add button in forms (prepending select2 elements) */
+    @extend .input-group-text;
+    padding: .375rem;
+}
+
+.btn-light { // used in some places where custom select elements are used.
+    @extend .jc-btn-secondary;
+}
+
+.btn-toolbar {
+    background: transparent;
+    border: none;
+}
+
+.btn-outline-secondary {
+    color: $jc-theme-dark;
+    border-color: $jc-theme-medium-dark;
+    &:not(:disabled):not(.disabled) {
+        &.active,
+        &:active {
+            background: $jc-theme-medium;
+            border-color: $jc-theme-medium-dark;
+            box-shadow: none;
+        }
+    }
+    &:hover {
+        border-color: $jc-theme-medium-dark;
+    }
+}
+
+caption {
+    caption-side: top;
+    font-weight: 600;
+}
+
+dd {
+    margin-bottom: 0;
+}
+
+.dropdown {
+    &-menu {
+        max-height: 100vh;
+        overflow-x: hidden;
+    }
+}
+
+.error {
+    color: $jc-red;
+    font-weight: 600;
+}
+
+// remove default blue outline on focus
+:focus {
+    box-shadow: none !important;
+}
+
+.indent {
+    padding-left: 1rem;
+}
+
+.wt-page-menu-button {
+    @include jc-button-gradient;
+}
+
+.wt-page-options {
+    @include jc-table-border-medium;
+    background: $jc-theme-lighter;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.wt-quick-facts {
+    font-size: $font-size-sm;
+
+    a:not(:last-child)::after {
+        content: "|"
+    }
+}

@@ -1,0 +1,79 @@
+/** JustLight Theme - Specific pages - Home page and User page blocks */
+.wt-block {
+    border: none;
+
+    &:first-child {
+        margin-top: $jc-main-wrapper-spacer;
+    }
+
+    &:last-child {
+        margin-bottom: $jc-main-wrapper-spacer;
+    }
+
+    .wt-block-header {        
+        border: none;
+        background: none;
+        padding: 0;
+
+        .wt-main-blocks & {
+            @extend .h3;
+        }
+
+        .wt-side-blocks & {
+            @extend .h4;
+        }
+    }
+
+    .wt-block-content {
+        padding: 0;
+
+        .wt-side-blocks & {
+            font-size: $font-size-sm;
+        }
+    }
+}
+
+.wt-side-blocks {
+    border-left: $border-width solid $jc-theme-lighter;
+    font-size: $font-size-sm;
+
+    > div {
+        &:not(:last-child) {
+            padding-bottom: 0.5rem;
+            border-bottom: $border-width solid theme-color();
+            border-radius: 0;
+        }
+    }
+}
+
+/** Special blocks */
+.wt-block-content-gedcom_stats {
+    .list-inline-item {
+        margin: 0;
+        &:not(:last-child) {
+            &::after {
+                content: " •";
+            }
+        }
+    }
+}
+
+.wt-block-content-user_messages {
+    button {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-primary;
+    }
+    form {
+        @extend .form-inline;
+        @extend .mb-3;
+    }
+    select {
+        @extend .form-control;
+        @extend .mx-2;
+    }
+    .table-responsive {
+        max-height: 30rem; /* 480px */
+        @extend .mb-5;
+    }
+}

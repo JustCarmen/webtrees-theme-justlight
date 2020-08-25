@@ -1,0 +1,16 @@
+/** JustLight Theme - Icons - Theme icons */
+.wt-icon {
+    &-add {
+        @include jc-icon-color($jc-icon-green-color);
+        font-size: 1.25rem;
+        height: 1em;
+    }
+
+    &-delete {
+        @include jc-icon-color($jc-icon-red-color);
+    }
+
+    &-help {
+        @include jc-icon-color($jc-icon-blue-color, 0%);
+    }
+}
