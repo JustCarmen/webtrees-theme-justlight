@@ -72,6 +72,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         // Replace an existing view with our own version.
         View::registerCustomView('::report-setup-page', $this->name() . '::report-setup-page');
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
+        View::registerCustomView('::modules/clippings/show', $this->name() . '::modules/clippings/show');
         View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
         View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show');
         View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
