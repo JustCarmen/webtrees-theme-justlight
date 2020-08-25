@@ -98,3 +98,38 @@ table {
         }
     }
 }
+
+/** Calendar Page table */
+.wt-route-CalendarPage {
+    table {
+        @extend .table;
+        @extend .table-sm;
+        @include jc-table-border-medium;
+
+        th, 
+        td {
+            border: 0;
+        }
+
+        .topbottombar {
+            background-color: $jc-theme-lighter;
+        }
+    }
+
+    .wt-page-content {
+        table {
+            @extend .table-bordered;
+            @extend .table-info;
+            td {
+                li {
+                    > a {
+                        font-weight: 700;
+                    }
+                    .indent {
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }   
+    }
+}
