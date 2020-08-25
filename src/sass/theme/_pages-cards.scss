@@ -40,6 +40,14 @@
         @include jc-padding-tb(.25);
         line-height: 1.8rem;
     }
+
+    /** Card headers in forms (collapsable panels) **/
+    form & {
+        @extend .bg-secondary;
+        @include jc-padding-tb(.5);
+        color: $body-color;
+        text-decoration: none;
+    }
 }
 
 .card-body {
