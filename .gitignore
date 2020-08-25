@@ -1,5 +1,6 @@
 .vscode
 mix-manifest.json
+mix.js.map
 /build/
 /resources/css/
 /node_modules/
