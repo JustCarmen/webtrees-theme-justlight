@@ -10,5 +10,4 @@ webpack*        export-ignore
 build/          export-ignore
 dist/           export-ignore
 node_modules/   export-ignore
-src/            export-ignore
 vendor/         export-ignore
