@@ -71,16 +71,16 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
 
         // Replace an existing view with our own version.
         View::registerCustomView('::report-setup-page', $this->name() . '::report-setup-page');
-        View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
-        View::registerCustomView('::modules/clippings/show', $this->name() . '::modules/clippings/show');
-        View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
-        View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show');
-        View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
         View::registerCustomView('::icons/add', $this->name() . '::icons/add');
         View::registerCustomView('::icons/anniversary', $this->name() . '::icons/anniversary');
         View::registerCustomView('::icons/calendar', $this->name() . '::icons/calendar');
         View::registerCustomView('::icons/delete', $this->name() . '::icons/delete');
         View::registerCustomView('::icons/individual', $this->name() . '::icons/individual');
+        View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
+        View::registerCustomView('::modules/clippings/show', $this->name() . '::modules/clippings/show');
+        View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show');
+        View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
+        View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
     }
 
     /**
@@ -91,7 +91,6 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     {
         return __DIR__ . '/resources/';
     }
-
 
     /**
      * {@inheritDoc}
@@ -117,7 +116,6 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
 
         return response($response)->withHeader('Content-type', 'text/css');
     }
-
 
     /**
      * {@inheritDoc}
