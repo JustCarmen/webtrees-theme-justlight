@@ -16,15 +16,18 @@
     "development-webtrees": "npm run webtrees && npm run development",
     "debug": "cross-env process.env.section=theme NODE_ENV=development node --nolazy --inspect-brk=9229 node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "cross-env process.env.section=theme NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "npm run webtrees && cross-env process.env.section=theme NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "npm run webtrees && cross-env process.env.section=theme NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "distribution": "npm run production && cross-env process.env.section=distribution NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
     "file-icon-vectors": "^1.0.0",
     "filemanager-webpack-plugin": "^2.0.5",
     "laravel-mix": "^5.0.5",
     "laravel-mix-alias": "^1.0.2",
+    "laravel-mix-clean": "^0.1.0",
     "postcss-custom-properties": "^9.1.1",
     "postcss-discard-comments": "^4.0.2",
     "postcss-image-inliner": "^4.0.2",
