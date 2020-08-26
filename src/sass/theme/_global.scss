@@ -108,8 +108,10 @@ dd {
     box-shadow: none !important;
 }
 
+// Take into account the indent below collapsable items
+// We use the same space as the collaps/expand icon
 .indent {
-    padding-left: 1rem;
+    padding-left: 1.65rem;
 }
 
 .wt-page-menu-button {
