@@ -1,0 +1,10 @@
+/** JustLight Theme - Modules - Album module */
+.wt-tab-album {
+    figcaption {
+        @extend .text-truncate;
+        font-size: $jc-font-size-xs;
+        a {
+            color: $body-color;
+        }
+    }
+}
