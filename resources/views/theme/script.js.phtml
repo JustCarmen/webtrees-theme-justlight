@@ -52,6 +52,9 @@ $('.icon-selected').addClass('fas fa-check');
 $('.wt-icon-add').parent('.btn').removeClass('btn-secondary').addClass('jc-btn-secondary');
 $('.wt-icon-preferences').parent('.btn-link').addClass('ml-n1');
 
+// Remove border around silhouette
+$('.wt-individual-silhouette').parent('.img-thumbnail').addClass('border-0');
+
 // Prevent underlining when hovering over icons
 $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
 </script>
