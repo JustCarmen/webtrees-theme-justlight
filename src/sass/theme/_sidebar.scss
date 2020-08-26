@@ -1,5 +1,9 @@
 /** JustLight Theme - Sidebar */
 .wt-sidebar-family-navigator {
+    .wt-family-navigator-label {
+        width: $jc-facts-table-header-width * 2;
+    }
+
     .dropdown-menu {
        @include jc-dropdown-toggle;
     }
