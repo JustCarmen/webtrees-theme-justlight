@@ -1,0 +1,6 @@
+/** JustLight Theme - Sidebar */
+.wt-sidebar-family-navigator {
+    .dropdown-menu {
+       @include jc-dropdown-toggle;
+    }
+}

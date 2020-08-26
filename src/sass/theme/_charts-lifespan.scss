@@ -30,20 +30,10 @@
     }
 
     &-summary {
-        @extend .dropdown-menu;
-        padding-top: 0;
+        @include jc-dropdown-toggle;
 
         &-link {
             font-weight: 700;
-            display: block;
-            background: $jc-theme-lighter;
-            padding: .5rem;
-            margin-bottom: .5rem;
-        }
-
-        div {
-            font-size: $font-size-sm;
-            @include jc-padding-lr(.5);
         }
     }
 }

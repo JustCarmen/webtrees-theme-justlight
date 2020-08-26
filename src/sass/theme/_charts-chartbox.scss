@@ -5,34 +5,28 @@
     padding: .25rem;
     min-height: 5rem;
 
-    &,
-    & .wt-chart-box-menu {
+    & {
         background: var(--sex-u-bg);
         border: $border-width solid var(--sex-u-fg);
     }
 
-    &-f,
-    &-f .wt-chart-box-dropdown {
+    &-f {
         background: var(--sex-f-bg);
         border: $border-width solid var(--sex-f-fg);
     }
 
-    &-m,
-    &-m .wt-chart-box-dropdown {
+    &-m {
         background: var(--sex-m-bg);
         border: $border-width solid var(--sex-m-fg);
     }
 
-    .wt-chart-box-zoom-dropdown {
-        @include jc-padding-lr(.5);
-        @extend .shadow;
-        @extend .rounded;
-        background: $white;
-        font-size: .75rem;
+    .wt-chart-box-zoom-dropdown,
+    .wt-chart-box-links-dropdown {
+       @include jc-dropdown-toggle;
+    }
 
-        .label {
-            font-weight: 600;
-        }
+    .wt-chart-box-links-dropdown {
+        line-height: 1rem;
     }
 
     .wt-chart-pedigree-up &,

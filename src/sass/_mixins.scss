@@ -28,6 +28,37 @@
     padding-right: $size;
 }
 
+// Dropdown toggle
+@mixin jc-dropdown-toggle {
+    @include jc-padding-lr(.5);
+    @extend .shadow;
+    @extend .rounded;
+    background: $white;
+    border: $border-width * 2 solid theme-color();
+    font-size: $jc-font-size-xs;
+    line-height: 1.25rem;
+    z-index: 1;
+
+    .dropdown-header {
+        font-size: $jc-font-size-xs;        
+        font-weight: 700;
+        padding: 0;
+    }
+
+    .dropdown-item {
+        padding: 0;
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding-left: 1rem;
+    }
+    
+    .label {
+        font-weight: 600;
+    }
+}
+
 // Dropdown menu for small screens
 @mixin jc-dropdown-menu-sm {
     @include media-breakpoint-down(sm) {
