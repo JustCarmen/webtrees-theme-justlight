@@ -1,9 +1,9 @@
 JustLight Theme for webtrees
 ============================
 
-[![Latest Release](https://img.shields.io/github/release/JustCarmen/justlight.svg)][1]
+[![Latest Release](https://img.shields.io/github/release/JustCarmen/webtrees-theme-justlight.svg)][1]
 [![webtrees major version](https://img.shields.io/badge/webtrees-v2.x-green)][2]
-[![Downloads](https://img.shields.io/github/downloads/JustCarmen/justlight/total.svg)]()
+[![Downloads](https://img.shields.io/github/downloads/JustCarmen/webtrees-theme-justlight/total.svg)]()
 
 A light theme in white and blue with focus on readibility. It uses a full screen where neccessary but takes into account small screens too. Since webtrees 1 this theme is optimized for using on tablets and mobile phones. Webtrees 2 has implemented that by default now, but this theme still offer a different layout with some extra's. If you like a clean layout you certainly want to try this theme.
 
@@ -38,5 +38,5 @@ Bugs and feature requests
 If you experience any bugs or have a feature request for this theme you can [create a new issue][3].
 
 [1]: https://github.com/JustCarmen/webtrees-theme-justlight/releases/latest
-[2]: https://webtrees.net/download/
+[2]: https://webtrees.net/download
 [3]: https://github.com/JustCarmen/webtrees-theme-justlight/issues?state=open
