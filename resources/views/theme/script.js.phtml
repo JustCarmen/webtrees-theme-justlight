@@ -29,6 +29,13 @@ $('.wt-chart-ancestors [id^="fam"]').each(function() {
         .addClass('jc-chart-first-indent')    
 });
 
+// Individual page Facts Tab - restyle source fact
+$('.wt-tab-facts').each(function() {
+    $(this)
+        .find('.fact_SOUR').next('.collapse').addClass('jc-fact-sour-collapse')
+        .find('.indent > .d-flex').addClass('align-items-flex-start flex-column').removeClass('align-items-center');
+});
+
 // Markdown table style
 jQuery('.markdown table').each(function(){
     $(this).addClass('table table-sm table-responsive jc-markdown-table');
