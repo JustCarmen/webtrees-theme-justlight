@@ -23,7 +23,7 @@ const dist_dir = 'dist/jc-theme-justlight';
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 mix
-    .setPublicPath(dist_dir)
+    .setPublicPath('./dist')
     .copyDirectory(config.public_dir, dist_dir + '/resources')
     .copy('module.php', dist_dir)
     .copy('LICENSE.md', dist_dir)
