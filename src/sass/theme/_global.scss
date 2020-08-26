@@ -108,6 +108,13 @@ dd {
     box-shadow: none !important;
 }
 
+// Multiple items next to each other should be aligned at the bottom
+.gallery {
+    img {
+        vertical-align: initial;
+    }
+}
+
 // Take into account the indent below collapsable items
 // We use the same space as the collaps/expand icon
 .indent {
