@@ -59,22 +59,32 @@ table {
 }
 
 /** Markdown table */
-.markdown {
-    table {
-        @extend .table-sm;
-        @extend .table-responsive;
-        font-size: $font-size-sm;
+.jc-markdown-table {
 
-        th {
-            @include jc-theme-gradient-light;
-            font-weight: 600;
+    // reset styles from parent .wt-facts-table
+    .wt-facts-table & {
+        th,
+        td {
+            padding: .3rem; // .table-sm
+            border-width: 0 0 $border-width 0;
         }
+    }
 
-        tr:nth-of-type(odd) {
-            td {
-                background-color: $jc-theme-lighter;
-            }
+    font-size: $jc-font-size-xs;
+
+    th {
+        background: transparent;
+        font-weight: 600;
+    }
+
+    tr:nth-of-type(odd) {
+        td {
+            background-color: $jc-theme-lighter;
         }
+    }
+
+    @at-root .jc-markdown-table-separator {
+        @include jc-theme-gradient-light;
     }
 }
 

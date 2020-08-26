@@ -29,6 +29,12 @@ $('.wt-chart-ancestors [id^="fam"]').each(function() {
         .addClass('jc-chart-first-indent')    
 });
 
+// Markdown table style
+jQuery('.markdown table').each(function(){
+    $(this).addClass('table table-sm table-responsive jc-markdown-table');
+    $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');    
+});
+
 // Badges static page - maybe we should restyle all badges
 $('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
 
