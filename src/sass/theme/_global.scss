@@ -40,6 +40,12 @@
     --chart-line-radius: 0;
 }
 
+a {
+    &.gallery {
+        text-decoration: none;
+    }
+}
+
 .btn-link {
     @include jc-padding-lr(.25);
 }
