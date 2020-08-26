@@ -17,10 +17,6 @@
     margin-bottom: .5rem;
 }
 
-.custom-select {
-    @extend .form-control;
-}
-
 .wt-route-ReportSetupPage {
     input[type="text"] {
         @extend .form-control;
