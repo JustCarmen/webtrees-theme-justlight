@@ -29,13 +29,17 @@ $('.wt-chart-ancestors [id^="fam"]').each(function() {
         .addClass('jc-chart-first-indent')    
 });
 
-// Individual page Facts Tab - restyle source fact
-$('.wt-tab-facts').each(function() {
-    $(this)
-        .find('.fact_SOUR').next('.collapse').addClass('jc-fact-sour-collapse')
-        .find('.indent > .d-flex').addClass('flex-column').removeClass('align-items-center');
-});
+// General indentation - only indent elements when preceded by a collapse icon
+$('.indent').parents('.collapse').find('.indent').addClass('jc-indent-collapse');
 
+// Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
+$('.fact_NOTE').next('.collapse').addClass('indent jc-indent-collapse');
+
+// Individual page Facts Tab - restyle source fact
+$('.wt-tab-facts')
+    .find('.gallery').parents('.d-flex').addClass('flex-column').removeClass('align-items-center')
+    .find('div:nth-child(2n) a').addClass('jc-gallery-caption');
+    
 // Markdown table style
 jQuery('.markdown table').each(function(){
     $(this).addClass('table table-sm table-responsive jc-markdown-table');

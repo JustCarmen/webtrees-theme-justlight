@@ -122,9 +122,17 @@ dd {
 }
 
 // Take into account the indent below collapsable items
-// We use the same space as the collaps/expand icon
+// We use the same space as the collaps/expand icon on those indents and a smaller font for all
 .indent {
-    padding-left: 1.65rem;
+    font-size: $font-size-sm;
+
+    &.jc-indent-collapse {        
+        padding-left: 1.65rem;
+    }
+}
+
+.jc-gallery-caption {
+    font-size: $font-size-sm;
 }
 
 .wt-page-menu-button {
