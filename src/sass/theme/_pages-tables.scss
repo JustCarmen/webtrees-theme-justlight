@@ -18,7 +18,7 @@ table {
 
     th,
     td {
-        @include jc-table-border-medium;
+        @include jc-border;
         padding: .75rem;
     }
 
@@ -90,7 +90,7 @@ table {
 
 /** JC Stats Table */
 .jc-stats-table {
-    @include jc-table-border-medium;
+    @include jc-border;
     font-size: $font-size-sm;
 
     th {
@@ -101,7 +101,7 @@ table {
 
 /** Stories table */
 .jc-stories-table {
-    @include jc-table-border-medium;
+    @include jc-border;
     thead tr {
         @include jc-theme-gradient;
         th {
@@ -115,7 +115,7 @@ table {
     table {
         @extend .table;
         @extend .table-sm;
-        @include jc-table-border-medium;
+        @include jc-border;
 
         th, 
         td {

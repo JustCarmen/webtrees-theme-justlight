@@ -23,6 +23,6 @@
 
 .tab-pane {
 	.tv_out {
-		border: $border-width solid $jc-theme-medium;
+		@include jc-border;
 	}
 }

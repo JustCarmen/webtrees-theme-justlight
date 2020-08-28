@@ -10,7 +10,7 @@ div[id^="calendar-widget"] {
   }
   
   > table {
-    border: $table-border-width solid $table-border-color;
+    @include jc-border;
     @include box-shadow ($dropdown-box-shadow);
 
     td {

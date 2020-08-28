@@ -26,7 +26,7 @@ $select: "select2-selection--single";
     }
 
     .#{$select} {
-        border: $border-width solid $input-border-color;
+        @include jc-border;
         height: 100%;
         min-height: 2rem;
 

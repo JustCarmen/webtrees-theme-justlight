@@ -17,7 +17,7 @@
   }
 
   @include media-breakpoint-up(sm) {
-    border-top: $border-width solid $jc-theme-lighter;
+    @include jc-border($jc-theme-lighter, 'top');
   }
 
   @include media-breakpoint-up(lg) {

@@ -140,7 +140,7 @@ dd {
 }
 
 .wt-page-options {
-    @include jc-table-border-medium;
+    @include jc-border;
     background: $jc-theme-lighter;
     padding: 1rem;
     margin-bottom: 2rem;

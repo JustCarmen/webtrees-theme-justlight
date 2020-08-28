@@ -34,13 +34,13 @@
 }
 
 .wt-side-blocks {
-    border-left: $border-width solid $jc-theme-lighter;
+    @include jc-border($jc-theme-lighter, 'left');
     font-size: $font-size-sm;
 
     > div {
         &:not(:last-child) {
             padding-bottom: 0.5rem;
-            border-bottom: $border-width solid theme-color();
+            @include jc-border(theme-color(), 'bottom');
             border-radius: 0;
         }
     }

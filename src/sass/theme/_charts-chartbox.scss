@@ -7,17 +7,17 @@
 
     & {
         background: var(--sex-u-bg);
-        border: $border-width solid var(--sex-u-fg);
+        @include jc-border(var(--sex-u-fg));
     }
 
     &-f {
         background: var(--sex-f-bg);
-        border: $border-width solid var(--sex-f-fg);
+        @include jc-border(var(--sex-f-fg));
     }
 
     &-m {
         background: var(--sex-m-bg);
-        border: $border-width solid var(--sex-m-fg);
+        @include jc-border(var(--sex-m-fg));
     }
 
     .wt-chart-box-zoom-dropdown,
