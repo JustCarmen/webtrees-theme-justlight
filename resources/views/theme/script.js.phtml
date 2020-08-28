@@ -46,6 +46,9 @@ jQuery('.markdown table').each(function(){
     $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');    
 });
 
+// Extra styling for the changes block
+$('.wt-table-changes').addClass('table-bordered table-striped');
+
 // Badges static page - maybe we should restyle all badges
 $('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
 
