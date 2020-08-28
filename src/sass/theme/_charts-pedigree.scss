@@ -2,25 +2,21 @@
 .wt-pedigree-generation {
     .wt-chart-pedigree-left & {
         padding-left: .5rem;
-        padding-top: .25rem;
-        padding-bottom: .25rem;
+        @include jc-padding-tb(.25);
     }
 
     .wt-chart-pedigree-right & {
         padding-right: .5rem;
-        padding-top: .25rem;
-        padding-bottom: .25rem;
+        @include jc-padding-tb(.25);
     }
 
     .wt-chart-pedigree-up & {
         padding-top: .5rem;
-        padding-right: .25rem;
-        padding-left: .25rem;
+        @include jc-padding-lr(.25);
     }
 
     .wt-chart-pedigree-down & {
         padding-bottom: .5rem;
-        padding-right: .25rem;
-        padding-left: .25rem;
+        @include jc-padding-lr(.25);
     }
 }
