@@ -31,10 +31,10 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 //https://github.com/postcss/postcss-custom-properties
 //Enable CSS variables in IE
 const postcss_custom_properties = require("postcss-custom-properties")();
+
 mix
     .setPublicPath('./')
     .alias('build', config.build_dir)
-    .sourceMaps()
     .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
     .options({
         processCssUrls: false,
