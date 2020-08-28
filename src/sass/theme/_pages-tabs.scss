@@ -2,7 +2,7 @@
 .nav-tabs {
     .nav-link {
         @include jc-theme-gradient-light;
-        border: $border-width solid $jc-theme-medium;
+        @include jc-border;
 
         &.active {
             @include jc-theme-gradient;
@@ -45,9 +45,9 @@
 
             &.active {
                 background: $jc-theme-lightest;
-                border-left: $border-width solid $jc-theme-medium; 
-                border-top: $border-width solid $jc-theme-medium; 
-                border-right: $border-width solid $jc-theme-medium; 
+                @include jc-border($_side: 'left');
+                @include jc-border($_side: 'top');
+                @include jc-border($_side: 'right'); 
             }
 
             &.active:hover {
