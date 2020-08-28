@@ -10,22 +10,22 @@
 }
 
 // Sizes
-@mixin jc-padding-tb($size) {
+@mixin jc-padding-tb($_size) {
     @if ($size > 0) {
-        $size: #{$size}+'rem';
+        $_size: #{$_size}+'rem';
     }
 
-    padding-top: $size;
-    padding-bottom: $size;
+    padding-top: $_size;
+    padding-bottom: $_size;
 }
 
-@mixin jc-padding-lr($size) {
-    @if ($size > 0) {
-        $size: #{$size}+'rem';
+@mixin jc-padding-lr($_size) {
+    @if ($_size > 0) {
+        $_size: #{$_size}+'rem';
     }
 
-    padding-left: $size;
-    padding-right: $size;
+    padding-left: $_size;
+    padding-right: $_size;
 }
 
 // Dropdown toggle
@@ -120,22 +120,22 @@
 }
 
 // Icons
-@mixin jc-icon-color($color: $jc-icon-color, $darken: 10%) {
-    color: $color;
+@mixin jc-icon-color($_color: $jc-icon-color, $darken: 10%) {
+    color: $_color;
     @include hover-focus() {
-        color: darken($color, $darken);
+        color: darken($_color, $darken);
     }
 }
 
 // Mime type icons - https://github.com/dmhendricks/file-icon-vectors/
-@mixin jc-mime-icon($class, $svg) {
+@mixin jc-mime-icon($_class, $_svg) {
     $image_dir: 'node_modules/file-icon-vectors/dist/icons/vivid/';
-    @if ($class == 'blank') {
-        $class: '.wt-mime';
+    @if ($_class == 'blank') {
+        $_class: '.wt-mime';
     } @else {
-        $class: '.wt-mime-' + $class;
+        $_class: '.wt-mime-' + $_class;
     }
-    #{$class} {
-        background-image: url($image_dir + $svg + '.svg');
+    #{$_class} {
+        background-image: url($image_dir + $_svg + '.svg');
     }  
 }
