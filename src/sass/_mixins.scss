@@ -11,7 +11,7 @@
 
 // Sizes
 @mixin jc-padding-tb($_size) {
-    @if ($size > 0) {
+    @if ($_size > 0) {
         $_size: #{$_size}+'rem';
     }
 
