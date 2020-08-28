@@ -59,10 +59,13 @@
 }
 
 .wt-block-content-user_messages {
-    button {
+    .btn {
+        @extend .btn-sm;
+    }
+    p > button {
         @extend .btn;
         @extend .btn-sm;
-        @extend .btn-primary;
+        @extend .btn-danger;
     }
     form {
         @extend .form-inline;
