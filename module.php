@@ -79,6 +79,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         View::registerCustomView('::layouts/default', $this->name() . '::layouts/default');
         View::registerCustomView('::modules/clippings/show', $this->name() . '::modules/clippings/show');
         View::registerCustomView('::modules/faq/show', $this->name() . '::modules/faq/show');
+        View::registerCustomView('::modules/favorites/favorites', $this->name() . '::modules/favorites/favorites');
         View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
         View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
     }
