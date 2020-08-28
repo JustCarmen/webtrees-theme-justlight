@@ -77,3 +77,12 @@
         @extend .mb-5;
     }
 }
+
+.wt-block-user_favorites,
+.wt-block-gedcom_favorites {
+    .jc-favorites-block-item {
+        background: $jc-theme-lighter;
+        @include jc-border(theme-color());
+    }
+
+}
