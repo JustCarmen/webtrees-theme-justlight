@@ -1,4 +1,11 @@
 /** JustLight Theme - Icons - Theme icons */
+
+// workaround for unicode icons in sass.
+// See: http://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
+@function unicode($str) {
+    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
 .wt-icon {
     &-add {
         @include jc-icon-color($jc-icon-green-color);
@@ -12,5 +19,40 @@
 
     &-help {
         @include jc-icon-color($jc-icon-blue-color, 0%);
+    }
+}
+
+// Custom icons for button links not preceded by an icon and not added via a view
+.jc-icon {
+    &-add,
+    &-edit,
+    &-delete {
+        font-size: $font-size-sm;
+        &:hover {
+            text-decoration: none;
+        }
+        &::before {
+            font-family: $jc-fa-fontfam;
+        }
+    }
+
+    &-add {
+        &::before {
+            @include jc-icon-color($jc-icon-green-color);        
+            content: unicode($jc-icon-add);
+        }
+    }
+
+    &-edit {
+        &::before {     
+            content: unicode($jc-icon-edit);
+        }
+    }
+
+    &-delete {
+        &::before {     
+            @include jc-icon-color($jc-icon-red-color);   
+            content: unicode($jc-icon-delete);
+        }
     }
 }
