@@ -144,6 +144,10 @@ dd {
     @include jc-button-gradient;
 }
 
+.wt-page-menu-items {
+    font-size: $font-size-sm;
+}
+
 .wt-page-options {
     @include jc-border;
     background: $jc-theme-lighter;
