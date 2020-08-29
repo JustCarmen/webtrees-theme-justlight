@@ -99,6 +99,9 @@
         background: $jc-theme-lighter;
         @include jc-border(theme-color());
     }
+    .btn-link:hover {
+        text-decoration: none;
+    }
 }
 
 .wt-block-content-gedcom_news,
