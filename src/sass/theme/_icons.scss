@@ -20,18 +20,26 @@
     &-cfamily {
         font-size: 2rem;
     }
+
     &-selected {
         @include jc-icon-color($jc-icon-green-color);
     }
+
     &-silhouette {
-        &-M, &-F, &-U {
+
+        &-M,
+        &-F,
+        &-U {
             font-size: 3rem;
         }
-    };
+    }
+
+    ;
 }
 
 // Miscellaneous icons
 .wt-block-content {
+
     &-gedcom_block,
     &-user_welcome {
         [class*="icon-"] {
@@ -46,7 +54,10 @@
 }
 
 .wt-individual-silhouette {
-    &-f, &-m, &-u {   
+
+    &-f,
+    &-m,
+    &-u {
         line-height: 1;
         font-style: normal;
         font-size: 200px; // same size as main image

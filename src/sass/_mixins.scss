@@ -40,7 +40,7 @@
     z-index: 1;
 
     .dropdown-header {
-        font-size: $jc-font-size-xs;        
+        font-size: $jc-font-size-xs;
         font-weight: 700;
         padding: 0;
     }
@@ -53,7 +53,7 @@
         margin-bottom: 0;
         padding-left: 1rem;
     }
-    
+
     .label {
         font-weight: 600;
     }
@@ -94,6 +94,7 @@
                 font-weight: 600;
             }
         }
+
         @content;
     }
 }
@@ -102,18 +103,20 @@
 // $table-border-width = $border-width
 // $table-border-color = $jc-theme-medium
 // $input-border-color = $jc-theme-medium
-@mixin jc-border($_color: $jc-theme-medium, $_side:'all', $_width: $border-width,) {
-    @if $_side == 'all' {
+@mixin jc-border($_color: $jc-theme-medium, $_side:'all', $_width: $border-width, ) {
+    @if $_side=='all' {
         border: $_width solid $_color;
-    } @else {
+    }
+
+    @else {
         border-#{$_side}: $_width solid $_color;
     }
 }
 
 // breakout of the default container
 @mixin jc-container-breakout {
-	width: 100vw;
-	position: relative;
+    width: 100vw;
+    position: relative;
     left: calc(-1 * (100vw - 100%) / 2);
     padding-left: 30px;
     padding-right: 30px;
@@ -122,6 +125,7 @@
 // Icons
 @mixin jc-icon-color($_color: $jc-icon-color, $darken: 10%) {
     color: $_color;
+
     @include hover-focus() {
         color: darken($_color, $darken);
     }
@@ -130,12 +134,16 @@
 // Mime type icons - https://github.com/dmhendricks/file-icon-vectors/
 @mixin jc-mime-icon($_class, $_svg) {
     $image_dir: 'node_modules/file-icon-vectors/dist/icons/vivid/';
-    @if ($_class == 'blank') {
+
+    @if ($_class=='blank') {
         $_class: '.wt-mime';
-    } @else {
-        $_class: '.wt-mime-' + $_class;
     }
+
+    @else {
+        $_class: '.wt-mime-'+ $_class;
+    }
+
     #{$_class} {
         background-image: url($image_dir + $_svg + '.svg');
-    }  
+    }
 }

@@ -1,63 +1,61 @@
-<?php 
-use Fisharebest\Webtrees\View; 
-?>
+<?php use Fisharebest\Webtrees\View; ?>
 
 <?php View::push('javascript') ?>
 <script>
-// Bootstrap active tab in navbar
-var url = location.href;
-$('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
-$('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
+    // Bootstrap active tab in navbar
+    var url = location.href;
+    $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
+    $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
-// Individual page main image - add classes for styling purposes
-$('.wt-route-IndividualPage').find('.col-sm-8 > .row > .col-sm-3').addClass('jc-indi-header-image-container')
-.find('> div:last-of-type').addClass('mt-2').removeClass('text-center').find('a').addClass('jc-icon-add');
-$('.wt-individual-silhouette').parent('.img-thumbnail').addClass('jc-indi-silhouette-container');
+    // Individual page main image - add classes for styling purposes
+    $('.wt-route-IndividualPage').find('.col-sm-8 > .row > .col-sm-3').addClass('jc-indi-header-image-container')
+        .find('> div:last-of-type').addClass('mt-2').removeClass('text-center').find('a').addClass('jc-icon-add');
+    $('.wt-individual-silhouette').parent('.img-thumbnail').addClass('jc-indi-silhouette-container');
 
-// Remove class from caption (this class cannot be overwritten with css)
-$('caption').removeClass('text-center');
+    // Remove class from caption (this class cannot be overwritten with css)
+    $('caption').removeClass('text-center');
 
-// Descendants chart - add classes for styling purposes
-$('.wt-chart-descendants [id^="fam"]').each(function() {
-    $(this).addClass('jc-chart-descendants-family'),
-    $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
-    $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
-});
+    // Descendants chart - add classes for styling purposes
+    $('.wt-chart-descendants [id^="fam"]').each(function () {
+        $(this).addClass('jc-chart-descendants-family'),
+            $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
+            $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
+    });
 
-// Ancestors chart - add classes for styling purposes
-$('.wt-chart-ancestors [id^="fam"]').each(function() {
-    $(this)
-        .find('.d-flex:first')
-        .addClass('mb-2')
-        .next('.d-flex')
-        .find('.wt-chart-vertical-indent')
-        .addClass('jc-chart-first-indent')    
-});
+    // Ancestors chart - add classes for styling purposes
+    $('.wt-chart-ancestors [id^="fam"]').each(function () {
+        $(this)
+            .find('.d-flex:first')
+            .addClass('mb-2')
+            .next('.d-flex')
+            .find('.wt-chart-vertical-indent')
+            .addClass('jc-chart-first-indent')
+    });
 
-// General indentation - only indent elements when preceded by a collapse icon
-$('.indent').parents('.collapse').find('.indent').addClass('jc-indent-collapse');
+    // General indentation - only indent elements when preceded by a collapse icon
+    $('.indent').parents('.collapse').find('.indent').addClass('jc-indent-collapse');
 
-// Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
-$('.fact_NOTE').next('.collapse').addClass('indent jc-indent-collapse');
+    // Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
+    $('.fact_NOTE').next('.collapse').addClass('indent jc-indent-collapse');
 
-// Individual page Facts Tab - restyle source fact
-$('.wt-tab-facts')
-    .find('.gallery').parents('.d-flex').addClass('flex-column').removeClass('align-items-center')
-    .find('div:nth-child(2n) a').addClass('jc-gallery-caption');
-    
-// Markdown table style
-jQuery('.markdown table').each(function(){
-    $(this).addClass('table table-sm table-responsive jc-markdown-table');
-    $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');    
-});
+    // Individual page Facts Tab - restyle source fact
+    $('.wt-tab-facts')
+        .find('.gallery').parents('.d-flex').addClass('flex-column').removeClass('align-items-center')
+        .find('div:nth-child(2n) a').addClass('jc-gallery-caption');
 
-// Blocks: Changes block
-$('.wt-table-changes').addClass('table-bordered table-striped');
+    // Markdown table style
+    jQuery('.markdown table').each(function () {
+        $(this).addClass('table table-sm table-responsive jc-markdown-table');
+        $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
+    });
 
-// Blocks: Journal block (wt-block-gedcom_news / wt-block-user_blog)
-$('.wt-block-content-gedcom_news, .wt-block-content-user_blog')
-    .find('p .btn-link').addClass('jc-icon-add').end()
-    .find('.news_box').addClass('mb-3')
+    // Blocks: Changes block
+    $('.wt-table-changes').addClass('table-bordered table-striped');
+
+    // Blocks: Journal block (wt-block-gedcom_news / wt-block-user_blog)
+    $('.wt-block-content-gedcom_news, .wt-block-content-user_blog')
+        .find('p .btn-link').addClass('jc-icon-add').end()
+        .find('.news_box').addClass('mb-3')
         .find('.news_title').addClass('h4').end()
         .find('.news_date').addClass('small mb-2').end()
         .find('hr').addClass('my-0').end()
@@ -65,18 +63,18 @@ $('.wt-block-content-gedcom_news, .wt-block-content-user_blog')
         .find('button.btn-link').addClass('jc-icon-delete').end()
         .find('form').addClass('text-right');
 
-// Badges static page - maybe we should restyle all badges
-$('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
+    // Badges static page - maybe we should restyle all badges
+    $('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
 
-// Icons - Use fontawesome. These icons do not have a view to alter
-$('.icon-indis').addClass('fas fa-user');
-$('.icon-mypage').addClass('fas fa-tachometer-alt');
-$('.icon-selected').addClass('fas fa-check');
-$('.wt-icon-add').parent('.btn').removeClass('btn-secondary').addClass('jc-btn-secondary');
-$('.wt-icon-preferences').parent('.btn-link').addClass('ml-n1');
+    // Icons - Use fontawesome. These icons do not have a view to alter
+    $('.icon-indis').addClass('fas fa-user');
+    $('.icon-mypage').addClass('fas fa-tachometer-alt');
+    $('.icon-selected').addClass('fas fa-check');
+    $('.wt-icon-add').parent('.btn').removeClass('btn-secondary').addClass('jc-btn-secondary');
+    $('.wt-icon-preferences').parent('.btn-link').addClass('ml-n1');
 
-// Prevent underlining when hovering over icons
-$('[class*="icon-"]').closest('a').addClass('text-decoration-none');
+    // Prevent underlining when hovering over icons
+    $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
+
 </script>
 <?php View::endpush() ?>
-

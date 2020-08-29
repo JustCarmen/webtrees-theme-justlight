@@ -2,15 +2,15 @@
 
 /**
  * JustLight Theme
- * 
+ *
  * JustCarmen webtrees modules
  * Copyright (C) 2009-2020 Carmen Pijpers-Knegt
- * 
+ *
  * Based on webtrees: online genealogy
  * Copyright (C) 2020 webtrees development team
- *  
+ *
  * This file is part of JustCarmen webtrees modules
- *  
+ *
  * JustCarmen webtrees modules is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or

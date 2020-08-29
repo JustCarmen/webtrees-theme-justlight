@@ -11,6 +11,7 @@ table.dataTable {
     thead {
         th {
             &.sorting {
+
                 &:before,
                 &_asc:before,
                 &_desc:before,
@@ -28,12 +29,12 @@ table.dataTable {
 
                 &_asc:after {
                     @extend %jc-dtsort;
-                    content: unicode($jc-dtsort-up);                    
+                    content: unicode($jc-dtsort-up);
                 }
 
                 &_desc:after {
-                   @extend %jc-dtsort;
-                   content: unicode($jc-dtsort-down);
+                    @extend %jc-dtsort;
+                    content: unicode($jc-dtsort-down);
                 }
 
                 &_asc_disabled:after,

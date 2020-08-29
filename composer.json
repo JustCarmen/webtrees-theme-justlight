@@ -1,30 +1,29 @@
 {
-	"name" : "justcarmen/webtrees-theme-justlight",
-	"description" : "justlight theme for webtrees",
-	"type" : "webtrees-theme",
-	"homepage" : "https://github.com/justcarmen/webtrees-theme-justlight",
-	"license" : "GPL-3.0+",
-	"minimum-stability" : "stable",
-	"authors" : [{
-			"name" : "Carmen Pijpers-Knegt",
-			"email" : "carmen@justcarmen.nl",
-			"homepage" : "http://www.justcarmen.nl",
-			"role" : "Developer"
-		}
-	],
-	"support" : {
-		"issues" : "https://github.com/justcarmen/webtrees-theme-justlight/issues"
+	"name": "justcarmen/webtrees-theme-justlight",
+	"description": "justlight theme for webtrees",
+	"type": "webtrees-theme",
+	"homepage": "https://github.com/justcarmen/webtrees-theme-justlight",
+	"license": "GPL-3.0+",
+	"minimum-stability": "stable",
+	"authors": [{
+		"name": "Carmen Pijpers-Knegt",
+		"email": "carmen@justcarmen.nl",
+		"homepage": "http://www.justcarmen.nl",
+		"role": "Developer"
+	}],
+	"support": {
+		"issues": "https://github.com/justcarmen/webtrees-theme-justlight/issues"
 	},
-	"keywords" : [
+	"keywords": [
 		"webtrees",
 		"genealogy"
 	],
-	"config" : {
+	"config": {
 		"preferred-install": {
 			"fisharebest/webtrees": "source"
 		}
 	},
-	"require-dev" : {
-		"fisharebest/webtrees" : "~2.0.7"
+	"require-dev": {
+		"fisharebest/webtrees": "~2.0.7"
 	}
 }

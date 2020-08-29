@@ -58,12 +58,14 @@ a {
     @include jc-button-gradient-light;
 }
 
-.jc-btn-secondary { /* container for the add button in forms (prepending select2 elements) */
+.jc-btn-secondary {
+    /* container for the add button in forms (prepending select2 elements) */
     @extend .input-group-text;
     padding: .375rem;
 }
 
-.btn-light { // used in some places where custom select elements are used.
+.btn-light {
+    // used in some places where custom select elements are used.
     @extend .jc-btn-secondary;
 }
 
@@ -75,7 +77,9 @@ a {
 .btn-outline-secondary {
     color: $jc-theme-dark;
     border-color: $jc-theme-medium-dark;
+
     &:not(:disabled):not(.disabled) {
+
         &.active,
         &:active {
             background: $jc-theme-medium;
@@ -83,6 +87,7 @@ a {
             box-shadow: none;
         }
     }
+
     &:hover {
         border-color: $jc-theme-medium-dark;
     }
@@ -126,7 +131,7 @@ dd {
 .indent {
     font-size: $font-size-sm;
 
-    &.jc-indent-collapse {        
+    &.jc-indent-collapse {
         padding-left: 1.65rem;
     }
 }

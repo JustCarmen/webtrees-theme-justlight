@@ -99,6 +99,7 @@
         background: $jc-theme-lighter;
         @include jc-border(theme-color());
     }
+
     .btn-link:hover {
         text-decoration: none;
     }

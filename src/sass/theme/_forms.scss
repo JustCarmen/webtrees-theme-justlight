@@ -4,13 +4,13 @@
 @import "forms-select2";
 
 .hideShowPassword-wrapper {
-	button {        
+    button {
         @extend .btn;
         @extend .btn-secondary;
         border-color: $jc-theme-medium-dark;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-	}
+    }
 }
 
 .form-row {
@@ -21,6 +21,7 @@
     input[type="text"] {
         @extend .form-control;
     }
+
     .input-group-append {
         .btn-link {
             @extend .input-group-text;

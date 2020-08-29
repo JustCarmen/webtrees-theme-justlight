@@ -65,7 +65,7 @@ use Psr\Http\Message\ServerRequestInterface;
         <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
 
         <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
-        
+
         <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
         <link rel="stylesheet" href="<?= e($stylesheet) ?>">
         <?php endforeach ?>
@@ -232,7 +232,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 	            // Image settings
 	            $("a[type^=image].gallery").colorbox({
-	                photo: true,  
+	                photo: true,
 	            });
 
 	            // PDF settings

@@ -63,6 +63,7 @@ table {
 
     // reset styles from parent .wt-facts-table
     .wt-facts-table & {
+
         th,
         td {
             padding: .3rem; // .table-sm
@@ -102,10 +103,12 @@ table {
 /** Stories table */
 .jc-stories-table {
     @include jc-border;
+
     thead tr {
         @include jc-theme-gradient;
+
         th {
-           vertical-align: top; 
+            vertical-align: top;
         }
     }
 }
@@ -117,7 +120,7 @@ table {
         @extend .table-sm;
         @include jc-border;
 
-        th, 
+        th,
         td {
             border: 0;
         }
@@ -131,13 +134,14 @@ table {
         table {
             @extend .table-bordered;
             @extend .table-info;
+
             td {
                 li {
-                    > a {
+                    >a {
                         font-weight: 700;
                     }
                 }
             }
-        }   
+        }
     }
 }

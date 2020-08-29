@@ -6,6 +6,7 @@
             &.jc-nav-link-active {
                 @include jc-button-gradient;
             }
+
             &:hover {
                 background: theme-color('secondary');
             }

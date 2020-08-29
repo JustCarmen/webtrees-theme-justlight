@@ -26,8 +26,9 @@
 
         thead tr:last-child {
             @include jc-theme-gradient;
+
             th {
-               vertical-align: top; 
+                vertical-align: top;
             }
         }
     }

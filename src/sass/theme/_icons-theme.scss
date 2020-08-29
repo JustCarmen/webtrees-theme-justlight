@@ -24,13 +24,16 @@
 
 // Custom icons for button links not preceded by an icon and not added via a view
 .jc-icon {
+
     &-add,
     &-edit,
     &-delete {
         font-size: $font-size-sm;
+
         &:hover {
             text-decoration: none;
         }
+
         &::before {
             font-family: $jc-fa-fontfam;
         }
@@ -38,20 +41,20 @@
 
     &-add {
         &::before {
-            @include jc-icon-color($jc-icon-green-color);        
+            @include jc-icon-color($jc-icon-green-color);
             content: unicode($jc-icon-add);
         }
     }
 
     &-edit {
-        &::before {     
+        &::before {
             content: unicode($jc-icon-edit);
         }
     }
 
     &-delete {
-        &::before {     
-            @include jc-icon-color($jc-icon-red-color);   
+        &::before {
+            @include jc-icon-color($jc-icon-red-color);
             content: unicode($jc-icon-delete);
         }
     }

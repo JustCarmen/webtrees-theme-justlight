@@ -5,12 +5,18 @@
 // =======================================================================================
 @mixin jc-theme-gradient() {
   background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
-  &, a, .far, .fas {
+
+  &,
+  a,
+  .far,
+  .fas {
     color: $jc-theme-lightest;
   }
+
   & [class*="icon-"] {
     @include jc-icon-color($jc-icon-white-color, 0%);
   }
+
   th {
     font-weight: 600;
   }
@@ -23,7 +29,9 @@
 
 @mixin jc-theme-gradient-light() {
   background: linear-gradient($jc-theme-lightest 0%, $jc-theme-lighter 50%, $jc-theme-medium 100%);
-  &, a {
+
+  &,
+  a {
     color: $body-color;
   }
 }
@@ -52,6 +60,7 @@
 @mixin jc-button-gradient() {
   @include jc-button('primary');
   @include jc-theme-gradient;
+
   &:hover {
     @include jc-theme-gradient-hover;
   }
@@ -60,8 +69,8 @@
 @mixin jc-button-gradient-light() {
   @include jc-button('secondary');
   @include jc-theme-gradient-light;
+
   &:hover {
     @include jc-theme-gradient-light-hover;
   }
 }
-

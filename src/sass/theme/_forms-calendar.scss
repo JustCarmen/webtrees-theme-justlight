@@ -3,13 +3,14 @@ div[id^="caldiv"],
 div[id^="calendar-widget"] {
   table {
     @extend .m-0;
+
     td {
       @extend .p-2;
       background-color: $body-bg !important;
     }
   }
-  
-  > table {
+
+  >table {
     @include jc-border;
     @include box-shadow ($dropdown-box-shadow);
 
@@ -18,7 +19,7 @@ div[id^="calendar-widget"] {
     }
 
     table {
-      td {        
+      td {
         border-radius: .25rem;
         @extend .text-center;
 
@@ -30,40 +31,46 @@ div[id^="calendar-widget"] {
         &.optionbox,
         &.descriptionbox {
           a {
-           color: $body-color;
+            color: $body-color;
           }
         }
 
         &:hover {
           background-color: $dropdown-link-hover-bg !important;
+
           a {
             color: $dropdown-link-hover-color;
           }
         }
       }
-      
+
       tr:first-child {
         font-weight: 700;
+
         td {
           &:hover {
             background: none !important;
           }
-        }        
+        }
       }
 
       tr:not(:first-child) {
         td.descriptionbox {
           position: relative;
+
           &,
           &:hover {
             background-color: theme-color() !important;
           }
+
           a {
+
             &,
             &:hover {
               color: $dropdown-link-active-color;
             }
           }
+
           &:before {
             content: '';
             display: inline-block;
