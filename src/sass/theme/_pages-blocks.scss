@@ -93,11 +93,47 @@
     }
 }
 
-.wt-block-user_favorites,
-.wt-block-gedcom_favorites {
+.wt-block-content-user_favorites,
+.wt-block-content-gedcom_favorites {
     .jc-favorites-block-item {
         background: $jc-theme-lighter;
         @include jc-border(theme-color());
     }
+}
 
+.wt-block-content-gedcom_news,
+.wt-block-content-user_blog {
+    .jc-icon {
+        &-add,
+        &-edit,
+        &-delete {
+            font-size: $font-size-sm;
+            &:hover {
+                text-decoration: none;
+            }
+            &::before {
+                font-family: $jc-fa-fontfam;
+            }
+        }
+
+        &-add {
+            &::before {
+                color: $jc-icon-green-color;          
+                content: unicode($jc-icon-add);
+            }
+        }
+
+        &-edit {
+            &::before {      
+                content: unicode($jc-icon-edit);
+            }
+        }
+
+        &-delete {
+            &::before {     
+                color: $jc-icon-red-color;    
+                content: unicode($jc-icon-delete);
+            }
+        }
+    }
 }
