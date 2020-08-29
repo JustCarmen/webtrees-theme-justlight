@@ -6,6 +6,7 @@
 
         &.active {
             @include jc-theme-gradient;
+
             &:hover {
                 @include jc-theme-gradient-hover;
             }
@@ -25,13 +26,13 @@
             .wt-page-content & {
                 display: none;
             }
-        } 
-        
+        }
+
         @include media-breakpoint-down(md) {
             border: none;
             padding: .5rem;
 
-            &, 
+            &,
             &.active,
             &.active:hover,
             &:hover {
@@ -40,14 +41,14 @@
             }
 
             &:hover {
-                color: theme-color();                
+                color: theme-color();
             }
 
             &.active {
                 background: $jc-theme-lightest;
                 @include jc-border($_side: 'left');
                 @include jc-border($_side: 'top');
-                @include jc-border($_side: 'right'); 
+                @include jc-border($_side: 'right');
             }
 
             &.active:hover {
@@ -59,5 +60,17 @@
             }
         }
     }
-   
+
+}
+
+/** Special tabs */
+.wt-tab-album {
+    figcaption {
+        @extend .text-truncate;
+        font-size: $jc-font-size-xs;
+
+        a {
+            color: $body-color;
+        }
+    }
 }

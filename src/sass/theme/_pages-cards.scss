@@ -28,7 +28,7 @@
             @include jc-padding-tb(0);
         }
     }
-    
+
     /** Individual page name card (first) */
     #individual-names .card:first-of-type & {
         @include jc-theme-gradient;
@@ -55,5 +55,15 @@
 
     #sidebar-content-family_nav & {
         padding: 0;
+    }
+
+    .wt-sidebar-family-navigator {
+        .wt-family-navigator-label {
+            width: $jc-facts-table-header-width * 2;
+        }
+
+        .dropdown-menu {
+            @include jc-dropdown-toggle;
+        }
     }
 }
