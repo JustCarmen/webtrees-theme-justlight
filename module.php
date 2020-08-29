@@ -149,7 +149,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleAuthorName(): string
     {
-        return 'Carmen Pijpers-Knegt';
+        return 'JustCarmen';
     }
 
     /**
@@ -158,7 +158,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleVersion(): string
     {
-        return '2.0.7-dev';
+        return '2.0.7';
     }
 
     /**
