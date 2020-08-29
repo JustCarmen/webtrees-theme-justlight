@@ -9,6 +9,11 @@ var url = location.href;
 $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
 $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
+// Individual page main image - add classes for styling purposes
+$('.wt-route-IndividualPage').find('.col-sm-8 > .row > .col-sm-3').addClass('jc-indi-header-image-container')
+.find('> div:last-of-type').addClass('mt-2').removeClass('text-center').find('a').addClass('jc-icon-add');
+$('.wt-individual-silhouette').parent('.img-thumbnail').addClass('jc-indi-silhouette-container');
+
 // Remove class from caption (this class cannot be overwritten with css)
 $('caption').removeClass('text-center');
 
@@ -69,9 +74,6 @@ $('.icon-mypage').addClass('fas fa-tachometer-alt');
 $('.icon-selected').addClass('fas fa-check');
 $('.wt-icon-add').parent('.btn').removeClass('btn-secondary').addClass('jc-btn-secondary');
 $('.wt-icon-preferences').parent('.btn-link').addClass('ml-n1');
-
-// Remove border around silhouette
-$('.wt-individual-silhouette').parent('.img-thumbnail').addClass('border-0');
 
 // Prevent underlining when hovering over icons
 $('[class*="icon-"]').closest('a').addClass('text-decoration-none');

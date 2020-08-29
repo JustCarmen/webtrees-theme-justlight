@@ -3,11 +3,21 @@
     h2 {
         margin-top: $jc-main-wrapper-spacer;
         padding-bottom: 0.5rem;
-        @include jc-border( $jc-theme-lighter, 'bottom');
+        @include jc-border($jc-theme-lighter, 'bottom');
     }
 }
 
 .wt-route-IndividualPage {
+    .jc-indi-header-image-container {
+        flex: 0 0 230px; // margins included. Image is 200px width
+
+        .jc-indi-silhouette-container {
+            border: 0;
+            box-shadow: none;
+            text-align: center;
+        }
+    }
+
     .wt-main-container {
         @include jc-container-fluid;
 
