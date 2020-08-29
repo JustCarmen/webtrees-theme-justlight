@@ -1,7 +1,6 @@
 JustLight Theme for webtrees
 ============================
-
-[![Latest Release](https://img.shields.io/github/release/JustCarmen/justlight.svg)][1]
+[![latest release for webtrees 1](https://img.shields.io/badge/release-v1.7.11-lightgrey)][1]
 [![webtrees major version](https://img.shields.io/badge/webtrees-v1.x-red)][2]
 
 JustLight Theme for webtrees is a light clean theme using the Bootstrap framework. This is a webtrees 1 module. It cannot be used with webtrees 2.
@@ -29,7 +28,7 @@ Bugs and feature requests
 -------------------------
 If you experience any bugs or have a feature request for this module you can [create a new issue on GitHub][5] or [use the webtrees subforum 'customising'][6] to contact me.
 
- [1]: https://github.com/JustCarmen/justlight/releases/latest
+ [1]: https://github.com/JustCarmen/webtrees-theme-justlight/releases/tag/1.7.11
  [2]: https://webtrees.github.io/download/
  [3]: https://github.com/JustCarmen/justlight_theme_options
  [4]: http://www.justcarmen.nl/help-category/modules-help
