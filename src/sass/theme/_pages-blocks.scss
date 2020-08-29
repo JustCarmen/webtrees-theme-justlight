@@ -10,7 +10,7 @@
         margin-bottom: $jc-main-wrapper-spacer;
     }
 
-    .wt-block-header {        
+    .wt-block-header {
         border: none;
         background: none;
         padding: 0;
@@ -37,7 +37,7 @@
     @include jc-border($jc-theme-lighter, 'left');
     font-size: $font-size-sm;
 
-    > div {
+    >div {
         &:not(:last-child) {
             padding-bottom: 0.5rem;
             @include jc-border(theme-color(), 'bottom');
@@ -50,6 +50,7 @@
 .wt-block-content-gedcom_stats {
     .list-inline-item {
         margin: 0;
+
         &:not(:last-child) {
             &::after {
                 content: " •";
@@ -59,25 +60,36 @@
 }
 
 .wt-block-content-user_messages {
-    .btn {
-        @extend .btn-sm;
+    .table-responsive {
+        max-height: 30rem;
+        /* 480px */
+        @extend .mb-5;
     }
-    p > button {
-        @extend .btn;
-        @extend .btn-sm;
-        @extend .btn-danger;
-    }
+
     form {
         @extend .form-inline;
         @extend .mb-3;
-    }
-    select {
-        @extend .form-control;
-        @extend .mx-2;
-    }
-    .table-responsive {
-        max-height: 30rem; /* 480px */
-        @extend .mb-5;
+
+        select {
+            @extend .form-control;
+            @extend .mx-2;
+        }
+
+        .btn {
+            @extend .btn-sm;
+        }
+
+        button[type="submit"] {
+            @extend .btn;
+            @extend .btn-sm;
+            @extend .btn-primary;
+        }
+
+        &:last-of-type {
+            button[type="submit"] {
+                @extend .btn-danger;
+            }
+        }
     }
 }
 
