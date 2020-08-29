@@ -2,7 +2,7 @@
 
 // https://datatables.net/forums/discussion/40100/replacing-original-sorting-icons-with-bootstrap-4
 %jc-dtsort {
-    font-family: "Font Awesome 5 Free";
+    font-family: $jc-fa-fontfam;
     opacity: 1;
     right: .25rem;
 }
