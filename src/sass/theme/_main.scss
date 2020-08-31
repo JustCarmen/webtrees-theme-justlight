@@ -15,8 +15,11 @@
     flex: 1;
     height: 100vw;
 
-    .wt-page-title {
+    .wt-main-container {
         margin-top: $jc-main-wrapper-spacer;
+    }
+
+    .wt-page-title {
         margin-bottom: $jc-main-wrapper-spacer;
         margin-left: 0 !important;
         margin-right: auto !important;

@@ -81,8 +81,7 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= DebugBar::renderHead() ?>
     </head>
 
-    <body
-        class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
+    <body class="wt-global wt-theme-<?= e(app(ModuleThemeInterface::class)->name()) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
         <?php // START THEME JUSTLIGHT ?>
         <header class="wt-header-wrapper d-print-none sticky-top">
             <?php // END THEME JUSTLIGHT ?>
@@ -106,22 +105,17 @@ use Psr\Http\Message\ServerRequestInterface;
                     <?php // END THEME JUSTLIGHT ?>
 
                     <?php // START THEME JUSTLIGHT ?>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#primaryMenu, #secondaryMenu" aria-controls="primaryMenu, secondaryMenu"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryMenu, #secondaryMenu" aria-controls="primaryMenu, secondaryMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <?php // END THEME JUSTLIGHT ?>
 
                     <div class="col wt-header-search">
-                        <form method="post"
-                            action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>"
-                            class="wt-header-search-form" role="search">
+                        <form method="post" action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>" class="wt-header-search-form" role="search">
                             <?= csrf_field() ?>
                             <div class="input-group">
                                 <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
-                                <input type="search" class="form-control wt-header-search-field" id="quick-search"
-                                    name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
+                                <input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-primary wt-header-search-button">
                                         <?= view('icons/search') ?>
@@ -142,7 +136,7 @@ use Psr\Http\Message\ServerRequestInterface;
                     </div>
                     <?php // START THEME JUSTLIGHT ?>
                 </div>
-                    <?php // END THEME JUSTLIGHT ?>
+                <?php // END THEME JUSTLIGHT ?>
                 <?php if ($tree !== null) : ?>
                 <?php // START THEME JUSTLIGHT ?>
                 <div class="row wt-header-content navbar navbar-expand-md navbar-light">
@@ -165,19 +159,17 @@ use Psr\Http\Message\ServerRequestInterface;
         </header>
 
         <main id="content" class="wt-main-wrapper">
-            <div class="container wt-main-container">
-                <div class="flash-messages">
-                    <?php foreach (FlashMessages::getMessages() as $message) : ?>
-                    <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert"
-                            aria-label="<?= I18N::translate('close') ?>">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <?= $message->text ?>
-                    </div>
-                    <?php endforeach ?>
+            <div class="flash-messages">
+                <?php foreach (FlashMessages::getMessages() as $message) : ?>
+                <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="<?= I18N::translate('close') ?>">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <?= $message->text ?>
                 </div>
-
+                <?php endforeach ?>
+            </div>
+            <div class="container wt-main-container">
                 <?= $content ?>
             </div>
         </main>
@@ -194,52 +186,58 @@ use Psr\Http\Message\ServerRequestInterface;
         <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
         <script>
-	        // In this theme we use colorbox for pdf's
-	        $('.wt-mime-application-pdf').parent('a').each(function() {
-	            $(this).addClass('gallery');
-	            $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
-	        });
+            // In this theme we use colorbox for pdf's
+            $('.wt-mime-application-pdf').parent('a').each(function () {
+                $(this).addClass('gallery');
+                $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
+            });
 
-	        // Trigger an event when we click on an (any) image or pdf
-	        $('body').on('click', 'a.gallery', function() {
-	            // Enable colorbox for images and pdf
-	            $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
-	                // Don't scroll window with document
-	                fixed: true,
-	                width: "85%",
-	                height: "85%",
-	                current: "",
-	                previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous') ?>"></i>',
-	                next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next') ?>"></i>',
-	                slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play') ?>"></i>',
-	                slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop') ?>"></i>',
-	                close: '<i class="fas fa-times" title="<?= I18N::translate('close') ?>"></i>',
-	                title: function() {
-	                    return this.dataset.title;
-	                },
-	                rel: "gallery", // Turn all images on the page into a slideshow
-	                slideshow: true,
-	                slideshowAuto: false,
-	                // Add wheelzoom to the displayed image
-	                onComplete: function() {
-	                    // Disable click on image triggering next image
-	                    // https://github.com/jackmoore/colorbox/issues/668
-	                    $(".cboxPhoto").unbind("click");
+            // Trigger an event when we click on an (any) image or pdf
+            $('body').on('click', 'a.gallery', function () {
+                // Enable colorbox for images and pdf
+                $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
+                    // Don't scroll window with document
+                    fixed: true,
+                    width: "85%",
+                    height: "85%",
+                    current: "",
+                    previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('
+                    previous ') ?>"></i>',
+                    next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('
+                    next ') ?>"></i>',
+                    slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('
+                    Play ') ?>"></i>',
+                    slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('
+                    Stop ') ?>"></i>',
+                    close: '<i class="fas fa-times" title="<?= I18N::translate('
+                    close ') ?>"></i>',
+                    title: function () {
+                        return this.dataset.title;
+                    },
+                    rel: "gallery", // Turn all images on the page into a slideshow
+                    slideshow: true,
+                    slideshowAuto: false,
+                    // Add wheelzoom to the displayed image
+                    onComplete: function () {
+                        // Disable click on image triggering next image
+                        // https://github.com/jackmoore/colorbox/issues/668
+                        $(".cboxPhoto").unbind("click");
                         // Enable wheel/pinch zooming
                         $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
-	                }
-	            });
+                    }
+                });
 
-	            // Image settings
-	            $("a[type^=image].gallery").colorbox({
-	                photo: true,
-	            });
+                // Image settings
+                $("a[type^=image].gallery").colorbox({
+                    photo: true,
+                });
 
-	            // PDF settings
-	            $("a[type$=pdf].gallery").colorbox({
-	                iframe: true
-	            });
-	        });
+                // PDF settings
+                $("a[type$=pdf].gallery").colorbox({
+                    iframe: true
+                });
+            });
+
         </script>
 
         <?= View::stack('javascript') ?>

@@ -1,7 +1,6 @@
 /** JustLight Theme - Specific pages */
 .wt-route-UserPage {
     h2 {
-        margin-top: $jc-main-wrapper-spacer;
         padding-bottom: 0.5rem;
         @include jc-border($jc-theme-lighter, 'bottom');
     }
