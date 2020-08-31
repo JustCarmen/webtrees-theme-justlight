@@ -168,6 +168,16 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         return '2.0.8-dev';
     }
 
+     /**
+     * A URL that will provide the latest stable version of this module.
+     *
+     * @return string
+     */
+    public function customModuleLatestVersionUrl(): string
+    {
+        return 'https://github.com/JustCarmen/webtrees-theme-justlight/blob/master/latest-version.txt';
+    }
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleSupportUrl()
