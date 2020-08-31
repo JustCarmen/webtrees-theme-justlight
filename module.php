@@ -131,7 +131,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
             'chart-background-u'             => 'f9f9f9', // Fanchart
             'chart-box-x'                    => 260, // unused
             'chart-box-y'                    => 85, // unused
-            'chart-font-color'               => '#212529', // FanChart
+            'chart-font-color'               => '212529', // FanChart
             'chart-spacing-x'                => 5, // unused
             'chart-spacing-y'                => 10, // unused
             'compact-chart-box-x'            => 240, // unused
