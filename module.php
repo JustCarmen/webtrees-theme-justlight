@@ -175,7 +175,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://github.com/JustCarmen/webtrees-theme-justlight/blob/master/latest-version.txt';
+        return 'https://raw.githubusercontent.com/JustCarmen/webtrees-theme-justlight/master/latest-version.txt';
     }
 
     /**
