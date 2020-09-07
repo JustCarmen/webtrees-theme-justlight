@@ -3,6 +3,5 @@ mix-manifest.json
 mix.js.map
 /build/
 /dist/
-/resources/css/
 /node_modules/
 /vendor/
