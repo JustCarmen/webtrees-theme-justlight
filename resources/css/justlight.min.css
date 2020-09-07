@@ -16366,6 +16366,14 @@ caption {
   font-size: 0.875rem;
 }
 
+.markdown p {
+  white-space: pre-wrap;
+}
+
+[dir] .markdown p {
+  margin-bottom: 0.5rem;
+}
+
 [dir] .wt-page-menu-button {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;

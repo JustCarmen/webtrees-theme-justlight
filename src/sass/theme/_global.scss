@@ -140,6 +140,11 @@ dd {
     font-size: $font-size-sm;
 }
 
+.markdown p {
+    margin-bottom: .5rem;
+    white-space: pre-wrap;
+}
+
 .wt-page-menu-button {
     @include jc-button-gradient;
 }
