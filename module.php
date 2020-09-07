@@ -59,6 +59,69 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
 
     /**
      * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleAuthorName()
+     */
+    public function customModuleAuthorName(): string
+    {
+        return 'JustCarmen';
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
+     *
+     * We use a system where the version number is equal to the latest version of webtrees
+     * Interim versions get an extra sub number
+     *
+     * The dev version is always one step above the latest stable version of this module
+     * The subsequent stable version depends on the version number of the latest stable version of webtrees
+     *
+     */
+    public function customModuleVersion(): string
+    {
+        return '2.0.8-dev';
+    }
+
+    /**
+     * A URL that will provide the latest stable version of this module.
+     *
+     * @return string
+     */
+    public function customModuleLatestVersionUrl(): string
+    {
+        return 'https://raw.githubusercontent.com/JustCarmen/webtrees-theme-justlight/master/latest-version.txt';
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleSupportUrl()
+     */
+    public function customModuleSupportUrl(): string
+    {
+        return 'https://github.com/justcarmen/webtrees-theme-justlight/issues';
+    }
+
+    /**
+     * A footer, to be added at the bottom of every page.
+     *
+     * @param ServerRequestInterface $request
+     *
+     * @return string
+     */
+    public function getFooter(ServerRequestInterface $request): string
+    {
+        if (Session::get('theme') === $this->name()) {
+            return view($this->name() . '::theme/footer-credits', [
+                'url' => 'https://justcarmen.nl',
+                'text' => 'Design: justcarmen.nl'
+            ]);
+        } else {
+            return "";
+        }
+    }
+
+    /**
+     * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::boot()
      */
     public function boot(): void
@@ -141,68 +204,5 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
             'distribution-chart-no-values'   => 'f9f9f9', // Statistics charts
         ];
         return $parameters[$parameter_name];
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleAuthorName()
-     */
-    public function customModuleAuthorName(): string
-    {
-        return 'JustCarmen';
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
-     *
-     * We use a system where the version number is equal to the latest version of webtrees
-     * Interim versions get an extra sub number
-     *
-     * The dev version is always one step above the latest stable version of this module
-     * The subsequent stable version depends on the version number of the latest stable version of webtrees
-     *
-     */
-    public function customModuleVersion(): string
-    {
-        return '2.0.8-dev';
-    }
-
-     /**
-     * A URL that will provide the latest stable version of this module.
-     *
-     * @return string
-     */
-    public function customModuleLatestVersionUrl(): string
-    {
-        return 'https://raw.githubusercontent.com/JustCarmen/webtrees-theme-justlight/master/latest-version.txt';
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleSupportUrl()
-     */
-    public function customModuleSupportUrl(): string
-    {
-        return 'https://github.com/justcarmen/webtrees-theme-justlight/issues';
-    }
-
-    /**
-     * A footer, to be added at the bottom of every page.
-     *
-     * @param ServerRequestInterface $request
-     *
-     * @return string
-     */
-    public function getFooter(ServerRequestInterface $request): string
-    {
-        if (Session::get('theme') === $this->name()) {
-            return view($this->name() . '::theme/footer-credits', [
-                'url' => 'https://justcarmen.nl',
-                'text' => 'Design: justcarmen.nl'
-            ]);
-        } else {
-            return "";
-        }
     }
 };
