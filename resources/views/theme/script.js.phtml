@@ -43,6 +43,9 @@
         .find('.gallery').parents('.d-flex').addClass('flex-column').removeClass('align-items-center')
         .find('div:nth-child(2n) a').addClass('jc-gallery-caption');
 
+    // Individual page Stories Tab
+    $('.wt-tab-stories .story_title').addClass('h3 text-left').removeClass('text-center');
+
     // Markdown table style
     jQuery('.markdown table').each(function () {
         $(this).addClass('table table-sm table-responsive jc-markdown-table');
