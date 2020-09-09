@@ -193,9 +193,11 @@ use Psr\Http\Message\ServerRequestInterface;
             });
 
             // Trigger an event when we click on an (any) image or pdf
+            // Since we cannot use type on images when using the default text editor (the type tag is stripped out)
+            // we will accept a custom class. Use jc-gallery-image for images and jc-gallery-pdf for pdf's.
             $('body').on('click', 'a.gallery', function () {
                 // Enable colorbox for images and pdf
-                $("a[type^=image].gallery, a[type$=pdf].gallery").colorbox({
+                $("a[type^=image].gallery, a[type$=pdf].gallery, a.jc-gallery-image, a.jc-gallery-pdf").colorbox({
                     // Don't scroll window with document
                     fixed: true,
                     width: "85%",
@@ -223,12 +225,12 @@ use Psr\Http\Message\ServerRequestInterface;
                 });
 
                 // Image settings
-                $("a[type^=image].gallery").colorbox({
+                $("a[type^=image].gallery, a.jc-gallery-image").colorbox({
                     photo: true,
                 });
 
                 // PDF settings
-                $("a[type$=pdf].gallery").colorbox({
+                $("a[type$=pdf].gallery, a.jc-gallery-pdf").colorbox({
                     iframe: true
                 });
             });
