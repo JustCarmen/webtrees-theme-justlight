@@ -64,6 +64,15 @@
     }
 }
 
+// toggle gender icons (filter above data tables)
+[data-toggle=buttons] {
+    > label {
+        > .wt-icon-sex {
+            pointer-events: none;
+        }
+    }
+}
+
 @import "icons-theme";
 @import "icons-icomoon";
 @import "icons-datatable-sort";

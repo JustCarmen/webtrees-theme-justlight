@@ -16170,7 +16170,7 @@ table#tvTreeBorder td#tv_tree_top div {
   display: none;
 }
 
-/** 
+/**
   * ======================
        JustLight Theme
   * ======================
@@ -16919,6 +16919,10 @@ caption {
   line-height: 1;
   font-style: normal;
   font-size: 200px;
+}
+
+[data-toggle=buttons] > label > .wt-icon-sex {
+  pointer-events: none;
 }
 
 /** JustLight Theme - Icons - Theme icons */
