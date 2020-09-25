@@ -2,21 +2,11 @@
 	"name": "justcarmen/webtrees-theme-justlight",
 	"description": "justlight theme for webtrees",
 	"type": "webtrees-theme",
-	"homepage": "https://github.com/justcarmen/webtrees-theme-justlight",
 	"license": "GPL-3.0+",
-	"minimum-stability": "stable",
-	"authors": [{
-		"name": "Carmen Pijpers-Knegt",
-		"email": "carmen@justcarmen.nl",
-		"homepage": "http://www.justcarmen.nl",
-		"role": "Developer"
-	}],
-	"support": {
-		"issues": "https://github.com/justcarmen/webtrees-theme-justlight/issues"
-	},
 	"keywords": [
 		"webtrees",
-		"genealogy"
+		"genealogy",
+		"theme"
 	],
 	"config": {
 		"preferred-install": {
