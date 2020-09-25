@@ -15553,9 +15553,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-right .wt-pedigree-lines {
-  border: solid
-#337ab7
-1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
 }
 
@@ -15587,9 +15585,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-left .wt-pedigree-lines {
-  border: solid
-#337ab7
-1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
 }
 
@@ -15626,9 +15622,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-down .wt-pedigree-lines {
-  border: solid
-#337ab7
-1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
   border-bottom: none;
   border-radius: 0 0 0 0;
@@ -15672,9 +15666,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-up .wt-pedigree-lines {
-  border: solid
-#337ab7
-1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
   border-top: none;
   border-radius: 0 0 0 0;
@@ -15728,17 +15720,13 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=ltr] .wt-chart-vertical-line {
   right: 0;
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-vertical-line {
   left: 0;
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
 }
 
@@ -15749,17 +15737,13 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-last-child-line {
-  border-bottom: solid
-#337ab7
-1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-vertical-last-child-line {
   right: 0;
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -15767,9 +15751,7 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=rtl] .wt-chart-vertical-last-child-line {
   left: 0;
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
@@ -15782,9 +15764,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-child-line {
-  border-bottom: solid
-#337ab7
-1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -15806,9 +15786,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-line {
-  border-bottom: solid
-#337ab7
-1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -15819,25 +15797,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-child {
-  border-top: solid
-#337ab7
-1px;
+  border-top: solid #337ab7 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-child {
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-child {
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
@@ -15848,16 +15820,12 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir=ltr] .wt-chart-horizontal-middle-child {
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-horizontal-middle-child {
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
 }
 
@@ -15866,25 +15834,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-child {
-  border-bottom: solid
-#337ab7
-1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-child {
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-last-child {
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -15897,25 +15859,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-parent {
-  border-top: solid
-#337ab7
-1px;
+  border-top: solid #337ab7 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-parent {
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-parent {
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
@@ -15926,25 +15882,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-parent {
-  border-bottom: solid
-#337ab7
-1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-parent {
-  border-left: solid
-#337ab7
-1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
 }
 
 [dir=rtl] .wt-chart-horizontal-last-parent {
-  border-right: solid
-#337ab7
-1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
