@@ -1,11 +1,5 @@
 /** JustLight Theme - Icons - Theme icons */
 
-// workaround for unicode icons in sass.
-// See: http://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
-@function unicode($str) {
-    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
-}
-
 .wt-icon {
     &-add {
         @include jc-icon-color($jc-icon-green-color);

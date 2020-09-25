@@ -16921,6 +16921,16 @@ caption {
   font-size: 200px;
 }
 
+.tv_treelink::before {
+  font-family: "Font Awesome 5 Free";
+}
+.tvF .tv_treelink::before {
+  content: "\F182";
+}
+.tvM .tv_treelink::before {
+  content: "\F183";
+}
+
 [data-toggle=buttons] > label > .wt-icon-sex {
   pointer-events: none;
 }
