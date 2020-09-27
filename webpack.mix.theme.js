@@ -1,6 +1,6 @@
 /**
  * Laravel mix - JustLight theme
- * 
+ *
  * Output:
  * 		- justlight.min.css
  */
@@ -32,7 +32,10 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 //Enable CSS variables in IE
 const postcss_custom_properties = require("postcss-custom-properties")();
 
-mix
+if(process.env.NODE_ENV === 'production') {
+    mix.styles(config.public_dir + '/css/justlight.min.css', config.build_dir + '/justlight.min.css')
+} else {
+    mix
     .setPublicPath('./')
     .alias('build', config.build_dir)
     .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
@@ -46,3 +49,4 @@ mix
             postcss_custom_properties,
         ]
     });
+}

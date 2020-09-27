@@ -29,7 +29,7 @@ mix
     .setPublicPath('./dist')
     .copyDirectory(config.public_dir + '/fonts', dist_dir + '/resources/fonts')
     .copyDirectory(config.public_dir + '/views', dist_dir + '/resources/views')
-    .styles(config.public_dir + '/css/justlight.min.css', dist_dir + '/resources/css/justlight.min.css')
+    .copy(config.build_dir + '/justlight.min.css', dist_dir + '/resources/css/justlight.min.css')
     .copy('module.php', dist_dir)
     .copy('LICENSE.md', dist_dir)
     .copy('README.md', dist_dir)
