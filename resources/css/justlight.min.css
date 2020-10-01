@@ -16802,7 +16802,7 @@ caption {
   .wt-main-wrapper {
     -webkit-box-flex: 1;
             flex: 1;
-    height: 100vw;
+    height: 100vh;
   }
 }
 [dir] .wt-main-wrapper .wt-main-container {

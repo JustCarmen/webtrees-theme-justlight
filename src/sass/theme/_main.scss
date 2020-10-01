@@ -14,7 +14,7 @@
 .wt-main-wrapper {
     @include media-breakpoint-up(sm) {
         flex: 1;
-        height: 100vw;
+        height: 100vh;
     }
 
     .wt-main-container {
