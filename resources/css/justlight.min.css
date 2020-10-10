@@ -16798,12 +16798,9 @@ caption {
  *         +---wt-page-options wt-page-options-xxxxx
  *         +---wt-page-content
  */
-@media (min-width: 576px) {
-  .wt-main-wrapper {
-    -webkit-box-flex: 1;
-            flex: 1;
-    height: 100vh;
-  }
+.wt-main-wrapper {
+  -webkit-box-flex: 1;
+          flex: 1;
 }
 [dir] .wt-main-wrapper .wt-main-container {
   margin-top: 2.5rem;

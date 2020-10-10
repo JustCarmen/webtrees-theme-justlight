@@ -12,10 +12,8 @@
  *         +---wt-page-content
  */
 .wt-main-wrapper {
-    @include media-breakpoint-up(sm) {
-        flex: 1;
-        height: 100vh;
-    }
+
+    flex: 1;
 
     .wt-main-container {
         margin-top: $jc-main-wrapper-spacer;
