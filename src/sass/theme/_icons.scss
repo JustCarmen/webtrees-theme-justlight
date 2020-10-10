@@ -41,7 +41,12 @@
         }
     }
 
-    ;
+    &-edit_indi {
+        &::before {
+            font-family: $jc-fa-fontfam;
+            content: unicode($jc-icon-edit-indi);
+        }
+    }
 }
 
 // Miscellaneous icons

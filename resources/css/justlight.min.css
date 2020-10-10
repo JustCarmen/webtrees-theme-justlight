@@ -16849,6 +16849,10 @@ caption {
 .icon-silhouette-M, .icon-silhouette-F, .icon-silhouette-U {
   font-size: 3rem;
 }
+.icon-edit_indi::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F4FF";
+}
 
 .wt-block-content-gedcom_block [class*=icon-], .wt-block-content-user_welcome [class*=icon-] {
   font-size: 2rem;
