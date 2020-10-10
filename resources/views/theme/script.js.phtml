@@ -79,5 +79,9 @@
     // Prevent underlining when hovering over icons
     $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
 
+    // Place the cookie warning after the footer. The cookie warning is part of the privacy-policy footer
+    $('footer').after($('#cookie-warning'));
+    $('#cookie-warning').addClass('jc-cookie-warning mt-n2');
+
 </script>
 <?php View::endpush() ?>
