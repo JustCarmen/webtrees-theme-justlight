@@ -19,7 +19,7 @@ let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 require('laravel-mix-clean');
 
-const version  = '2.0.7.2';
+const version  = '2.0.9';
 const dist_dir = 'dist/jc-theme-justlight';
 
 //https://github.com/gregnb/filemanager-webpack-plugin
