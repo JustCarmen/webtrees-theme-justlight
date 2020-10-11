@@ -16360,6 +16360,10 @@ caption {
   margin-bottom: 0.5rem;
 }
 
+.starredname {
+  text-decoration: underline;
+}
+
 [dir] .wt-page-menu-button {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;

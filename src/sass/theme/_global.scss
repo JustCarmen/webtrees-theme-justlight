@@ -149,6 +149,10 @@ dd {
     white-space: pre-wrap;
 }
 
+.starredname {
+    text-decoration: underline;
+}
+
 .wt-page-menu-button {
     @include jc-button-gradient;
 }
