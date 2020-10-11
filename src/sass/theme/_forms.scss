@@ -28,3 +28,11 @@
         }
     }
 }
+
+.wt-route-EditName {
+    input[class="NAME"] {
+        @extend .form-control;
+        display: inline;
+        width: auto;
+    }
+}

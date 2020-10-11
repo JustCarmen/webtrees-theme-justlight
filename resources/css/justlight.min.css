@@ -2418,7 +2418,7 @@ small,
   border: 0;
 }
 
-.form-control, .wt-route-ReportSetupPage input[type=text], .wt-block-content-user_messages form select {
+.form-control, .wt-route-EditName input[class=NAME], .wt-route-ReportSetupPage input[type=text], .wt-block-content-user_messages form select {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -2430,7 +2430,7 @@ small,
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-[dir] .form-control, [dir] .wt-route-ReportSetupPage input[type=text], [dir] .wt-block-content-user_messages form select {
+[dir] .form-control, [dir] .wt-route-EditName input[class=NAME], [dir] .wt-route-ReportSetupPage input[type=text], [dir] .wt-block-content-user_messages form select {
   padding: 0.375rem 0.75rem;
   background-color: #fff;
   background-clip: padding-box;
@@ -2439,63 +2439,66 @@ small,
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control, .wt-route-ReportSetupPage input[type=text], .wt-block-content-user_messages form select {
+  .form-control, .wt-route-EditName input[class=NAME], .wt-route-ReportSetupPage input[type=text], .wt-block-content-user_messages form select {
     -webkit-transition: none;
     transition: none;
   }
 }
-[dir] .form-control::-ms-expand, [dir] .wt-route-ReportSetupPage input[type=text]::-ms-expand, [dir] .wt-block-content-user_messages form select::-ms-expand {
+[dir] .form-control::-ms-expand, [dir] .wt-route-EditName input[class=NAME]::-ms-expand, [dir] .wt-route-ReportSetupPage input[type=text]::-ms-expand, [dir] .wt-block-content-user_messages form select::-ms-expand {
   background-color: transparent;
   border: 0;
 }
-.form-control:-moz-focusring, .wt-route-ReportSetupPage input[type=text]:-moz-focusring, .wt-block-content-user_messages form select:-moz-focusring {
+.form-control:-moz-focusring, .wt-route-EditName input[class=NAME]:-moz-focusring, .wt-route-ReportSetupPage input[type=text]:-moz-focusring, .wt-block-content-user_messages form select:-moz-focusring {
   color: transparent;
 }
-[dir] .form-control:-moz-focusring, [dir] .wt-route-ReportSetupPage input[type=text]:-moz-focusring, [dir] .wt-block-content-user_messages form select:-moz-focusring {
+[dir] .form-control:-moz-focusring, [dir] .wt-route-EditName input[class=NAME]:-moz-focusring, [dir] .wt-route-ReportSetupPage input[type=text]:-moz-focusring, [dir] .wt-block-content-user_messages form select:-moz-focusring {
   text-shadow: 0 0 0 #495057;
 }
-.form-control:focus, .wt-route-ReportSetupPage input[type=text]:focus, .wt-block-content-user_messages form select:focus {
+.form-control:focus, .wt-route-EditName input[class=NAME]:focus, .wt-route-ReportSetupPage input[type=text]:focus, .wt-block-content-user_messages form select:focus {
   color: #495057;
   outline: 0;
 }
-[dir] .form-control:focus, [dir] .wt-route-ReportSetupPage input[type=text]:focus, [dir] .wt-block-content-user_messages form select:focus {
+[dir] .form-control:focus, [dir] .wt-route-EditName input[class=NAME]:focus, [dir] .wt-route-ReportSetupPage input[type=text]:focus, [dir] .wt-block-content-user_messages form select:focus {
   background-color: #fff;
   border-color: #8bb8df;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(51, 122, 183, 0.25);
 }
-.form-control::-webkit-input-placeholder, .wt-route-ReportSetupPage input[type=text]::-webkit-input-placeholder, .wt-block-content-user_messages form select::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .wt-route-EditName input[class=NAME]::-webkit-input-placeholder, .wt-route-ReportSetupPage input[type=text]::-webkit-input-placeholder, .wt-block-content-user_messages form select::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder, .wt-route-ReportSetupPage input[type=text]::-moz-placeholder, .wt-block-content-user_messages form select::-moz-placeholder {
+.form-control::-moz-placeholder, .wt-route-EditName input[class=NAME]::-moz-placeholder, .wt-route-ReportSetupPage input[type=text]::-moz-placeholder, .wt-block-content-user_messages form select::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder, .wt-route-ReportSetupPage input[type=text]:-ms-input-placeholder, .wt-block-content-user_messages form select:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .wt-route-EditName input[class=NAME]:-ms-input-placeholder, .wt-route-ReportSetupPage input[type=text]:-ms-input-placeholder, .wt-block-content-user_messages form select:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-ms-input-placeholder, .wt-route-ReportSetupPage input[type=text]::-ms-input-placeholder, .wt-block-content-user_messages form select::-ms-input-placeholder {
+.form-control::-ms-input-placeholder, .wt-route-EditName input[class=NAME]::-ms-input-placeholder, .wt-route-ReportSetupPage input[type=text]::-ms-input-placeholder, .wt-block-content-user_messages form select::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::placeholder, .wt-route-ReportSetupPage input[type=text]::placeholder, .wt-block-content-user_messages form select::placeholder {
+.form-control::placeholder, .wt-route-EditName input[class=NAME]::placeholder, .wt-route-ReportSetupPage input[type=text]::placeholder, .wt-block-content-user_messages form select::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .wt-route-ReportSetupPage input[type=text]:disabled, .wt-block-content-user_messages form select:disabled, .form-control[readonly], .wt-route-ReportSetupPage input[readonly][type=text], .wt-block-content-user_messages form select[readonly] {
+.form-control:disabled, .wt-route-EditName input[class=NAME]:disabled, .wt-route-ReportSetupPage input[type=text]:disabled, .wt-block-content-user_messages form select:disabled, .form-control[readonly], .wt-route-EditName input[readonly][class=NAME], .wt-route-ReportSetupPage input[readonly][type=text], .wt-block-content-user_messages form select[readonly] {
   opacity: 1;
 }
-[dir] .form-control:disabled, [dir] .wt-route-ReportSetupPage input[type=text]:disabled, [dir] .wt-block-content-user_messages form select:disabled, [dir] .form-control[readonly], [dir] .wt-route-ReportSetupPage input[readonly][type=text], [dir] .wt-block-content-user_messages form select[readonly] {
+[dir] .form-control:disabled, [dir] .wt-route-EditName input[class=NAME]:disabled, [dir] .wt-route-ReportSetupPage input[type=text]:disabled, [dir] .wt-block-content-user_messages form select:disabled, [dir] .form-control[readonly], [dir] .wt-route-EditName input[readonly][class=NAME], [dir] .wt-route-ReportSetupPage input[readonly][type=text], [dir] .wt-block-content-user_messages form select[readonly] {
   background-color: #e9ecef;
 }
 
-input[type=date].form-control, .wt-route-ReportSetupPage input[type=date][type=text],
+input[type=date].form-control, .wt-route-EditName input[type=date][class=NAME], .wt-route-ReportSetupPage input[type=date][type=text],
 input[type=time].form-control,
+.wt-route-EditName input[type=time][class=NAME],
 .wt-route-ReportSetupPage input[type=time][type=text],
 input[type=datetime-local].form-control,
+.wt-route-EditName input[type=datetime-local][class=NAME],
 .wt-route-ReportSetupPage input[type=datetime-local][type=text],
 input[type=month].form-control,
+.wt-route-EditName input[type=month][class=NAME],
 .wt-route-ReportSetupPage input[type=month][type=text] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2748,23 +2751,23 @@ textarea.form-control {
   display: block;
 }
 
-[dir] .was-validated .form-control:valid, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir] .was-validated .wt-block-content-user_messages form select:valid, [dir] .wt-block-content-user_messages form .was-validated select:valid, [dir] .form-control.is-valid, [dir] .wt-route-ReportSetupPage input.is-valid[type=text], [dir] .wt-block-content-user_messages form select.is-valid {
+[dir] .was-validated .form-control:valid, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir] .was-validated .wt-block-content-user_messages form select:valid, [dir] .wt-block-content-user_messages form .was-validated select:valid, [dir] .form-control.is-valid, [dir] .wt-route-EditName input.is-valid[class=NAME], [dir] .wt-route-ReportSetupPage input.is-valid[type=text], [dir] .wt-block-content-user_messages form select.is-valid {
   border-color: #28a745;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir=ltr] .was-validated .form-control:valid, [dir=ltr] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir=ltr] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir=ltr] .was-validated .wt-block-content-user_messages form select:valid, [dir=ltr] .wt-block-content-user_messages form .was-validated select:valid, [dir=ltr] .form-control.is-valid, [dir=ltr] .wt-route-ReportSetupPage input.is-valid[type=text], [dir=ltr] .wt-block-content-user_messages form select.is-valid {
+[dir=ltr] .was-validated .form-control:valid, [dir=ltr] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir=ltr] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir=ltr] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir=ltr] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir=ltr] .was-validated .wt-block-content-user_messages form select:valid, [dir=ltr] .wt-block-content-user_messages form .was-validated select:valid, [dir=ltr] .form-control.is-valid, [dir=ltr] .wt-route-EditName input.is-valid[class=NAME], [dir=ltr] .wt-route-ReportSetupPage input.is-valid[type=text], [dir=ltr] .wt-block-content-user_messages form select.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir=rtl] .was-validated .form-control:valid, [dir=rtl] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir=rtl] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir=rtl] .was-validated .wt-block-content-user_messages form select:valid, [dir=rtl] .wt-block-content-user_messages form .was-validated select:valid, [dir=rtl] .form-control.is-valid, [dir=rtl] .wt-route-ReportSetupPage input.is-valid[type=text], [dir=rtl] .wt-block-content-user_messages form select.is-valid {
+[dir=rtl] .was-validated .form-control:valid, [dir=rtl] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir=rtl] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir=rtl] .was-validated .wt-route-ReportSetupPage input[type=text]:valid, [dir=rtl] .wt-route-ReportSetupPage .was-validated input[type=text]:valid, [dir=rtl] .was-validated .wt-block-content-user_messages form select:valid, [dir=rtl] .wt-block-content-user_messages form .was-validated select:valid, [dir=rtl] .form-control.is-valid, [dir=rtl] .wt-route-EditName input.is-valid[class=NAME], [dir=rtl] .wt-route-ReportSetupPage input.is-valid[type=text], [dir=rtl] .wt-block-content-user_messages form select.is-valid {
   padding-left: calc(1.5em + 0.75rem);
   background-position: left calc(0.375em + 0.1875rem) center;
 }
-[dir] .was-validated .form-control:valid:focus, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:valid:focus, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:valid:focus, [dir] .was-validated .wt-block-content-user_messages form select:valid:focus, [dir] .wt-block-content-user_messages form .was-validated select:valid:focus, [dir] .form-control.is-valid:focus, [dir] .wt-route-ReportSetupPage input.is-valid[type=text]:focus, [dir] .wt-block-content-user_messages form select.is-valid:focus {
+[dir] .was-validated .form-control:valid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid:focus, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:valid:focus, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:valid:focus, [dir] .was-validated .wt-block-content-user_messages form select:valid:focus, [dir] .wt-block-content-user_messages form .was-validated select:valid:focus, [dir] .form-control.is-valid:focus, [dir] .wt-route-EditName input.is-valid[class=NAME]:focus, [dir] .wt-route-ReportSetupPage input.is-valid[type=text]:focus, [dir] .wt-block-content-user_messages form select.is-valid:focus {
   border-color: #28a745;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
@@ -2882,23 +2885,23 @@ textarea.form-control {
   display: block;
 }
 
-[dir] .was-validated .form-control:invalid, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir] .was-validated .wt-block-content-user_messages form select:invalid, [dir] .wt-block-content-user_messages form .was-validated select:invalid, [dir] .form-control.is-invalid, [dir] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir] .wt-block-content-user_messages form select.is-invalid {
+[dir] .was-validated .form-control:invalid, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir] .was-validated .wt-block-content-user_messages form select:invalid, [dir] .wt-block-content-user_messages form .was-validated select:invalid, [dir] .form-control.is-invalid, [dir] .wt-route-EditName input.is-invalid[class=NAME], [dir] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir] .wt-block-content-user_messages form select.is-invalid {
   border-color: #dc3545;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir=ltr] .was-validated .form-control:invalid, [dir=ltr] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir=ltr] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir=ltr] .was-validated .wt-block-content-user_messages form select:invalid, [dir=ltr] .wt-block-content-user_messages form .was-validated select:invalid, [dir=ltr] .form-control.is-invalid, [dir=ltr] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir=ltr] .wt-block-content-user_messages form select.is-invalid {
+[dir=ltr] .was-validated .form-control:invalid, [dir=ltr] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir=ltr] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir=ltr] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir=ltr] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir=ltr] .was-validated .wt-block-content-user_messages form select:invalid, [dir=ltr] .wt-block-content-user_messages form .was-validated select:invalid, [dir=ltr] .form-control.is-invalid, [dir=ltr] .wt-route-EditName input.is-invalid[class=NAME], [dir=ltr] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir=ltr] .wt-block-content-user_messages form select.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir=rtl] .was-validated .form-control:invalid, [dir=rtl] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir=rtl] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir=rtl] .was-validated .wt-block-content-user_messages form select:invalid, [dir=rtl] .wt-block-content-user_messages form .was-validated select:invalid, [dir=rtl] .form-control.is-invalid, [dir=rtl] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir=rtl] .wt-block-content-user_messages form select.is-invalid {
+[dir=rtl] .was-validated .form-control:invalid, [dir=rtl] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir=rtl] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir=rtl] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid, [dir=rtl] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid, [dir=rtl] .was-validated .wt-block-content-user_messages form select:invalid, [dir=rtl] .wt-block-content-user_messages form .was-validated select:invalid, [dir=rtl] .form-control.is-invalid, [dir=rtl] .wt-route-EditName input.is-invalid[class=NAME], [dir=rtl] .wt-route-ReportSetupPage input.is-invalid[type=text], [dir=rtl] .wt-block-content-user_messages form select.is-invalid {
   padding-left: calc(1.5em + 0.75rem);
   background-position: left calc(0.375em + 0.1875rem) center;
 }
-[dir] .was-validated .form-control:invalid:focus, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid:focus, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid:focus, [dir] .was-validated .wt-block-content-user_messages form select:invalid:focus, [dir] .wt-block-content-user_messages form .was-validated select:invalid:focus, [dir] .form-control.is-invalid:focus, [dir] .wt-route-ReportSetupPage input.is-invalid[type=text]:focus, [dir] .wt-block-content-user_messages form select.is-invalid:focus {
+[dir] .was-validated .form-control:invalid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid:focus, [dir] .was-validated .wt-route-ReportSetupPage input[type=text]:invalid:focus, [dir] .wt-route-ReportSetupPage .was-validated input[type=text]:invalid:focus, [dir] .was-validated .wt-block-content-user_messages form select:invalid:focus, [dir] .wt-block-content-user_messages form .was-validated select:invalid:focus, [dir] .form-control.is-invalid:focus, [dir] .wt-route-EditName input.is-invalid[class=NAME]:focus, [dir] .wt-route-ReportSetupPage input.is-invalid[type=text]:focus, [dir] .wt-block-content-user_messages form select.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
@@ -3010,7 +3013,7 @@ textarea.form-control {
   [dir] .form-inline .form-group, [dir] .wt-block-content-user_messages form .form-group {
     margin-bottom: 0;
   }
-  .form-inline .form-control, .form-inline .wt-route-ReportSetupPage input[type=text], .wt-route-ReportSetupPage .form-inline input[type=text], .form-inline .wt-block-content-user_messages form select, .wt-block-content-user_messages form .form-inline select, .wt-block-content-user_messages form .form-control, .wt-block-content-user_messages form .wt-route-ReportSetupPage input[type=text], .wt-route-ReportSetupPage .wt-block-content-user_messages form input[type=text], .wt-block-content-user_messages form select {
+  .form-inline .form-control, .form-inline .wt-route-EditName input[class=NAME], .wt-route-EditName .form-inline input[class=NAME], .form-inline .wt-route-ReportSetupPage input[type=text], .wt-route-ReportSetupPage .form-inline input[type=text], .form-inline .wt-block-content-user_messages form select, .wt-block-content-user_messages form .form-inline select, .wt-block-content-user_messages form .form-control, .wt-block-content-user_messages form .wt-route-EditName input[class=NAME], .wt-route-EditName .wt-block-content-user_messages form input[class=NAME], .wt-block-content-user_messages form .wt-route-ReportSetupPage input[type=text], .wt-route-ReportSetupPage .wt-block-content-user_messages form input[type=text], .wt-block-content-user_messages form select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -4594,7 +4597,7 @@ input[type=button].btn-block {
           align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control, .wt-route-ReportSetupPage .input-group > input[type=text], .wt-block-content-user_messages form .input-group > select,
+.input-group > .form-control, .wt-route-EditName .input-group > input[class=NAME], .wt-route-ReportSetupPage .input-group > input[type=text], .wt-block-content-user_messages form .input-group > select,
 .input-group > .form-control-plaintext,
 .input-group > .custom-select,
 .input-group > .custom-file {
@@ -4604,16 +4607,16 @@ input[type=button].btn-block {
   width: 1%;
   min-width: 0;
 }
-[dir] .input-group > .form-control, [dir] .wt-route-ReportSetupPage .input-group > input[type=text], [dir] .wt-block-content-user_messages form .input-group > select, [dir] .input-group > .form-control-plaintext, [dir] .input-group > .custom-select, [dir] .input-group > .custom-file {
+[dir] .input-group > .form-control, [dir] .wt-route-EditName .input-group > input[class=NAME], [dir] .wt-route-ReportSetupPage .input-group > input[type=text], [dir] .wt-block-content-user_messages form .input-group > select, [dir] .input-group > .form-control-plaintext, [dir] .input-group > .custom-select, [dir] .input-group > .custom-file {
   margin-bottom: 0;
 }
-[dir=ltr] .input-group > .form-control + .form-control, [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .form-control, [dir=ltr] .wt-route-ReportSetupPage .input-group > .form-control + input[type=text], [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > select + .form-control, [dir=ltr] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > select + input[type=text], [dir=ltr] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > select + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .form-control + select, [dir=ltr] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > input[type=text] + select, [dir=ltr] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > input[type=text] + select, [dir=ltr] .wt-block-content-user_messages form .input-group > select + select, [dir=ltr] .input-group > .form-control + .custom-select, [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-select, [dir=ltr] .wt-block-content-user_messages form .input-group > select + .custom-select, [dir=ltr] .input-group > .form-control + .custom-file, [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-file, [dir=ltr] .wt-block-content-user_messages form .input-group > select + .custom-file, [dir=ltr] .input-group > .form-control-plaintext + .form-control, [dir=ltr] .wt-route-ReportSetupPage .input-group > .form-control-plaintext + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .form-control-plaintext + select, [dir=ltr] .input-group > .form-control-plaintext + .custom-select, [dir=ltr] .input-group > .form-control-plaintext + .custom-file, [dir=ltr] .input-group > .custom-select + .form-control, [dir=ltr] .wt-route-ReportSetupPage .input-group > .custom-select + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .custom-select + select, [dir=ltr] .input-group > .custom-select + .custom-select, [dir=ltr] .input-group > .custom-select + .custom-file, [dir=ltr] .input-group > .custom-file + .form-control, [dir=ltr] .wt-route-ReportSetupPage .input-group > .custom-file + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .custom-file + select, [dir=ltr] .input-group > .custom-file + .custom-select, [dir=ltr] .input-group > .custom-file + .custom-file {
+[dir=ltr] .input-group > .form-control + .form-control, [dir=ltr] .wt-route-EditName .input-group > input[class=NAME] + .form-control, [dir=ltr] .wt-route-EditName .input-group > .form-control + input[class=NAME], [dir=ltr] .wt-route-EditName .input-group > input[class=NAME] + input[class=NAME], [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .form-control, [dir=ltr] .wt-route-ReportSetupPage .wt-route-EditName .input-group > input[type=text] + input[class=NAME], [dir=ltr] .wt-route-EditName .wt-route-ReportSetupPage .input-group > input[type=text] + input[class=NAME], [dir=ltr] .wt-route-ReportSetupPage .input-group > .form-control + input[type=text], [dir=ltr] .wt-route-ReportSetupPage .wt-route-EditName .input-group > input[class=NAME] + input[type=text], [dir=ltr] .wt-route-EditName .wt-route-ReportSetupPage .input-group > input[class=NAME] + input[type=text], [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > select + .form-control, [dir=ltr] .wt-block-content-user_messages form .wt-route-EditName .input-group > select + input[class=NAME], [dir=ltr] .wt-route-EditName .wt-block-content-user_messages form .input-group > select + input[class=NAME], [dir=ltr] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > select + input[type=text], [dir=ltr] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > select + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .form-control + select, [dir=ltr] .wt-block-content-user_messages form .wt-route-EditName .input-group > input[class=NAME] + select, [dir=ltr] .wt-route-EditName .wt-block-content-user_messages form .input-group > input[class=NAME] + select, [dir=ltr] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > input[type=text] + select, [dir=ltr] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > input[type=text] + select, [dir=ltr] .wt-block-content-user_messages form .input-group > select + select, [dir=ltr] .input-group > .form-control + .custom-select, [dir=ltr] .wt-route-EditName .input-group > input[class=NAME] + .custom-select, [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-select, [dir=ltr] .wt-block-content-user_messages form .input-group > select + .custom-select, [dir=ltr] .input-group > .form-control + .custom-file, [dir=ltr] .wt-route-EditName .input-group > input[class=NAME] + .custom-file, [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-file, [dir=ltr] .wt-block-content-user_messages form .input-group > select + .custom-file, [dir=ltr] .input-group > .form-control-plaintext + .form-control, [dir=ltr] .wt-route-EditName .input-group > .form-control-plaintext + input[class=NAME], [dir=ltr] .wt-route-ReportSetupPage .input-group > .form-control-plaintext + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .form-control-plaintext + select, [dir=ltr] .input-group > .form-control-plaintext + .custom-select, [dir=ltr] .input-group > .form-control-plaintext + .custom-file, [dir=ltr] .input-group > .custom-select + .form-control, [dir=ltr] .wt-route-EditName .input-group > .custom-select + input[class=NAME], [dir=ltr] .wt-route-ReportSetupPage .input-group > .custom-select + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .custom-select + select, [dir=ltr] .input-group > .custom-select + .custom-select, [dir=ltr] .input-group > .custom-select + .custom-file, [dir=ltr] .input-group > .custom-file + .form-control, [dir=ltr] .wt-route-EditName .input-group > .custom-file + input[class=NAME], [dir=ltr] .wt-route-ReportSetupPage .input-group > .custom-file + input[type=text], [dir=ltr] .wt-block-content-user_messages form .input-group > .custom-file + select, [dir=ltr] .input-group > .custom-file + .custom-select, [dir=ltr] .input-group > .custom-file + .custom-file {
   margin-left: -1px;
 }
-[dir=rtl] .input-group > .form-control + .form-control, [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .form-control, [dir=rtl] .wt-route-ReportSetupPage .input-group > .form-control + input[type=text], [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > select + .form-control, [dir=rtl] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > select + input[type=text], [dir=rtl] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > select + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .form-control + select, [dir=rtl] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > input[type=text] + select, [dir=rtl] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > input[type=text] + select, [dir=rtl] .wt-block-content-user_messages form .input-group > select + select, [dir=rtl] .input-group > .form-control + .custom-select, [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-select, [dir=rtl] .wt-block-content-user_messages form .input-group > select + .custom-select, [dir=rtl] .input-group > .form-control + .custom-file, [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-file, [dir=rtl] .wt-block-content-user_messages form .input-group > select + .custom-file, [dir=rtl] .input-group > .form-control-plaintext + .form-control, [dir=rtl] .wt-route-ReportSetupPage .input-group > .form-control-plaintext + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .form-control-plaintext + select, [dir=rtl] .input-group > .form-control-plaintext + .custom-select, [dir=rtl] .input-group > .form-control-plaintext + .custom-file, [dir=rtl] .input-group > .custom-select + .form-control, [dir=rtl] .wt-route-ReportSetupPage .input-group > .custom-select + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .custom-select + select, [dir=rtl] .input-group > .custom-select + .custom-select, [dir=rtl] .input-group > .custom-select + .custom-file, [dir=rtl] .input-group > .custom-file + .form-control, [dir=rtl] .wt-route-ReportSetupPage .input-group > .custom-file + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .custom-file + select, [dir=rtl] .input-group > .custom-file + .custom-select, [dir=rtl] .input-group > .custom-file + .custom-file {
+[dir=rtl] .input-group > .form-control + .form-control, [dir=rtl] .wt-route-EditName .input-group > input[class=NAME] + .form-control, [dir=rtl] .wt-route-EditName .input-group > .form-control + input[class=NAME], [dir=rtl] .wt-route-EditName .input-group > input[class=NAME] + input[class=NAME], [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .form-control, [dir=rtl] .wt-route-ReportSetupPage .wt-route-EditName .input-group > input[type=text] + input[class=NAME], [dir=rtl] .wt-route-EditName .wt-route-ReportSetupPage .input-group > input[type=text] + input[class=NAME], [dir=rtl] .wt-route-ReportSetupPage .input-group > .form-control + input[type=text], [dir=rtl] .wt-route-ReportSetupPage .wt-route-EditName .input-group > input[class=NAME] + input[type=text], [dir=rtl] .wt-route-EditName .wt-route-ReportSetupPage .input-group > input[class=NAME] + input[type=text], [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > select + .form-control, [dir=rtl] .wt-block-content-user_messages form .wt-route-EditName .input-group > select + input[class=NAME], [dir=rtl] .wt-route-EditName .wt-block-content-user_messages form .input-group > select + input[class=NAME], [dir=rtl] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > select + input[type=text], [dir=rtl] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > select + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .form-control + select, [dir=rtl] .wt-block-content-user_messages form .wt-route-EditName .input-group > input[class=NAME] + select, [dir=rtl] .wt-route-EditName .wt-block-content-user_messages form .input-group > input[class=NAME] + select, [dir=rtl] .wt-block-content-user_messages form .wt-route-ReportSetupPage .input-group > input[type=text] + select, [dir=rtl] .wt-route-ReportSetupPage .wt-block-content-user_messages form .input-group > input[type=text] + select, [dir=rtl] .wt-block-content-user_messages form .input-group > select + select, [dir=rtl] .input-group > .form-control + .custom-select, [dir=rtl] .wt-route-EditName .input-group > input[class=NAME] + .custom-select, [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-select, [dir=rtl] .wt-block-content-user_messages form .input-group > select + .custom-select, [dir=rtl] .input-group > .form-control + .custom-file, [dir=rtl] .wt-route-EditName .input-group > input[class=NAME] + .custom-file, [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text] + .custom-file, [dir=rtl] .wt-block-content-user_messages form .input-group > select + .custom-file, [dir=rtl] .input-group > .form-control-plaintext + .form-control, [dir=rtl] .wt-route-EditName .input-group > .form-control-plaintext + input[class=NAME], [dir=rtl] .wt-route-ReportSetupPage .input-group > .form-control-plaintext + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .form-control-plaintext + select, [dir=rtl] .input-group > .form-control-plaintext + .custom-select, [dir=rtl] .input-group > .form-control-plaintext + .custom-file, [dir=rtl] .input-group > .custom-select + .form-control, [dir=rtl] .wt-route-EditName .input-group > .custom-select + input[class=NAME], [dir=rtl] .wt-route-ReportSetupPage .input-group > .custom-select + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .custom-select + select, [dir=rtl] .input-group > .custom-select + .custom-select, [dir=rtl] .input-group > .custom-select + .custom-file, [dir=rtl] .input-group > .custom-file + .form-control, [dir=rtl] .wt-route-EditName .input-group > .custom-file + input[class=NAME], [dir=rtl] .wt-route-ReportSetupPage .input-group > .custom-file + input[type=text], [dir=rtl] .wt-block-content-user_messages form .input-group > .custom-file + select, [dir=rtl] .input-group > .custom-file + .custom-select, [dir=rtl] .input-group > .custom-file + .custom-file {
   margin-right: -1px;
 }
-.input-group > .form-control:focus, .wt-route-ReportSetupPage .input-group > input[type=text]:focus, .wt-block-content-user_messages form .input-group > select:focus,
+.input-group > .form-control:focus, .wt-route-EditName .input-group > input[class=NAME]:focus, .wt-route-ReportSetupPage .input-group > input[type=text]:focus, .wt-block-content-user_messages form .input-group > select:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
@@ -4621,19 +4624,19 @@ input[type=button].btn-block {
 .input-group > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
-[dir=ltr] .input-group > .form-control:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=ltr] .input-group > .custom-select:not(:last-child) {
+[dir=ltr] .input-group > .form-control:not(:last-child), [dir=ltr] .wt-route-EditName .input-group > input[class=NAME]:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=ltr] .input-group > .custom-select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-[dir=rtl] .input-group > .form-control:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=rtl] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=rtl] .input-group > .custom-select:not(:last-child) {
+[dir=rtl] .input-group > .form-control:not(:last-child), [dir=rtl] .wt-route-EditName .input-group > input[class=NAME]:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=rtl] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=rtl] .input-group > .custom-select:not(:last-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-[dir=ltr] .input-group > .form-control:not(:first-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:first-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:first-child), [dir=ltr] .input-group > .custom-select:not(:first-child) {
+[dir=ltr] .input-group > .form-control:not(:first-child), [dir=ltr] .wt-route-EditName .input-group > input[class=NAME]:not(:first-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:first-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:first-child), [dir=ltr] .input-group > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-[dir=rtl] .input-group > .form-control:not(:first-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:first-child), [dir=rtl] .wt-block-content-user_messages form .input-group > select:not(:first-child), [dir=rtl] .input-group > .custom-select:not(:first-child) {
+[dir=rtl] .input-group > .form-control:not(:first-child), [dir=rtl] .wt-route-EditName .input-group > input[class=NAME]:not(:first-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:first-child), [dir=rtl] .wt-block-content-user_messages form .input-group > select:not(:first-child), [dir=rtl] .input-group > .custom-select:not(:first-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -4729,12 +4732,12 @@ input[type=button].btn-block {
   margin-top: 0;
 }
 
-.input-group-lg > .form-control:not(textarea), .wt-route-ReportSetupPage .input-group-lg > input[type=text]:not(textarea), .wt-block-content-user_messages form .input-group-lg > select:not(textarea),
+.input-group-lg > .form-control:not(textarea), .wt-route-EditName .input-group-lg > input[class=NAME]:not(textarea), .wt-route-ReportSetupPage .input-group-lg > input[type=text]:not(textarea), .wt-block-content-user_messages form .input-group-lg > select:not(textarea),
 .input-group-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px);
 }
 
-.input-group-lg > .form-control, .wt-route-ReportSetupPage .input-group-lg > input[type=text], .wt-block-content-user_messages form .input-group-lg > select,
+.input-group-lg > .form-control, .wt-route-EditName .input-group-lg > input[class=NAME], .wt-route-ReportSetupPage .input-group-lg > input[type=text], .wt-block-content-user_messages form .input-group-lg > select,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .wt-route-ReportSetupPage .input-group-append .input-group-lg > .input-group-prepend > .btn-link,
@@ -4754,17 +4757,17 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 
-[dir] .input-group-lg > .form-control, [dir] .wt-route-ReportSetupPage .input-group-lg > input[type=text], [dir] .wt-block-content-user_messages form .input-group-lg > select, [dir] .input-group-lg > .custom-select, [dir] .input-group-lg > .input-group-prepend > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-append .input-group-lg > .input-group-prepend > .btn-link, [dir] .input-group-lg > .input-group-prepend > .jc-btn-secondary, [dir] .input-group-lg > .input-group-prepend > .btn-light, [dir] .input-group-lg > .input-group-append > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-lg > .input-group-append > .btn-link, [dir] .input-group-lg > .input-group-append > .jc-btn-secondary, [dir] .input-group-lg > .input-group-append > .btn-light, [dir] .input-group-lg > .input-group-prepend > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > .input-group-prepend > button, [dir] .wt-block-content-user_messages form .input-group-lg > .input-group-prepend > button[type=submit], [dir] .input-group-lg > .input-group-append > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > .input-group-append > button, [dir] .wt-block-content-user_messages form .input-group-lg > .input-group-append > button[type=submit] {
+[dir] .input-group-lg > .form-control, [dir] .wt-route-EditName .input-group-lg > input[class=NAME], [dir] .wt-route-ReportSetupPage .input-group-lg > input[type=text], [dir] .wt-block-content-user_messages form .input-group-lg > select, [dir] .input-group-lg > .custom-select, [dir] .input-group-lg > .input-group-prepend > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-append .input-group-lg > .input-group-prepend > .btn-link, [dir] .input-group-lg > .input-group-prepend > .jc-btn-secondary, [dir] .input-group-lg > .input-group-prepend > .btn-light, [dir] .input-group-lg > .input-group-append > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-lg > .input-group-append > .btn-link, [dir] .input-group-lg > .input-group-append > .jc-btn-secondary, [dir] .input-group-lg > .input-group-append > .btn-light, [dir] .input-group-lg > .input-group-prepend > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > .input-group-prepend > button, [dir] .wt-block-content-user_messages form .input-group-lg > .input-group-prepend > button[type=submit], [dir] .input-group-lg > .input-group-append > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > .input-group-append > button, [dir] .wt-block-content-user_messages form .input-group-lg > .input-group-append > button[type=submit] {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control:not(textarea), .wt-route-ReportSetupPage .input-group-sm > input[type=text]:not(textarea), .wt-block-content-user_messages form .input-group-sm > select:not(textarea),
+.input-group-sm > .form-control:not(textarea), .wt-route-EditName .input-group-sm > input[class=NAME]:not(textarea), .wt-route-ReportSetupPage .input-group-sm > input[type=text]:not(textarea), .wt-block-content-user_messages form .input-group-sm > select:not(textarea),
 .input-group-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px);
 }
 
-.input-group-sm > .form-control, .wt-route-ReportSetupPage .input-group-sm > input[type=text], .wt-block-content-user_messages form .input-group-sm > select,
+.input-group-sm > .form-control, .wt-route-EditName .input-group-sm > input[class=NAME], .wt-route-ReportSetupPage .input-group-sm > input[type=text], .wt-block-content-user_messages form .input-group-sm > select,
 .input-group-sm > .custom-select,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .wt-route-ReportSetupPage .input-group-append .input-group-sm > .input-group-prepend > .btn-link,
@@ -4784,7 +4787,7 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 
-[dir] .input-group-sm > .form-control, [dir] .wt-route-ReportSetupPage .input-group-sm > input[type=text], [dir] .wt-block-content-user_messages form .input-group-sm > select, [dir] .input-group-sm > .custom-select, [dir] .input-group-sm > .input-group-prepend > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-append .input-group-sm > .input-group-prepend > .btn-link, [dir] .input-group-sm > .input-group-prepend > .jc-btn-secondary, [dir] .input-group-sm > .input-group-prepend > .btn-light, [dir] .input-group-sm > .input-group-append > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-sm > .input-group-append > .btn-link, [dir] .input-group-sm > .input-group-append > .jc-btn-secondary, [dir] .input-group-sm > .input-group-append > .btn-light, [dir] .input-group-sm > .input-group-prepend > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > .input-group-prepend > button, [dir] .wt-block-content-user_messages form .input-group-sm > .input-group-prepend > button[type=submit], [dir] .input-group-sm > .input-group-append > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > .input-group-append > button, [dir] .wt-block-content-user_messages form .input-group-sm > .input-group-append > button[type=submit] {
+[dir] .input-group-sm > .form-control, [dir] .wt-route-EditName .input-group-sm > input[class=NAME], [dir] .wt-route-ReportSetupPage .input-group-sm > input[type=text], [dir] .wt-block-content-user_messages form .input-group-sm > select, [dir] .input-group-sm > .custom-select, [dir] .input-group-sm > .input-group-prepend > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-append .input-group-sm > .input-group-prepend > .btn-link, [dir] .input-group-sm > .input-group-prepend > .jc-btn-secondary, [dir] .input-group-sm > .input-group-prepend > .btn-light, [dir] .input-group-sm > .input-group-append > .input-group-text, [dir] .wt-route-ReportSetupPage .input-group-sm > .input-group-append > .btn-link, [dir] .input-group-sm > .input-group-append > .jc-btn-secondary, [dir] .input-group-sm > .input-group-append > .btn-light, [dir] .input-group-sm > .input-group-prepend > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > .input-group-prepend > button, [dir] .wt-block-content-user_messages form .input-group-sm > .input-group-prepend > button[type=submit], [dir] .input-group-sm > .input-group-append > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > .input-group-append > button, [dir] .wt-block-content-user_messages form .input-group-sm > .input-group-append > button[type=submit] {
   padding: 0.25rem 0.5rem;
   border-radius: 0.2rem;
 }
@@ -18635,14 +18638,14 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   background-color: #337ab7;
 }
 
-.input-group .input-group-btn + .select2.form-control + .select2-container--default, .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default, .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default, .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default, .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default {
+.input-group .input-group-btn + .select2.form-control + .select2-container--default, .input-group .wt-route-EditName .input-group-btn + input.select2[class=NAME] + .select2-container--default, .wt-route-EditName .input-group .input-group-btn + input.select2[class=NAME] + .select2-container--default, .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default, .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default, .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default, .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default {
   width: auto !important;
 }
-[dir=ltr] .input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, [dir=ltr] .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=ltr] .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=ltr] .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default .select2-selection--single, [dir=ltr] .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default .select2-selection--single {
+[dir=ltr] .input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, [dir=ltr] .input-group .wt-route-EditName .input-group-btn + input.select2[class=NAME] + .select2-container--default .select2-selection--single, [dir=ltr] .wt-route-EditName .input-group .input-group-btn + input.select2[class=NAME] + .select2-container--default .select2-selection--single, [dir=ltr] .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=ltr] .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=ltr] .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default .select2-selection--single, [dir=ltr] .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default .select2-selection--single {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-[dir=rtl] .input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, [dir=rtl] .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=rtl] .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=rtl] .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default .select2-selection--single, [dir=rtl] .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default .select2-selection--single {
+[dir=rtl] .input-group .input-group-btn + .select2.form-control + .select2-container--default .select2-selection--single, [dir=rtl] .input-group .wt-route-EditName .input-group-btn + input.select2[class=NAME] + .select2-container--default .select2-selection--single, [dir=rtl] .wt-route-EditName .input-group .input-group-btn + input.select2[class=NAME] + .select2-container--default .select2-selection--single, [dir=rtl] .input-group .wt-route-ReportSetupPage .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=rtl] .wt-route-ReportSetupPage .input-group .input-group-btn + input.select2[type=text] + .select2-container--default .select2-selection--single, [dir=rtl] .input-group .wt-block-content-user_messages form .input-group-btn + select.select2 + .select2-container--default .select2-selection--single, [dir=rtl] .wt-block-content-user_messages form .input-group .input-group-btn + select.select2 + .select2-container--default .select2-selection--single {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -18671,6 +18674,11 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 
 [dir] .form-row {
   margin-bottom: 0.5rem;
+}
+
+.wt-route-EditName input[class=NAME] {
+  display: inline;
+  width: auto;
 }
 
 /** JustLight Theme - Page footer */
