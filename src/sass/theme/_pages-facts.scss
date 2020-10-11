@@ -1,9 +1,15 @@
+[class^="fact_"] {
+    margin-bottom: .5rem;
+}
+
 .fact_PAGE {
     display: flex;
 
     .label {
         flex: 0 0 auto;
-        font-weight: 600;
         padding-right: .25rem;
+    }
+    .field p {
+        margin-bottom: 0;
     }
 }

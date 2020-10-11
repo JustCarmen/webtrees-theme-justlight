@@ -16348,6 +16348,10 @@ caption {
   font-size: 0.875rem;
 }
 
+.label {
+  font-weight: 600;
+}
+
 .markdown p {
   white-space: pre-wrap;
 }
@@ -18180,6 +18184,10 @@ table {
   color: #212529;
 }
 
+[dir] [class^=fact_] {
+  margin-bottom: 0.5rem;
+}
+
 .fact_PAGE {
   display: -webkit-box;
   display: flex;
@@ -18187,13 +18195,15 @@ table {
 .fact_PAGE .label {
   -webkit-box-flex: 0;
           flex: 0 0 auto;
-  font-weight: 600;
 }
 [dir=ltr] .fact_PAGE .label {
   padding-right: 0.25rem;
 }
 [dir=rtl] .fact_PAGE .label {
   padding-left: 0.25rem;
+}
+[dir] .fact_PAGE .field p {
+  margin-bottom: 0;
 }
 
 /** JustLight Theme - Specific pages - Charts */
