@@ -9,7 +9,7 @@
 
     // Individual page main image - add classes for styling purposes
     $('.wt-route-IndividualPage').find('.col-sm-8 > .row > .col-sm-3').addClass('jc-indi-header-image-container')
-        .find('> div:last-of-type').addClass('mt-2').removeClass('text-center').find('a').addClass('jc-icon-add');
+        .find('a[href*="add-fact"]').addClass('jc-icon-add').parent('div').addClass('mt-2').removeClass('text-center');
     $('.wt-individual-silhouette').parent('.img-thumbnail').addClass('jc-indi-silhouette-container');
 
     // Remove class from caption (this class cannot be overwritten with css)
