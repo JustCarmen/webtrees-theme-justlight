@@ -8214,7 +8214,7 @@ a.close.disabled {
   background-color: #fff !important;
 }
 
-[dir] .bg-transparent {
+[dir] .bg-transparent, [dir] .wt-route-IndividualListModule .wt-page-options, [dir] .wt-route-FamilyListModule .wt-page-options {
   background-color: transparent !important;
 }
 
@@ -8246,7 +8246,7 @@ a.close.disabled {
   border-right: 1px solid #dee2e6 !important;
 }
 
-[dir] .border-0 {
+[dir] .border-0, [dir] .wt-route-IndividualListModule .wt-page-options, [dir] .wt-route-FamilyListModule .wt-page-options {
   border: 0 !important;
 }
 
@@ -12211,7 +12211,7 @@ a.close.disabled {
   text-align: left !important;
 }
 
-[dir] .text-center, [dir] div[id^=caldiv] > table table td, [dir] div[id^=calendar-widget] > table table td {
+[dir] .text-center, [dir] div[id^=caldiv] > table table td, [dir] div[id^=calendar-widget] > table table td, [dir] .wt-route-IndividualListModule .wt-page-options, [dir] .wt-route-FamilyListModule .wt-page-options, [dir] .wt-route-IndividualListModule .wt-page-title, [dir] .wt-route-FamilyListModule .wt-page-title {
   text-align: center !important;
 }
 
@@ -17115,7 +17115,6 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e9ecef;
 }
-
 .wt-route-IndividualPage .jc-indi-header-image-container {
   -webkit-box-flex: 0;
           flex: 0 0 230px;
@@ -17200,15 +17199,12 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
     max-width: 25%;
   }
 }
-
-[dir=ltr] .wt-route-PlaceHierarchyListModule .text-center, [dir=ltr] .wt-route-PlaceHierarchyListModule div[id^=caldiv] > table table td, [dir=ltr] div[id^=caldiv] > table table .wt-route-PlaceHierarchyListModule td, [dir=ltr] .wt-route-PlaceHierarchyListModule div[id^=calendar-widget] > table table td, [dir=ltr] div[id^=calendar-widget] > table table .wt-route-PlaceHierarchyListModule td {
+[dir=ltr] .wt-route-PlaceHierarchyListModule .text-center, [dir=ltr] .wt-route-PlaceHierarchyListModule div[id^=caldiv] > table table td, [dir=ltr] div[id^=caldiv] > table table .wt-route-PlaceHierarchyListModule td, [dir=ltr] .wt-route-PlaceHierarchyListModule div[id^=calendar-widget] > table table td, [dir=ltr] div[id^=calendar-widget] > table table .wt-route-PlaceHierarchyListModule td, [dir=ltr] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-options, [dir=ltr] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=ltr] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-options, [dir=ltr] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=ltr] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-title, [dir=ltr] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-title, [dir=ltr] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-title, [dir=ltr] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-title {
   text-align: left !important;
 }
-
-[dir=rtl] .wt-route-PlaceHierarchyListModule .text-center, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=caldiv] > table table td, [dir=rtl] div[id^=caldiv] > table table .wt-route-PlaceHierarchyListModule td, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=calendar-widget] > table table td, [dir=rtl] div[id^=calendar-widget] > table table .wt-route-PlaceHierarchyListModule td {
+[dir=rtl] .wt-route-PlaceHierarchyListModule .text-center, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=caldiv] > table table td, [dir=rtl] div[id^=caldiv] > table table .wt-route-PlaceHierarchyListModule td, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=calendar-widget] > table table td, [dir=rtl] div[id^=calendar-widget] > table table .wt-route-PlaceHierarchyListModule td, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-options, [dir=rtl] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-options, [dir=rtl] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-title, [dir=rtl] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-title, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-title, [dir=rtl] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-title {
   text-align: right !important;
 }
-
 /** JustLight Theme - Specific pages - Home page and User page blocks */
 [dir] .wt-block {
   border: none;

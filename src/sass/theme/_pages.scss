@@ -1,45 +1,59 @@
 /** JustLight Theme - Specific pages */
-.wt-route-UserPage {
-    h2 {
-        padding-bottom: 0.5rem;
-        @include jc-border($jc-theme-lighter, 'bottom');
-    }
-}
-
-.wt-route-IndividualPage {
-    .jc-indi-header-image-container {
-        flex: 0 0 230px; // margins included. Image is 200px width
-
-        .jc-indi-silhouette-container {
-            border: 0;
-            box-shadow: none;
-            text-align: center;
+.wt-route {
+    &-UserPage {
+        h2 {
+            padding-bottom: 0.5rem;
+            @include jc-border($jc-theme-lighter, 'bottom');
         }
     }
 
-    .wt-main-container {
-        @include jc-container-fluid;
+    &-IndividualPage {
+        .jc-indi-header-image-container {
+            flex: 0 0 230px; // margins included. Image is 200px width
 
-        @include media-breakpoint-up(lg) {
-
-            // individual page main section - treat as col-sm-9
-            .col-sm-8 {
-                flex: 0 0 75%;
-                max-width: 75%;
+            .jc-indi-silhouette-container {
+                border: 0;
+                box-shadow: none;
+                text-align: center;
             }
+        }
 
-            // individual page sidebar - treat as col-sm-3
-            .col-sm-4 {
-                flex: 0 0 25%;
-                max-width: 25%;
+        .wt-main-container {
+            @include jc-container-fluid;
+
+            @include media-breakpoint-up(lg) {
+
+                // individual page main section - treat as col-sm-9
+                .col-sm-8 {
+                    flex: 0 0 75%;
+                    max-width: 75%;
+                }
+
+                // individual page sidebar - treat as col-sm-3
+                .col-sm-4 {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
             }
         }
     }
-}
 
-.wt-route-PlaceHierarchyListModule {
-    .text-center {
-        text-align: left !important;
+    &-PlaceHierarchyListModule {
+        .text-center {
+            text-align: left !important;
+        }
+    }
+
+    &-IndividualListModule,
+    &-FamilyListModule {
+        .wt-page-title {
+            @extend .text-center;
+        }
+        .wt-page-options {
+            @extend .border-0;
+            @extend .bg-transparent;
+            @extend .text-center;
+        }
     }
 }
 
