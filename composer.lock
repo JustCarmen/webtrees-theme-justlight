@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "707d26e7c709a3649f17598871a41cb8",
+    "content-hash": "a63b3a47005714f5ded9eeb11eec9a48",
     "packages": [],
     "packages-dev": [
         {
@@ -2026,16 +2026,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.41.1",
+            "version": "2.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "91d8d8dca31936a137213d7c48f8ac981e501ff4"
+                "reference": "e148788eeae9b9b7b87996520358b86faad37b52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/91d8d8dca31936a137213d7c48f8ac981e501ff4",
-                "reference": "91d8d8dca31936a137213d7c48f8ac981e501ff4",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e148788eeae9b9b7b87996520358b86faad37b52",
+                "reference": "e148788eeae9b9b7b87996520358b86faad37b52",
                 "shasum": ""
             },
             "require": {
@@ -2111,7 +2111,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-10T11:06:56+00:00"
+            "time": "2020-10-12T20:36:09+00:00"
         },
         {
             "name": "nyholm/psr7",
