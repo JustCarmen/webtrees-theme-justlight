@@ -1,4 +1,10 @@
-/** JustLight Theme - Specific pages */
+/** JustLight Theme - Pages */
+.wt-page-title {
+    margin-bottom: $jc-main-wrapper-spacer;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
 .wt-route {
     &-UserPage {
         h2 {
