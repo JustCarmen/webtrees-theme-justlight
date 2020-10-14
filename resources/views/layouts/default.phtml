@@ -140,7 +140,7 @@ use Psr\Http\Message\ServerRequestInterface;
                 <?php if ($tree !== null) : ?>
                 <?php // START THEME JUSTLIGHT ?>
                 <div class="row wt-header-content navbar navbar-expand-md navbar-light">
-                    <nav class="row wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
+                    <nav class="wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
                         <ul class=" nav wt-genealogy-menu">
                         <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
                         <?= view('components/menu-item', ['menu' => $menu]) ?>

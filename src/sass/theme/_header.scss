@@ -93,7 +93,7 @@
         /* Recalculate margins for content */
         margin-top: 1rem;
         margin-bottom: 1rem;
-        @include jc-padding-lr(2);
+        @include jc-padding-lr(1);
 
         &.navbar-collapse {
             align-items: flex-start;
