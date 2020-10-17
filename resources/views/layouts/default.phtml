@@ -81,7 +81,7 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= DebugBar::renderHead() ?>
     </head>
 
-    <body class="wt-global <?= str_replace("_", "", e(app(ModuleThemeInterface::class)->name())) ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
+    <body class="wt-global jc-theme-justlight wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
         <?php // START THEME JUSTLIGHT ?>
         <header class="wt-header-wrapper d-print-none sticky-top">
             <?php // END THEME JUSTLIGHT ?>
