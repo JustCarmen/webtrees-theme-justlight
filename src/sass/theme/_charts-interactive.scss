@@ -1,5 +1,6 @@
 /** JustLight Theme - Charts - Interactive chart */
 .wt-chart-interactive,
+.wt-block-charts,
 .tab-pane {
 	.tv {
 		&_out {
@@ -21,6 +22,7 @@
 	@include jc-container-breakout;
 }
 
+.wt-block-charts,
 .tab-pane {
 	.tv_out {
 		@include jc-border;

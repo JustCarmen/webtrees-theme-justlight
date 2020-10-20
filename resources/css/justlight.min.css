@@ -18352,15 +18352,15 @@ table {
 }
 
 /** JustLight Theme - Charts - Interactive chart */
-[dir] .wt-chart-interactive .tv_out, [dir] .tab-pane .tv_out {
+[dir] .wt-chart-interactive .tv_out, [dir] .wt-block-charts .tv_out, [dir] .tab-pane .tv_out {
   background-color: #fff;
   border: none;
 }
-[dir] .wt-chart-interactive .tvM, [dir] .tab-pane .tvM {
+[dir] .wt-chart-interactive .tvM, [dir] .wt-block-charts .tvM, [dir] .tab-pane .tvM {
   background: #d7eaf9 !important;
   background: var(--sex-m-bg) !important;
 }
-[dir] .wt-chart-interactive .tvF, [dir] .tab-pane .tvF {
+[dir] .wt-chart-interactive .tvF, [dir] .wt-block-charts .tvF, [dir] .tab-pane .tvF {
   background: #fff0f5 !important;
   background: var(--sex-f-bg) !important;
 }
@@ -18382,7 +18382,7 @@ table {
   padding-left: 30px;
 }
 
-[dir] .tab-pane .tv_out {
+[dir] .wt-block-charts .tv_out, [dir] .tab-pane .tv_out {
   border: 1px solid #ced4da;
 }
 
