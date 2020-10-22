@@ -61,6 +61,15 @@
             @extend .text-center;
         }
     }
+
+    // See: https://github.com/JustCarmen/webtrees-theme-justlight/issues/61
+    &-PedigreeMapModule {
+        @include media-breakpoint-down(xs) {
+            .wt-footers {
+                display: none !important;
+            }
+        }
+    }
 }
 
 @import "pages-blocks";

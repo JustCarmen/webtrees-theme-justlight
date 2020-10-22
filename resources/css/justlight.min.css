@@ -17214,6 +17214,12 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 [dir=rtl] .wt-route-PlaceHierarchyListModule .text-center, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=caldiv] > table table td, [dir=rtl] div[id^=caldiv] > table table .wt-route-PlaceHierarchyListModule td, [dir=rtl] .wt-route-PlaceHierarchyListModule div[id^=calendar-widget] > table table td, [dir=rtl] div[id^=calendar-widget] > table table .wt-route-PlaceHierarchyListModule td, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-options, [dir=rtl] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-options, [dir=rtl] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-options, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-IndividualListModule .wt-page-title, [dir=rtl] .wt-route-IndividualListModule .wt-route-PlaceHierarchyListModule .wt-page-title, [dir=rtl] .wt-route-PlaceHierarchyListModule .wt-route-FamilyListModule .wt-page-title, [dir=rtl] .wt-route-FamilyListModule .wt-route-PlaceHierarchyListModule .wt-page-title {
   text-align: right !important;
 }
+@media (max-width: 575.98px) {
+  .wt-route-PedigreeMapModule .wt-footers {
+    display: none !important;
+  }
+}
+
 /** JustLight Theme - Specific pages - Home page and User page blocks */
 [dir] .wt-block {
   border: none;
