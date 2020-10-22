@@ -19,6 +19,11 @@
  *     +--- wt-chart-box-fact
  */
 
+.wt-chart {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .wt-chart-box {
     font-size: $font-size-sm;
 }
