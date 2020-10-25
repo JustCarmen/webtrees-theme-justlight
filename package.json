@@ -25,12 +25,12 @@
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
     "sass": "^1.27.0",
-    "sass-loader": "^10.0.3",
+    "sass-loader": "^10.0.4",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   }
