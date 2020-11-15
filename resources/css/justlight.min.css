@@ -4375,7 +4375,7 @@ input[type=button].btn-block {
   background: #e9ecef linear-gradient(-180deg, #eceff1, #e9ecef) repeat-x;
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color: #212529;
   text-decoration: none;
 }
 [dir=ltr] .dropdown-item.active, [dir=ltr] .dropdown-item:active {
@@ -17264,6 +17264,10 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 }
 
 /** Special blocks */
+.wt-block-content-charts {
+  overflow-x: auto;
+}
+
 [dir] .wt-block-content-gedcom_stats .list-inline-item {
   margin: 0;
 }
@@ -17286,7 +17290,6 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 
 /** JustLight Theme - Specific pages - Cards */
 .card {
-  overflow-x: auto;
   /** Individual page Sidebar */
 }
 #sidebar .card {
@@ -18600,7 +18603,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox {
 div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox a, div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox a:hover,
 div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox a,
 div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox a:hover {
-  color: #fff;
+  color: #212529;
 }
 div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox:before,
 div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:before {
@@ -18611,7 +18614,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 [dir] div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox:before, [dir] div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:before {
   border: solid transparent;
-  border-bottom-color: #fff;
+  border-bottom-color: #212529;
   border-top-color: rgba(0, 0, 0, 0.2);
 }
 [dir=ltr] div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox:before, [dir=ltr] div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:before {

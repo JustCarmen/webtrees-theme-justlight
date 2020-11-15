@@ -47,6 +47,10 @@
 }
 
 /** Special blocks */
+.wt-block-content-charts {
+    overflow-x: auto;
+}
+
 .wt-block-content-gedcom_stats {
     .list-inline-item {
         margin: 0;
