@@ -18202,6 +18202,10 @@ table {
   color: #212529;
 }
 
+[dir] .wt-tab-stories {
+  text-align: justify;
+}
+
 [dir] [class^=fact_] {
   margin-bottom: 0.5rem;
 }
