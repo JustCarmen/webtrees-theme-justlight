@@ -12,16 +12,9 @@
  */
 
 use Fisharebest\Webtrees\DebugBar;
-use Fisharebest\Webtrees\FlashMessages;
-use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
-use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
-use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Tree;
-use Fisharebest\Webtrees\View;
-use Fisharebest\Webtrees\Webtrees;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
@@ -35,213 +28,44 @@ use Psr\Http\Message\ServerRequestInterface;
 
 <!DOCTYPE html>
 <html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>">
-
     <head>
-        <meta charset="UTF-8">
-        <meta name="csrf" content="<?= e(csrf_token()) ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="<?= e($meta_robots ?? 'noindex') ?>">
-        <meta name="generator" content="<?= e(Webtrees::NAME) ?> <?= e(Webtrees::VERSION) ?>">
-        <meta name="description" content="<?= $meta_description ?? '' ?>">
-
-        <title>
-            <?= strip_tags($title) ?>
-            <?php if ($tree !== null && $tree->getPreference('META_TITLE') !== '') : ?>
-            – <?= e($tree->getPreference('META_TITLE')) ?>
-            <?php endif ?>
-        </title>
-
-        <!--Generic favicons-->
-        <link rel="icon" sizes="32x32" href="<?= e(asset('favicon-32.png')) ?>">
-        <link rel="icon" sizes="128x128" href="<?= e(asset('favicon-128.png')) ?>">
-        <link rel="icon" sizes="192x192" href="<?= e(asset('favicon-192.png')) ?>">
-        <!--Android-->
-        <link rel="shortcut icon" sizes="196x196" href="<?= e(asset('favicon-196.png')) ?>">
-        <!--iPad-->
-        <link rel="apple-touch-icon" sizes="152x152" href="<?= e(asset('favicon-152.png')) ?>">
-        <!--iPhone-->
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('favicon-180.png')) ?>">
-        <!--IE11/Edge-->
-        <meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
-
+        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/meta'); ?>
+        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/title', ['tree' => $tree, 'title' => $title]); ?>
+        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/favicons'); ?>
         <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
-
-        <?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
-        <link rel="stylesheet" href="<?= e($stylesheet) ?>">
-        <?php endforeach ?>
-
-        <?= View::stack('styles') ?>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" integrity="sha512-QN7X/bUbbeel9bbq6JVNJXk1Zowt+n+QPN+DjhEmTa4TdL1YPCsCey5JrvfRW8xp28LDYgGG/waNVdrhwMQmVQ==" crossorigin="anonymous" />
-
-        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-            return $module->headContent();
-        })->implode('') ?>
-
+        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/stylesheets'); ?>
         <?= DebugBar::renderHead() ?>
     </head>
 
-    <body class="wt-global jc-theme-justlight wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'), 1)) ?>">
-        <?php // START THEME JUSTLIGHT ?>
+    <body class="wt-global jc-theme-justlight wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
         <header class="wt-header-wrapper d-print-none sticky-top">
-            <?php // END THEME JUSTLIGHT ?>
             <div class="container wt-header-container">
-                <?php // START THEME JUSTLIGHT ?>
                 <div class="row wt-header-content navbar navbar-expand-md navbar-light">
-                    <?php // END THEME JUSTLIGHT ?>
-                    <div class="wt-accessibility-links position-fixed">
-                        <a class="sr-only sr-only-focusable btn btn-info btn-sm" href="#content">
-                            <?= /* I18N: Skip over the headers and menus, to the main content of the page */
-                            I18N::translate('Skip to content') ?>
-                        </a>
-                    </div>
-                    <div class="col wt-site-logo"></div>
-
+                    <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/accessibility'); ?>
+                    <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-logo'); ?>
                     <?php if ($tree !== null) : ?>
-                    <?php // START THEME JUSTLIGHT ?>
-                    <h1 class="col wt-site-title">
-                        <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
-                    </h1>
-                    <?php // END THEME JUSTLIGHT ?>
-
-                    <?php // START THEME JUSTLIGHT ?>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryMenu, #secondaryMenu" aria-controls="primaryMenu, secondaryMenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <?php // END THEME JUSTLIGHT ?>
-
-                    <div class="col wt-header-search">
-                        <form method="post" action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>" class="wt-header-search-form" role="search">
-                            <?= csrf_field() ?>
-                            <div class="input-group">
-                                <label class="sr-only" for="quick-search"><?= I18N::translate('Search') ?></label>
-                                <input type="search" class="form-control wt-header-search-field" id="quick-search" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-primary wt-header-search-button">
-                                        <?= view('icons/search') ?>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-title', ['tree' => $tree]); ?>
+                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler'); ?>
+                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/header-search', ['tree' => $tree]); ?>
                     <?php endif ?>
-                    <?php // START THEME JUSTLIGHT ?>
-                    <div class="col wt-secondary-navigation collapse navbar-collapse d-none" id="secondaryMenu">
-                        <?php // END THEME JUSTLIGHT ?>
-                        <ul class="nav wt-user-menu">
-                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
-                            <?= view('components/menu-item', ['menu' => $menu]) ?>
-                            <?php endforeach ?>
-                        </ul>
-                    </div>
-                    <?php // START THEME JUSTLIGHT ?>
+                    <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/secondary-navigation', ['tree' => $tree]); ?>
                 </div>
-                <?php // END THEME JUSTLIGHT ?>
                 <?php if ($tree !== null) : ?>
-                <?php // START THEME JUSTLIGHT ?>
-                <div class="row wt-header-content navbar navbar-expand-md navbar-light">
-                    <nav class="wt-primary-navigation collapse navbar-collapse" id="primaryMenu"">
-                        <ul class=" nav wt-genealogy-menu">
-                        <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
-                        <?= view('components/menu-item', ['menu' => $menu]) ?>
-                        <?php endforeach ?>
-                        </ul>
-                        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
-                            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
-                            <?= view('components/menu-item', ['menu' => $menu]) ?>
-                            <?php endforeach ?>
-                        </ul>
-                    </nav>
-                </div>
-                <?php // END THEME JUSTLIGHT ?>
+                    <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/primary-navigation', ['tree' => $tree]); ?>
                 <?php endif ?>
             </div>
         </header>
 
         <main id="content" class="wt-main-wrapper">
-            <div class="flash-messages">
-                <?php foreach (FlashMessages::getMessages() as $message) : ?>
-                <div class="alert alert-<?= e($message->status) ?> alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="<?= I18N::translate('close') ?>">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <?= $message->text ?>
-                </div>
-                <?php endforeach ?>
-            </div>
+            <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/flash-messages'); ?>
             <div class="container wt-main-container">
                 <?= $content ?>
             </div>
         </main>
 
-        <?php // START THEME JUSTLIGHT ?>
         <?= view(app(ModuleThemeInterface::class)->name() . '::theme/footer'); ?>
-        <?php // END THEME JUSTLIGHT ?>
 
-        <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
-        <?php // START THEME JUSTLIGHT ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" integrity="sha512-r6vrUzzJsN9hfGYoYo5qIFyuI4Hg/6wkIEaxCgFWneGHo1Nn2ES58YuRmrUU44JrD64yIBNwvepKexEIyk+TTQ==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/solid.min.js" integrity="sha512-y0arK64LEWHxtkMLukPhGHPEu2v1fpWcK+mNRolb7DIjqqD5dVJDWKCHiBFOdM+lsPAKZZBC1x/hD+PXTS3Djg==" crossorigin="anonymous"></script>
-        <?php // END THEME JUSTLIGHT ?>
-        <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
-
-        <script>
-            // In this theme we use colorbox for pdf's
-            $('.wt-mime-application-pdf').parent('a').each(function () {
-                $(this).addClass('gallery');
-                $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
-            });
-
-            // Trigger an event when we click on an (any) image or pdf
-            // Since we cannot use type on images when using the default text editor (the type tag is stripped out)
-            // we will accept a custom class. Use jc-gallery-image for images and jc-gallery-pdf for pdf's.
-            $('body').on('click', 'a.gallery', function () {
-                // Enable colorbox for images and pdf
-                $("a[type^=image].gallery, a[type$=pdf].gallery, a.jc-gallery-image, a.jc-gallery-pdf").colorbox({
-                    // Don't scroll window with document
-                    fixed: true,
-                    width: "85%",
-                    height: "85%",
-                    current: "",
-                    previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous ') ?>"></i>',
-                    next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next ') ?>"></i>',
-                    slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play ') ?>"></i>',
-                    slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop ') ?>"></i>',
-                    close: '<i class="fas fa-times" title="<?= I18N::translate('close ') ?>"></i>',
-                    title: function () {
-                        return this.dataset.title;
-                    },
-                    rel: "gallery", // Turn all images on the page into a slideshow
-                    slideshow: true,
-                    slideshowAuto: false,
-                    // Add wheelzoom to the displayed image
-                    onComplete: function () {
-                        // Disable click on image triggering next image
-                        // https://github.com/jackmoore/colorbox/issues/668
-                        $(".cboxPhoto").unbind("click");
-                        // Enable wheel/pinch zooming
-                        $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
-                    }
-                });
-
-                // Image settings
-                $("a[type^=image].gallery, a.jc-gallery-image").colorbox({
-                    photo: true,
-                });
-
-                // PDF settings
-                $("a[type$=pdf].gallery, a.jc-gallery-pdf").colorbox({
-                    iframe: true
-                });
-            });
-
-        </script>
-
-        <?= View::stack('javascript') ?>
-
-        <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
-            return $module->bodyContent();
-        })->implode('') ?>
+        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/scripts'); ?>
 
         <?= DebugBar::render() ?>
     </body>

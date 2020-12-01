@@ -1,0 +1,9 @@
+<?php
+
+use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
+
+?>
+
+<h1 class="col wt-site-title">
+    <a href="<?= e(route(TreePage::class, ['tree' => $tree->name()])) ?>"><?= e($tree->title()) ?></a>
+</h1>

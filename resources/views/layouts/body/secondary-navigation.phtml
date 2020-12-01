@@ -1,0 +1,13 @@
+<?php
+
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+
+?>
+
+<div class="col wt-secondary-navigation collapse navbar-collapse d-none" id="secondaryMenu">
+    <ul class="nav wt-user-menu">
+        <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+        <?= view('components/menu-item', ['menu' => $menu]) ?>
+        <?php endforeach ?>
+    </ul>
+</div>

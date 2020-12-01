@@ -1,0 +1,72 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+
+?>
+
+<script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" integrity="sha512-r6vrUzzJsN9hfGYoYo5qIFyuI4Hg/6wkIEaxCgFWneGHo1Nn2ES58YuRmrUU44JrD64yIBNwvepKexEIyk+TTQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/solid.min.js" integrity="sha512-y0arK64LEWHxtkMLukPhGHPEu2v1fpWcK+mNRolb7DIjqqD5dVJDWKCHiBFOdM+lsPAKZZBC1x/hD+PXTS3Djg==" crossorigin="anonymous"></script>
+<script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
+
+<script>
+    // In this theme we use colorbox for pdf's
+    $('.wt-mime-application-pdf').parent('a').each(function () {
+        $(this).addClass('gallery');
+        $(this).attr('data-title', $.trim($(this).parents('.card').find('.card-title').text()));
+    });
+
+    // Trigger an event when we click on an (any) image or pdf
+    // Since we cannot use type on images when using the default text editor (the type tag is stripped out)
+    // we will accept a custom class. Use jc-gallery-image for images and jc-gallery-pdf for pdf's.
+    $('body').on('click', 'a.gallery', function () {
+        // Enable colorbox for images and pdf
+        $("a[type^=image].gallery, a[type$=pdf].gallery, a.jc-gallery-image, a.jc-gallery-pdf").colorbox({
+            // Don't scroll window with document
+            fixed: true,
+            width: "85%",
+            height: "85%",
+            current: "",
+            previous: '<i class="fas fa-arrow-left wt-icon-flip-rtl" title="<?= I18N::translate('previous ') ?>"></i>',
+            next: '<i class="fas fa-arrow-right wt-icon-flip-rtl" title="<?= I18N::translate('next ') ?>"></i>',
+            slideshowStart: '<i class="fas fa-play" title="<?= I18N::translate('Play ') ?>"></i>',
+            slideshowStop: '<i class="fas fa-stop" title="<?= I18N::translate('Stop ') ?>"></i>',
+            close: '<i class="fas fa-times" title="<?= I18N::translate('close ') ?>"></i>',
+            title: function () {
+                return this.dataset.title;
+            },
+            rel: "gallery", // Turn all images on the page into a slideshow
+            slideshow: true,
+            slideshowAuto: false,
+            // Add wheelzoom to the displayed image
+            onComplete: function () {
+                // Disable click on image triggering next image
+                // https://github.com/jackmoore/colorbox/issues/668
+                $(".cboxPhoto").unbind("click");
+                // Enable wheel/pinch zooming
+                $('.cboxPhoto').wrap("<pinch-zoom></pinch-zoom>");
+            }
+        });
+
+        // Image settings
+        $("a[type^=image].gallery, a.jc-gallery-image").colorbox({
+            photo: true,
+        });
+
+        // PDF settings
+        $("a[type$=pdf].gallery, a.jc-gallery-pdf").colorbox({
+            iframe: true
+        });
+    });
+
+</script>
+
+<?= View::stack('javascript') ?>
+
+<?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+    return $module->bodyContent();
+})->implode('') ?>
