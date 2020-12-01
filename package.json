@@ -12,10 +12,10 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.2.1",
+    "copy-webpack-plugin": "^6.3.2",
     "file-icon-vectors": "^1.0.0",
     "filemanager-webpack-plugin": "^2.0.5",
-    "laravel-mix": "^5.0.7",
+    "laravel-mix": "^5.0.9",
     "laravel-mix-alias": "^1.0.2",
     "laravel-mix-clean": "^0.1.0",
     "postcss-custom-properties": "^10.0.0",
@@ -24,8 +24,8 @@
     "postcss-import": "^12.0.1",
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
-    "sass": "^1.27.0",
-    "sass-loader": "^10.0.4",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
