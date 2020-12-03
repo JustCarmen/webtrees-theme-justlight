@@ -5,7 +5,7 @@ use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
 
 ?>
 
-<div class="col wt-header-search">
+<div class="col wt-header-search pl-1">
     <form method="post" action="<?= e(route(SearchQuickAction::class, ['tree' => $tree->name()])) ?>" class="wt-header-search-form" role="search">
         <?= csrf_field() ?>
         <div class="input-group">
