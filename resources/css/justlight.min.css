@@ -16324,6 +16324,11 @@ caption {
   max-height: 100vh;
   overflow-x: hidden;
 }
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    top: 0;
+  }
+}
 
 .error {
   color: #B80000;
