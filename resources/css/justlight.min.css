@@ -16321,7 +16321,7 @@ caption {
 }
 
 .dropdown-menu {
-  max-height: 100vh;
+  max-height: 65vh;
   overflow-x: hidden;
 }
 @media (max-width: 767.98px) {
