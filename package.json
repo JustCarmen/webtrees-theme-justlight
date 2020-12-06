@@ -24,7 +24,7 @@
     "postcss-import": "^12.0.1",
     "postcss-replace": "^1.1.2",
     "postcss-rtl": "^1.7.3",
-    "sass": "^1.29.0",
+    "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
