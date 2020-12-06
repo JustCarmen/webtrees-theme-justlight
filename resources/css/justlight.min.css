@@ -18590,6 +18590,11 @@ table {
   right: 0;
 }
 
+[dir] .wt-icon-flip-rtl .fa-arrow-left, [dir] .wt-icon-flip-rtl .fa-arrow-right {
+  -webkit-transform: none;
+          transform: none;
+}
+
 /** JustLight Theme - Form elements */
 /** JustLight Theme - Forms - Calendar widget */
 [dir] div[id^=caldiv] table td, [dir] div[id^=calendar-widget] table td {

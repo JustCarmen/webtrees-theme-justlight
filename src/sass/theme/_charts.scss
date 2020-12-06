@@ -37,3 +37,11 @@
 @import "charts-osm";
 @import "charts-pedigree";
 @import "charts-timeline";
+
+// correction for arrows on rtl pages
+.wt-icon-flip-rtl {
+    .fa-arrow-left,
+    .fa-arrow-right {
+        transform: none;
+    }
+}
