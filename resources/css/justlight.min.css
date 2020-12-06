@@ -17030,6 +17030,13 @@ caption {
   content: "\E609";
 }
 
+.icon-rings {
+  font-family: "icomoon" !important;
+}
+.icon-rings:before {
+  content: "\E610";
+}
+
 .wt-individual-silhouette-f {
   font-family: "icomoon" !important;
 }
@@ -17049,6 +17056,14 @@ caption {
 }
 .wt-individual-silhouette-u:before {
   content: "\E603";
+}
+
+.icon-rings {
+  color: #B80000;
+  font-size: 1.2rem;
+}
+.icon-rings:hover, .icon-rings:focus {
+  color: #850000;
 }
 
 /** JustLight Theme - Icons - Datatable sort icons */

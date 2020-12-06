@@ -9,3 +9,8 @@ $unicode in $jc-icomoon-icons {
         }
     }
 }
+
+.icon-rings {
+    @include jc-icon-color($jc-icon-red-color);
+    font-size: 1.2rem;
+}
