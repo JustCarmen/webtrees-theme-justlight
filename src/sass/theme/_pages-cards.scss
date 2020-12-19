@@ -5,6 +5,11 @@
         font-size: $font-size-sm;
     }
 
+    /** Cards in forms (collapsable panels) **/
+    form & {
+        @extend .mb-2;
+    }
+
 }
 
 .card-header {

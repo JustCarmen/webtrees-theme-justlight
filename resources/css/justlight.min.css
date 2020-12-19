@@ -9725,7 +9725,7 @@ a.close.disabled {
   margin-left: 0.5rem !important;
 }
 
-[dir] .mb-2, [dir] .my-2 {
+[dir] .mb-2, [dir] form .card, [dir] .my-2 {
   margin-bottom: 0.5rem !important;
 }
 
@@ -17323,11 +17323,11 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 /** JustLight Theme - Specific pages - Cards */
 .card {
   /** Individual page Sidebar */
+  /** Cards in forms (collapsable panels) **/
 }
 #sidebar .card {
   font-size: 0.875rem;
 }
-
 .card-header {
   /** Individual page name cards */
   /** Individual page name card (first) */
