@@ -38,8 +38,8 @@
     // Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
     $('.fact_NOTE').next('.collapse').addClass('indent jc-indent-collapse');
 
-    // Individual page Facts Tab - restyle source fact
-    $('.wt-tab-facts')
+    // Individual page Facts Tab / Family page - restyle gallery caption
+    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table')
         .find('.gallery').parents('.d-flex').addClass('flex-column').removeClass('align-items-center')
         .find('div:nth-child(2n) a').addClass('jc-gallery-caption');
 
