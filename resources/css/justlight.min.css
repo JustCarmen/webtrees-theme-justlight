@@ -553,7 +553,7 @@ small,
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "\2014\A0";
+  content: "— ";
 }
 
 .img-fluid {
@@ -3070,7 +3070,6 @@ textarea.form-control {
   color: #212529;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-size: 1rem;
@@ -12624,10 +12623,6 @@ div.dataTables_wrapper div.dataTables_filter input {
   margin-right: 0.5em;
 }
 
-div.dataTables_wrapper div.dataTables_info {
-  white-space: nowrap;
-}
-
 [dir] div.dataTables_wrapper div.dataTables_info {
   padding-top: 0.85em;
 }
@@ -12680,85 +12675,85 @@ div.dataTables_wrapper div.dataTables_processing {
   margin-right: -100px;
 }
 
-[dir=ltr] table.dataTable thead > tr > th.sorting_asc, [dir=ltr] table.dataTable thead > tr > th.sorting_desc, [dir=ltr] table.dataTable thead > tr > th.sorting, [dir=ltr] table.dataTable thead > tr > td.sorting_asc, [dir=ltr] table.dataTable thead > tr > td.sorting_desc, [dir=ltr] table.dataTable thead > tr > td.sorting {
-  padding-right: 30px;
-}
-
-[dir=rtl] table.dataTable thead > tr > th.sorting_asc, [dir=rtl] table.dataTable thead > tr > th.sorting_desc, [dir=rtl] table.dataTable thead > tr > th.sorting, [dir=rtl] table.dataTable thead > tr > td.sorting_asc, [dir=rtl] table.dataTable thead > tr > td.sorting_desc, [dir=rtl] table.dataTable thead > tr > td.sorting {
-  padding-left: 30px;
-}
-
-table.dataTable thead > tr > th:active,
-table.dataTable thead > tr > td:active {
+table.dataTable > thead > tr > th:active,
+table.dataTable > thead > tr > td:active {
   outline: none;
 }
 
-table.dataTable thead .sorting,
-table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting_desc,
-table.dataTable thead .sorting_asc_disabled,
-table.dataTable thead .sorting_desc_disabled {
+[dir=ltr] table.dataTable > thead > tr > th:not(.sorting_disabled), [dir=ltr] table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-right: 30px;
+}
+
+[dir=rtl] table.dataTable > thead > tr > th:not(.sorting_disabled), [dir=rtl] table.dataTable > thead > tr > td:not(.sorting_disabled) {
+  padding-left: 30px;
+}
+
+table.dataTable > thead .sorting,
+table.dataTable > thead .sorting_asc,
+table.dataTable > thead .sorting_desc,
+table.dataTable > thead .sorting_asc_disabled,
+table.dataTable > thead .sorting_desc_disabled {
   position: relative;
 }
 
-[dir] table.dataTable thead .sorting, [dir] table.dataTable thead .sorting_asc, [dir] table.dataTable thead .sorting_desc, [dir] table.dataTable thead .sorting_asc_disabled, [dir] table.dataTable thead .sorting_desc_disabled {
+[dir] table.dataTable > thead .sorting, [dir] table.dataTable > thead .sorting_asc, [dir] table.dataTable > thead .sorting_desc, [dir] table.dataTable > thead .sorting_asc_disabled, [dir] table.dataTable > thead .sorting_desc_disabled {
   cursor: pointer;
 }
 
-table.dataTable thead .sorting:before, table.dataTable thead .sorting:after,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:before,
-table.dataTable thead .sorting_desc_disabled:after {
+table.dataTable > thead .sorting:before, table.dataTable > thead .sorting:after,
+table.dataTable > thead .sorting_asc:before,
+table.dataTable > thead .sorting_asc:after,
+table.dataTable > thead .sorting_desc:before,
+table.dataTable > thead .sorting_desc:after,
+table.dataTable > thead .sorting_asc_disabled:before,
+table.dataTable > thead .sorting_asc_disabled:after,
+table.dataTable > thead .sorting_desc_disabled:before,
+table.dataTable > thead .sorting_desc_disabled:after {
   position: absolute;
   bottom: 0.9em;
   display: block;
   opacity: 0.3;
 }
 
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc_disabled:before {
-  content: "\2191";
+table.dataTable > thead .sorting:before,
+table.dataTable > thead .sorting_asc:before,
+table.dataTable > thead .sorting_desc:before,
+table.dataTable > thead .sorting_asc_disabled:before,
+table.dataTable > thead .sorting_desc_disabled:before {
+  content: "↑";
 }
 
-[dir=ltr] table.dataTable thead .sorting:before, [dir=ltr] table.dataTable thead .sorting_asc:before, [dir=ltr] table.dataTable thead .sorting_desc:before, [dir=ltr] table.dataTable thead .sorting_asc_disabled:before, [dir=ltr] table.dataTable thead .sorting_desc_disabled:before {
+[dir=ltr] table.dataTable > thead .sorting:before, [dir=ltr] table.dataTable > thead .sorting_asc:before, [dir=ltr] table.dataTable > thead .sorting_desc:before, [dir=ltr] table.dataTable > thead .sorting_asc_disabled:before, [dir=ltr] table.dataTable > thead .sorting_desc_disabled:before {
   right: 1em;
 }
 
-[dir=rtl] table.dataTable thead .sorting:before, [dir=rtl] table.dataTable thead .sorting_asc:before, [dir=rtl] table.dataTable thead .sorting_desc:before, [dir=rtl] table.dataTable thead .sorting_asc_disabled:before, [dir=rtl] table.dataTable thead .sorting_desc_disabled:before {
+[dir=rtl] table.dataTable > thead .sorting:before, [dir=rtl] table.dataTable > thead .sorting_asc:before, [dir=rtl] table.dataTable > thead .sorting_desc:before, [dir=rtl] table.dataTable > thead .sorting_asc_disabled:before, [dir=rtl] table.dataTable > thead .sorting_desc_disabled:before {
   left: 1em;
 }
 
-table.dataTable thead .sorting:after,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:after {
-  content: "\2193";
+table.dataTable > thead .sorting:after,
+table.dataTable > thead .sorting_asc:after,
+table.dataTable > thead .sorting_desc:after,
+table.dataTable > thead .sorting_asc_disabled:after,
+table.dataTable > thead .sorting_desc_disabled:after {
+  content: "↓";
 }
 
-[dir=ltr] table.dataTable thead .sorting:after, [dir=ltr] table.dataTable thead .sorting_asc:after, [dir=ltr] table.dataTable thead .sorting_desc:after, [dir=ltr] table.dataTable thead .sorting_asc_disabled:after, [dir=ltr] table.dataTable thead .sorting_desc_disabled:after {
+[dir=ltr] table.dataTable > thead .sorting:after, [dir=ltr] table.dataTable > thead .sorting_asc:after, [dir=ltr] table.dataTable > thead .sorting_desc:after, [dir=ltr] table.dataTable > thead .sorting_asc_disabled:after, [dir=ltr] table.dataTable > thead .sorting_desc_disabled:after {
   right: 0.5em;
 }
 
-[dir=rtl] table.dataTable thead .sorting:after, [dir=rtl] table.dataTable thead .sorting_asc:after, [dir=rtl] table.dataTable thead .sorting_desc:after, [dir=rtl] table.dataTable thead .sorting_asc_disabled:after, [dir=rtl] table.dataTable thead .sorting_desc_disabled:after {
+[dir=rtl] table.dataTable > thead .sorting:after, [dir=rtl] table.dataTable > thead .sorting_asc:after, [dir=rtl] table.dataTable > thead .sorting_desc:after, [dir=rtl] table.dataTable > thead .sorting_asc_disabled:after, [dir=rtl] table.dataTable > thead .sorting_desc_disabled:after {
   left: 0.5em;
 }
 
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_desc:after {
+table.dataTable > thead .sorting_asc:before,
+table.dataTable > thead .sorting_desc:after {
   opacity: 1;
 }
 
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc_disabled:after {
+table.dataTable > thead .sorting_asc_disabled:before,
+table.dataTable > thead .sorting_desc_disabled:after {
   opacity: 0;
 }
 
@@ -12804,10 +12799,10 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner {
             justify-content: center !important;
   }
 }
-[dir=ltr] table.dataTable.table-sm > thead > tr > th :not(.sorting_disabled), [dir=ltr] .wt-route-CalendarPage table.dataTable > thead > tr > th :not(.sorting_disabled) {
+[dir=ltr] table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled), [dir=ltr] .wt-route-CalendarPage table.dataTable > thead > tr > th:not(.sorting_disabled) {
   padding-right: 20px;
 }
-[dir=rtl] table.dataTable.table-sm > thead > tr > th :not(.sorting_disabled), [dir=rtl] .wt-route-CalendarPage table.dataTable > thead > tr > th :not(.sorting_disabled) {
+[dir=rtl] table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled), [dir=rtl] .wt-route-CalendarPage table.dataTable > thead > tr > th:not(.sorting_disabled) {
   padding-left: 20px;
 }
 
@@ -12899,9 +12894,8 @@ table.dataTable.table-sm .sorting_desc:after,
   cursor: pointer;
   display: block;
   height: 28px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -12928,9 +12922,8 @@ table.dataTable.table-sm .sorting_desc:after,
   cursor: pointer;
   display: block;
   min-height: 32px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -12982,9 +12975,8 @@ table.dataTable.table-sm .sorting_desc:after,
 
 .select2-results__option {
   padding: 6px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -13645,7 +13637,6 @@ span.twitter-typeahead {
 .leaflet-marker-icon,
 .leaflet-marker-shadow {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
   -webkit-user-drag: none;
@@ -14395,7 +14386,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-oldie .leaflet-popup-content-wrapper {
-  zoom: 1;
+  -ms-zoom: 1;
 }
 
 .leaflet-oldie .leaflet-popup-tip {
@@ -14429,7 +14420,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color: #222;
   white-space: nowrap;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
@@ -14685,7 +14675,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-radius: 4px;
   border: none;
   background-color: white;
-  background-image: url(images/geocoder.png);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.2 13l3.4 6.6c.6 1.1 2.5-.4 2-1.2l-4-6.2z'/%3E%3Ccircle cx='10.8' cy='8.9' r='3.9' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -14697,7 +14687,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 [dir] .leaflet-control-geocoder-throbber .leaflet-control-geocoder-icon {
-  background-image: url(images/throbber.gif);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='%23000' stroke-linecap='round' stroke-width='1.6' viewBox='0 0 24 24'%3E%3Cdefs/%3E%3Cg%3E%3Cpath stroke-opacity='.1' d='M14 8.4l3-5'/%3E%3Cpath stroke-opacity='.2' d='M15.6 10l5-3'/%3E%3Cpath stroke-opacity='.3' d='M16.2 12H22'/%3E%3Cpath stroke-opacity='.4' d='M15.6 14l5 3m-6.5-1.4l2.9 5'/%3E%3Cpath stroke-opacity='.5' d='M12 16.2V22m-2-6.4l-3 5'/%3E%3Cpath stroke-opacity='.6' d='M8.4 14l-5 3'/%3E%3Cpath stroke-opacity='.7' d='M7.8 12H2'/%3E%3Cpath stroke-opacity='.8' d='M8.4 10l-5-3'/%3E%3Cpath stroke-opacity='.9' d='M10 8.4l-3-5'/%3E%3Cpath d='M12 7.8V2'/%3E%3CanimateTransform attributeName='transform' calcMode='discrete' dur='1s' repeatCount='indefinite' type='rotate' values='0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .leaflet-control-geocoder-form-no-error {
@@ -16145,7 +16135,7 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [lang=en-AU] q,
 [lang=en-GB] q {
-  quotes: "\2018" "\2019" "\201C" "\201D";
+  quotes: "‘" "’" "“" "”";
 }
 
 [data-toggle=collapse][aria-expanded=true] > .wt-icon-expand {
@@ -16902,7 +16892,7 @@ caption {
 }
 .icon-edit_indi::before {
   font-family: "Font Awesome 5 Free";
-  content: "\F4FF";
+  content: "\f4ff";
 }
 
 .wt-block-content-gedcom_block [class*=icon-], .wt-block-content-user_welcome [class*=icon-] {
@@ -16927,10 +16917,10 @@ caption {
   font-family: "Font Awesome 5 Free";
 }
 .tvF .tv_treelink::before {
-  content: "\F182";
+  content: "\f182";
 }
 .tvM .tv_treelink::before {
-  content: "\F183";
+  content: "\f183";
 }
 
 [data-toggle=buttons] > label > .wt-icon-sex {
@@ -16970,17 +16960,17 @@ caption {
 }
 .jc-icon-add::before {
   color: #70D62C;
-  content: "\F0FE";
+  content: "\f0fe";
 }
 .jc-icon-add::before:hover, .jc-icon-add::before:focus {
   color: #5aad22;
 }
 .jc-icon-edit::before {
-  content: "\F303";
+  content: "\f303";
 }
 .jc-icon-delete::before {
   color: #B80000;
-  content: "\F00D";
+  content: "\f00d";
 }
 .jc-icon-delete::before:hover, .jc-icon-delete::before:focus {
   color: #850000;
@@ -16991,84 +16981,84 @@ caption {
   font-family: "icomoon" !important;
 }
 .icon-silhouette-F:before {
-  content: "\E601";
+  content: "\e601";
 }
 
 .icon-silhouette-M {
   font-family: "icomoon" !important;
 }
 .icon-silhouette-M:before {
-  content: "\E602";
+  content: "\e602";
 }
 
 .icon-silhouette-U {
   font-family: "icomoon" !important;
 }
 .icon-silhouette-U:before {
-  content: "\E603";
+  content: "\e603";
 }
 
 .icon-sfamily {
   font-family: "icomoon" !important;
 }
 .icon-sfamily:before {
-  content: "\E604";
+  content: "\e604";
 }
 
 .icon-cfamily {
   font-family: "icomoon" !important;
 }
 .icon-cfamily:before {
-  content: "\E604";
+  content: "\e604";
 }
 
 .icon-children {
   font-family: "icomoon" !important;
 }
 .icon-children:before {
-  content: "\E605";
+  content: "\e605";
 }
 
 .icon-childless {
   font-family: "icomoon" !important;
 }
 .icon-childless:before {
-  content: "\E606";
+  content: "\e606";
 }
 
 .icon-pedigree {
   font-family: "icomoon" !important;
 }
 .icon-pedigree:before {
-  content: "\E609";
+  content: "\e609";
 }
 
 .icon-rings {
   font-family: "icomoon" !important;
 }
 .icon-rings:before {
-  content: "\E610";
+  content: "\e610";
 }
 
 .wt-individual-silhouette-f {
   font-family: "icomoon" !important;
 }
 .wt-individual-silhouette-f:before {
-  content: "\E601";
+  content: "\e601";
 }
 
 .wt-individual-silhouette-m {
   font-family: "icomoon" !important;
 }
 .wt-individual-silhouette-m:before {
-  content: "\E602";
+  content: "\e602";
 }
 
 .wt-individual-silhouette-u {
   font-family: "icomoon" !important;
 }
 .wt-individual-silhouette-u:before {
-  content: "\E603";
+  content: "\e603";
 }
 
 .icon-rings {
@@ -17095,15 +17085,15 @@ table.dataTable thead th.sorting:before, table.dataTable thead th.sorting_asc:be
   content: "";
 }
 table.dataTable thead th.sorting:after {
-  content: "\F0DC";
+  content: "\f0dc";
   color: #f9f9f9;
   font-size: 1rem;
 }
 table.dataTable thead th.sorting_asc:after {
-  content: "\F0DE";
+  content: "\f0de";
 }
 table.dataTable thead th.sorting_desc:after {
-  content: "\F0DD";
+  content: "\f0dd";
 }
 table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.sorting_desc_disabled:after {
   content: "";
@@ -17305,7 +17295,7 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   margin: 0;
 }
 .wt-block-content-gedcom_stats .list-inline-item:not(:last-child)::after {
-  content: " \2022";
+  content: " •";
 }
 
 .wt-block-content-user_messages .table-responsive, .wt-block-content-user_messages .dataTables_wrapper {

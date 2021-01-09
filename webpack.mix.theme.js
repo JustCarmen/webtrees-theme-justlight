@@ -7,7 +7,7 @@
 
 let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
-require('laravel-mix-alias');
+const path = require("path");
 
 //https://github.com/postcss/autoprefixer
 const postcss_autoprefixer = require("autoprefixer")();
@@ -37,7 +37,6 @@ if(process.env.NODE_ENV === 'production') {
 } else {
     mix
     .setPublicPath('./')
-    .alias('build', config.build_dir)
     .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
     .options({
         processCssUrls: false,
@@ -48,5 +47,12 @@ if(process.env.NODE_ENV === 'production') {
             postcss_image_inliner,
             postcss_custom_properties,
         ]
+    })
+    .webpackConfig({
+        resolve: {
+            alias: {
+                '~build': path.resolve(config.build_dir)
+            }
+        }
     });
 }

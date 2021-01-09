@@ -53,10 +53,12 @@ mix
     .webpackConfig({
         plugins: [
             new FileManagerPlugin({
-                onEnd: {
-                    delete: [
-                        __dirname + '/' + config.webtrees_css_dir + '/_base.tmp.css'
-                    ]
+                events: {
+                    onEnd: {
+                        delete: [
+                            __dirname + '/' + config.webtrees_css_dir + '/_base.tmp.css'
+                        ]
+                    }
                 }
             })
         ]

@@ -19,7 +19,7 @@ let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 require('laravel-mix-clean');
 
-const version  = '2.0.10';
+const version = '2.0.11';
 const dist_dir = 'dist/jc-theme-justlight';
 
 //https://github.com/gregnb/filemanager-webpack-plugin
@@ -35,13 +35,16 @@ mix
     .copy('README.md', dist_dir)
     .webpackConfig({
         plugins: [
-          new FileManagerPlugin({
-            onEnd: {
-                archive: [
-                    { source: './dist', destination: 'dist/justlight-' + version + '.zip'}
-                  ]
-            }
-          })
+            new FileManagerPlugin({
+                events: {
+                    onEnd: {
+                        archive: [{
+                            source: './dist',
+                            destination: 'dist/justlight-' + version + '.zip'
+                        }]
+                    }
+                }
+            })
         ]
     })
     .clean();
