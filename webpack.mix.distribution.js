@@ -33,18 +33,4 @@ mix
     .copy('module.php', dist_dir)
     .copy('LICENSE.md', dist_dir)
     .copy('README.md', dist_dir)
-    .webpackConfig({
-        plugins: [
-            new FileManagerPlugin({
-                events: {
-                    onEnd: {
-                        archive: [{
-                            source: './dist',
-                            destination: 'dist/justlight-' + version + '.zip'
-                        }]
-                    }
-                }
-            })
-        ]
-    })
     .clean();

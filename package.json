@@ -7,7 +7,8 @@
     "development-webtrees": "npm run webtrees && npm run development",
     "watch": "cross-env process.env.section=theme NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "npm run development-webtrees && cross-env process.env.section=theme NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "distribution": "npm run production && cross-env process.env.section=distribution NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "distribution": "npm run production && cross-env process.env.section=distribution NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "archive": "npm run distribution && cross-env process.env.section=archive NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
     "@mjhenkes/postcss-rtl": "^2.0.0",
