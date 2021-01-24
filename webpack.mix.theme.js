@@ -13,7 +13,7 @@ const path = require("path");
 const postcss_autoprefixer = require("autoprefixer")();
 
 //https://github.com/jakob101/postcss-inline-rtl
-const postcss_rtl = require("postcss-rtl")();
+const postcss_rtl = require("@mjhenkes/postcss-rtl")();
 
 //https://github.com/gridonic/postcss-replace
 const postcss_replace = require("postcss-replace")({
