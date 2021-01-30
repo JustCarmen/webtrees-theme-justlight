@@ -49,7 +49,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -71,7 +71,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -284,9 +284,8 @@ label {
   border-radius: 0;
 }
 
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+button:focus:not(:focus-visible) {
+  outline: 0;
 }
 
 input,
@@ -2740,6 +2739,12 @@ textarea.form-control {
 [dir=rtl] .valid-tooltip {
   right: 0;
 }
+[dir=ltr] .form-row > .col > .valid-tooltip, [dir=ltr] .form-row > [class*=col-] > .valid-tooltip {
+  left: 5px;
+}
+[dir=rtl] .form-row > .col > .valid-tooltip, [dir=rtl] .form-row > [class*=col-] > .valid-tooltip {
+  right: 5px;
+}
 
 .was-validated :valid ~ .valid-feedback,
 .was-validated :valid ~ .valid-tooltip,
@@ -2785,12 +2790,12 @@ textarea.form-control {
 
 [dir=ltr] .was-validated .custom-select:valid, [dir=ltr] .custom-select.is-valid {
   padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 
 [dir=rtl] .was-validated .custom-select:valid, [dir=rtl] .custom-select.is-valid {
   padding-left: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center left 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") left 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") center left 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 [dir] .was-validated .custom-select:valid:focus, [dir] .custom-select.is-valid:focus {
   border-color: #28a745;
@@ -2874,6 +2879,12 @@ textarea.form-control {
 [dir=rtl] .invalid-tooltip {
   right: 0;
 }
+[dir=ltr] .form-row > .col > .invalid-tooltip, [dir=ltr] .form-row > [class*=col-] > .invalid-tooltip {
+  left: 5px;
+}
+[dir=rtl] .form-row > .col > .invalid-tooltip, [dir=rtl] .form-row > [class*=col-] > .invalid-tooltip {
+  right: 5px;
+}
 
 .was-validated :invalid ~ .invalid-feedback,
 .was-validated :invalid ~ .invalid-tooltip,
@@ -2919,12 +2930,12 @@ textarea.form-control {
 
 [dir=ltr] .was-validated .custom-select:invalid, [dir=ltr] .custom-select.is-invalid {
   padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 
 [dir=rtl] .was-validated .custom-select:invalid, [dir=rtl] .custom-select.is-invalid {
   padding-left: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center left 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") left 0.75rem center/8px 10px no-repeat, #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") center left 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) no-repeat;
 }
 [dir] .was-validated .custom-select:invalid:focus, [dir] .custom-select.is-invalid:focus {
   border-color: #dc3545;
@@ -4620,14 +4631,6 @@ input[type=button].btn-block {
 .input-group > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
-[dir=ltr] .input-group > .form-control:not(:last-child), [dir=ltr] .wt-route-EditName .input-group > input[class=NAME]:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=ltr] .input-group > .custom-select:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-[dir=rtl] .input-group > .form-control:not(:last-child), [dir=rtl] .wt-route-EditName .input-group > input[class=NAME]:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:last-child), [dir=rtl] .wt-block-content-user_messages form .input-group > select:not(:last-child), [dir=rtl] .input-group > .custom-select:not(:last-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
 [dir=ltr] .input-group > .form-control:not(:first-child), [dir=ltr] .wt-route-EditName .input-group > input[class=NAME]:not(:first-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > input[type=text]:not(:first-child), [dir=ltr] .wt-block-content-user_messages form .input-group > select:not(:first-child), [dir=ltr] .input-group > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -4642,21 +4645,29 @@ input[type=button].btn-block {
   -webkit-box-align: center;
           align-items: center;
 }
-[dir=ltr] .input-group > .custom-file:not(:last-child) .custom-file-label, [dir=ltr] .input-group > .custom-file:not(:last-child) .custom-file-label::after {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-[dir=rtl] .input-group > .custom-file:not(:last-child) .custom-file-label, [dir=rtl] .input-group > .custom-file:not(:last-child) .custom-file-label::after {
+[dir=ltr] .input-group > .custom-file:not(:last-child) .custom-file-label, [dir=ltr] .input-group > .custom-file:not(:first-child) .custom-file-label {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-[dir=ltr] .input-group > .custom-file:not(:first-child) .custom-file-label {
+[dir=rtl] .input-group > .custom-file:not(:last-child) .custom-file-label, [dir=rtl] .input-group > .custom-file:not(:first-child) .custom-file-label {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+[dir=ltr] .input-group:not(.has-validation) > .form-control:not(:last-child), [dir=ltr] .wt-route-EditName .input-group:not(.has-validation) > input[class=NAME]:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group:not(.has-validation) > input[type=text]:not(:last-child), [dir=ltr] .wt-block-content-user_messages form .input-group:not(.has-validation) > select:not(:last-child), [dir=ltr] .input-group:not(.has-validation) > .custom-select:not(:last-child), [dir=ltr] .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+[dir=rtl] .input-group:not(.has-validation) > .form-control:not(:last-child), [dir=rtl] .wt-route-EditName .input-group:not(.has-validation) > input[class=NAME]:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group:not(.has-validation) > input[type=text]:not(:last-child), [dir=rtl] .wt-block-content-user_messages form .input-group:not(.has-validation) > select:not(:last-child), [dir=rtl] .input-group:not(.has-validation) > .custom-select:not(:last-child), [dir=rtl] .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-[dir=rtl] .input-group > .custom-file:not(:first-child) .custom-file-label {
+[dir=ltr] .input-group.has-validation > .form-control:nth-last-child(n+3), [dir=ltr] .wt-route-EditName .input-group.has-validation > input[class=NAME]:nth-last-child(n+3), [dir=ltr] .wt-route-ReportSetupPage .input-group.has-validation > input[type=text]:nth-last-child(n+3), [dir=ltr] .wt-block-content-user_messages form .input-group.has-validation > select:nth-last-child(n+3), [dir=ltr] .input-group.has-validation > .custom-select:nth-last-child(n+3), [dir=ltr] .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label::after {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+[dir=rtl] .input-group.has-validation > .form-control:nth-last-child(n+3), [dir=rtl] .wt-route-EditName .input-group.has-validation > input[class=NAME]:nth-last-child(n+3), [dir=rtl] .wt-route-ReportSetupPage .input-group.has-validation > input[type=text]:nth-last-child(n+3), [dir=rtl] .wt-block-content-user_messages form .input-group.has-validation > select:nth-last-child(n+3), [dir=rtl] .input-group.has-validation > .custom-select:nth-last-child(n+3), [dir=rtl] .input-group.has-validation > .custom-file:nth-last-child(n+3) .custom-file-label::after {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .input-group-prepend,
@@ -4796,12 +4807,12 @@ input[type=button].btn-block {
   padding-left: 1.75rem;
 }
 
-[dir=ltr] .input-group > .input-group-prepend > .btn, [dir=ltr] .hideShowPassword-wrapper .input-group > .input-group-prepend > button, [dir=ltr] .wt-block-content-user_messages form .input-group > .input-group-prepend > button[type=submit], [dir=ltr] .input-group > .input-group-prepend > .input-group-text, [dir=ltr] .wt-route-ReportSetupPage .input-group-append .input-group > .input-group-prepend > .btn-link, [dir=ltr] .input-group > .input-group-prepend > .jc-btn-secondary, [dir=ltr] .input-group > .input-group-prepend > .btn-light, [dir=ltr] .input-group > .input-group-append:not(:last-child) > .btn, [dir=ltr] .hideShowPassword-wrapper .input-group > .input-group-append:not(:last-child) > button, [dir=ltr] .wt-block-content-user_messages form .input-group > .input-group-append:not(:last-child) > button[type=submit], [dir=ltr] .input-group > .input-group-append:not(:last-child) > .input-group-text, [dir=ltr] .wt-route-ReportSetupPage .input-group > .input-group-append:not(:last-child) > .btn-link, [dir=ltr] .input-group > .input-group-append:not(:last-child) > .jc-btn-secondary, [dir=ltr] .input-group > .input-group-append:not(:last-child) > .btn-light, [dir=ltr] .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), [dir=ltr] .hideShowPassword-wrapper .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), [dir=ltr] .wt-block-content-user_messages form .input-group > .input-group-append:last-child > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir=ltr] .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > .input-group-append:last-child > .btn-link:not(:last-child), [dir=ltr] .input-group > .input-group-append:last-child > .jc-btn-secondary:not(:last-child), [dir=ltr] .input-group > .input-group-append:last-child > .btn-light:not(:last-child) {
+[dir=ltr] .input-group > .input-group-prepend > .btn, [dir=ltr] .hideShowPassword-wrapper .input-group > .input-group-prepend > button, [dir=ltr] .wt-block-content-user_messages form .input-group > .input-group-prepend > button[type=submit], [dir=ltr] .input-group > .input-group-prepend > .input-group-text, [dir=ltr] .wt-route-ReportSetupPage .input-group-append .input-group > .input-group-prepend > .btn-link, [dir=ltr] .input-group > .input-group-prepend > .jc-btn-secondary, [dir=ltr] .input-group > .input-group-prepend > .btn-light, [dir=ltr] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn, [dir=ltr] .hideShowPassword-wrapper .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button, [dir=ltr] .wt-block-content-user_messages form .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button[type=submit], [dir=ltr] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, [dir=ltr] .wt-route-ReportSetupPage .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn-link, [dir=ltr] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .jc-btn-secondary, [dir=ltr] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn-light, [dir=ltr] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn, [dir=ltr] .hideShowPassword-wrapper .input-group.has-validation > .input-group-append:nth-last-child(n+3) > button, [dir=ltr] .wt-block-content-user_messages form .input-group.has-validation > .input-group-append:nth-last-child(n+3) > button[type=submit], [dir=ltr] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .input-group-text, [dir=ltr] .wt-route-ReportSetupPage .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn-link, [dir=ltr] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .jc-btn-secondary, [dir=ltr] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn-light, [dir=ltr] .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), [dir=ltr] .hideShowPassword-wrapper .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), [dir=ltr] .wt-block-content-user_messages form .input-group > .input-group-append:last-child > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir=ltr] .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), [dir=ltr] .wt-route-ReportSetupPage .input-group > .input-group-append:last-child > .btn-link:not(:last-child), [dir=ltr] .input-group > .input-group-append:last-child > .jc-btn-secondary:not(:last-child), [dir=ltr] .input-group > .input-group-append:last-child > .btn-light:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-[dir=rtl] .input-group > .input-group-prepend > .btn, [dir=rtl] .hideShowPassword-wrapper .input-group > .input-group-prepend > button, [dir=rtl] .wt-block-content-user_messages form .input-group > .input-group-prepend > button[type=submit], [dir=rtl] .input-group > .input-group-prepend > .input-group-text, [dir=rtl] .wt-route-ReportSetupPage .input-group-append .input-group > .input-group-prepend > .btn-link, [dir=rtl] .input-group > .input-group-prepend > .jc-btn-secondary, [dir=rtl] .input-group > .input-group-prepend > .btn-light, [dir=rtl] .input-group > .input-group-append:not(:last-child) > .btn, [dir=rtl] .hideShowPassword-wrapper .input-group > .input-group-append:not(:last-child) > button, [dir=rtl] .wt-block-content-user_messages form .input-group > .input-group-append:not(:last-child) > button[type=submit], [dir=rtl] .input-group > .input-group-append:not(:last-child) > .input-group-text, [dir=rtl] .wt-route-ReportSetupPage .input-group > .input-group-append:not(:last-child) > .btn-link, [dir=rtl] .input-group > .input-group-append:not(:last-child) > .jc-btn-secondary, [dir=rtl] .input-group > .input-group-append:not(:last-child) > .btn-light, [dir=rtl] .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), [dir=rtl] .hideShowPassword-wrapper .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), [dir=rtl] .wt-block-content-user_messages form .input-group > .input-group-append:last-child > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir=rtl] .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > .input-group-append:last-child > .btn-link:not(:last-child), [dir=rtl] .input-group > .input-group-append:last-child > .jc-btn-secondary:not(:last-child), [dir=rtl] .input-group > .input-group-append:last-child > .btn-light:not(:last-child) {
+[dir=rtl] .input-group > .input-group-prepend > .btn, [dir=rtl] .hideShowPassword-wrapper .input-group > .input-group-prepend > button, [dir=rtl] .wt-block-content-user_messages form .input-group > .input-group-prepend > button[type=submit], [dir=rtl] .input-group > .input-group-prepend > .input-group-text, [dir=rtl] .wt-route-ReportSetupPage .input-group-append .input-group > .input-group-prepend > .btn-link, [dir=rtl] .input-group > .input-group-prepend > .jc-btn-secondary, [dir=rtl] .input-group > .input-group-prepend > .btn-light, [dir=rtl] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn, [dir=rtl] .hideShowPassword-wrapper .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button, [dir=rtl] .wt-block-content-user_messages form .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button[type=submit], [dir=rtl] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text, [dir=rtl] .wt-route-ReportSetupPage .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn-link, [dir=rtl] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .jc-btn-secondary, [dir=rtl] .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn-light, [dir=rtl] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn, [dir=rtl] .hideShowPassword-wrapper .input-group.has-validation > .input-group-append:nth-last-child(n+3) > button, [dir=rtl] .wt-block-content-user_messages form .input-group.has-validation > .input-group-append:nth-last-child(n+3) > button[type=submit], [dir=rtl] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .input-group-text, [dir=rtl] .wt-route-ReportSetupPage .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn-link, [dir=rtl] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .jc-btn-secondary, [dir=rtl] .input-group.has-validation > .input-group-append:nth-last-child(n+3) > .btn-light, [dir=rtl] .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), [dir=rtl] .hideShowPassword-wrapper .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle), [dir=rtl] .wt-block-content-user_messages form .input-group > .input-group-append:last-child > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir=rtl] .input-group > .input-group-append:last-child > .input-group-text:not(:last-child), [dir=rtl] .wt-route-ReportSetupPage .input-group > .input-group-append:last-child > .btn-link:not(:last-child), [dir=rtl] .input-group > .input-group-append:last-child > .jc-btn-secondary:not(:last-child), [dir=rtl] .input-group > .input-group-append:last-child > .btn-light:not(:last-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4932,7 +4943,7 @@ input[type=button].btn-block {
   content: "";
 }
 [dir] .custom-control-label::after {
-  background: no-repeat 50%/50% 50%;
+  background: 50%/50% 50% no-repeat;
 }
 [dir=ltr] .custom-control-label::after {
   left: -1.5rem;
@@ -5080,12 +5091,12 @@ input[type=button].btn-block {
 
 [dir=ltr] .custom-select {
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat;
 }
 
 [dir=rtl] .custom-select {
   padding: 0.375rem 0.75rem 0.375rem 1.75rem;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") left 0.75rem center/8px 10px no-repeat;
 }
 .custom-select:focus {
   outline: 0;
@@ -5180,6 +5191,7 @@ input[type=button].btn-block {
   z-index: 2;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
+  overflow: hidden;
   opacity: 0;
 }
 
@@ -5205,6 +5217,7 @@ input[type=button].btn-block {
   top: 0;
   z-index: 1;
   height: calc(1.5em + 0.75rem + 2px);
+  overflow: hidden;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -5269,7 +5282,7 @@ input[type=button].btn-block {
   background-color: transparent;
 }
 .custom-range:focus {
-  outline: none;
+  outline: 0;
 }
 [dir] .custom-range:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(51, 122, 183, 0.25);
@@ -5506,10 +5519,8 @@ input[type=button].btn-block {
 [dir] .nav-tabs {
   border-bottom: 1px solid #ced4da;
 }
-[dir] .nav-tabs .nav-item {
-  margin-bottom: -1px;
-}
 [dir] .nav-tabs .nav-link {
+  margin-bottom: -1px;
   border: 1px solid transparent;
 }
 [dir=ltr] .nav-tabs .nav-link {
@@ -5713,8 +5724,12 @@ input[type=button].btn-block {
 }
 
 [dir] .navbar-toggler-icon {
-  background: no-repeat center center;
-  background-size: 100% 100%;
+  background: 50%/100% 100% no-repeat;
+}
+
+.navbar-nav-scroll {
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
 @media (max-width: 575.98px) {
@@ -5758,6 +5773,9 @@ input[type=button].btn-block {
 .navbar-expand-sm > .container-lg,
 .navbar-expand-sm > .container-xl {
     flex-wrap: nowrap;
+  }
+  .navbar-expand-sm .navbar-nav-scroll {
+    overflow: visible;
   }
   .navbar-expand-sm .navbar-collapse {
     display: -webkit-box !important;
@@ -5810,6 +5828,9 @@ input[type=button].btn-block {
 .navbar-expand-md > .container-xl {
     flex-wrap: nowrap;
   }
+  .navbar-expand-md .navbar-nav-scroll {
+    overflow: visible;
+  }
   .navbar-expand-md .navbar-collapse {
     display: -webkit-box !important;
     display: flex !important;
@@ -5860,6 +5881,9 @@ input[type=button].btn-block {
 .navbar-expand-lg > .container-lg,
 .navbar-expand-lg > .container-xl {
     flex-wrap: nowrap;
+  }
+  .navbar-expand-lg .navbar-nav-scroll {
+    overflow: visible;
   }
   .navbar-expand-lg .navbar-collapse {
     display: -webkit-box !important;
@@ -5912,6 +5936,9 @@ input[type=button].btn-block {
 .navbar-expand-xl > .container-xl {
     flex-wrap: nowrap;
   }
+  .navbar-expand-xl .navbar-nav-scroll {
+    overflow: visible;
+  }
   .navbar-expand-xl .navbar-collapse {
     display: -webkit-box !important;
     display: flex !important;
@@ -5959,6 +5986,9 @@ input[type=button].btn-block {
 .navbar-expand > .container-lg,
 .navbar-expand > .container-xl {
   flex-wrap: nowrap;
+}
+.navbar-expand .navbar-nav-scroll {
+  overflow: visible;
 }
 .navbar-expand .navbar-collapse {
   display: -webkit-box !important;
@@ -7949,7 +7979,7 @@ a.close.disabled {
 }
 
 [dir] .carousel-control-prev-icon, [dir] .carousel-control-next-icon {
-  background: no-repeat 50%/100% 100%;
+  background: 50%/100% 100% no-repeat;
 }
 
 [dir] .carousel-control-prev-icon {
