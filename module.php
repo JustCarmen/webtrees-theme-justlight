@@ -79,7 +79,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleVersion(): string
     {
-        return '2.0.11';
+        return '2.0.11.1-dev';
     }
 
     /**
