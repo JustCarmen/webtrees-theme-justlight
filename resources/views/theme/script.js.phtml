@@ -47,10 +47,17 @@
     $('.wt-tab-stories .story_title').addClass('h3 text-left').removeClass('text-center');
 
     // Markdown table style
-    jQuery('.markdown table').each(function () {
+    $('.markdown table').each(function () {
         $(this).addClass('table table-sm table-responsive jc-markdown-table');
         $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
     });
+
+    // Module: MetadataModule (extra information sidebar block on the individual page)
+    // This module doesn't use the views
+    $('#sidebar-content-extra_info')
+        .find('.wt-icon-edit').append('<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>').end()
+        .find('.wt-icon-copy').append('<i class="far fa-copy fa-fw" aria-hidden="true">').end()
+        .find('.wt-icon-delete').append('<i class="fas fa-times fa-fw" aria-hidden="true"></i>').end()
 
     // Blocks: Changes block
     $('.wt-table-changes').addClass('table-bordered table-striped');
