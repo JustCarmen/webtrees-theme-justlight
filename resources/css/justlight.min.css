@@ -17195,16 +17195,6 @@ caption {
   background: -webkit-gradient(linear, left top, left bottom, from(#2b669a), to(#1b3f5f));
   background: linear-gradient(#2b669a, #1b3f5f 100%);
 }
-@media (max-width: 991.98px) {
-  .wt-header-wrapper .jc-header-content-right .wt-header-search .wt-header-search-field {
-    display: none;
-  }
-}
-@media (max-width: 767.98px) {
-  .wt-header-wrapper .jc-header-content-right .wt-header-search {
-    display: none;
-  }
-}
 .wt-header-wrapper .jc-header-content-right .wt-secondary-navigation {
   -webkit-box-flex: 0;
   -webkit-flex: 0;

@@ -72,16 +72,6 @@
             .wt-header-search-button {
                 @include jc-button-gradient;
             }
-
-            @include media-breakpoint-down(md) {
-                .wt-header-search-field {
-                    display: none;
-                }
-            }
-
-            @include media-breakpoint-down(sm) {
-                display: none;
-            }
         }
 
         .wt-secondary-navigation {

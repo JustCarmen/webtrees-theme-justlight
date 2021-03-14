@@ -52,7 +52,7 @@ use Psr\Http\Message\ServerRequestInterface;
                         <?php endif ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler'); ?>
                     </div>
-                    <div class="jc-header-content-right d-flex flex-row justify-content-end">
+                    <div class="jc-header-content-right d-flex flex-lg-row flex-column justify-content-end">
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/secondary-navigation', ['tree' => $tree]); ?>
                         <?php if ($tree !== null) : ?>
                             <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/header-search', ['tree' => $tree]); ?>
