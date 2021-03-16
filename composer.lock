@@ -949,16 +949,16 @@
         },
         {
             "name": "fisharebest/webtrees",
-            "version": "2.0.12",
+            "version": "2.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fisharebest/webtrees.git",
-                "reference": "2596f688012604fc8269a6ef37b91791938c4fa6"
+                "reference": "1c8de94a8d17bb0edc3e2774ab16fac8304c97cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/2596f688012604fc8269a6ef37b91791938c4fa6",
-                "reference": "2596f688012604fc8269a6ef37b91791938c4fa6",
+                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/1c8de94a8d17bb0edc3e2774ab16fac8304c97cd",
+                "reference": "1c8de94a8d17bb0edc3e2774ab16fac8304c97cd",
                 "shasum": ""
             },
             "require": {
@@ -1047,9 +1047,9 @@
             ],
             "support": {
                 "issues": "https://github.com/fisharebest/webtrees/issues",
-                "source": "https://github.com/fisharebest/webtrees/tree/2.0.12"
+                "source": "https://github.com/fisharebest/webtrees/tree/2.0.13"
             },
-            "time": "2021-03-11T08:56:38+00:00"
+            "time": "2021-03-14T14:04:50+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
