@@ -4,10 +4,10 @@
  * JustLight Theme
  *
  * JustCarmen webtrees modules
- * Copyright (C) 2009-2020 Carmen Pijpers-Knegt
+ * Copyright (C) 2014-2021 Carmen Pijpers-Knegt
  *
  * Based on webtrees: online genealogy
- * Copyright (C) 2020 webtrees development team
+ * Copyright (C) 2021 webtrees development team
  *
  * This file is part of JustCarmen webtrees modules
  *
@@ -79,7 +79,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleVersion(): string
     {
-        return '2.0.13-dev';
+        return '2.0.13';
     }
 
     /**

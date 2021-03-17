@@ -7,6 +7,7 @@
  */
 
 let mix = require('laravel-mix');
+let config = require('./webpack.mix.config');
 
 //https://github.com/gregnb/filemanager-webpack-plugin
 const FileManagerPlugin = require('filemanager-webpack-plugin');
