@@ -27,7 +27,7 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 // We need to compile it again because we don't want bootstrap inside this package.
 // run npm install in vendor/fisharebest/webtrees to install dependencies.
 mix
-    .setPublicPath(config.build_dir)
+    .setPublicPath(config.css_dir)
     .styles([
         config.vendor_build_dir + '/datatables.net-bs4/css/dataTables.bootstrap4.css',
         config.webtrees_css_dir + '/begin-ignore-rtl.css',
@@ -40,9 +40,9 @@ mix
         config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.Default.css',
         config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.css',
         config.webtrees_css_dir + '/_vendor-patches.css'
-    ], config.build_dir + '/webtrees.vendor.css')
-    .postCss(config.vendor_build_dir + '/jquery-colorbox/example1/colorbox.css', config.build_dir + '/webtrees.colorbox.css')
-    .postCss(config.webtrees_css_dir + '/_base.tmp.css', config.build_dir + '/webtrees.base.css')
+    ], config.css_dir + '/webtrees.vendor.css')
+    .postCss(config.vendor_build_dir + '/jquery-colorbox/example1/colorbox.css', config.css_dir + '/webtrees.colorbox.css')
+    .postCss(config.webtrees_css_dir + '/_base.tmp.css', config.css_dir + '/webtrees.base.css')
     .options({
         processCssUrls: false,
         postCss: [

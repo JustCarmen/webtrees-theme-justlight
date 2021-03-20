@@ -51,7 +51,7 @@ if(process.env.NODE_ENV === 'production') {
     .webpackConfig({
         resolve: {
             alias: {
-                '~build': path.resolve(config.build_dir)
+                '~build': path.resolve(config.css_dir)
             }
         }
     });
