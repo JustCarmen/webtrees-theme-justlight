@@ -13,7 +13,7 @@ let config = require('./webpack.mix.config');
 
 //https://github.com/bezoerb/postcss-image-inliner
 const postcss_image_inliner = require('postcss-image-inliner')({
-    assetPaths: [config.webtrees_css_dir, config.webtrees_npm_dir + '/jquery-colorbox/example1/'],
+    assetPaths: [config.webtrees_css_dir, config.vendor_build_dir + '/jquery-colorbox/example1/'],
     maxFileSize: 0
 });
 
@@ -29,19 +29,19 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 mix
     .setPublicPath(config.build_dir)
     .styles([
-        config.webtrees_npm_dir + '/datatables.net-bs4/css/dataTables.bootstrap4.css',
+        config.vendor_build_dir + '/datatables.net-bs4/css/dataTables.bootstrap4.css',
         config.webtrees_css_dir + '/begin-ignore-rtl.css',
-        config.webtrees_npm_dir + '/select2/dist/css/select2.min.css',
+        config.vendor_build_dir + '/select2/dist/css/select2.min.css',
         config.webtrees_css_dir + '/end-ignore-rtl.css',
-        config.webtrees_npm_dir + '/typeahead.js-bootstrap4-css/typeaheadjs.css',
-        config.webtrees_npm_dir + '/leaflet/dist/leaflet.css',
-        config.webtrees_npm_dir + '/beautifymarker/leaflet-beautify-marker-icon.css',
-        config.webtrees_npm_dir + '/leaflet-control-geocoder/dist/Control.Geocoder.css',
-        config.webtrees_npm_dir + '/leaflet.markercluster/dist/MarkerCluster.Default.css',
-        config.webtrees_npm_dir + '/leaflet.markercluster/dist/MarkerCluster.css',
+        config.vendor_build_dir + '/typeahead.js-bootstrap4-css/typeaheadjs.css',
+        config.vendor_build_dir + '/leaflet/dist/leaflet.css',
+        config.vendor_build_dir + '/beautifymarker/leaflet-beautify-marker-icon.css',
+        config.vendor_build_dir + '/leaflet-control-geocoder/dist/Control.Geocoder.css',
+        config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.Default.css',
+        config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.css',
         config.webtrees_css_dir + '/_vendor-patches.css'
     ], config.build_dir + '/webtrees.vendor.css')
-    .postCss(config.webtrees_npm_dir + '/jquery-colorbox/example1/colorbox.css', config.build_dir + '/webtrees.colorbox.css')
+    .postCss(config.vendor_build_dir + '/jquery-colorbox/example1/colorbox.css', config.build_dir + '/webtrees.colorbox.css')
     .postCss(config.webtrees_css_dir + '/_base.tmp.css', config.build_dir + '/webtrees.base.css')
     .options({
         processCssUrls: false,
