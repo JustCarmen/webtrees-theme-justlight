@@ -16821,6 +16821,14 @@ a.gallery {
   text-decoration: none;
 }
 
+[dir=ltr] a.gallery {
+  padding-right: 0.5rem;
+}
+
+[dir=rtl] a.gallery {
+  padding-left: 0.5rem;
+}
+
 [dir=ltr] .btn-link {
   padding-left: 0.25rem;
   padding-right: 0.25rem;

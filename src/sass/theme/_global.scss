@@ -43,6 +43,7 @@
 a {
     &.gallery {
         text-decoration: none;
+        padding-right: .5rem; // for media objects containing multiple items. Add space between the items.
     }
 }
 
