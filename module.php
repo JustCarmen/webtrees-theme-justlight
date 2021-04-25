@@ -38,15 +38,18 @@ use Fisharebest\Webtrees\Module\ModuleFooterTrait;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 
 /**
  * Class JustLightTheme - Main class for JustLight Theme.
  */
-return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface
+return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface, ModuleGlobalInterface
 {
     use ModuleThemeTrait;
     use ModuleCustomTrait;
     use ModuleFooterTrait;
+    use ModuleGlobalTrait;
 
     /**
      * {@inheritDoc}
@@ -157,28 +160,39 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     }
 
     /**
+     * Raw content, to be added at the end of the <head> element.
+     * Typically, this will be <link> and <meta> elements.
+     * we use it to load the special font files
+     *
+     * @return string
+     */
+    public function headContent(): string {
+
+        return
+            '<style>
+            @font-face {
+                font-family: \'icomoon\';
+                src: url("' . $this->assetUrl('fonts/icomoon.eot') . '");
+                src: url("' . $this->assetUrl('fonts/icomoon.eot') . ' #iefix") format("embedded-opentype"),
+                    url("' . $this->assetUrl('fonts/icomoon.ttf') . '") format("truetype"),
+                    url("' . $this->assetUrl('fonts/icomoon.woff') . '") format("woff"),
+                    url("' . $this->assetUrl('fonts/icomoon.svg') . ' #icomoon") format("svg");
+                font-weight: normal;
+                font-style: normal;
+                font-display: block;
+            }
+            </style>';
+    }
+
+    /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::stylesheets()
      */
     public function stylesheets(): array
     {
         return [
-            route('module', ['module' => $this->name(), 'action' => 'Stylesheet']),
             $this->assetUrl('css/justlight.min.css')
-
         ];
-    }
-
-    function getStylesheetAction()
-    {
-        $response = view($this->name() . '::theme/style.css', [
-            'eot_url'   => $this->assetUrl('fonts/icomoon.eot'),
-            'svg_url'   => $this->assetUrl('fonts/icomoon.svg'),
-            'ttf_url'   => $this->assetUrl('fonts/icomoon.ttf'),
-            'woff_url'  => $this->assetUrl('fonts/icomoon.woff')
-        ]);
-
-        return response($response)->withHeader('Content-type', 'text/css');
     }
 
     /**
