@@ -27,7 +27,7 @@
     "leaflet-control-geocoder": "^2.2.0",
     "leaflet.markercluster": "^1.5.0",
     "popper.js": "^1.16.1",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.10",
     "postcss-custom-properties": "^10.0.0",
     "postcss-discard-comments": "^4.0.2",
     "postcss-image-inliner": "^4.0.4",
