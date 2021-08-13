@@ -17469,10 +17469,10 @@ table {
   padding: 0.75rem;
 }
 .wt-facts-table a {
-  color: #212529;
+  color: #22527b;
 }
 .wt-facts-table a:hover, .wt-facts-table a:focus {
-  color: #212529;
+  color: #337ab7;
 }
 .wt-facts-table .editfacts {
   white-space: nowrap;

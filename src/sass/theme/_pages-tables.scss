@@ -23,10 +23,10 @@ table {
     }
 
     a {
-        color: $body-color;
+        color: darken(theme-color(), 15%);
 
         @include hover-focus() {
-            color: $body-color;
+            color: theme-color();
         }
     }
 
