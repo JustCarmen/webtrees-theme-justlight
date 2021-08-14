@@ -4,10 +4,15 @@
 $primary: $jc-primary;
 $secondary: $jc-secondary;
 $light: $jc-secondary;
+$white: $jc-white;
 
 // Options
 $enable-gradients: true;
 $enable-shadows: true;
+
+// Body
+$body-bg: $jc-body-bg;
+$body-color: $jc-body-color;
 
 // Typography
 $font-size-base: $jc-font-size-base;
@@ -41,6 +46,8 @@ $dropdown-link-active-color: $jc-theme-darker;
 $dropdown-link-active-bg: $jc-theme-light;
 $dropdown-link-hover-bg: $jc-secondary;
 $dropdown-link-disabled-color: $jc-theme-medium-dark;
+
+$link-color: $jc-link-color;
 
 // Cards
 $card-border-color: $nav-tabs-border-color;

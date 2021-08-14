@@ -5,15 +5,17 @@ $jc-main-wrapper-spacer: 2.5rem;
 $jc-facts-table-header-width: math.div(100%, 6); // col-2 equivalent
 
 // Theme Colors
+$jc-white: #fff;
 $jc-blue: #337ab7;
 $jc-red: #B80000;
 $jc-green: #70D62C;
-$jc-babyblue: #d7eaf9;
-$jc-babypink: #fff0f5;
+$jc-male-bg: #d7eaf9;
+$jc-female-bg: #fff0f5;
 $jc-gray-200: #e9ecef; // Bootstrap gray-200
 $jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-400: #ced4da; // Bootstrap gray-400
 $jc-gray-500: #adb5bd; // Bootstrap gray-500
+$jc-gray-600: #6c757d; // Bootstrap gray-600
 $jc-gray-900: #212529; // Bootstrap gray-900 (= bootstrap $body-color)
 
 $jc-primary: $jc-blue;
@@ -23,6 +25,11 @@ $jc-secondary: $jc-gray-200;
 $jc-brand-primary: #428bca;
 $jc-brand-primary-hover: #5e5e5e;
 
+
+// Body
+$jc-body-bg: $jc-white;
+$jc-body-color: $jc-gray-900;
+
 // Border colors etc.
 $jc-theme-lightest: #f9f9f9; // background in fact-tables and colors on blue gradient
 $jc-theme-lighter: $jc-secondary;
@@ -31,6 +38,9 @@ $jc-theme-medium: $jc-gray-400; // table borders
 $jc-theme-medium-dark: $jc-gray-500;
 $jc-theme-dark: $jc-brand-primary-hover;
 $jc-theme-darker: $jc-gray-900; // body color
+
+// Links
+$jc-link-color: $jc-primary;
 
 // Icon colors
 $jc-icon-color: $jc-gray-900; // Bootstrap body color
