@@ -1,0 +1,33 @@
+// Theme Colors
+$jc-white: #f9f9f9;
+$jc-orange: #dd6900;
+$jc-yellow: #ffc107;
+
+$jc-male-bg: #545454;
+$jc-female-bg: #8e8e8e;
+
+$jc-primary: $jc-orange;
+$jc-secondary: $jc-gray-300;
+
+// Body
+$jc-body-bg: #2e2e2e;
+$jc-body-color: $jc-secondary;
+
+// Usage: main site title (derived from Bootstrap 3)
+$jc-brand-primary: $jc-white;
+$jc-brand-primary-hover: #5e5e5e;
+
+// Border colors etc.
+$jc-theme-lightest: $jc-white;
+$jc-theme-lighter: #ffffde;
+$jc-theme-light: $jc-secondary;
+$jc-theme-medium: $jc-gray-500; // table borders
+$jc-theme-medium-dark: $jc-gray-600;
+$jc-theme-dark: $jc-body-bg;
+$jc-theme-darker: $jc-gray-900;
+
+// Links
+$jc-link-color: $jc-theme-lightest;
+
+// Icon colors
+$jc-icon-color: $jc-theme-lighter;

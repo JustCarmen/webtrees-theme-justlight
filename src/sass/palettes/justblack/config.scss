@@ -1,0 +1,24 @@
+/**
+  * ======================
+       JustLight Theme
+  * ======================
+*/
+
+/*
+ * Pages have the following high-level structure:
+ *
+ * wt-global wt-theme-<THEME> wt-route-<ROUTE>
+ * +---wt-header-wrapper
+ * |   +--- See _header.scss
+ * +---wt-main-wrapper
+ * |   +---wt-main-container
+ * |       +---wt-main-content
+ * |           +---wt-messages
+ * |           +---wt-page-title
+ * |           +---wt-page-options wt-page-options-xxxxx
+ * |           +---wt-page-content
+ * +---wt-footers
+ *     +---wt-footer wt-footer-xxxxx
+ */
+
+ @import "pages";

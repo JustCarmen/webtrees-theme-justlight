@@ -25,14 +25,17 @@
 @use "sass:math";
 
 @import "variables";
-@import "palettes/justblack";
+@import "palettes/justblack/variables";
 
 // Import Bootstrap config first
+// bootstrap config for new palettes must go via Bootstrap - Justlight - Palette
 @import "bootstrap/config";
 
 @import "gradients";
+@import "palettes/justblack/gradients";
 @import "mixins";
 
 @import "webtrees/config";
 
 @import "theme/config";
+@import "palettes/justblack/config"
