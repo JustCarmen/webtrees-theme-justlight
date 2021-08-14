@@ -40,10 +40,6 @@
   background: linear-gradient($jc-theme-lighter 0%, $jc-theme-medium, $jc-theme-medium-dark 100%);
 }
 
-@mixin jc-theme-gradient-light-disabled() {
-  background: linear-gradient($jc-theme-lighter 0%, $jc-theme-lightest 75%);
-}
-
 @mixin jc-header-gradient() {
   background: linear-gradient($white 0, $jc-theme-lightest 100%);
   border-top: 5px solid theme-color(primary);
