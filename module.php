@@ -30,26 +30,31 @@ namespace JustCarmen\WebtreesModules;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Session;
+use Fisharebest\Webtrees\FlashMessages;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Module\MinimalTheme;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
+use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleFooterTrait;
+use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
-use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 
 /**
  * Class JustLightTheme - Main class for JustLight Theme.
  */
-return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface, ModuleGlobalInterface
+return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCustomInterface, ModuleFooterInterface, ModuleGlobalInterface, ModuleConfigInterface
 {
     use ModuleThemeTrait;
     use ModuleCustomTrait;
     use ModuleFooterTrait;
     use ModuleGlobalTrait;
+    use ModuleConfigTrait;
 
     /**
      * {@inheritDoc}
@@ -160,6 +165,43 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     }
 
     /**
+     * @param ServerRequestInterface $request
+     *
+     * @return ResponseInterface
+     */
+    public function getAdminAction(): ResponseInterface
+    {
+        $this->layout = 'layouts/administration';
+
+        return $this->viewResponse($this->name() . '::settings', [
+            'justlight_palette'     => $this->getPreference('justlight-palette', 'justlight'),
+            'justlight_palettes'    => $this->palettes(),
+            'title'                 => $this->title()
+        ]);
+    }
+
+    /**
+     * Save the user preference.
+     *
+     * @param ServerRequestInterface $request
+     *
+     * @return ResponseInterface
+     */
+    public function postAdminAction(ServerRequestInterface $request): ResponseInterface
+    {
+        $params = (array) $request->getParsedBody();
+
+        if ($params['save'] === '1') {
+            $this->setPreference('justlight-palette', $params['justlight-palette']);
+
+            $message = I18N::translate('The preferences for the module “%s” have been updated.', $this->title());
+            FlashMessages::addMessage($message, 'success');
+        }
+
+        return redirect($this->getConfigLink());
+    }
+
+    /**
      * Raw content, to be added at the end of the <head> element.
      * Typically, this will be <link> and <meta> elements.
      * we use it to load the special font files
@@ -190,8 +232,10 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function stylesheets(): array
     {
+        $palette = $this->getPreference('justlight-palette', 'justlight');
+
         return [
-            $this->assetUrl('css/justlight.min.css')
+            $this->assetUrl('css/' . $palette . '.min.css')
         ];
     }
 
@@ -218,5 +262,22 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
             'distribution-chart-no-values'   => 'f9f9f9', // Statistics charts
         ];
         return $parameters[$parameter_name];
+    }
+
+    /**
+     * @return array<string>
+     */
+    private function palettes(): array
+    {
+        $palettes = [
+            /* I18N: The name of a colour-scheme */
+            'justlight'       => I18N::translate('JustLight'),
+            /* I18N: The name of a colour-scheme */
+            'justblack'       => I18N::translate('JustBlack')
+        ];
+
+        uasort($palettes, '\Fisharebest\Webtrees\I18N::strcasecmp');
+
+        return $palettes;
     }
 };

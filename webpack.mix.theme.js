@@ -37,7 +37,8 @@ if(process.env.NODE_ENV === 'production') {
 } else {
     mix
     .setPublicPath('./')
-    .sass('src/sass/theme.scss', config.public_dir + '/css/justlight.min.css')
+    .sass('src/sass/justlight-theme.scss', config.public_dir + '/css/justlight.min.css')
+    .sass('src/sass/justblack-theme.scss', config.public_dir + '/css/justblack.min.css')
     .options({
         processCssUrls: false,
         postCss: [

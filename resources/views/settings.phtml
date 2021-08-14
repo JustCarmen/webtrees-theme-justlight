@@ -1,0 +1,35 @@
+<?php
+
+use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Http\RequestHandlers\DataFixPage;
+use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
+
+?>
+
+<?= view('components/breadcrumbs', ['links' => [route(ControlPanel::class) => I18N::translate('Control panel'), $title]]) ?>
+
+<h1><?= $title ?></h1>
+
+<div class="jc-justlight-palettes mb-5">
+
+    <form method="post">
+        <?= csrf_field() ?>
+        <input type="hidden" name="save" id="save" value="1">
+         <!-- PALETTE LIST -->
+         <div class="row form-group">
+            <label class="col-sm-3 col-form-label" for="themeswitcher">
+                <?= I18N::translate('Switch to another Color Scheme') ?>
+            </label>
+            <div class="col-sm-9">
+                <?= view('components/select', ['name' => 'justlight-palette', 'selected' => $justlight_palette, 'options' => $justlight_palettes]) ?>
+            </div>
+        </div>
+
+        <!-- SAVE BUTTON -->
+        <hr/>
+        <button type="submit" class="btn btn-primary">
+            <?= view('icons/save') ?>
+            <?= I18N::translate('save') ?>
+        </button>
+    </form>
+</div>
