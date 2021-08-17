@@ -9,8 +9,7 @@ $jc-white: #fff;
 $jc-blue: #337ab7;
 $jc-red: #B80000;
 $jc-green: #70D62C;
-$jc-male-bg: #d7eaf9;
-$jc-female-bg: #fff0f5;
+
 $jc-gray-200: #e9ecef; // Bootstrap gray-200
 $jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-400: #ced4da; // Bootstrap gray-400
@@ -39,6 +38,14 @@ $jc-theme-medium-dark: $jc-gray-500;
 $jc-theme-dark: $jc-brand-primary-hover;
 $jc-theme-darker: $jc-gray-900; // body color
 
+// Chart boxes etc.
+$jc-male-bg: #d7eaf9;
+$jc-female-bg: #fff0f5;
+$jc-unknown-bg: $jc-theme-lightest;
+$jc-male-border:darken($jc-male-bg, 10%);
+$jc-female-border:darken($jc-female-bg, 10%);
+$jc-unknown-border:darken($jc-unknown-bg, 20%);
+
 // Links
 $jc-link-color: $jc-primary;
 
@@ -48,6 +55,10 @@ $jc-icon-blue-color: $jc-primary;
 $jc-icon-green-color: $jc-green;
 $jc-icon-red-color: $jc-red;
 $jc-icon-white-color: $jc-theme-lightest;
+
+// custom modules (Fancy Imagebar)
+$jc-fancy-imagebar-border-color: $jc-brand-primary;
+$jc-fancy-imagebar-border-width: 5px;
 
 // Icomoon icons - see: https://icomoon.io/
 // These icons are especially made to use in this theme

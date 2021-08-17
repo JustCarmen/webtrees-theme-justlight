@@ -37,7 +37,10 @@ $table-striped-order: even;
 $nav-tabs-border-color: $jc-theme-medium;
 
 // Dropdown menu container and contents
+$dropdown-bg: $jc-body-bg;
+$dropdown-link-color: $jc-body-color;
 $dropdown-border-color: $nav-tabs-border-color;
+$dropdown-link-hover-bg: $jc-secondary;
 
 $dropdown-divider-bg: $jc-theme-medium;
 $dropdown-divider-margin-y: .25rem;

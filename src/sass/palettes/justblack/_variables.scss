@@ -3,9 +3,6 @@ $jc-white: #f9f9f9;
 $jc-orange: #dd6900;
 $jc-yellow: #ffc107;
 
-$jc-male-bg: #545454;
-$jc-female-bg: #8e8e8e;
-
 $jc-primary: $jc-orange;
 $jc-secondary: $jc-gray-300;
 
@@ -26,8 +23,20 @@ $jc-theme-medium-dark: $jc-gray-600;
 $jc-theme-dark: $jc-body-bg;
 $jc-theme-darker: $jc-gray-900;
 
+// Chart boxes etc.
+$jc-male-bg: #545454;
+$jc-female-bg: #8e8e8e;
+$jc-unknown-bg: $jc-theme-lighter;
+$jc-male-border:lighten($jc-male-bg, 10%);
+$jc-female-border:lighten($jc-female-bg, 10%);
+$jc-unknown-border:darken($jc-unknown-bg, 20%);
+
 // Links
 $jc-link-color: $jc-theme-lightest;
 
 // Icon colors
 $jc-icon-color: $jc-theme-lighter;
+
+// custom modules (Fancy Imagebar)
+$jc-fancy-imagebar-border-color: $jc-theme-medium-dark;
+$jc-fancy-imagebar-border-width: 3px;
