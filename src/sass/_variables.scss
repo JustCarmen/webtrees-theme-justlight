@@ -10,6 +10,7 @@ $jc-blue: #337ab7;
 $jc-red: #B80000;
 $jc-green: #70D62C;
 
+// Gray colors used by this theme
 $jc-gray-200: #e9ecef; // Bootstrap gray-200
 $jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-400: #ced4da; // Bootstrap gray-400
@@ -24,7 +25,6 @@ $jc-secondary: $jc-gray-200;
 $jc-brand-primary: #428bca;
 $jc-brand-primary-hover: #5e5e5e;
 
-
 // Body
 $jc-body-bg: $jc-white;
 $jc-body-color: $jc-gray-900;
@@ -36,7 +36,22 @@ $jc-theme-light: $jc-gray-300;
 $jc-theme-medium: $jc-gray-400; // table borders
 $jc-theme-medium-dark: $jc-gray-500;
 $jc-theme-dark: $jc-brand-primary-hover;
-$jc-theme-darker: $jc-gray-900; // body color
+$jc-theme-darker: $jc-body-color; // body color
+
+// Typography
+$jc-text-muted: $jc-theme-medium-dark;
+$jc-hr-border-color: $jc-theme-lighter;
+
+// Navigation and dropdown
+$jc-nav-tabs-border-color: $jc-theme-medium;
+$jc-dropdown-divider-bg: $jc-theme-medium;
+$jc-dropdown-link-active-color: $jc-theme-darker;
+$jc-dropdown-link-active-bg: $jc-theme-light;
+$jc-dropdown-link-disabled-color: $jc-theme-medium-dark;
+
+// Tables
+$jc-table-accent-bg: $jc-theme-lightest;
+$jc-table-border-color: $jc-theme-medium;
 
 // Chart boxes etc.
 $jc-male-bg: #d7eaf9;

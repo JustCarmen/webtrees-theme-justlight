@@ -24,31 +24,30 @@ $h4-font-size: $font-size-base * 1.4;
 $h5-font-size: $font-size-base * 1.2;
 $h6-font-size: $font-size-base;
 
-$text-muted: $jc-theme-medium-dark;
-
-$hr-border-color: $jc-theme-lighter;
+$text-muted: $jc-text-muted;
+$hr-border-color: $jc-hr-border-color;
 
 // Tables
-$table-accent-bg: $jc-theme-lightest;
-$table-border-color: $jc-theme-medium;
+$table-accent-bg: $jc-table-accent-bg;
+$table-border-color: $jc-table-border-color;
 $table-striped-order: even;
 
 // Navs
-$nav-tabs-border-color: $jc-theme-medium;
+$nav-tabs-border-color: $jc-nav-tabs-border-color;
 
 // Dropdown menu container and contents
 $dropdown-bg: $jc-body-bg;
 $dropdown-link-color: $jc-body-color;
-$dropdown-border-color: $nav-tabs-border-color;
+$dropdown-border-color: $jc-nav-tabs-border-color;
 $dropdown-link-hover-bg: $jc-secondary;
 
-$dropdown-divider-bg: $jc-theme-medium;
+$dropdown-divider-bg: $jc-dropdown-divider-bg;
 $dropdown-divider-margin-y: .25rem;
 
-$dropdown-link-active-color: $jc-theme-darker;
-$dropdown-link-active-bg: $jc-theme-light;
+$dropdown-link-active-color: $jc-dropdown-link-active-color;
+$dropdown-link-active-bg: $jc-link-active-bg;
 $dropdown-link-hover-bg: $jc-secondary;
-$dropdown-link-disabled-color: $jc-theme-medium-dark;
+$dropdown-link-disabled-color: $jc-link-disabled-color;
 
 $link-color: $jc-link-color;
 
