@@ -79,6 +79,10 @@
     // Prevent underlining when hovering over icons
     $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
 
+    // Use the default bootstrap badge class for the odometer
+    $('.jc-palette-justlight').find('.odometer').addClass('badge badge-dark');
+    $('.jc-palette-justblack').find('.odometer').addClass('badge badge-light');
+
     // Place the cookie warning after the footer. The cookie warning is part of the privacy-policy footer
     $('footer').after($('#cookie-warning'));
     $('#cookie-warning').addClass('jc-cookie-warning mt-n2');

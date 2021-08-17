@@ -46,14 +46,6 @@
         }
     }
 
-    .wt-footer-hit-counter {
-        .odometer {
-            background-color: $jc-theme-darker;
-            color: $white;
-            @extend .p-1;
-        }
-    }
-
     .wt-footer-powered-by {
         a {
             content: url('{{ webtrees }}/images/powered-by-webtrees.png');
