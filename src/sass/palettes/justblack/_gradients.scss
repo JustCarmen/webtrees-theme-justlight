@@ -10,3 +10,26 @@
   border-bottom: $border-width solid $jc-theme-lighter;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
+
+@mixin jc-theme-gradient-dark() {
+  background: linear-gradient($jc-theme-dark 0%, $jc-theme-darker 50%, $black 100%);
+
+  &,
+  a {
+    color: $body-color;
+  }
+}
+
+@mixin jc-theme-gradient-dark-hover() {
+  background: linear-gradient($jc-theme-medium-dark 0%, $jc-theme-dark, $jc-theme-darker 100%);
+}
+
+@mixin jc-button-gradient-dark() {
+  @include jc-button('dark');
+  @include jc-theme-gradient-dark;
+
+  &:hover {
+    @include jc-theme-gradient-dark-hover;
+  }
+}
+

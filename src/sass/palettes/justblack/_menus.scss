@@ -1,0 +1,23 @@
+/** JustBlack Theme - Menu's */
+.wt-genealogy-menu {
+    .nav-link {
+        &:hover {
+            background: $black;
+            border-radius: .5rem;
+        }
+    }
+}
+
+/** JustBlack Theme - User menu */
+.wt-user-menu {
+
+    .menu-login,
+    .menu-logout {
+
+        .nav-link,
+        .active {
+            color: theme-color('dark');
+        }
+    }
+}
+

@@ -1,0 +1,4 @@
+/** JustBlack Theme - Global CSS */
+.btn-secondary {
+    @include jc-button-gradient-dark;
+}

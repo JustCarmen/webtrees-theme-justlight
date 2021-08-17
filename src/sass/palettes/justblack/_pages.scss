@@ -13,7 +13,7 @@
 
 .wt-side-blocks {
     border: none;
-    >div {
+    >div { // overwrite JustLight
         &:not(:last-child) {
             @include jc-border($jc-theme-medium-dark, 'bottom');
         }
@@ -23,4 +23,28 @@
 /** JustBlack Theme - Specific pages - Cards */
 .card {
     background-color: $jc-theme-darker;
+}
+
+/** JustBlack Theme - Specific pages - Tables */
+.jc-markdown-table-separator {
+    @include jc-theme-gradient-dark;
+}
+
+/** JustBlack Theme - Specific pages - Tabs */
+.nav-tabs {
+    .nav-link {
+        @include jc-theme-gradient-dark;
+
+        &:hover {
+            @include jc-theme-gradient-dark-hover;
+        }
+
+        &.text-muted {
+            background: $jc-theme-darker;
+
+            &:hover {
+                background: $jc-theme-dark
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 /**
   * ======================
-       JustLight Theme
+       JustBlack Theme
   * ======================
 */
 
@@ -21,4 +21,7 @@
  *     +---wt-footer wt-footer-xxxxx
  */
 
- @import "pages";
+@import "global";
+@import "menus";
+@import "pages";
+@import "footer";
