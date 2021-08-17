@@ -29,7 +29,7 @@ $jc-brand-primary-hover: #5e5e5e;
 $jc-body-bg: $jc-white;
 $jc-body-color: $jc-gray-900;
 
-// Border colors etc.
+// Theme light-dark scheme (for border colors etc.)
 $jc-theme-lightest: #f9f9f9; // background in fact-tables and colors on blue gradient
 $jc-theme-lighter: $jc-secondary;
 $jc-theme-light: $jc-gray-300;
@@ -43,6 +43,7 @@ $jc-text-muted: $jc-theme-medium-dark;
 $jc-hr-border-color: $jc-theme-lighter;
 
 // Navigation and dropdown
+$jc-link-color: $jc-primary;
 $jc-nav-tabs-border-color: $jc-theme-medium;
 $jc-dropdown-divider-bg: $jc-theme-medium;
 $jc-dropdown-link-active-color: $jc-theme-darker;
@@ -61,8 +62,14 @@ $jc-male-border:darken($jc-male-bg, 10%);
 $jc-female-border:darken($jc-female-bg, 10%);
 $jc-unknown-border:darken($jc-unknown-bg, 20%);
 
-// Links
-$jc-link-color: $jc-primary;
+// Other chart colors
+$jc-fan-chart-menu-bg: $jc-white;
+$jc-interactive-chart-bg: $jc-white;
+$jc-osm-sidebar-border-color: $jc-theme-medium-dark;
+
+// Footer
+$jc-footer-border-color: $jc-theme-lighter;
+$jc-footer-bg: $jc-theme-light;
 
 // Icon colors
 $jc-icon-color: $jc-gray-900; // Bootstrap body color
@@ -70,10 +77,6 @@ $jc-icon-blue-color: $jc-primary;
 $jc-icon-green-color: $jc-green;
 $jc-icon-red-color: $jc-red;
 $jc-icon-white-color: $jc-theme-lightest;
-
-// custom modules (Fancy Imagebar)
-$jc-fancy-imagebar-border-color: $jc-brand-primary;
-$jc-fancy-imagebar-border-width: 5px;
 
 // Icomoon icons - see: https://icomoon.io/
 // These icons are especially made to use in this theme
@@ -112,3 +115,7 @@ $jc-icon-treelink-m: 'f183'; // fas fa-male
 
 // Other icons
 $jc-icon-edit-indi: 'f4ff';
+
+// custom modules (Fancy Imagebar)
+$jc-fancy-imagebar-border-color: $jc-brand-primary;
+$jc-fancy-imagebar-border-width: 5px;

@@ -6,15 +6,6 @@
  * +---wt-footer wt-footer-xxxxx
  */
 .wt-footers {
-
-    @include media-breakpoint-up(sm) {
-        @include jc-border($jc-theme-light, 'top');
-    }
-
-    @include media-breakpoint-up(lg) {
-        background-color: $jc-body-bg;
-    }
-
     // the gray version of the logo is available in the colors theme
     .wt-footer-powered-by {
         a {

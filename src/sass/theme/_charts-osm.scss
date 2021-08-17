@@ -5,7 +5,7 @@
 
 .osm-sidebar {
     .gchart {
-        border: $border-width dashed $jc-theme-medium-dark;
+        border: $border-width dashed $jc-osm-sidebar-border-color;
         margin-bottom: .5rem;
         color: theme-color();
 

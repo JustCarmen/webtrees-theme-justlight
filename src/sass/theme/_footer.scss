@@ -17,11 +17,11 @@
     }
 
     @include media-breakpoint-up(sm) {
-        @include jc-border($jc-theme-lighter, 'top');
+        @include jc-border($jc-footer-border-color, 'top');
     }
 
     @include media-breakpoint-up(lg) {
-        background-color: $jc-theme-light;
+        background-color: $jc-footer-bg;
         margin-bottom: 1.5rem;
         min-height: 100px;
 
