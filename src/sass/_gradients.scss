@@ -3,18 +3,18 @@
 // =======================================================================================
 // Gradient for table, card headers, buttons etc.
 // =======================================================================================
-@mixin jc-theme-gradient() {
+@mixin jc-theme-gradient-primary($color: $jc-theme-lightest, $icon-color: $jc-icon-white-color) {
   background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
 
   &,
   a,
   .far,
   .fas {
-    color: $jc-theme-lightest;
+    color: $color;
   }
 
   & [class*="icon-"] {
-    @include jc-icon-color($jc-icon-white-color, 0%);
+    @include jc-icon-color($icon-color, 0%);
   }
 
   th {
@@ -55,7 +55,7 @@
 
 @mixin jc-button-gradient() {
   @include jc-button('primary');
-  @include jc-theme-gradient;
+  @include jc-theme-gradient-primary();
 
   &:hover {
     @include jc-theme-gradient-hover;

@@ -111,7 +111,7 @@
 
     @include media-breakpoint-up(md) {
         .dropdown-item.active {
-            @include jc-theme-gradient;
+            @include jc-theme-gradient-primary();
         }
     }
 }

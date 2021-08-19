@@ -34,12 +34,12 @@
 
     /** Individual page name card (first) */
     #individual-names .card:first-of-type & {
-        @include jc-theme-gradient;
+        @include jc-theme-gradient-primary();
     }
 
     /** Individual page Sidebar */
     #sidebar & {
-        @include jc-theme-gradient;
+        @include jc-theme-gradient-primary();
         @include jc-padding-tb(.25);
         line-height: 1.8rem;
     }

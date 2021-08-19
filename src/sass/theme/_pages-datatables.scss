@@ -5,7 +5,7 @@
 
     @at-root .page-item.active {
         .page-link {
-            @include jc-theme-gradient;
+            @include jc-theme-gradient-primary();
         }
     }
 
@@ -25,7 +25,7 @@
         @extend .table-striped;
 
         thead tr:last-child {
-            @include jc-theme-gradient;
+            @include jc-theme-gradient-primary();
 
             th {
                 vertical-align: top;

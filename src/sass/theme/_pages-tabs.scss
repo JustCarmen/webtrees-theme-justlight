@@ -5,7 +5,7 @@
         @include jc-border;
 
         &.active {
-            @include jc-theme-gradient;
+            @include jc-theme-gradient-primary();
 
             &:hover {
                 @include jc-theme-gradient-hover;

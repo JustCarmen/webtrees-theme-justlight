@@ -105,7 +105,7 @@ table {
     @include jc-border;
 
     thead tr {
-        @include jc-theme-gradient;
+        @include jc-theme-gradient-primary();
 
         th {
             vertical-align: top;
