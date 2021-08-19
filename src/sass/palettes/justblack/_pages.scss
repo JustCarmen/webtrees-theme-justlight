@@ -40,10 +40,10 @@
         }
 
         &.text-muted {
-            background: $jc-theme-darker;
+            background: $jc-theme-light;
 
             &:hover {
-                background: $jc-theme-dark
+                background: $jc-theme-lighter;
             }
         }
     }
