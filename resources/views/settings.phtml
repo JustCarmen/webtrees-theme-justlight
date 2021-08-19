@@ -1,7 +1,6 @@
 <?php
 
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Http\RequestHandlers\DataFixPage;
 use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
 
 ?>
@@ -15,13 +14,24 @@ use Fisharebest\Webtrees\Http\RequestHandlers\ControlPanel;
     <form method="post">
         <?= csrf_field() ?>
         <input type="hidden" name="save" id="save" value="1">
+
          <!-- PALETTE LIST -->
          <div class="row form-group">
-            <label class="col-sm-3 col-form-label" for="themeswitcher">
-                <?= I18N::translate('Switch to another Color Scheme') ?>
+            <label class="col-sm-3 col-form-label" for="palette">
+                <?= I18N::translate('Default color palette') ?>
             </label>
             <div class="col-sm-9">
-                <?= view('components/select', ['name' => 'justlight-palette', 'selected' => $justlight_palette, 'options' => $justlight_palettes]) ?>
+                <?= view('components/select', ['name' => 'palette', 'selected' => $palette, 'options' => $palettes]) ?>
+            </div>
+        </div>
+
+        <!-- ALLOW SWITCH TO ANOTHER COLOR PALETTE -->
+        <div class="row form-group">
+            <label class="col-sm-3 col-form-label" for="allow-switch">
+                <?= I18N::translate('Allow visitors switch to another color palette') ?>
+            </label>
+            <div class="col-sm-9 my-auto">
+                <?= view('components/radios-inline', ['name' => 'allow-switch', 'options' => [I18N::translate('no'), I18N::translate('yes')], 'selected' => (int) $allow_switch]) ?>
             </div>
         </div>
 

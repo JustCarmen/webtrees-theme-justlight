@@ -27,13 +27,18 @@ declare(strict_types=1);
 
 namespace JustCarmen\WebtreesModules;
 
+use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Menu;
+use Fisharebest\Webtrees\Site;
+use Fisharebest\Webtrees\Tree;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Session;
 use Fisharebest\Webtrees\FlashMessages;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Module\MinimalTheme;
+use Fisharebest\Webtrees\Contracts\UserInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
@@ -174,9 +179,10 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         $this->layout = 'layouts/administration';
 
         return $this->viewResponse($this->name() . '::settings', [
-            'justlight_palette'     => $this->getPreference('justlight-palette', 'justlight'),
-            'justlight_palettes'    => $this->palettes(),
-            'title'                 => $this->title()
+            'allow_switch' => $this->getPreference('allow-switch', '0'),
+            'palette'      => $this->getPreference('palette', 'justlight'),
+            'palettes'     => $this->palettes(),
+            'title'        => $this->title()
         ]);
     }
 
@@ -192,7 +198,8 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         $params = (array) $request->getParsedBody();
 
         if ($params['save'] === '1') {
-            $this->setPreference('justlight-palette', $params['justlight-palette']);
+            $this->setPreference('palette', $params['palette']);
+            $this->setPreference('allow-switch', $params['allow-switch']);
 
             $message = I18N::translate('The preferences for the module “%s” have been updated.', $this->title());
             FlashMessages::addMessage($message, 'success');
@@ -232,10 +239,8 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function stylesheets(): array
     {
-        $palette = $this->getPreference('justlight-palette', 'justlight');
-
         return [
-            $this->assetUrl('css/' . $palette . '.min.css')
+            $this->assetUrl('css/' . $this->palette() . '.min.css')
         ];
     }
 
@@ -265,6 +270,82 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     }
 
     /**
+     * Generate a list of items for the user menu.
+     *
+     * @param Tree|null $tree
+     *
+     * @return Menu[]
+     */
+    public function userMenu(?Tree $tree): array
+    {
+        if ($this->getPreference('allow-switch')) {
+            return array_filter([
+                $this->menuPendingChanges($tree),
+                $this->menuMyPages($tree),
+                $this->menuThemes(),
+                $this->menuPalette(),
+                $this->menuLanguages(),
+                $this->menuLogin(),
+                $this->menuLogout(),
+            ]);
+        } else {
+            return parent::userMenu($tree);
+        }
+    }
+
+    /**
+     * Create a menu of palette options
+     *
+     * @return Menu
+     */
+    protected function menuPalette(): Menu
+    {
+        /* I18N: A colour scheme */
+        $menu = new Menu(I18N::translate('Palette'), '#', 'menu-justlight');
+
+        $palette = $this->palette();
+
+        foreach ($this->palettes() as $palette_id => $palette_name) {
+            $url = route('module', ['module' => $this->name(), 'action' => 'Palette', 'palette' => $palette_id]);
+
+            $submenu = new Menu(
+                $palette_name,
+                '#',
+                'menu-justlight-' . $palette_id . ($palette === $palette_id ? ' active' : ''),
+                [
+                    'data-post-url' => $url,
+                ]
+            );
+
+            $menu->addSubmenu($submenu);
+        }
+
+        return $menu;
+    }
+
+     /**
+     * Switch to a new palette
+     *
+     * @param ServerRequestInterface $request
+     *
+     * @return ResponseInterface
+     */
+    public function postPaletteAction(ServerRequestInterface $request): ResponseInterface
+    {
+        $user = $request->getAttribute('user');
+        assert($user instanceof UserInterface);
+
+        $palette = $request->getQueryParams()['palette'];
+        assert(array_key_exists($palette, $this->palettes()));
+
+        $user->setPreference('justlight-palette', $palette);
+
+        Session::put('justlight-palette', $palette);
+
+        return response();
+    }
+
+    /**
      * @return array<string>
      */
     private function palettes(): array
@@ -279,5 +360,26 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         uasort($palettes, '\Fisharebest\Webtrees\I18N::strcasecmp');
 
         return $palettes;
+    }
+
+    /**
+     * @return string
+     */
+    private function palette(): string
+    {
+        // If we are logged in, use our preference
+        $palette = Auth::user()->getPreference('justlight-palette', '');
+
+        // If not logged in or no preference, use one we selected earlier in the session.
+        if ($palette === '') {
+            $palette = Session::get('justlight-palette', '');
+        }
+
+        // We haven't selected one this session? Use the site default
+        if ($palette === '') {
+            $palette = $this->getPreference('justlight-palette', 'justlight');
+        }
+
+        return $palette;
     }
 };
