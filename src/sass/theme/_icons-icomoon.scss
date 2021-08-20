@@ -3,6 +3,7 @@
 $unicode in $jc-icomoon-icons {
     .#{$icon} {
         font-family: 'icomoon' !important;
+        color: $jc-icon-color;
 
         &:before {
             content: unicode($unicode);
