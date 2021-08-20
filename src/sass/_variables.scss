@@ -45,6 +45,8 @@ $jc-hr-border-color: $jc-theme-lighter;
 // Navigation and dropdown
 $jc-link-color: $jc-primary;
 $jc-nav-tabs-border-color: $jc-theme-medium;
+$jc-nav-tabs-muted-bg: $jc-theme-lightest;
+$jc-nav-tabs-muted-hover-bg: $jc-theme-light;
 $jc-dropdown-divider-bg: $jc-theme-medium;
 $jc-dropdown-link-active-color: $jc-theme-darker;
 $jc-dropdown-link-active-bg: $jc-theme-light;
@@ -53,6 +55,9 @@ $jc-dropdown-link-disabled-color: $jc-theme-medium-dark;
 // Tables
 $jc-table-accent-bg: $jc-theme-lightest;
 $jc-table-border-color: $jc-theme-medium;
+
+// Cards
+$jc-card-bg: $jc-white;
 
 // Chart boxes etc.
 $jc-male-bg: #d7eaf9;

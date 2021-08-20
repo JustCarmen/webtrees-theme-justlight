@@ -19,21 +19,3 @@
         }
     }
 }
-
-/** JustBlack Theme - Specific pages - Cards */
-.card {
-    background-color: $jc-theme-darker;
-}
-
-/** JustBlack Theme - Specific pages - Tabs */
-.nav-tabs {
-    .nav-link {
-        &.text-muted {
-            background: $jc-theme-light;
-
-            &:hover {
-                background: $jc-theme-lighter;
-            }
-        }
-    }
-}

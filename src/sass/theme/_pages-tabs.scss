@@ -9,10 +9,10 @@
         }
 
         &.text-muted {
-            background: $jc-theme-lightest;
+            background: $jc-nav-tabs-muted-bg;
 
             &:hover {
-                background: $jc-theme-light;
+                background: $jc-nav-tabs-muted-hover-bg;
             }
 
             .wt-page-content & {
