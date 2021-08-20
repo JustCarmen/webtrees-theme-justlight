@@ -3,42 +3,6 @@
 // =======================================================================================
 // Gradient for table, card headers, buttons etc.
 // =======================================================================================
-@mixin jc-theme-gradient-primary($color: $jc-theme-lightest, $icon-color: $jc-icon-white-color) {
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
-
-  &,
-  a,
-  .far,
-  .fas {
-    color: $color;
-  }
-
-  & [class*="icon-"] {
-    @include jc-icon-color($icon-color, 0%);
-  }
-
-  th {
-    font-weight: 600;
-  }
-}
-
-@mixin jc-theme-gradient-hover() {
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
-  color: $jc-theme-lightest;
-}
-
-@mixin jc-theme-gradient-light() {
-  background: linear-gradient($jc-theme-lightest 0%, $jc-theme-lighter 50%, $jc-theme-medium 100%);
-
-  &,
-  a {
-    color: $body-color;
-  }
-}
-
-@mixin jc-theme-gradient-light-hover() {
-  background: linear-gradient($jc-theme-lighter 0%, $jc-theme-medium, $jc-theme-medium-dark 100%);
-}
 
 @mixin jc-header-gradient() {
   background: linear-gradient($white 0, $jc-theme-lightest 100%);
@@ -47,26 +11,56 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
 
+@mixin jc-theme-gradient-primary() {
+  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+
+  &,
+  a,
+  .far,
+  .fas {
+    color: $jc-theme-lightest;
+  }
+
+  & [class*="icon-"] {
+    @include jc-icon-color($jc-icon-white-color, 0%);
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  &:hover {
+    background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+    color: $jc-theme-lightest;
+  }
+}
+
+@mixin jc-theme-gradient-secondary() {
+  background: linear-gradient($jc-theme-lightest 0%, $jc-theme-lighter 50%, $jc-theme-medium 100%);
+
+  &,
+  a {
+    color: $body-color;
+  }
+
+  &:hover {
+    background: linear-gradient($jc-theme-lighter 0%, $jc-theme-medium, $jc-theme-medium-dark 100%);
+    color: $body-color;
+  }
+}
+
 @mixin jc-button($_color) {
-  border: $border-width solid theme-color($_color);
+  border: $border-width solid $_color;
   border-radius: .25rem;
   padding: $btn-padding-y $btn-padding-x;
 }
 
-@mixin jc-button-gradient() {
-  @include jc-button('primary');
+@mixin jc-button-gradient-primary() {
+  @include jc-button($jc-primary);
   @include jc-theme-gradient-primary();
-
-  &:hover {
-    @include jc-theme-gradient-hover;
-  }
 }
 
-@mixin jc-button-gradient-light() {
-  @include jc-button('secondary');
-  @include jc-theme-gradient-light;
-
-  &:hover {
-    @include jc-theme-gradient-light-hover;
-  }
+@mixin jc-button-gradient-secondary() {
+  @include jc-button($jc-secondary);
+  @include jc-theme-gradient-secondary();
 }

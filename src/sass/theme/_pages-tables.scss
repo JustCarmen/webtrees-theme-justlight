@@ -85,7 +85,7 @@ table {
     }
 
     @at-root .jc-markdown-table-separator {
-        @include jc-theme-gradient-light;
+        @include jc-theme-gradient-secondary();
     }
 }
 

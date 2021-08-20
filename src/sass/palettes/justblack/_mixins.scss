@@ -1,0 +1,13 @@
+// Default border
+// $table-border-width = $border-width
+// $table-border-color = $jc-theme-darker
+// $input-border-color = $jc-theme-darker
+@mixin jc-border($_color: $jc-theme-medium-dark, $_side:'all', $_width: $border-width, ) {
+    @if $_side=='all' {
+        border: $_width solid $_color;
+    }
+
+    @else {
+        border-#{$_side}: $_width solid $_color;
+    }
+}

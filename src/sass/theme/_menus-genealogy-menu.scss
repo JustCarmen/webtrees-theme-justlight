@@ -4,7 +4,7 @@
     @include media-breakpoint-up(md) {
         .nav-link {
             &.jc-nav-link-active {
-                @include jc-button-gradient;
+                @include jc-button-gradient-primary();
             }
 
             &:hover {

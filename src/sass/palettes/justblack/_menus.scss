@@ -16,8 +16,8 @@
 
         .nav-link,
         .active {
-            color: $jc-theme-dark;
-        }
+           @include jc-button-gradient-light;
+       }
     }
 }
 

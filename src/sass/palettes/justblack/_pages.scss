@@ -25,20 +25,9 @@
     background-color: $jc-theme-darker;
 }
 
-/** JustBlack Theme - Specific pages - Tables */
-.jc-markdown-table-separator {
-    @include jc-theme-gradient-dark;
-}
-
 /** JustBlack Theme - Specific pages - Tabs */
 .nav-tabs {
     .nav-link {
-        @include jc-theme-gradient-dark;
-
-        &:hover {
-            @include jc-theme-gradient-dark-hover;
-        }
-
         &.text-muted {
             background: $jc-theme-light;
 

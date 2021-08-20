@@ -1,19 +1,11 @@
 /** JustLight Theme - Specific pages - Tabs */
 .nav-tabs {
     .nav-link {
-        @include jc-theme-gradient-light;
+        @include jc-theme-gradient-secondary();
         @include jc-border;
 
         &.active {
             @include jc-theme-gradient-primary();
-
-            &:hover {
-                @include jc-theme-gradient-hover;
-            }
-        }
-
-        &:hover {
-            @include jc-theme-gradient-light-hover;
         }
 
         &.text-muted {

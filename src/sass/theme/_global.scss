@@ -52,11 +52,11 @@ a {
 }
 
 .btn-primary {
-    @include jc-button-gradient;
+    @include jc-button-gradient-primary();
 }
 
 .btn-secondary {
-    @include jc-button-gradient-light;
+    @include jc-button-gradient-secondary();
 }
 
 .jc-btn-secondary {
@@ -170,7 +170,7 @@ dd {
 }
 
 .wt-page-menu-button {
-    @include jc-button-gradient;
+    @include jc-button-gradient-primary();
 }
 
 .wt-page-menu-items {
