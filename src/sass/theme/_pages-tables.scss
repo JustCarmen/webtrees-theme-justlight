@@ -7,13 +7,13 @@ table {
 /** Facts Table */
 .wt-facts-table {
     th {
-        background-color: $jc-theme-light;
+        background-color: $jc-facts-table-th-bg;
         font-weight: 400;
         width: $jc-facts-table-header-width;
     }
 
     td {
-        background-color: $jc-theme-lightest;
+        background-color: $jc-facts-table-td-bg;
     }
 
     th,
@@ -23,10 +23,10 @@ table {
     }
 
     a {
-        color: darken(theme-color(), 15%);
+        color: $jc-facts-table-link-color;
 
         @include hover-focus() {
-            color: theme-color();
+            color: $jc-facts-table-link-hover-color;
         }
     }
 
@@ -80,7 +80,7 @@ table {
 
     tr:nth-of-type(odd) {
         td {
-            background-color: $jc-theme-lighter;
+            background-color: $jc-markdown-table-td-bg;
         }
     }
 

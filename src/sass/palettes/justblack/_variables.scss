@@ -19,7 +19,7 @@ $jc-theme-lightest: $jc-white;
 $jc-theme-lighter: #ffffde;
 $jc-theme-light: $jc-secondary;
 $jc-theme-medium: $jc-gray-500; // table borders
-$jc-theme-medium-dark: $jc-gray-600;
+$jc-theme-medium-dark: lighten($jc-body-bg, 15%);
 $jc-theme-dark: $jc-body-bg;
 $jc-theme-darker: $jc-gray-900;
 
@@ -30,16 +30,26 @@ $jc-text-muted: $jc-theme-dark;
 $jc-nav-tabs-muted-bg: $jc-theme-medium;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-medium-dark;
 
+// Tables
+$jc-table-accent-bg: $jc-theme-medium-dark;
+
+$jc-facts-table-th-bg: $jc-theme-dark;
+$jc-facts-table-td-bg: $jc-theme-darker;
+$jc-facts-table-link-color: darken($jc-body-color, 15%);
+$jc-facts-table-link-hover-color: $jc-body-color;
+
+$jc-markdown-table-td-bg: $jc-theme-darker;
+
 // Cards
 $jc-card-bg: $jc-theme-darker;
 
 // Chart boxes etc.
-$jc-male-bg: #545454;
-$jc-female-bg: #8e8e8e;
-$jc-unknown-bg: $jc-theme-lighter;
-$jc-male-border:lighten($jc-male-bg, 10%);
-$jc-female-border:lighten($jc-female-bg, 10%);
-$jc-unknown-border:darken($jc-unknown-bg, 20%);
+$jc-male-bg: $jc-theme-medium-dark;
+$jc-female-bg: lighten($jc-male-bg, 20%);
+$jc-unknown-bg: lighten($jc-female-bg, 15%);
+$jc-male-border:lighten($jc-male-bg, 30%);
+$jc-female-border:lighten($jc-female-bg, 30%);
+$jc-unknown-border:lighten($jc-unknown-bg, 30%);
 
 // Footer
 $jc-footer-border-color: $jc-theme-light;

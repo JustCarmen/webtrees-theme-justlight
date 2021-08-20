@@ -56,6 +56,13 @@ $jc-dropdown-link-disabled-color: $jc-theme-medium-dark;
 $jc-table-accent-bg: $jc-theme-lightest;
 $jc-table-border-color: $jc-theme-medium;
 
+$jc-facts-table-th-bg: $jc-theme-light;
+$jc-facts-table-td-bg: $jc-theme-lightest;
+$jc-facts-table-link-color: darken($jc-primary, 15%);
+$jc-facts-table-link-hover-color: $jc-primary;
+
+$jc-markdown-table-td-bg: $jc-theme-lighter;
+
 // Cards
 $jc-card-bg: $jc-white;
 
