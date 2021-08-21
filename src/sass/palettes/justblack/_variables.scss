@@ -1,9 +1,10 @@
 // Theme Colors
 $jc-white: #f9f9f9;
-$jc-orange: #dd6900;
+$jc-orange: #dd6900; // JustBlack original color
 $jc-yellow: #ffc107;
+$jc-yellow-light: #ffffcc;
 
-$jc-primary: $jc-orange;
+$jc-primary: darken($jc-orange, 2%);
 $jc-secondary: $jc-gray-300;
 
 // Body
@@ -16,9 +17,9 @@ $jc-brand-primary-hover: #5e5e5e;
 
 // Border colors etc.
 $jc-theme-lightest: $jc-white;
-$jc-theme-lighter: #ffffde;
+$jc-theme-lighter: $jc-gray-100;
 $jc-theme-light: $jc-secondary;
-$jc-theme-medium: $jc-gray-500; // table borders
+$jc-theme-medium: $jc-gray-500;
 $jc-theme-medium-dark: lighten($jc-body-bg, 15%);
 $jc-theme-dark: $jc-body-bg;
 $jc-theme-darker: $jc-gray-900;
@@ -31,7 +32,7 @@ $jc-nav-tabs-muted-bg: $jc-theme-medium;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-medium-dark;
 
 // Tables
-$jc-table-accent-bg: $jc-theme-medium-dark;
+$jc-table-accent-bg: $jc-black;
 
 $jc-facts-table-th-bg: $jc-theme-dark;
 $jc-facts-table-td-bg: $jc-theme-darker;
@@ -42,6 +43,12 @@ $jc-markdown-table-td-bg: $jc-theme-darker;
 
 // Cards
 $jc-card-bg: $jc-theme-darker;
+
+// Forms
+$jc-input-bg: $jc-theme-darker;
+$input-color: darken($jc-body-color, 5%);
+$input-border-color: lighten($jc-theme-medium-dark, 10%);
+$jc-input-group-addon-bg: $jc-black;
 
 // Chart boxes etc.
 $jc-male-bg: $jc-theme-medium-dark;
@@ -60,6 +67,7 @@ $jc-link-color: $jc-theme-lightest;
 
 // Icon colors
 $jc-icon-color: $jc-theme-lighter;
+$jc-icon-red-color: $jc-primary;
 
 // custom modules (Fancy Imagebar)
 $jc-fancy-imagebar-border-color: $jc-theme-medium-dark;
