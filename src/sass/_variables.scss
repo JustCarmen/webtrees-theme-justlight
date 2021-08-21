@@ -1,3 +1,8 @@
+// Variables which are an override of a bootstrap variable are pre defined in
+// the bootstrap/pre-default file.
+// Note: not all variables listed here have a bootstrap equivalent.
+// If not listed in the bootstrap/pre-default file it is a custom variable.
+
 // Standard sizes etc.
 $jc-font-size-base: 1rem; // Bootstrap default
 $jc-font-size-xs: .75rem;
@@ -31,7 +36,7 @@ $jc-brand-primary-hover: #5e5e5e;
 $jc-body-bg: $jc-white;
 $jc-body-color: $jc-gray-900;
 
-// Theme light-dark scheme (for border colors etc.)
+// Theme light-dark scheme
 $jc-theme-lightest: #f9f9f9; // background in fact-tables and colors on blue gradient
 $jc-theme-lighter: $jc-secondary;
 $jc-theme-light: $jc-gray-300;
@@ -44,9 +49,11 @@ $jc-theme-darker: $jc-body-color; // body color
 $jc-text-muted: $jc-theme-medium-dark;
 $jc-hr-border-color: $jc-theme-lighter;
 
+// Components
+$jc-border-color: $jc-theme-medium;
+
 // Navigation and dropdown
 $jc-link-color: $jc-primary;
-$jc-nav-tabs-border-color: $jc-theme-medium;
 $jc-nav-tabs-muted-bg: $jc-theme-lightest;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-light;
 $jc-dropdown-divider-bg: $jc-theme-medium;
@@ -56,7 +63,6 @@ $jc-dropdown-link-disabled-color: $jc-theme-medium-dark;
 
 // Tables
 $jc-table-accent-bg: $jc-theme-lightest;
-$jc-table-border-color: $jc-theme-medium;
 
 $jc-facts-table-th-bg: $jc-theme-light;
 $jc-facts-table-td-bg: $jc-theme-lightest;

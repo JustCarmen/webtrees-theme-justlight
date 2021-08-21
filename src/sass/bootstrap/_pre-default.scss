@@ -28,18 +28,21 @@ $h6-font-size: $font-size-base;
 $text-muted: $jc-text-muted;
 $hr-border-color: $jc-hr-border-color;
 
+// Components
+$border-color: $jc-border-color;
+
 // Tables
 $table-accent-bg: $jc-table-accent-bg;
-$table-border-color: $jc-table-border-color;
+$table-border-color: $jc-border-color;
 $table-striped-order: even;
 
 // Navs
-$nav-tabs-border-color: $jc-nav-tabs-border-color;
+$nav-tabs-border-color: $jc-border-color;
 
 // Dropdown menu container and contents
 $dropdown-bg: $jc-body-bg;
 $dropdown-link-color: $jc-body-color;
-$dropdown-border-color: $jc-nav-tabs-border-color;
+$dropdown-border-color: $jc-border-color;
 $dropdown-link-hover-bg: $jc-secondary;
 
 $dropdown-divider-bg: $jc-dropdown-divider-bg;
@@ -53,7 +56,7 @@ $dropdown-link-disabled-color: $jc-dropdown-link-disabled-color;
 $link-color: $jc-link-color;
 
 // Cards
-$card-border-color: $nav-tabs-border-color;
+$card-border-color: $jc-border-color;
 $card-bg: $jc-card-bg;
 
 // Forms
