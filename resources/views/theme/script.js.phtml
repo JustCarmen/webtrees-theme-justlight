@@ -46,6 +46,11 @@
     // Individual page Stories Tab
     $('.wt-tab-stories .story_title').addClass('h3 text-left').removeClass('text-center');
 
+    // Individual page Facts Tab add fact button / paste fact button
+    // See add-fact-row.phtml en paste-fact-row.phtml
+    // Replace btn-light for btn-secondary class. This fits better in our palettes.
+    $('.input-group-append .btn-light').addClass('btn-secondary').removeClass('btn-light');
+
     // Markdown table style
     $('.markdown table').each(function () {
         $(this).addClass('table table-sm table-responsive jc-markdown-table');
