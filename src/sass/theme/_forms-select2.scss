@@ -43,16 +43,6 @@ $select: "select2-selection--single";
             height: calc(2.25rem + 2px);
             line-height: 2.25;
         }
-
-        .input-group & {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .input-group-addon+& {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
     }
 
     .select2-results__option {
@@ -65,6 +55,21 @@ $select: "select2-selection--single";
 }
 
 .input-group {
+    .twitter-typeahead {
+
+        .input-group-append + & {
+            .form-control {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .input-group-prepend + & {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
     .input-group-btn+.select2.form-control+.#{$container} {
         width: auto !important;
 
