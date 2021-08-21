@@ -5,6 +5,7 @@ $primary: $jc-primary;
 $secondary: $jc-secondary;
 $light: $jc-secondary;
 $white: $jc-white;
+$black: $jc-black;
 
 // Options
 $enable-gradients: true;
@@ -34,6 +35,8 @@ $table-striped-order: even;
 
 // Navs
 $nav-tabs-border-color: $jc-nav-tabs-border-color;
+$nav-tabs-muted-bg: $jc-nav-tabs-muted-bg;
+$nav-tabs-muted-hover-bg: $jc-nav-tabs-muted-hover-bg;
 
 // Dropdown menu container and contents
 $dropdown-bg: $jc-body-bg;
@@ -54,6 +57,10 @@ $link-color: $jc-link-color;
 // Cards
 $card-border-color: $nav-tabs-border-color;
 $card-bg: $jc-card-bg;
+
+// Forms
+$input-bg: $jc-input-bg;
+$input-group-addon-bg: $jc-input-group-addon-bg;
 
 // Badges
 $badge-border-radius: .5rem;

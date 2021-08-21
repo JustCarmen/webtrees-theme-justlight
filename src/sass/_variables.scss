@@ -9,8 +9,10 @@ $jc-white: #fff;
 $jc-blue: #337ab7;
 $jc-red: #B80000;
 $jc-green: #70D62C;
+$jc-black: #000;
 
-// Gray colors used by this theme
+// Gray colors used by this theme (and/or palettes)
+$jc-gray-100: #f8f9fa; // Bootstrap gray 100
 $jc-gray-200: #e9ecef; // Bootstrap gray-200
 $jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-400: #ced4da; // Bootstrap gray-400
@@ -65,6 +67,10 @@ $jc-markdown-table-td-bg: $jc-theme-lighter;
 
 // Cards
 $jc-card-bg: $jc-white;
+
+// Forms
+$jc-input-bg: $jc-white;
+$jc-input-group-addon-bg: $jc-gray-200; // bootstrap default;
 
 // Chart boxes etc.
 $jc-male-bg: #d7eaf9;

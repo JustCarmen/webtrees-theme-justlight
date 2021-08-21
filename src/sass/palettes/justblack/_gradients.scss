@@ -12,7 +12,7 @@
 }
 
 @mixin jc-theme-gradient-secondary() {
-  background: linear-gradient($jc-theme-dark 0%, $jc-theme-darker 50%, $black 100%);
+  background: linear-gradient($jc-theme-dark 0%, $jc-theme-darker 50%, $jc-black 100%);
 
   &,
   a {
