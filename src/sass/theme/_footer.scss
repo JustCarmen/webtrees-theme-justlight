@@ -16,7 +16,7 @@
         margin-top: 0; // no margin because of sidebar border
     }
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-down(md) {
         @include jc-border($jc-footer-border-color, 'top');
     }
 

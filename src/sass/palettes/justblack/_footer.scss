@@ -12,4 +12,8 @@
             content: url('{{ webtrees }}/colors/images/powered-by-webtrees.png');
         }
     }
+
+    @include media-breakpoint-up(lg) {
+        min-height: auto;
+    }
 }
