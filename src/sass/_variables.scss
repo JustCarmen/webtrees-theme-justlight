@@ -54,8 +54,12 @@ $jc-border-color: $jc-theme-medium;
 
 // Navigation and dropdown
 $jc-link-color: $jc-primary;
+
 $jc-nav-tabs-muted-bg: $jc-theme-lightest;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-light;
+$jc-nav-tabs-link-hover-border-color: darken($jc-border-color, 15%);
+$jc-nav-tabs-link-active-border-color: $jc-theme-light $jc-theme-light $jc-body-bg;
+
 $jc-dropdown-divider-bg: $jc-theme-medium;
 $jc-dropdown-link-active-color: $jc-theme-darker;
 $jc-dropdown-link-active-bg: $jc-theme-light;
