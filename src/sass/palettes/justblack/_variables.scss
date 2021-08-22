@@ -25,7 +25,7 @@ $jc-theme-dark: $jc-body-bg;
 $jc-theme-darker: $jc-gray-900;
 
 // Typography
-$jc-text-muted: $jc-theme-dark;
+$jc-text-muted: darken($jc-body-color, 30%);
 
 // Components
 $jc-border-color: $jc-theme-medium-dark;
@@ -35,7 +35,7 @@ $jc-nav-tabs-muted-bg: $jc-theme-dark;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-darker;
 
 // Tables
-$jc-table-accent-bg: $jc-black;
+$jc-table-accent-bg: lighten($jc-theme-dark, 5%);
 
 $jc-facts-table-th-bg: $jc-theme-dark;
 $jc-facts-table-td-bg: $jc-theme-darker;
@@ -54,9 +54,9 @@ $input-border-color: lighten($jc-theme-medium-dark, 10%);
 $jc-input-group-addon-bg: $jc-black;
 
 // Chart boxes etc.
-$jc-male-bg: $jc-theme-medium-dark;
-$jc-female-bg: lighten($jc-male-bg, 20%);
-$jc-unknown-bg: lighten($jc-female-bg, 15%);
+$jc-male-bg: darken($jc-theme-dark, 5%);
+$jc-female-bg: lighten($jc-theme-dark, 5%);
+$jc-unknown-bg: lighten($jc-female-bg, 10%);
 $jc-male-border:lighten($jc-male-bg, 30%);
 $jc-female-border:lighten($jc-female-bg, 30%);
 $jc-unknown-border:lighten($jc-unknown-bg, 30%);
@@ -69,7 +69,7 @@ $jc-footer-bg: $jc-theme-dark;
 $jc-link-color: $jc-theme-lightest;
 
 // Icon colors
-$jc-icon-color: $jc-theme-lighter;
+$jc-icon-color: $jc-yellow-light;
 $jc-icon-red-color: $jc-primary;
 
 // custom modules (Fancy Imagebar)
