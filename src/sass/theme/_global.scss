@@ -179,7 +179,7 @@ dd {
 
 .wt-page-options {
     @include jc-border;
-    background: $jc-theme-lighter;
+    background: $jc-page-options-bg;
     padding: 1rem;
     margin-bottom: 2rem;
 }
