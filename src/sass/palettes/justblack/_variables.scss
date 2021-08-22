@@ -41,8 +41,8 @@ $jc-table-accent-bg: lighten($jc-theme-dark, 5%);
 
 $jc-facts-table-th-bg: $jc-theme-dark;
 $jc-facts-table-td-bg: $jc-theme-darker;
-$jc-facts-table-link-color: darken($jc-body-color, 15%);
-$jc-facts-table-link-hover-color: $jc-body-color;
+$jc-facts-table-link-color: darken($jc-body-color, 10%);
+$jc-facts-table-link-hover-color: $jc-primary;
 
 $jc-markdown-table-td-bg: $jc-theme-darker;
 
@@ -50,6 +50,7 @@ $jc-markdown-table-td-bg: $jc-theme-darker;
 $jc-card-bg: $jc-theme-darker;
 
 // Forms
+$jc-page-options-bg: $jc-table-accent-bg;
 $jc-input-bg: $jc-theme-darker;
 $input-color: darken($jc-body-color, 5%);
 $input-border-color: lighten($jc-theme-medium-dark, 10%);
