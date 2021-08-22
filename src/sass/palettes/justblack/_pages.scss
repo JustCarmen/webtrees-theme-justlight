@@ -19,3 +19,34 @@
         }
     }
 }
+
+/** JustBlack Theme - Specific pages - Cards */
+.card-header {
+    /** Individual page name card (first) */
+    #individual-names .card:first-of-type & {
+        @include jc-theme-gradient-secondary();
+    }
+
+    /** Individual page Sidebar */
+    #sidebar & {
+        @include jc-theme-gradient-secondary();
+    }
+}
+
+/** JustBlack Theme - Specific pages - Tabs */
+.nav-tabs {
+    .nav-link {
+
+        @include media-breakpoint-down(md) {
+            &.active {
+                background: darken($jc-theme-dark, 5%);
+                color: $jc-primary;
+            }
+
+            &.active:hover {
+                background: darken($jc-theme-dark, 10%);
+                color: darken($jc-primary, 10%);
+            }
+        }
+    }
+}
