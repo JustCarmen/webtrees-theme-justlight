@@ -76,21 +76,21 @@ a {
 }
 
 .btn-outline-secondary {
-    color: $jc-theme-dark;
-    border-color: $jc-theme-medium-dark;
+    color: $jc-btn-os-color;
+    border-color: $jc-btn-os-border-color;
 
     &:not(:disabled):not(.disabled) {
 
         &.active,
         &:active {
-            background: $jc-theme-medium;
-            border-color: $jc-theme-medium-dark;
+            background: $jc-btn-os-active-bg;
+            border-color: $jc-btn-os-active-border-color;
             box-shadow: none;
         }
     }
 
     &:hover {
-        border-color: $jc-theme-medium-dark;
+        border-color: $jc-btn-os-hover-border-color;
     }
 }
 

@@ -85,6 +85,13 @@ $jc-page-options-bg: $jc-theme-lighter;
 $jc-input-bg: $jc-white;
 $jc-input-group-addon-bg: $jc-gray-200; // bootstrap default;
 
+// Buttons
+$jc-btn-os-color: $jc-theme-dark;
+$jc-btn-os-border-color: $jc-theme-medium-dark;
+$jc-btn-os-active-bg: $jc-theme-medium;
+$jc-btn-os-active-border-color: $jc-theme-medium-dark;
+$jc-btn-os-hover-border-color: $jc-theme-medium-dark;
+
 // Chart boxes etc.
 $jc-male-bg: #d7eaf9;
 $jc-female-bg: #fff0f5;
@@ -93,7 +100,7 @@ $jc-male-border:darken($jc-male-bg, 10%);
 $jc-female-border:darken($jc-female-bg, 10%);
 $jc-unknown-border:darken($jc-unknown-bg, 20%);
 
-// Other chart colors
+// Miscellaneous
 $jc-fan-chart-menu-bg: $jc-white;
 $jc-interactive-chart-bg: $jc-white;
 $jc-osm-sidebar-border-color: $jc-theme-medium-dark;
