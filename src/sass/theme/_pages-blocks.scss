@@ -100,8 +100,8 @@
 .wt-block-content-user_favorites,
 .wt-block-content-gedcom_favorites {
     .jc-favorites-block-item {
-        background: $jc-theme-lighter;
-        @include jc-border(theme-color());
+        background: $jc-favorites-bg;
+        @include jc-border($jc-favorites-border-color);
     }
 
     .btn-link:hover {

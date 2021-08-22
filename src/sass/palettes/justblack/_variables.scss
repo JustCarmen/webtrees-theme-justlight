@@ -64,6 +64,10 @@ $jc-male-border:lighten($jc-male-bg, 30%);
 $jc-female-border:lighten($jc-female-bg, 30%);
 $jc-unknown-border:lighten($jc-unknown-bg, 30%);
 
+// Other chart colors
+$jc-favorites-bg: transparent;
+$jc-favorites-border-color: transparent;
+
 // Footer
 $jc-footer-bg: $jc-theme-medium-dark;
 
