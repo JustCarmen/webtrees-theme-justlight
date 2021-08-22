@@ -3,9 +3,26 @@
     @extend .table-responsive;
     margin-top: 1rem;
 
-    @at-root .page-item.active {
+    @at-root .page-item {
+
+        &.active {
+            .page-link {
+                @include jc-theme-gradient-primary();
+            }
+        }
+
+        &.disabled {
+            .page-link {
+                background-color: $jc-page-item-disabled-bg;
+                color: $jc-page-item-disabled-color;
+            }
+        }
+
         .page-link {
-            @include jc-theme-gradient-primary();
+            background-color: $jc-body-bg;
+            @include hover-focus {
+                background-color: $jc-page-item-hover-bg;
+            }
         }
     }
 

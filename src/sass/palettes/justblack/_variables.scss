@@ -49,6 +49,10 @@ $jc-facts-table-link-hover-color: $jc-primary;
 
 $jc-markdown-table-td-bg: $jc-theme-darker;
 
+// Datatables
+$jc-page-item-hover-bg: $jc-theme-medium-dark;
+$jc-page-item-disabled-bg: darken($jc-theme-medium-dark, 10%);
+
 // Cards
 $jc-card-bg: $jc-theme-darker;
 
@@ -60,7 +64,6 @@ $input-border-color: lighten($jc-theme-medium-dark, 10%);
 $jc-input-group-addon-bg: $jc-black;
 
 // Buttons
-// the outline secondary button is a button made by webtrees
 $jc-btn-os-color: $jc-theme-medium;
 
 // Chart boxes etc.
