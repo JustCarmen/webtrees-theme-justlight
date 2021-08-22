@@ -49,12 +49,13 @@ $jc-theme-darker: $jc-body-color; // body color
 $jc-text-muted: $jc-theme-medium-dark;
 $jc-hr-border-color: $jc-theme-lighter;
 
+// Links
+$jc-link-color: $jc-primary;
+
 // Components
 $jc-border-color: $jc-theme-medium;
 
 // Navigation and dropdown
-$jc-link-color: $jc-primary;
-
 $jc-nav-tabs-muted-bg: $jc-theme-lightest;
 $jc-nav-tabs-muted-hover-bg: $jc-theme-light;
 $jc-nav-tabs-link-hover-border-color: darken($jc-border-color, 15%);

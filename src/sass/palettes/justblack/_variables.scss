@@ -27,6 +27,9 @@ $jc-theme-darker: $jc-gray-900;
 // Typography
 $jc-text-muted: darken($jc-body-color, 30%);
 
+// Links
+$jc-link-color: $jc-theme-lighter;
+
 // Components
 $jc-border-color: $jc-theme-medium-dark;
 
@@ -70,9 +73,6 @@ $jc-favorites-border-color: transparent;
 
 // Footer
 $jc-footer-bg: $jc-theme-medium-dark;
-
-// Links
-$jc-link-color: $jc-theme-lightest;
 
 // Icon colors
 $jc-icon-color: $jc-yellow-light;
