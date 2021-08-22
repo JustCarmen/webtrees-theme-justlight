@@ -34,17 +34,12 @@ $link-color: $jc-link-color;
 // Components
 $border-color: $jc-border-color;
 
-// Tables
-$table-accent-bg: $jc-table-accent-bg;
-$table-border-color: $jc-border-color;
-$table-striped-order: even;
-
-// Navs
+// Navigation
 $nav-tabs-border-color: $jc-border-color;
 $nav-tabs-link-hover-border-color: $jc-nav-tabs-link-hover-border-color;
 $nav-tabs-link-active-border-color: $jc-nav-tabs-link-active-border-color;
 
-// Dropdown menu container and contents
+// Dropdown
 $dropdown-bg: $jc-body-bg;
 $dropdown-link-color: $jc-body-color;
 $dropdown-border-color: $jc-border-color;
@@ -57,6 +52,11 @@ $dropdown-link-active-color: $jc-dropdown-link-active-color;
 $dropdown-link-active-bg: $jc-dropdown-link-active-bg;
 $dropdown-link-hover-bg: $jc-secondary;
 $dropdown-link-disabled-color: $jc-dropdown-link-disabled-color;
+
+// Tables
+$table-accent-bg: $jc-table-accent-bg;
+$table-border-color: $jc-border-color;
+$table-striped-order: even;
 
 // Cards
 $card-border-color: $jc-border-color;
