@@ -1,4 +1,4 @@
-/** JustBlack Theme - Specific pages - Home page and User page blocks */
+/** JustBlack Palette - Specific pages - Home page and User page blocks */
 .wt-block {
     @include jc-border($jc-theme-medium-dark);
 
@@ -20,7 +20,7 @@
     }
 }
 
-/** JustBlack Theme - Specific pages - Cards */
+/** JustBlack Palette - Specific pages - Cards */
 .card-header {
     /** Individual page name card (first) */
     #individual-names .card:first-of-type & {
@@ -33,7 +33,7 @@
     }
 }
 
-/** JustBlack Theme - Specific pages - Tabs */
+/** JustBlack Palette - Specific pages - Tabs */
 .nav-tabs {
     .nav-link {
 
