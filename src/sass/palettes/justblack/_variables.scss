@@ -74,6 +74,9 @@ $jc-male-border:lighten($jc-male-bg, 30%);
 $jc-female-border:lighten($jc-female-bg, 30%);
 $jc-unknown-border:lighten($jc-unknown-bg, 30%);
 
+$jc-interactive-chart-box-shadow: $jc-theme-darker;
+$jc-interactive-chart-box-border-color: $jc-border-color;
+
 // Miscellaneous
 $jc-favorites-bg: transparent;
 $jc-favorites-border-color: transparent;

@@ -105,9 +105,12 @@ $jc-male-border:darken($jc-male-bg, 10%);
 $jc-female-border:darken($jc-female-bg, 10%);
 $jc-unknown-border:darken($jc-unknown-bg, 20%);
 
-// Miscellaneous
 $jc-fan-chart-menu-bg: $jc-white;
-$jc-interactive-chart-bg: $jc-white;
+
+$jc-interactive-chart-box-shadow: $jc-theme-dark;
+$jc-interactive-chart-box-border-color: $jc-border-color;
+
+// Miscellaneous
 $jc-osm-sidebar-border-color: $jc-theme-medium-dark;
 $jc-favorites-bg: $jc-theme-lighter;
 $jc-favorites-border-color: $jc-primary;

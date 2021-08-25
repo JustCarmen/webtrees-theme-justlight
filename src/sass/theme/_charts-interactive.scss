@@ -1,20 +1,39 @@
 /** JustLight Theme - Charts - Interactive chart */
-.wt-chart-interactive,
-.wt-block-charts,
-.tab-pane {
-	.tv {
-		&_out {
-			background-color: $jc-interactive-chart-bg;
-			border: none;
-		}
+// The interactive chart is very hard to overwrite. Use important to achieve what we want
+.tv {
+	&_out {
+		background-color: transparent !important;
+		border: none !important;
+	}
 
-		&M {
-			background: var(--sex-m-bg) !important;
+	&_in {
+		table.tv_tree {
+			&, & tbody, & tr, & td {
+				font-size: .75rem !important;
+			}
 		}
+	}
 
-		&F {
-			background: var(--sex-f-bg) !important;
-		}
+	&_box {
+		background: transparent !important;
+		border: thin outset $jc-interactive-chart-box-border-color !important;
+		box-shadow: 1px 1px 2px $jc-interactive-chart-box-shadow !important;
+	}
+
+	&M {
+		background: var(--sex-m-bg) !important;
+		border-color: var(--sex-m-fg) !important;
+	}
+
+	&F {
+		background: var(--sex-f-bg) !important;
+		border-color: var(--sex-f-fg) !important;
+	}
+
+	&M, &F {
+		border-radius: 0 !important;
+		color: $jc-body-color !important;
+		padding: .25rem !important;
 	}
 }
 

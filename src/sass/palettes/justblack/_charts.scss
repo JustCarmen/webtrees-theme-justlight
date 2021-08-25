@@ -1,0 +1,24 @@
+
+/** JustBlack Palette - Charts - Interactive chart */
+// The interactive chart is very hard to overwrite. Use important to achieve what we want
+
+/* horizontal and vertical lines color */
+#tv_tree div.tv_vline,
+#tv_tree div.tv_hline {
+    background-color: theme-color();
+}
+
+.tv_vline {
+
+    &_h {
+        background-image: url(justblack/vline.gif) !important;
+    }
+
+    &_t {
+        background-image: url(justblack/vline_t.gif) !important;
+    }
+
+    &_b {
+        background-image: url(justblack/vline_b.gif) !important;
+    }
+}
