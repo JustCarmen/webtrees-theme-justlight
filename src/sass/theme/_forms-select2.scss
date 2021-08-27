@@ -19,6 +19,7 @@ $container: "select2-container--default";
 $select: "select2-selection--single";
 
 .#{$container} {
+    background-color: $jc-select2-bg;
     flex: 1 1 auto;
     width: 100% !important;
 
@@ -27,14 +28,18 @@ $select: "select2-selection--single";
     }
 
     .#{$select} {
-        @include jc-border;
-        height: 100%;
-        min-height: 2rem;
+        background-color: $jc-select2-bg;
+        @include jc-border($jc-select2-border-color);
+        height: auto;
+        min-height: 2.5rem;
 
         & .select2-selection__rendered {
-            height: auto;
+            color: $jc-select2-input-color;
+            height: 100%;
             line-height: 2.5;
             padding-left: $input-padding-x;
+            padding-top: $input-padding-y;
+            padding-bottom: $input-padding-y;
             @extend %thumb;
         }
 
@@ -45,6 +50,10 @@ $select: "select2-selection--single";
         }
     }
 
+    .select2-results {
+        background-color: $jc-select2-bg;
+    }
+
     .select2-results__option {
         @extend %thumb;
 
@@ -52,6 +61,15 @@ $select: "select2-selection--single";
             background-color: theme-color(primary);
         }
     }
+
+    .select2-search__field {
+        background-color: $jc-select2-bg;
+        color: $jc-select2-input-color;
+    }
+}
+
+.select2-dropdown {
+    background-color: $jc-select2-dropdown-bg;
 }
 
 .input-group {

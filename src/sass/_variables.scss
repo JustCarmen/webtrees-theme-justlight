@@ -23,6 +23,8 @@ $jc-gray-300: #dee2e6; // Bootstrap gray-300
 $jc-gray-400: #ced4da; // Bootstrap gray-400
 $jc-gray-500: #adb5bd; // Bootstrap gray-500
 $jc-gray-600: #6c757d; // Bootstrap gray-600
+$jc-gray-700: #495057; // Bootstrap gray-700
+$jc-gray-800: #343a40; // Bootstrap gray-800
 $jc-gray-900: #212529; // Bootstrap gray-900 (= bootstrap $body-color)
 
 $jc-primary: $jc-blue;
@@ -91,7 +93,13 @@ $jc-card-bg: $jc-white;
 // Forms
 $jc-page-options-bg: $jc-theme-lighter;
 $jc-input-bg: $jc-white;
+$jc-input-color: $jc-gray-700; // bootstrap default
+$jc-input-border-color: $jc-border-color;
 $jc-input-group-addon-bg: $jc-gray-200; // bootstrap default;
+$jc-select2-bg: $jc-input-bg;
+$jc-select2-border-color: $jc-border-color;
+$jc-select2-dropdown-bg: $jc-select2-bg;
+$jc-select2-input-color: $jc-input-color;
 
 // Buttons
 $jc-btn-os-color: $jc-theme-dark;
