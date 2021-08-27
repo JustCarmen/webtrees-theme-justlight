@@ -1,4 +1,3 @@
-
 /** JustBlack Palette - Charts - Interactive chart */
 // The interactive chart is very hard to overwrite. Use important to achieve what we want
 
@@ -21,4 +20,9 @@
     &_b {
         background-image: url(justblack/vline_b.gif) !important;
     }
+}
+
+/** JustLight Theme - Charts - Lifespans chart */
+.wt-lifespans-decade {
+    background-image: url(justblack/lifespan-decade.png);
 }
