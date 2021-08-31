@@ -126,14 +126,18 @@ table {
         }
 
         .topbottombar {
-            background-color: $jc-theme-lighter;
+            background-color: $jc-page-options-bg;
         }
     }
 
     .wt-page-content {
         table {
-            @extend .table-bordered;
-            @extend .table-info;
+            background-color: $jc-page-options-bg;
+            border: 0;
+
+            th, td {
+                @include jc-border($jc-border-color-accent);
+            }
 
             td {
                 li {

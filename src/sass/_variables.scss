@@ -56,6 +56,7 @@ $jc-link-color: $jc-primary;
 
 // Components
 $jc-border-color: $jc-theme-medium;
+$jc-border-color-accent: darken($jc-border-color, 5%);
 
 // Navigation
 $jc-nav-tabs-muted-bg: $jc-theme-lightest;
