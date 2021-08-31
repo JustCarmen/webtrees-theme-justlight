@@ -50,3 +50,11 @@
         }
     }
 }
+
+/** JustBlack Palette - Specific pages - Datatables */
+table.dataTable {
+
+    thead tr:last-child {
+        @include jc-theme-gradient-secondary();
+    }
+}
