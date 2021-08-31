@@ -162,6 +162,10 @@ dd {
     background: url('{{ webtrees }}/images/loading-32x32.gif') no-repeat 50% 50%;
 }
 
+.wt-initial.active {
+    color: $jc-initial-active;
+}
+
 .wt-page-menu-button {
     @include jc-button-gradient-primary();
 }
