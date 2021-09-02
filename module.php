@@ -36,6 +36,7 @@ use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Session;
 use Fisharebest\Webtrees\FlashMessages;
 use Psr\Http\Message\ResponseInterface;
+use Fisharebest\Localization\Translation;
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Module\MinimalTheme;
 use Fisharebest\Webtrees\Contracts\UserInterface;
@@ -381,5 +382,19 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         }
 
         return $palette;
+    }
+
+    /**
+     * Additional/updated translations.
+     *
+     * @param string $language
+     *
+     * @return array<string>
+     */
+    public function customTranslations(string $language): array
+    {
+        $file = $this->resourcesFolder() . 'lang/' . $language . '.php';
+
+        return file_exists($file) ? (new Translation($file))->asArray() : [];
     }
 };
