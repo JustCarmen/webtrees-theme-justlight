@@ -1,5 +1,5 @@
 /** JustLight Theme - Forms - Modals*/
 .modal-header {
-  background: $jc-theme-lightest;
+  background: $jc-modal-header-bg;
   @include jc-border($_side: 'bottom');
 }
