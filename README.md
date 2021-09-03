@@ -7,27 +7,31 @@ JustLight Theme for webtrees
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XPBC2W85M38AS&item_name=webtrees%20modules%20by%20JustCarmen&currency_code=EUR)
 
-A light theme in white and blue with focus on readibility. It uses a full screen where neccessary but takes into account small screens too. Since webtrees 1 this theme is optimized for using on tablets and mobile phones. Webtrees 2 has implemented that by default now, but this theme still offer a different layout with some extra's. If you like a clean layout you certainly want to try this theme.
-
 Introduction
 -----------
-This is a modern theme in clean white and blue. Originally it was designed to give the user a better experienced on touch devices like tablets and mobile phones. To achieve this we use the Bootstrap framework in this theme.
+A light theme with focus on readibility. It uses a full screen where neccessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
 
-Webtrees didn't ignore the success of this theme and recognized the need to upgrade the core to meet nowadays user demands. And I am glad they did. Webtrees 2 has adopted the same Bootstrap framework and works smootly now on mobile phones and tablets.
+As of version 2.1.0, a new color palette has been introduced. Currently there are two palettes to choose from. The standard JustLight as you are used to and a new JustBlack theme which is a dark theme and looks a lot like the former independent JustBlack theme.
 
-Is this theme become superflous now? No! It still has enough fans to make it worth upgrading. At the end it is all a matter of taste.
-
-Since the core code has changed a lot I've made some concessions. Webtrees 2 required a complete rewrite of this theme and for sake of simplicity the theme option module will not return. If there is a lot of need for special options I might consider implementing them in this theme later.
+There are two color palettes available. The JustLight palette is a modern theme in clean white and blue. The JustBlack palette is a theme with a dark background and orange accents. This palette is more relaxing for the eyes.
 
 Installation and upgrading
 --------------------------
-For more information about these subjects go to the JustCarmen help pages: http://www.justcarmen.nl/help. You will find there other tips as well. Please note: the website has not been updated for webtrees 2 yet. But installing the theme should be straightforward.
+Installing or upgrading the theme should be straightforward. Unzip the release package and place the jc-theme-justlight folder inside modules_v4 folder of your webtrees installation. If you need to upgrade an existing installation replace the module folder inside the modules_v4 folder with the new one.
+
+Configuration
+-------------
+Go to the theme section in the control panel. The JustLight theme has a small configuration page where you can set the default color palette and specify whether the user can choose their own palette. In this case, an additional 'palette' menu is created.
+
+Translation
+-----------
+The strings at the configuration page are translatable. Copy the file nl.php in the resources/lang folder and replace the Dutch strings with strings from your own language. Use the official two letter language code as filename.
 
 Development
 -------------------------
 The JustLight theme is based on the Bootstrap framework and uses Sass to code the stylesheets. Composer and npm are required to generate the stylesheets.
 
-If you wish to contribute, or create your own version of the JustLight theme please follow the steps below. 
+If you wish to contribute, or create your own version of the JustLight theme please follow the steps below.
 
 - Clone the repository to your local machine
 - Install the Composer dependencies and run in dev mode to be able to generate the stylesheets. The fisharebest/webtrees package is explicitly set to use sources to be able to generate the stylesheets, do not override that setting.
