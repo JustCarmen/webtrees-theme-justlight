@@ -169,6 +169,11 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function getAdminAction(): ResponseInterface
     {
+        if (Session::get('theme') !== $this->name()) {
+            // We need to register the namespace for this view because the boot didn't run
+            View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
+        }
+
         $this->layout = 'layouts/administration';
 
         return $this->viewResponse($this->name() . '::settings', [
