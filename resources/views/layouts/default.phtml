@@ -24,6 +24,8 @@ use Psr\Http\Message\ServerRequestInterface;
  * @var Tree                   $tree
  */
 
+$palette = app(ModuleThemeInterface::class)->palette();
+
 ?>
 
 <!DOCTYPE html>
@@ -40,10 +42,10 @@ use Psr\Http\Message\ServerRequestInterface;
         <?= DebugBar::renderHead() ?>
     </head>
 
-    <body class="wt-global jc-theme-justlight jc-palette-<?= app(ModuleThemeInterface::class)->getPreference('palette', 'justlight') ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
+    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
         <header class="wt-header-wrapper d-print-none sticky-top">
             <div class="container wt-header-container">
-                <div class="wt-header-content navbar navbar-expand-md navbar-light d-flex justify-content-between">
+                <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
                     <div class="jc-header-content-left d-flex flex-row">
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/accessibility'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-logo'); ?>

@@ -365,7 +365,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     /**
      * @return string
      */
-    private function palette(): string
+    public function palette(): string
     {
         // If we are logged in, use our preference
         $palette = Auth::user()->getPreference('justlight-palette', '');
