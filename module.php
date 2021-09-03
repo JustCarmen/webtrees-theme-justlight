@@ -82,17 +82,10 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
-     *
-     * We use a system where the version number is equal to the latest version of webtrees
-     * Interim versions get an extra sub number
-     *
-     * The dev version is generally one step above the latest stable version of this module
-     * The subsequent stable version depends on the version number of the latest stable version of webtrees
-     *
      */
     public function customModuleVersion(): string
     {
-        return '2.0.15-dev';
+        return '2.1.0';
     }
 
     /**

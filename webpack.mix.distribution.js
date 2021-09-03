@@ -24,9 +24,10 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 mix
     .setPublicPath('./dist')
+    .copyDirectory(config.build_dir, config.dist_dir + '/resources/css')
     .copyDirectory(config.public_dir + '/fonts', config.dist_dir + '/resources/fonts')
+    .copyDirectory(config.public_dir + '/lang', config.dist_dir + '/resources/lang')
     .copyDirectory(config.public_dir + '/views', config.dist_dir + '/resources/views')
-    .copy(config.build_dir + '/justlight.min.css', config.dist_dir + '/resources/css/justlight.min.css')
     .copy('module.php', config.dist_dir)
     .copy('LICENSE.md', config.dist_dir)
     .copy('README.md', config.dist_dir)

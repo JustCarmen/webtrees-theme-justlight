@@ -2000,13 +2000,13 @@ small,
   padding: 0.3rem;
 }
 
-[dir] .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content table {
+[dir] .table-bordered {
   border: 1px solid #ced4da;
 }
-[dir] .table-bordered th, [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .table-bordered td, [dir] .wt-route-CalendarPage .wt-page-content table td {
+[dir] .table-bordered th, [dir] .table-bordered td {
   border: 1px solid #ced4da;
 }
-[dir] .table-bordered thead th, [dir] .wt-route-CalendarPage .wt-page-content table thead th, [dir] .table-bordered thead td, [dir] .wt-route-CalendarPage .wt-page-content table thead td {
+[dir] .table-bordered thead th, [dir] .table-bordered thead td {
   border-bottom-width: 2px;
 }
 
@@ -2068,17 +2068,17 @@ small,
   background-color: #b1dfbb;
 }
 
-[dir] .table-info, [dir] .wt-route-CalendarPage .wt-page-content table, [dir] .table-info > th, [dir] .wt-route-CalendarPage .wt-page-content table > th, [dir] .table-info > td, [dir] .wt-route-CalendarPage .wt-page-content table > td {
+[dir] .table-info, [dir] .table-info > th, [dir] .table-info > td {
   background-color: #bee5eb;
 }
-[dir] .table-info th, [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .table-info td, [dir] .wt-route-CalendarPage .wt-page-content table td, [dir] .table-info thead th, [dir] .table-info tbody + tbody, [dir] .wt-route-CalendarPage .wt-page-content table tbody + tbody {
+[dir] .table-info th, [dir] .table-info td, [dir] .table-info thead th, [dir] .table-info tbody + tbody {
   border-color: #86cfda;
 }
 
-[dir] .table-hover .table-info:hover, [dir] .table-hover .wt-route-CalendarPage .wt-page-content table:hover, [dir] .wt-route-CalendarPage .wt-page-content .table-hover table:hover {
+[dir] .table-hover .table-info:hover {
   background-color: #abdde5;
 }
-[dir] .table-hover .table-info:hover > td, [dir] .table-hover .wt-route-CalendarPage .wt-page-content table:hover > td, [dir] .wt-route-CalendarPage .wt-page-content .table-hover table:hover > td, [dir] .table-hover .table-info:hover > th, [dir] .table-hover .wt-route-CalendarPage .wt-page-content table:hover > th, [dir] .wt-route-CalendarPage .wt-page-content .table-hover table:hover > th {
+[dir] .table-hover .table-info:hover > td, [dir] .table-hover .table-info:hover > th {
   background-color: #abdde5;
 }
 
@@ -2175,7 +2175,7 @@ small,
 [dir] .table-dark th, [dir] .table-dark td, [dir] .table-dark thead th {
   border-color: #454d55;
 }
-[dir] .table-dark.table-bordered, [dir] .wt-route-CalendarPage .wt-page-content table.table-dark {
+[dir] .table-dark.table-bordered {
   border: 0;
 }
 [dir] .table-dark.table-striped tbody tr:nth-of-type(even), [dir] #sidebar-content-family_nav .table-dark.wt-facts-table tbody tr:nth-of-type(even), [dir] table.table-dark.dataTable tbody tr:nth-of-type(even) {
@@ -2195,7 +2195,7 @@ small,
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  [dir] .table-responsive-sm > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .table-responsive-sm > table {
+  [dir] .table-responsive-sm > .table-bordered {
     border: 0;
   }
 }
@@ -2206,7 +2206,7 @@ small,
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  [dir] .table-responsive-md > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .table-responsive-md > table {
+  [dir] .table-responsive-md > .table-bordered {
     border: 0;
   }
 }
@@ -2217,7 +2217,7 @@ small,
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  [dir] .table-responsive-lg > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .table-responsive-lg > table {
+  [dir] .table-responsive-lg > .table-bordered {
     border: 0;
   }
 }
@@ -2228,7 +2228,7 @@ small,
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-  [dir] .table-responsive-xl > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .table-responsive-xl > table {
+  [dir] .table-responsive-xl > .table-bordered {
     border: 0;
   }
 }
@@ -2238,7 +2238,7 @@ small,
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-[dir] .table-responsive > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .table-responsive > table, [dir] .dataTables_wrapper > .table-bordered, [dir] .wt-route-CalendarPage .wt-page-content .dataTables_wrapper > table {
+[dir] .table-responsive > .table-bordered, [dir] .dataTables_wrapper > .table-bordered {
   border: 0;
 }
 
@@ -6674,7 +6674,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 [dir] .list-group-item {
   padding: 0.75rem 1.25rem;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #ced4da;
 }
 [dir=ltr] .list-group-item:first-child {
   border-top-left-radius: inherit;
@@ -12005,7 +12005,7 @@ h3 {
     background-color: #fff !important;
   }
 
-  [dir] .table-bordered th, [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .table-bordered td, [dir] .wt-route-CalendarPage .wt-page-content table td {
+  [dir] .table-bordered th, [dir] .table-bordered td {
     border: 1px solid #dee2e6 !important;
   }
 
@@ -12309,35 +12309,35 @@ table.dataTable.table-sm .sorting_desc:after,
   top: 5px;
 }
 
-[dir=ltr] table.table-bordered.dataTable, [dir=ltr] .wt-route-CalendarPage .wt-page-content table.dataTable {
+[dir=ltr] table.table-bordered.dataTable {
   border-right-width: 0;
 }
 
-[dir=rtl] table.table-bordered.dataTable, [dir=rtl] .wt-route-CalendarPage .wt-page-content table.dataTable {
+[dir=rtl] table.table-bordered.dataTable {
   border-left-width: 0;
 }
 
-[dir=ltr] table.table-bordered.dataTable th, [dir=ltr] .wt-route-CalendarPage .wt-page-content table.dataTable th, [dir=ltr] table.table-bordered.dataTable td, [dir=ltr] .wt-route-CalendarPage .wt-page-content table.dataTable td {
+[dir=ltr] table.table-bordered.dataTable th, [dir=ltr] table.table-bordered.dataTable td {
   border-left-width: 0;
 }
 
-[dir=rtl] table.table-bordered.dataTable th, [dir=rtl] .wt-route-CalendarPage .wt-page-content table.dataTable th, [dir=rtl] table.table-bordered.dataTable td, [dir=rtl] .wt-route-CalendarPage .wt-page-content table.dataTable td {
+[dir=rtl] table.table-bordered.dataTable th, [dir=rtl] table.table-bordered.dataTable td {
   border-right-width: 0;
 }
 
-[dir=ltr] table.table-bordered.dataTable th:last-child, [dir=ltr] .wt-route-CalendarPage .wt-page-content table.dataTable th:last-child, [dir=ltr] table.table-bordered.dataTable td:last-child, [dir=ltr] .wt-route-CalendarPage .wt-page-content table.dataTable td:last-child, [dir=ltr] table.table-bordered.dataTable td:last-child {
+[dir=ltr] table.table-bordered.dataTable th:last-child, [dir=ltr] table.table-bordered.dataTable th:last-child, [dir=ltr] table.table-bordered.dataTable td:last-child, [dir=ltr] table.table-bordered.dataTable td:last-child {
   border-right-width: 1px;
 }
 
-[dir=rtl] table.table-bordered.dataTable th:last-child, [dir=rtl] .wt-route-CalendarPage .wt-page-content table.dataTable th:last-child, [dir=rtl] table.table-bordered.dataTable td:last-child, [dir=rtl] .wt-route-CalendarPage .wt-page-content table.dataTable td:last-child, [dir=rtl] table.table-bordered.dataTable td:last-child {
+[dir=rtl] table.table-bordered.dataTable th:last-child, [dir=rtl] table.table-bordered.dataTable th:last-child, [dir=rtl] table.table-bordered.dataTable td:last-child, [dir=rtl] table.table-bordered.dataTable td:last-child {
   border-left-width: 1px;
 }
 
-[dir] table.table-bordered.dataTable tbody th, [dir] .wt-route-CalendarPage .wt-page-content table.dataTable tbody th, [dir] table.table-bordered.dataTable tbody td, [dir] .wt-route-CalendarPage .wt-page-content table.dataTable tbody td {
+[dir] table.table-bordered.dataTable tbody th, [dir] table.table-bordered.dataTable tbody td {
   border-bottom-width: 0;
 }
 
-[dir] div.dataTables_scrollHead table.table-bordered, [dir] div.dataTables_scrollHead .wt-route-CalendarPage .wt-page-content table, [dir] .wt-route-CalendarPage .wt-page-content div.dataTables_scrollHead table {
+[dir] div.dataTables_scrollHead table.table-bordered {
   border-bottom-width: 0;
 }
 
@@ -15804,10 +15804,6 @@ caption {
   box-shadow: none !important;
 }
 
-.gallery img {
-  vertical-align: initial;
-}
-
 .indent {
   font-size: 0.875rem;
 }
@@ -15849,6 +15845,10 @@ caption {
 }
 [dir] .wt-ajax-load:empty {
   background: url('data:image/gif;base64,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') no-repeat 50% 50%;
+}
+
+.wt-initial.active {
+  color: #B80000;
 }
 
 [dir] .wt-page-menu-button {
@@ -17417,6 +17417,18 @@ form .card-header {
 [dir] .page-item.active .page-link:hover {
   background: linear-gradient(#2b669a, #1b3f5f 100%);
 }
+.page-item.disabled .page-link {
+  color: #adb5bd;
+}
+[dir] .page-item.disabled .page-link {
+  background-color: #e9ecef;
+}
+[dir] .page-item .page-link {
+  background-color: #fff;
+}
+[dir] .page-item .page-link:hover, [dir] .page-item .page-link:focus {
+  background-color: #ced4da;
+}
 
 [dir] .dataTables_paginate {
   margin-bottom: 0.5rem;
@@ -17630,6 +17642,13 @@ table {
 }
 [dir] .wt-route-CalendarPage table .topbottombar {
   background-color: #e9ecef;
+}
+[dir] .wt-route-CalendarPage .wt-page-content table {
+  background-color: #e9ecef;
+  border: 0;
+}
+[dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .wt-route-CalendarPage .wt-page-content table td {
+  border: 1px solid #bfc7cf;
 }
 .wt-route-CalendarPage .wt-page-content table td li > a {
   font-weight: 700;
@@ -17895,17 +17914,41 @@ table {
 }
 
 /** JustLight Theme - Charts - Interactive chart */
-[dir] .wt-chart-interactive .tv_out, [dir] .wt-block-charts .tv_out, [dir] .tab-pane .tv_out {
-  background-color: #fff;
-  border: none;
+[dir] .tv_out {
+  background-color: transparent !important;
+  border: none !important;
 }
-[dir] .wt-chart-interactive .tvM, [dir] .wt-block-charts .tvM, [dir] .tab-pane .tvM {
+.tv_in table.tv_tree, .tv_in table.tv_tree tbody, .tv_in table.tv_tree tr, .tv_in table.tv_tree td {
+  font-size: 0.75rem !important;
+}
+[dir] .tv_box {
+  background: transparent !important;
+  border: thin outset #ced4da !important;
+}
+[dir=ltr] .tv_box {
+  box-shadow: 1px 1px 2px #5e5e5e !important;
+}
+[dir=rtl] .tv_box {
+  box-shadow: -1px 1px 2px #5e5e5e !important;
+}
+[dir] .tvM {
   background: #d7eaf9 !important;
   background: var(--sex-m-bg) !important;
+  border-color: #abd3f2 !important;
+  border-color: var(--sex-m-fg) !important;
 }
-[dir] .wt-chart-interactive .tvF, [dir] .wt-block-charts .tvF, [dir] .tab-pane .tvF {
+[dir] .tvF {
   background: #fff0f5 !important;
   background: var(--sex-f-bg) !important;
+  border-color: #ffbdd3 !important;
+  border-color: var(--sex-f-fg) !important;
+}
+.tvM, .tvF {
+  color: #212529 !important;
+}
+[dir] .tvM, [dir] .tvF {
+  border-radius: 0 !important;
+  padding: 0.25rem !important;
 }
 
 .wt-chart-interactive {
@@ -18181,19 +18224,29 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   flex: 1 1 auto;
   width: 100% !important;
 }
+
+[dir] .select2-container--default {
+  background-color: #fff;
+}
 .select2-container--default *:focus {
   outline: none;
 }
 .select2-container--default .select2-selection--single {
-  height: 100%;
-  min-height: 2rem;
+  height: auto;
+  min-height: 2.5rem;
 }
 [dir] .select2-container--default .select2-selection--single {
+  background-color: #fff;
   border: 1px solid #ced4da;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  height: auto;
+  color: #495057;
+  height: 100%;
   line-height: 2.5;
+}
+[dir] .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 [dir=ltr] .select2-container--default .select2-selection--single .select2-selection__rendered {
   padding-left: 0.75rem;
@@ -18205,8 +18258,21 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   height: calc(2.25rem + 2px);
   line-height: 2.25;
 }
+[dir] .select2-container--default .select2-results {
+  background-color: #fff;
+}
 [dir] .select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: #337ab7;
+}
+.select2-container--default .select2-search__field {
+  color: #495057;
+}
+[dir] .select2-container--default .select2-search__field {
+  background-color: #fff;
+}
+
+[dir] .select2-dropdown {
+  background-color: #fff;
 }
 
 [dir=ltr] .input-group-append + .input-group .twitter-typeahead .form-control, [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-route-EditName input[class=NAME], [dir=ltr] .wt-route-EditName .input-group-append + .input-group .twitter-typeahead input[class=NAME], [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-route-ReportSetupPage input[type=text], [dir=ltr] .wt-route-ReportSetupPage .input-group-append + .input-group .twitter-typeahead input[type=text], [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-block-content-user_messages form select, [dir=ltr] .wt-block-content-user_messages form .input-group-append + .input-group .twitter-typeahead select {
@@ -18329,6 +18395,6 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 
 /** JustLight Theme - (Custom) Modules */
 [dir] .jc-fancy-imagebar {
-  border-top: 5px solid #428bca;
-  border-bottom: 5px solid #428bca;
+  border-top: 5px solid #428bca !important;
+  border-bottom: 5px solid #428bca !important;
 }
