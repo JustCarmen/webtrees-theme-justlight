@@ -38,6 +38,7 @@ use Psr\Http\Message\ResponseInterface;
 use Fisharebest\Localization\Translation;
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Module\MinimalTheme;
+use Illuminate\Database\Capsule\Manager as DB;
 use Fisharebest\Webtrees\Contracts\UserInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
@@ -196,11 +197,18 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         $params = (array) $request->getParsedBody();
 
         if ($params['save'] === '1') {
+
+            if ($params['allow-switch'] === '0') {
+                // remove any previous set users' palette choice.
+                DB::table('user_setting')->where('setting_name', '=', 'justlight-palette')->delete();
+            }
+
             $this->setPreference('palette', $params['palette']);
             $this->setPreference('allow-switch', $params['allow-switch']);
 
             $message = I18N::translate('The preferences for the module “%s” have been updated.', $this->title());
             FlashMessages::addMessage($message, 'success');
+
         }
 
         return redirect($this->getConfigLink());
