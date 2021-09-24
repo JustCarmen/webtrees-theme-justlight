@@ -383,7 +383,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
 
         // We haven't selected one this session? Use the site default
         if ($palette === '') {
-            $palette = $this->getPreference('justlight-palette', 'justlight');
+            $palette = $this->getPreference('palette', 'justlight');
         }
 
         return $palette;
