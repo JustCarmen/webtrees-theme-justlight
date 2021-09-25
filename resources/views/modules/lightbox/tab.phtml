@@ -10,15 +10,15 @@ use Illuminate\Support\Collection;
 ?>
 <div class="wt-tab-album py-4">
     <?php foreach ($media_list as $media) : ?>
-        <figure class="figure text-center col-sm-6 col-md-4 col-lg-3 col-xl-2 wt-album-tab-figure">
-            <?php foreach ($media->mediaFiles() as $media_file) : ?>
+        <?php foreach ($media->mediaFiles() as $media_file) : ?>
+            <figure class="figure text-center col-sm-6 col-md-4 col-lg-3 col-xl-2 wt-album-tab-figure">
                 <?= $media_file->displayImage(100, 100, 'contain', ['class' => 'img-thumbnail wt-album-tab-image']) ?>
-            <?php endforeach ?>
-            <figcaption class="figure-caption wt-album-tab-caption">
-                <a href="<?= e($media->url()) ?>">
-                    <?= $media->fullName() ?>
-                </a>
-            </figcaption>
-        </figure>
+                <figcaption class="figure-caption wt-album-tab-caption">
+                    <a href="<?= e($media->url()) ?>">
+                        <?= $media->fullName() ?>
+                    </a>
+                </figcaption>
+            </figure>
+        <?php endforeach ?>
     <?php endforeach ?>
 </div>
