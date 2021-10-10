@@ -2289,10 +2289,6 @@ small,
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder, .wt-route-EditName input[class=NAME]::-moz-placeholder, .wt-route-ReportSetupPage input[type=text]::-moz-placeholder, .wt-block-content-user_messages form select::-moz-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
 .form-control:-ms-input-placeholder, .wt-route-EditName input[class=NAME]:-ms-input-placeholder, .wt-route-ReportSetupPage input[type=text]:-ms-input-placeholder, .wt-block-content-user_messages form select:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -2879,7 +2875,6 @@ textarea.form-control {
   color: #212529;
   vertical-align: middle;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-size: 1rem;
@@ -6015,10 +6010,8 @@ input[type=button].btn-block {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
-       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
@@ -7218,7 +7211,6 @@ a.close.disabled {
   display: block;
   height: calc(100vh - 1rem);
   height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   content: "";
 }
@@ -7378,7 +7370,6 @@ a.close.disabled {
   .modal-dialog-centered::before {
     height: calc(100vh - 3.5rem);
     height: -webkit-min-content;
-    height: -moz-min-content;
     height: min-content;
   }
 
@@ -12051,11 +12042,110 @@ h3 {
 /**
  * CSS from mainstream webtrees
  */
+[dir] td.dt-control {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACjElEQVR4Aa2V30uTURjHnVBUgglCaXVTJJVLMdhQm7+1JEvJiKAggmgSQiKJl0V0E13UVf0HQZmBLcvlpqa55tqV0YoMzIhY6js0yDH11X17vuO8Sq5Zgl/48DznPD/G63nOMSmBkoUNwhYhTUgn9NUeY8z5p0wqOVXYKRwQLMJhhYV7Kpaqck2rNdskbBPMdrv9osfjcQaDwW/RaHSR0OceY8xhrqox/a3ZZmGHkO9wOB7ouj6PBGKMOcxlzcqmdDYKGZmZmSWjo6PvIYosRuDWXGj50IwTb4+hxleN5sAVvJh4jvBCGBRzWSO121UPk3EAaUKuz+d7ycTp+Wnc/nwL1d4qHBVidmjZv/npBkJzGiiv19vFWmGrcVDsvKupqeky/056VMf1j9dQOViBKo9Aa/ixdbnYcrQGWsBc1jQ2NtrZQ/VKShHM8kvdEPVN9qJsoBRl/aUoHyiJ+UpcCxJTtmfCDYoHJT2yYyOlPtcaCoUmGGwdbkVRbxGK+2y0gg2GisUvNmJCy/BVUJqm/eBIxXqpgbUtiBise12HQlc+ClwFSKRCiZH6wXpQs7OzETWn6XENa/trYemywuK0IpGsTotgRU3fcVBzouWG6pOnpqY0BhuGGpDXeUjIW7JKcfuX3tjjP9k4FBkZN4PtY+042JGzzNMcGDJ35C7tmcU++tJmjE63OpSUuLEJ62GcfXUO+59kr8rJnlOY0WfAGtYaY/PHYPv9fhdEY7++4nz/BWS17UPWY0Es2avWp3vOYOTnCCheBtaqHskJr95kZBL3AvdR2XkEex5mYbdQ+qwCd97dRTAcXHn1Moyrt16PA2tN//V8jY+Pf4cS/VWerzU9sDay1gd2Xf4F/AZqlpeB9836LwAAAABJRU5ErkJggg==') no-repeat center center;
+  cursor: pointer;
+}
+
+[dir] tr.dt-hasChild td.dt-control {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACdUlEQVR4Aa2V30tTYRjHVSgsoQKhXPUPlKZMlImiIIg/pggiiDeCBAdqyC4Kf9zVhVdeelX33QnCbtYvxZsxxkoqKxiz1SzdFudMb5xO5/bt+fa+sPCw3IVf+PA+532e5ytn53lfK0qoSrggXBauCbUKxtxjjjVnq1IXXxFuCXeEFqGdMOYec6zRtZX/M6sWrgv1hmHcDwQCLxOJxM9CoZAnjLnHHGt0bbXdVG1cEm4KLp/P9yKXyx2jhJhjDWvZc9qUwUWhzuFwdMVisc8QFQ4PcbCygvT0NJLDw0gNDSH96DEyfj8KmQwo1rJHem8oD2VapX/sxlAo9Aqi/N4e9hYWsDMwgARxD2DH7ZZYren5eZxYFqhgMOhnr3BVeSnn216v98Hf3yqXg/X0CX719YFs9/WquJfPGtkzZ2fBWvZ4PB6DHtqrokaol7/0GqLM2hq2enpsxMmpvf3VVVD8UOJxV42Uet1Wy7J+M5mam8P37u6ySM7MgDJNM8mRUl5qYDtOREz+GB3FZlcXNjs7UUrMk/jYGKhsNnuo57TWZhgTw0hHO0EpRdpV/tvICKgjUdFQv/Lu7q7JZHxqCl9dLqGtSJtL4VJ80Wvc8xD2V9YfRUbmLZPp5WVstLTYaSWt+lmt1tISKH5Q/VFqbGOTl6GNTk7iQ3Oz4FSrU8UfuTqdBJHxceQz+2APe/8Zm+Jgh8PhNxBlt7YQNQysNzVivbEJ7wXGiiZEJiZwEI2C4mFgr/aoKnn0jk0TiWfPsTE4iHcN9xBuaMCn/n5sLy7iKJk8ffTqikfvfC4H9laWdX2lUqltaDEu9/o664LtIOVfsOf4L+APb5yaiwyN8+8AAAAASUVORK5CYII=') no-repeat center center;
+}
+
+[dir=ltr] table.dataTable th.dt-left, [dir=ltr] table.dataTable td.dt-left {
+  text-align: left;
+}
+
+[dir=rtl] table.dataTable th.dt-left, [dir=rtl] table.dataTable td.dt-left {
+  text-align: right;
+}
+
+[dir] table.dataTable th.dt-center, [dir] table.dataTable td.dt-center, [dir] table.dataTable td.dataTables_empty {
+  text-align: center;
+}
+
+[dir=ltr] table.dataTable th.dt-right, [dir=ltr] table.dataTable td.dt-right {
+  text-align: right;
+}
+
+[dir=rtl] table.dataTable th.dt-right, [dir=rtl] table.dataTable td.dt-right {
+  text-align: left;
+}
+
+[dir] table.dataTable th.dt-justify, [dir] table.dataTable td.dt-justify {
+  text-align: justify;
+}
+
+table.dataTable th.dt-nowrap,
+table.dataTable td.dt-nowrap {
+  white-space: nowrap;
+}
+
+[dir=ltr] table.dataTable thead th.dt-head-left, [dir=ltr] table.dataTable thead td.dt-head-left, [dir=ltr] table.dataTable tfoot th.dt-head-left, [dir=ltr] table.dataTable tfoot td.dt-head-left {
+  text-align: left;
+}
+
+[dir=rtl] table.dataTable thead th.dt-head-left, [dir=rtl] table.dataTable thead td.dt-head-left, [dir=rtl] table.dataTable tfoot th.dt-head-left, [dir=rtl] table.dataTable tfoot td.dt-head-left {
+  text-align: right;
+}
+
+[dir] table.dataTable thead th.dt-head-center, [dir] table.dataTable thead td.dt-head-center, [dir] table.dataTable tfoot th.dt-head-center, [dir] table.dataTable tfoot td.dt-head-center {
+  text-align: center;
+}
+
+[dir=ltr] table.dataTable thead th.dt-head-right, [dir=ltr] table.dataTable thead td.dt-head-right, [dir=ltr] table.dataTable tfoot th.dt-head-right, [dir=ltr] table.dataTable tfoot td.dt-head-right {
+  text-align: right;
+}
+
+[dir=rtl] table.dataTable thead th.dt-head-right, [dir=rtl] table.dataTable thead td.dt-head-right, [dir=rtl] table.dataTable tfoot th.dt-head-right, [dir=rtl] table.dataTable tfoot td.dt-head-right {
+  text-align: left;
+}
+
+[dir] table.dataTable thead th.dt-head-justify, [dir] table.dataTable thead td.dt-head-justify, [dir] table.dataTable tfoot th.dt-head-justify, [dir] table.dataTable tfoot td.dt-head-justify {
+  text-align: justify;
+}
+
+table.dataTable thead th.dt-head-nowrap,
+table.dataTable thead td.dt-head-nowrap,
+table.dataTable tfoot th.dt-head-nowrap,
+table.dataTable tfoot td.dt-head-nowrap {
+  white-space: nowrap;
+}
+
+[dir=ltr] table.dataTable tbody th.dt-body-left, [dir=ltr] table.dataTable tbody td.dt-body-left {
+  text-align: left;
+}
+
+[dir=rtl] table.dataTable tbody th.dt-body-left, [dir=rtl] table.dataTable tbody td.dt-body-left {
+  text-align: right;
+}
+
+[dir] table.dataTable tbody th.dt-body-center, [dir] table.dataTable tbody td.dt-body-center {
+  text-align: center;
+}
+
+[dir=ltr] table.dataTable tbody th.dt-body-right, [dir=ltr] table.dataTable tbody td.dt-body-right {
+  text-align: right;
+}
+
+[dir=rtl] table.dataTable tbody th.dt-body-right, [dir=rtl] table.dataTable tbody td.dt-body-right {
+  text-align: left;
+}
+
+[dir] table.dataTable tbody th.dt-body-justify, [dir] table.dataTable tbody td.dt-body-justify {
+  text-align: justify;
+}
+
+table.dataTable tbody th.dt-body-nowrap,
+table.dataTable tbody td.dt-body-nowrap {
+  white-space: nowrap;
+}
+
 table.dataTable {
   max-width: none !important;
   border-collapse: separate !important;
   border-spacing: 0;
 }
+
 [dir] table.dataTable {
   clear: both;
   margin-top: 6px !important;
@@ -12265,22 +12355,22 @@ table.dataTable > thead .sorting_desc_disabled:after {
   margin-bottom: 0 !important;
 }
 
-[dir] div.dataTables_scrollBody table {
+[dir] div.dataTables_scrollBody > table {
   border-top: none;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-div.dataTables_scrollBody table thead .sorting:before,
-div.dataTables_scrollBody table thead .sorting_asc:before,
-div.dataTables_scrollBody table thead .sorting_desc:before,
-div.dataTables_scrollBody table thead .sorting:after,
-div.dataTables_scrollBody table thead .sorting_asc:after,
-div.dataTables_scrollBody table thead .sorting_desc:after {
+div.dataTables_scrollBody > table > thead .sorting:before,
+div.dataTables_scrollBody > table > thead .sorting_asc:before,
+div.dataTables_scrollBody > table > thead .sorting_desc:before,
+div.dataTables_scrollBody > table > thead .sorting:after,
+div.dataTables_scrollBody > table > thead .sorting_asc:after,
+div.dataTables_scrollBody > table > thead .sorting_desc:after {
   display: none;
 }
 
-[dir] div.dataTables_scrollBody table tbody tr:first-child th, [dir] div.dataTables_scrollBody table tbody tr:first-child td {
+[dir] div.dataTables_scrollBody > table > tbody tr:first-child th, [dir] div.dataTables_scrollBody > table > tbody tr:first-child td {
   border-top: none;
 }
 
@@ -12397,9 +12487,8 @@ table.dataTable.table-sm .sorting_desc:after,
   cursor: pointer;
   display: block;
   height: 28px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -12426,9 +12515,8 @@ table.dataTable.table-sm .sorting_desc:after,
   cursor: pointer;
   display: block;
   min-height: 32px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -12480,9 +12568,8 @@ table.dataTable.table-sm .sorting_desc:after,
 
 .select2-results__option {
   padding: 6px;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+      user-select: none;
   -webkit-user-select: none;
 }
 
@@ -13139,16 +13226,12 @@ span.twitter-typeahead {
 .leaflet-marker-icon,
 .leaflet-marker-shadow {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
   -webkit-user-drag: none;
 }
 
 /* Prevents IE11 from highlighting tiles in blue */
-[dir] .leaflet-tile::-moz-selection {
-  background: transparent;
-}
 [dir] .leaflet-tile::selection {
   background: transparent;
 }
@@ -13923,7 +14006,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color: #222;
   white-space: nowrap;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
@@ -15098,7 +15180,6 @@ table#tvTreeBorder td#tv_tree_top div {
 
 .wt-chart-pedigree-down {
   width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -15142,7 +15223,6 @@ table#tvTreeBorder td#tv_tree_top div {
 
 .wt-chart-pedigree-up {
   width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 
