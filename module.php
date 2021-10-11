@@ -25,7 +25,7 @@
 
 declare(strict_types=1);
 
-namespace JustCarmen\WebtreesModules;
+namespace JustCarmen\Webtrees\Module\Justlight;
 
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\I18N;
