@@ -35,8 +35,43 @@
     // General indentation - only indent elements when preceded by a collapse icon
     $('.indent').parents('.collapse').find('.indent').addClass('jc-indent-collapse');
 
-    // Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
-    $('.fact_NOTE').next('.collapse').addClass('indent jc-indent-collapse');
+     // Notes treatment
+    $('.fact_NOTE').each(function(){
+
+        var $this = $(this);
+
+        // Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
+        var $collapse = $this.next('.collapse');
+        $collapse.addClass('indent jc-indent-collapse');
+
+        // Give the single note-title a class to work with
+        var $title = $this.contents().not($this.children());
+        if ($title.text().length > 1) {
+            $title.wrap('<span class="note-title">');
+        }
+
+        // Give the shared note-title a class to work with
+        var $title = $this.find('.label').next('a').find('span');
+        if ($title.text().length > 1) {
+            $title.addClass('note-title');
+        }
+
+        // Toggle the title to expand when the full text is collapsed and vice versa
+        $title = $this.find('.note-title');
+
+        if ($collapse.hasClass('show')) {
+            $title.addClass('collapse');
+        } else {
+            $title.addClass('collapse show');
+        }
+
+        $this.find('.wt-icon-expand').on('click', function() {
+            $title.removeClass('show');
+        });
+        $this.find('.wt-icon-collapse').on('click', function() {
+            $title.addClass('show');
+        });
+    });
 
     // Individual page Facts Tab / Family page - restyle gallery caption
     $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table')
