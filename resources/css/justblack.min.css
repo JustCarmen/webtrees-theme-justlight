@@ -15122,7 +15122,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-right .wt-pedigree-lines {
-  border: solid #337ab7 1px;
+  border: solid #d36400 1px;
   border: var(--chart-line);
 }
 
@@ -15154,7 +15154,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-left .wt-pedigree-lines {
-  border: solid #337ab7 1px;
+  border: solid #d36400 1px;
   border: var(--chart-line);
 }
 
@@ -15190,7 +15190,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-down .wt-pedigree-lines {
-  border: solid #337ab7 1px;
+  border: solid #d36400 1px;
   border: var(--chart-line);
   border-bottom: none;
   border-radius: 0 0 0 0;
@@ -15233,7 +15233,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-up .wt-pedigree-lines {
-  border: solid #337ab7 1px;
+  border: solid #d36400 1px;
   border: var(--chart-line);
   border-top: none;
   border-radius: 0 0 0 0;
@@ -15287,13 +15287,13 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=ltr] .wt-chart-vertical-line {
   right: 0;
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-vertical-line {
   left: 0;
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
 }
 
@@ -15304,13 +15304,13 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-last-child-line {
-  border-bottom: solid #337ab7 1px;
+  border-bottom: solid #d36400 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-vertical-last-child-line {
   right: 0;
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -15318,7 +15318,7 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=rtl] .wt-chart-vertical-last-child-line {
   left: 0;
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
@@ -15331,7 +15331,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-child-line {
-  border-bottom: solid #337ab7 1px;
+  border-bottom: solid #d36400 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -15353,7 +15353,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-line {
-  border-bottom: solid #337ab7 1px;
+  border-bottom: solid #d36400 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -15364,19 +15364,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-child {
-  border-top: solid #337ab7 1px;
+  border-top: solid #d36400 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-child {
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-child {
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
@@ -15387,12 +15387,12 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir=ltr] .wt-chart-horizontal-middle-child {
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-horizontal-middle-child {
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
 }
 
@@ -15401,19 +15401,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-child {
-  border-bottom: solid #337ab7 1px;
+  border-bottom: solid #d36400 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-child {
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-last-child {
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -15426,19 +15426,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-parent {
-  border-top: solid #337ab7 1px;
+  border-top: solid #d36400 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-parent {
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-parent {
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
@@ -15449,19 +15449,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-parent {
-  border-bottom: solid #337ab7 1px;
+  border-bottom: solid #d36400 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-parent {
-  border-left: solid #337ab7 1px;
+  border-left: solid #d36400 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
 }
 
 [dir=rtl] .wt-chart-horizontal-last-parent {
-  border-right: solid #337ab7 1px;
+  border-right: solid #d36400 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
@@ -17941,21 +17941,21 @@ table {
   padding: 0.25rem;
 }
 [dir] .wt-chart-box {
-  background: #f9f9f9;
+  background: #545454;
   background: var(--sex-u-bg);
-  border: 1px solid #c6c6c6;
+  border: 1px solid #a1a1a1;
   border: 1px solid var(--sex-u-fg);
 }
 [dir] .wt-chart-box-f {
-  background: #fff0f5;
+  background: #3b3b3b;
   background: var(--sex-f-bg);
-  border: 1px solid #ffbdd3;
+  border: 1px solid #878787;
   border: 1px solid var(--sex-f-fg);
 }
 [dir] .wt-chart-box-m {
-  background: #d7eaf9;
+  background: #212121;
   background: var(--sex-m-bg);
-  border: 1px solid #abd3f2;
+  border: 1px solid #6e6e6e;
   border: 1px solid var(--sex-m-fg);
 }
 .wt-chart-box .wt-chart-box-zoom-dropdown,
@@ -18063,15 +18063,15 @@ table {
   box-shadow: -1px 1px 2px #212529 !important;
 }
 [dir] .tvM {
-  background: #d7eaf9 !important;
+  background: #212121 !important;
   background: var(--sex-m-bg) !important;
-  border-color: #abd3f2 !important;
+  border-color: #6e6e6e !important;
   border-color: var(--sex-m-fg) !important;
 }
 [dir] .tvF {
-  background: #fff0f5 !important;
+  background: #3b3b3b !important;
   background: var(--sex-f-bg) !important;
-  border-color: #ffbdd3 !important;
+  border-color: #878787 !important;
   border-color: var(--sex-f-fg) !important;
 }
 .tvM, .tvF {
