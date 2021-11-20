@@ -105,7 +105,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleSupportUrl(): string
     {
-        return 'https://github.com/justcarmen/webtrees-theme-justlight/issues';
+        return 'https://justcarmen.nl/modules-webtrees-2/justlight-theme/';
     }
 
     /**
