@@ -131,6 +131,11 @@ dd {
 
     &.jc-indent-collapse {
         padding-left: 1.65rem;
+
+        .label {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
     }
 }
 
