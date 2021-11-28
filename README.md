@@ -9,7 +9,7 @@ JustLight Theme for webtrees
 
 Introduction
 -----------
-A light theme with focus on readibility. It uses a full screen where neccessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
+A light theme with focus on readability. It uses a full screen where necessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
 
 As of version 2.1.0, a new color palette has been introduced. Currently there are two palettes to choose from. The standard JustLight as you are used to and a new JustBlack theme which is a dark theme and looks a lot like the former independent JustBlack theme.
 
