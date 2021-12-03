@@ -15535,10 +15535,6 @@ table#tvTreeBorder td#tv_tree_top div {
   overflow-x: auto;
 }
 
-.markdown p {
-  white-space: pre-wrap;
-}
-
 [dir] .markdown p {
   margin: 0 0 0.5em;
 }
