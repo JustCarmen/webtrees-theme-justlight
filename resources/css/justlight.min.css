@@ -15536,7 +15536,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .markdown p {
-  margin: 0 0 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .markdown table {
@@ -15954,14 +15954,6 @@ caption {
 
 .label {
   font-weight: 600;
-}
-
-.markdown p {
-  white-space: pre-wrap;
-}
-
-[dir] .markdown p {
-  margin-bottom: 0.5rem;
 }
 
 .starredname {
