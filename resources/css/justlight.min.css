@@ -15960,10 +15960,6 @@ caption {
   white-space: pre-wrap;
 }
 
-[dir] .markdown p {
-  margin-bottom: 0.5rem;
-}
-
 .starredname {
   text-decoration: underline;
 }
