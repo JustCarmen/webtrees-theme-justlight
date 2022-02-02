@@ -73,8 +73,8 @@
         });
     });
 
-    // Individual page Facts Tab / Family page - restyle gallery caption
-    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table')
+    // Individual page Facts Tab, Name Card / Family page - restyle gallery caption
+    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .card-body')
         .find('.gallery').parents('.d-flex').each(function() {
             $(this).addClass('flex-column').removeClass('align-items-center');
             $(this).children('div').eq(1).find('a:first').addClass('jc-gallery-caption');
