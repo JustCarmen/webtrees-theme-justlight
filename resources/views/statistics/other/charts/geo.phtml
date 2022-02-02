@@ -1,0 +1,12 @@
+<?php
+/**
+ * Chart textcolor style for dark backgrounds (Justblack palette)
+ *
+ * Google piechart API: https://developers.google.com/chart/interactive/docs/gallery/piechart
+ * #dee2e6 = sass jc-theme-light (jc-gray-300)
+ */
+
+$view = view('::statistics/other/charts/geo', get_defined_vars());
+$new_view = preg_replace('~(region: "world",)~', '$1 backgroundColor: "#dee2e6",' , $view);
+
+echo $new_view;

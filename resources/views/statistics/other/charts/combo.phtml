@@ -1,0 +1,16 @@
+<?php
+/**
+ * Chart textcolor style for dark backgrounds (Justblack palette)
+ *
+ * Google combochart API: https://developers.google.com/chart/interactive/docs/gallery/combochart
+ */
+
+$color = '#dee2e6'; // sass jc-body-color
+
+$chart_options['hAxis']['textStyle']['color'] = $color;
+$chart_options['vAxis']['textStyle']['color'] = $color;
+$chart_options['hAxis']['titleTextStyle']['color'] = $color;
+$chart_options['vAxis']['titleTextStyle']['color'] = $color;
+$chart_options['titleTextStyle']['color'] = $color;
+
+echo view('::statistics/other/charts/combo', get_defined_vars());

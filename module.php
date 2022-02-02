@@ -134,6 +134,14 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
         View::registerCustomView('::modules/lightbox/tab', $this->name() . '::modules/lightbox/tab');
         View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
+
+        // specific views for the JustBlack palette
+        if ($this->palette() === 'justblack') {
+            View::registerCustomView('::statistics/other/charts/column', $this->name() . '::statistics/other/charts/column');
+            View::registerCustomView('::statistics/other/charts/combo', $this->name() . '::statistics/other/charts/combo');
+            View::registerCustomView('::statistics/other/charts/geo', $this->name() . '::statistics/other/charts/geo');
+            View::registerCustomView('::statistics/other/charts/pie', $this->name() . '::statistics/other/charts/pie');
+        }
     }
 
     /**
@@ -250,10 +258,22 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
             'chart-spacing-y'                => 10, // unused
             'compact-chart-box-x'            => 240, // unused
             'compact-chart-box-y'            => 50, // unused
-            'distribution-chart-high-values' => 'fff0f5', // Statistics charts
-            'distribution-chart-low-values'  => 'd7eaf9', // Statistics charts
-            'distribution-chart-no-values'   => 'f9f9f9', // Statistics charts
         ];
+
+        if ($this->palette() === 'justblack') {
+            $parameters = [
+                'distribution-chart-high-values' => 'd86400', // Statistics charts (palette primary color)
+                'distribution-chart-low-values'  => 'ffca66', // Statistics charts (geo chart only, lighten 40%)
+                'distribution-chart-no-values'   => 'dee2e6', // Statistics charts (sass jc-gray-300)
+            ];
+        } else {
+            $parameters = [
+                'distribution-chart-high-values' => '337ab7', // Statistics charts (palette primary color)
+                'distribution-chart-low-values'  => '99e0ff', // Statistics charts (geo chart only, lighten 40%)
+                'distribution-chart-no-values'   => 'dee2e6', // Statistics charts ((sass jc-gray-300)
+            ];
+        }
+
         return $parameters[$parameter_name];
     }
 
