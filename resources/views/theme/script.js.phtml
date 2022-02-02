@@ -80,6 +80,9 @@
             $(this).children('div').eq(1).find('a:first').addClass('jc-gallery-caption');
         });
 
+    // Individual page Name Card, add space between data list and additional facts
+    $('#individual-names .card-body').find($('[class^=fact_]')).prev('dl').removeClass('mb-0');
+
     // Individual page Stories Tab
     $('.wt-tab-stories .story_title').addClass('h3 text-left').removeClass('text-center');
 
