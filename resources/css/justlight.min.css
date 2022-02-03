@@ -18062,7 +18062,7 @@ table {
 
 /** JustLight Theme - Charts - Interactive chart */
 [dir] .tv_out {
-  background-color: transparent !important;
+  background-color: #fff !important;
   border: none !important;
 }
 .tv_in table.tv_tree, .tv_in table.tv_tree tbody, .tv_in table.tv_tree tr, .tv_in table.tv_tree td {

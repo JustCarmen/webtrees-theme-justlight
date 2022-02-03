@@ -2,7 +2,7 @@
 // The interactive chart is very hard to overwrite. Use important to achieve what we want
 .tv {
 	&_out {
-		background-color: transparent !important;
+		background-color: $jc-body-bg !important;
 		border: none !important;
 	}
 
