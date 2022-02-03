@@ -13,7 +13,7 @@ A light theme with focus on readability. It uses a full screen where necessary b
 
 As of version 2.1.0, a new color palette has been introduced. Currently there are two palettes to choose from. The standard JustLight as you are used to and a new JustBlack theme which is a dark theme and looks a lot like the former independent JustBlack theme.
 
-There are two color palettes available. The JustLight palette is a modern theme in clean white and blue. The JustBlack palette is a theme with a dark background and orange accents. This palette is more relaxing for the eyes.
+The JustLight palette is a modern theme in clean white and blue. The JustBlack palette is a theme with a dark background and orange accents. This palette is more relaxing for the eyes.
 
 Installation and upgrading
 --------------------------
@@ -25,10 +25,10 @@ Go to the theme section in the control panel. The JustLight theme has a small co
 
 Translation
 -----------
-The strings at the configuration page are translatable. Copy the file nl.php in the resources/lang folder and replace the Dutch strings with strings from your own language. Use the official two letter language code as filename.
+The text on the configuration page is translatable. Copy the file nl.php into the resources/lang folder and replace the Dutch text with the translation into your own language. Use the official two-letter language code as file name. Look in the webtrees folder resources/lang to find the correct code.
 
 Development
--------------------------
+-----------
 The JustLight theme is based on the Bootstrap framework and uses Sass to code the stylesheets. Composer and npm are required to generate the stylesheets.
 
 If you wish to contribute, or create your own version of the JustLight theme please follow the steps below.
