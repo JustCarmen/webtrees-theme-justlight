@@ -67,7 +67,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function customModuleVersion(): string
     {
-        return '2.1.3-dev';
+        return '2.1.2.1-dev';
     }
 
     /**
@@ -247,7 +247,7 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
      */
     public function parameter($parameter_name)
     {
-        $parameters = [
+        $parameters1 = [
             'chart-background-f'             => 'fff0f5', // FanChart
             'chart-background-m'             => 'd7eaf9', // Fanchart
             'chart-background-u'             => 'f9f9f9', // Fanchart
@@ -261,18 +261,20 @@ return new class extends MinimalTheme implements ModuleThemeInterface, ModuleCus
         ];
 
         if ($this->palette() === 'justblack') {
-            $parameters = [
+            $parameters2 = [
                 'distribution-chart-high-values' => 'd86400', // Statistics charts (palette primary color)
                 'distribution-chart-low-values'  => 'ffca66', // Statistics charts (geo chart only, lighten 40%)
                 'distribution-chart-no-values'   => 'dee2e6', // Statistics charts (sass jc-gray-300)
             ];
         } else {
-            $parameters = [
+            $parameters2 = [
                 'distribution-chart-high-values' => '337ab7', // Statistics charts (palette primary color)
                 'distribution-chart-low-values'  => '99e0ff', // Statistics charts (geo chart only, lighten 40%)
                 'distribution-chart-no-values'   => 'dee2e6', // Statistics charts ((sass jc-gray-300)
             ];
         }
+
+        $parameters = array_merge($parameters1, $parameters2);
 
         return $parameters[$parameter_name];
     }
