@@ -37,6 +37,31 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     use ModuleConfigTrait;
 
     /**
+     * @var string
+     */
+    public const CUSTOM_AUTHOR = 'JustCarmen';
+
+    /**
+     * @var string
+     */
+    public const CUSTOM_VERSION = '2.1.3-dev';
+
+    /**
+     * @var string
+     */
+    public const GITHUB_REPO = 'webtrees-theme-justlight';
+
+    /**
+     * @var string
+     */
+    public const AUTHOR_WEBSITE = 'justcarmen.nl';
+
+     /**
+     * @var string
+     */
+    public const CUSTOM_SUPPORT_URL = self::AUTHOR_WEBSITE . '/modules-webtrees-2/justlight-theme/';
+
+    /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::title()
      */
@@ -51,7 +76,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function customModuleAuthorName(): string
     {
-        return 'JustCarmen';
+        return self::CUSTOM_AUTHOR;
     }
 
     /**
@@ -60,7 +85,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function customModuleVersion(): string
     {
-        return '2.1.3-dev';
+        return self::CUSTOM_VERSION;
     }
 
     /**
@@ -70,7 +95,17 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://raw.githubusercontent.com/JustCarmen/webtrees-theme-justlight/master/latest-version.txt';
+        return 'https://raw.githubusercontent.com/' . self::CUSTOM_AUTHOR . '/' . self::GITHUB_REPO . '/main/latest-version.txt';
+    }
+
+    /**
+     * Fetch the latest version of this module.
+     *
+     * @return string
+     */
+    public function customModuleLatestVersion(): string
+    {
+        return 'https://github.com/' . self::CUSTOM_AUTHOR . '/' . self::GITHUB_REPO . '/releases/latest';
     }
 
     /**
@@ -79,26 +114,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function customModuleSupportUrl(): string
     {
-        return 'https://justcarmen.nl/modules-webtrees-2/justlight-theme/';
-    }
-
-    /**
-     * A footer, to be added at the bottom of every page.
-     *
-     * @param ServerRequestInterface $request
-     *
-     * @return string
-     */
-    public function getFooter(ServerRequestInterface $request): string
-    {
-        if (Session::get('theme') === $this->name()) {
-            return view($this->name() . '::theme/footer-credits', [
-                'url' => 'https://justcarmen.nl',
-                'text' => 'Design: justcarmen.nl'
-            ]);
-        } else {
-            return "";
-        }
+        return self::CUSTOM_SUPPORT_URL;
     }
 
     /**
@@ -232,6 +248,26 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             $this->assetUrl('css/' . $this->palette() . '.min.css')
         ];
     }
+
+    /**
+     * A footer, to be added at the bottom of every page.
+     *
+     * @param ServerRequestInterface $request
+     *
+     * @return string
+     */
+    public function getFooter(ServerRequestInterface $request): string
+    {
+        if (Session::get('theme') === $this->name()) {
+            return view($this->name() . '::theme/footer-credits', [
+                'url' => 'https://' . self::AUTHOR_WEBSITE,
+                'text' => 'Design: ' . self::AUTHOR_WEBSITE,
+            ]);
+        } else {
+            return "";
+        }
+    }
+
 
     /**
      * {@inheritDoc}
