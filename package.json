@@ -11,6 +11,7 @@
     "archive": "npm run distribution && cross-env process.env.section=archive NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@mjhenkes/postcss-rtl": "^2.0.0",
     "autoprefixer": "^10.4.2",
     "beautifymarker": "^1.0.9",
@@ -39,5 +40,6 @@
     "typeahead.js-bootstrap4-css": "^1.0.0",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2"
-  }
+  },
+  "dependencies": {}
 }

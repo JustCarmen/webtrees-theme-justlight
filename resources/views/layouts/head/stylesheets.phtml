@@ -13,8 +13,6 @@ use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 
 <?= View::stack('styles') ?>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/solid.min.css" integrity="sha512-QN7X/bUbbeel9bbq6JVNJXk1Zowt+n+QPN+DjhEmTa4TdL1YPCsCey5JrvfRW8xp28LDYgGG/waNVdrhwMQmVQ==" crossorigin="anonymous" />
-
 <?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
     return $module->headContent();
 })->implode('') ?>

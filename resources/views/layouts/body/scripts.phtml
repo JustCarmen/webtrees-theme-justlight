@@ -3,14 +3,14 @@
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 
 ?>
 
 <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" integrity="sha512-r6vrUzzJsN9hfGYoYo5qIFyuI4Hg/6wkIEaxCgFWneGHo1Nn2ES58YuRmrUU44JrD64yIBNwvepKexEIyk+TTQ==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/solid.min.js" integrity="sha512-y0arK64LEWHxtkMLukPhGHPEu2v1fpWcK+mNRolb7DIjqqD5dVJDWKCHiBFOdM+lsPAKZZBC1x/hD+PXTS3Djg==" crossorigin="anonymous"></script>
+<script src="<?= e(app(ModuleThemeInterface::class)->assetUrl('js/fa-regular.min.js')) ?>"></script>
+<script src="<?= e(app(ModuleThemeInterface::class)->assetUrl('js/fa-solid.min.js')) ?>"></script>
 <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
 <script>
