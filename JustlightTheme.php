@@ -59,7 +59,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      /**
      * @var string
      */
-    public const CUSTOM_SUPPORT_URL = self::AUTHOR_WEBSITE . '/modules-webtrees-2/justlight-theme/';
+    public const CUSTOM_SUPPORT_URL = 'https://' . self::AUTHOR_WEBSITE . '/modules-webtrees-2/justlight-theme/';
 
     /**
      * {@inheritDoc}
