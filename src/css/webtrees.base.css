@@ -106,9 +106,12 @@
     min-height:25vh;
     max-height:95vh;
     background:#E6E6E6;
+    display:-webkit-box;
     display:flex;
-    align-items:center;
-    justify-content:center;
+    -webkit-box-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+            justify-content:center;
 }
 .tv_out img{
     border:0;
@@ -650,11 +653,21 @@ table#tvTreeBorder td,
 
 
 .markdown{
-    overflow-x:auto;
+    overflow-wrap:break-word;
+    white-space:pre-wrap;
+}
+
+.markdown p code{
+    color:inherit;
 }
 
 .markdown p{
-    margin:0 0 0.5em;
+    margin:0 0 0.5rem;
+}
+
+.markdown blockquote p{
+    border-left:solid thick lightgray;
+    padding-left:0.5rem;
 }
 
 .markdown table{
@@ -787,10 +800,12 @@ th.align-digits{
     text-align:right;
 }
 .input-group > .twitter-typeahead{
-    flex:1 1;
+    -webkit-box-flex:1;
+            flex:1 1;
 }
 .input-group > .select2-container{
-    flex:1 1;
+    -webkit-box-flex:1;
+            flex:1 1;
 }
 [dir=rtl] .wt-genealogy-menu .dropdown-menu{
     right:0;
@@ -805,13 +820,17 @@ th.align-digits{
     }
 }
 .wt-global{
+    display:-webkit-box;
     display:flex;
     min-height:100vh;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+            flex-direction:column;
 }
 
 .wt-main-container{
-    flex:1;
+    -webkit-box-flex:1;
+            flex:1;
 }
 .wt-global{
     overflow-y:scroll;
