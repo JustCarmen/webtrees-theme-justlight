@@ -16632,6 +16632,10 @@ caption {
   font-weight: 600;
 }
 
+.markdown {
+  white-space: normal;
+}
+
 .markdown p {
   white-space: pre-wrap;
 }
