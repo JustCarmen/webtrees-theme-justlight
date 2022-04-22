@@ -654,7 +654,6 @@ table#tvTreeBorder td,
 
 .markdown{
     overflow-wrap:break-word;
-    white-space:pre-wrap;
 }
 
 .markdown p code{

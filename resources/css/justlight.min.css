@@ -13930,7 +13930,11 @@ span.twitter-typeahead {
 
 /* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
 /* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
-.leaflet-container .leaflet-overlay-pane svg,
+.leaflet-container .leaflet-overlay-pane svg {
+  max-width: none !important;
+  max-height: none !important;
+}
+
 .leaflet-container .leaflet-marker-pane img,
 .leaflet-container .leaflet-shadow-pane img,
 .leaflet-container .leaflet-tile-pane img,
@@ -13938,6 +13942,11 @@ span.twitter-typeahead {
 .leaflet-container .leaflet-tile {
   max-width: none !important;
   max-height: none !important;
+  width: auto;
+}
+
+[dir] .leaflet-container .leaflet-marker-pane img, [dir] .leaflet-container .leaflet-shadow-pane img, [dir] .leaflet-container .leaflet-tile-pane img, [dir] .leaflet-container img.leaflet-image-layer, [dir] .leaflet-container .leaflet-tile {
+  padding: 0;
 }
 
 .leaflet-container.leaflet-touch-zoom {
@@ -14116,16 +14125,11 @@ span.twitter-typeahead {
 }
 
 /* zoom and fade animations */
-.leaflet-fade-anim .leaflet-tile {
-  will-change: opacity;
-}
-
 .leaflet-fade-anim .leaflet-popup {
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-
 [dir] .leaflet-fade-anim .leaflet-popup {
   -webkit-transition: opacity 0.2s linear;
 }
@@ -14144,7 +14148,7 @@ span.twitter-typeahead {
   transform-origin: 100% 0;
 }
 
-.leaflet-zoom-anim .leaflet-zoom-animated {
+svg.leaflet-zoom-animated {
   will-change: transform;
 }
 
@@ -14217,7 +14221,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* visual tweaks */
 .leaflet-container {
-  outline: 0;
+  outline-offset: 1px;
 }
 [dir] .leaflet-container {
   background: #ddd;
@@ -14227,10 +14231,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color: #0078A8;
 }
 
-.leaflet-container a.leaflet-active {
-  outline: 2px solid orange;
-}
-
 [dir] .leaflet-zoom-box {
   border: 2px dotted #38f;
   background: rgba(255, 255, 255, 0.5);
@@ -14238,7 +14238,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-  font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.5;
 }
 
 /* general toolbar styles */
@@ -14247,8 +14250,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-radius: 4px;
 }
 
-.leaflet-bar a,
-.leaflet-bar a:hover {
+.leaflet-bar a {
   width: 26px;
   height: 26px;
   line-height: 26px;
@@ -14257,7 +14259,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color: black;
 }
 
-[dir] .leaflet-bar a, [dir] .leaflet-bar a:hover {
+[dir] .leaflet-bar a {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   text-align: center;
@@ -14273,7 +14275,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   background-repeat: no-repeat;
 }
 
-[dir] .leaflet-bar a:hover {
+[dir] .leaflet-bar a:hover, [dir] .leaflet-bar a:focus {
   background-color: #f4f4f4;
 }
 
@@ -14423,6 +14425,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-layers label {
   display: block;
+  font-size: 13px;
+  font-size: 1.08333em;
 }
 
 .leaflet-control-layers-separator {
@@ -14442,6 +14446,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 /* Default icon URLs */
+.leaflet-default-icon-path {
+  /* used only in path-guessing heuristic, see L.Icon.Default */
+}
 [dir] .leaflet-default-icon-path {
   background-image: url(images/marker-icon.png);
 }
@@ -14449,13 +14456,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* attribution and scale controls */
 [dir] .leaflet-container .leaflet-control-attribution {
   background: #fff;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
   color: #333;
+  line-height: 1.4;
 }
 
 [dir] .leaflet-control-attribution, [dir] .leaflet-control-scale-line {
@@ -14466,13 +14474,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   text-decoration: none;
 }
 
-.leaflet-control-attribution a:hover {
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
   text-decoration: underline;
 }
 
-.leaflet-container .leaflet-control-attribution,
-.leaflet-container .leaflet-control-scale {
-  font-size: 11px;
+.leaflet-control-attribution svg {
+  display: inline !important;
 }
 
 [dir=ltr] .leaflet-left .leaflet-control-scale {
@@ -14489,7 +14497,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 .leaflet-control-scale-line {
   line-height: 1.1;
-  font-size: 11px;
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
@@ -14545,15 +14552,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .leaflet-popup-content {
-  line-height: 1.4;
+  line-height: 1.3;
+  font-size: 13px;
+  font-size: 1.08333em;
+  min-height: 1px;
 }
 
-[dir] .leaflet-popup-content {
-  margin: 13px 19px;
+[dir=ltr] .leaflet-popup-content {
+  margin: 13px 24px 13px 20px;
+}
+
+[dir=rtl] .leaflet-popup-content {
+  margin: 13px 20px 13px 24px;
 }
 
 [dir] .leaflet-popup-content p {
-  margin: 18px 0;
+  margin: 17px 0;
+  margin: 1.3em 0;
 }
 
 .leaflet-popup-tip-container {
@@ -14562,6 +14577,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   position: absolute;
   overflow: hidden;
   pointer-events: none;
+}
+
+[dir] .leaflet-popup-tip-container {
+  margin-top: -1px;
 }
 
 [dir=ltr] .leaflet-popup-tip-container {
@@ -14577,6 +14596,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-popup-tip {
   width: 17px;
   height: 17px;
+  pointer-events: auto;
 }
 
 [dir] .leaflet-popup-tip {
@@ -14607,12 +14627,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-container a.leaflet-popup-close-button {
   position: absolute;
   top: 0;
-  width: 18px;
-  height: 14px;
-  font: 16px/14px Tahoma, Verdana, sans-serif;
-  color: #c3c3c3;
+  width: 24px;
+  height: 24px;
+  font: 16px/24px Tahoma, Verdana, sans-serif;
+  color: #757575;
   text-decoration: none;
-  font-weight: bold;
 }
 
 [dir] .leaflet-container a.leaflet-popup-close-button {
@@ -14623,16 +14642,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 [dir=ltr] .leaflet-container a.leaflet-popup-close-button {
   right: 0;
-  padding: 4px 4px 0 0;
 }
 
 [dir=rtl] .leaflet-container a.leaflet-popup-close-button {
   left: 0;
-  padding: 4px 0 0 4px;
 }
 
-.leaflet-container a.leaflet-popup-close-button:hover {
-  color: #999;
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+  color: #585858;
 }
 
 .leaflet-popup-scrolled {
@@ -14656,10 +14674,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 [dir] .leaflet-oldie .leaflet-popup-tip {
   margin: 0 auto;
-}
-
-[dir] .leaflet-oldie .leaflet-popup-tip-container {
-  margin-top: -1px;
 }
 
 [dir] .leaflet-oldie .leaflet-control-zoom, [dir] .leaflet-oldie .leaflet-control-layers, [dir] .leaflet-oldie .leaflet-popup-content-wrapper, [dir] .leaflet-oldie .leaflet-popup-tip {
@@ -14691,11 +14705,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.leaflet-tooltip.leaflet-clickable {
+.leaflet-tooltip.leaflet-interactive {
   pointer-events: auto;
 }
 
-[dir] .leaflet-tooltip.leaflet-clickable {
+[dir] .leaflet-tooltip.leaflet-interactive {
   cursor: pointer;
 }
 
@@ -14807,6 +14821,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-left-color: #fff;
 }
 
+/* Printing */
+@media print {
+  /* Prevent printers from removing background-images of controls. */
+  .leaflet-control {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
 /*
   Leaflet.BeautifyIcon, a plugin that adds colorful iconic markers for Leaflet by giving full control of style to end user, It has also ability to adjust font awesome
   and glyphicon icons
@@ -16184,7 +16206,6 @@ table#tvTreeBorder td#tv_tree_top div {
 
 .markdown {
   overflow-wrap: break-word;
-  white-space: pre-wrap;
 }
 
 .markdown p code {
