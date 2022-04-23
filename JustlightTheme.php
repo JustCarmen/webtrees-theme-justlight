@@ -371,7 +371,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
                 '#',
                 'menu-justlight-' . $palette_id . ($palette === $palette_id ? ' active' : ''),
                 [
-                    'data-post-url' => $url,
+                    'data-wt-post-url' => $url,
                 ]
             );
 
@@ -430,7 +430,8 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
 
         // If not logged in or no preference, use one we selected earlier in the session.
         if ($palette === '') {
-            $palette = Session::get('justlight-palette', '');
+            $palette = Session::get('justlight-palette');
+            $palette = is_string($palette) ? $palette : '';
         }
 
         // We haven't selected one this session? Use the site default
