@@ -415,7 +415,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             'justblack'       => I18N::translate('JustBlack')
         ];
 
-        uasort($palettes, '\Fisharebest\Webtrees\I18N::strcasecmp');
+        uasort($palettes, I18N::comparator());
 
         return $palettes;
     }
