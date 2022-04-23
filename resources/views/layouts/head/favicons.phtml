@@ -1,12 +1,15 @@
+<?php
+
+use Fisharebest\Webtrees\Http\RequestHandlers\AppleTouchIconPng;
+use Fisharebest\Webtrees\Http\RequestHandlers\BrowserconfigXml;
+
+?>
+
+<!--iOS-->
+<link rel="apple-touch-icon" sizes="180x180" href="<?= e(route(AppleTouchIconPng::class)) ?>">
 <!--Generic favicons-->
 <link rel="icon" sizes="32x32" href="<?= e(asset('favicon-32.png')) ?>">
-<link rel="icon" sizes="128x128" href="<?= e(asset('favicon-128.png')) ?>">
 <link rel="icon" sizes="192x192" href="<?= e(asset('favicon-192.png')) ?>">
-<!--Android-->
-<link rel="shortcut icon" sizes="196x196" href="<?= e(asset('favicon-196.png')) ?>">
-<!--iPad-->
-<link rel="apple-touch-icon" sizes="152x152" href="<?= e(asset('favicon-152.png')) ?>">
-<!--iPhone-->
-<link rel="apple-touch-icon" sizes="180x180" href="<?= e(asset('favicon-180.png')) ?>">
 <!--IE11/Edge-->
-<meta name="msapplication-config" content="<?= e(asset('browserconfig.xml')) ?>">
+<meta name="msapplication-config" content="<?= e(route(BrowserconfigXml::class)) ?>">
+
