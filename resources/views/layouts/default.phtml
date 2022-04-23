@@ -11,7 +11,6 @@
  *
  */
 
-use Fisharebest\Webtrees\DebugBar;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Tree;
@@ -39,7 +38,6 @@ $palette = app(ModuleThemeInterface::class)->palette();
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/favicons'); ?>
         <link rel="manifest" href="<?= e(asset('site.webmanifest')) ?>">
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/stylesheets'); ?>
-        <?= DebugBar::renderHead() ?>
     </head>
 
     <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
@@ -77,8 +75,6 @@ $palette = app(ModuleThemeInterface::class)->palette();
         <?= view(app(ModuleThemeInterface::class)->name() . '::theme/footer'); ?>
 
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/scripts'); ?>
-
-        <?= DebugBar::render() ?>
     </body>
 
 </html>
