@@ -19648,6 +19648,10 @@ table {
 }
 
 /** Markdown table */
+.markdown .table, .markdown .wt-route-CalendarPage table, .wt-route-CalendarPage .markdown table {
+  border-collapse: separate;
+}
+
 .jc-markdown-table {
   font-size: 0.75rem;
 }

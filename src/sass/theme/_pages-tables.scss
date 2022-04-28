@@ -60,6 +60,12 @@ table {
 }
 
 /** Markdown table */
+.markdown {
+    & .table {
+        border-collapse: separate;
+    }
+}
+
 .jc-markdown-table {
 
     // reset styles from parent .wt-facts-table
