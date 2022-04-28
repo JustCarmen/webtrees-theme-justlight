@@ -28,16 +28,20 @@
  *     +---wt-footer wt-footer-xxxxx
  */
 
-/* Colors for chart boxes, etc. */
+/* Colors for chart boxes, links etc. */
 :root {
+    --chart-line: solid #{$jc-primary} #{$border-width};
+    --chart-line-radius: 0;
+    --link-color: #{$jc-link-color};
+    --link-color-hover: #{$link-hover-color};
+    --link-decoration: #{$link-decoration};
+    --link-decoration-hover: #{$link-hover-decoration};
     --sex-f-bg: #{$jc-female-bg}; // sass/css compatibility - see: https://sass-lang.com/documentation/breaking-changes/css-vars
     --sex-m-bg: #{$jc-male-bg};
     --sex-u-bg: #{$jc-unknown-bg};
     --sex-f-fg: #{$jc-female-border};
     --sex-m-fg: #{$jc-male-border};
     --sex-u-fg: #{$jc-unknown-border};
-    --chart-line: solid #{$jc-primary} #{$border-width};
-    --chart-line-radius: 0;
 }
 
 a {
@@ -49,6 +53,11 @@ a {
 
 .btn-link {
     @include jc-padding-lr(.25);
+}
+
+.btn-link:hover,
+.nav-link:hover {
+    text-decoration: none;
 }
 
 .btn-primary {
