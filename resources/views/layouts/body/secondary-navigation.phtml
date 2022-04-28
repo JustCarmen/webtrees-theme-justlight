@@ -4,8 +4,8 @@ use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 
 ?>
 
-<div class="col wt-secondary-navigation collapse navbar-collapse d-none pr-1" id="secondaryMenu">
-    <ul class="nav wt-user-menu ml-auto">
+<div class="col wt-secondary-navigation collapse navbar-collapse d-none pe-1" id="secondaryMenu">
+    <ul class="nav wt-user-menu ms-auto">
         <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
         <?= view('components/menu-item', ['menu' => $menu]) ?>
         <?php endforeach ?>
