@@ -29,9 +29,10 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 mix
     .setPublicPath(config.css_dir)
     .styles([
-        config.vendor_build_dir + '/datatables.net-bs4/css/dataTables.bootstrap4.css',
+        config.vendor_build_dir + '/datatables.net-bs5/css/dataTables.bootstrap5.css',
         config.webtrees_css_dir + '/begin-ignore-rtl.css',
-        config.vendor_build_dir + '/select2/dist/css/select2.min.css',
+        config.vendor_build_dir + '/tom-select/dist/css/tom-select.min.css',
+        config.vendor_build_dir + '/tom-select/dist/css/tom-select.bootstrap5.min.css',
         config.webtrees_css_dir + '/end-ignore-rtl.css',
         config.vendor_build_dir + '/typeahead.js-bootstrap4-css/typeaheadjs.css',
         config.vendor_build_dir + '/leaflet/dist/leaflet.css',
@@ -39,6 +40,7 @@ mix
         config.vendor_build_dir + '/leaflet-control-geocoder/dist/Control.Geocoder.css',
         config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.Default.css',
         config.vendor_build_dir + '/leaflet.markercluster/dist/MarkerCluster.css',
+        config.vendor_build_dir + '/leaflet.control.layers.tree/L.Control.Layers.Tree.css',
         config.webtrees_css_dir + '/_vendor-patches.css'
     ], config.css_dir + '/webtrees.vendor.css')
     .postCss(config.vendor_build_dir + '/jquery-colorbox/example1/colorbox.css', config.css_dir + '/webtrees.colorbox.css')
