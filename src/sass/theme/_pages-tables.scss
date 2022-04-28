@@ -25,7 +25,8 @@ table {
     a {
         color: $jc-facts-table-link-color;
 
-        @include hover-focus() {
+        &:hover,
+        &:focus {
             color: $jc-facts-table-link-hover-color;
         }
     }

@@ -20,7 +20,9 @@
 
         .page-link {
             background-color: $jc-body-bg;
-            @include hover-focus {
+
+            &:hover,
+            &:focus {
                 background-color: $jc-page-item-hover-bg;
             }
         }

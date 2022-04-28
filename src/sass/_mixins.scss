@@ -84,7 +84,8 @@
                 font-weight: 600;
             }
 
-            @include hover-focus {
+            &:hover,
+            &:focus {
                 background: none;
                 color: $link-hover-color;
                 text-decoration: underline;
@@ -123,7 +124,8 @@
 @mixin jc-icon-color($_color: $jc-icon-color, $darken: 10%) {
     color: $_color;
 
-    @include hover-focus() {
+    &:hover,
+    &:focus {
         color: darken($_color, $darken);
     }
 }

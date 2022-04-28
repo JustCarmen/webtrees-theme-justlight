@@ -22,7 +22,7 @@
     color: $jc-brand-primary;
     font-weight: 400;
 
-    @include hover {
+    &:hover {
         color: $jc-brand-primary-hover;
         text-decoration: none;
     }
