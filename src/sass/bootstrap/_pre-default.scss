@@ -11,6 +11,22 @@ $black: $jc-black;
 $enable-gradients: true;
 $enable-shadows: true;
 
+// Grid and container breakpoints (remove bs-5 xxl variant for screens wider than 1400 px)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
 // Body
 $body-bg: $jc-body-bg;
 $body-color: $jc-body-color;
