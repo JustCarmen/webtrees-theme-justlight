@@ -4,7 +4,7 @@
 /* horizontal and vertical lines color */
 #tv_tree div.tv_vline,
 #tv_tree div.tv_hline {
-    background-color: theme-color();
+    background-color: $jc-primary;
 }
 
 .tv_vline {

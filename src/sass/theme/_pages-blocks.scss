@@ -40,7 +40,7 @@
     >div {
         &:not(:last-child) {
             padding-bottom: 0.5rem;
-            @include jc-border(theme-color(), 'bottom');
+            @include jc-border($jc-primary, 'bottom');
             border-radius: 0;
         }
     }

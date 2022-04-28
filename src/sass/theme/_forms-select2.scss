@@ -58,7 +58,7 @@ $select: "select2-selection--single";
         @extend %thumb;
 
         &--highlighted[aria-selected] {
-            background-color: theme-color(primary);
+            background-color: $jc-primary;
         }
     }
 

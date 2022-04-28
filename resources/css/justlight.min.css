@@ -16415,7 +16415,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-right .wt-pedigree-lines {
-  border: solid theme-color() 1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
 }
 
@@ -16447,7 +16447,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-left .wt-pedigree-lines {
-  border: solid theme-color() 1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
 }
 
@@ -16483,7 +16483,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-down .wt-pedigree-lines {
-  border: solid theme-color() 1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
   border-bottom: none;
   border-radius: 0 0 0 0;
@@ -16526,7 +16526,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-pedigree-up .wt-pedigree-lines {
-  border: solid theme-color() 1px;
+  border: solid #337ab7 1px;
   border: var(--chart-line);
   border-top: none;
   border-radius: 0 0 0 0;
@@ -16664,13 +16664,13 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=ltr] .wt-chart-vertical-line {
   right: 0;
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-vertical-line {
   left: 0;
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
 }
 
@@ -16681,13 +16681,13 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-last-child-line {
-  border-bottom: solid theme-color() 1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-vertical-last-child-line {
   right: 0;
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -16695,7 +16695,7 @@ table#tvTreeBorder td#tv_tree_top div {
 
 [dir=rtl] .wt-chart-vertical-last-child-line {
   left: 0;
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
@@ -16708,7 +16708,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-vertical-child-line {
-  border-bottom: solid theme-color() 1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -16730,7 +16730,7 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-line {
-  border-bottom: solid theme-color() 1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
@@ -16741,19 +16741,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-child {
-  border-top: solid theme-color() 1px;
+  border-top: solid #337ab7 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-child {
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-child {
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
@@ -16764,12 +16764,12 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir=ltr] .wt-chart-horizontal-middle-child {
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
 }
 
 [dir=rtl] .wt-chart-horizontal-middle-child {
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
 }
 
@@ -16778,19 +16778,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-child {
-  border-bottom: solid theme-color() 1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-child {
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-last-child {
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
@@ -16803,19 +16803,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-first-parent {
-  border-top: solid theme-color() 1px;
+  border-top: solid #337ab7 1px;
   border-top: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-first-parent {
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: var(--chart-line-radius) 0 0 0;
 }
 
 [dir=rtl] .wt-chart-horizontal-first-parent {
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 var(--chart-line-radius) 0 0;
@@ -16826,19 +16826,19 @@ table#tvTreeBorder td#tv_tree_top div {
 }
 
 [dir] .wt-chart-horizontal-last-parent {
-  border-bottom: solid theme-color() 1px;
+  border-bottom: solid #337ab7 1px;
   border-bottom: var(--chart-line);
 }
 
 [dir=ltr] .wt-chart-horizontal-last-parent {
-  border-left: solid theme-color() 1px;
+  border-left: solid #337ab7 1px;
   border-left: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 0 var(--chart-line-radius);
 }
 
 [dir=rtl] .wt-chart-horizontal-last-parent {
-  border-right: solid theme-color() 1px;
+  border-right: solid #337ab7 1px;
   border-right: var(--chart-line);
   border-radius: 0 0 0 0;
   border-radius: 0 0 var(--chart-line-radius) 0;
@@ -17246,7 +17246,7 @@ a:hover, .btn-link:hover, .nav-link:hover {
   --sex-f-fg: #ffbdd3;
   --sex-m-fg: #abd3f2;
   --sex-u-fg: #c6c6c6;
-  --chart-line: solid theme-color() 1px;
+  --chart-line: solid #337ab7 1px;
   --chart-line-radius: 0;
 }
 
@@ -17276,8 +17276,8 @@ a.gallery {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .btn-primary, .wt-block-content-user_messages form button[type=submit],
 .btn-primary a,
@@ -17301,8 +17301,8 @@ a.gallery {
   color: #f9f9f9;
 }
 [dir] .btn-primary:hover, [dir] .wt-block-content-user_messages form button[type=submit]:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 
 [dir] .btn-secondary, [dir] .hideShowPassword-wrapper button {
@@ -17439,8 +17439,8 @@ caption {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .wt-page-menu-button,
 .wt-page-menu-button a,
@@ -17461,8 +17461,8 @@ caption {
   color: #f9f9f9;
 }
 [dir] .wt-page-menu-button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 
 .wt-page-menu-items {
@@ -17514,7 +17514,7 @@ caption {
 [dir] .wt-header-wrapper {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), to(#f9f9f9));
   background: linear-gradient(#fff 0, #f9f9f9 100%);
-  border-top: 5px solid theme-color(primary);
+  border-top: 5px solid #337ab7;
   border-bottom: 1px solid #e9ecef;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
 }
@@ -17617,8 +17617,8 @@ caption {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .wt-header-wrapper .jc-header-content-right .wt-header-search .wt-header-search-button,
 .wt-header-wrapper .jc-header-content-right .wt-header-search .wt-header-search-button a,
@@ -17639,8 +17639,8 @@ caption {
   color: #f9f9f9;
 }
 [dir] .wt-header-wrapper .jc-header-content-right .wt-header-search .wt-header-search-button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 .wt-header-wrapper .jc-header-content-right .wt-secondary-navigation {
   -webkit-box-flex: 0;
@@ -17692,8 +17692,8 @@ caption {
 }
 @media (min-width: 768px) {
   [dir] .wt-header-wrapper .dropdown-item.active {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-    background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+    background: linear-gradient(#337ab7 0, #1f496e 50%);
   }
   .wt-header-wrapper .dropdown-item.active,
 .wt-header-wrapper .dropdown-item.active a,
@@ -17714,8 +17714,8 @@ caption {
     color: #f9f9f9;
   }
   [dir] .wt-header-wrapper .dropdown-item.active:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-    background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+    background: linear-gradient(#296292, #143149 100%);
   }
 }
 
@@ -17726,8 +17726,8 @@ caption {
     border: 1px solid #337ab7;
     border-radius: 0.25rem;
     padding: 0.375rem 0.75rem;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-    background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+    background: linear-gradient(#337ab7 0, #1f496e 50%);
   }
   .wt-genealogy-menu .nav-link.jc-nav-link-active,
 .wt-genealogy-menu .nav-link.jc-nav-link-active a,
@@ -17748,11 +17748,11 @@ caption {
     color: #f9f9f9;
   }
   [dir] .wt-genealogy-menu .nav-link.jc-nav-link-active:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-    background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+    background: linear-gradient(#296292, #143149 100%);
   }
   [dir] .wt-genealogy-menu .nav-link:hover {
-    background: theme-color("secondary");
+    background: #e9ecef;
   }
 }
 @media (max-width: 575.98px) {
@@ -17811,8 +17811,8 @@ caption {
   border: 1px solid #337ab7;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
   border-radius: 0 !important;
   margin: 0 0.25rem;
 }
@@ -17835,8 +17835,8 @@ caption {
   color: #f9f9f9;
 }
 [dir] .wt-user-menu .nav-link:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 [dir] .wt-user-menu .menu-login .nav-link, [dir] .wt-user-menu .menu-login .active, [dir] .wt-user-menu .menu-logout .nav-link, [dir] .wt-user-menu .menu-logout .active {
   border: 1px solid #e9ecef;
@@ -18384,7 +18384,7 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 }
 [dir] .wt-side-blocks > div:not(:last-child) {
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid theme-color();
+  border-bottom: 1px solid #337ab7;
   border-radius: 0;
 }
 
@@ -18450,8 +18450,8 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   padding-bottom: 0;
 }
 [dir] #individual-names .card:first-of-type .card-header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 #individual-names .card:first-of-type .card-header,
 #individual-names .card:first-of-type .card-header a,
@@ -18472,15 +18472,15 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   color: #f9f9f9;
 }
 [dir] #individual-names .card:first-of-type .card-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 #sidebar .card-header {
   line-height: 1.8rem;
 }
 [dir] #sidebar .card-header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
@@ -18503,8 +18503,8 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   color: #f9f9f9;
 }
 [dir] #sidebar .card-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 form .card-header {
   color: #212529;
@@ -19029,8 +19029,8 @@ form .card-header {
   margin-top: 1rem;
 }
 [dir] .page-item.active .page-link {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .page-item.active .page-link,
 .page-item.active .page-link a,
@@ -19051,8 +19051,8 @@ form .card-header {
   color: #f9f9f9;
 }
 [dir] .page-item.active .page-link:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 .page-item.disabled .page-link {
   color: #adb5bd;
@@ -19080,8 +19080,8 @@ form .card-header {
 }
 
 [dir] table.dataTable thead tr:last-child {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 table.dataTable thead tr:last-child,
 table.dataTable thead tr:last-child a,
@@ -19102,8 +19102,8 @@ table.dataTable thead tr:last-child:hover {
   color: #f9f9f9;
 }
 [dir] table.dataTable thead tr:last-child:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 table.dataTable thead tr:last-child th {
   vertical-align: top;
@@ -19247,8 +19247,8 @@ table {
   border: 1px solid #ced4da;
 }
 [dir] .jc-stories-table thead tr {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .jc-stories-table thead tr,
 .jc-stories-table thead tr a,
@@ -19269,8 +19269,8 @@ table {
   color: #f9f9f9;
 }
 [dir] .jc-stories-table thead tr:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 .jc-stories-table thead tr th {
   vertical-align: top;
@@ -19315,8 +19315,8 @@ table {
   background: linear-gradient(#e9ecef 0%, #ced4da, #adb5bd 100%);
 }
 [dir] .nav-tabs .nav-link.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, theme-color(primary)), color-stop(50%, theme-color-level(primary, 4)));
-  background: linear-gradient(theme-color(primary) 0, theme-color-level(primary, 4) 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #337ab7), color-stop(50%, #1f496e));
+  background: linear-gradient(#337ab7 0, #1f496e 50%);
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active a,
@@ -19337,8 +19337,8 @@ table {
   color: #f9f9f9;
 }
 [dir] .nav-tabs .nav-link.active:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(theme-color-level(primary, 2)), to(theme-color-level(primary, 6)));
-  background: linear-gradient(theme-color-level(primary, 2), theme-color-level(primary, 6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#296292), to(#143149));
+  background: linear-gradient(#296292, #143149 100%);
 }
 [dir] .nav-tabs .nav-link.text-muted {
   background: #f9f9f9;
@@ -19361,7 +19361,7 @@ table {
     background: transparent;
   }
   .nav-tabs .nav-link:hover {
-    color: theme-color();
+    color: #337ab7;
   }
   [dir] .nav-tabs .nav-link.active {
     background: #f9f9f9;
@@ -19708,7 +19708,7 @@ table {
 }
 
 .osm-sidebar .gchart {
-  color: theme-color();
+  color: #337ab7;
 }
 
 [dir] .osm-sidebar .gchart {
@@ -19824,7 +19824,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox {
   position: relative;
 }
 [dir] div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox, [dir] div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox:hover, [dir] div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox, [dir] div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:hover {
-  background-color: theme-color() !important;
+  background-color: #337ab7 !important;
 }
 div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox a, div[id^=caldiv] > table table tr:not(:first-child) td.descriptionbox a:hover,
 div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox a,
@@ -19917,7 +19917,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   background-color: #fff;
 }
 [dir] .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: theme-color(primary);
+  background-color: #337ab7;
 }
 .select2-container--default .select2-search__field {
   color: #495057;

@@ -7,7 +7,7 @@
     .gchart {
         border: $border-width dashed $jc-osm-sidebar-border-color;
         margin-bottom: .5rem;
-        color: theme-color();
+        color: $jc-primary;
 
         .label {
             font-weight: 700;

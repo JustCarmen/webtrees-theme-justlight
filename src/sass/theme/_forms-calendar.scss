@@ -60,7 +60,7 @@ div[id^="calendar-widget"] {
 
           &,
           &:hover {
-            background-color: theme-color() !important;
+            background-color: $jc-primary !important;
           }
 
           a {

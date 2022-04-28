@@ -36,7 +36,7 @@
     --sex-f-fg: #{$jc-female-border};
     --sex-m-fg: #{$jc-male-border};
     --sex-u-fg: #{$jc-unknown-border};
-    --chart-line: solid #{theme-color()} #{$border-width};
+    --chart-line: solid #{$jc-primary} #{$border-width};
     --chart-line-radius: 0;
 }
 
