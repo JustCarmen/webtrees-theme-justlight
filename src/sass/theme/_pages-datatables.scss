@@ -50,12 +50,15 @@
                 vertical-align: top;
             }
         }
+
+        // patch to fix striped datatable background error
+        tbody tr.odd {
+            --bs-table-accent-bg: transparent;
+        }
     }
 
     @at-root .wt-table-individual,
     .wt-table-family {
-        border: 0;
-
         thead {
             tr {
                 &:first-child {

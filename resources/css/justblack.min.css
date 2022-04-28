@@ -19558,10 +19558,10 @@ table.dataTable thead tr:last-child:hover {
 table.dataTable thead tr:last-child th {
   vertical-align: top;
 }
-
-[dir] .wt-table-individual, [dir] .wt-table-family {
-  border: 0;
+table.dataTable tbody tr.odd {
+  --bs-table-accent-bg: transparent;
 }
+
 [dir] .wt-table-individual thead tr:first-child th, [dir] .wt-table-family thead tr:first-child th {
   border: 0 !important;
   padding: 0 !important;
