@@ -1,11 +1,12 @@
 // grid
 @mixin jc-container-fluid {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-        @include media-breakpoint-up($breakpoint) {
-            max-width: 100vw;
-            padding-right: $grid-gutter-width;
-            padding-left: $grid-gutter-width;
-        }
+    max-width: 100vw;
+    padding-right: $grid-gutter-width * 2;
+    padding-left: $grid-gutter-width * 2;
+
+    @include media-breakpoint-down(md) {
+        padding-right: $grid-gutter-width;
+        padding-left: $grid-gutter-width;
     }
 }
 
