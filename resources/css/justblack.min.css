@@ -2214,7 +2214,7 @@ progress {
 }
 .table, .wt-route-CalendarPage table {
   --bs-table-bg: transparent;
-  --bs-table-accent-bg: #3b3b3b;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #dee2e6;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #dee2e6;
@@ -17507,7 +17507,7 @@ caption {
 
 [dir] .wt-page-options {
   border: 1px solid #545454;
-  background: #3b3b3b;
+  background: #e9ecef;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -19243,10 +19243,10 @@ table {
   border: 0;
 }
 [dir] .wt-route-CalendarPage table .topbottombar {
-  background-color: #3b3b3b;
+  background-color: #e9ecef;
 }
 [dir] .wt-route-CalendarPage .wt-page-content table {
-  background-color: #3b3b3b;
+  background-color: #e9ecef;
   border: 0;
 }
 [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .wt-route-CalendarPage .wt-page-content table td {
@@ -19886,7 +19886,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 
 [dir] .select2-dropdown {
-  background-color: #3b3b3b;
+  background-color: #e9ecef;
 }
 
 [dir=ltr] .input-group-append + .input-group .twitter-typeahead .form-control, [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-route-EditName input[class=NAME], [dir=ltr] .wt-route-EditName .input-group-append + .input-group .twitter-typeahead input[class=NAME], [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-route-ReportSetupPage input[type=text], [dir=ltr] .wt-route-ReportSetupPage .input-group-append + .input-group .twitter-typeahead input[type=text], [dir=ltr] .input-group-append + .input-group .twitter-typeahead .wt-block-content-user_messages form select, [dir=ltr] .wt-block-content-user_messages form .input-group-append + .input-group .twitter-typeahead select {

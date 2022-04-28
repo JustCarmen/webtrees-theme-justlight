@@ -2214,7 +2214,7 @@ progress {
 }
 .table, .wt-route-CalendarPage table {
   --bs-table-bg: transparent;
-  --bs-table-accent-bg: #f9f9f9;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #212529;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #212529;

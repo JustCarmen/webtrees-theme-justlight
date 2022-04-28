@@ -47,8 +47,6 @@ $jc-dropdown-toggle-bg: $jc-black;
 $jc-dropdown-toggle-border: $jc-border-color;
 
 // Tables
-$jc-table-accent-bg: lighten($jc-theme-dark, 5%);
-
 $jc-facts-table-th-bg: $jc-theme-dark;
 $jc-facts-table-td-bg: $jc-theme-darker;
 $jc-facts-table-link-color: darken($jc-body-color, 10%);
@@ -64,8 +62,6 @@ $jc-page-item-disabled-bg: darken($jc-theme-medium-dark, 10%);
 $jc-card-bg: $jc-theme-darker;
 
 // Forms
-$jc-page-options-bg: $jc-table-accent-bg;
-
 $jc-input-bg: $jc-theme-darker;
 $jc-input-color: darken($jc-body-color, 5%);
 $jc-input-border-color: lighten($jc-theme-medium-dark, 10%);
