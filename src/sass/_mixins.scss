@@ -61,7 +61,7 @@
 
 // Dropdown menu for small screens
 @mixin jc-dropdown-menu-sm {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         .dropdown-menu {
             &.show {
                 position: relative;

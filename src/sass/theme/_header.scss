@@ -31,7 +31,7 @@
 .wt-header-wrapper {
     @include jc-header-gradient;
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         &.sticky-top {
             position: relative;
         }
@@ -61,7 +61,7 @@
     .jc-header-content-right {
         flex: 1 0 auto;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             flex: 0;
         }
 
@@ -109,7 +109,7 @@
         }
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
         .dropdown-item.active {
             @include jc-theme-gradient-primary();
         }

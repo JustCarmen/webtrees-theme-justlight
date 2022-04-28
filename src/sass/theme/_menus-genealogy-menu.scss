@@ -1,7 +1,7 @@
 /** JustLight Theme - Menu's */
 .wt-genealogy-menu {
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
         .nav-link {
             &.jc-nav-link-active {
                 @include jc-button-gradient-primary();

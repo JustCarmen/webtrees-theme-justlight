@@ -16,11 +16,11 @@
         margin-top: 0; // no margin because of sidebar border
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
         @include jc-border($jc-footer-border-color, 'top');
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         background-color: $jc-footer-bg;
         margin-bottom: 1.5rem;
         min-height: 100px;

@@ -117,7 +117,7 @@ dd {
         max-height: 65vh;
         overflow-x: hidden;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             top: 0;
         }
     }

@@ -42,7 +42,7 @@
 .nav-tabs {
     .nav-link {
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             &.active {
                 background: darken($jc-theme-dark, 5%);
                 color: $jc-primary;

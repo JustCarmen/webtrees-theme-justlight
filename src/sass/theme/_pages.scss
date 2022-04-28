@@ -27,7 +27,7 @@
         .wt-main-container {
             @include jc-container-fluid;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
 
                 // individual page main section - treat as col-sm-9
                 .col-sm-8 {
@@ -64,7 +64,7 @@
 
     // See: https://github.com/JustCarmen/webtrees-theme-justlight/issues/61
     &-PedigreeMapModule {
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             .wt-footers {
                 display: none !important;
             }
