@@ -58,3 +58,7 @@
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+
+// ==============================================================================
+// *** Bootstrap migration (quick fix to migrate from bootstrap 4 to bootstrap 5)
+@import "bs4to5";
