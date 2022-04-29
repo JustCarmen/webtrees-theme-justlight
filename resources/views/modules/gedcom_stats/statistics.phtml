@@ -9,12 +9,13 @@
  */
 
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\View;
 
 ?>
 
 <?php if ($show_last_update) : ?>
     <p class="card-text">
-        <?= I18N::translate('This family tree was last updated on %s.', strip_tags($stats->gedcomUpdated())) ?>
+        <?= I18N::translate('This family tree was last updated on %s.', '#gedcomUpdated#') ?>
     </p>
 <?php endif ?>
 
@@ -22,55 +23,55 @@ use Fisharebest\Webtrees\I18N;
 <ul class="jc-stats-list list-inline">
     <?php if ($stat_indi) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Individuals') ?>:&nbsp;<?= $stats->totalIndividuals() ?>
+            <?= I18N::translate('Individuals') ?>: #totalIndividuals#
         </li>
         <li class="list-inline-item">
-            <?= I18N::translate('Males') ?>:&nbsp;<?= $stats->totalSexMales() ?> (<?= $stats->totalSexMalesPercentage() ?>)
+            <?= I18N::translate('Males') ?>: #totalSexMales# (#totalSexMalesPercentage#)
         </li>
         <li class="list-inline-item">
-            <?= I18N::translate('Females') ?>:&nbsp;<?= $stats->totalSexFemales() ?> (<?= $stats->totalSexFemalesPercentage() ?>)
+            <?= I18N::translate('Females') ?>: #totalSexFemales# (#totalSexFemalesPercentage#)
         </li>
     <?php endif ?>
 
     <?php if ($stat_surname) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Surnames') ?>:&nbsp;<?= $stats->totalSurnames() ?>
+            <?= I18N::translate('Surnames') ?>: #totalSurnames#
         </li>
     <?php endif ?>
 
     <?php if ($stat_fam) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Families') ?>:&nbsp;<?= $stats->totalFamilies() ?>
+            <?= I18N::translate('Families') ?>: #totalFamilies#
         </li>
     <?php endif ?>
 
     <?php if ($stat_sour) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Sources') ?>:&nbsp;<?= $stats->totalSources() ?>
+            <?= I18N::translate('Sources') ?>: #totalSources#
         </li>
     <?php endif ?>
 
     <?php if ($stat_media) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Media objects') ?>:&nbsp;<?= $stats->totalMedia() ?>
+            <?= I18N::translate('Media objects') ?>: #totalMedia#
         </li>
     <?php endif ?>
 
     <?php if ($stat_repo) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Repositories') ?>:&nbsp;<?= $stats->totalRepositories() ?>
+            <?= I18N::translate('Repositories') ?>: #totalRepositories#
         </li>
     <?php endif ?>
 
     <?php if ($stat_events) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Events') ?>:&nbsp;<?= $stats->totalEvents() ?>
+            <?= I18N::translate('Events') ?>: #totalEvents#
         </li>
     <?php endif ?>
 
     <?php if ($stat_users) : ?>
         <li class="list-inline-item">
-            <?= I18N::translate('Users') ?>:&nbsp;<?= $stats->totalUsers() ?>
+            <?= I18N::translate('Users') ?>: #totalUsers#
         </li>
     <?php endif ?>
 </ul>
@@ -88,8 +89,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Earliest birth') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->firstBirth()) ?>
+                <td class="jc-gedcom-stats">
+                    #firstBirth#
                 </td>
             </tr>
         <?php endif ?>
@@ -99,8 +100,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Latest birth') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->lastBirth()) ?>
+                <td class="jc-gedcom-stats">
+                    #lastBirth#
                 </td>
             </tr>
         <?php endif ?>
@@ -110,8 +111,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Earliest death') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->firstDeath()) ?>
+                <td class="jc-gedcom-stats">
+                    #firstDeath#
                 </td>
             </tr>
         <?php endif ?>
@@ -121,8 +122,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Latest death') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->lastDeath()) ?>
+                <td class="jc-gedcom-stats">
+                    #lastDeath#
                 </td>
             </tr>
         <?php endif ?>
@@ -132,8 +133,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Individual who lived the longest') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->longestLife()) ?>
+                <td class="jc-gedcom-stats">
+                    #longestLife#
                 </td>
             </tr>
         <?php endif ?>
@@ -143,10 +144,10 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Average age at death') ?>
                 </th>
-                <td>
-                    <?= $stats->averageLifespan() ?>
-                    (<?= strtolower(I18N::translate('Males')) ?>:&nbsp;<?= $stats->averageLifespanMale() ?>;
-                    <?= strtolower(I18N::translate('Females')) ?>:&nbsp;<?= $stats->averageLifespanFemale() ?>)
+                <td class="jc-gedcom-stats">
+                    #averageLifespan#
+                    (<?= strtolower(I18N::translate('Males')) ?>: #averageLifespanMale#
+                    <?= strtolower(I18N::translate('Females')) ?>: #averageLifespanFemale#)
                 </td>
             </tr>
         <?php endif ?>
@@ -156,11 +157,9 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Family with the most children') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->largestFamily()) ?>
-                    <?php if (is_numeric($stats->largestFamilySize())): ?>
-                        &nbsp;(<?= I18N::plural('%s child', '%s children', $stats->largestFamilySize(), I18N::number($stats->largestFamilySize())) ?>)
-                    <?php endif ?>
+                    <td class="jc-gedcom-stats">
+                        #largestFamily#(#largestFamilySize# <?= strtolower(I18N::translate('Children')) ?>)
+                    </td>
                 </td>
             </tr>
         <?php endif ?>
@@ -170,8 +169,8 @@ use Fisharebest\Webtrees\I18N;
                 <th scope="row">
                     <?= I18N::translate('Average number of children per family') ?>
                 </th>
-                <td>
-                    <?= str_replace("<br>", ":&nbsp;", $stats->averageChildren()) ?>
+                <td class="jc-gedcom-stats">
+                    #averageChildren#
                 </td>
             </tr>
         <?php endif ?>
@@ -192,3 +191,13 @@ use Fisharebest\Webtrees\I18N;
         </p>
     </div>
 <?php endif ?>
+
+<?php View::push('javascript') ?>
+<script>
+    $('.jc-gedcom-stats')
+        .find('b').addClass('pe-1').end()
+        .find('br').addClass('d-none').end()
+        .find('div').addClass('d-inline-block').end()
+        .find('em').addClass('d-inline-block pe-1');
+</script>
+<?php View::endpush() ?>
