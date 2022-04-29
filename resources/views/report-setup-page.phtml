@@ -23,22 +23,25 @@ use Fisharebest\Webtrees\I18N;
 
     <?php foreach ($inputs as $n => $input) : ?>
         <input type="hidden" name="varnames[]" value="<?= e($input['name']) ?>">
-        <div class="row form-group">
+        <div class="row form-group mb-3">
             <label class="col-sm-3 col-form-label wt-page-options-label" for="input-<?= $n ?>">
                 <?= I18N::translate($input['value']) ?>
             </label>
             <div class="col-sm-9 wt-page-options-value">
-                <div class="input-group">
-                    <?= $input['control'] ?>
-                    <div class="input-group-append">
+                <?php if ($input['extra'] !== ''): ?>
+                    <div class="input-group">
+                        <?= $input['control'] ?>
                         <?= $input['extra'] ?>
                     </div>
-                </div>
+                    <div id="caldivinput-<?= e($n) ?>" style="position:absolute;visibility:hidden;background-color:white;z-index:1000"></div>
+                <?php else: ?>
+                    <?= $input['control'] ?>
+                <?php endif ?>
             </div>
         </div>
     <?php endforeach ?>
 
-    <div class="row form-group">
+    <div class="row form-group mb-3">
         <div class="col-sm-3 col-form-label wt-page-options-label">
             <?= I18N::translate('Format') ?>
         </div>
@@ -63,7 +66,7 @@ use Fisharebest\Webtrees\I18N;
         </div>
     </div>
 
-    <div class="row form-group">
+    <div class="row form-group mb-3">
         <div class="col-sm-3 col-form-label wt-page-options-label"></div>
         <div class="col-sm-9 wt-page-options-value">
             <?php if ($destination === 'download') : ?>

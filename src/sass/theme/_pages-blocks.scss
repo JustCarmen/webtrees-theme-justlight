@@ -71,7 +71,6 @@
     }
 
     form {
-        @extend .form-inline;
         @extend .mb-3;
 
         select {

@@ -38,7 +38,6 @@
     "postcss-replace": "^2.0.0",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
-    "select2": "4.0.13",
     "tom-select": "^2.0.1",
     "typeahead.js-bootstrap4-css": "^1.0.0",
     "webpack": "^5.72.0",

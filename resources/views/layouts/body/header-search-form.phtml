@@ -10,10 +10,8 @@ use Fisharebest\Webtrees\Http\RequestHandlers\SearchQuickAction;
     <div class="input-group">
         <label class="visually-hidden" for="quick-search"><?= I18N::translate('Search') ?></label>
         <input type="search" class="form-control quick-search wt-header-search-field" name="query" size="15" placeholder="<?= I18N::translate('Search') ?>">
-        <div class="input-group-append">
-            <button type="submit" class="btn btn-primary wt-header-search-button">
-                <?= view('icons/search') ?>
-            </button>
-        </div>
+        <button type="submit" class="btn btn-primary wt-header-search-button">
+            <?= view('icons/search') ?>
+        </button>
     </div>
 </form>

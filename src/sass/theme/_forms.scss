@@ -1,7 +1,10 @@
 /** JustLight Theme - Form elements */
 @import "forms-calendar";
 @import "forms-modals";
-@import "forms-select2";
+
+form label {
+    margin-bottom: .5rem;
+}
 
 .hideShowPassword-wrapper {
     button {
@@ -10,22 +13,6 @@
         border-color: $jc-theme-medium-dark;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-    }
-}
-
-.form-row {
-    margin-bottom: .5rem;
-}
-
-.wt-route-ReportSetupPage {
-    input[type="text"] {
-        @extend .form-control;
-    }
-
-    .input-group-append {
-        .btn-link {
-            @extend .input-group-text;
-        }
     }
 }
 
