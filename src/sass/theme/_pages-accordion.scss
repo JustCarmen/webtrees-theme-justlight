@@ -1,0 +1,37 @@
+/** JustLight Theme - Specific pages - Accordion */
+.accordion-item {
+    /** Individual page Sidebar */
+    #sidebar & {
+        font-size: $font-size-sm;
+    }
+}
+
+.accordion-header {
+
+    /** Individual page name card (first) */
+    #individual-names .accordion-item:first-of-type & {
+        @include jc-theme-gradient-primary();
+    }
+
+    /** Individual page Sidebar */
+    #sidebar & {
+        @include jc-theme-gradient-primary();
+    }
+}
+
+.accordion-body {
+
+    #sidebar-content-family_nav & {
+        padding: 0;
+    }
+
+    .wt-sidebar-family-navigator {
+        .wt-family-navigator-label {
+            width: $jc-facts-table-header-width * 2;
+        }
+
+        .dropdown-menu {
+            @include jc-dropdown-toggle;
+        }
+    }
+}
