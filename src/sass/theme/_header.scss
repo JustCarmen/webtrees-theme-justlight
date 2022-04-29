@@ -41,7 +41,7 @@
         @include jc-container-fluid;
     }
 
-    .jc-header-content-left {
+    .jc-header-content-start {
         flex: 1 1 auto;
 
         .wt-site-logo {
@@ -58,7 +58,7 @@
         }
     }
 
-    .jc-header-content-right {
+    .jc-header-content-end {
         flex: 1 0 auto;
 
         @include media-breakpoint-down(md) {
