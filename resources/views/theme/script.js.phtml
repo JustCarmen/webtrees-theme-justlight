@@ -114,8 +114,8 @@
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
 
-    // Badges static page - maybe we should restyle all badges
-    $('.wt-statistics-chart').find('.badge-secondary').addClass('badge-dark').removeClass('badge-pill', 'badge-secondary');
+    // Badges static page
+    $('.wt-statistics-chart').find('.badge.bg-secondary').addClass('bg-dark').removeClass('rounded-pill', 'bg-secondary');
 
     // Icons - Use fontawesome. These icons do not have a view to alter
     $('.icon-indis').addClass('fas fa-user');
@@ -127,8 +127,8 @@
     $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
 
     // Use the default bootstrap badge class for the odometer
-    $('.jc-palette-justlight').find('.odometer').addClass('badge badge-dark');
-    $('.jc-palette-justblack').find('.odometer').addClass('badge badge-light');
+    $('.jc-palette-justlight').find('.odometer').addClass('badge bg-dark');
+    $('.jc-palette-justblack').find('.odometer').addClass('badge bg-light');
 
     // Place the cookie warning after the footer. The cookie warning is part of the privacy-policy footer
     $('footer').after($('#cookie-warning'));
