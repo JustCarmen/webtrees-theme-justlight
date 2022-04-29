@@ -114,8 +114,18 @@
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
 
-    // Badges static page
-    $('.wt-statistics-chart').find('.badge.bg-secondary').addClass('bg-dark').removeClass('rounded-pill', 'bg-secondary');
+    // Badges
+    $('.jc-palette-justlight')
+        .find('.wt-statistics-chart, .menu-clippings-cart')
+        .find('.badge').addClass('bg-dark bg-gradient').removeClass('rounded-pill bg-secondary');
+
+    $('.jc-palette-justblack')
+        .find('.wt-statistics-chart, .menu-clippings-cart')
+        .find('.badge').addClass('bg-light bg-gradient text-dark').removeClass('rounded-pill bg-secondary');
+
+    // Use the default bootstrap badge class for the odometer
+    $('.jc-palette-justlight').find('.odometer').addClass('badge bg-dark bg-gradient');
+    $('.jc-palette-justblack').find('.odometer').addClass('badge bg-light bg-gradient text-dark');
 
     // Icons - Use fontawesome. These icons do not have a view to alter
     $('.icon-indis').addClass('fas fa-user');
@@ -125,10 +135,6 @@
 
     // Prevent underlining when hovering over icons
     $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
-
-    // Use the default bootstrap badge class for the odometer
-    $('.jc-palette-justlight').find('.odometer').addClass('badge bg-dark');
-    $('.jc-palette-justblack').find('.odometer').addClass('badge bg-light');
 
     // Place the cookie warning after the footer. The cookie warning is part of the privacy-policy footer
     $('footer').after($('#cookie-warning'));
