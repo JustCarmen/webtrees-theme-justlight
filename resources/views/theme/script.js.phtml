@@ -84,7 +84,7 @@
     $('#individual-names .card-body').find($('[class^=fact_]')).prev('dl').removeClass('mb-0');
 
     // Individual page Stories Tab
-    $('.wt-tab-stories .story_title').addClass('h3 text-left').removeClass('text-center');
+    $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
 
     // Individual page Facts Tab add fact button / paste fact button
     // See add-fact-row.phtml en paste-fact-row.phtml
@@ -109,7 +109,7 @@
         .find('hr').addClass('my-0').end()
         .find('a.btn-link').addClass('jc-icon-edit').end()
         .find('button.btn-link').addClass('jc-icon-delete').end()
-        .find('form').addClass('text-right');
+        .find('form').addClass('text-end');
 
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
