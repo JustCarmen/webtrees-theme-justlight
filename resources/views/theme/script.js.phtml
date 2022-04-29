@@ -116,8 +116,10 @@
 
     // Badges
     $('.jc-palette-justlight')
-        .find('.wt-statistics-chart, .menu-clippings-cart')
-        .find('.badge').addClass('bg-dark bg-gradient').removeClass('rounded-pill bg-secondary');
+        .find('.wt-statistics-chart')
+        .find('.badge').addClass('bg-dark bg-gradient').removeClass('rounded-pill bg-secondary')
+
+    $('.menu-clippings-cart, .nav-link').find('.badge').addClass('text-dark');
 
     $('.jc-palette-justblack')
         .find('.wt-statistics-chart, .menu-clippings-cart')
