@@ -10,27 +10,27 @@ let config = require('./webpack.mix.config');
 const path = require("path");
 
 //https://github.com/postcss/autoprefixer
-const postcss_autoprefixer = require("autoprefixer")();
+const postcssAutoprefixer = require("autoprefixer")();
 
 //https://github.com/jakob101/postcss-inline-rtl
-const postcss_rtl = require("@mjhenkes/postcss-rtl")();
+const postcssRTLCSS = require('postcss-rtlcss')({safeBothPrefix: true});
 
 //https://github.com/gridonic/postcss-replace
-const postcss_replace = require("postcss-replace")({
+const postcssReplace = require("postcss-replace")({
     data : {
         webtrees: config.webtrees_css_dir
     }
 });
 
 //https://github.com/bezoerb/postcss-image-inliner
-const postcss_image_inliner = require("postcss-image-inliner")({
-    assetPaths: [config.images_dir],
+const postcssImageInliner = require('postcss-image-inliner')({
+    assetPaths: [config.images_dir, config.webtrees_css_dir],
     maxFileSize: 0,
 });
 
-//https://github.com/postcss/postcss-custom-properties
-//Enable CSS variables in IE
-const postcss_custom_properties = require("postcss-custom-properties")();
+// https://github.com/postcss/postcss-custom-properties
+// Enable CSS variables in IE
+const postcssCustomProperties = require('postcss-custom-properties')();
 
 if(process.env.NODE_ENV === 'production') {
     mix
@@ -47,11 +47,11 @@ if(process.env.NODE_ENV === 'production') {
     .options({
         processCssUrls: false,
         postCss: [
-            postcss_replace,
-            postcss_rtl,
-            postcss_autoprefixer,
-            postcss_image_inliner,
-            postcss_custom_properties,
+            postcssRTLCSS,
+            postcssAutoprefixer,
+            postcssReplace,
+            postcssImageInliner,
+            postcssCustomProperties
         ]
     })
     .webpackConfig({

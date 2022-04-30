@@ -12,13 +12,13 @@ let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 
 //https://github.com/bezoerb/postcss-image-inliner
-const postcss_image_inliner = require('postcss-image-inliner')({
+const postcssImageInliner = require('postcss-image-inliner')({
     assetPaths: [config.webtrees_css_dir, config.vendor_build_dir + '/jquery-colorbox/example1/'],
     maxFileSize: 0
 });
 
 //https://www.npmjs.com/package/postcss-discard-comments
-const postcss_discard_comments = require("postcss-discard-comments")();
+const postcssDiscardComments = require("postcss-discard-comments")();
 
 //https://github.com/gregnb/filemanager-webpack-plugin
 const FileManagerPlugin = require('filemanager-webpack-plugin');
@@ -48,8 +48,8 @@ mix
     .options({
         processCssUrls: false,
         postCss: [
-            postcss_image_inliner,
-            postcss_discard_comments
+            postcssImageInliner,
+            postcssDiscardComments
         ]
     })
     .webpackConfig({
