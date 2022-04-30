@@ -41,6 +41,10 @@
         @include jc-container-fluid;
     }
 
+    .wt-header-content {
+        background: transparent;
+    }
+
     .jc-header-content-start {
         flex: 1 1 auto;
 
@@ -88,7 +92,6 @@
         /* Recalculate margins for content */
         margin-top: 1rem;
         margin-bottom: 1rem;
-        @include jc-padding-lr(1);
 
         &.navbar-collapse {
             align-items: flex-start;

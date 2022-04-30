@@ -18016,6 +18016,9 @@ caption {
     padding-right: 1.5rem;
   }
 }
+[dir] .wt-header-wrapper .wt-header-content {
+  background: transparent;
+}
 .wt-header-wrapper .jc-header-content-start {
   -webkit-box-flex: 1;
           flex: 1 1 auto;
@@ -18090,14 +18093,6 @@ caption {
 [dir] .wt-header-wrapper .wt-primary-navigation {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-[dir=ltr] .wt-header-wrapper .wt-primary-navigation {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-[dir=rtl] .wt-header-wrapper .wt-primary-navigation {
-  padding-right: 1rem;
-  padding-left: 1rem;
 }
 .wt-header-wrapper .wt-primary-navigation.navbar-collapse {
   -webkit-box-align: start;
