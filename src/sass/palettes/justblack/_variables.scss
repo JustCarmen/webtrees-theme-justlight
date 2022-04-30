@@ -62,6 +62,8 @@ $jc-page-item-disabled-bg: darken($jc-theme-medium-dark, 10%);
 $jc-card-bg: $jc-theme-darker;
 
 // Forms
+$jc-page-options-bg: lighten($jc-theme-dark, 5%);
+
 $jc-input-bg: $jc-theme-darker;
 $jc-input-color: darken($jc-body-color, 5%);
 $jc-input-border-color: lighten($jc-theme-medium-dark, 10%);

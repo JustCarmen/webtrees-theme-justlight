@@ -17952,7 +17952,7 @@ caption {
 
 [dir] .wt-page-options {
   border: 1px solid #545454;
-  background: #e9ecef;
+  background: #3b3b3b;
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -19646,10 +19646,10 @@ table {
   border: 0;
 }
 [dir] .wt-route-CalendarPage table .topbottombar {
-  background-color: #e9ecef;
+  background-color: #3b3b3b;
 }
 [dir] .wt-route-CalendarPage .wt-page-content table {
-  background-color: #e9ecef;
+  background-color: #3b3b3b;
   border: 0;
 }
 [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .wt-route-CalendarPage .wt-page-content table td {
