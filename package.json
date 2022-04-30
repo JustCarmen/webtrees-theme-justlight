@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
-    "@mjhenkes/postcss-rtl": "^2.0.0",
     "@popperjs/core": "^2.11.5",
     "autoprefixer": "^10.4.4",
     "beautifymarker": "^1.0.9",
@@ -34,8 +33,8 @@
     "postcss-custom-properties": "^12.1.7",
     "postcss-discard-comments": "^5.1.1",
     "postcss-image-inliner": "^5.0.0",
-    "postcss-import": "^14.1.0",
     "postcss-replace": "^2.0.0",
+    "postcss-rtlcss": "^3.6.3",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "tom-select": "^2.0.1",
