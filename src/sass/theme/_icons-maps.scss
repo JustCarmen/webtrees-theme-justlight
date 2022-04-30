@@ -1,12 +1,12 @@
 /** JustLight Theme - Icons - Map icons */
 .wt-icon-bing-maps {
-    content: url('{{ webtrees }}/icons/bing-maps.png');
+    content: url($jc-webtrees-image-path + '/icons/bing-maps.png');
 }
 
 .wt-icon-google-maps {
-    content: url('{{ webtrees }}/icons/google-maps.png');
+    content: url($jc-webtrees-image-path + '/icons/google-maps.png');
 }
 
 .wt-icon-openstreetmap {
-    content: url('{{ webtrees }}/icons/openstreetmap.png');
+    content: url($jc-webtrees-image-path + '/icons/openstreetmap.png');
 }

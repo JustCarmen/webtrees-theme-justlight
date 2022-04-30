@@ -9,7 +9,7 @@
     // the gray version of the logo is available in the colors theme
     .wt-footer-powered-by {
         a {
-            content: url('{{ webtrees }}/colors/images/powered-by-webtrees.png');
+            content: url($jc-webtrees-image-path + '/colors/images/powered-by-webtrees.png');
         }
     }
 

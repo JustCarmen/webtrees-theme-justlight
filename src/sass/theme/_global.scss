@@ -155,7 +155,7 @@ dd {
  */
  .wt-ajax-load:empty {
     height: 32px;
-    background: url('{{ webtrees }}/images/loading-32x32.gif') no-repeat 50% 50%;
+    background: url($jc-webtrees-image-path + '/images/loading-32x32.gif') no-repeat 50% 50%;
 }
 
 .wt-initial.active {

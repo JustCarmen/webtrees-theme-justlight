@@ -33,7 +33,6 @@
     "postcss-custom-properties": "^12.1.7",
     "postcss-discard-comments": "^5.1.1",
     "postcss-image-inliner": "^5.0.0",
-    "postcss-replace": "^2.0.0",
     "postcss-rtlcss": "^3.6.3",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",

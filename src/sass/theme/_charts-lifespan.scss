@@ -19,7 +19,7 @@
         width: 70px;
         height: 60px;
         display: inline-block;
-        background-image: url('{{ webtrees }}/images/lifespan-decade.png');
+        background-image: url($jc-webtrees-image-path + '/images/lifespan-decade.png');
         background-position-y: bottom;
         background-repeat: no-repeat;
         background-size: 70px 37px;

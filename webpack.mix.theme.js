@@ -15,13 +15,6 @@ const postcssAutoprefixer = require("autoprefixer")();
 //https://github.com/jakob101/postcss-inline-rtl
 const postcssRTLCSS = require('postcss-rtlcss')({safeBothPrefix: true});
 
-//https://github.com/gridonic/postcss-replace
-const postcssReplace = require("postcss-replace")({
-    data : {
-        webtrees: config.webtrees_css_dir
-    }
-});
-
 //https://github.com/bezoerb/postcss-image-inliner
 const postcssImageInliner = require('postcss-image-inliner')({
     assetPaths: [config.images_dir, config.webtrees_css_dir],
@@ -49,7 +42,6 @@ if(process.env.NODE_ENV === 'production') {
         postCss: [
             postcssRTLCSS,
             postcssAutoprefixer,
-            postcssReplace,
             postcssImageInliner,
             postcssCustomProperties
         ]

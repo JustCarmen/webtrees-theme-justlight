@@ -48,7 +48,7 @@
 
     .wt-footer-powered-by {
         a {
-            content: url('{{ webtrees }}/images/powered-by-webtrees.png');
+            content: url($jc-webtrees-image-path + '/images/powered-by-webtrees.png');
         }
     }
 
