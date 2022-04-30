@@ -8,18 +8,16 @@
     $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
     // Individual page main image - add classes for styling purposes
-    $('.wt-route-IndividualPage').find('.col-sm-8 > .row > .col-sm-3').addClass('jc-indi-header-image-container')
+    $('.wt-individual-silhouette')
+        .parent().addClass('jc-indi-silhouette-container')
+        .parent().addClass('jc-indi-header-image-container')
         .find('a[href*="add-fact"]').addClass('jc-icon-add').parent('div').addClass('mt-2').removeClass('text-center');
-    $('.wt-individual-silhouette').parent('.img-thumbnail').addClass('jc-indi-silhouette-container');
-
-    // Remove class from caption (this class cannot be overwritten with css)
-    $('caption').removeClass('text-center');
 
     // Descendants chart - add classes for styling purposes
     $('.wt-chart-descendants [id^="fam"]').each(function () {
         $(this).addClass('jc-chart-descendants-family'),
-            $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent'),
-            $(this).find('.d-flex:first').find('.wt-chart-vertical-indent:first').addClass('jc-chart-first-indent')
+            $(this).find('.wt-chart-box:first').addClass('jc-chart-box-parent')
+            $(this).find('.d-flex:first').find('.wt-chart-horizontal-indent:first').addClass('jc-chart-first-indent')
     });
 
     // Ancestors chart - add classes for styling purposes
@@ -28,41 +26,38 @@
             .find('.d-flex:first')
             .addClass('mb-2')
             .next('.d-flex')
-            .find('.wt-chart-vertical-indent')
+            .find('.wt-chart-horizontal-indent')
             .addClass('jc-chart-first-indent')
     });
 
-    // General indentation - only indent elements when preceded by a collapse icon
-    $('.indent').parents('.collapse').find('.indent').addClass('jc-indent-collapse');
+    // Style the collapsable fact items
+    $('[class^="wt-fact-"] [id^="collapse-"]').addClass('jc-fact-collapse');
 
      // Notes treatment
     $('.fact_NOTE').each(function(){
 
         var $this = $(this);
 
-        // Special treatment for note facts. The do not have a indent class while they are preceded by a collapse icon
-        var $collapse = $this.next('.collapse');
-        $collapse.addClass('indent jc-indent-collapse');
-
         // Give the single note-title a class to work with
         var $title = $this.contents().not($this.children());
         if ($title.text().length > 1) {
-            $title.wrap('<span class="note-title">');
+            $title.wrap('<div class="jc-note-title ps-4 collapse">');
         }
 
         // Give the shared note-title a class to work with
-        var $title = $this.find('.label').next('a').find('span');
+        var $title = $this.find('a bdi');
         if ($title.text().length > 1) {
-            $title.addClass('note-title');
+            $title.addClass('jc-note-title collapse');
         }
 
         // Toggle the title to expand when the full text is collapsed and vice versa
-        $title = $this.find('.note-title');
+        $title = $this.find('.jc-note-title');
+        $collapse = $this.next('.jc-fact-collapse');
 
         if ($collapse.hasClass('show')) {
-            $title.addClass('collapse');
+            $title.removeClass('show');
         } else {
-            $title.addClass('collapse show');
+            $title.addClass('show');
         }
 
         $this.find('.wt-icon-expand').on('click', function() {
@@ -74,22 +69,14 @@
     });
 
     // Individual page Facts Tab, Name Card / Family page - restyle gallery caption
-    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .card-body')
+    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .accordion-collapse')
         .find('.gallery').parents('.d-flex').each(function() {
-            $(this).addClass('flex-column').removeClass('align-items-center');
-            $(this).children('div').eq(1).find('a:first').addClass('jc-gallery-caption');
+            $(this).addClass('row');
+            $(this).find('bdi').addClass('jc-gallery-caption');
         });
-
-    // Individual page Name Card, add space between data list and additional facts
-    $('#individual-names .card-body').find($('[class^=fact_]')).prev('dl').removeClass('mb-0');
 
     // Individual page Stories Tab
     $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
-
-    // Individual page Facts Tab add fact button / paste fact button
-    // See add-fact-row.phtml en paste-fact-row.phtml
-    // Replace btn-light for btn-secondary class. This fits better in our palettes.
-    $('.input-group .btn-light').addClass('btn-secondary border-secondary').removeClass('btn-light');
 
     // Markdown table style
     $('.markdown table').each(function () {
@@ -130,17 +117,13 @@
     $('.jc-palette-justblack').find('.odometer').addClass('badge bg-light bg-gradient text-dark');
 
     // Icons - Use fontawesome. These icons do not have a view to alter
-    $('.icon-indis').addClass('fas fa-user');
-    $('.icon-mypage').addClass('fas fa-tachometer-alt');
-    $('.icon-selected').addClass('fas fa-check');
-    $('.wt-icon-preferences').parent('.btn-link').addClass('ms-1');
-
-    // Prevent underlining when hovering over icons
-    $('[class*="icon-"]').closest('a').addClass('text-decoration-none');
+    $('.icon-indis').addClass('fas fa-user'); // used in user welcome block
+    $('.icon-mypage').addClass('fas fa-tachometer-alt'); // dito
+    $('.icon-selected').addClass('fas fa-check'); // used in the family navigator and the family tab
 
     // Place the cookie warning after the footer. The cookie warning is part of the privacy-policy footer
     $('footer').after($('#cookie-warning'));
-    $('#cookie-warning').addClass('jc-cookie-warning mt-n2');
+    $('#cookie-warning').addClass('jc-cookie-warning');
 
 </script>
 <?php View::endpush() ?>

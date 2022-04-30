@@ -122,19 +122,9 @@ dd {
     box-shadow: none !important;
 }
 
-// Take into account the indent below collapsable items
-// We use the same space as the collaps/expand icon on those indents and a smaller font for all
-.indent {
+.jc-fact-collapse {
     font-size: $font-size-sm;
-
-    &.jc-indent-collapse {
-        padding-left: 1.65rem;
-
-        .label {
-            display: inline-block;
-            margin-bottom: .5rem;
-        }
-    }
+    padding-left: 1.65rem;
 }
 
 .jc-gallery-caption {

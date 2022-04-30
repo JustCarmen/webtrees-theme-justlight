@@ -17854,20 +17854,16 @@ caption {
   box-shadow: none !important;
 }
 
-.indent {
+.jc-fact-collapse {
   font-size: 0.875rem;
 }
-[dir=ltr] .indent.jc-indent-collapse {
+
+[dir=ltr] .jc-fact-collapse {
   padding-left: 1.65rem;
 }
-[dir=rtl] .indent.jc-indent-collapse {
+
+[dir=rtl] .jc-fact-collapse {
   padding-right: 1.65rem;
-}
-.indent.jc-indent-collapse .label {
-  display: inline-block;
-}
-[dir] .indent.jc-indent-collapse .label {
-  margin-bottom: 0.5rem;
 }
 
 .jc-gallery-caption {
@@ -19885,10 +19881,10 @@ table {
 [dir] .jc-chart-descendants-family .wt-chart-box.jc-chart-box-parent {
   margin-bottom: 1rem;
 }
-[dir] .jc-chart-descendants-family .wt-chart-vertical-indent {
+[dir] .jc-chart-descendants-family .wt-chart-horizontal-indent {
   margin-top: -0.5rem;
 }
-[dir] .jc-chart-descendants-family .wt-chart-vertical-indent.jc-chart-first-indent {
+[dir] .jc-chart-descendants-family .wt-chart-horizontal-indent.jc-chart-first-indent {
   margin-top: -1rem;
 }
 
@@ -20286,10 +20282,6 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 .wt-footers .wt-footer-powered-by a {
   content: url("vendor/fisharebest/webtrees/resources/css/images/powered-by-webtrees.png");
-}
-
-.jc-cookie-warning.fade:not(.show) {
-  display: none;
 }
 
 /** JustLight Theme - (Custom) Modules */
