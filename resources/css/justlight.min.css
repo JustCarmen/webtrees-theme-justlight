@@ -20206,6 +20206,11 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   border-bottom: 1px solid #ced4da;
 }
 
+/** JustLight Theme - Forms - Tom-select */
+.ts-control, .ts-control input, .ts-dropdown {
+  color: #212529;
+}
+
 [dir] form label {
   margin-bottom: 0.5rem;
 }
