@@ -61,7 +61,7 @@
     }
 }
 
-.fa-map-marker-alt {
+.fa-location-dot { // alias fa-map-marker-alt
     @include jc-icon-color($jc-icon-red-color, 5%);
 }
 

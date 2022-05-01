@@ -18847,11 +18847,11 @@ caption {
   vertical-align: bottom;
 }
 
-.fa-map-marker-alt {
+.fa-location-dot {
   color: #d36400;
 }
 
-.fa-map-marker-alt:hover, .fa-map-marker-alt:focus {
+.fa-location-dot:hover, .fa-location-dot:focus {
   color: #b95800;
 }
 
