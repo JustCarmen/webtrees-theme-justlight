@@ -143,6 +143,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         View::registerCustomView('::modules/gedcom_stats/statistics', $this->name() . '::modules/gedcom_stats/statistics');
         View::registerCustomView('::modules/lightbox/tab', $this->name() . '::modules/lightbox/tab');
         View::registerCustomView('::modules/stories/list', $this->name() . '::modules/stories/list');
+        View::registerCustomView('::modules/user-messages/user-messages', $this->name() . '::modules/user-messages/user-messages');
 
         // specific views for the JustBlack palette
         if ($this->palette() === 'justblack') {
