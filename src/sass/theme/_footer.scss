@@ -53,3 +53,9 @@
     }
 
 }
+
+.jc-cookie-warning {
+    &.fade:not(.show) {
+        display: none;
+    }
+}
