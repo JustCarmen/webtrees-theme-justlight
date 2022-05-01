@@ -21173,6 +21173,10 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   border-bottom: 1px solid #545454;
 }
 
+[dir] .wt-block-content-user_messages .bg-secondary {
+  background: #545454 !important;
+}
+
 /** JustBlack Palette - Specific pages - Cards */
 
 [dir] #individual-names .card:first-of-type .card-header {

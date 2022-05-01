@@ -20,6 +20,12 @@
     }
 }
 
+.wt-block-content-user_messages {
+    .bg-secondary {
+        background: $jc-theme-medium-dark !important;
+    }
+}
+
 /** JustBlack Palette - Specific pages - Cards */
 .card-header {
     /** Individual page name card (first) */
