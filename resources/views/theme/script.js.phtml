@@ -104,6 +104,18 @@
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
 
+    $('form').each(function() {
+        $(this).find('.wt-osk-trigger').on('click', function() {
+            $('.wt-header-wrapper').removeClass('sticky-top');
+        });
+    });
+
+    $('.wt-main-container').each(function() {
+        $(this).find('.wt-osk-keys').on('click', function() {
+            $('.wt-header-wrapper').addClass('sticky-top');
+        });
+    });
+
     // Badges
     $('.jc-palette-justlight')
         .find('.wt-statistics-chart')
