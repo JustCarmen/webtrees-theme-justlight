@@ -24,25 +24,30 @@ use Illuminate\Support\Collection;
 ?>
 
 <?php if ($users->isNotEmpty()): ?>
-    <form method="post" action="<?= e(route(MessageSelect::class, ['tree' => $tree->name()])) ?>">
-        <?= csrf_field() ?>
-        <input type="hidden" name="url" value="<?= e(route(UserPage::class, ['tree' => $tree->name()])) ?>">
-        <label for="to"><?= I18N::translate('Send a message') ?></label>
-
-        <div class="input-group">
-            <select class="form-control" id="to" name="to" required="required">
-                <option value=""><?= I18N::translate('&lt;select&gt;') ?></option>
-                <?php foreach ($users as $user): ?>
-                    <option value="<?= e($user->userName()) ?>">
-                        <?= e($user->realName()) ?> - <?= e($user->userName()) ?>
-                    </option>
-                <?php endforeach ?>
-            </select>
-
-            <button type="submit" class="btn btn-primary"><?= I18N::translate('Send') ?></button>
-        </div>
-        <br><br>
-    </form>
+    <div class="mb-3">
+        <form method="post" action="<?= e(route(MessageSelect::class, ['tree' => $tree->name()])) ?>">
+            <?= csrf_field() ?>
+            <input type="hidden" name="url" value="<?= e(route(UserPage::class, ['tree' => $tree->name()])) ?>">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="to"><?= I18N::translate('Send a message') ?></label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-control" id="to" name="to" required="required">
+                        <option value=""><?= I18N::translate('&lt;select&gt;') ?></option>
+                        <?php foreach ($users as $user): ?>
+                            <option value="<?= e($user->userName()) ?>">
+                                <?= e($user->realName()) ?> - <?= e($user->userName()) ?>
+                            </option>
+                        <?php endforeach ?>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary"><?= I18N::translate('Send') ?></button>
+                </div>
+            </div>
+        </form>
+    </div>
 <?php endif ?>
 
 <form
@@ -56,42 +61,44 @@ use Illuminate\Support\Collection;
     <?= csrf_field() ?>
 
     <?php if ($messages->isNotEmpty()): ?>
-        <div class="table-responsive">
+        <div class="table-responsive mb-3">
             <table class="table-sm w-100">
-                <tr>
-                    <th class="wt-page-options-label">
-                        <?= I18N::translate('Delete') ?>
-                        <br>
-                        <a href="#"
-                           onclick="$('#block-<?= $block_id ?> :checkbox').prop('checked', true); return false;">
-                            <?= I18N::translate('All') ?>
-                        </a>
-                    </th>
-                    <th class="wt-page-options-label"><?= I18N::translate('Subject') ?></th>
-                    <th class="wt-page-options-label"><?= I18N::translate('Date sent') ?></th>
-                    <th class="wt-page-options-label"><?= I18N::translate('Email address') ?></th>
-                </tr>
-
-                <?php foreach ($messages as $message): ?>
+                <thead>
                     <tr>
-                        <td class="wt-page-options-value center">
+                        <th class="wt-page-options-label text-center jc-column-1">
+                            <?= I18N::translate('Delete') ?>
+                            <a href="#"
+                            onclick="$('#block-<?= $block_id ?> :checkbox').prop('checked', true); return false;">
+                                <?= I18N::translate('All') ?>
+                            </a>
+                        </th>
+                        <th class="wt-page-options-label jc-column-2"><?= I18N::translate('Subject') ?></th>
+                        <th class="wt-page-options-label jc-column-3"><?= I18N::translate('Date sent') ?></th>
+                        <th class="wt-page-options-label jc-column-4"><?= I18N::translate('Email address') ?></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                <?php foreach ($messages as $index => $message): ?>
+                    <tr class="<?= 0 == $index % 2 ? 'bg-body' : 'bg-secondary' ?>">
+                        <td class="wt-page-options-value text-center jc-column-1">
                             <input type="checkbox" name="message_id[]" value="<?= $message->message_id ?>" id="cb_message<?= $message->message_id ?>">
                         </td>
 
-                        <td class="wt-page-options-value">
+                        <td class="wt-page-options-value jc-column-2">
                             <a href="#message<?= $message->message_id ?>" data-bs-toggle="collapse" role="button"
-                               aria-expanded="false" aria-controls="message<?= $message->message_id ?>">
+                            aria-expanded="false" aria-controls="message<?= $message->message_id ?>">
                                 <?= view('icons/expand') ?>
                                 <?= view('icons/collapse') ?>
                                 <b dir="auto"><?= e($message->subject) ?></b>
                             </a>
                         </td>
 
-                        <td class="wt-page-options-value">
+                        <td class="wt-page-options-value jc-column-3">
                             <?= view('components/datetime', ['timestamp' => $message->created]) ?>
                         </td>
 
-                        <td class="wt-page-options-value">
+                        <td class="wt-page-options-value jc-column-4">
                             <?php $user = $user_service->findByIdentifier($message->sender) ?>
 
                             <?php if ($user instanceof User): ?>
@@ -127,7 +134,7 @@ use Illuminate\Support\Collection;
                                     ?>
 
                                     <a class="btn btn-primary" href="<?= e($reply_url) ?>"
-                                       title="<?= I18N::translate('Reply') ?>">
+                                    title="<?= I18N::translate('Reply') ?>">
                                         <?= I18N::translate('Reply') ?>
                                     </a>
                                 <?php } ?>
@@ -140,10 +147,11 @@ use Illuminate\Support\Collection;
                         </td>
                     </tr>
                 <?php endforeach ?>
+                </tbody>
             </table>
         </div>
         <p>
-            <button type="submit" class="btn btn-primary"><?= I18N::translate('Delete selected messages') ?></button>
+            <button type="submit" class="btn btn-danger"><?= I18N::translate('Delete selected messages') ?></button>
         </p>
     <?php endif ?>
 </form>

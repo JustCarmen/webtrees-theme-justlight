@@ -2530,7 +2530,7 @@ progress {
   margin-top: 0.25rem;
 }
 
-.form-control, .wt-route-EditName input[class=NAME], .wt-block-content-user_messages form select {
+.form-control, .wt-route-EditName input[class=NAME] {
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -2541,7 +2541,7 @@ progress {
           appearance: none;
 }
 
-[dir] .form-control, [dir] .wt-route-EditName input[class=NAME], [dir] .wt-block-content-user_messages form select {
+[dir] .form-control, [dir] .wt-route-EditName input[class=NAME] {
   padding: 0.375rem 0.75rem;
   background-color: #212529;
   background-clip: padding-box;
@@ -2553,59 +2553,59 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [dir] .form-control, [dir] .wt-route-EditName input[class=NAME], [dir] .wt-block-content-user_messages form select {
+  [dir] .form-control, [dir] .wt-route-EditName input[class=NAME] {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.form-control[type=file], .wt-route-EditName input[type=file][class=NAME], .wt-block-content-user_messages form select[type=file] {
+.form-control[type=file], .wt-route-EditName input[type=file][class=NAME] {
   overflow: hidden;
 }
 
-[dir] .form-control[type=file]:not(:disabled):not([readonly]), [dir] .wt-route-EditName input[type=file][class=NAME]:not(:disabled):not([readonly]), [dir] .wt-block-content-user_messages form select[type=file]:not(:disabled):not([readonly]) {
+[dir] .form-control[type=file]:not(:disabled):not([readonly]), [dir] .wt-route-EditName input[type=file][class=NAME]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 
-.form-control:focus, .wt-route-EditName input[class=NAME]:focus, .wt-block-content-user_messages form select:focus {
+.form-control:focus, .wt-route-EditName input[class=NAME]:focus {
   color: #cfd5db;
   outline: 0;
 }
 
-[dir] .form-control:focus, [dir] .wt-route-EditName input[class=NAME]:focus, [dir] .wt-block-content-user_messages form select:focus {
+[dir] .form-control:focus, [dir] .wt-route-EditName input[class=NAME]:focus {
   background-color: #212529;
   border-color: #e9b280;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(211, 100, 0, 0.25);
 }
 
-.form-control::-webkit-date-and-time-value, .wt-route-EditName input[class=NAME]::-webkit-date-and-time-value, .wt-block-content-user_messages form select::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, .wt-route-EditName input[class=NAME]::-webkit-date-and-time-value {
   height: 1.5em;
 }
 
-.form-control::-webkit-input-placeholder, .wt-route-EditName input[class=NAME]::-webkit-input-placeholder, .wt-block-content-user_messages form select::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, .wt-route-EditName input[class=NAME]::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control:-ms-input-placeholder, .wt-route-EditName input[class=NAME]:-ms-input-placeholder, .wt-block-content-user_messages form select:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, .wt-route-EditName input[class=NAME]:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control::placeholder, .wt-route-EditName input[class=NAME]::placeholder, .wt-block-content-user_messages form select::placeholder {
+.form-control::placeholder, .wt-route-EditName input[class=NAME]::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control:disabled, .wt-route-EditName input[class=NAME]:disabled, .wt-block-content-user_messages form select:disabled, .form-control[readonly], .wt-route-EditName input[readonly][class=NAME], .wt-block-content-user_messages form select[readonly] {
+.form-control:disabled, .wt-route-EditName input[class=NAME]:disabled, .form-control[readonly], .wt-route-EditName input[readonly][class=NAME] {
   opacity: 1;
 }
 
-[dir] .form-control:disabled, [dir] .wt-route-EditName input[class=NAME]:disabled, [dir] .wt-block-content-user_messages form select:disabled, [dir] .form-control[readonly], [dir] .wt-route-EditName input[readonly][class=NAME], [dir] .wt-block-content-user_messages form select[readonly] {
+[dir] .form-control:disabled, [dir] .wt-route-EditName input[class=NAME]:disabled, [dir] .form-control[readonly], [dir] .wt-route-EditName input[readonly][class=NAME] {
   background-color: #e9ecef;
 }
 
-.form-control::-webkit-file-upload-button, .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, .wt-block-content-user_messages form select::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
   -webkit-margin-end: 0.75rem;
           margin-inline-end: 0.75rem;
   color: #cfd5db;
@@ -2613,7 +2613,7 @@ progress {
   border-inline-end-width: 1px;
 }
 
-.form-control::file-selector-button, .wt-route-EditName input[class=NAME]::file-selector-button, .wt-block-content-user_messages form select::file-selector-button {
+.form-control::file-selector-button, .wt-route-EditName input[class=NAME]::file-selector-button {
   -webkit-margin-end: 0.75rem;
           margin-inline-end: 0.75rem;
   color: #cfd5db;
@@ -2621,7 +2621,7 @@ progress {
   border-inline-end-width: 1px;
 }
 
-[dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select::-webkit-file-upload-button {
+[dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   background-color: #000;
@@ -2636,49 +2636,7 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-[dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button, [dir] .wt-block-content-user_messages form select::file-selector-button {
-  padding: 0.375rem 0.75rem;
-  margin: -0.375rem -0.75rem;
-  background-color: #000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
-  background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
-  background-image: var(--bs-gradient);
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-radius: 0;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select::-webkit-file-upload-button {
-    -webkit-transition: none;
-    transition: none;
-  }
-  [dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button, [dir] .wt-block-content-user_messages form select::file-selector-button {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: black;
-}
-
-[dir] .form-control:hover:not(:disabled):not([readonly])::file-selector-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::file-selector-button, [dir] .wt-block-content-user_messages form select:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: black;
-}
-
-.form-control::-webkit-file-upload-button, .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, .wt-block-content-user_messages form select::-webkit-file-upload-button {
-  -webkit-margin-end: 0.75rem;
-          margin-inline-end: 0.75rem;
-  color: #cfd5db;
-  pointer-events: none;
-  border-inline-end-width: 1px;
-}
-
-[dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select::-webkit-file-upload-button {
+[dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   background-color: #000;
@@ -2694,13 +2652,55 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select::-webkit-file-upload-button {
+  [dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+    -webkit-transition: none;
+    transition: none;
+  }
+  [dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-block-content-user_messages form select:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: black;
+}
+
+[dir] .form-control:hover:not(:disabled):not([readonly])::file-selector-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: black;
+}
+
+.form-control::-webkit-file-upload-button, .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+  -webkit-margin-end: 0.75rem;
+          margin-inline-end: 0.75rem;
+  color: #cfd5db;
+  pointer-events: none;
+  border-inline-end-width: 1px;
+}
+
+[dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+  padding: 0.375rem 0.75rem;
+  margin: -0.375rem -0.75rem;
+  background-color: #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
+  background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
+  background-image: var(--bs-gradient);
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-radius: 0;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: black;
 }
 
@@ -3136,7 +3136,7 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 
-.btn-check[disabled] + .btn, .hideShowPassword-wrapper .btn-check[disabled] + button, .wt-block-content-user_messages form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, .hideShowPassword-wrapper .btn-check:disabled + button, .wt-block-content-user_messages form .btn-check:disabled + button[type=submit] {
+.btn-check[disabled] + .btn, .hideShowPassword-wrapper .btn-check[disabled] + button, .btn-check:disabled + .btn, .hideShowPassword-wrapper .btn-check:disabled + button {
   pointer-events: none;
   -webkit-filter: none;
           filter: none;
@@ -3279,7 +3279,7 @@ textarea.form-control-lg {
   position: relative;
 }
 
-.form-floating > .form-control, .wt-route-EditName .form-floating > input[class=NAME], .wt-block-content-user_messages form .form-floating > select,
+.form-floating > .form-control, .wt-route-EditName .form-floating > input[class=NAME],
 .form-floating > .form-select {
   height: -webkit-calc(3.5rem + 2px);
   height: calc(3.5rem + 2px);
@@ -3321,33 +3321,33 @@ textarea.form-control-lg {
   }
 }
 
-[dir] .form-floating > .form-control, [dir] .wt-route-EditName .form-floating > input[class=NAME], [dir] .wt-block-content-user_messages form .form-floating > select {
+[dir] .form-floating > .form-control, [dir] .wt-route-EditName .form-floating > input[class=NAME] {
   padding: 1rem 0.75rem;
 }
 
-.form-floating > .form-control::-webkit-input-placeholder, .wt-route-EditName .form-floating > input[class=NAME]::-webkit-input-placeholder, .wt-block-content-user_messages form .form-floating > select::-webkit-input-placeholder {
+.form-floating > .form-control::-webkit-input-placeholder, .wt-route-EditName .form-floating > input[class=NAME]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.form-floating > .form-control:-ms-input-placeholder, .wt-route-EditName .form-floating > input[class=NAME]:-ms-input-placeholder, .wt-block-content-user_messages form .form-floating > select:-ms-input-placeholder {
+.form-floating > .form-control:-ms-input-placeholder, .wt-route-EditName .form-floating > input[class=NAME]:-ms-input-placeholder {
   color: transparent;
 }
 
-.form-floating > .form-control::placeholder, .wt-route-EditName .form-floating > input[class=NAME]::placeholder, .wt-block-content-user_messages form .form-floating > select::placeholder {
+.form-floating > .form-control::placeholder, .wt-route-EditName .form-floating > input[class=NAME]::placeholder {
   color: transparent;
 }
 
-[dir] .form-floating > .form-control:not(:-ms-input-placeholder), [dir] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder), [dir] .wt-block-content-user_messages form .form-floating > select:not(:-ms-input-placeholder) {
+[dir] .form-floating > .form-control:not(:-ms-input-placeholder), [dir] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 
-[dir] .form-floating > .form-control:focus, [dir] .wt-route-EditName .form-floating > input[class=NAME]:focus, [dir] .wt-block-content-user_messages form .form-floating > select:focus, [dir] .form-floating > .form-control:not(:placeholder-shown), [dir] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown), [dir] .wt-block-content-user_messages form .form-floating > select:not(:placeholder-shown) {
+[dir] .form-floating > .form-control:focus, [dir] .wt-route-EditName .form-floating > input[class=NAME]:focus, [dir] .form-floating > .form-control:not(:placeholder-shown), [dir] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 
-[dir] .form-floating > .form-control:-webkit-autofill, [dir] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill, [dir] .wt-block-content-user_messages form .form-floating > select:-webkit-autofill {
+[dir] .form-floating > .form-control:-webkit-autofill, [dir] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -3357,46 +3357,45 @@ textarea.form-control-lg {
   padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:not(:-ms-input-placeholder) ~ label, .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label, .wt-block-content-user_messages form .form-floating > select:not(:-ms-input-placeholder) ~ label {
+.form-floating > .form-control:not(:-ms-input-placeholder) ~ label, .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label {
   opacity: 0.65;
 }
 
-.form-floating > .form-control:focus ~ label, .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, .wt-block-content-user_messages form .form-floating > select:focus ~ label,
+.form-floating > .form-control:focus ~ label, .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label,
-.wt-block-content-user_messages form .form-floating > select:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
 }
 
-[dir="ltr"] .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label, [dir="ltr"] .wt-block-content-user_messages form .form-floating > select:not(:-ms-input-placeholder) ~ label {
+[dir="ltr"] .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label {
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-[dir="ltr"] .form-floating > .form-control:focus ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="ltr"] .wt-block-content-user_messages form .form-floating > select:focus ~ label, [dir="ltr"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="ltr"] .wt-block-content-user_messages form .form-floating > select:not(:placeholder-shown) ~ label, [dir="ltr"] .form-floating > .form-select ~ label {
+[dir="ltr"] .form-floating > .form-control:focus ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="ltr"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="ltr"] .form-floating > .form-select ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-[dir="rtl"] .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label, [dir="rtl"] .wt-block-content-user_messages form .form-floating > select:not(:-ms-input-placeholder) ~ label {
+[dir="rtl"] .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:not(:-ms-input-placeholder) ~ label {
   transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
 
-[dir="rtl"] .form-floating > .form-control:focus ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="rtl"] .wt-block-content-user_messages form .form-floating > select:focus ~ label, [dir="rtl"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="rtl"] .wt-block-content-user_messages form .form-floating > select:not(:placeholder-shown) ~ label, [dir="rtl"] .form-floating > .form-select ~ label {
+[dir="rtl"] .form-floating > .form-control:focus ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="rtl"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="rtl"] .form-floating > .form-select ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
 
-.form-floating > .form-control:-webkit-autofill ~ label, .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label, .wt-block-content-user_messages form .form-floating > select:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
   opacity: 0.65;
 }
 
-[dir="ltr"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label, [dir="ltr"] .wt-block-content-user_messages form .form-floating > select:-webkit-autofill ~ label {
+[dir="ltr"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-[dir="rtl"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label, [dir="rtl"] .wt-block-content-user_messages form .form-floating > select:-webkit-autofill ~ label {
+[dir="rtl"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
@@ -3411,7 +3410,7 @@ textarea.form-control-lg {
   width: 100%;
 }
 
-.input-group > .form-control, .wt-route-EditName .input-group > input[class=NAME], .wt-block-content-user_messages form .input-group > select,
+.input-group > .form-control, .wt-route-EditName .input-group > input[class=NAME],
 .input-group > .form-select {
   position: relative;
   -webkit-box-flex: 1;
@@ -3420,17 +3419,17 @@ textarea.form-control-lg {
   min-width: 0;
 }
 
-.input-group > .form-control:focus, .wt-route-EditName .input-group > input[class=NAME]:focus, .wt-block-content-user_messages form .input-group > select:focus,
+.input-group > .form-control:focus, .wt-route-EditName .input-group > input[class=NAME]:focus,
 .input-group > .form-select:focus {
   z-index: 3;
 }
 
-.input-group .btn, .input-group .hideShowPassword-wrapper button, .hideShowPassword-wrapper .input-group button, .input-group .wt-block-content-user_messages form button[type=submit], .wt-block-content-user_messages form .input-group button[type=submit] {
+.input-group .btn, .input-group .hideShowPassword-wrapper button, .hideShowPassword-wrapper .input-group button {
   position: relative;
   z-index: 2;
 }
 
-.input-group .btn:focus, .input-group .hideShowPassword-wrapper button:focus, .hideShowPassword-wrapper .input-group button:focus, .input-group .wt-block-content-user_messages form button[type=submit]:focus, .wt-block-content-user_messages form .input-group button[type=submit]:focus {
+.input-group .btn:focus, .input-group .hideShowPassword-wrapper button:focus, .hideShowPassword-wrapper .input-group button:focus {
   z-index: 3;
 }
 
@@ -3454,30 +3453,28 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control, .wt-route-EditName .input-group-lg > input[class=NAME], .wt-block-content-user_messages form .input-group-lg > select,
+.input-group-lg > .form-control, .wt-route-EditName .input-group-lg > input[class=NAME],
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-.hideShowPassword-wrapper .input-group-lg > button,
-.wt-block-content-user_messages form .input-group-lg > button[type=submit] {
+.hideShowPassword-wrapper .input-group-lg > button {
   font-size: 1.25rem;
 }
 
-[dir] .input-group-lg > .form-control, [dir] .wt-route-EditName .input-group-lg > input[class=NAME], [dir] .wt-block-content-user_messages form .input-group-lg > select, [dir] .input-group-lg > .form-select, [dir] .input-group-lg > .input-group-text, [dir] .input-group-lg > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > button, [dir] .wt-block-content-user_messages form .input-group-lg > button[type=submit] {
+[dir] .input-group-lg > .form-control, [dir] .wt-route-EditName .input-group-lg > input[class=NAME], [dir] .input-group-lg > .form-select, [dir] .input-group-lg > .input-group-text, [dir] .input-group-lg > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > button {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control, .wt-route-EditName .input-group-sm > input[class=NAME], .wt-block-content-user_messages form .input-group-sm > select,
+.input-group-sm > .form-control, .wt-route-EditName .input-group-sm > input[class=NAME],
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-.hideShowPassword-wrapper .input-group-sm > button,
-.wt-block-content-user_messages form .input-group-sm > button[type=submit] {
+.hideShowPassword-wrapper .input-group-sm > button {
   font-size: 0.875rem;
 }
 
-[dir] .input-group-sm > .form-control, [dir] .wt-route-EditName .input-group-sm > input[class=NAME], [dir] .wt-block-content-user_messages form .input-group-sm > select, [dir] .input-group-sm > .form-select, [dir] .input-group-sm > .input-group-text, [dir] .input-group-sm > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > button, [dir] .wt-block-content-user_messages form .input-group-sm > button[type=submit] {
+[dir] .input-group-sm > .form-control, [dir] .wt-route-EditName .input-group-sm > input[class=NAME], [dir] .input-group-sm > .form-select, [dir] .input-group-sm > .input-group-text, [dir] .input-group-sm > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > button {
   padding: 0.25rem 0.5rem;
   border-radius: 0.2rem;
 }
@@ -3563,7 +3560,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-[dir] .was-validated .form-control:valid, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir] .was-validated .wt-block-content-user_messages form select:valid, [dir] .wt-block-content-user_messages form .was-validated select:valid, [dir] .form-control.is-valid, [dir] .wt-route-EditName input.is-valid[class=NAME], [dir] .wt-block-content-user_messages form select.is-valid {
+[dir] .was-validated .form-control:valid, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir] .form-control.is-valid, [dir] .wt-route-EditName input.is-valid[class=NAME] {
   border-color: #198754;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -3571,21 +3568,21 @@ textarea.form-control-lg {
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir="ltr"] .was-validated .form-control:valid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="ltr"] .was-validated .wt-block-content-user_messages form select:valid, [dir="ltr"] .wt-block-content-user_messages form .was-validated select:valid, [dir="ltr"] .form-control.is-valid, [dir="ltr"] .wt-route-EditName input.is-valid[class=NAME], [dir="ltr"] .wt-block-content-user_messages form select.is-valid {
+[dir="ltr"] .was-validated .form-control:valid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="ltr"] .form-control.is-valid, [dir="ltr"] .wt-route-EditName input.is-valid[class=NAME] {
   padding-right: -webkit-calc(1.5em + 0.75rem);
   padding-right: calc(1.5em + 0.75rem);
   background-position: right -webkit-calc(0.375em + 0.1875rem) center;
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir="rtl"] .was-validated .form-control:valid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="rtl"] .was-validated .wt-block-content-user_messages form select:valid, [dir="rtl"] .wt-block-content-user_messages form .was-validated select:valid, [dir="rtl"] .form-control.is-valid, [dir="rtl"] .wt-route-EditName input.is-valid[class=NAME], [dir="rtl"] .wt-block-content-user_messages form select.is-valid {
+[dir="rtl"] .was-validated .form-control:valid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="rtl"] .form-control.is-valid, [dir="rtl"] .wt-route-EditName input.is-valid[class=NAME] {
   padding-left: -webkit-calc(1.5em + 0.75rem);
   padding-left: calc(1.5em + 0.75rem);
   background-position: left -webkit-calc(0.375em + 0.1875rem) center;
   background-position: left calc(0.375em + 0.1875rem) center;
 }
 
-[dir] .was-validated .form-control:valid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid:focus, [dir] .was-validated .wt-block-content-user_messages form select:valid:focus, [dir] .wt-block-content-user_messages form .was-validated select:valid:focus, [dir] .form-control.is-valid:focus, [dir] .wt-route-EditName input.is-valid[class=NAME]:focus, [dir] .wt-block-content-user_messages form select.is-valid:focus {
+[dir] .was-validated .form-control:valid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid:focus, [dir] .form-control.is-valid:focus, [dir] .wt-route-EditName input.is-valid[class=NAME]:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -3653,13 +3650,13 @@ textarea.form-control-lg {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .was-validated .input-group .wt-route-EditName input[class=NAME]:valid, .wt-route-EditName .was-validated .input-group input[class=NAME]:valid, .was-validated .input-group .wt-block-content-user_messages form select:valid, .wt-block-content-user_messages form .was-validated .input-group select:valid, .input-group .form-control.is-valid, .input-group .wt-route-EditName input.is-valid[class=NAME], .wt-route-EditName .input-group input.is-valid[class=NAME], .input-group .wt-block-content-user_messages form select.is-valid, .wt-block-content-user_messages form .input-group select.is-valid,
+.was-validated .input-group .form-control:valid, .was-validated .input-group .wt-route-EditName input[class=NAME]:valid, .wt-route-EditName .was-validated .input-group input[class=NAME]:valid, .input-group .form-control.is-valid, .input-group .wt-route-EditName input.is-valid[class=NAME], .wt-route-EditName .input-group input.is-valid[class=NAME],
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
   z-index: 1;
 }
 
-.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .wt-route-EditName input[class=NAME]:valid:focus, .wt-route-EditName .was-validated .input-group input[class=NAME]:valid:focus, .was-validated .input-group .wt-block-content-user_messages form select:valid:focus, .wt-block-content-user_messages form .was-validated .input-group select:valid:focus, .input-group .form-control.is-valid:focus, .input-group .wt-route-EditName input.is-valid[class=NAME]:focus, .wt-route-EditName .input-group input.is-valid[class=NAME]:focus, .input-group .wt-block-content-user_messages form select.is-valid:focus, .wt-block-content-user_messages form .input-group select.is-valid:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group .wt-route-EditName input[class=NAME]:valid:focus, .wt-route-EditName .was-validated .input-group input[class=NAME]:valid:focus, .input-group .form-control.is-valid:focus, .input-group .wt-route-EditName input.is-valid[class=NAME]:focus, .wt-route-EditName .input-group input.is-valid[class=NAME]:focus,
 .was-validated .input-group .form-select:valid:focus,
 .input-group .form-select.is-valid:focus {
   z-index: 3;
@@ -3700,7 +3697,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-[dir] .was-validated .form-control:invalid, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir] .was-validated .wt-block-content-user_messages form select:invalid, [dir] .wt-block-content-user_messages form .was-validated select:invalid, [dir] .form-control.is-invalid, [dir] .wt-route-EditName input.is-invalid[class=NAME], [dir] .wt-block-content-user_messages form select.is-invalid {
+[dir] .was-validated .form-control:invalid, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir] .form-control.is-invalid, [dir] .wt-route-EditName input.is-invalid[class=NAME] {
   border-color: #dc3545;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -3708,21 +3705,21 @@ textarea.form-control-lg {
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir="ltr"] .was-validated .form-control:invalid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="ltr"] .was-validated .wt-block-content-user_messages form select:invalid, [dir="ltr"] .wt-block-content-user_messages form .was-validated select:invalid, [dir="ltr"] .form-control.is-invalid, [dir="ltr"] .wt-route-EditName input.is-invalid[class=NAME], [dir="ltr"] .wt-block-content-user_messages form select.is-invalid {
+[dir="ltr"] .was-validated .form-control:invalid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="ltr"] .form-control.is-invalid, [dir="ltr"] .wt-route-EditName input.is-invalid[class=NAME] {
   padding-right: -webkit-calc(1.5em + 0.75rem);
   padding-right: calc(1.5em + 0.75rem);
   background-position: right -webkit-calc(0.375em + 0.1875rem) center;
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir="rtl"] .was-validated .form-control:invalid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="rtl"] .was-validated .wt-block-content-user_messages form select:invalid, [dir="rtl"] .wt-block-content-user_messages form .was-validated select:invalid, [dir="rtl"] .form-control.is-invalid, [dir="rtl"] .wt-route-EditName input.is-invalid[class=NAME], [dir="rtl"] .wt-block-content-user_messages form select.is-invalid {
+[dir="rtl"] .was-validated .form-control:invalid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="rtl"] .form-control.is-invalid, [dir="rtl"] .wt-route-EditName input.is-invalid[class=NAME] {
   padding-left: -webkit-calc(1.5em + 0.75rem);
   padding-left: calc(1.5em + 0.75rem);
   background-position: left -webkit-calc(0.375em + 0.1875rem) center;
   background-position: left calc(0.375em + 0.1875rem) center;
 }
 
-[dir] .was-validated .form-control:invalid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid:focus, [dir] .was-validated .wt-block-content-user_messages form select:invalid:focus, [dir] .wt-block-content-user_messages form .was-validated select:invalid:focus, [dir] .form-control.is-invalid:focus, [dir] .wt-route-EditName input.is-invalid[class=NAME]:focus, [dir] .wt-block-content-user_messages form select.is-invalid:focus {
+[dir] .was-validated .form-control:invalid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid:focus, [dir] .form-control.is-invalid:focus, [dir] .wt-route-EditName input.is-invalid[class=NAME]:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -3790,19 +3787,19 @@ textarea.form-control-lg {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .was-validated .input-group .wt-route-EditName input[class=NAME]:invalid, .wt-route-EditName .was-validated .input-group input[class=NAME]:invalid, .was-validated .input-group .wt-block-content-user_messages form select:invalid, .wt-block-content-user_messages form .was-validated .input-group select:invalid, .input-group .form-control.is-invalid, .input-group .wt-route-EditName input.is-invalid[class=NAME], .wt-route-EditName .input-group input.is-invalid[class=NAME], .input-group .wt-block-content-user_messages form select.is-invalid, .wt-block-content-user_messages form .input-group select.is-invalid,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group .wt-route-EditName input[class=NAME]:invalid, .wt-route-EditName .was-validated .input-group input[class=NAME]:invalid, .input-group .form-control.is-invalid, .input-group .wt-route-EditName input.is-invalid[class=NAME], .wt-route-EditName .input-group input.is-invalid[class=NAME],
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
   z-index: 2;
 }
 
-.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .wt-route-EditName input[class=NAME]:invalid:focus, .wt-route-EditName .was-validated .input-group input[class=NAME]:invalid:focus, .was-validated .input-group .wt-block-content-user_messages form select:invalid:focus, .wt-block-content-user_messages form .was-validated .input-group select:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .wt-route-EditName input.is-invalid[class=NAME]:focus, .wt-route-EditName .input-group input.is-invalid[class=NAME]:focus, .input-group .wt-block-content-user_messages form select.is-invalid:focus, .wt-block-content-user_messages form .input-group select.is-invalid:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group .wt-route-EditName input[class=NAME]:invalid:focus, .wt-route-EditName .was-validated .input-group input[class=NAME]:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group .wt-route-EditName input.is-invalid[class=NAME]:focus, .wt-route-EditName .input-group input.is-invalid[class=NAME]:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
-.btn, .hideShowPassword-wrapper button, .wt-block-content-user_messages form button[type=submit] {
+.btn, .hideShowPassword-wrapper button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -3814,7 +3811,7 @@ textarea.form-control-lg {
   font-size: 1rem;
 }
 
-[dir] .btn, [dir] .hideShowPassword-wrapper button, [dir] .wt-block-content-user_messages form button[type=submit] {
+[dir] .btn, [dir] .hideShowPassword-wrapper button {
   text-align: center;
   cursor: pointer;
   background-color: transparent;
@@ -3826,47 +3823,47 @@ textarea.form-control-lg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [dir] .btn, [dir] .hideShowPassword-wrapper button, [dir] .wt-block-content-user_messages form button[type=submit] {
+  [dir] .btn, [dir] .hideShowPassword-wrapper button {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.btn:hover, .hideShowPassword-wrapper button:hover, .wt-block-content-user_messages form button[type=submit]:hover {
+.btn:hover, .hideShowPassword-wrapper button:hover {
   color: #dee2e6;
   text-decoration: none;
 }
 
-.btn-check:focus + .btn, .hideShowPassword-wrapper .btn-check:focus + button, .wt-block-content-user_messages form .btn-check:focus + button[type=submit], .btn:focus, .hideShowPassword-wrapper button:focus, .wt-block-content-user_messages form button[type=submit]:focus {
+.btn-check:focus + .btn, .hideShowPassword-wrapper .btn-check:focus + button, .btn:focus, .hideShowPassword-wrapper button:focus {
   outline: 0;
 }
 
-[dir] .btn-check:focus + .btn, [dir] .hideShowPassword-wrapper .btn-check:focus + button, [dir] .wt-block-content-user_messages form .btn-check:focus + button[type=submit], [dir] .btn:focus, [dir] .hideShowPassword-wrapper button:focus, [dir] .wt-block-content-user_messages form button[type=submit]:focus {
+[dir] .btn-check:focus + .btn, [dir] .hideShowPassword-wrapper .btn-check:focus + button, [dir] .btn:focus, [dir] .hideShowPassword-wrapper button:focus {
   box-shadow: 0 0 0 0.25rem rgba(211, 100, 0, 0.25);
 }
 
-[dir] .btn-check:checked + .btn, [dir] .hideShowPassword-wrapper .btn-check:checked + button, [dir] .wt-block-content-user_messages form .btn-check:checked + button[type=submit], [dir] .btn-check:active + .btn, [dir] .hideShowPassword-wrapper .btn-check:active + button, [dir] .wt-block-content-user_messages form .btn-check:active + button[type=submit], [dir] .btn:active, [dir] .hideShowPassword-wrapper button:active, [dir] .wt-block-content-user_messages form button[type=submit]:active, [dir] .btn.active, [dir] .hideShowPassword-wrapper button.active, [dir] .wt-block-content-user_messages form button.active[type=submit] {
+[dir] .btn-check:checked + .btn, [dir] .hideShowPassword-wrapper .btn-check:checked + button, [dir] .btn-check:active + .btn, [dir] .hideShowPassword-wrapper .btn-check:active + button, [dir] .btn:active, [dir] .hideShowPassword-wrapper button:active, [dir] .btn.active, [dir] .hideShowPassword-wrapper button.active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-[dir] .btn-check:checked + .btn:focus, [dir] .hideShowPassword-wrapper .btn-check:checked + button:focus, [dir] .wt-block-content-user_messages form .btn-check:checked + button[type=submit]:focus, [dir] .btn-check:active + .btn:focus, [dir] .hideShowPassword-wrapper .btn-check:active + button:focus, [dir] .wt-block-content-user_messages form .btn-check:active + button[type=submit]:focus, [dir] .btn:active:focus, [dir] .hideShowPassword-wrapper button:active:focus, [dir] .wt-block-content-user_messages form button[type=submit]:active:focus, [dir] .btn.active:focus, [dir] .hideShowPassword-wrapper button.active:focus, [dir] .wt-block-content-user_messages form button.active[type=submit]:focus {
+[dir] .btn-check:checked + .btn:focus, [dir] .hideShowPassword-wrapper .btn-check:checked + button:focus, [dir] .btn-check:active + .btn:focus, [dir] .hideShowPassword-wrapper .btn-check:active + button:focus, [dir] .btn:active:focus, [dir] .hideShowPassword-wrapper button:active:focus, [dir] .btn.active:focus, [dir] .hideShowPassword-wrapper button.active:focus {
   box-shadow: 0 0 0 0.25rem rgba(211, 100, 0, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-.btn:disabled, .hideShowPassword-wrapper button:disabled, .wt-block-content-user_messages form button[type=submit]:disabled, .btn.disabled, .hideShowPassword-wrapper button.disabled, .wt-block-content-user_messages form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled .hideShowPassword-wrapper button, .hideShowPassword-wrapper fieldset:disabled button, fieldset:disabled .wt-block-content-user_messages form button[type=submit], .wt-block-content-user_messages form fieldset:disabled button[type=submit] {
+.btn:disabled, .hideShowPassword-wrapper button:disabled, .btn.disabled, .hideShowPassword-wrapper button.disabled, fieldset:disabled .btn, fieldset:disabled .hideShowPassword-wrapper button, .hideShowPassword-wrapper fieldset:disabled button {
   pointer-events: none;
   opacity: 0.65;
 }
 
-[dir] .btn:disabled, [dir] .hideShowPassword-wrapper button:disabled, [dir] .wt-block-content-user_messages form button[type=submit]:disabled, [dir] .btn.disabled, [dir] .hideShowPassword-wrapper button.disabled, [dir] .wt-block-content-user_messages form button.disabled[type=submit], [dir] fieldset:disabled .btn, [dir] fieldset:disabled .hideShowPassword-wrapper button, [dir] .hideShowPassword-wrapper fieldset:disabled button, [dir] fieldset:disabled .wt-block-content-user_messages form button[type=submit], [dir] .wt-block-content-user_messages form fieldset:disabled button[type=submit] {
+[dir] .btn:disabled, [dir] .hideShowPassword-wrapper button:disabled, [dir] .btn.disabled, [dir] .hideShowPassword-wrapper button.disabled, [dir] fieldset:disabled .btn, [dir] fieldset:disabled .hideShowPassword-wrapper button, [dir] .hideShowPassword-wrapper fieldset:disabled button {
   box-shadow: none;
 }
 
-.btn-primary, .wt-block-content-user_messages form button[type=submit] {
+.btn-primary {
   color: #000;
 }
 
-[dir] .btn-primary, [dir] .wt-block-content-user_messages form button[type=submit] {
+[dir] .btn-primary {
   background-color: #d36400;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -3875,11 +3872,11 @@ textarea.form-control-lg {
   box-shadow: inset 0 1px 0 rgba(249, 249, 249, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.btn-primary:hover, .wt-block-content-user_messages form button[type=submit]:hover {
+.btn-primary:hover {
   color: #000;
 }
 
-[dir] .btn-primary:hover, [dir] .wt-block-content-user_messages form button[type=submit]:hover {
+[dir] .btn-primary:hover {
   background-color: #da7b26;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -3887,11 +3884,11 @@ textarea.form-control-lg {
   border-color: #d7741a;
 }
 
-.btn-check:focus + .btn-primary, .wt-block-content-user_messages form .btn-check:focus + button[type=submit], .btn-primary:focus, .wt-block-content-user_messages form button[type=submit]:focus {
+.btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #000;
 }
 
-[dir] .btn-check:focus + .btn-primary, [dir] .wt-block-content-user_messages form .btn-check:focus + button[type=submit], [dir] .btn-primary:focus, [dir] .wt-block-content-user_messages form button[type=submit]:focus {
+[dir] .btn-check:focus + .btn-primary, [dir] .btn-primary:focus {
   background-color: #da7b26;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -3900,25 +3897,25 @@ textarea.form-control-lg {
   box-shadow: inset 0 1px 0 rgba(249, 249, 249, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(179, 85, 0, 0.5);
 }
 
-.btn-check:checked + .btn-primary, .wt-block-content-user_messages form .btn-check:checked + button[type=submit], .btn-check:active + .btn-primary, .wt-block-content-user_messages form .btn-check:active + button[type=submit], .btn-primary:active, .wt-block-content-user_messages form button[type=submit]:active, .btn-primary.active, .wt-block-content-user_messages form button.active[type=submit], .show > .btn-primary.dropdown-toggle, .wt-block-content-user_messages form .show > button.dropdown-toggle[type=submit] {
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #000;
 }
 
-[dir] .btn-check:checked + .btn-primary, [dir] .wt-block-content-user_messages form .btn-check:checked + button[type=submit], [dir] .btn-check:active + .btn-primary, [dir] .wt-block-content-user_messages form .btn-check:active + button[type=submit], [dir] .btn-primary:active, [dir] .wt-block-content-user_messages form button[type=submit]:active, [dir] .btn-primary.active, [dir] .wt-block-content-user_messages form button.active[type=submit], [dir] .show > .btn-primary.dropdown-toggle, [dir] .wt-block-content-user_messages form .show > button.dropdown-toggle[type=submit] {
+[dir] .btn-check:checked + .btn-primary, [dir] .btn-check:active + .btn-primary, [dir] .btn-primary:active, [dir] .btn-primary.active, [dir] .show > .btn-primary.dropdown-toggle {
   background-color: #dc8333;
   background-image: none;
   border-color: #d7741a;
 }
 
-[dir] .btn-check:checked + .btn-primary:focus, [dir] .wt-block-content-user_messages form .btn-check:checked + button[type=submit]:focus, [dir] .btn-check:active + .btn-primary:focus, [dir] .wt-block-content-user_messages form .btn-check:active + button[type=submit]:focus, [dir] .btn-primary:active:focus, [dir] .wt-block-content-user_messages form button[type=submit]:active:focus, [dir] .btn-primary.active:focus, [dir] .wt-block-content-user_messages form button.active[type=submit]:focus, [dir] .show > .btn-primary.dropdown-toggle:focus, [dir] .wt-block-content-user_messages form .show > button.dropdown-toggle[type=submit]:focus {
+[dir] .btn-check:checked + .btn-primary:focus, [dir] .btn-check:active + .btn-primary:focus, [dir] .btn-primary:active:focus, [dir] .btn-primary.active:focus, [dir] .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(179, 85, 0, 0.5);
 }
 
-.btn-primary:disabled, .wt-block-content-user_messages form button[type=submit]:disabled, .btn-primary.disabled, .wt-block-content-user_messages form button.disabled[type=submit] {
+.btn-primary:disabled, .btn-primary.disabled {
   color: #000;
 }
 
-[dir] .btn-primary:disabled, [dir] .wt-block-content-user_messages form button[type=submit]:disabled, [dir] .btn-primary.disabled, [dir] .wt-block-content-user_messages form button.disabled[type=submit] {
+[dir] .btn-primary:disabled, [dir] .btn-primary.disabled {
   background-color: #d36400;
   background-image: none;
   border-color: #d36400;
@@ -4172,11 +4169,11 @@ textarea.form-control-lg {
   border-color: #ffc107;
 }
 
-.btn-danger, .wt-block-content-user_messages form:last-of-type button[type=submit] {
+.btn-danger {
   color: #000;
 }
 
-[dir] .btn-danger, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit] {
+[dir] .btn-danger {
   background-color: #dc3545;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -4185,11 +4182,11 @@ textarea.form-control-lg {
   box-shadow: inset 0 1px 0 rgba(249, 249, 249, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.btn-danger:hover, .wt-block-content-user_messages form:last-of-type button[type=submit]:hover {
+.btn-danger:hover {
   color: #000;
 }
 
-[dir] .btn-danger:hover, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit]:hover {
+[dir] .btn-danger:hover {
   background-color: #e15361;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -4197,11 +4194,11 @@ textarea.form-control-lg {
   border-color: #e04958;
 }
 
-.btn-check:focus + .btn-danger, .wt-block-content-user_messages form:last-of-type .btn-check:focus + button[type=submit], .btn-danger:focus, .wt-block-content-user_messages form:last-of-type button[type=submit]:focus {
+.btn-check:focus + .btn-danger, .btn-danger:focus {
   color: #000;
 }
 
-[dir] .btn-check:focus + .btn-danger, [dir] .wt-block-content-user_messages form:last-of-type .btn-check:focus + button[type=submit], [dir] .btn-danger:focus, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit]:focus {
+[dir] .btn-check:focus + .btn-danger, [dir] .btn-danger:focus {
   background-color: #e15361;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 249, 249, 0.15)), to(rgba(249, 249, 249, 0)));
   background-image: linear-gradient(180deg, rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0));
@@ -4210,25 +4207,25 @@ textarea.form-control-lg {
   box-shadow: inset 0 1px 0 rgba(249, 249, 249, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(187, 45, 59, 0.5);
 }
 
-.btn-check:checked + .btn-danger, .wt-block-content-user_messages form:last-of-type .btn-check:checked + button[type=submit], .btn-check:active + .btn-danger, .wt-block-content-user_messages form:last-of-type .btn-check:active + button[type=submit], .btn-danger:active, .wt-block-content-user_messages form:last-of-type button[type=submit]:active, .btn-danger.active, .wt-block-content-user_messages form:last-of-type button.active[type=submit], .show > .btn-danger.dropdown-toggle, .wt-block-content-user_messages form:last-of-type .show > button.dropdown-toggle[type=submit] {
+.btn-check:checked + .btn-danger, .btn-check:active + .btn-danger, .btn-danger:active, .btn-danger.active, .show > .btn-danger.dropdown-toggle {
   color: #000;
 }
 
-[dir] .btn-check:checked + .btn-danger, [dir] .wt-block-content-user_messages form:last-of-type .btn-check:checked + button[type=submit], [dir] .btn-check:active + .btn-danger, [dir] .wt-block-content-user_messages form:last-of-type .btn-check:active + button[type=submit], [dir] .btn-danger:active, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit]:active, [dir] .btn-danger.active, [dir] .wt-block-content-user_messages form:last-of-type button.active[type=submit], [dir] .show > .btn-danger.dropdown-toggle, [dir] .wt-block-content-user_messages form:last-of-type .show > button.dropdown-toggle[type=submit] {
+[dir] .btn-check:checked + .btn-danger, [dir] .btn-check:active + .btn-danger, [dir] .btn-danger:active, [dir] .btn-danger.active, [dir] .show > .btn-danger.dropdown-toggle {
   background-color: #e35d6a;
   background-image: none;
   border-color: #e04958;
 }
 
-[dir] .btn-check:checked + .btn-danger:focus, [dir] .wt-block-content-user_messages form:last-of-type .btn-check:checked + button[type=submit]:focus, [dir] .btn-check:active + .btn-danger:focus, [dir] .wt-block-content-user_messages form:last-of-type .btn-check:active + button[type=submit]:focus, [dir] .btn-danger:active:focus, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit]:active:focus, [dir] .btn-danger.active:focus, [dir] .wt-block-content-user_messages form:last-of-type button.active[type=submit]:focus, [dir] .show > .btn-danger.dropdown-toggle:focus, [dir] .wt-block-content-user_messages form:last-of-type .show > button.dropdown-toggle[type=submit]:focus {
+[dir] .btn-check:checked + .btn-danger:focus, [dir] .btn-check:active + .btn-danger:focus, [dir] .btn-danger:active:focus, [dir] .btn-danger.active:focus, [dir] .show > .btn-danger.dropdown-toggle:focus {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.25rem rgba(187, 45, 59, 0.5);
 }
 
-.btn-danger:disabled, .wt-block-content-user_messages form:last-of-type button[type=submit]:disabled, .btn-danger.disabled, .wt-block-content-user_messages form:last-of-type button.disabled[type=submit] {
+.btn-danger:disabled, .btn-danger.disabled {
   color: #000;
 }
 
-[dir] .btn-danger:disabled, [dir] .wt-block-content-user_messages form:last-of-type button[type=submit]:disabled, [dir] .btn-danger.disabled, [dir] .wt-block-content-user_messages form:last-of-type button.disabled[type=submit] {
+[dir] .btn-danger:disabled, [dir] .btn-danger.disabled {
   background-color: #dc3545;
   background-image: none;
   border-color: #dc3545;
@@ -4713,20 +4710,20 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .hideShowPassword-wrapper .btn-group-lg > button, .wt-block-content-user_messages form .btn-group-lg > button[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .hideShowPassword-wrapper .btn-group-lg > button {
   font-size: 1.25rem;
 }
 
-[dir] .btn-lg, [dir] .btn-group-lg > .btn, [dir] .hideShowPassword-wrapper .btn-group-lg > button, [dir] .wt-block-content-user_messages form .btn-group-lg > button[type=submit] {
+[dir] .btn-lg, [dir] .btn-group-lg > .btn, [dir] .hideShowPassword-wrapper .btn-group-lg > button {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .wt-block-content-user_messages form .btn, .wt-block-content-user_messages form .hideShowPassword-wrapper button, .hideShowPassword-wrapper .wt-block-content-user_messages form button, .wt-block-content-user_messages form button[type=submit], .btn-group-sm > .btn, .hideShowPassword-wrapper .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, .hideShowPassword-wrapper .btn-group-sm > button {
   font-size: 0.875rem;
 }
 
-[dir] .btn-sm, [dir] .wt-block-content-user_messages form .btn, [dir] .wt-block-content-user_messages form .hideShowPassword-wrapper button, [dir] .hideShowPassword-wrapper .wt-block-content-user_messages form button, [dir] .wt-block-content-user_messages form button[type=submit], [dir] .btn-group-sm > .btn, [dir] .hideShowPassword-wrapper .btn-group-sm > button {
+[dir] .btn-sm, [dir] .btn-group-sm > .btn, [dir] .hideShowPassword-wrapper .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   border-radius: 0.2rem;
 }
@@ -5326,49 +5323,37 @@ textarea.form-control-lg {
   vertical-align: middle;
 }
 
-.btn-group > .btn, .hideShowPassword-wrapper .btn-group > button, .wt-block-content-user_messages form .btn-group > button[type=submit],
+.btn-group > .btn, .hideShowPassword-wrapper .btn-group > button,
 .btn-group-vertical > .btn,
-.hideShowPassword-wrapper .btn-group-vertical > button,
-.wt-block-content-user_messages form .btn-group-vertical > button[type=submit] {
+.hideShowPassword-wrapper .btn-group-vertical > button {
   position: relative;
   -webkit-box-flex: 1;
           flex: 1 1 auto;
 }
 
-.btn-group > .btn-check:checked + .btn, .hideShowPassword-wrapper .btn-group > .btn-check:checked + button, .wt-block-content-user_messages form .btn-group > .btn-check:checked + button[type=submit],
+.btn-group > .btn-check:checked + .btn, .hideShowPassword-wrapper .btn-group > .btn-check:checked + button,
 .btn-group > .btn-check:focus + .btn,
 .hideShowPassword-wrapper .btn-group > .btn-check:focus + button,
-.wt-block-content-user_messages form .btn-group > .btn-check:focus + button[type=submit],
 .btn-group > .btn:hover,
 .hideShowPassword-wrapper .btn-group > button:hover,
-.wt-block-content-user_messages form .btn-group > button[type=submit]:hover,
 .btn-group > .btn:focus,
 .hideShowPassword-wrapper .btn-group > button:focus,
-.wt-block-content-user_messages form .btn-group > button[type=submit]:focus,
 .btn-group > .btn:active,
 .hideShowPassword-wrapper .btn-group > button:active,
-.wt-block-content-user_messages form .btn-group > button[type=submit]:active,
 .btn-group > .btn.active,
 .hideShowPassword-wrapper .btn-group > button.active,
-.wt-block-content-user_messages form .btn-group > button.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
 .hideShowPassword-wrapper .btn-group-vertical > .btn-check:checked + button,
-.wt-block-content-user_messages form .btn-group-vertical > .btn-check:checked + button[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
 .hideShowPassword-wrapper .btn-group-vertical > .btn-check:focus + button,
-.wt-block-content-user_messages form .btn-group-vertical > .btn-check:focus + button[type=submit],
 .btn-group-vertical > .btn:hover,
 .hideShowPassword-wrapper .btn-group-vertical > button:hover,
-.wt-block-content-user_messages form .btn-group-vertical > button[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
 .hideShowPassword-wrapper .btn-group-vertical > button:focus,
-.wt-block-content-user_messages form .btn-group-vertical > button[type=submit]:focus,
 .btn-group-vertical > .btn:active,
 .hideShowPassword-wrapper .btn-group-vertical > button:active,
-.wt-block-content-user_messages form .btn-group-vertical > button[type=submit]:active,
 .btn-group-vertical > .btn.active,
-.hideShowPassword-wrapper .btn-group-vertical > button.active,
-.wt-block-content-user_messages form .btn-group-vertical > button.active[type=submit] {
+.hideShowPassword-wrapper .btn-group-vertical > button.active {
   z-index: 1;
 }
 
@@ -5384,30 +5369,30 @@ textarea.form-control-lg {
   width: auto;
 }
 
-[dir="ltr"] .btn-group > .btn:not(:first-child), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:not(:first-child), [dir="ltr"] .wt-block-content-user_messages form .btn-group > button[type=submit]:not(:first-child), [dir="ltr"] .btn-group > .btn-group:not(:first-child) {
+[dir="ltr"] .btn-group > .btn:not(:first-child), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:not(:first-child), [dir="ltr"] .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
 
-[dir="rtl"] .btn-group > .btn:not(:first-child), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:not(:first-child), [dir="rtl"] .wt-block-content-user_messages form .btn-group > button[type=submit]:not(:first-child), [dir="rtl"] .btn-group > .btn-group:not(:first-child) {
+[dir="rtl"] .btn-group > .btn:not(:first-child), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:not(:first-child), [dir="rtl"] .btn-group > .btn-group:not(:first-child) {
   margin-right: -1px;
 }
 
-[dir="ltr"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:not(:last-child):not(.dropdown-toggle), [dir="ltr"] .wt-block-content-user_messages form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir="ltr"] .btn-group > .btn-group:not(:last-child) > .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:last-child) > button, [dir="ltr"] .wt-block-content-user_messages form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
+[dir="ltr"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:not(:last-child):not(.dropdown-toggle), [dir="ltr"] .btn-group > .btn-group:not(:last-child) > .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-[dir="rtl"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:not(:last-child):not(.dropdown-toggle), [dir="rtl"] .wt-block-content-user_messages form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir="rtl"] .btn-group > .btn-group:not(:last-child) > .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:last-child) > button, [dir="rtl"] .wt-block-content-user_messages form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
+[dir="rtl"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:not(:last-child):not(.dropdown-toggle), [dir="rtl"] .btn-group > .btn-group:not(:last-child) > .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:last-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-[dir="ltr"] .btn-group > .btn:nth-child(n+3), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:nth-child(n+3), [dir="ltr"] .wt-block-content-user_messages form .btn-group > button[type=submit]:nth-child(n+3), [dir="ltr"] .btn-group > :not(.btn-check) + .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > :not(.btn-check) + button, [dir="ltr"] .wt-block-content-user_messages form .btn-group > :not(.btn-check) + button[type=submit], [dir="ltr"] .btn-group > .btn-group:not(:first-child) > .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:first-child) > button, [dir="ltr"] .wt-block-content-user_messages form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
+[dir="ltr"] .btn-group > .btn:nth-child(n+3), [dir="ltr"] .hideShowPassword-wrapper .btn-group > button:nth-child(n+3), [dir="ltr"] .btn-group > :not(.btn-check) + .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > :not(.btn-check) + button, [dir="ltr"] .btn-group > .btn-group:not(:first-child) > .btn, [dir="ltr"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-[dir="rtl"] .btn-group > .btn:nth-child(n+3), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:nth-child(n+3), [dir="rtl"] .wt-block-content-user_messages form .btn-group > button[type=submit]:nth-child(n+3), [dir="rtl"] .btn-group > :not(.btn-check) + .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > :not(.btn-check) + button, [dir="rtl"] .wt-block-content-user_messages form .btn-group > :not(.btn-check) + button[type=submit], [dir="rtl"] .btn-group > .btn-group:not(:first-child) > .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:first-child) > button, [dir="rtl"] .wt-block-content-user_messages form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
+[dir="rtl"] .btn-group > .btn:nth-child(n+3), [dir="rtl"] .hideShowPassword-wrapper .btn-group > button:nth-child(n+3), [dir="rtl"] .btn-group > :not(.btn-check) + .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > :not(.btn-check) + button, [dir="rtl"] .btn-group > .btn-group:not(:first-child) > .btn, [dir="rtl"] .hideShowPassword-wrapper .btn-group > .btn-group:not(:first-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -5433,12 +5418,12 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 
-[dir] .btn-sm + .dropdown-toggle-split, [dir] .wt-block-content-user_messages form .btn + .dropdown-toggle-split, [dir] .wt-block-content-user_messages form .hideShowPassword-wrapper button + .dropdown-toggle-split, [dir] .hideShowPassword-wrapper .wt-block-content-user_messages form button + .dropdown-toggle-split, [dir] .wt-block-content-user_messages form button[type=submit] + .dropdown-toggle-split, [dir] .btn-group-sm > .btn + .dropdown-toggle-split, [dir] .hideShowPassword-wrapper .btn-group-sm > button + .dropdown-toggle-split, [dir] .wt-block-content-user_messages form .btn-group-sm > button[type=submit] + .dropdown-toggle-split {
+[dir] .btn-sm + .dropdown-toggle-split, [dir] .btn-group-sm > .btn + .dropdown-toggle-split, [dir] .hideShowPassword-wrapper .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-[dir] .btn-lg + .dropdown-toggle-split, [dir] .btn-group-lg > .btn + .dropdown-toggle-split, [dir] .hideShowPassword-wrapper .btn-group-lg > button + .dropdown-toggle-split, [dir] .wt-block-content-user_messages form .btn-group-lg > button[type=submit] + .dropdown-toggle-split {
+[dir] .btn-lg + .dropdown-toggle-split, [dir] .btn-group-lg > .btn + .dropdown-toggle-split, [dir] .hideShowPassword-wrapper .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -5461,21 +5446,21 @@ textarea.form-control-lg {
           justify-content: center;
 }
 
-.btn-group-vertical > .btn, .hideShowPassword-wrapper .btn-group-vertical > button, .wt-block-content-user_messages form .btn-group-vertical > button[type=submit],
+.btn-group-vertical > .btn, .hideShowPassword-wrapper .btn-group-vertical > button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
 
-[dir] .btn-group-vertical > .btn:not(:first-child), [dir] .hideShowPassword-wrapper .btn-group-vertical > button:not(:first-child), [dir] .wt-block-content-user_messages form .btn-group-vertical > button[type=submit]:not(:first-child), [dir] .btn-group-vertical > .btn-group:not(:first-child) {
+[dir] .btn-group-vertical > .btn:not(:first-child), [dir] .hideShowPassword-wrapper .btn-group-vertical > button:not(:first-child), [dir] .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
 
-[dir] .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), [dir] .hideShowPassword-wrapper .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), [dir] .wt-block-content-user_messages form .btn-group-vertical > button[type=submit]:not(:last-child):not(.dropdown-toggle), [dir] .btn-group-vertical > .btn-group:not(:last-child) > .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:last-child) > button, [dir] .wt-block-content-user_messages form .btn-group-vertical > .btn-group:not(:last-child) > button[type=submit] {
+[dir] .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), [dir] .hideShowPassword-wrapper .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), [dir] .btn-group-vertical > .btn-group:not(:last-child) > .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:last-child) > button {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-[dir] .btn-group-vertical > .btn ~ .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > button ~ .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn ~ button, [dir] .hideShowPassword-wrapper .btn-group-vertical > button ~ button, [dir] .wt-block-content-user_messages form .btn-group-vertical > button[type=submit] ~ .btn, [dir] .wt-block-content-user_messages form .btn-group-vertical > .btn ~ button[type=submit], [dir] .wt-block-content-user_messages form .btn-group-vertical > button[type=submit] ~ button[type=submit], [dir] .btn-group-vertical > .btn-group:not(:first-child) > .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:first-child) > button, [dir] .wt-block-content-user_messages form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
+[dir] .btn-group-vertical > .btn ~ .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > button ~ .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn ~ button, [dir] .hideShowPassword-wrapper .btn-group-vertical > button ~ button, [dir] .btn-group-vertical > .btn-group:not(:first-child) > .btn, [dir] .hideShowPassword-wrapper .btn-group-vertical > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -6906,7 +6891,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge, .hideShowPassword-wrapper button .badge, .wt-block-content-user_messages form button[type=submit] .badge {
+.btn .badge, .hideShowPassword-wrapper button .badge {
   position: relative;
   top: -1px;
 }
@@ -9359,7 +9344,7 @@ textarea.form-control-lg {
   margin-left: 0.25rem !important;
 }
 
-[dir] .mx-2, [dir] .wt-block-content-user_messages form select {
+[dir] .mx-2 {
   margin-right: 0.5rem !important;
   margin-left: 0.5rem !important;
 }
@@ -9515,7 +9500,7 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-[dir] .mb-3, [dir] .wt-block-content-user_messages form {
+[dir] .mb-3 {
   margin-bottom: 1rem !important;
 }
 
@@ -9523,7 +9508,7 @@ textarea.form-control-lg {
   margin-bottom: 1.5rem !important;
 }
 
-[dir] .mb-5, [dir] .wt-block-content-user_messages .table-responsive, [dir] .wt-block-content-user_messages .dataTables_wrapper {
+[dir] .mb-5 {
   margin-bottom: 3rem !important;
 }
 
@@ -14971,11 +14956,11 @@ table.dataTable.table-striped > tbody > tr.odd, #sidebar-content-family_nav tabl
   width: 1px !important;
 }
 
-.ts-wrapper.form-control, .wt-route-EditName input.ts-wrapper[class=NAME], .wt-block-content-user_messages form select.ts-wrapper, .ts-wrapper.form-select {
+.ts-wrapper.form-control, .wt-route-EditName input.ts-wrapper[class=NAME], .ts-wrapper.form-select {
   padding: 0 !important;
 }
 
-.ts-dropdown, .ts-dropdown.form-control, .wt-route-EditName input.ts-dropdown[class=NAME], .wt-block-content-user_messages form select.ts-dropdown, .ts-dropdown.form-select {
+.ts-dropdown, .ts-dropdown.form-control, .wt-route-EditName input.ts-dropdown[class=NAME], .ts-dropdown.form-select {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -18119,7 +18104,7 @@ a.gallery {
   text-decoration: none;
 }
 
-[dir] .btn-primary, [dir] .wt-block-content-user_messages form button[type=submit] {
+[dir] .btn-primary {
   border: 1px solid #d36400;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
@@ -18127,33 +18112,30 @@ a.gallery {
   background: linear-gradient(#d36400 0, #7f3c00 50%);
 }
 
-.btn-primary, .wt-block-content-user_messages form button[type=submit],
+.btn-primary,
 .btn-primary a,
-.wt-block-content-user_messages form button[type=submit] a,
 .btn-primary .far,
-.wt-block-content-user_messages form button[type=submit] .far,
-.btn-primary .fas,
-.wt-block-content-user_messages form button[type=submit] .fas {
+.btn-primary .fas {
   color: #f9f9f9;
 }
 
-.btn-primary [class*=icon-], .wt-block-content-user_messages form button[type=submit] [class*=icon-] {
+.btn-primary [class*=icon-] {
   color: #f9f9f9;
 }
 
-.btn-primary [class*=icon-]:hover, .wt-block-content-user_messages form button[type=submit] [class*=icon-]:hover, .btn-primary [class*=icon-]:focus, .wt-block-content-user_messages form button[type=submit] [class*=icon-]:focus {
+.btn-primary [class*=icon-]:hover, .btn-primary [class*=icon-]:focus {
   color: #f9f9f9;
 }
 
-.btn-primary th, .wt-block-content-user_messages form button[type=submit] th {
+.btn-primary th {
   font-weight: 600;
 }
 
-.btn-primary:hover, .wt-block-content-user_messages form button[type=submit]:hover {
+.btn-primary:hover {
   color: #f9f9f9;
 }
 
-[dir] .btn-primary:hover, [dir] .wt-block-content-user_messages form button[type=submit]:hover {
+[dir] .btn-primary:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
   background: linear-gradient(#a95000, #542800 100%);
 }
@@ -18835,7 +18817,7 @@ caption {
   color: #ffff99;
 }
 
-.btn-primary [class*=icon-], .wt-block-content-user_messages form button[type=submit] [class*=icon-] {
+.btn-primary [class*=icon-] {
   color: #f9f9f9;
 }
 
@@ -19309,9 +19291,100 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   content: " •";
 }
 
-.wt-block-content-user_messages .table-responsive, .wt-block-content-user_messages .dataTables_wrapper {
-  max-height: 30rem;
-  /* 480px */
+.wt-block-content-user_messages table thead, .wt-block-content-user_messages table tbody, .wt-block-content-user_messages table tr, .wt-block-content-user_messages table td, .wt-block-content-user_messages table th {
+  display: block;
+}
+
+.wt-block-content-user_messages table tr:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+}
+
+[dir] .wt-block-content-user_messages table tr:after {
+  clear: both;
+}
+
+.wt-block-content-user_messages table tbody {
+  height: 30rem;
+  overflow-y: auto;
+}
+
+[dir="ltr"] .wt-block-content-user_messages table thead th,
+[dir="ltr"] .wt-block-content-user_messages table tbody td {
+  float: left;
+}
+
+[dir="rtl"] .wt-block-content-user_messages table thead th,
+[dir="rtl"] .wt-block-content-user_messages table tbody td {
+  float: right;
+}
+
+.wt-block-content-user_messages table .jc-column-1 {
+  width: 15%;
+}
+
+.wt-block-content-user_messages table .jc-column-2 {
+  width: 35%;
+}
+
+.wt-block-content-user_messages table .jc-column-3 {
+  width: 20%;
+}
+
+.wt-block-content-user_messages table .jc-column-4 {
+  width: 30%;
+}
+
+[dir="ltr"] .wt-block-content-user_messages table .wt-icon-expand,
+[dir="ltr"] .wt-block-content-user_messages table .wt-icon-collapse {
+  margin-left: -1.75rem;
+}
+
+[dir="rtl"] .wt-block-content-user_messages table .wt-icon-expand,
+[dir="rtl"] .wt-block-content-user_messages table .wt-icon-collapse {
+  margin-right: -1.75rem;
+}
+
+[dir] .wt-block-content-user_messages table thead tr {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d36400), color-stop(50%, #7f3c00));
+  background: linear-gradient(#d36400 0, #7f3c00 50%);
+}
+
+.wt-block-content-user_messages table thead tr,
+.wt-block-content-user_messages table thead tr a,
+.wt-block-content-user_messages table thead tr .far,
+.wt-block-content-user_messages table thead tr .fas {
+  color: #f9f9f9;
+}
+
+.wt-block-content-user_messages table thead tr [class*=icon-] {
+  color: #f9f9f9;
+}
+
+.wt-block-content-user_messages table thead tr [class*=icon-]:hover, .wt-block-content-user_messages table thead tr [class*=icon-]:focus {
+  color: #f9f9f9;
+}
+
+.wt-block-content-user_messages table thead tr th {
+  font-weight: 600;
+}
+
+.wt-block-content-user_messages table thead tr:hover {
+  color: #f9f9f9;
+}
+
+[dir] .wt-block-content-user_messages table thead tr:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
+  background: linear-gradient(#a95000, #542800 100%);
+}
+
+[dir] .wt-block-content-user_messages table tr {
+  border: 1px solid #545454;
+}
+
+.wt-block-content-user_messages table a:hover {
+  text-decoration: none;
 }
 
 [dir] .wt-block-content-user_favorites .jc-favorites-block-item,
@@ -20066,11 +20139,11 @@ table.dataTable tbody tr.odd {
   margin-top: 1.5rem;
 }
 
-[dir="ltr"] .wt-table-individual tfoot th .btn-group .btn, [dir="ltr"] .wt-table-individual tfoot th .btn-group .hideShowPassword-wrapper button, [dir="ltr"] .hideShowPassword-wrapper .wt-table-individual tfoot th .btn-group button, [dir="ltr"] .wt-table-individual tfoot th .btn-group .wt-block-content-user_messages form button[type=submit], [dir="ltr"] .wt-block-content-user_messages form .wt-table-individual tfoot th .btn-group button[type=submit], [dir="ltr"] .wt-table-family tfoot th .btn-group .btn, [dir="ltr"] .wt-table-family tfoot th .btn-group .hideShowPassword-wrapper button, [dir="ltr"] .hideShowPassword-wrapper .wt-table-family tfoot th .btn-group button, [dir="ltr"] .wt-table-family tfoot th .btn-group .wt-block-content-user_messages form button[type=submit], [dir="ltr"] .wt-block-content-user_messages form .wt-table-family tfoot th .btn-group button[type=submit] {
+[dir="ltr"] .wt-table-individual tfoot th .btn-group .btn, [dir="ltr"] .wt-table-individual tfoot th .btn-group .hideShowPassword-wrapper button, [dir="ltr"] .hideShowPassword-wrapper .wt-table-individual tfoot th .btn-group button, [dir="ltr"] .wt-table-family tfoot th .btn-group .btn, [dir="ltr"] .wt-table-family tfoot th .btn-group .hideShowPassword-wrapper button, [dir="ltr"] .hideShowPassword-wrapper .wt-table-family tfoot th .btn-group button {
   margin-right: 0.5rem;
 }
 
-[dir="rtl"] .wt-table-individual tfoot th .btn-group .btn, [dir="rtl"] .wt-table-individual tfoot th .btn-group .hideShowPassword-wrapper button, [dir="rtl"] .hideShowPassword-wrapper .wt-table-individual tfoot th .btn-group button, [dir="rtl"] .wt-table-individual tfoot th .btn-group .wt-block-content-user_messages form button[type=submit], [dir="rtl"] .wt-block-content-user_messages form .wt-table-individual tfoot th .btn-group button[type=submit], [dir="rtl"] .wt-table-family tfoot th .btn-group .btn, [dir="rtl"] .wt-table-family tfoot th .btn-group .hideShowPassword-wrapper button, [dir="rtl"] .hideShowPassword-wrapper .wt-table-family tfoot th .btn-group button, [dir="rtl"] .wt-table-family tfoot th .btn-group .wt-block-content-user_messages form button[type=submit], [dir="rtl"] .wt-block-content-user_messages form .wt-table-family tfoot th .btn-group button[type=submit] {
+[dir="rtl"] .wt-table-individual tfoot th .btn-group .btn, [dir="rtl"] .wt-table-individual tfoot th .btn-group .hideShowPassword-wrapper button, [dir="rtl"] .hideShowPassword-wrapper .wt-table-individual tfoot th .btn-group button, [dir="rtl"] .wt-table-family tfoot th .btn-group .btn, [dir="rtl"] .wt-table-family tfoot th .btn-group .hideShowPassword-wrapper button, [dir="rtl"] .hideShowPassword-wrapper .wt-table-family tfoot th .btn-group button {
   margin-left: 0.5rem;
 }
 

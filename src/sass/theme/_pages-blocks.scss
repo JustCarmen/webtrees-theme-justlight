@@ -64,34 +64,63 @@
 }
 
 .wt-block-content-user_messages {
-    .table-responsive {
-        max-height: 30rem;
-        /* 480px */
-        @extend .mb-5;
-    }
 
-    form {
-        @extend .mb-3;
+    // scrollable table with fixed header
+    // See: https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body
 
-        select {
-            @extend .form-control;
-            @extend .mx-2;
+    table {
+        thead, tbody, tr, td, th {
+            display: block;
         }
 
-        .btn {
-            @extend .btn-sm;
+        tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
         }
 
-        button[type="submit"] {
-            @extend .btn;
-            @extend .btn-sm;
-            @extend .btn-primary;
+        tbody {
+            height: 30rem;
+            overflow-y: auto;
         }
 
-        &:last-of-type {
-            button[type="submit"] {
-                @extend .btn-danger;
-            }
+        thead th,
+        tbody td, {
+            float: left;
+        }
+
+        .jc-column-1 {
+            width: 15%;
+        }
+
+        .jc-column-2 {
+            width: 35%;
+        }
+
+        .jc-column-3 {
+            width: 20%;
+        }
+
+        .jc-column-4 {
+            width: 30%;
+        }
+
+        .wt-icon-expand,
+        .wt-icon-collapse {
+            margin-left: -1.75rem;
+        }
+
+        thead tr {
+            @include jc-theme-gradient-primary();
+        }
+
+        tr {
+            @include jc-border;
+        }
+
+        a:hover {
+            text-decoration: none;
         }
     }
 }
