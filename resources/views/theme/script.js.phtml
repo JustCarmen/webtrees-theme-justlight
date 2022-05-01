@@ -7,6 +7,9 @@
     $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
     $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
+    // Individual page layout issue, temporary fix. See: https://github.com/fisharebest/webtrees/issues/4365
+    $('.wt-tabs-individual').parent('.col').addClass('col-sm-8').removeClass('col');
+
     // Individual page main image - add classes for styling purposes
     $('.wt-individual-silhouette')
         .parent().addClass('jc-indi-silhouette-container')
