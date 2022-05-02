@@ -104,6 +104,7 @@
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
 
+    // Solve conflict with our sticky header when using the on screen keyboard.
     $('form').each(function() {
         $(this).find('.wt-osk-trigger').on('click', function() {
             $('.wt-header-wrapper').removeClass('sticky-top');
