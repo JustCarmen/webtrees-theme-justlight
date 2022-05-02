@@ -2,3 +2,11 @@
 .ts-control, .ts-control input, .ts-dropdown {
     color: $body-color;
 }
+
+.ts-dropdown {
+    .wt-mime {
+        width: 2rem;
+        vertical-align: middle;
+        margin-right: .5rem;
+    }
+}

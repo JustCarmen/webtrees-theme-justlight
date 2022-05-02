@@ -20972,6 +20972,19 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   color: #212529;
 }
 
+.ts-dropdown .wt-mime {
+  width: 2rem;
+  vertical-align: middle;
+}
+
+[dir="ltr"] .ts-dropdown .wt-mime {
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .ts-dropdown .wt-mime {
+  margin-left: 0.5rem;
+}
+
 [dir] form label {
   margin-bottom: 0.5rem;
 }
