@@ -18833,8 +18833,17 @@ caption {
   color: #5aad22;
 }
 
-.icon-silhouette-M, .icon-silhouette-F, .icon-silhouette-U {
+.icon-silhouette-m, .icon-silhouette-f, .icon-silhouette-u {
   font-size: 3rem;
+  vertical-align: middle;
+}
+
+[dir="ltr"] .icon-silhouette-m, [dir="ltr"] .icon-silhouette-f, [dir="ltr"] .icon-silhouette-u {
+  padding-right: 0.4rem;
+}
+
+[dir="rtl"] .icon-silhouette-m, [dir="rtl"] .icon-silhouette-f, [dir="rtl"] .icon-silhouette-u {
+  padding-left: 0.4rem;
 }
 
 .icon-edit_indi::before {
@@ -18939,30 +18948,30 @@ caption {
 }
 
 /** JustLight Theme - Icons - Icomoon */
-.icon-silhouette-F {
+.icon-silhouette-f {
   font-family: "icomoon" !important;
   color: #ffffcc;
 }
 
-.icon-silhouette-F:before {
+.icon-silhouette-f:before {
   content: "\e601";
 }
 
-.icon-silhouette-M {
+.icon-silhouette-m {
   font-family: "icomoon" !important;
   color: #ffffcc;
 }
 
-.icon-silhouette-M:before {
+.icon-silhouette-m:before {
   content: "\e602";
 }
 
-.icon-silhouette-U {
+.icon-silhouette-u {
   font-family: "icomoon" !important;
   color: #ffffcc;
 }
 
-.icon-silhouette-U:before {
+.icon-silhouette-u:before {
   content: "\e603";
 }
 

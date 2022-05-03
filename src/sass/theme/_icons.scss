@@ -32,12 +32,14 @@
         @include jc-icon-color($jc-icon-green-color);
     }
 
-    &-silhouette {
+    &-silhouette { // used in charts and option lists
 
-        &-M,
-        &-F,
-        &-U {
+        &-m,
+        &-f,
+        &-u {
             font-size: 3rem;
+            padding-right: .4rem;
+            vertical-align: middle;
         }
     }
 
