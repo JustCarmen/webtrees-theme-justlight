@@ -20600,6 +20600,10 @@ table {
   min-width: 10rem;
 }
 
+.wt-chart-relationships .wt-chart-box {
+  height: 5rem;
+}
+
 /** JustLight Theme - Charts - Descendants chart */
 [dir] .jc-chart-descendants-family .wt-chart-box {
   margin-bottom: 0.5rem;
