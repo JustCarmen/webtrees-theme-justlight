@@ -8,7 +8,7 @@ $route = app(ServerRequestInterface::class)->getAttribute('route');
 
 ?>
 
-<?php if ($route->pathPrefix === '/admin'): ?>
+<?php if ($route->pathPrefix === '/admin' || basename($route->name) === 'TreePrivacyPage'): ?>
     <?= view('::icons/add') ?>
 <?php else: ?>
     <span class="wt-icon-add"><i class="fa-solid fa-square-plus fa-fw" aria-hidden="true"></i></span>
