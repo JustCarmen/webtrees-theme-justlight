@@ -44,7 +44,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     /**
      * @var string
      */
-    public const CUSTOM_VERSION = '2.2.0-dev';
+    public const CUSTOM_VERSION = '2.2.0';
 
     /**
      * @var string
