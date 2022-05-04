@@ -116,14 +116,14 @@
 
     // Badges
     $('.jc-palette-justlight')
-        .find('.wt-statistics-chart')
+        .find('.wt-statistics-chart, .wt-block-content-top10_pageviews')
         .find('.badge').addClass('bg-dark bg-gradient').removeClass('rounded-pill bg-secondary')
 
-    $('.menu-clippings-cart, .nav-link').find('.badge').addClass('text-dark');
-
     $('.jc-palette-justblack')
-        .find('.wt-statistics-chart, .menu-clippings-cart')
+        .find('.wt-statistics-chart, .wt-block-content-top10_pageviews, .menu-clippings-cart')
         .find('.badge').addClass('bg-light bg-gradient text-dark').removeClass('rounded-pill bg-secondary');
+
+    $('.menu-clippings-cart, .nav-link').find('.badge').addClass('text-dark');
 
     // Use the default bootstrap badge class for the odometer
     $('.jc-palette-justlight').find('.odometer').addClass('badge bg-dark bg-gradient');
