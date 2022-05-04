@@ -19407,6 +19407,22 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   text-decoration: none;
 }
 
+[dir] .wt-block-content-upcoming_events > div {
+  margin-bottom: 0.5rem;
+}
+
+.wt-block-content-upcoming_events > div .NAME {
+  font-weight: 600;
+}
+
+[dir="ltr"] .wt-block-content-upcoming_events > div .indent {
+  padding-left: 0.5rem;
+}
+
+[dir="rtl"] .wt-block-content-upcoming_events > div .indent {
+  padding-right: 0.5rem;
+}
+
 /** JustLight Theme - Specific pages - Accordion */
 #sidebar .accordion-item {
   font-size: 0.875rem;

@@ -136,3 +136,17 @@
         text-decoration: none;
     }
 }
+
+.wt-block-content-upcoming_events {
+    > div {
+        margin-bottom: .5rem;
+
+        .NAME {
+            font-weight: 600;
+        }
+
+        .indent {
+            padding-left: .5rem;
+        }
+    }
+}
