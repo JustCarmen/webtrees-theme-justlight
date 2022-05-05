@@ -12,7 +12,7 @@ const path = require("path");
 //https://github.com/postcss/autoprefixer
 const postcssAutoprefixer = require("autoprefixer")();
 
-//https://github.com/jakob101/postcss-inline-rtl
+// https://github.com/elchininet/postcss-rtlcss
 const postcssRTLCSS = require('postcss-rtlcss')({safeBothPrefix: true});
 
 //https://github.com/bezoerb/postcss-image-inliner
