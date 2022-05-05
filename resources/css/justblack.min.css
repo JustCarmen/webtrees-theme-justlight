@@ -10047,11 +10047,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-secondary {
+.bg-secondary, form .card-header {
   --bs-bg-opacity: 1;
 }
 
-[dir] .bg-secondary {
+[dir] .bg-secondary, [dir] form .card-header {
   background-color: rgba(222, 226, 230, var(--bs-bg-opacity)) !important;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -19242,6 +19242,127 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   }
 }
 
+/** JustLight Theme - Specific pages - Accordion */
+#sidebar .accordion-item {
+  font-size: 0.875rem;
+}
+
+[dir] #individual-names .accordion-item:first-of-type .accordion-header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d36400), color-stop(50%, #7f3c00));
+  background: linear-gradient(#d36400 0, #7f3c00 50%);
+}
+
+#individual-names .accordion-item:first-of-type .accordion-header,
+#individual-names .accordion-item:first-of-type .accordion-header a,
+#individual-names .accordion-item:first-of-type .accordion-header .far,
+#individual-names .accordion-item:first-of-type .accordion-header .fas {
+  color: #f9f9f9;
+}
+
+#individual-names .accordion-item:first-of-type .accordion-header [class*=icon-] {
+  color: #f9f9f9;
+}
+
+#individual-names .accordion-item:first-of-type .accordion-header [class*=icon-]:hover, #individual-names .accordion-item:first-of-type .accordion-header [class*=icon-]:focus {
+  color: #f9f9f9;
+}
+
+#individual-names .accordion-item:first-of-type .accordion-header th {
+  font-weight: 600;
+}
+
+#individual-names .accordion-item:first-of-type .accordion-header:hover {
+  color: #f9f9f9;
+}
+
+[dir] #individual-names .accordion-item:first-of-type .accordion-header:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
+  background: linear-gradient(#a95000, #542800 100%);
+}
+
+[dir] #sidebar .accordion-header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d36400), color-stop(50%, #7f3c00));
+  background: linear-gradient(#d36400 0, #7f3c00 50%);
+}
+
+#sidebar .accordion-header,
+#sidebar .accordion-header a,
+#sidebar .accordion-header .far,
+#sidebar .accordion-header .fas {
+  color: #f9f9f9;
+}
+
+#sidebar .accordion-header [class*=icon-] {
+  color: #f9f9f9;
+}
+
+#sidebar .accordion-header [class*=icon-]:hover, #sidebar .accordion-header [class*=icon-]:focus {
+  color: #f9f9f9;
+}
+
+#sidebar .accordion-header th {
+  font-weight: 600;
+}
+
+#sidebar .accordion-header:hover {
+  color: #f9f9f9;
+}
+
+[dir] #sidebar .accordion-header:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
+  background: linear-gradient(#a95000, #542800 100%);
+}
+
+[dir] #sidebar-content-family_nav .accordion-body {
+  padding: 0;
+}
+
+.accordion-body .wt-sidebar-family-navigator .wt-family-navigator-label {
+  width: 33.3333333333%;
+}
+
+.accordion-body .wt-sidebar-family-navigator .dropdown-menu {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  z-index: 1;
+}
+
+[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: #000;
+  border: 2px solid #545454;
+}
+
+.accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-header {
+  padding: 0;
+}
+
+[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-item {
+  padding: 0;
+}
+
+[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
+  margin-bottom: 0;
+}
+
+[dir="ltr"] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
+  padding-left: 1rem;
+}
+
+[dir="rtl"] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
+  padding-right: 1rem;
+}
+
+.accordion-body .wt-sidebar-family-navigator .dropdown-menu .label {
+  font-weight: 600;
+}
+
 /** JustLight Theme - Specific pages - Home page and User page blocks */
 [dir] .wt-block {
   border: none;
@@ -19423,125 +19544,24 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   padding-right: 0.5rem;
 }
 
-/** JustLight Theme - Specific pages - Accordion */
-#sidebar .accordion-item {
-  font-size: 0.875rem;
+/** JustLight Theme - Specific pages - Cards */
+[dir] form .card {
+  margin-bottom: 0.5rem;
 }
 
-[dir] #individual-names .accordion-item:first-of-type .accordion-header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d36400), color-stop(50%, #7f3c00));
-  background: linear-gradient(#d36400 0, #7f3c00 50%);
+form .card-header {
+  color: #dee2e6;
+  text-decoration: none;
 }
 
-#individual-names .accordion-item:first-of-type .accordion-header,
-#individual-names .accordion-item:first-of-type .accordion-header a,
-#individual-names .accordion-item:first-of-type .accordion-header .far,
-#individual-names .accordion-item:first-of-type .accordion-header .fas {
-  color: #f9f9f9;
+[dir] form .card-header {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-#individual-names .accordion-item:first-of-type .accordion-header [class*=icon-] {
-  color: #f9f9f9;
-}
-
-#individual-names .accordion-item:first-of-type .accordion-header [class*=icon-]:hover, #individual-names .accordion-item:first-of-type .accordion-header [class*=icon-]:focus {
-  color: #f9f9f9;
-}
-
-#individual-names .accordion-item:first-of-type .accordion-header th {
-  font-weight: 600;
-}
-
-#individual-names .accordion-item:first-of-type .accordion-header:hover {
-  color: #f9f9f9;
-}
-
-[dir] #individual-names .accordion-item:first-of-type .accordion-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
-  background: linear-gradient(#a95000, #542800 100%);
-}
-
-[dir] #sidebar .accordion-header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d36400), color-stop(50%, #7f3c00));
-  background: linear-gradient(#d36400 0, #7f3c00 50%);
-}
-
-#sidebar .accordion-header,
-#sidebar .accordion-header a,
-#sidebar .accordion-header .far,
-#sidebar .accordion-header .fas {
-  color: #f9f9f9;
-}
-
-#sidebar .accordion-header [class*=icon-] {
-  color: #f9f9f9;
-}
-
-#sidebar .accordion-header [class*=icon-]:hover, #sidebar .accordion-header [class*=icon-]:focus {
-  color: #f9f9f9;
-}
-
-#sidebar .accordion-header th {
-  font-weight: 600;
-}
-
-#sidebar .accordion-header:hover {
-  color: #f9f9f9;
-}
-
-[dir] #sidebar .accordion-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a95000), to(#542800));
-  background: linear-gradient(#a95000, #542800 100%);
-}
-
-[dir] #sidebar-content-family_nav .accordion-body {
-  padding: 0;
-}
-
-.accordion-body .wt-sidebar-family-navigator .wt-family-navigator-label {
-  width: 33.3333333333%;
-}
-
-.accordion-body .wt-sidebar-family-navigator .dropdown-menu {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  z-index: 1;
-}
-
-[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  background: #000;
-  border: 2px solid #545454;
-}
-
-.accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-header {
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-header {
-  padding: 0;
-}
-
-[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-item {
-  padding: 0;
-}
-
-[dir] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
-  margin-bottom: 0;
-}
-
-[dir="ltr"] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
-  padding-left: 1rem;
-}
-
-[dir="rtl"] .accordion-body .wt-sidebar-family-navigator .dropdown-menu ul {
-  padding-right: 1rem;
-}
-
-.accordion-body .wt-sidebar-family-navigator .dropdown-menu .label {
-  font-weight: 600;
+[dir] .card-body {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /** JustLight Theme - Specific pages - Colorbox */
@@ -21219,7 +21239,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   border-bottom: 1px solid #545454;
 }
 
-[dir] .wt-block-content-user_messages .bg-secondary {
+[dir] .wt-block-content-user_messages .bg-secondary, [dir] .wt-block-content-user_messages form .card-header, [dir] form .wt-block-content-user_messages .card-header {
   background: #545454 !important;
 }
 

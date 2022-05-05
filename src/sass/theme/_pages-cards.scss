@@ -1,0 +1,19 @@
+/** JustLight Theme - Specific pages - Cards */
+.card {
+    form & {
+        margin-bottom: .5rem;
+    }
+}
+
+.card-header {
+    form & {
+        @extend .bg-secondary;
+        @include jc-padding-tb(.5);
+        color: $body-color;
+        text-decoration: none;
+    }
+}
+
+.card-body {
+    @include jc-padding-tb(.5);
+}
