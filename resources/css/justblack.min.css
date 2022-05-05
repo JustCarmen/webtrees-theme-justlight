@@ -16747,9 +16747,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+          align-items: center;
   -webkit-box-pack: center;
-  justify-content: center;
+          justify-content: center;
 }
 
 [dir] .tv_out {
@@ -17944,12 +17944,12 @@ body {
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  flex-direction: column;
+          flex-direction: column;
 }
 
 main {
   -webkit-box-flex: 1;
-  flex: 1;
+          flex: 1;
 }
 
 a {
