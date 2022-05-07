@@ -43,13 +43,13 @@
 
         // Give the single note-title a class to work with
         var $title = $this.contents().not($this.children());
-        if ($title.text().length > 1) {
+        if ($title.text().trim().length > 1) {
             $title.wrap('<div class="jc-note-title ps-4 collapse">');
         }
 
         // Give the shared note-title a class to work with
         var $title = $this.find('a bdi');
-        if ($title.text().length > 1) {
+        if ($title.text().trim().length > 1) {
             $title.addClass('jc-note-title collapse');
         }
 
