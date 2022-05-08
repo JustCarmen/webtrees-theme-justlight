@@ -75,6 +75,7 @@
     $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .accordion-collapse')
         .find('.gallery').parents('.d-flex').each(function() {
             $(this).addClass('row');
+            $(this).find('> div').first().addClass('py-1').removeClass('pb-1'); // small layout correction
             $(this).find('bdi').addClass('jc-gallery-caption');
         });
 
