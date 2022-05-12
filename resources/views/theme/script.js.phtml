@@ -16,6 +16,9 @@
         .parent().addClass('jc-indi-header-image-container')
         .find('a[href*="add-fact"]').addClass('jc-icon-add').parent('div').addClass('mt-2').removeClass('text-center');
 
+    // Remove class from caption (this class cannot be overwritten with css)
+    $('caption').removeClass('text-center'); // used in wt-family-navigator-family-heading
+
     // Descendants chart - add classes for styling purposes
     $('.wt-chart-descendants [id^="fam"]').each(function () {
         $(this).addClass('jc-chart-descendants-family'),
