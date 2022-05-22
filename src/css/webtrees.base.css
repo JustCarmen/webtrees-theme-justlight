@@ -106,9 +106,12 @@
     min-height:25vh;
     max-height:95vh;
     background:#E6E6E6;
+    display:-webkit-box;
     display:flex;
-    align-items:center;
-    justify-content:center;
+    -webkit-box-align:center;
+            align-items:center;
+    -webkit-box-pack:center;
+            justify-content:center;
 }
 .tv_out img{
     border:0;
@@ -909,13 +912,17 @@ th.align-digits{
     text-align:right;
 }
 body{
+    display:-webkit-box;
     display:flex;
     min-height:100vh;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+            flex-direction:column;
 }
 
 main{
-    flex:1;
+    -webkit-box-flex:1;
+            flex:1;
 }
 a{
     text-decoration:none;
@@ -957,9 +964,25 @@ a:hover, .btn-link:hover, .nav-link:hover{
     -webkit-text-decoration:var(--link-decoration-hover);
             text-decoration:var(--link-decoration-hover);
 }
+.dropdown-menu{
+    max-height:90vh;
+    overflow-x:hidden;
+    scrollbar-gutter:stable;
+}
 .ut{
     unicode-bidi:-webkit-isolate;
     unicode-bidi:isolate;
     word-break:break-all;
 }
 
+.wt-nested-edit-fields{
+    padding-left:1rem;
+    margin-left:1rem;
+    border-left:solid 4px grey;
+}
+
+.wt-text-overflow-elipsis{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
