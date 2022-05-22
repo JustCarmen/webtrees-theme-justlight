@@ -41,7 +41,6 @@
     }
 
     @at-root table.dataTable {
-        @extend .table-striped;
 
         thead tr:last-child {
             @include jc-theme-gradient-primary();
@@ -51,9 +50,9 @@
             }
         }
 
-        // patch to fix striped datatable background error
-        tbody tr.odd {
-            --bs-table-accent-bg: transparent;
+        // use a striped table
+        tbody tr.even {
+            background-color: $jc-theme-lighter;
         }
     }
 

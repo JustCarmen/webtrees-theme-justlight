@@ -2314,7 +2314,7 @@ progress {
   border-top-width: 0;
 }
 
-.table-striped > tbody > tr:nth-of-type(even) > *, #sidebar-content-family_nav .wt-facts-table > tbody > tr:nth-of-type(even) > *, table.dataTable > tbody > tr:nth-of-type(even) > * {
+.table-striped > tbody > tr:nth-of-type(even) > *, #sidebar-content-family_nav .wt-facts-table > tbody > tr:nth-of-type(even) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);
 }
@@ -13997,7 +13997,7 @@ table.dataTable.nowrap td {
   white-space: nowrap;
 }
 
-[dir] table.dataTable.table-striped > tbody > tr:nth-of-type(2n+1) > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr:nth-of-type(2n+1) > *, [dir] table.dataTable > tbody > tr:nth-of-type(2n+1) > * {
+[dir] table.dataTable.table-striped > tbody > tr:nth-of-type(2n+1) > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr:nth-of-type(2n+1) > * {
   box-shadow: none;
 }
 
@@ -14013,11 +14013,11 @@ table.dataTable > tbody > tr.selected > * {
   box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
 }
 
-[dir] table.dataTable.table-striped > tbody > tr.odd > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr.odd > *, [dir] table.dataTable > tbody > tr.odd > * {
+[dir] table.dataTable.table-striped > tbody > tr.odd > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr.odd > * {
   box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.05);
 }
 
-[dir] table.dataTable.table-striped > tbody > tr.odd.selected > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr.odd.selected > *, [dir] table.dataTable > tbody > tr.odd.selected > * {
+[dir] table.dataTable.table-striped > tbody > tr.odd.selected > *, [dir] #sidebar-content-family_nav table.dataTable.wt-facts-table > tbody > tr.odd.selected > * {
   box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.95);
 }
 
@@ -20355,8 +20355,8 @@ table.dataTable thead tr:last-child th {
   vertical-align: top;
 }
 
-table.dataTable tbody tr.odd {
-  --bs-table-accent-bg: transparent;
+[dir] table.dataTable tbody tr.even {
+  background-color: #e9ecef;
 }
 
 [dir] .wt-table-individual thead tr:first-child th,
