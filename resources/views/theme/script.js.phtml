@@ -39,41 +39,6 @@
     // Style the collapsable fact items
     $('[class^="wt-fact-"] [id^="collapse-"]').addClass('jc-fact-collapse');
 
-     // Notes treatment
-    $('.fact_NOTE').each(function(){
-
-        var $this = $(this);
-
-        // Give the single note-title a class to work with
-        var $title = $this.contents().not($this.children());
-        if ($title.text().trim().length > 1) {
-            $title.wrap('<div class="jc-note-title ps-4 collapse">');
-        }
-
-        // Give the shared note-title a class to work with
-        var $title = $this.find('a bdi');
-        if ($title.text().trim().length > 1) {
-            $title.addClass('jc-note-title collapse');
-        }
-
-        // Toggle the title to expand when the full text is collapsed and vice versa
-        $title = $this.find('.jc-note-title');
-        $collapse = $this.next('.jc-fact-collapse');
-
-        if ($collapse.hasClass('show')) {
-            $title.removeClass('show');
-        } else {
-            $title.addClass('show');
-        }
-
-        $this.find('.wt-icon-expand').on('click', function() {
-            $title.removeClass('show');
-        });
-        $this.find('.wt-icon-collapse').on('click', function() {
-            $title.addClass('show');
-        });
-    });
-
     // Individual page Facts Tab, Name Card / Family page - restyle gallery caption
     $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .accordion-collapse')
         .find('.gallery').parents('.d-flex').each(function() {
