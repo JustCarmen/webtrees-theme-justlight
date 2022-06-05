@@ -15,7 +15,8 @@ use Illuminate\Support\Collection;
 ?>
 
 <?php foreach ($favorites as $favorite) : ?>
-    <div class="jc-favorites-block-item person_box action_header<?= $favorite->record instanceof Individual ? $favorite->record->sex() : '' ?> mb-3 p-2">
+    <?php $private_class = $favorite->record === null && $favorite->favorite_type !== 'URL' ? 'd-none' : '' ?>
+    <div class="jc-favorites-block-item <?= $private_class ?> person_box action_header<?= $favorite->record instanceof Individual ? $favorite->record->sex() : '' ?> mb-3 p-2">
         <?php if ($favorite->favorite_type === 'URL') : ?>
             <a href="<?= e($favorite->url) ?>"><b><?= e($favorite->title) ?></b></a>
         <?php elseif ($favorite->record instanceof Individual) : ?>
