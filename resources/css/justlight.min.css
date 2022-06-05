@@ -19757,6 +19757,10 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   padding-right: 0.5rem;
 }
 
+[dir] .wt-block-content-top10_surnames tr.even {
+  background-color: transparent !important;
+}
+
 /** JustLight Theme - Specific pages - Cards */
 [dir] form .card {
   margin-bottom: 0.5rem;
