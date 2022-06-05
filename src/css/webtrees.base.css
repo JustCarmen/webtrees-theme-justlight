@@ -972,7 +972,7 @@ a:hover, .btn-link:hover, .nav-link:hover{
 .ut{
     unicode-bidi:-webkit-isolate;
     unicode-bidi:isolate;
-    word-break:break-all;
+    overflow-wrap:break-word;
 }
 
 .wt-nested-edit-fields{
