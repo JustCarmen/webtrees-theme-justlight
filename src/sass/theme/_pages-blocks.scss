@@ -47,112 +47,114 @@
 }
 
 /** Special blocks */
-.wt-block-content-charts {
-    overflow-x: auto;
-}
+.wt-block-content {
+    &-charts {
+        overflow-x: auto;
+    }
 
-.wt-block-content-gedcom_stats {
-    .list-inline-item {
-        margin: 0;
+    &-gedcom_stats {
+        .list-inline-item {
+            margin: 0;
 
-        &:not(:last-child) {
-            &::after {
-                content: " •";
+            &:not(:last-child) {
+                &::after {
+                    content: " •";
+                }
             }
         }
     }
-}
 
-.wt-block-content-user_messages {
+    &-user_messages {
 
-    // scrollable table with fixed header
-    // See: https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body
+        // scrollable table with fixed header
+        // See: https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body
 
-    table {
-        thead, tbody, tr, td, th {
-            display: block;
+        table {
+            thead, tbody, tr, td, th {
+                display: block;
+            }
+
+            tr:after {
+                content: ' ';
+                display: block;
+                visibility: hidden;
+                clear: both;
+            }
+
+            tbody {
+                height: 30rem;
+                overflow-y: auto;
+            }
+
+            thead th,
+            tbody td {
+                float: left;
+            }
+
+            .jc-column-1 {
+                width: 15%;
+            }
+
+            .jc-column-2 {
+                width: 35%;
+            }
+
+            .jc-column-3 {
+                width: 20%;
+            }
+
+            .jc-column-4 {
+                width: 30%;
+            }
+
+            .wt-icon-expand,
+            .wt-icon-collapse {
+                margin-left: -1.75rem;
+            }
+
+            thead tr {
+                @include jc-theme-gradient-primary();
+            }
+
+            tr {
+                @include jc-border;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-user_favorites,
+    &-gedcom_favorites {
+        .jc-favorites-block-item {
+            background: $jc-favorites-bg;
+            @include jc-border($jc-favorites-border-color);
         }
 
-        tr:after {
-            content: ' ';
-            display: block;
-            visibility: hidden;
-            clear: both;
-        }
-
-        tbody {
-            height: 30rem;
-            overflow-y: auto;
-        }
-
-        thead th,
-        tbody td {
-            float: left;
-        }
-
-        .jc-column-1 {
-            width: 15%;
-        }
-
-        .jc-column-2 {
-            width: 35%;
-        }
-
-        .jc-column-3 {
-            width: 20%;
-        }
-
-        .jc-column-4 {
-            width: 30%;
-        }
-
-        .wt-icon-expand,
-        .wt-icon-collapse {
-            margin-left: -1.75rem;
-        }
-
-        thead tr {
-            @include jc-theme-gradient-primary();
-        }
-
-        tr {
-            @include jc-border;
-        }
-
-        a:hover {
+        .btn-link:hover {
             text-decoration: none;
         }
     }
-}
 
-.wt-block-content-user_favorites,
-.wt-block-content-gedcom_favorites {
-    .jc-favorites-block-item {
-        background: $jc-favorites-bg;
-        @include jc-border($jc-favorites-border-color);
-    }
+    &-upcoming_events {
+        > div {
+            margin-bottom: .5rem;
 
-    .btn-link:hover {
-        text-decoration: none;
-    }
-}
+            .NAME {
+                font-weight: 600;
+            }
 
-.wt-block-content-upcoming_events {
-    > div {
-        margin-bottom: .5rem;
-
-        .NAME {
-            font-weight: 600;
-        }
-
-        .indent {
-            padding-left: .5rem;
+            .indent {
+                padding-left: .5rem;
+            }
         }
     }
-}
 
-.wt-block-content-top10_surnames {
-    tr.even {
-        background-color: transparent !important;
+    &-top10_surnames {
+        tr.even {
+            background-color: transparent !important;
+        }
     }
 }
