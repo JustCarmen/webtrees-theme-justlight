@@ -59,10 +59,10 @@ use Illuminate\Support\Collection;
     name="messageform"
 >
     <?= csrf_field() ?>
-
+    <?php $scrollable_class = count($messages) > 10 ? ' jc-scrollable-table' : '' ?>
     <?php if ($messages->isNotEmpty()): ?>
         <div class="table-responsive mb-3">
-            <table class="table-sm w-100">
+            <table class="table-sm w-100<?= $scrollable_class ?>">
                 <thead>
                     <tr>
                         <th class="wt-page-options-label text-center jc-column-1">

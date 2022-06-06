@@ -69,7 +69,7 @@
         // scrollable table with fixed header
         // See: https://stackoverflow.com/questions/21168521/table-fixed-header-and-scrollable-body
 
-        table {
+        .jc-scrollable-table {
             thead, tbody, tr, td, th {
                 display: block;
             }
@@ -90,6 +90,10 @@
             tbody td {
                 float: left;
             }
+        }
+
+        table {
+            border-collapse: collapse;
 
             .jc-column-1 {
                 width: 15%;

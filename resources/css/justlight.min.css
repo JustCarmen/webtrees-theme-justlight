@@ -19634,33 +19634,37 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   content: " •";
 }
 
-.wt-block-content-user_messages table thead, .wt-block-content-user_messages table tbody, .wt-block-content-user_messages table tr, .wt-block-content-user_messages table td, .wt-block-content-user_messages table th {
+.wt-block-content-user_messages .jc-scrollable-table thead, .wt-block-content-user_messages .jc-scrollable-table tbody, .wt-block-content-user_messages .jc-scrollable-table tr, .wt-block-content-user_messages .jc-scrollable-table td, .wt-block-content-user_messages .jc-scrollable-table th {
   display: block;
 }
 
-.wt-block-content-user_messages table tr:after {
+.wt-block-content-user_messages .jc-scrollable-table tr:after {
   content: " ";
   display: block;
   visibility: hidden;
 }
 
-[dir] .wt-block-content-user_messages table tr:after {
+[dir] .wt-block-content-user_messages .jc-scrollable-table tr:after {
   clear: both;
 }
 
-.wt-block-content-user_messages table tbody {
+.wt-block-content-user_messages .jc-scrollable-table tbody {
   height: 30rem;
   overflow-y: auto;
 }
 
-[dir="ltr"] .wt-block-content-user_messages table thead th,
-[dir="ltr"] .wt-block-content-user_messages table tbody td {
+[dir="ltr"] .wt-block-content-user_messages .jc-scrollable-table thead th,
+[dir="ltr"] .wt-block-content-user_messages .jc-scrollable-table tbody td {
   float: left;
 }
 
-[dir="rtl"] .wt-block-content-user_messages table thead th,
-[dir="rtl"] .wt-block-content-user_messages table tbody td {
+[dir="rtl"] .wt-block-content-user_messages .jc-scrollable-table thead th,
+[dir="rtl"] .wt-block-content-user_messages .jc-scrollable-table tbody td {
   float: right;
+}
+
+.wt-block-content-user_messages table {
+  border-collapse: collapse;
 }
 
 .wt-block-content-user_messages table .jc-column-1 {
@@ -19730,14 +19734,12 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   text-decoration: none;
 }
 
-[dir] .wt-block-content-user_favorites .jc-favorites-block-item,
-[dir] .wt-block-content-gedcom_favorites .jc-favorites-block-item {
+[dir] .wt-block-content-user_favorites .jc-favorites-block-item, [dir] .wt-block-content-gedcom_favorites .jc-favorites-block-item {
   background: #e9ecef;
   border: 1px solid #337ab7;
 }
 
-.wt-block-content-user_favorites .btn-link:hover,
-.wt-block-content-gedcom_favorites .btn-link:hover {
+.wt-block-content-user_favorites .btn-link:hover, .wt-block-content-gedcom_favorites .btn-link:hover {
   text-decoration: none;
 }
 
