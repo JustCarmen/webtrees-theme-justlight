@@ -68,4 +68,9 @@ table.dataTable {
     thead tr:last-child {
         @include jc-theme-gradient-secondary();
     }
+
+     // use a striped table
+     tbody tr.even {
+        background-color: $jc-theme-medium-dark;
+    }
 }

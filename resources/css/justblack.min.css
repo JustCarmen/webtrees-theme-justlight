@@ -2268,7 +2268,7 @@ progress {
 
 [dir] .table, [dir] .wt-route-CalendarPage table {
   margin-bottom: 1rem;
-  border-color: #545454;
+  border-color: #484848;
 }
 
 [dir] .table > :not(caption) > * > *, [dir] .wt-route-CalendarPage table > :not(caption) > * > * {
@@ -2545,7 +2545,7 @@ progress {
   padding: 0.375rem 0.75rem;
   background-color: #212529;
   background-clip: padding-box;
-  border: 1px solid #6e6e6e;
+  border: 1px solid #616161;
   border-radius: 0.25rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2867,7 +2867,7 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 16px 12px;
-  border: 1px solid #6e6e6e;
+  border: 1px solid #616161;
   border-radius: 0.25rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3449,7 +3449,7 @@ textarea.form-control-lg {
   padding: 0.375rem 0.75rem;
   text-align: center;
   background-color: #000;
-  border: 1px solid #6e6e6e;
+  border: 1px solid #616161;
   border-radius: 0.25rem;
 }
 
@@ -4837,7 +4837,7 @@ textarea.form-control-lg {
   margin: 0;
   background-color: #2e2e2e;
   background-clip: padding-box;
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -5270,7 +5270,7 @@ textarea.form-control-lg {
 
 [dir] .dropdown-menu-dark {
   background-color: #343a40;
-  border-color: #545454;
+  border-color: #484848;
 }
 
 .dropdown-menu-dark .dropdown-item {
@@ -5517,7 +5517,7 @@ textarea.form-control-lg {
 }
 
 [dir] .nav-tabs {
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #484848;
 }
 
 [dir] .nav-tabs .nav-link {
@@ -5533,7 +5533,7 @@ textarea.form-control-lg {
 }
 
 [dir] .nav-tabs .nav-link:hover, [dir] .nav-tabs .nav-link:focus {
-  border-color: #7b7b7b;
+  border-color: #6e6e6e;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -6290,7 +6290,7 @@ textarea.form-control-lg {
 [dir] .card {
   background-color: #212529;
   background-clip: border-box;
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   border-radius: 0.25rem;
 }
 
@@ -6363,7 +6363,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #484848;
 }
 
 [dir] .card-header:first-child {
@@ -6374,7 +6374,7 @@ textarea.form-control-lg {
 [dir] .card-footer {
   padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid #545454;
+  border-top: 1px solid #484848;
 }
 
 [dir] .card-footer:last-child {
@@ -7136,7 +7136,7 @@ textarea.form-control-lg {
 [dir] .list-group-item {
   padding: 0.5rem 1rem;
   background-color: #212529;
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 [dir] .list-group-item:first-child {
@@ -7839,7 +7839,7 @@ textarea.form-control-lg {
 
 [dir] .modal-header {
   padding: 1rem 1rem;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #484848;
   border-top-left-radius: -webkit-calc(0.3rem - 1px);
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: -webkit-calc(0.3rem - 1px);
@@ -7889,7 +7889,7 @@ textarea.form-control-lg {
 
 [dir] .modal-footer {
   padding: 0.75rem;
-  border-top: 1px solid #545454;
+  border-top: 1px solid #484848;
   border-bottom-right-radius: -webkit-calc(0.3rem - 1px);
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: -webkit-calc(0.3rem - 1px);
@@ -8906,7 +8906,7 @@ textarea.form-control-lg {
 }
 
 [dir] .border {
-  border: 1px solid #545454 !important;
+  border: 1px solid #484848 !important;
 }
 
 [dir] .border-0, [dir] .wt-route-IndividualListModule .wt-page-options, [dir] .wt-route-FamilyListModule .wt-page-options {
@@ -8914,7 +8914,7 @@ textarea.form-control-lg {
 }
 
 [dir] .border-top {
-  border-top: 1px solid #545454 !important;
+  border-top: 1px solid #484848 !important;
 }
 
 [dir] .border-top-0 {
@@ -8922,11 +8922,11 @@ textarea.form-control-lg {
 }
 
 [dir="ltr"] .border-end {
-  border-right: 1px solid #545454 !important;
+  border-right: 1px solid #484848 !important;
 }
 
 [dir="rtl"] .border-end {
-  border-left: 1px solid #545454 !important;
+  border-left: 1px solid #484848 !important;
 }
 
 [dir="ltr"] .border-end-0 {
@@ -8938,7 +8938,7 @@ textarea.form-control-lg {
 }
 
 [dir] .border-bottom {
-  border-bottom: 1px solid #545454 !important;
+  border-bottom: 1px solid #484848 !important;
 }
 
 [dir] .border-bottom-0 {
@@ -8946,11 +8946,11 @@ textarea.form-control-lg {
 }
 
 [dir="ltr"] .border-start {
-  border-left: 1px solid #545454 !important;
+  border-left: 1px solid #484848 !important;
 }
 
 [dir="rtl"] .border-start {
-  border-right: 1px solid #545454 !important;
+  border-right: 1px solid #484848 !important;
 }
 
 [dir="ltr"] .border-start-0 {
@@ -18375,7 +18375,7 @@ a.gallery {
 }
 
 [dir] .btn-secondary, [dir] .hideShowPassword-wrapper button {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), color-stop(50%, #212529), to(#000));
@@ -18393,8 +18393,8 @@ a.gallery {
 }
 
 [dir] .btn-secondary:hover, [dir] .hideShowPassword-wrapper button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 
 [dir] .btn-secondary:hover, [dir] .hideShowPassword-wrapper button:hover {
@@ -18546,7 +18546,7 @@ caption {
 }
 
 [dir] .wt-page-options {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   background: #3b3b3b;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -18926,7 +18926,7 @@ caption {
 [dir] .wt-user-menu .menu-login .active,
 [dir] .wt-user-menu .menu-logout .nav-link,
 [dir] .wt-user-menu .menu-logout .active {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), color-stop(50%, #212529), to(#000));
@@ -18955,8 +18955,8 @@ caption {
 [dir] .wt-user-menu .menu-login .active:hover,
 [dir] .wt-user-menu .menu-logout .nav-link:hover,
 [dir] .wt-user-menu .menu-logout .active:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 
 [dir] .wt-user-menu .menu-login .nav-link:hover,
@@ -19564,7 +19564,7 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   background: #000;
-  border: 2px solid #545454;
+  border: 2px solid #484848;
 }
 
 .accordion-body .wt-sidebar-family-navigator .dropdown-menu .dropdown-header {
@@ -19747,7 +19747,7 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 }
 
 [dir] .wt-block-content-user_messages table tr {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 .wt-block-content-user_messages table a:hover {
@@ -20317,7 +20317,7 @@ form .card-header {
 }
 
 [dir] .page-item.disabled .page-link {
-  background-color: #3b3b3b;
+  background-color: #2e2e2e;
 }
 
 [dir] .page-item .page-link {
@@ -20325,7 +20325,7 @@ form .card-header {
 }
 
 [dir] .page-item .page-link:hover, [dir] .page-item .page-link:focus {
-  background-color: #545454;
+  background-color: #484848;
 }
 
 [dir] .dataTables_paginate {
@@ -20459,7 +20459,7 @@ table {
 
 [dir] .wt-facts-table th,
 [dir] .wt-facts-table td {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   padding: 0.75rem;
 }
 
@@ -20540,8 +20540,8 @@ table {
 }
 
 [dir] .jc-markdown-table-separator:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 
 /** JC Stats Table */
@@ -20550,7 +20550,7 @@ table {
 }
 
 [dir] .jc-stats-table {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 .jc-stats-table th {
@@ -20560,7 +20560,7 @@ table {
 
 /** Stories table */
 [dir] .jc-stories-table {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 [dir] .jc-stories-table thead tr {
@@ -20602,7 +20602,7 @@ table {
 
 /** Calendar Page table */
 [dir] .wt-route-CalendarPage table {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 [dir] .wt-route-CalendarPage table th,
@@ -20620,7 +20620,7 @@ table {
 }
 
 [dir] .wt-route-CalendarPage .wt-page-content table th, [dir] .wt-route-CalendarPage .wt-page-content table td {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 .wt-route-CalendarPage .wt-page-content table td li > a {
@@ -20631,7 +20631,7 @@ table {
 [dir] .nav-tabs .nav-link {
   background: -webkit-gradient(linear, left top, left bottom, from(#2e2e2e), color-stop(50%, #212529), to(#000));
   background: linear-gradient(#2e2e2e 0%, #212529 50%, #000 100%);
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 .nav-tabs .nav-link,
@@ -20644,8 +20644,8 @@ table {
 }
 
 [dir] .nav-tabs .nav-link:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 
 [dir] .nav-tabs .nav-link.active {
@@ -20713,9 +20713,9 @@ table {
 
   [dir] .nav-tabs .nav-link.active {
     background: #f9f9f9;
-    border-left: 1px solid #545454;
-    border-top: 1px solid #545454;
-    border-right: 1px solid #545454;
+    border-left: 1px solid #484848;
+    border-top: 1px solid #484848;
+    border-right: 1px solid #484848;
   }
 
   [dir] .nav-tabs .nav-link.active:hover {
@@ -20842,7 +20842,7 @@ table {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   background: #000;
-  border: 2px solid #545454;
+  border: 2px solid #484848;
 }
 
 .wt-chart-box .wt-chart-box-zoom-dropdown .dropdown-header,
@@ -20947,7 +20947,7 @@ table {
 
 [dir] .tv_box {
   background: transparent !important;
-  border: thin outset #545454 !important;
+  border: thin outset #484848 !important;
 }
 
 [dir="ltr"] .tv_box {
@@ -21003,7 +21003,7 @@ table {
 
 [dir] .wt-block-charts .tv_out,
 [dir] .tab-pane .tv_out {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 /** JustLight Theme - Charts - Lifespans chart */
@@ -21059,7 +21059,7 @@ table {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   background: #000;
-  border: 2px solid #545454;
+  border: 2px solid #484848;
 }
 
 .wt-lifespans-summary .dropdown-header {
@@ -21180,7 +21180,7 @@ table {
 
 [dir] div[id^=caldiv] > table,
 [dir] div[id^=calendar-widget] > table {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
@@ -21271,7 +21271,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 /** JustLight Theme - Forms - Modals*/
 [dir] .modal-header {
   background: #212529;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #484848;
 }
 
 /** JustLight Theme - Forms - Tom-select */
@@ -21297,7 +21297,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 
 [dir] .hideShowPassword-wrapper button {
-  border-color: #545454;
+  border-color: #484848;
 }
 
 [dir="ltr"] .hideShowPassword-wrapper button {
@@ -21345,7 +21345,7 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   }
 
   [dir] .wt-footers {
-    background-color: #545454;
+    background-color: #484848;
     margin-bottom: 1.5rem;
   }
 
@@ -21452,13 +21452,13 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 [dir] .wt-user-menu .menu-login .active:hover,
 [dir] .wt-user-menu .menu-logout .nav-link:hover,
 [dir] .wt-user-menu .menu-logout .active:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#adb5bd), to(#545454));
-  background: linear-gradient(#f8f9fa 0%, #adb5bd, #545454 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f9fa), color-stop(#adb5bd), to(#484848));
+  background: linear-gradient(#f8f9fa 0%, #adb5bd, #484848 100%);
 }
 
 /** JustBlack Palette - Specific pages - Home page and User page blocks */
 [dir] .wt-block {
-  border: 1px solid #545454;
+  border: 1px solid #484848;
 }
 
 [dir] .wt-block .wt-block-header {
@@ -21474,11 +21474,11 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 
 [dir] .wt-side-blocks > div:not(:last-child) {
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #484848;
 }
 
 [dir] .wt-block-content-user_messages .bg-secondary, [dir] .wt-block-content-user_messages form .card-header, [dir] form .wt-block-content-user_messages .card-header {
-  background: #545454 !important;
+  background: #484848 !important;
 }
 
 /** JustBlack Palette - Specific pages - Cards */
@@ -21498,8 +21498,8 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 
 [dir] #individual-names .card:first-of-type .card-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 
 [dir] #sidebar .card-header {
@@ -21517,8 +21517,8 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 }
 
 [dir] #sidebar .card-header:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
 }
 /** JustBlack Palette - Specific pages - Tabs */
 @media (max-width: 991.98px) {
@@ -21555,8 +21555,12 @@ table.dataTable thead tr:last-child:hover {
 }
 
 [dir] table.dataTable thead tr:last-child:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#545454), color-stop(#2e2e2e), to(#212529));
-  background: linear-gradient(#545454 0%, #2e2e2e, #212529 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), color-stop(#2e2e2e), to(#212529));
+  background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
+}
+
+[dir] table.dataTable tbody tr.even {
+  background-color: #484848;
 }
 
 /** JustBlack Palette - Charts - Interactive chart */

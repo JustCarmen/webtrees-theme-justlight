@@ -22,7 +22,7 @@ $jc-theme-lightest: $jc-white;
 $jc-theme-lighter: $jc-gray-100;
 $jc-theme-light: $jc-secondary;
 $jc-theme-medium: $jc-gray-500;
-$jc-theme-medium-dark: lighten($jc-body-bg, 15%); // #545454
+$jc-theme-medium-dark: lighten($jc-body-bg, 10%);
 $jc-theme-dark: $jc-body-bg;
 $jc-theme-darker: $jc-gray-900;
 
