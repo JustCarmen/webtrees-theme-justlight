@@ -18476,14 +18476,6 @@ caption {
   font-weight: 600;
 }
 
-.markdown {
-  white-space: normal;
-}
-
-.markdown p {
-  white-space: pre-wrap;
-}
-
 .starredname {
   text-decoration: underline;
 }
@@ -20499,11 +20491,8 @@ table {
 }
 
 /** Markdown table */
-.markdown .table, .markdown .wt-route-CalendarPage table, .wt-route-CalendarPage .markdown table {
-  border-collapse: separate;
-}
-
 .jc-markdown-table {
+  border-collapse: separate;
   font-size: 0.75rem;
 }
 

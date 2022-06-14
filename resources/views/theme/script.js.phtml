@@ -51,10 +51,11 @@
     $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
 
     // Markdown table style
-    $('.markdown table').each(function () {
-        $(this).addClass('table table-sm table-responsive jc-markdown-table');
-        $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
-    });
+    $('.wt-route-NotePage, .wt-route-IndividualPage')
+        .find(' .wt-facts-table table').each(function () {
+            $(this).addClass('table table-sm jc-markdown-table');
+            $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
+        });
 
     // Blocks: Journal block (wt-block-gedcom_news / wt-block-user_blog)
     $('.wt-block-content-gedcom_news, .wt-block-content-user_blog')
