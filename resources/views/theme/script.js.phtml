@@ -51,8 +51,8 @@
     $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
 
     // Markdown table style
-    $('.wt-route-NotePage, .wt-route-IndividualPage')
-        .find(' .wt-facts-table table').each(function () {
+    $('.wt-route-NotePage, .wt-route-IndividualPage, .wt-route-MediaPage')
+        .find('.wt-facts-table table, .wt-fact-main-attributes table').each(function () {
             $(this).addClass('table table-sm jc-markdown-table');
             $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
         });
