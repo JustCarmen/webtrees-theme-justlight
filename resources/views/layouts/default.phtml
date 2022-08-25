@@ -13,6 +13,7 @@
 
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Tree;
+use Fisharebest\Webtrees\Validator;
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Http\RequestHandlers\WebmanifestJson;
@@ -43,7 +44,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/stylesheets'); ?>
     </head>
 
-    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(substr(strrchr($request->getAttribute('route')->name, '\\'),1)) ?>">
+    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(substr(strrchr($route = Validator::attributes($request)->route()->name ?? 'no-route', '\\'),1)) ?>">
         <header class="wt-header-wrapper d-print-none sticky-top">
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
