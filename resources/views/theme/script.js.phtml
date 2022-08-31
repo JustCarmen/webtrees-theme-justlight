@@ -50,6 +50,14 @@
     // Individual page Stories Tab
     $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
 
+    // Media list page pagination style
+    $('.wt-route-MediaListModule .wt-page-content > .row.text-center')
+        .removeClass('.text-center')
+        .addClass('my-4')
+        .find('.col:nth-child(1), .col:nth-child(2)').addClass('text-start').end()
+        .find('.col:nth-child(3)').addClass('text-center').end()
+        .find('.col:nth-child(4), .col:nth-child(5)').addClass('text-end');
+
     // Markdown table style
     $('.wt-route-NotePage, .wt-route-IndividualPage, .wt-route-FamilyPage, .wt-route-MediaPage')
         .find('.wt-facts-table table, .wt-fact-main-attributes table').each(function () {
