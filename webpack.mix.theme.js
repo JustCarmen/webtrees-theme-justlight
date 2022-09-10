@@ -25,10 +25,6 @@ const postcssImageInliner = require('postcss-image-inliner')({
 // Enable CSS variables in IE
 const postcssCustomProperties = require('postcss-custom-properties')();
 
-// Disable mix-manifest.json (https://github.com/laravel-mix/laravel-mix/issues/580#issuecomment-919102692)
-// Prevent the distribution zip file containing an unwanted file
-mix.options({ manifest: false })
-
 if(process.env.NODE_ENV === 'production') {
     mix
     .styles(config.public_dir + '/css/justlight.min.css', config.build_dir + '/justlight.min.css')
