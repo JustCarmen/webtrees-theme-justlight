@@ -986,3 +986,27 @@ a:hover, .btn-link:hover, .nav-link:hover{
     overflow:hidden;
     text-overflow:ellipsis;
 }
+.wt-icon-exit-fullscreen{
+    display:none;
+}
+.wt-icon-enter-fullscreen{
+    display:inline;
+}
+:-webkit-full-screen .wt-icon-exit-fullscreen{
+    display:inline;
+}
+:-ms-fullscreen .wt-icon-exit-fullscreen{
+    display:inline;
+}
+:fullscreen .wt-icon-exit-fullscreen{
+    display:inline;
+}
+:-webkit-full-screen .wt-icon-enter-fullscreen{
+    display:none;
+}
+:-ms-fullscreen .wt-icon-enter-fullscreen{
+    display:none;
+}
+:fullscreen .wt-icon-enter-fullscreen{
+    display:none;
+}
