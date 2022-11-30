@@ -106,12 +106,9 @@
     min-height:25vh;
     max-height:95vh;
     background:#E6E6E6;
-    display:-webkit-box;
     display:flex;
-    -webkit-box-align:center;
-            align-items:center;
-    -webkit-box-pack:center;
-            justify-content:center;
+    align-items:center;
+    justify-content:center;
 }
 .tv_out img{
     border:0;
@@ -912,17 +909,13 @@ th.align-digits{
     text-align:right;
 }
 body{
-    display:-webkit-box;
     display:flex;
     min-height:100vh;
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-            flex-direction:column;
+    flex-direction:column;
 }
 
 main{
-    -webkit-box-flex:1;
-            flex:1;
+    flex:1;
 }
 a{
     text-decoration:none;
