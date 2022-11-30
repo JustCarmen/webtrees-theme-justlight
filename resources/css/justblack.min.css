@@ -17656,6 +17656,14 @@ a.gallery {
   padding-left: 0.5rem;
 }
 
+[dir="ltr"] .col a.gallery img {
+  padding-right: 0;
+}
+
+[dir="rtl"] .col a.gallery img {
+  padding-left: 0;
+}
+
 [dir] .btn-link {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
