@@ -17644,6 +17644,12 @@ a:hover, .btn-link:hover, .nav-link:hover {
   --sex-u-fg: #a1a1a1;
 }
 
+@media (min-width: 992px) {
+  html {
+    scroll-padding-top: 160px; /* height of sticky header + margin*/
+  }
+}
+
 a.gallery {
   text-decoration: none;
 }
@@ -17916,12 +17922,6 @@ caption {
   border-top: 5px solid #d36400;
   border-bottom: 1px solid #16181b;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
-}
-
-@media (max-width: 991.98px) {
-  .wt-header-wrapper.sticky-top {
-    position: relative;
-  }
 }
 
 .wt-header-wrapper .wt-header-container {

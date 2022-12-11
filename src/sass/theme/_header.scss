@@ -31,12 +31,6 @@
 .wt-header-wrapper {
     @include jc-header-gradient;
 
-    @include media-breakpoint-down(lg) {
-        &.sticky-top {
-            position: relative;
-        }
-    }
-
     .wt-header-container {
         @include jc-container-fluid;
     }

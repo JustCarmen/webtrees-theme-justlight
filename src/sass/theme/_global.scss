@@ -44,6 +44,12 @@
     --sex-u-fg: #{$jc-unknown-border};
 }
 
+@include media-breakpoint-up(lg) {
+    html {
+        scroll-padding-top: 160px; /* height of sticky header + margin*/
+    }
+}
+
 a {
     &.gallery {
         text-decoration: none;

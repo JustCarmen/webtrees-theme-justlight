@@ -45,7 +45,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
     </head>
 
     <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(substr(strrchr($route = Validator::attributes($request)->route()->name ?? 'no-route', '\\'),1)) ?>">
-        <header class="wt-header-wrapper d-print-none sticky-top">
+        <header class="wt-header-wrapper d-print-none sticky-lg-top">
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
                     <div class="jc-header-content-start d-flex flex-row">
