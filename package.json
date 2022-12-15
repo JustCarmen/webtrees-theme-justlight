@@ -13,11 +13,11 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@popperjs/core": "^2.11.6",
-    "autoprefixer": "10.4.5",
+    "autoprefixer": "10.4.13",
     "beautifymarker": "^1.0.9",
     "bootstrap": "^5.2.3",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^10.2.4",
+    "copy-webpack-plugin": "^11.0.0",
     "datatables.net-bs5": "^1.13.1",
     "file-icon-vectors": "^1.0.0",
     "filemanager-webpack-plugin": "^8.0.0",
@@ -29,17 +29,17 @@
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet.control.layers.tree": "^1.1.0",
     "leaflet.markercluster": "^1.5.3",
-    "postcss": "^8.4.19",
-    "postcss-custom-properties": "^12.1.10",
+    "postcss": "^8.4.20",
+    "postcss-custom-properties": "^12.1.11",
     "postcss-discard-comments": "^5.1.2",
-    "postcss-image-inliner": "^5.0.0",
-    "postcss-rtlcss": "^3.7.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^12.6.0",
+    "postcss-image-inliner": "^6.0.1",
+    "postcss-rtlcss": "^4.0.1",
+    "sass": "^1.56.2",
+    "sass-loader": "^13.2.0",
     "tom-select": "^2.2.2",
     "typeahead.js-bootstrap4-css": "^1.0.0",
     "webpack": "^5.75.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {}
 }
