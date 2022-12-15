@@ -18375,12 +18375,8 @@ caption {
   vertical-align: bottom;
 }
 
-.fa-location-dot {
-  color: #B80000;
-}
-
-.fa-location-dot:hover, .fa-location-dot:focus {
-  color: #9f0000;
+.wt-pedigree-map-sidebar .wt-icon-location {
+  color: unset;
 }
 
 .wt-individual-silhouette-f, .wt-individual-silhouette-m, .wt-individual-silhouette-u {

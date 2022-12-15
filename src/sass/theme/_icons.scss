@@ -62,8 +62,10 @@
     }
 }
 
-.fa-location-dot { // alias fa-map-marker-alt
-    @include jc-icon-color($jc-icon-red-color, 5%);
+.wt-pedigree-map-sidebar {
+    .wt-icon-location {
+        color: unset;
+    }
 }
 
 .wt-individual-silhouette {
