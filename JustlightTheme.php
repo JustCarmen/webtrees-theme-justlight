@@ -36,29 +36,11 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     use ModuleGlobalTrait;
     use ModuleConfigTrait;
 
-    /**
-     * @var string
-     */
+    // Module constants
     public const CUSTOM_AUTHOR = 'JustCarmen';
-
-    /**
-     * @var string
-     */
-    public const CUSTOM_VERSION = '2.3-dev';
-
-    /**
-     * @var string
-     */
+    public const CUSTOM_VERSION = '2.2.4';
     public const GITHUB_REPO = 'webtrees-theme-justlight';
-
-    /**
-     * @var string
-     */
     public const AUTHOR_WEBSITE = 'justcarmen.nl';
-
-     /**
-     * @var string
-     */
     public const CUSTOM_SUPPORT_URL = 'https://' . self::AUTHOR_WEBSITE . '/modules-webtrees-2/justlight-theme/';
 
     /**
