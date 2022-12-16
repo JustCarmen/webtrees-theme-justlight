@@ -2,6 +2,20 @@
 
 <?php View::push('javascript') ?>
 <script>
+    // Scroll to target with fixed header
+    function scrollToAnchor(x) {
+        if (x.matches) {
+            var headerHeight = $('.wt-header-wrapper').outerHeight() + 10;
+            $('html').css('scroll-padding-top', headerHeight + 'px');
+        } else {
+            $('html').removeAttr('style');
+        }
+    }
+
+    var x = window.matchMedia("(min-width: 992px)") // Bootstrap @include media-breakpoint-up(lg)
+    scrollToAnchor(x) // Call listener function at run time
+    x.addListener(scrollToAnchor) // Attach listener function on state changes
+
     // Bootstrap active tab in navbar
     var url = location.href;
     $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
