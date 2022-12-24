@@ -153,6 +153,10 @@ dd {
     text-decoration: underline;
 }
 
+.tooltip-inner {
+    text-align: left;
+}
+
 /*
  * Any element that is loaded dynamically has the class wt-ajax-load.
  * We can provide a "loading" placeholder for empty elements with this class.
