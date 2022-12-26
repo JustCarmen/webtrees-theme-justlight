@@ -1121,16 +1121,16 @@
         },
         {
             "name": "fisharebest/webtrees",
-            "version": "2.1.14",
+            "version": "2.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fisharebest/webtrees.git",
-                "reference": "c8e2627e3495863eb1a1e6a479bc110ff1d5e3e3"
+                "reference": "9e0c35dd30b27012a805a218e71f2f312a1228af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/c8e2627e3495863eb1a1e6a479bc110ff1d5e3e3",
-                "reference": "c8e2627e3495863eb1a1e6a479bc110ff1d5e3e3",
+                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/9e0c35dd30b27012a805a218e71f2f312a1228af",
+                "reference": "9e0c35dd30b27012a805a218e71f2f312a1228af",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
                 "tecnickcom/tcpdf": "6.6.2"
             },
             "require-dev": {
-                "composer/composer": "2.5.0",
+                "composer/composer": "2.5.1",
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-pdo_sqlite": "*",
@@ -1224,9 +1224,9 @@
             ],
             "support": {
                 "issues": "https://github.com/fisharebest/webtrees/issues",
-                "source": "https://github.com/fisharebest/webtrees/tree/2.1.14"
+                "source": "https://github.com/fisharebest/webtrees/tree/2.1.15"
             },
-            "time": "2022-12-23T17:07:56+00:00"
+            "time": "2022-12-25T07:58:51+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
