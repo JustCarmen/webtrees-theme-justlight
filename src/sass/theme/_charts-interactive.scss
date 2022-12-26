@@ -37,8 +37,10 @@
 	}
 }
 
-.wt-chart-interactive {
-	@include jc-container-breakout;
+.wt-page-content {
+	&.wt-chart-interactive {
+		@include jc-container-breakout;
+	}
 }
 
 .wt-block-charts,

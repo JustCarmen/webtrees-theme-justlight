@@ -20356,21 +20356,21 @@ table {
   padding: 0.25rem !important;
 }
 
-.wt-chart-interactive {
+.wt-page-content.wt-chart-interactive {
   width: 100vw;
   position: relative;
 }
 
-[dir] .wt-chart-interactive {
+[dir] .wt-page-content.wt-chart-interactive {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-[dir="ltr"] .wt-chart-interactive {
+[dir="ltr"] .wt-page-content.wt-chart-interactive {
   left: calc(-1 * (100vw - 100%) / 2);
 }
 
-[dir="rtl"] .wt-chart-interactive {
+[dir="rtl"] .wt-page-content.wt-chart-interactive {
   right: calc(-1 * (100vw - 100%) / 2);
 }
 
