@@ -16,11 +16,3 @@ form label {
         border-bottom-left-radius: 0;
     }
 }
-
-.wt-route-EditName {
-    input[class="NAME"] {
-        @extend .form-control;
-        display: inline;
-        width: auto;
-    }
-}

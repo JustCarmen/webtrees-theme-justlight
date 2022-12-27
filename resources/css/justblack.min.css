@@ -2438,7 +2438,7 @@ progress {
   margin-top: 0.25rem;
 }
 
-.form-control, .wt-route-EditName input[class=NAME] {
+.form-control {
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -2449,7 +2449,7 @@ progress {
           appearance: none;
 }
 
-[dir] .form-control, [dir] .wt-route-EditName input[class=NAME] {
+[dir] .form-control {
   padding: 0.375rem 0.75rem;
   background-color: #212529;
   background-clip: padding-box;
@@ -2460,63 +2460,63 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [dir] .form-control, [dir] .wt-route-EditName input[class=NAME] {
+  [dir] .form-control {
     transition: none;
   }
 }
 
-.form-control[type=file], .wt-route-EditName input[type=file][class=NAME] {
+.form-control[type=file] {
   overflow: hidden;
 }
 
-[dir] .form-control[type=file]:not(:disabled):not([readonly]), [dir] .wt-route-EditName input[type=file][class=NAME]:not(:disabled):not([readonly]) {
+[dir] .form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 
-.form-control:focus, .wt-route-EditName input[class=NAME]:focus {
+.form-control:focus {
   color: #cfd5db;
   outline: 0;
 }
 
-[dir] .form-control:focus, [dir] .wt-route-EditName input[class=NAME]:focus {
+[dir] .form-control:focus {
   background-color: #212529;
   border-color: #e9b280;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(211, 100, 0, 0.25);
 }
 
-.form-control::-webkit-date-and-time-value, .wt-route-EditName input[class=NAME]::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value {
   height: 1.5em;
 }
 
-.form-control::-webkit-input-placeholder, .wt-route-EditName input[class=NAME]::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control::placeholder, .wt-route-EditName input[class=NAME]::placeholder {
+.form-control::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-.form-control:disabled, .wt-route-EditName input[class=NAME]:disabled {
+.form-control:disabled {
   opacity: 1;
 }
 
-[dir] .form-control:disabled, [dir] .wt-route-EditName input[class=NAME]:disabled {
+[dir] .form-control:disabled {
   background-color: #e9ecef;
 }
 
-.form-control::-webkit-file-upload-button, .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button {
   color: #cfd5db;
   pointer-events: none;
 }
 
-.form-control::file-selector-button, .wt-route-EditName input[class=NAME]::file-selector-button {
+.form-control::file-selector-button {
   color: #cfd5db;
   pointer-events: none;
 }
 
-[dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+[dir] .form-control::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
@@ -2533,7 +2533,7 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-[dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button {
+[dir] .form-control::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
@@ -2550,20 +2550,20 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [dir] .form-control::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]::-webkit-file-upload-button {
+  [dir] .form-control::-webkit-file-upload-button {
     -webkit-transition: none;
     transition: none;
   }
-  [dir] .form-control::file-selector-button, [dir] .wt-route-EditName input[class=NAME]::file-selector-button {
+  [dir] .form-control::file-selector-button {
     transition: none;
   }
 }
 
-[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+[dir] .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: black;
 }
 
-[dir] .form-control:hover:not(:disabled):not([readonly])::file-selector-button, [dir] .wt-route-EditName input[class=NAME]:hover:not(:disabled):not([readonly])::file-selector-button {
+[dir] .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: black;
 }
 
@@ -3148,7 +3148,7 @@ textarea.form-control-lg {
   position: relative;
 }
 
-.form-floating > .form-control, .wt-route-EditName .form-floating > input[class=NAME],
+.form-floating > .form-control,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
@@ -3193,25 +3193,27 @@ textarea.form-control-lg {
   }
 }
 
-[dir] .form-floating > .form-control, [dir] .wt-route-EditName .form-floating > input[class=NAME], [dir] .form-floating > .form-control-plaintext {
+[dir] .form-floating > .form-control,
+[dir] .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
 }
 
-.form-floating > .form-control::-webkit-input-placeholder, .wt-route-EditName .form-floating > input[class=NAME]::-webkit-input-placeholder, .form-floating > .form-control-plaintext::-webkit-input-placeholder {
+.form-floating > .form-control::-webkit-input-placeholder, .form-floating > .form-control-plaintext::-webkit-input-placeholder {
   color: transparent;
 }
 
-.form-floating > .form-control::placeholder, .wt-route-EditName .form-floating > input[class=NAME]::placeholder,
+.form-floating > .form-control::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
 }
 
-[dir] .form-floating > .form-control:focus, [dir] .wt-route-EditName .form-floating > input[class=NAME]:focus, [dir] .form-floating > .form-control:not(:placeholder-shown), [dir] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown), [dir] .form-floating > .form-control-plaintext:focus, [dir] .form-floating > .form-control-plaintext:not(:placeholder-shown) {
+[dir] .form-floating > .form-control:focus, [dir] .form-floating > .form-control:not(:placeholder-shown), [dir] .form-floating > .form-control-plaintext:focus, [dir] .form-floating > .form-control-plaintext:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 
-[dir] .form-floating > .form-control:-webkit-autofill, [dir] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill, [dir] .form-floating > .form-control-plaintext:-webkit-autofill {
+[dir] .form-floating > .form-control:-webkit-autofill,
+[dir] .form-floating > .form-control-plaintext:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -3221,34 +3223,39 @@ textarea.form-control-lg {
   padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:focus ~ label, .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label,
+.form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
 }
 
-[dir="ltr"] .form-floating > .form-control:focus ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="ltr"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="ltr"] .form-floating > .form-control-plaintext ~ label, [dir="ltr"] .form-floating > .form-select ~ label {
+[dir="ltr"] .form-floating > .form-control:focus ~ label,
+[dir="ltr"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[dir="ltr"] .form-floating > .form-control-plaintext ~ label,
+[dir="ltr"] .form-floating > .form-select ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-[dir="rtl"] .form-floating > .form-control:focus ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:focus ~ label, [dir="rtl"] .form-floating > .form-control:not(:placeholder-shown) ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:not(:placeholder-shown) ~ label, [dir="rtl"] .form-floating > .form-control-plaintext ~ label, [dir="rtl"] .form-floating > .form-select ~ label {
+[dir="rtl"] .form-floating > .form-control:focus ~ label,
+[dir="rtl"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[dir="rtl"] .form-floating > .form-control-plaintext ~ label,
+[dir="rtl"] .form-floating > .form-select ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
 
-.form-floating > .form-control:-webkit-autofill ~ label, .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label {
   opacity: 0.65;
 }
 
-[dir="ltr"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="ltr"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
+[dir="ltr"] .form-floating > .form-control:-webkit-autofill ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-[dir="rtl"] .form-floating > .form-control:-webkit-autofill ~ label, [dir="rtl"] .wt-route-EditName .form-floating > input[class=NAME]:-webkit-autofill ~ label {
+[dir="rtl"] .form-floating > .form-control:-webkit-autofill ~ label {
   -webkit-transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
           transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
@@ -3265,7 +3272,7 @@ textarea.form-control-lg {
   width: 100%;
 }
 
-.input-group > .form-control, .wt-route-EditName .input-group > input[class=NAME],
+.input-group > .form-control,
 .input-group > .form-select,
 .input-group > .form-floating {
   position: relative;
@@ -3274,7 +3281,7 @@ textarea.form-control-lg {
   min-width: 0;
 }
 
-.input-group > .form-control:focus, .wt-route-EditName .input-group > input[class=NAME]:focus,
+.input-group > .form-control:focus,
 .input-group > .form-select:focus,
 .input-group > .form-floating:focus-within {
   z-index: 5;
@@ -3307,7 +3314,7 @@ textarea.form-control-lg {
   border-radius: 0.375rem;
 }
 
-.input-group-lg > .form-control, .wt-route-EditName .input-group-lg > input[class=NAME],
+.input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
@@ -3315,12 +3322,16 @@ textarea.form-control-lg {
   font-size: 1.25rem;
 }
 
-[dir] .input-group-lg > .form-control, [dir] .wt-route-EditName .input-group-lg > input[class=NAME], [dir] .input-group-lg > .form-select, [dir] .input-group-lg > .input-group-text, [dir] .input-group-lg > .btn, [dir] .hideShowPassword-wrapper .input-group-lg > button {
+[dir] .input-group-lg > .form-control,
+[dir] .input-group-lg > .form-select,
+[dir] .input-group-lg > .input-group-text,
+[dir] .input-group-lg > .btn,
+[dir] .hideShowPassword-wrapper .input-group-lg > button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
 
-.input-group-sm > .form-control, .wt-route-EditName .input-group-sm > input[class=NAME],
+.input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
@@ -3328,7 +3339,11 @@ textarea.form-control-lg {
   font-size: 0.875rem;
 }
 
-[dir] .input-group-sm > .form-control, [dir] .wt-route-EditName .input-group-sm > input[class=NAME], [dir] .input-group-sm > .form-select, [dir] .input-group-sm > .input-group-text, [dir] .input-group-sm > .btn, [dir] .hideShowPassword-wrapper .input-group-sm > button {
+[dir] .input-group-sm > .form-control,
+[dir] .input-group-sm > .form-select,
+[dir] .input-group-sm > .input-group-text,
+[dir] .input-group-sm > .btn,
+[dir] .hideShowPassword-wrapper .input-group-sm > button {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
@@ -3346,7 +3361,6 @@ textarea.form-control-lg {
 [dir="ltr"] .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 [dir="ltr"] .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
 [dir="ltr"] .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-[dir="ltr"] .wt-route-EditName .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[class=NAME],
 [dir="ltr"] .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -3355,7 +3369,6 @@ textarea.form-control-lg {
 [dir="rtl"] .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 [dir="rtl"] .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
 [dir="rtl"] .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
-[dir="rtl"] .wt-route-EditName .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[class=NAME],
 [dir="rtl"] .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3364,7 +3377,6 @@ textarea.form-control-lg {
 [dir="ltr"] .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 [dir="ltr"] .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
 [dir="ltr"] .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
-[dir="ltr"] .wt-route-EditName .input-group.has-validation > .form-floating:nth-last-child(n+3) > input[class=NAME],
 [dir="ltr"] .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -3373,7 +3385,6 @@ textarea.form-control-lg {
 [dir="rtl"] .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 [dir="rtl"] .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
 [dir="rtl"] .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
-[dir="rtl"] .wt-route-EditName .input-group.has-validation > .form-floating:nth-last-child(n+3) > input[class=NAME],
 [dir="rtl"] .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3391,12 +3402,14 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0;
 }
 
-[dir="ltr"] .input-group > .form-floating:not(:first-child) > .form-control, [dir="ltr"] .wt-route-EditName .input-group > .form-floating:not(:first-child) > input[class=NAME], [dir="ltr"] .input-group > .form-floating:not(:first-child) > .form-select {
+[dir="ltr"] .input-group > .form-floating:not(:first-child) > .form-control,
+[dir="ltr"] .input-group > .form-floating:not(:first-child) > .form-select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-[dir="rtl"] .input-group > .form-floating:not(:first-child) > .form-control, [dir="rtl"] .wt-route-EditName .input-group > .form-floating:not(:first-child) > input[class=NAME], [dir="rtl"] .input-group > .form-floating:not(:first-child) > .form-select {
+[dir="rtl"] .input-group > .form-floating:not(:first-child) > .form-control,
+[dir="rtl"] .input-group > .form-floating:not(:first-child) > .form-select {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -3436,24 +3449,24 @@ textarea.form-control-lg {
   display: block;
 }
 
-[dir] .was-validated .form-control:valid, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir] .form-control.is-valid, [dir] .wt-route-EditName input.is-valid[class=NAME] {
+[dir] .was-validated .form-control:valid, [dir] .form-control.is-valid {
   border-color: #198754;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir="ltr"] .was-validated .form-control:valid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="ltr"] .form-control.is-valid, [dir="ltr"] .wt-route-EditName input.is-valid[class=NAME] {
+[dir="ltr"] .was-validated .form-control:valid, [dir="ltr"] .form-control.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir="rtl"] .was-validated .form-control:valid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:valid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:valid, [dir="rtl"] .form-control.is-valid, [dir="rtl"] .wt-route-EditName input.is-valid[class=NAME] {
+[dir="rtl"] .was-validated .form-control:valid, [dir="rtl"] .form-control.is-valid {
   padding-left: calc(1.5em + 0.75rem);
   background-position: left calc(0.375em + 0.1875rem) center;
 }
 
-[dir] .was-validated .form-control:valid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:valid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:valid:focus, [dir] .form-control.is-valid:focus, [dir] .wt-route-EditName input.is-valid[class=NAME]:focus {
+[dir] .was-validated .form-control:valid:focus, [dir] .form-control.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -3520,7 +3533,7 @@ textarea.form-control-lg {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):valid, .was-validated .wt-route-EditName .input-group > input[class=NAME]:not(:focus):valid, .wt-route-EditName .was-validated .input-group > input[class=NAME]:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, .wt-route-EditName .input-group > input[class=NAME]:not(:focus).is-valid,
+.was-validated .input-group > .form-control:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid,
 .was-validated .input-group > .form-select:not(:focus):valid,
 .input-group > .form-select:not(:focus).is-valid,
 .was-validated .input-group > .form-floating:not(:focus-within):valid,
@@ -3563,24 +3576,24 @@ textarea.form-control-lg {
   display: block;
 }
 
-[dir] .was-validated .form-control:invalid, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir] .form-control.is-invalid, [dir] .wt-route-EditName input.is-invalid[class=NAME] {
+[dir] .was-validated .form-control:invalid, [dir] .form-control.is-invalid {
   border-color: #dc3545;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-[dir="ltr"] .was-validated .form-control:invalid, [dir="ltr"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="ltr"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="ltr"] .form-control.is-invalid, [dir="ltr"] .wt-route-EditName input.is-invalid[class=NAME] {
+[dir="ltr"] .was-validated .form-control:invalid, [dir="ltr"] .form-control.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-[dir="rtl"] .was-validated .form-control:invalid, [dir="rtl"] .was-validated .wt-route-EditName input[class=NAME]:invalid, [dir="rtl"] .wt-route-EditName .was-validated input[class=NAME]:invalid, [dir="rtl"] .form-control.is-invalid, [dir="rtl"] .wt-route-EditName input.is-invalid[class=NAME] {
+[dir="rtl"] .was-validated .form-control:invalid, [dir="rtl"] .form-control.is-invalid {
   padding-left: calc(1.5em + 0.75rem);
   background-position: left calc(0.375em + 0.1875rem) center;
 }
 
-[dir] .was-validated .form-control:invalid:focus, [dir] .was-validated .wt-route-EditName input[class=NAME]:invalid:focus, [dir] .wt-route-EditName .was-validated input[class=NAME]:invalid:focus, [dir] .form-control.is-invalid:focus, [dir] .wt-route-EditName input.is-invalid[class=NAME]:focus {
+[dir] .was-validated .form-control:invalid:focus, [dir] .form-control.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -3647,7 +3660,7 @@ textarea.form-control-lg {
   margin-right: 0.5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated .wt-route-EditName .input-group > input[class=NAME]:not(:focus):invalid, .wt-route-EditName .was-validated .input-group > input[class=NAME]:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, .wt-route-EditName .input-group > input[class=NAME]:not(:focus).is-invalid,
+.was-validated .input-group > .form-control:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid,
 .was-validated .input-group > .form-select:not(:focus):invalid,
 .input-group > .form-select:not(:focus).is-invalid,
 .was-validated .input-group > .form-floating:not(:focus-within):invalid,
@@ -14519,14 +14532,14 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner {
   width: 1px !important;
 }
 
-.ts-wrapper.form-control, .wt-route-EditName input.ts-wrapper[class=NAME], .ts-wrapper.form-select {
+.ts-wrapper.form-control, .ts-wrapper.form-select {
   box-shadow: none;
   display: flex;
   height: auto;
   padding: 0 !important;
 }
 
-.ts-dropdown, .ts-dropdown.form-control, .wt-route-EditName input.ts-dropdown[class=NAME], .ts-dropdown.form-select {
+.ts-dropdown, .ts-dropdown.form-control, .ts-dropdown.form-select {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.175);
   border: 1px solid var(--bs-border-color-translucent);
@@ -14697,11 +14710,11 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner {
   --ts-pr-caret:2.25rem;
 }
 
-.ts-wrapper.form-control .ts-control, .wt-route-EditName input.ts-wrapper[class=NAME] .ts-control, .ts-wrapper.form-control.single.input-active .ts-control, .ts-wrapper.form-select .ts-control, .ts-wrapper.form-select.single.input-active .ts-control {
+.ts-wrapper.form-control .ts-control, .ts-wrapper.form-control.single.input-active .ts-control, .ts-wrapper.form-select .ts-control, .ts-wrapper.form-select.single.input-active .ts-control {
   border: none !important;
 }
 
-.ts-wrapper.form-control:not(.disabled) .ts-control, .wt-route-EditName input.ts-wrapper[class=NAME]:not(.disabled) .ts-control, .ts-wrapper.form-control:not(.disabled).single.input-active .ts-control, .ts-wrapper.form-select:not(.disabled) .ts-control, .ts-wrapper.form-select:not(.disabled).single.input-active .ts-control {
+.ts-wrapper.form-control:not(.disabled) .ts-control, .ts-wrapper.form-control:not(.disabled).single.input-active .ts-control, .ts-wrapper.form-select:not(.disabled) .ts-control, .ts-wrapper.form-select:not(.disabled).single.input-active .ts-control {
   background: transparent !important;
 }
 
@@ -20679,11 +20692,6 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 [dir="rtl"] .hideShowPassword-wrapper button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.wt-route-EditName input[class=NAME] {
-  display: inline;
-  width: auto;
 }
 
 /** JustLight Theme - Page footer */
