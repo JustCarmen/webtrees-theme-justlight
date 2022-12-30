@@ -2503,7 +2503,7 @@ progress {
 }
 
 [dir] .form-control:disabled {
-  background-color: #e9ecef;
+  background-color: #484848;
 }
 
 .form-control::-webkit-file-upload-button {
