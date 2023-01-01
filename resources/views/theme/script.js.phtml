@@ -50,13 +50,8 @@
     // Style the collapsable fact items
     $('[class^="wt-fact-"] [id^="collapse-"]').addClass('jc-fact-collapse');
 
-    // Individual page Facts Tab, Name Card / Family page - restyle gallery caption
-    $('.wt-tab-facts, .wt-route-FamilyPage .wt-facts-table, #individual-names .accordion-collapse')
-        .find('.gallery').parents('.d-flex').each(function() {
-            $(this).addClass('row');
-            $(this).find('> div').first().addClass('py-1').removeClass('pb-1'); // small layout correction
-            $(this).find('bdi').addClass('jc-gallery-caption');
-        });
+    // Restyle gallery caption (Individual / Family page)
+    $('.wt-media-link').addClass('row');
 
     // Individual page Stories Tab
     $('.wt-tab-stories .story_title').addClass('h3 text-start').removeClass('text-center');
