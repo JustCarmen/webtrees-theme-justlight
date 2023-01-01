@@ -13,7 +13,7 @@ $collection = app(ModuleService::class)->findByInterface(ModuleFooterInterface::
 ?>
 
 <footer class="wt-footers container-fluid d-flex d-print-none">
-    <div class="row no-gutters w-100">
+    <div class="row no-gutters w-100 align-items-end">
         <?php $filtered = $collection->except(['contact-links', 'powered-by-webtrees', app(ModuleThemeInterface::class)->name()])->filter()->all() ?>
         <div class="jc-footer-section jc-footer-section-1 d-flex flex-column col-lg-4 col-md-12">
             <?= $collection->get('contact-links') ?>

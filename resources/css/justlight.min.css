@@ -20740,6 +20740,10 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   [dir] .wt-footers .jc-footer-section > div:nth-child(2) {
     margin-top: 0;
   }
+
+  [dir] .wt-footers .wt-footer {
+    margin: 0 !important;
+  }
 }
 
 .wt-footers .wt-footer-powered-by a {
