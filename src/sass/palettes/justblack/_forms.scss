@@ -2,3 +2,8 @@
 input[id$='-INDI-NAME'] {
     background-color: $jc-theme-medium-dark !important;
 }
+
+/** JustBlack Pallette - Forms - Tom-select */
+.ts-control, .ts-control input, .ts-dropdown {
+    color: $jc-theme-medium-dark;
+}

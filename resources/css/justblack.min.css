@@ -20967,6 +20967,11 @@ table.dataTable thead tr:last-child:hover {
   background-color: #484848 !important;
 }
 
+/** JustBlack Pallette - Forms - Tom-select */
+.ts-control, .ts-control input, .ts-dropdown {
+  color: #484848;
+}
+
 /** JustLight Theme - Page footer */
 /*
  * Pages footer has the following high-level structure:
