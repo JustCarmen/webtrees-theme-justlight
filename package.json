@@ -29,7 +29,7 @@
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet.control.layers.tree": "^1.1.0",
     "leaflet.markercluster": "^1.5.3",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "postcss-custom-properties": "^12.1.11",
     "postcss-discard-comments": "^5.1.2",
     "postcss-image-inliner": "^6.0.1",
