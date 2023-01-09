@@ -3,29 +3,37 @@
 use Psr\Http\Message\ServerRequestInterface;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
-use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 
 $request = app(ServerRequestInterface::class);
-$collection = app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
+$footers = app(ModuleService::class)->findByInterface(ModuleFooterInterface::class)->map(static function (ModuleFooterInterface $module) use ($request): string {
     return $module->getFooter($request);
 });
+
+$footers_per_section = ceil($footers->count() / 3);
+
+$i = 0;
 
 ?>
 
 <footer class="wt-footers container-fluid d-flex d-print-none">
     <div class="row no-gutters w-100 align-items-end">
-        <?php $filtered = $collection->except(['contact-links', 'powered-by-webtrees', app(ModuleThemeInterface::class)->name()])->filter()->all() ?>
         <div class="jc-footer-section jc-footer-section-1 d-flex flex-column col-lg-4 col-md-12">
-            <?= $collection->get('contact-links') ?>
+            <?php for ($i, $j=0; $j < $footers_per_section; $i++, $j++): ?>
+                <?= $footers->values()->get($i) ?>
+                <?php $footers->keys()->get($i) === 'contact-links' ? $j++ : $j ?>
+            <?php endfor ?>
         </div>
         <div class="jc-footer-section jc-footer-section-2 d-flex flex-column col-lg-4 col-md-12">
-        <?php foreach ($filtered as $item): ?>
-            <?= $item ?>
-        <?php endforeach ?>
+            <?php for ($i, $j=0; $j < $footers_per_section; $i++, $j++): ?>
+                <?= $footers->values()->get($i) ?>
+                <?php $footers->keys()->get($i) === 'contact-links' ? $j++ : $j ?>
+            <?php endfor ?>
         </div>
         <div class="jc-footer-section jc-footer-section-3 d-flex flex-column col-lg-4 col-md-12">
-            <?= $collection->get('powered-by-webtrees') ?>
-            <?= $collection->get(app(ModuleThemeInterface::class)->name()) ?>
+            <?php for ($i, $j=0; $j < $footers_per_section; $i++, $j++): ?>
+                <?= $footers->values()->get($i) ?>
+                <?php $footers->keys()->get($i) === 'contact-links' ? $j++ : $j ?>
+            <?php endfor ?>
         </div>
     </div>
 </footer>
