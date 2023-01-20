@@ -19872,6 +19872,10 @@ table {
   color: #d36400;
 }
 
+[dir] .wt-facts-table .wt-fact-sources .value p {
+  margin-bottom: 0;
+}
+
 [dir] .wt-facts-table .wt-chart-box {
   padding: 0.75rem;
 }
