@@ -19872,10 +19872,6 @@ table {
   color: #d36400;
 }
 
-.wt-facts-table .editfacts {
-  white-space: nowrap;
-}
-
 [dir] .wt-facts-table .wt-chart-box {
   padding: 0.75rem;
 }
@@ -20004,10 +20000,6 @@ table {
   border: 0;
 }
 
-[dir] .wt-route-CalendarPage table .topbottombar {
-  background-color: #3b3b3b;
-}
-
 [dir] .wt-route-CalendarPage .wt-page-content table {
   background-color: #3b3b3b;
   border: 0;
@@ -20128,30 +20120,6 @@ table {
 
 [dir] .wt-tab-stories {
   text-align: justify;
-}
-
-[dir] [class^=fact_] {
-  margin-bottom: 0.5rem;
-}
-
-.fact_PAGE {
-  display: flex;
-}
-
-.fact_PAGE .label {
-  flex: 0 0 auto;
-}
-
-[dir="ltr"] .fact_PAGE .label {
-  padding-right: 0.25rem;
-}
-
-[dir="rtl"] .fact_PAGE .label {
-  padding-left: 0.25rem;
-}
-
-[dir] .fact_PAGE .field p {
-  margin-bottom: 0;
 }
 
 /** JustLight Theme - Specific pages - Charts */
