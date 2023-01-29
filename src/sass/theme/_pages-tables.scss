@@ -22,6 +22,24 @@ table {
         padding: .75rem;
     }
 
+    @at-root .wt-old {
+        th {
+            background-color: lighten($jc-red, 40%);
+        }
+        td {
+            background-color: lighten($jc-red, 50%);
+        }
+    }
+
+    @at-root .wt-new {
+        th {
+            background-color: lighten($jc-green, 20%);
+        }
+        td {
+            background-color: lighten($jc-green, 30%);
+        }
+    }
+
     a {
         color: $jc-facts-table-link-color;
 

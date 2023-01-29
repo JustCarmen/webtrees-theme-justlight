@@ -62,6 +62,15 @@
     }
 }
 
+/** JustBlack Palette - Specific pages - Fact tables */
+.wt-facts-table {
+    @at-root .wt-old, .wt-new {
+        th, td, a, .wt-icon-edit, .wt-icon-copy {
+            color: $jc-body-bg;
+        }
+    }
+}
+
 /** JustBlack Palette - Specific pages - Datatables */
 table.dataTable {
 

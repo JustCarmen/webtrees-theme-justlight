@@ -19849,6 +19849,22 @@ table {
   padding: 0.75rem;
 }
 
+[dir] .wt-old th {
+  background-color: #ff8585;
+}
+
+[dir] .wt-old td {
+  background-color: #ffb8b8;
+}
+
+[dir] .wt-new th {
+  background-color: #aae781;
+}
+
+[dir] .wt-new td {
+  background-color: #c7efac;
+}
+
 .wt-facts-table a {
   color: #22527b;
 }

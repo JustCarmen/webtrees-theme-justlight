@@ -19864,6 +19864,22 @@ table {
   padding: 0.75rem;
 }
 
+[dir] .wt-old th {
+  background-color: #ffcda0;
+}
+
+[dir] .wt-old td {
+  background-color: #ffe8d3;
+}
+
+[dir] .wt-new th {
+  background-color: #aae781;
+}
+
+[dir] .wt-new td {
+  background-color: #c7efac;
+}
+
 .wt-facts-table a {
   color: #c1c9d0;
 }
@@ -20886,6 +20902,11 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   [dir] .nav-tabs .nav-link.active:hover {
     background: #151515;
   }
+}
+
+/** JustBlack Palette - Specific pages - Fact tables */
+.wt-old th, .wt-old td, .wt-old a, .wt-old .wt-icon-edit, .wt-old .wt-icon-copy, .wt-new th, .wt-new td, .wt-new a, .wt-new .wt-icon-edit, .wt-new .wt-icon-copy {
+  color: #2e2e2e;
 }
 
 /** JustBlack Palette - Specific pages - Datatables */
