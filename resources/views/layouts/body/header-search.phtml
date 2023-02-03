@@ -4,6 +4,6 @@ use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 
 ?>
 
-<div class="col wt-header-search collapse navbar-collapse d-none ms-md-auto pe-md-2 pt-md-2 ms-lg-0 pe-lg-0 pt-lg-0 ps-lg-1">
+<div class="col wt-header-search ms-md-auto pe-md-2 pt-md-2 ms-lg-0 pe-lg-0 pt-lg-0 ps-lg-1">
     <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/header-search-form', ['tree' => $tree]); ?>
 </div>

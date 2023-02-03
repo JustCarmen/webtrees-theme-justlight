@@ -56,7 +56,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
                         <?php endif ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler'); ?>
                     </div>
-                    <div class="jc-header-content-end d-flex flex-lg-row flex-column justify-content-end">
+                    <div class="jc-header-content-end collapse navbar-collapse d-none d-flex flex-lg-row flex-column justify-content-end">
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/secondary-navigation', ['tree' => $tree]); ?>
                         <?php if ($tree !== null) : ?>
                             <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/header-search', ['tree' => $tree]); ?>
