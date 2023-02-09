@@ -19120,15 +19120,6 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   text-decoration: none;
 }
 
-[dir] .wt-block-content-user_favorites .jc-favorites-block-item, [dir] .wt-block-content-gedcom_favorites .jc-favorites-block-item {
-  background: #e9ecef;
-  border: 1px solid #337ab7;
-}
-
-.wt-block-content-user_favorites .btn-link:hover, .wt-block-content-gedcom_favorites .btn-link:hover {
-  text-decoration: none;
-}
-
 [dir] .wt-block-content-upcoming_events > div {
   margin-bottom: 0.5rem;
 }
