@@ -20500,6 +20500,10 @@ table {
   padding-right: 0.25rem;
 }
 
+.wt-chart-relationships .wt-chart-box {
+  width: 20rem;
+}
+
 /** JustLight Theme - Charts - Timeline chart */
 .wt-timeline-chart {
   position: relative;
