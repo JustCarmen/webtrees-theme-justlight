@@ -1,0 +1,12 @@
+/** JustLight Theme - (Custom) Modules */
+
+#gvexport {
+    .indi_list_item,
+    .settings_list_item {
+        background-color: $jc-theme-medium-dark;
+    }
+
+    @at-root .help-sidebar {
+        background-color: $jc-theme-medium-dark;
+    }
+}

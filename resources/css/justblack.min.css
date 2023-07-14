@@ -22658,3 +22658,13 @@ table.dataTable thead tr:last-child:hover {
     min-height: auto;
   }
 }
+
+/** JustLight Theme - (Custom) Modules */
+[dir] #gvexport .indi_list_item,
+[dir] #gvexport .settings_list_item {
+  background-color: #484848;
+}
+
+[dir] .help-sidebar {
+  background-color: #484848;
+}
