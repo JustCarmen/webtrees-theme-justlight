@@ -21520,6 +21520,11 @@ table.dataTable thead tr:last-child th {
 }
 
 /** JustLight Theme - Specific pages - Tables */
+.table, .wt-route-CalendarPage table {
+  --bs-table-bg: "";
+  --bs-table-color: "";
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0;

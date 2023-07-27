@@ -1,4 +1,11 @@
 /** JustLight Theme - Specific pages - Tables */
+
+// Bootstrap 5.3 corrections - we need to implement css variables correctly at some point.
+.table {
+    --bs-table-bg: '';
+    --bs-table-color: '';
+}
+
 table {
     border-collapse: separate;
     border-spacing: 0;
