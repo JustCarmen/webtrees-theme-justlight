@@ -4,7 +4,7 @@
  */
 /** JustLight Theme - Bootstrap entry point */
 /*!
- * Bootstrap  v5.3.0 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -131,18 +131,18 @@
 
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --bs-body-color: #adb5bd;
-  --bs-body-color-rgb: 173, 181, 189;
+  --bs-body-color: #dee2e6;
+  --bs-body-color-rgb: 222, 226, 230;
   --bs-body-bg: #212529;
   --bs-body-bg-rgb: 33, 37, 41;
   --bs-emphasis-color: #f9f9f9;
   --bs-emphasis-color-rgb: 249, 249, 249;
-  --bs-secondary-color: rgba(173, 181, 189, 0.75);
-  --bs-secondary-color-rgb: 173, 181, 189;
+  --bs-secondary-color: rgba(222, 226, 230, 0.75);
+  --bs-secondary-color-rgb: 222, 226, 230;
   --bs-secondary-bg: #343a40;
   --bs-secondary-bg-rgb: 52, 58, 64;
-  --bs-tertiary-color: rgba(173, 181, 189, 0.5);
-  --bs-tertiary-color-rgb: 173, 181, 189;
+  --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+  --bs-tertiary-color-rgb: 222, 226, 230;
   --bs-tertiary-bg: #2b3035;
   --bs-tertiary-bg-rgb: 43, 48, 53;
   --bs-primary-text-emphasis: #e5a266;
@@ -646,8 +646,8 @@ legend {
 }
 
 [type=search] {
-  outline-offset: -2px;
   -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 [dir="rtl"] [type="tel"],
@@ -2987,7 +2987,7 @@ textarea.form-control-lg {
 }
 
 [data-bs-theme=dark] .form-select {
-  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 .form-check {
@@ -3541,11 +3541,13 @@ textarea.form-control-lg {
   border-width: var(--bs-border-width) 0;
 }
 
-.form-floating > :disabled ~ label {
+.form-floating > :disabled ~ label,
+.form-floating > .form-control:disabled ~ label {
   color: #6c757d;
 }
 
-[dir] .form-floating > :disabled ~ label::after {
+[dir] .form-floating > :disabled ~ label::after,
+[dir] .form-floating > .form-control:disabled ~ label::after {
   background-color: #484848;
 }
 
@@ -5215,12 +5217,12 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(211, 100, 0, 0.25);
 }
 
-.nav-link.disabled {
+.nav-link.disabled, .nav-link:disabled {
   color: var(--bs-nav-link-disabled-color);
   pointer-events: none;
 }
 
-[dir] .nav-link.disabled {
+[dir] .nav-link.disabled, [dir] .nav-link:disabled {
   cursor: default;
 }
 
@@ -5253,15 +5255,6 @@ textarea.form-control-lg {
   border-color: var(--bs-nav-tabs-link-hover-border-color);
 }
 
-.nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
-  color: var(--bs-nav-link-disabled-color);
-}
-
-[dir] .nav-tabs .nav-link.disabled, [dir] .nav-tabs .nav-link:disabled {
-  background-color: transparent;
-  border-color: transparent;
-}
-
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: var(--bs-nav-tabs-link-active-color);
@@ -5287,15 +5280,6 @@ textarea.form-control-lg {
 
 [dir] .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
-}
-
-.nav-pills .nav-link:disabled {
-  color: var(--bs-nav-link-disabled-color);
-}
-
-[dir] .nav-pills .nav-link:disabled {
-  background-color: transparent;
-  border-color: transparent;
 }
 
 .nav-pills .nav-link.active,
@@ -8021,7 +8005,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-primary {
   background-color: RGBA(211, 100, 0, 1) !important;
-  background-color: RGBA(211, 100, 0, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
@@ -8030,7 +8014,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-secondary {
   background-color: RGBA(222, 226, 230, 1) !important;
-  background-color: RGBA(222, 226, 230, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-secondary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-success {
@@ -8039,7 +8023,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-success {
   background-color: RGBA(25, 135, 84, 1) !important;
-  background-color: RGBA(25, 135, 84, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-info {
@@ -8048,7 +8032,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-info {
   background-color: RGBA(13, 202, 240, 1) !important;
-  background-color: RGBA(13, 202, 240, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-info-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-warning {
@@ -8057,7 +8041,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-warning {
   background-color: RGBA(255, 193, 7, 1) !important;
-  background-color: RGBA(255, 193, 7, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-warning-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-danger {
@@ -8066,7 +8050,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-danger {
   background-color: RGBA(220, 53, 69, 1) !important;
-  background-color: RGBA(220, 53, 69, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-danger-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-light {
@@ -8075,7 +8059,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-light {
   background-color: RGBA(222, 226, 230, 1) !important;
-  background-color: RGBA(222, 226, 230, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-light-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-dark {
@@ -8084,7 +8068,7 @@ textarea.form-control-lg {
 
 [dir] .text-bg-dark {
   background-color: RGBA(33, 37, 41, 1) !important;
-  background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -8505,6 +8489,7 @@ textarea.form-control-lg {
   display: inline-block;
   align-self: stretch;
   width: 1px;
+  width: var(--bs-border-width);
   min-height: 1em;
   opacity: 0.25;
 }
@@ -19876,7 +19861,8 @@ caption {
   }
 }
 
-/** JustLight Theme - Menus */ /** JustLight Theme - Genealogy menu */
+/** JustLight Theme - Menus */
+/** JustLight Theme - Genealogy menu */
 @media (min-width: 576px) {
   [dir] .wt-genealogy-menu .nav-link.jc-nav-link-active {
     border: 1px solid #d36400;
@@ -22249,7 +22235,8 @@ table {
           transform: none;
 }
 
-/** JustLight Theme - Form elements */ /** JustLight Theme - Forms - Calendar widget */
+/** JustLight Theme - Form elements */
+/** JustLight Theme - Forms - Calendar widget */
 [dir] div[id^=caldiv] table td,
 [dir] div[id^=calendar-widget] table td {
   background-color: #2e2e2e !important;
