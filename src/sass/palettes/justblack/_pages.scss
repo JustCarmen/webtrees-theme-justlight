@@ -3,11 +3,8 @@
     @include jc-border($jc-theme-medium-dark);
 
     .wt-block-header {
-        padding: .75rem 1.25rem;
-    }
-
-    .wt-block-content {
-        padding: .75rem 1.25rem;
+        background: none;
+        border: none;
     }
 }
 
