@@ -706,10 +706,8 @@ table#tvTreeBorder td,
 }
 
 .wt-surnames-column-list{
-    -webkit-columns:15rem;
-            columns:15rem;
-    -webkit-column-rule:solid thin gray;
-            column-rule:solid thin gray;
+    columns:15rem;
+    column-rule:solid thin gray;
     border:solid thin gray;
     padding:0 1rem;
 }
@@ -897,8 +895,7 @@ table#tvTreeBorder td,
 }
 
 [dir=rtl] .wt-icon-flip-rtl{
-    -webkit-transform:scale(-1, 1);
-            transform:scale(-1, 1);
+    transform:scale(-1, 1);
 }
 td.align-digits,
 th.align-digits{
@@ -959,7 +956,6 @@ a:hover, .btn-link:hover, .nav-link:hover{
     scrollbar-gutter:stable;
 }
 .ut{
-    unicode-bidi:-webkit-isolate;
     unicode-bidi:isolate;
     overflow-wrap:break-word;
 }
