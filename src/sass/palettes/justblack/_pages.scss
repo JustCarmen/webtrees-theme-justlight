@@ -1,11 +1,6 @@
 /** JustBlack Palette - Specific pages - Home page and User page blocks */
 .wt-block {
     @include jc-border($jc-theme-medium-dark);
-
-    .wt-block-header {
-        background: none;
-        border: none;
-    }
 }
 
 .wt-side-blocks {

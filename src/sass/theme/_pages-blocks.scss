@@ -1,6 +1,6 @@
 /** JustLight Theme - Specific pages - Home page and User page blocks */
 .wt-block {
-    @include jc-border;
+    border: none;
 
     &:first-child {
         margin-top: $jc-main-wrapper-spacer;
@@ -11,7 +11,9 @@
     }
 
     .wt-block-header {
-        padding: .75rem 1.25rem;
+        border: none;
+        background: none;
+        padding: .75rem 1.25rem;;
 
         .wt-main-blocks & {
             @extend .h3;
@@ -32,7 +34,16 @@
 }
 
 .wt-side-blocks {
+    @include jc-border($jc-theme-lighter, 'left');
     font-size: $font-size-sm;
+
+    >div {
+        &:not(:last-child) {
+            padding-bottom: 0.5rem;
+            @include jc-border($jc-primary, 'bottom');
+            border-radius: 0;
+        }
+    }
 }
 
 /** Special blocks */

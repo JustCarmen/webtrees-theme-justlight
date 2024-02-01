@@ -20353,7 +20353,7 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 
 /** JustLight Theme - Specific pages - Home page and User page blocks */
 [dir] .wt-block {
-  border: 1px solid #ced4da;
+  border: none;
 }
 
 [dir] .wt-block:first-child {
@@ -20365,6 +20365,8 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 }
 
 [dir] .wt-block .wt-block-header {
+  border: none;
+  background: none;
   padding: 0.75rem 1.25rem;
 }
 
@@ -20378,6 +20380,20 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
 
 .wt-side-blocks {
   font-size: 0.875rem;
+}
+
+[dir="ltr"] .wt-side-blocks {
+  border-left: 1px solid #e9ecef;
+}
+
+[dir="rtl"] .wt-side-blocks {
+  border-right: 1px solid #e9ecef;
+}
+
+[dir] .wt-side-blocks > div:not(:last-child) {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #337ab7;
+  border-radius: 0;
 }
 
 /** Special blocks */
