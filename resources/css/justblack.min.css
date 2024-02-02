@@ -22346,8 +22346,32 @@ table.dataTable thead tr:last-child:hover {
 }
 
 /** JustBlack Pallette - Forms - Tom-select */
-.ts-control, .ts-control input, .ts-dropdown {
+.ts-control {
   color: #484848;
+}
+
+.ts-control .item {
+  color: #dee2e6;
+}
+
+.ts-control input {
+  color: #484848;
+}
+
+.ts-dropdown, .ts-dropdown-content {
+  color: #484848;
+}
+
+.ts-dropdown .option, .ts-dropdown-content .option {
+  color: #dee2e6;
+}
+
+.ts-dropdown .option.active, .ts-dropdown-content .option.active {
+  color: #484848;
+}
+
+.ts-dropdown .dropdown-input, .ts-dropdown-content .dropdown-input {
+  color: #dee2e6;
 }
 
 /** JustLight Theme - Page footer */
@@ -22374,4 +22398,14 @@ table.dataTable thead tr:last-child:hover {
 
 [dir] .help-sidebar {
   background-color: #484848;
+}
+
+/* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.arc path {
+  fill: #212529 !important;
+  stroke: #adb5bd !important;
+}
+
+.webtrees-fan-chart-container svg g.person.available g.arc path {
+  fill: #484848 !important;
 }

@@ -10,3 +10,13 @@
         background-color: $jc-theme-medium-dark;
     }
 }
+
+/* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.arc path {
+    fill: $jc-theme-darker!important;
+    stroke: $jc-theme-medium!important;
+}
+
+.webtrees-fan-chart-container svg g.person.available g.arc path {
+    fill: $jc-theme-medium-dark!important;
+}

@@ -4,6 +4,30 @@ input[id$='-INDI-NAME'] {
 }
 
 /** JustBlack Pallette - Forms - Tom-select */
-.ts-control, .ts-control input, .ts-dropdown {
+.ts-control {
+    color: $jc-theme-medium-dark;
+
+    .item {
+        color: $jc-body-color;
+    }
+}
+
+.ts-control input {
     color: $jc-theme-medium-dark;
 }
+
+.ts-dropdown, .ts-dropdown-content {
+    color: $jc-theme-medium-dark;
+
+    .option {
+        color: $jc-body-color;
+        &.active {
+            color: $jc-theme-medium-dark;
+        }
+    }
+
+    .dropdown-input {
+        color: $jc-body-color;
+    }
+}
+
