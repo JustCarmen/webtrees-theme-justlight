@@ -29,11 +29,6 @@
     #sidebar & {
         @include jc-theme-gradient-secondary();
     }
-
-    /** Card headers in forms (collapsable panels) **/
-    form & {
-        @extend .bg-dark;
-    }
 }
 
 /** JustBlack Palette - Specific pages - Tabs */
