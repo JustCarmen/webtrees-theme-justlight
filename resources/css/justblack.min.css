@@ -22226,6 +22226,12 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   fill: black !important;
 }
 
+/* Pedigree chart and Descendant chart module by MagicSunday */
+.webtrees-pedigree-chart-container svg .image rect:first-child,
+.webtrees-descendants-chart-container svg .image rect:first-child {
+  fill: none;
+}
+
 /**
   * ======================
        JustBlack Palette

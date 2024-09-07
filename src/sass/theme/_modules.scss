@@ -13,3 +13,11 @@
 .webtrees-fan-chart-container svg g.person g.color path.male {
     fill: darken($jc-male-bg, 15%)!important;
 }
+
+/* Pedigree chart and Descendant chart module by MagicSunday */
+.webtrees-pedigree-chart-container,
+.webtrees-descendants-chart-container {
+    svg .image rect:first-child {
+        fill: none;
+    }
+}

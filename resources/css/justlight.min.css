@@ -22210,3 +22210,9 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 .webtrees-fan-chart-container svg g.person g.color path.male {
   fill: #94c7ef !important;
 }
+
+/* Pedigree chart and Descendant chart module by MagicSunday */
+.webtrees-pedigree-chart-container svg .image rect:first-child,
+.webtrees-descendants-chart-container svg .image rect:first-child {
+  fill: none;
+}
