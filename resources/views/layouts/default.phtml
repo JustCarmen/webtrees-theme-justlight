@@ -44,7 +44,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/stylesheets'); ?>
     </head>
 
-    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(basename(strtr(Validator::attributes($request)->route()->name ?? '/', ['\\' => '/']))) ?>">
+    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(basename(strtr(Validator::attributes($request)->route()->name ?? '/', ['\\' => '/']))) ?>" data-bs-theme="<?= $palette === 'justblack' ? 'dark' : 'light' ?>">
         <header class="wt-header-wrapper d-print-none sticky-lg-top">
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
