@@ -4,3 +4,12 @@
     border-top: $jc-fancy-imagebar-border-width solid $jc-fancy-imagebar-border-color !important;
     border-bottom: $jc-fancy-imagebar-border-width solid $jc-fancy-imagebar-border-color !important;
 }
+
+/* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.color path.female {
+    fill: darken($jc-female-bg, 15%)!important;
+}
+
+.webtrees-fan-chart-container svg g.person g.color path.male {
+    fill: darken($jc-male-bg, 15%)!important;
+}

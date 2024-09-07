@@ -22201,3 +22201,12 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   border-top: 5px solid #428bca !important;
   border-bottom: 5px solid #428bca !important;
 }
+
+/* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.color path.female {
+  fill: #ffa4c2 !important;
+}
+
+.webtrees-fan-chart-container svg g.person g.color path.male {
+  fill: #94c7ef !important;
+}
