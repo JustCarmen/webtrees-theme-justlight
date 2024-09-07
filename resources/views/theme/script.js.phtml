@@ -1,6 +1,26 @@
 <?php use Fisharebest\Webtrees\View; ?>
 
 <?php View::push('javascript') ?>
+
+<!-- Source: https://stackoverflow.com/a/62024831 -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script>
+<script>
+    // code to set the `color_scheme` cookie
+    var $color_scheme = Cookies.get("JL_COLOR_SCHEME");
+    function get_color_scheme() {
+        return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    }
+    function update_color_scheme() {
+        Cookies.set("JL_COLOR_SCHEME", get_color_scheme());
+    }
+    // read & compare cookie `color-scheme`
+    if ((typeof $color_scheme === "undefined") || (get_color_scheme() != $color_scheme))
+        update_color_scheme();
+    // detect changes and change the cookie
+    if (window.matchMedia)
+        window.matchMedia("(prefers-color-scheme: dark)").addListener( update_color_scheme );
+</script>
+
 <script>
     // Scroll to target with fixed header
     function scrollToAnchor(x) {

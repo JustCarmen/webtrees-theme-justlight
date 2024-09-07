@@ -236,9 +236,21 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function stylesheets(): array
     {
-        return [
-            $this->assetUrl('css/' . $this->palette() . '.min.css')
-        ];
+        $color_scheme = isset($_COOKIE["JL_COLOR_SCHEME"]) ? $_COOKIE["JL_COLOR_SCHEME"] : false;
+        if ($color_scheme === false) $color_scheme = 'light';  // fallback
+
+        // Load the CSS for the correct color-scheme
+        if ($this->palette() === 'justauto') {
+            if ($color_scheme === 'dark') {
+                $stylesheet = $this->assetUrl('css/justblack.min.css');
+            } else {
+                $stylesheet = $this->assetUrl('css/justlight.min.css');
+            }
+        } else {
+            $stylesheet = $this->assetUrl('css/' . $this->palette() . '.min.css');
+        }
+
+        return [$stylesheet];
     }
 
     /**
@@ -339,12 +351,19 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         foreach ($this->palettes() as $palette_id => $palette_name) {
             $url = route('module', ['module' => $this->name(), 'action' => 'Palette', 'palette' => $palette_id]);
 
+            if ($palette_id === 'justauto') {
+                $title = I18N::translate('Automatically chooses a palette based on Windows color mode');
+            } else {
+                $title = "";
+            }
+
             $submenu = new Menu(
                 $palette_name,
                 '#',
                 'menu-justlight-' . $palette_id . ($palette === $palette_id ? ' active' : ''),
                 [
                     'data-wt-post-url' => $url,
+                    'title' => $title
                 ]
             );
 
@@ -385,7 +404,9 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             /* I18N: The name of a colour-scheme */
             'justlight'       => I18N::translate('JustLight'),
             /* I18N: The name of a colour-scheme */
-            'justblack'       => I18N::translate('JustBlack')
+            'justblack'       => I18N::translate('JustBlack'),
+             /* I18N: The name of a colour-scheme */
+             'justauto'         => I18N::translate('JustAuto')
         ];
 
         uasort($palettes, I18N::comparator());
