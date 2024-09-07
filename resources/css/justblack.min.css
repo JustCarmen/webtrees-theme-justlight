@@ -22382,6 +22382,14 @@ table.dataTable thead tr:last-child:hover {
   background-color: #484848;
 }
 
+.page-link {
+  color: #f8f9fa;
+}
+
+.page-link:hover {
+  color: #adb5bd;
+}
+
 /** JustBlack Palette - Charts - Interactive chart */
 /* horizontal and vertical lines color */
 [dir] #tv_tree div.tv_vline,

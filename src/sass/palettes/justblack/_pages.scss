@@ -70,3 +70,10 @@ table.dataTable {
         background-color: $jc-theme-medium-dark;
     }
 }
+
+.page-link {
+    color: $jc-link-color;
+    &:hover {
+        color: $jc-theme-medium;
+    }
+}
