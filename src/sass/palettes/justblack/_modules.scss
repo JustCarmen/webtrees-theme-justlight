@@ -12,11 +12,28 @@
 }
 
 /* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.color path.female {
+    fill: darken(#fff0f5, 10%)!important; // $jc-female-bg from justlight palette
+}
+
+.webtrees-fan-chart-container svg g.person g.color path.male {
+    fill: darken(#d7eaf9,10%)!important; // $jc-male-bg from justlight palette
+}
+
 .webtrees-fan-chart-container svg g.person g.arc path {
-    fill: $jc-theme-darker!important;
+    fill: $jc-theme-dark!important;
     stroke: $jc-theme-medium!important;
 }
 
 .webtrees-fan-chart-container svg g.person.available g.arc path {
-    fill: $jc-theme-medium-dark!important;
+    fill: $jc-theme-medium!important;
+}
+
+// style the marriage date
+.webtrees-fan-chart-container svg g.name text:nth-of-type(4) .date {
+    fill: $jc-body-color!important;
+}
+
+.webtrees-fan-chart-container svg .wt-chart-box-name:hover:not(.wt-chart-box-name-alt) {
+    fill: lighten($jc-theme-dark, 20%)!important;
 }

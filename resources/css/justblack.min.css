@@ -22217,6 +22217,15 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   border-bottom: 3px solid #dee2e6 !important;
 }
 
+/* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.color path.female {
+  fill: #151515 !important;
+}
+
+.webtrees-fan-chart-container svg g.person g.color path.male {
+  fill: black !important;
+}
+
 /**
   * ======================
        JustBlack Palette
@@ -22441,11 +22450,27 @@ table.dataTable thead tr:last-child:hover {
 }
 
 /* Fanchart module by MagicSunday */
+.webtrees-fan-chart-container svg g.person g.color path.female {
+  fill: #ffbdd3 !important;
+}
+
+.webtrees-fan-chart-container svg g.person g.color path.male {
+  fill: #abd3f2 !important;
+}
+
 .webtrees-fan-chart-container svg g.person g.arc path {
-  fill: #212529 !important;
+  fill: #2e2e2e !important;
   stroke: #adb5bd !important;
 }
 
 .webtrees-fan-chart-container svg g.person.available g.arc path {
-  fill: #484848 !important;
+  fill: #adb5bd !important;
+}
+
+.webtrees-fan-chart-container svg g.name text:nth-of-type(4) .date {
+  fill: #dee2e6 !important;
+}
+
+.webtrees-fan-chart-container svg .wt-chart-box-name:hover:not(.wt-chart-box-name-alt) {
+  fill: #616161 !important;
 }
