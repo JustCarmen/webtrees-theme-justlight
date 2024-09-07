@@ -16,7 +16,7 @@ use Illuminate\Support\Collection;
 
 <?php foreach ($favorites as $favorite) : ?>
     <div class="d-flex pb-2">
-        <div class="order-2">
+        <div class="order-2 flex-grow-1">
             <?php if ($favorite->favorite_type === 'URL') : ?>
                 <a href="<?= e($favorite->url) ?>"><b><?= e($favorite->title) ?></b></a>
             <?php elseif ($favorite->record instanceof Individual) : ?>
