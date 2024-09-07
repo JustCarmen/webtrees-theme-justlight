@@ -38,7 +38,7 @@
     "sass-loader": "^14.2.1",
     "tom-select": "^2.3.1",
     "typeahead.js-bootstrap4-css": "^1.0.0",
-    "webpack": "^5.91.0",
+    "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {}
