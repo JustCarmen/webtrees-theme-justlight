@@ -6,18 +6,10 @@ use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 
 <div class="row wt-header-content navbar navbar-expand-md navbar-light">
     <nav class="wt-primary-navigation collapse navbar-collapse" id="primaryMenu">
-        <div class="col wt-header-search d-md-none mb-2">
-            <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/header-search-form', ['tree' => $tree]); ?>
-        </div>
         <ul class=" nav wt-genealogy-menu">
         <?php foreach (app(ModuleThemeInterface::class)->genealogyMenu($tree) as $menu) : ?>
         <?= view('components/menu-item', ['menu' => $menu]) ?>
         <?php endforeach ?>
-        </ul>
-        <ul class="nav wt-genealogy-menu wt-user-menu-sm d-md-none">
-            <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
-            <?= view('components/menu-item', ['menu' => $menu]) ?>
-            <?php endforeach ?>
         </ul>
     </nav>
 </div>

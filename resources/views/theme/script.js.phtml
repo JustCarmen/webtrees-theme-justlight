@@ -22,6 +22,16 @@
 </script>
 
 <script>
+    // Mobile menus - open one and close the other
+    $(".toggle-primary").on("click", function() {
+        $(".toggle-secondary").attr("aria-expanded", "false")
+        $(".wt-secondary-navigation").removeClass("show")
+    })
+    $(".toggle-secondary").on("click", function() {
+        $(".toggle-primary").attr("aria-expanded", "false")
+        $(".wt-primary-navigation").removeClass("show")
+    })
+
     // Scroll to target with fixed header
     function scrollToAnchor(x) {
         if (x.matches) {

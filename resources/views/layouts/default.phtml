@@ -5,7 +5,7 @@
  *
  * Changes
  * - Sticky top
- * - Collapsable navbar for smaller screens (Genealogy and user menu)
+ * - Collapsable navbars for smaller screens (Genealogy and user menu)
  * - Make the site title clickable with a header link to the homepage
  * - Replace the default footer with our own version
  *
@@ -50,11 +50,12 @@ $palette = app(ModuleThemeInterface::class)->palette();
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
                     <div class="jc-header-content-start d-flex flex-row">
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/accessibility'); ?>
+                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler-primary'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-logo'); ?>
                         <?php if ($tree !== null) : ?>
                             <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-title', ['tree' => $tree]); ?>
                         <?php endif ?>
-                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler'); ?>
+                        <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler-secondary'); ?>
                     </div>
                     <div class="jc-header-content-end collapse navbar-collapse d-none d-flex flex-lg-row flex-column justify-content-end">
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/secondary-navigation', ['tree' => $tree]); ?>
@@ -66,6 +67,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
                 <?php if ($tree !== null) : ?>
                     <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/primary-navigation', ['tree' => $tree]); ?>
                 <?php endif ?>
+                <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/mobile-navigation', ['tree' => $tree]); ?>
             </div>
         </header>
 

@@ -19692,10 +19692,6 @@ caption {
   padding: 0;
 }
 
-.wt-header-wrapper .navbar-toggler {
-  order: 2;
-}
-
 [dir] .wt-header-wrapper .navbar-toggler {
   margin-top: 1rem;
 }
