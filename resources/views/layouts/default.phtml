@@ -26,11 +26,20 @@ use Fisharebest\Webtrees\Http\RequestHandlers\WebmanifestJson;
  */
 
 $palette = app(ModuleThemeInterface::class)->palette();
+switch ($palette) {
+    case  'justlight':
+        $color_scheme = 'light';
+    case 'justblack':
+        $color_scheme = 'dark';
+    default:
+        $color_scheme = isset($_COOKIE["JL_COLOR_SCHEME"]) ? $_COOKIE["JL_COLOR_SCHEME"] : false;
+        if ($color_scheme === false) $color_scheme = 'light';  // fallback
+    }
 
 ?>
 
 <!DOCTYPE html>
-<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>" data-bs-theme="<?= $palette === 'justblack' ? 'dark' : 'light' ?>">
+<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>" data-bs-theme="<?= $color_scheme ?>">
     <head>
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/meta', [
             'meta_robots' => e($meta_robots ?? 'noindex'),
