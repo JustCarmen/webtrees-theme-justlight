@@ -30,7 +30,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
 ?>
 
 <!DOCTYPE html>
-<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>">
+<html dir="<?= I18N::locale()->direction() ?>" lang="<?= I18N::locale()->languageTag() ?>" data-bs-theme="<?= $palette === 'justblack' ? 'dark' : 'light' ?>">
     <head>
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/meta', [
             'meta_robots' => e($meta_robots ?? 'noindex'),
@@ -44,7 +44,7 @@ $palette = app(ModuleThemeInterface::class)->palette();
         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/head/stylesheets'); ?>
     </head>
 
-    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(basename(strtr(Validator::attributes($request)->route()->name ?? '/', ['\\' => '/']))) ?>" data-bs-theme="<?= $palette === 'justblack' ? 'dark' : 'light' ?>">
+    <body class="wt-global jc-theme-justlight jc-palette-<?= $palette ?> wt-route-<?= e(basename(strtr(Validator::attributes($request)->route()->name ?? '/', ['\\' => '/']))) ?>">
         <header class="wt-header-wrapper d-print-none sticky-lg-top">
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
