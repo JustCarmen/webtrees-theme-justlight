@@ -2686,7 +2686,8 @@ progress {
 [dir] .form-control::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-margin-end: 0.75rem;
+          margin-inline-end: 0.75rem;
   background-color: #f8f9fa;
   background-color: var(--bs-tertiary-bg);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -2704,7 +2705,8 @@ progress {
 [dir] .form-control::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-margin-end: 0.75rem;
+          margin-inline-end: 0.75rem;
   background-color: #f8f9fa;
   background-color: var(--bs-tertiary-bg);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -2779,13 +2781,15 @@ progress {
 [dir] .form-control-sm::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  margin-inline-end: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
 }
 
 [dir] .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  margin-inline-end: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
 }
 
 .form-control-lg {
@@ -2803,13 +2807,15 @@ progress {
 [dir] .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  margin-inline-end: 1rem;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
 }
 
 [dir] .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  margin-inline-end: 1rem;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
 }
 
 textarea.form-control {
@@ -7992,127 +7998,163 @@ textarea.form-control-lg {
 .link-primary {
   color: RGBA(51, 122, 183, 1) !important;
   color: RGBA(var(--bs-primary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(51, 122, 183, 1) !important;
-  text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(51, 122, 183, 1) !important;
+          text-decoration-color: RGBA(51, 122, 183, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-primary:hover, .link-primary:focus {
   color: RGBA(36, 85, 128, 1) !important;
   color: RGBA(36, 85, 128, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(36, 85, 128, 1) !important;
-  text-decoration-color: RGBA(36, 85, 128, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(36, 85, 128, 1) !important;
+          text-decoration-color: RGBA(36, 85, 128, 1) !important;
+  -webkit-text-decoration-color: RGBA(36, 85, 128, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(36, 85, 128, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-secondary {
   color: RGBA(233, 236, 239, 1) !important;
   color: RGBA(var(--bs-secondary-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(233, 236, 239, 1) !important;
-  text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(233, 236, 239, 1) !important;
+          text-decoration-color: RGBA(233, 236, 239, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-secondary:hover, .link-secondary:focus {
   color: RGBA(240, 242, 244, 1) !important;
   color: RGBA(240, 242, 244, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(240, 242, 244, 1) !important;
-  text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(240, 242, 244, 1) !important;
+          text-decoration-color: RGBA(240, 242, 244, 1) !important;
+  -webkit-text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-success {
   color: RGBA(25, 135, 84, 1) !important;
   color: RGBA(var(--bs-success-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(25, 135, 84, 1) !important;
-  text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(25, 135, 84, 1) !important;
+          text-decoration-color: RGBA(25, 135, 84, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-success-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-success:hover, .link-success:focus {
   color: RGBA(18, 95, 59, 1) !important;
   color: RGBA(18, 95, 59, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(18, 95, 59, 1) !important;
-  text-decoration-color: RGBA(18, 95, 59, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(18, 95, 59, 1) !important;
+          text-decoration-color: RGBA(18, 95, 59, 1) !important;
+  -webkit-text-decoration-color: RGBA(18, 95, 59, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(18, 95, 59, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-info {
   color: RGBA(13, 202, 240, 1) !important;
   color: RGBA(var(--bs-info-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(13, 202, 240, 1) !important;
-  text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(13, 202, 240, 1) !important;
+          text-decoration-color: RGBA(13, 202, 240, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-info:hover, .link-info:focus {
   color: RGBA(86, 218, 245, 1) !important;
   color: RGBA(86, 218, 245, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(86, 218, 245, 1) !important;
-  text-decoration-color: RGBA(86, 218, 245, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(86, 218, 245, 1) !important;
+          text-decoration-color: RGBA(86, 218, 245, 1) !important;
+  -webkit-text-decoration-color: RGBA(86, 218, 245, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(86, 218, 245, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-warning {
   color: RGBA(255, 193, 7, 1) !important;
   color: RGBA(var(--bs-warning-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(255, 193, 7, 1) !important;
-  text-decoration-color: RGBA(var(--bs-warning-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(255, 193, 7, 1) !important;
+          text-decoration-color: RGBA(255, 193, 7, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-warning-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-warning-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-warning:hover, .link-warning:focus {
   color: RGBA(255, 212, 81, 1) !important;
   color: RGBA(255, 212, 81, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(255, 212, 81, 1) !important;
-  text-decoration-color: RGBA(255, 212, 81, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(255, 212, 81, 1) !important;
+          text-decoration-color: RGBA(255, 212, 81, 1) !important;
+  -webkit-text-decoration-color: RGBA(255, 212, 81, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(255, 212, 81, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-danger {
   color: RGBA(220, 53, 69, 1) !important;
   color: RGBA(var(--bs-danger-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(220, 53, 69, 1) !important;
-  text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(220, 53, 69, 1) !important;
+          text-decoration-color: RGBA(220, 53, 69, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-danger:hover, .link-danger:focus {
   color: RGBA(154, 37, 48, 1) !important;
   color: RGBA(154, 37, 48, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(154, 37, 48, 1) !important;
-  text-decoration-color: RGBA(154, 37, 48, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(154, 37, 48, 1) !important;
+          text-decoration-color: RGBA(154, 37, 48, 1) !important;
+  -webkit-text-decoration-color: RGBA(154, 37, 48, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(154, 37, 48, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-light {
   color: RGBA(233, 236, 239, 1) !important;
   color: RGBA(var(--bs-light-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(233, 236, 239, 1) !important;
-  text-decoration-color: RGBA(var(--bs-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(233, 236, 239, 1) !important;
+          text-decoration-color: RGBA(233, 236, 239, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-light:hover, .link-light:focus {
   color: RGBA(240, 242, 244, 1) !important;
   color: RGBA(240, 242, 244, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(240, 242, 244, 1) !important;
-  text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(240, 242, 244, 1) !important;
+          text-decoration-color: RGBA(240, 242, 244, 1) !important;
+  -webkit-text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(240, 242, 244, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-dark {
   color: RGBA(33, 37, 41, 1) !important;
   color: RGBA(var(--bs-dark-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(33, 37, 41, 1) !important;
-  text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(33, 37, 41, 1) !important;
+          text-decoration-color: RGBA(33, 37, 41, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-dark:hover, .link-dark:focus {
   color: RGBA(23, 26, 29, 1) !important;
   color: RGBA(23, 26, 29, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(23, 26, 29, 1) !important;
-  text-decoration-color: RGBA(23, 26, 29, var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(23, 26, 29, 1) !important;
+          text-decoration-color: RGBA(23, 26, 29, 1) !important;
+  -webkit-text-decoration-color: RGBA(23, 26, 29, var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(23, 26, 29, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
   color: RGBA(0, 0, 0, 1) !important;
   color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(0, 0, 0, 1) !important;
-  text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: RGBA(0, 0, 0, 1) !important;
+          text-decoration-color: RGBA(0, 0, 0, 1) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis:hover, .link-body-emphasis:focus {
   color: RGBA(0, 0, 0, 0.75) !important;
   color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-opacity, 0.75)) !important;
-  text-decoration-color: RGBA(0, 0, 0, 0.75) !important;
-  text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 0.75)) !important;
+  -webkit-text-decoration-color: RGBA(0, 0, 0, 0.75) !important;
+          text-decoration-color: RGBA(0, 0, 0, 0.75) !important;
+  -webkit-text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 0.75)) !important;
+          text-decoration-color: RGBA(var(--bs-emphasis-color-rgb), var(--bs-link-underline-opacity, 0.75)) !important;
 }
 
 .focus-ring:focus {
@@ -8128,8 +8170,10 @@ textarea.form-control-lg {
   display: inline-flex;
   gap: 0.375rem;
   align-items: center;
-  text-decoration-color: rgba(51, 122, 183, 0.5);
-  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
+  -webkit-text-decoration-color: rgba(51, 122, 183, 0.5);
+          text-decoration-color: rgba(51, 122, 183, 0.5);
+  -webkit-text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
+          text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 0.5));
   text-underline-offset: 0.25em;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -10116,56 +10160,74 @@ textarea.form-control-lg {
 
 .link-underline-primary {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(51, 122, 183, 1) !important;
-  text-decoration-color: rgba(var(--bs-primary-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(51, 122, 183, 1) !important;
+          text-decoration-color: rgba(51, 122, 183, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-primary-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-primary-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-secondary {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(233, 236, 239, 1) !important;
-  text-decoration-color: rgba(var(--bs-secondary-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(233, 236, 239, 1) !important;
+          text-decoration-color: rgba(233, 236, 239, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-secondary-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-secondary-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-success {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(25, 135, 84, 1) !important;
-  text-decoration-color: rgba(var(--bs-success-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(25, 135, 84, 1) !important;
+          text-decoration-color: rgba(25, 135, 84, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-success-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-success-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-info {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(13, 202, 240, 1) !important;
-  text-decoration-color: rgba(var(--bs-info-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(13, 202, 240, 1) !important;
+          text-decoration-color: rgba(13, 202, 240, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-info-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-info-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-warning {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(255, 193, 7, 1) !important;
-  text-decoration-color: rgba(var(--bs-warning-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(255, 193, 7, 1) !important;
+          text-decoration-color: rgba(255, 193, 7, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-warning-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-warning-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-danger {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(220, 53, 69, 1) !important;
-  text-decoration-color: rgba(var(--bs-danger-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(220, 53, 69, 1) !important;
+          text-decoration-color: rgba(220, 53, 69, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-danger-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-danger-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-light {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(233, 236, 239, 1) !important;
-  text-decoration-color: rgba(var(--bs-light-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(233, 236, 239, 1) !important;
+          text-decoration-color: rgba(233, 236, 239, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-light-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-light-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline-dark {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(33, 37, 41, 1) !important;
-  text-decoration-color: rgba(var(--bs-dark-rgb), var(--bs-link-underline-opacity)) !important;
+  -webkit-text-decoration-color: rgba(33, 37, 41, 1) !important;
+          text-decoration-color: rgba(33, 37, 41, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-dark-rgb), var(--bs-link-underline-opacity)) !important;
+          text-decoration-color: rgba(var(--bs-dark-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline {
   --bs-link-underline-opacity: 1;
-  text-decoration-color: rgba(51, 122, 183, 1) !important;
-  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+  -webkit-text-decoration-color: rgba(51, 122, 183, 1) !important;
+          text-decoration-color: rgba(51, 122, 183, 1) !important;
+  -webkit-text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
+          text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-underline-opacity-0 {
@@ -14344,28 +14406,37 @@ table.dataTable td.dt-control:before {
 }
 
 html[dir="ltr"].dark table.dataTable td.dt-control:before,
-[dir="ltr"]:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
+[dir="ltr"]:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+[dir="ltr"]:root[data-theme=dark] table.dataTable td.dt-control:before {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 
 html[dir="rtl"].dark table.dataTable td.dt-control:before,
-[dir="rtl"]:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
+[dir="rtl"]:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+[dir="rtl"]:root[data-theme=dark] table.dataTable td.dt-control:before {
   border-right-color: rgba(255, 255, 255, 0.5);
 }
 
 html[dir].dark table.dataTable tr.dt-hasChild td.dt-control:before,
-[dir]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+[dir]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+[dir]:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-top-color: rgba(255, 255, 255, 0.5);
 }
 
 html[dir="ltr"].dark table.dataTable tr.dt-hasChild td.dt-control:before,
-[dir="ltr"]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+[dir="ltr"]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+[dir="ltr"]:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-left-color: transparent;
 }
 
 html[dir="rtl"].dark table.dataTable tr.dt-hasChild td.dt-control:before,
-[dir="rtl"]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+[dir="rtl"]:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+[dir="rtl"]:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-right-color: transparent;
+}
+
+div.dt-scroll {
+  width: 100%;
 }
 
 div.dt-scroll-body thead tr,
@@ -14875,6 +14946,53 @@ table.table.dataTable.table-hover > tbody > tr.selected:hover > *, .wt-route-Cal
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.975);
 }
 
+[dir="ltr"] div.dt-container div.dt-layout-start > *:not(:last-child) {
+  margin-right: 1em;
+}
+
+[dir="rtl"] div.dt-container div.dt-layout-start > *:not(:last-child) {
+  margin-left: 1em;
+}
+
+[dir="ltr"] div.dt-container div.dt-layout-end > *:not(:first-child) {
+  margin-left: 1em;
+}
+
+[dir="rtl"] div.dt-container div.dt-layout-end > *:not(:first-child) {
+  margin-right: 1em;
+}
+
+div.dt-container div.dt-layout-full {
+  width: 100%;
+}
+
+[dir] div.dt-container div.dt-layout-full > *:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.dt-container div.dt-layout-table > div {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+  [dir="ltr"] div.dt-container div.dt-layout-start > *:not(:last-child) {
+    margin-right: 0;
+  }
+
+  [dir="rtl"] div.dt-container div.dt-layout-start > *:not(:last-child) {
+    margin-left: 0;
+  }
+
+  [dir="ltr"] div.dt-container div.dt-layout-end > *:not(:first-child) {
+    margin-left: 0;
+  }
+
+  [dir="rtl"] div.dt-container div.dt-layout-end > *:not(:first-child) {
+    margin-right: 0;
+  }
+}
+
 div.dt-container div.dt-length label {
   font-weight: normal;
   white-space: nowrap;
@@ -14933,10 +15051,6 @@ div.dt-container div.dt-search input {
 
 [dir="rtl"] div.dt-container div.dt-search input {
   margin-right: 0.5em;
-}
-
-[dir] div.dt-container div.dt-info {
-  padding-top: 0.85em;
 }
 
 [dir] div.dt-container div.dt-paging {
