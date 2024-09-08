@@ -11,14 +11,14 @@
     "archive": "npm run distribution && cross-env process.env.section=archive NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/fontawesome-free": "^6.6.0",
     "@popperjs/core": "^2.11.8",
-    "autoprefixer": "10.4.19",
+    "autoprefixer": "10.4.20",
     "beautifymarker": "^1.0.9",
     "bootstrap": "^5.3.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
-    "datatables.net-bs5": "^2.0.7",
+    "datatables.net-bs5": "^2.1.6",
     "file-icon-vectors": "^1.0.0",
     "filemanager-webpack-plugin": "^8.0.0",
     "jquery-colorbox": "^1.6.4",
@@ -29,17 +29,16 @@
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet.control.layers.tree": "^1.1.0",
     "leaflet.markercluster": "^1.5.3",
-    "postcss": "^8.4.38",
-    "postcss-custom-properties": "^13.3.10",
-    "postcss-discard-comments": "^7.0.0",
+    "postcss": "^8.4.45",
+    "postcss-custom-properties": "14.0.1",
+    "postcss-discard-comments": "^7.0.3",
     "postcss-image-inliner": "^7.0.1",
-    "postcss-rtlcss": "^5.2.0",
-    "sass": "^1.77.2",
-    "sass-loader": "^14.2.1",
+    "postcss-rtlcss": "^5.4.0",
+    "sass": "1.78.0",
+    "sass-loader": "^16.0.1",
     "tom-select": "^2.3.1",
     "typeahead.js-bootstrap4-css": "^1.0.0",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4"
-  },
-  "dependencies": {}
+  }
 }
