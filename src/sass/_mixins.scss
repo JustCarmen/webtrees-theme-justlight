@@ -79,6 +79,8 @@
 
         .dropdown-item {
             color: $link-color; // reset to original color
+            margin-left: 1rem;
+            text-wrap: pretty;
 
             &.active {
                 background: none;

@@ -19791,6 +19791,15 @@ caption {
 
   .wt-genealogy-menu .dropdown-item {
     color: #337ab7;
+    text-wrap: pretty;
+  }
+
+  [dir="ltr"] .wt-genealogy-menu .dropdown-item {
+    margin-left: 1rem;
+  }
+
+  [dir="rtl"] .wt-genealogy-menu .dropdown-item {
+    margin-right: 1rem;
   }
 
   .wt-genealogy-menu .dropdown-item.active {
@@ -19921,6 +19930,15 @@ caption {
 
   .wt-user-menu .dropdown-item {
     color: #337ab7;
+    text-wrap: pretty;
+  }
+
+  [dir="ltr"] .wt-user-menu .dropdown-item {
+    margin-left: 1rem;
+  }
+
+  [dir="rtl"] .wt-user-menu .dropdown-item {
+    margin-right: 1rem;
   }
 
   .wt-user-menu .dropdown-item.active {
