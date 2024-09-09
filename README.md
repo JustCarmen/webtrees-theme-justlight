@@ -9,11 +9,9 @@ JustLight Theme for webtrees
 
 Introduction
 -----------
-A light theme with focus on readability. It uses a full screen where necessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
+A light theme with focus on readability. It uses a full screen where necessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. It is the only theme that has a specific collapsable menu for small screens! Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
 
-As of version 2.1.0, a new color palette has been introduced. Currently there are two palettes to choose from. The standard JustLight as you are used to and a new JustBlack theme which is a dark theme and looks a lot like the former independent JustBlack theme.
-
-The JustLight palette is a modern theme in clean white and blue. The JustBlack palette is a theme with a dark background and orange accents. This palette is more relaxing for the eyes.
+Currently, there are three palettes to choose from. The default JustLight palette with a white background and blue accents and the JustBlack palette with a dark background and orange accents. The third palette, called 'JustAuto', is not really a different color palette, but based on the Windows color mode, it automatically chooses the appropriate palette with the light (JustLight) or the dark (JustBlack) background.
 
 Installation and upgrading
 --------------------------
@@ -21,11 +19,11 @@ Installing or upgrading the theme should be straightforward. Unzip the release p
 
 Configuration
 -------------
-Go to the theme section in the control panel. The JustLight theme has a small configuration page where you can set the default color palette and specify whether the user can choose their own palette. In this case, an additional 'palette' menu is created.
+Go to the theme section in the configuration screen. The JustLight theme has a small configuration page where you can set the default color palette and specify whether the user can choose their own palette. In that case, an additional 'palette' menu is created.
 
 Translation
 -----------
-The text on the configuration page is translatable. Copy the file nl.php into the resources/lang folder and replace the Dutch text with the translation into your own language. Use the official two-letter language code as file name. Look in the webtrees folder resources/lang to find the correct code.
+The text on the configuration page and the tooltip on the JustAuto palette in the header, is translatable. Copy the file nl.php into the resources/lang folder and replace the Dutch text with the translation into your own language. Use the official two-letter language code as file name. Look in the webtrees folder resources/lang to find the correct code.
 
 Development
 -----------
