@@ -19,7 +19,7 @@ Installing or upgrading the theme should be straightforward. Unzip the release p
 
 Configuration
 -------------
-Go to the theme section in the configuration screen. The JustLight theme has a small configuration page where you can set the default color palette and specify whether the user can choose their own palette. In that case, an additional 'palette' menu is created.
+Go to the theme section in the control panel. The JustLight theme has a small configuration page where you can set the default color palette and specify whether the user can choose their own palette. In that case, an additional 'palette' menu is created.
 
 Translation
 -----------
