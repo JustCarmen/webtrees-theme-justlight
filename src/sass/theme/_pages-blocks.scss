@@ -2,14 +2,6 @@
 .wt-block {
     border: none;
 
-    &:first-child {
-        margin-top: $jc-main-wrapper-spacer;
-    }
-
-    &:last-child {
-        margin-bottom: $jc-main-wrapper-spacer;
-    }
-
     .wt-block-header {
         border: none;
         background: none;

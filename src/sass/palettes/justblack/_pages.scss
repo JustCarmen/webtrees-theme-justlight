@@ -29,6 +29,10 @@
     #sidebar & {
         @include jc-theme-gradient-secondary();
     }
+
+    form & {
+        background-color: var(--bs-card-cap-bg)!important;
+    }
 }
 
 /** JustBlack Palette - Specific pages - Tabs */

@@ -20565,14 +20565,6 @@ table.dataTable thead th.sorting_asc_disabled:after, table.dataTable thead th.so
   border: none;
 }
 
-[dir] .wt-block:first-child {
-  margin-top: 2.5rem;
-}
-
-[dir] .wt-block:last-child {
-  margin-bottom: 2.5rem;
-}
-
 [dir] .wt-block .wt-block-header {
   border: none;
   background: none;
@@ -22477,6 +22469,10 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 
 [dir] #sidebar .card-header:hover {
   background: linear-gradient(#484848 0%, #2e2e2e, #212529 100%);
+}
+
+[dir] form .card-header {
+  background-color: var(--bs-card-cap-bg) !important;
 }
 
 /** JustBlack Palette - Specific pages - Tabs */
