@@ -29,8 +29,10 @@ $palette = app(ModuleThemeInterface::class)->palette();
 switch ($palette) {
     case  'justlight':
         $color_scheme = 'light';
+        break;
     case 'justblack':
         $color_scheme = 'dark';
+        break;
     default:
         $color_scheme = isset($_COOKIE["JL_COLOR_SCHEME"]) ? $_COOKIE["JL_COLOR_SCHEME"] : false;
         if ($color_scheme === false) $color_scheme = 'light';  // fallback
@@ -58,6 +60,7 @@ switch ($palette) {
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
                     <div class="jc-header-content-start d-flex flex-row">
+                        <?= $palette ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/accessibility'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler-primary'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-logo'); ?>
