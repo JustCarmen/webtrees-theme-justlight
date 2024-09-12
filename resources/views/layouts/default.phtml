@@ -60,7 +60,6 @@ switch ($palette) {
             <div class="container wt-header-container">
                 <div class="wt-header-content navbar navbar-expand-md <?= $palette === 'justblack' ? 'navbar-dark' : 'navbar-light' ?> d-flex justify-content-between">
                     <div class="jc-header-content-start d-flex flex-row">
-                        <?= $palette ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/accessibility'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/navbar-toggler-primary'); ?>
                         <?= view(app(ModuleThemeInterface::class)->name() . '::layouts/body/site-logo'); ?>
