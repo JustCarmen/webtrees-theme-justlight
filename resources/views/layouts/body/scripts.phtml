@@ -5,12 +5,13 @@ use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Registry;
 
 ?>
 
 <script src="<?= e(asset('js/vendor.min.js')) ?>"></script>
-<script src="<?= e(app(ModuleThemeInterface::class)->assetUrl('js/fa-regular.min.js')) ?>"></script>
-<script src="<?= e(app(ModuleThemeInterface::class)->assetUrl('js/fa-solid.min.js')) ?>"></script>
+<script src="<?= e(Registry::container()->get(ModuleThemeInterface::class)->assetUrl('js/fa-regular.min.js')) ?>"></script>
+<script src="<?= e(Registry::container()->get(ModuleThemeInterface::class)->assetUrl('js/fa-solid.min.js')) ?>"></script>
 <script src="<?= e(asset('js/webtrees.min.js')) ?>"></script>
 
 <script>
@@ -67,6 +68,6 @@ use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 
 <?= View::stack('javascript') ?>
 
-<?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+<?= Registry::container()->get(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
     return $module->bodyContent();
 })->implode('') ?>

@@ -4,15 +4,16 @@ use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Registry;
 
 ?>
 
-<?php foreach (app(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
+<?php foreach (Registry::container()->get(ModuleThemeInterface::class)->stylesheets() as $stylesheet) : ?>
     <link rel="stylesheet" href="<?= e($stylesheet) ?>">
 <?php endforeach ?>
 
 <?= View::stack('styles') ?>
 
-<?= app(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
+<?= Registry::container()->get(ModuleService::class)->findByInterface(ModuleGlobalInterface::class)->map(static function (ModuleGlobalInterface $module): string {
     return $module->headContent();
 })->implode('') ?>

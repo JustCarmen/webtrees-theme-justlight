@@ -3,8 +3,9 @@
 /* Prevent conflicts with webtrees icons in the control panel */
 
 use Psr\Http\Message\ServerRequestInterface;
+use Fisharebest\Webtrees\Registry;
 
-$route = app(ServerRequestInterface::class)->getAttribute('route');
+$route = Registry::container()->get(ServerRequestInterface::class)->getAttribute('route');
 
 ?>
 

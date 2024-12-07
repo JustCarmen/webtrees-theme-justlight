@@ -1,12 +1,13 @@
 <?php
 
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Registry;
 
 ?>
 
 <div class="col wt-secondary-navigation pe-1" id="secondaryMenu">
     <ul class="nav wt-user-menu ms-auto">
-        <?php foreach (app(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
+        <?php foreach (Registry::container()->get(ModuleThemeInterface::class)->userMenu($tree) as $menu) : ?>
         <?= view('components/menu-item', ['menu' => $menu]) ?>
         <?php endforeach ?>
     </ul>
