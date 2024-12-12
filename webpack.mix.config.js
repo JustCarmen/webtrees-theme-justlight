@@ -3,7 +3,7 @@
  */
 
 module.exports = {
-    version: '2.3.0',
+    version: '2.3.1',
     css_dir: 'src/css',
     images_dir: 'src/images',
     webtrees_css_dir: 'vendor/fisharebest/webtrees/resources/css',

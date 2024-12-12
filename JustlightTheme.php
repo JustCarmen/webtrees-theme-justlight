@@ -38,7 +38,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
 
     // Module constants
     public const CUSTOM_AUTHOR = 'JustCarmen';
-    public const CUSTOM_VERSION = '2.3.0';
+    public const CUSTOM_VERSION = '2.3.1';
     public const GITHUB_REPO = 'webtrees-theme-justlight';
     public const AUTHOR_WEBSITE = 'justcarmen.nl';
     public const CUSTOM_SUPPORT_URL = 'https://' . self::AUTHOR_WEBSITE . '/modules-webtrees-2/justlight-theme/';
