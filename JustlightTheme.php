@@ -77,7 +77,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://raw.githubusercontent.com/' . self::CUSTOM_AUTHOR . '/' . self::GITHUB_REPO . '/main/latest-version.txt';
+        return 'https://raw.githubusercontent.com/' . self::CUSTOM_AUTHOR . '/' . self::GITHUB_REPO . '/wt-2.1/latest-version.txt';
     }
 
     /**
