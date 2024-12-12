@@ -10,6 +10,16 @@ if (process.env.section) {
 
 let mix = require('laravel-mix');
 
-// Disable mix-manifest.json (https://github.com/laravel-mix/laravel-mix/issues/580#issuecomment-919102692)
-// Prevent the distribution zip file from containing an unwanted file
-mix.options({ manifest: false });
+
+mix
+    // Disable mix-manifest.json (https://github.com/laravel-mix/laravel-mix/issues/580#issuecomment-919102692)
+    // Prevent the distribution zip file from containing an unwanted file
+    .options({
+        manifest: false
+    })
+    // Show webpack warnings in console log
+    .webpackConfig({
+        stats: {
+            children: true
+        }
+    });
