@@ -1,4 +1,11 @@
 /** JustLight Theme - Icons - Icomoon */
+
+// workaround for unicode icons in sass.
+// See: http://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file
+@function unicode($str) {
+    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
 @each $icon,
 $unicode in $jc-icomoon-icons {
     .#{$icon} {
