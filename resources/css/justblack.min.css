@@ -20118,40 +20118,6 @@ caption {
   color: #337ab7;
 }
 
-.jc-icon-add, .jc-icon-edit, .jc-icon-delete {
-  font-size: 0.875rem;
-}
-
-.jc-icon-add:hover, .jc-icon-edit:hover, .jc-icon-delete:hover {
-  text-decoration: none;
-}
-
-.jc-icon-add::before, .jc-icon-edit::before, .jc-icon-delete::before {
-  font-family: "Font Awesome 6 Free";
-}
-
-.jc-icon-add::before {
-  color: #70D62C;
-  content: "\f0fe";
-}
-
-.jc-icon-add::before:hover, .jc-icon-add::before:focus {
-  color: rgb(89.5357142857, 173.3214285714, 33.6785714286);
-}
-
-.jc-icon-edit::before {
-  content: "\f303";
-}
-
-.jc-icon-delete::before {
-  color: rgb(210.8, 100.1538461538, 0);
-  content: "\f00d";
-}
-
-.jc-icon-delete::before:hover, .jc-icon-delete::before:focus {
-  color: rgb(159.8, 75.9230769231, 0);
-}
-
 /** JustLight Theme - Icons - Icomoon */
 .icon-silhouette-f {
   font-family: "icomoon" !important;
