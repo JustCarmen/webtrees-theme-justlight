@@ -153,16 +153,6 @@ $jc-icomoon-icons: map_merge((
         wt-individual-silhouette-u: 'e603',
     ), $jc-icomoon-icons);
 
-// Font awesome font family (used with unicode icons below)
-$jc-fa-fontfam: "Font Awesome 6 Free";
-
-// Interactive tree chart treelink icon
-$jc-icon-treelink-f: 'f182'; // fa-solid fa-female
-$jc-icon-treelink-m: 'f183'; // fa-solid fa-male
-
-// Other icons
-$jc-icon-edit-indi: 'f4ff';
-
 // custom modules (Fancy Imagebar)
 $jc-fancy-imagebar-border-color: $jc-brand-primary;
 $jc-fancy-imagebar-border-width: 5px;
