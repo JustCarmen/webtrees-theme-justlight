@@ -23,10 +23,6 @@
 }
 
 .icon {
-    &-cfamily {
-        font-size: 2rem;
-    }
-
     &-selected {
         @include jc-icon-color($jc-icon-green-color);
     }
