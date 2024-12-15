@@ -11,7 +11,7 @@ Introduction
 -----------
 A light theme with focus on readability. It uses a full screen where necessary but takes into account small screens too. This theme is optimized for using on tablets and mobile phones. It is the only theme that has a specific collapsable menu for small screens! Furthermore this theme offers different layouts with some extra's. If you like a clean layout you certainly want to try this theme.
 
-Currently, there are three palettes to choose from. The default JustLight palette with a white background and blue accents and the JustBlack palette with a dark background and orange accents. The third palette, called 'JustAuto', is not really a different color palette, but based on the Windows color mode, it automatically chooses the appropriate palette with the light (JustLight) or the dark (JustBlack) background.
+Currently, there are three palettes to choose from. The default JustLight palette with a white background and blue accents and the JustBlack palette with a dark background and orange accents. The third palette, called 'JustAuto', is not really a different color palette, but based on the browser color mode, it automatically chooses the appropriate palette with the light (JustLight) or the dark (JustBlack) background.
 
 Installation and upgrading
 --------------------------
