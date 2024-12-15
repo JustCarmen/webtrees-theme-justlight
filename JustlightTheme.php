@@ -333,7 +333,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
             $url = route('module', ['module' => $this->name(), 'action' => 'Palette', 'palette' => $palette_id]);
 
             if ($palette_id === 'justauto') {
-                $title = I18N::translate('Automatically chooses a palette based on Windows color mode');
+                $title = I18N::translate('Automatically chooses a palette based on browser color mode');
             } else {
                 $title = "";
             }
