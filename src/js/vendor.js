@@ -2,7 +2,7 @@
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import {
   // For resources/views/icons/*
-  faCalendarDays
+  faCalendarDays, faUserCircle
 } from '@fortawesome/free-regular-svg-icons';
 import {
   // For resources/views/icons/ (faTimes solid version is in webtrees core)*
@@ -11,7 +11,7 @@ import {
 
 library.add(
   // For resources/views/icons/*
-  faCalendarDays
+  faCalendarDays, faUserCircle
 );
 library.add(
   // For resources/views/icons/*
