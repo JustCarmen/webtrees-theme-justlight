@@ -20015,10 +20015,6 @@ caption {
   color: #f9f9f9;
 }
 
-.icon-cfamily {
-  font-size: 2rem;
-}
-
 .icon-selected {
   color: #70D62C;
 }
@@ -20040,11 +20036,6 @@ caption {
   padding-left: 0.4rem;
 }
 
-.icon-edit_indi::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f4ff";
-}
-
 .wt-block-content-gedcom_block [class*=icon-], .wt-block-content-user_welcome [class*=icon-] {
   font-size: 2rem;
   vertical-align: bottom;
@@ -20058,18 +20049,6 @@ caption {
   line-height: 1;
   font-style: normal;
   font-size: 200px;
-}
-
-.tv_treelink::before {
-  font-family: "Font Awesome 6 Free";
-}
-
-.tvF .tv_treelink::before {
-  content: "\f182";
-}
-
-.tvM .tv_treelink::before {
-  content: "\f183";
 }
 
 [data-toggle=buttons] > label > .wt-icon-sex {
@@ -20131,22 +20110,13 @@ caption {
   content: "\e603";
 }
 
-.icon-sfamily {
+.icon-silhouette-x {
   font-family: "icomoon" !important;
   color: #212529;
 }
 
-.icon-sfamily:before {
-  content: "\e604";
-}
-
-.icon-cfamily {
-  font-family: "icomoon" !important;
-  color: #212529;
-}
-
-.icon-cfamily:before {
-  content: "\e604";
+.icon-silhouette-x:before {
+  content: "\e603";
 }
 
 .icon-children {
@@ -20156,15 +20126,6 @@ caption {
 
 .icon-children:before {
   content: "\e605";
-}
-
-.icon-childless {
-  font-family: "icomoon" !important;
-  color: #212529;
-}
-
-.icon-childless:before {
-  content: "\e606";
 }
 
 .icon-pedigree {
