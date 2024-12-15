@@ -29,13 +29,13 @@ if(process.env.NODE_ENV === 'production') {
     mix
     .styles(config.public_dir + '/css/justlight.min.css', config.build_dir + '/justlight.min.css')
     .styles(config.public_dir + '/css/justblack.min.css', config.build_dir + '/justblack.min.css')
-    .copy(config.vendor_build_dir + '/@fortawesome/fontawesome-free/js/regular.min.js', config.public_dir + '/js/fa-regular.min.js')
-    .copy(config.vendor_build_dir + '/@fortawesome/fontawesome-free/js/solid.min.js', config.public_dir + '/js/fa-solid.min.js')
+    .minify(config.public_dir + '/js/vendor.min.js', config.build_dir + '/vendor.min.js')
 } else {
     mix
     .setPublicPath('./')
     .sass('src/sass/justlight-theme.scss', config.public_dir + '/css/justlight.min.css')
     .sass('src/sass/justblack-theme.scss', config.public_dir + '/css/justblack.min.css')
+    .js('src/js/vendor.js', config.public_dir + '/js/vendor.min.js')
     .options({
         processCssUrls: false,
         postCss: [
