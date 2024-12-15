@@ -27,9 +27,9 @@ const postcssCustomProperties = require('postcss-custom-properties')();
 
 if(process.env.NODE_ENV === 'production') {
     mix
-    .styles(config.public_dir + '/css/justlight.min.css', config.build_dir + '/justlight.min.css')
-    .styles(config.public_dir + '/css/justblack.min.css', config.build_dir + '/justblack.min.css')
-    .minify(config.public_dir + '/js/vendor.min.js', config.build_dir + '/vendor.min.js')
+    .styles(config.public_dir + '/css/justlight.min.css', config.build_dir + '/css/justlight.min.css')
+    .styles(config.public_dir + '/css/justblack.min.css', config.build_dir + '/css/justblack.min.css')
+    .minify(config.public_dir + '/js/vendor.min.js', config.build_dir + '/js/vendor.min.js')
 } else {
     mix
     .setPublicPath('./')
