@@ -34,7 +34,7 @@
     "postcss-discard-comments": "^7.0.3",
     "postcss-image-inliner": "^7.0.1",
     "postcss-rtlcss": "^5.5.1",
-    "sass": "1.82.0",
+    "sass": "1.77.6",
     "sass-loader": "^16.0.4",
     "tom-select": "^2.4.1",
     "typeahead.js-bootstrap4-css": "^1.0.0",
