@@ -32,20 +32,20 @@ use Illuminate\Support\Collection;
         <div class="collapse" id="more-news-<?= e($block_id) ?>">
     <?php endif ?>
 
-    <div class="news_box">
-        <div class="news_title" dir="auto"><?= $article->subject ?></div>
-        <div class="news_date"><?= view('components/datetime', ['timestamp' => $article->updated]) ?></div>
+    <div class="news_box mb-3">
+        <div class="news_title h4" dir="auto"><?= $article->subject ?></div>
+        <div class="news_date small mb-2"><?= view('components/datetime', ['timestamp' => $article->updated]) ?></div>
         <div dir="auto"><?= $article->body ?></div>
 
         <?php if (Auth::isManager($tree)) : ?>
-            <hr>
-            <form method="post" action="<?= e(route('module', ['module' => 'user_blog', 'action' => 'DeleteJournal', 'news_id' => $article->news_id, 'tree' => $tree->name()])) ?>">
+            <hr my-0>
+            <form class="text-end" method="post" action="<?= e(route('module', ['module' => 'user_blog', 'action' => 'DeleteJournal', 'news_id' => $article->news_id, 'tree' => $tree->name()])) ?>">
                 <a class="btn btn-link" href="<?= e(route('module', ['module' => 'user_blog', 'action' => 'EditJournal', 'news_id' => $article->news_id, 'tree' => $tree->name()])) ?>">
-                    <?= I18N::translate('Edit') ?>
+                    <?= view('icons/edit') ?><?= I18N::translate('Edit') ?>
                 </a>
                 |
                 <button class="btn btn-link" type="submit" data-wt-confirm="<?= I18N::translate('Are you sure you want to delete “%s”?', e($article->subject)) ?>">
-                    <?= I18N::translate('Delete') ?>
+                    <?= view('icons/delete') ?><?= I18N::translate('Delete') ?>
                 </button>
 
                 <?= csrf_field() ?>
@@ -60,6 +60,6 @@ use Illuminate\Support\Collection;
 
 <p>
     <a class="btn btn-link" href="<?= e(route('module', ['module' => 'user_blog', 'action' => 'EditJournal', 'tree' => $tree->name()])) ?>">
-        <?= I18N::translate('Add a journal entry') ?>
+        <?= view('icons/add') ?><?= I18N::translate('Add a journal entry') ?>
     </a>
 </p>

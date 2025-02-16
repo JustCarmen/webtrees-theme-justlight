@@ -101,17 +101,6 @@
             $(this).find('tbody').prepend('<tr><td  class="jc-markdown-table-separator" colspan="' + jQuery(this).find("th").length + '"></tr>');
         });
 
-    // Blocks: Journal block (wt-block-gedcom_news / wt-block-user_blog)
-    $('.wt-block-content-gedcom_news, .wt-block-content-user_blog')
-        .find('p .btn-link').addClass('jc-icon-add').end()
-        .find('.news_box').addClass('mb-3')
-        .find('.news_title').addClass('h4').end()
-        .find('.news_date').addClass('small mb-2').end()
-        .find('hr').addClass('my-0').end()
-        .find('a.btn-link').addClass('jc-icon-edit').end()
-        .find('button.btn-link').addClass('jc-icon-delete').end()
-        .find('form').addClass('text-end');
-
     // Forms
     $('.wt-route-ReportSetupPage').find('.form-control-check').parent('.wt-page-options-value').addClass('py-2 px-3');
 
