@@ -102,6 +102,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
         View($this->name() . '::theme/script.js');
 
         // Replace an existing view with our own version.
+        View::registerCustomView('::individual-page-images', $this->name() . '::individual-page-images');
         View::registerCustomView('::report-setup-page', $this->name() . '::report-setup-page');
         View::registerCustomView('::icons/add', $this->name() . '::icons/add');
         View::registerCustomView('::icons/anniversary', $this->name() . '::icons/anniversary');
