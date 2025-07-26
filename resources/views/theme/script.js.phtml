@@ -51,12 +51,6 @@
     $('.wt-primary-navigation').find('a[href="' + url + '"]').addClass('active').parents('li').find('.nav-link').addClass('jc-nav-link-active');
     $('.wt-secondary-navigation').find('a[href="' + url + '"]').addClass('active');
 
-    // Individual page main image - add classes for styling purposes
-    $('.wt-individual-silhouette')
-        .parent().addClass('jc-indi-silhouette-container')
-        .parent().addClass('jc-indi-header-image-container')
-        .find('a[href*="add-fact"]').addClass('jc-icon-add').parent('div').addClass('mt-2').removeClass('text-center');
-
     // Remove class from caption (this class cannot be overwritten with css)
     $('caption').removeClass('text-center'); // used in wt-family-navigator-family-heading
 

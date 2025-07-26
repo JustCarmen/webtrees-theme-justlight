@@ -28,9 +28,9 @@ use Illuminate\Support\Collection;
 ?>
 
 <?php if ($individual_media->isNotEmpty() || $tree->getPreference('USE_SILHOUETTE') === '1') : ?>
-    <div class="col-sm-3">
+    <div class="col-sm-3 jc-indi-header-image-container">
         <?php if ($individual_media->isEmpty()) : ?>
-            <div class="img-thumbnail">
+            <div class="img-thumbnail jc-indi-silhouette-container">
                 <i class="wt-individual-silhouette wt-individual-silhouette-<?= strtolower($record->sex()) ?> wt-icon-flip-rtl w-100"></i>
             </div>
         <?php elseif ($individual_media->count() === 1) : ?>
@@ -56,9 +56,14 @@ use Illuminate\Support\Collection;
         <?php endif ?>
 
         <?php if ($can_upload_media) : ?>
-            <div class="text-center">
+            <div class="mt-2">
                 <a href="<?= e(route(AddNewFact::class, ['tree' => $record->tree()->name(), 'xref' => $record->xref(), 'fact' => 'OBJE'])) ?>">
-                    <?= I18N::translate('Add a media object') ?>
+                    <span class="d-flex align-items-start gap-2">
+                        <span class="mt-1"><?= view('icons/add') ?></span>
+                        <span>
+                            <?= I18N::translate('Add a media object') ?>
+                        </span>
+                    </span>
                 </a>
             </div>
         <?php endif ?>
