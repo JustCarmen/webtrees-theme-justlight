@@ -22267,6 +22267,11 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
   fill: none;
 }
 
+/* Custom module manager */
+.menu-list-custom-module-manager:before {
+  content: "" !important;
+}
+
 /**
   * ======================
        JustBlack Palette

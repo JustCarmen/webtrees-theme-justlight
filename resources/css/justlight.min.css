@@ -22251,3 +22251,8 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 .webtrees-descendants-chart-container svg .image rect:first-child {
   fill: none;
 }
+
+/* Custom module manager */
+.menu-list-custom-module-manager:before {
+  content: "" !important;
+}
