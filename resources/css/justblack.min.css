@@ -19840,6 +19840,10 @@ caption {
   }
 }
 
+.wt-genealogy-menu .dropdown-item:before {
+  content: "";
+}
+
 /** JustLight Theme - User menu */
 .wt-user-menu {
   flex-wrap: nowrap;
@@ -22265,11 +22269,6 @@ div[id^=calendar-widget] > table table tr:not(:first-child) td.descriptionbox:be
 .webtrees-pedigree-chart-container svg .image rect:first-child,
 .webtrees-descendants-chart-container svg .image rect:first-child {
   fill: none;
-}
-
-/* Custom module manager */
-.menu-list-custom-module-manager:before {
-  content: "" !important;
 }
 
 /**

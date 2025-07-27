@@ -17,4 +17,8 @@
         flex-direction: column;
     }
 
+    // Some modules use icons before the menu item. Remove them
+    .dropdown-item:before {
+        content: '';
+    }
 }
