@@ -20112,15 +20112,6 @@ caption {
   content: "\e605";
 }
 
-.icon-pedigree {
-  font-family: "icomoon" !important;
-  color: #212529;
-}
-
-.icon-pedigree:before {
-  content: "\e609";
-}
-
 .icon-rings {
   font-family: "icomoon" !important;
   color: #212529;
