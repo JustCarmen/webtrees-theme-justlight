@@ -11,7 +11,9 @@
     "archive": "npm run distribution && cross-env process.env.section=archive NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.7.1",
+    "@fortawesome/fontawesome-svg-core": "7.2.0",
+    "@fortawesome/free-regular-svg-icons": "7.2.0",
+    "@fortawesome/free-solid-svg-icons": "7.2.0",
     "@popperjs/core": "2.11.8",
     "autoprefixer": "10.4.20",
     "beautifymarker": "1.0.9",
