@@ -139,8 +139,6 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
     }
 
     /**
-     * @param ServerRequestInterface $request
-     *
      * @return ResponseInterface
      */
     public function getAdminAction(): ResponseInterface
@@ -262,7 +260,7 @@ class JustlightTheme extends MinimalTheme implements ModuleThemeInterface, Modul
      * @see \Fisharebest\Webtrees\Module\ModuleThemeInterface::stylesheets()
      * Usage: FanChartModule and Statistics charts
      */
-    public function parameter($parameter_name)
+    public function parameter(string $parameter_name): string
     {
         $parameters1 = [
             'chart-background-f'             => 'fff0f5', // FanChart
