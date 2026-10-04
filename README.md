@@ -5,7 +5,16 @@ JustLight Theme for webtrees
 [![webtrees major version](https://img.shields.io/badge/webtrees-v2.2.x-green)][2]
 [![Downloads](https://img.shields.io/github/downloads/JustCarmen/webtrees-theme-justlight/total.svg)]()
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XPBC2W85M38AS&item_name=webtrees%20modules%20by%20JustCarmen&currency_code=EUR)
+## 💖 Support my work
+
+I develop webtrees modules in my free time and make them available to the webtrees community for free.
+If you find my work valuable and would like to support further development, you can make a contribution via PayPal:
+
+👉 **https://paypal.me/justcarmen**
+
+Every contribution — big or small — helps me keep the modules up to date and build new features.
+
+Thank you for your support.
 
 Introduction
 -----------
