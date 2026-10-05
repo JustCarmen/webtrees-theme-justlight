@@ -10,7 +10,7 @@ JustLight Theme for webtrees
 I develop webtrees modules in my free time and make them available to the webtrees community for free.
 If you find my work valuable and would like to support further development, you can make a contribution via PayPal:
 
-👉 **https://paypal.me/justcarmen**
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=XPBC2W85M38AS&currency_code=EUR)
 
 Every contribution — big or small — helps me keep the modules up to date and build new features.
 
